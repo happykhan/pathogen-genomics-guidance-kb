@@ -1,0 +1,17 @@
+# OS/editor noise
+.DS_Store
+*.swp
+*.tmp
+
+# Local source packs and generated extracts should not be committed by default.
+Best Practices and Vision/
+source-material/local/
+
+# Large/generated office exports
+*.docx
+*.pptx
+*.xlsx
+*.pdf
+*.tiff
+*.eps
+
