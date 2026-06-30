@@ -3,11 +3,11 @@
 ## Source Basis
 
 - World Health Organization. `Global genomic surveillance strategy for pathogens with pandemic and epidemic potential, 2022-2032`.
-- Public WHO strategy page and PDF.
+- Full-text PDF supplied locally: `/Users/nfareed/Downloads/9789240046979-eng.pdf`.
 
 ## Status
 
-`candidate extracted summary`
+`candidate source; full text available locally; high-level extraction`
 
 ## Relevance
 
@@ -18,6 +18,13 @@ This source supports the high-level public-health rationale for pathogen genomic
 - `Why genomics?` value proposition.
 - Governance and implementation framing.
 - Explaining why genomic capability is not only a sequencing or research function.
+- Workforce, access, data sharing, connectivity, emergency readiness, and monitoring/evaluation.
+
+## Extracted Notes
+
+- The strategy goal is organised around strengthening genomic surveillance for pathogens with pandemic and epidemic potential.
+- The objectives include improving access for geographic representation, strengthening workforce, enhancing data sharing and utility for public-health decision-making, maximising connectivity in broader surveillance architecture, and maintaining emergency readiness.
+- The document provides a WHO-aligned structure for strategy, enablers, principles, implementation, and monitoring.
 
 ## Current Use In App
 
@@ -25,4 +32,4 @@ This source supports the high-level public-health rationale for pathogen genomic
 
 ## Gaps
 
-- Needs careful extraction of WHO wording and priority areas before being used for detailed operational recommendations.
+- Needs detailed extraction into implementation, data sharing, workforce, and maturity-model modules.

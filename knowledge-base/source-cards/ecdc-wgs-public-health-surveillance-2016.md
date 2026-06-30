@@ -1,0 +1,37 @@
+# Source Card: ECDC Expert Opinion on WGS for Public-Health Surveillance
+
+## Source Basis
+
+- European Centre for Disease Prevention and Control. *Expert opinion on whole genome sequencing for public health surveillance*. Stockholm: ECDC; 2016.
+- Full-text PDF supplied locally: `/Users/nfareed/Downloads/whole-genome-sequencing-for-public-health-surveillance.pdf`.
+
+## Status
+
+`candidate source; full text available locally; high-level extraction`
+
+## Relevance
+
+This ECDC scientific advice is a core public-health surveillance source. It is useful for integrating WGS into outbreak investigation and surveillance systems rather than treating sequencing as a standalone laboratory activity.
+
+## Useful For
+
+- Surveillance strategy.
+- WGS data production and analysis workflow.
+- Integration of WGS and epidemiological data.
+- EU/EEA implementation context.
+- Strategic adoption and disease-priority framing.
+
+## Extracted Notes
+
+- The report's subtitle frames WGS as a strategy to strengthen outbreak investigations and public-health surveillance.
+- The contents include an executive summary, background, methods, results/discussion, conclusions, and a process overview for WGS data production, analysis, and epidemiological integration.
+
+## Current Use In App
+
+- Resource finder candidate source.
+- Not yet cited in guidance prose.
+
+## Gaps
+
+- Needs detailed extraction for lifecycle, surveillance, and genomic-epidemiology integration sections.
+
