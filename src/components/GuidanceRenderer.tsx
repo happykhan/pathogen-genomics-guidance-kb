@@ -1,4 +1,5 @@
 import { SlidersHorizontal } from "lucide-react";
+import type { ReactNode } from "react";
 import { guidanceBlocks } from "../data/guidanceBlocks";
 import { sources } from "../data/sources";
 import {
@@ -12,6 +13,8 @@ import {
 import { scoreGuidanceBlock } from "../lib/recommendations";
 import type { Profile } from "../types/profile";
 
+type CitationAnchor = { text: string; sourceIds: string[] };
+
 type Props = {
   profile: Profile;
   showTechnical: boolean;
@@ -22,14 +25,60 @@ const relevanceThreshold = 7;
 const sourceLookup: Record<string, { label: string; path: string }> = sources;
 
 function CitationRun({ sourceIds, referenceNumber }: { sourceIds: string[]; referenceNumber: Map<string, number> }) {
+  if (!sourceIds.length) return null;
+  const numbers = sourceIds
+    .map((sourceId) => referenceNumber.get(sourceId))
+    .filter((number): number is number => number !== undefined)
+    .sort((a, b) => a - b);
+  if (!numbers.length) return null;
+
   return (
     <span className="citation-run" aria-label="Section sources">
-      {sourceIds.map((sourceId) => (
-        <a href="#references" key={sourceId}>
-          [{referenceNumber.get(sourceId)}]
-        </a>
-      ))}
+      <a href="#references">[{numbers.join(",")}]</a>
     </span>
+  );
+}
+
+function TextWithCitations({
+  text,
+  anchors = [],
+  endSourceIds = [],
+  referenceNumber,
+}: {
+  text: string;
+  anchors?: CitationAnchor[];
+  endSourceIds?: string[];
+  referenceNumber: Map<string, number>;
+}) {
+  if (!anchors.length) {
+    return (
+      <>
+        {text} <CitationRun sourceIds={endSourceIds} referenceNumber={referenceNumber} />
+      </>
+    );
+  }
+
+  const parts: ReactNode[] = [];
+  let cursor = 0;
+
+  anchors.forEach((anchor, anchorIndex) => {
+    const start = text.indexOf(anchor.text, cursor);
+    if (start === -1) return;
+    const end = start + anchor.text.length;
+    parts.push(text.slice(cursor, end));
+    parts.push(" ");
+    parts.push(<CitationRun key={`citation-${anchorIndex}`} sourceIds={anchor.sourceIds} referenceNumber={referenceNumber} />);
+    parts.push(" ");
+    cursor = end;
+  });
+
+  parts.push(text.slice(cursor));
+
+  return (
+    <>
+      {parts}
+      {endSourceIds.length ? <> <CitationRun sourceIds={endSourceIds} referenceNumber={referenceNumber} /></> : null}
+    </>
   );
 }
 
@@ -108,16 +157,30 @@ export function GuidanceRenderer({ profile, showTechnical, showAllSections }: Pr
             </div>
             <h2>{block.title}</h2>
             <p className="section-summary">
-              {block.summary} <CitationRun sourceIds={block.sourceIds} referenceNumber={referenceNumber} />
+              {block.summary} <CitationRun sourceIds={block.summarySourceIds ?? []} referenceNumber={referenceNumber} />
             </p>
-            {block.body.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
+            {block.body.map((paragraph, paragraphIndex) => (
+              <p key={paragraph}>
+                <TextWithCitations
+                  text={paragraph}
+                  anchors={block.bodyCitationAnchors?.[paragraphIndex]}
+                  endSourceIds={block.bodySourceIds?.[paragraphIndex] ?? []}
+                  referenceNumber={referenceNumber}
+                />
+              </p>
             ))}
             {block.subsections?.map((subsection) => (
               <section className="document-subsection" key={subsection.title}>
                 <h3>{subsection.title}</h3>
-                {subsection.body.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
+                {subsection.body.map((paragraph, paragraphIndex) => (
+                  <p key={paragraph}>
+                    <TextWithCitations
+                      text={paragraph}
+                      anchors={subsection.bodyCitationAnchors?.[paragraphIndex]}
+                      endSourceIds={subsection.bodySourceIds?.[paragraphIndex] ?? []}
+                      referenceNumber={referenceNumber}
+                    />
+                  </p>
                 ))}
               </section>
             ))}
@@ -126,8 +189,15 @@ export function GuidanceRenderer({ profile, showTechnical, showAllSections }: Pr
                 <strong>
                   <SlidersHorizontal size={16} aria-hidden="true" /> Technical detail
                 </strong>
-                {block.technicalDetail.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
+                {block.technicalDetail.map((paragraph, paragraphIndex) => (
+                  <p key={paragraph}>
+                    <TextWithCitations
+                      text={paragraph}
+                      anchors={block.technicalDetailCitationAnchors?.[paragraphIndex]}
+                      endSourceIds={block.technicalDetailSourceIds?.[paragraphIndex] ?? []}
+                      referenceNumber={referenceNumber}
+                    />
+                  </p>
                 ))}
               </aside>
             ) : null}

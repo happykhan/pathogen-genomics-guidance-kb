@@ -6,10 +6,15 @@ export const guidanceBlocks: GuidanceBlock[] = [
     title: "Why pathogen genomics?",
     summary:
       "Pathogen genomics can improve public-health action when it is connected to decisions, surveillance systems, and response capacity.",
+    summarySourceIds: ["who-genomic-surveillance-2022", "cdc-nejm-2019", "phe-case-study"],
     body: [
       "The value of pathogen genomics is not that it produces more detailed laboratory data. Its value is that the added resolution can change public-health action: detecting linked cases, identifying transmission patterns, monitoring pathogen evolution, supporting antimicrobial-resistance surveillance, improving vaccine or variant monitoring, and helping teams decide where to investigate or intervene.",
       "The strongest argument for investment is therefore a service argument, not a technology argument. Genomics is useful when the result reaches the people who make decisions, arrives in time to affect those decisions, and is interpreted with enough epidemiological and laboratory context to avoid overclaiming.",
     ],
+    bodySourceIds: {
+      0: ["who-genomic-surveillance-2022", "cdc-nejm-2019", "foodborne-genomics-allard-2018"],
+      1: ["cdc-nejm-2019", "phe-case-study"],
+    },
     subsections: [
       {
         title: "What genomics can add",
@@ -17,6 +22,10 @@ export const guidanceBlocks: GuidanceBlock[] = [
           "Compared with many conventional typing approaches, whole-genome sequencing can provide higher-resolution information about relatedness, resistance determinants, virulence markers, strain replacement, and pathogen evolution. In public-health practice this can help rule cases in or out of clusters, identify geographically dispersed outbreaks, monitor lineages, and support more targeted investigations.",
           "WHO's genomic surveillance strategy frames genomic capability as part of preparedness and response for pathogens with epidemic and pandemic potential. Armstrong et al. describe uses across outbreak investigation, tuberculosis control, influenza surveillance, antimicrobial-resistance surveillance, parasitic disease investigation, and molecular surveillance.",
         ],
+        bodySourceIds: {
+          0: ["cdc-nejm-2019", "foodborne-genomics-allard-2018"],
+          1: ["who-genomic-surveillance-2022", "cdc-nejm-2019"],
+        },
       },
       {
         title: "Where the value comes from",
@@ -24,6 +33,10 @@ export const guidanceBlocks: GuidanceBlock[] = [
           "The public-health benefit comes from combining sequence data with sample context, epidemiology, reporting pathways, and response capacity. A genome sequence on its own rarely answers the operational question. The useful product is an interpreted result that tells a team whether cases are likely to be linked, whether a pathogen is changing, whether resistance may affect control, or whether more investigation is needed.",
           "The PHE case study is useful because it describes genomics as a service transition rather than a research project. WGS implementation changed laboratory workflows, reporting timelines, staffing, accreditation, user engagement, and outbreak investigation practice. That is the level at which the value case should be made.",
         ],
+        bodySourceIds: {
+          0: ["cdc-nejm-2019", "phe-case-study"],
+          1: ["phe-case-study"],
+        },
       },
       {
         title: "What genomics cannot do by itself",
@@ -31,6 +44,10 @@ export const guidanceBlocks: GuidanceBlock[] = [
           "Genomics does not remove the need for epidemiology, sampling strategy, laboratory quality, metadata quality, governance, or public-health judgement. A highly resolved tree can still mislead if sampling is biased, identifiers are broken, metadata are missing, or the result is interpreted without exposure information and local context.",
           "It also does not automatically make a programme cheaper or easier to run. Genomics can replace or consolidate some older processes in specific settings, but it creates recurring needs for storage, compute, workflow maintenance, validation, specialist staff, and user support.",
         ],
+        bodySourceIds: {
+          0: ["cdc-nejm-2019", "who-genomic-surveillance-2022"],
+          1: ["phe-case-study", "wgs-costing-tool-2024"],
+        },
       },
       {
         title: "The economic case needs care",
@@ -38,6 +55,17 @@ export const guidanceBlocks: GuidanceBlock[] = [
           "The financial argument should be made with setting-specific evidence. Some programmes may save staff time, reduce duplicated testing, shorten reporting, or focus outbreak investigations more efficiently. Others may face higher near-term costs because they need new infrastructure, training, validation, quality systems, and data-management capacity.",
           "The current knowledge base has a strong service case from PHE and a broad public-health case from WHO and Armstrong et al. It still needs a fuller review of economic evaluations before making general claims about cost-effectiveness or return on investment.",
         ],
+        bodySourceIds: {
+          0: ["genometrakr-economic-2021", "national-investment-case-2025", "wgs-costing-tool-2024", "wgs-economic-review"],
+        },
+        bodyCitationAnchors: {
+          1: [
+            {
+              text: "The current knowledge base has a strong service case from PHE and a broad public-health case from WHO and Armstrong et al.",
+              sourceIds: ["phe-case-study", "who-genomic-surveillance-2022", "cdc-nejm-2019"],
+            },
+          ],
+        },
       },
     ],
     audiences: ["director", "policy", "funder", "lab-lead", "all"],

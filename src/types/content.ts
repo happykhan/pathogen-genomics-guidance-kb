@@ -10,12 +10,19 @@ export type GuidanceBlock = {
   id: string;
   title: string;
   summary: string;
+  summarySourceIds?: string[];
   body: string[];
+  bodySourceIds?: Record<number, string[]>;
+  bodyCitationAnchors?: Record<number, { text: string; sourceIds: string[] }[]>;
   subsections?: {
     title: string;
     body: string[];
+    bodySourceIds?: Record<number, string[]>;
+    bodyCitationAnchors?: Record<number, { text: string; sourceIds: string[] }[]>;
   }[];
   technicalDetail?: string[];
+  technicalDetailSourceIds?: Record<number, string[]>;
+  technicalDetailCitationAnchors?: Record<number, { text: string; sourceIds: string[] }[]>;
   audiences: Audience[];
   implementationStages: ImplementationStage[];
   organisms: OrganismFocus[];

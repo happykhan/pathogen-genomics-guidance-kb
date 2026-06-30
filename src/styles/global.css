@@ -446,7 +446,7 @@ select {
   display: inline-flex;
   flex-wrap: wrap;
   gap: 3px;
-  margin-left: 4px;
+  margin-left: 0;
   vertical-align: baseline;
   white-space: normal;
 }
@@ -1477,7 +1477,7 @@ select {
 
   .citation-run {
     display: inline;
-    margin-left: 1mm;
+    margin-left: 0;
     white-space: normal;
   }
 
