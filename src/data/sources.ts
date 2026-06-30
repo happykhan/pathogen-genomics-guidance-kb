@@ -72,6 +72,30 @@ export const sources = {
     label: "IPSN source pack",
     path: "knowledge-base/source-cards/ipsn-source-pack.md",
   },
+  "aphl-ngs-implementation-2016": {
+    label: "APHL 2016, Next Generation Sequencing Implementation Guide",
+    path: "knowledge-base/source-cards/aphl-ngs-implementation-guide-2016.md",
+  },
+  "ecdc-wgs-surveillance-2016": {
+    label: "ECDC 2016, Expert opinion on whole genome sequencing for public health surveillance",
+    path: "knowledge-base/source-cards/ecdc-wgs-public-health-surveillance-2016.md",
+  },
+  "ukhsa-pathogen-genomics-strategy-2024": {
+    label: "UKHSA 2024, Pathogen Genomics Strategy",
+    path: "knowledge-base/source-cards/ukhsa-pathogen-genomics-strategy-2024.md",
+  },
+  "australia-microbial-genomics-framework-2025": {
+    label: "Australian Centre for Disease Control 2025, National Microbial Genomics Framework",
+    path: "knowledge-base/source-cards/australia-national-microbial-genomics-framework-2025.md",
+  },
+  "auspathogen-implementation-2025": {
+    label: "Webb et al. 2025, Implementing a national programme of pathogen genomics for public health",
+    path: "knowledge-base/source-cards/auspathogen-national-implementation-2025.md",
+  },
+  "east-africa-genomics-landscape-2024": {
+    label: "Nguinkal et al. 2024, Pathogen genomics landscape in the East African Community",
+    path: "knowledge-base/source-cards/east-africa-pathogen-genomics-landscape-2024.md",
+  },
 } as const;
 
 export type SourceId = keyof typeof sources;
