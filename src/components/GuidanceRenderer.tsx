@@ -21,6 +21,18 @@ type Props = {
 const relevanceThreshold = 7;
 const sourceLookup: Record<string, { label: string; path: string }> = sources;
 
+function CitationRun({ sourceIds, referenceNumber }: { sourceIds: string[]; referenceNumber: Map<string, number> }) {
+  return (
+    <span className="citation-run" aria-label="Section sources">
+      {sourceIds.map((sourceId) => (
+        <a href="#references" key={sourceId}>
+          [{referenceNumber.get(sourceId)}]
+        </a>
+      ))}
+    </span>
+  );
+}
+
 export function GuidanceRenderer({ profile, showTechnical, showAllSections }: Props) {
   const scored = guidanceBlocks.map((block, index) => ({
     block,
@@ -95,7 +107,9 @@ export function GuidanceRenderer({ profile, showTechnical, showAllSections }: Pr
               <span>{block.detailLevel}</span>
             </div>
             <h2>{block.title}</h2>
-            <p className="section-summary">{block.summary}</p>
+            <p className="section-summary">
+              {block.summary} <CitationRun sourceIds={block.sourceIds} referenceNumber={referenceNumber} />
+            </p>
             {block.body.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
@@ -117,14 +131,6 @@ export function GuidanceRenderer({ profile, showTechnical, showAllSections }: Pr
                 ))}
               </aside>
             ) : null}
-            <footer className="section-sources">
-              <span>Sources</span>
-              {block.sourceIds.map((sourceId) => (
-                <a href="#references" key={sourceId}>
-                  [{referenceNumber.get(sourceId)}]
-                </a>
-              ))}
-            </footer>
           </section>
         ))}
 
