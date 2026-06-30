@@ -1089,19 +1089,31 @@ select {
 }
 
 @media print {
+  @page {
+    size: A4;
+    margin: 18mm 17mm 20mm;
+  }
+
   .topbar,
   .button,
   .modal-backdrop,
+  .gx-footer,
+  .hero-workspace,
+  .guidance-control-band,
   .no-print {
     display: none !important;
   }
 
   .print-only {
-    display: block;
+    display: none !important;
   }
 
+  html,
   body {
     background: #fff;
+    color: #111;
+    font-size: 10.5pt;
+    line-height: 1.45;
   }
 
   .page {
@@ -1109,34 +1121,176 @@ select {
     padding: 0;
   }
 
-  .panel {
-    border: 0;
-    box-shadow: none;
+  .document-wrap,
+  .whitepaper,
+  .whitepaper-cover,
+  .whitepaper-toc,
+  .whitepaper-body,
+  .document-section {
+    display: block;
   }
 
+  .panel,
   .whitepaper {
     border: 0;
     box-shadow: none;
+    border-radius: 0;
+  }
+
+  .whitepaper {
+    overflow: visible;
   }
 
   .whitepaper-cover,
   .whitepaper-toc,
   .whitepaper-body {
+    border: 0;
     padding-left: 0;
     padding-right: 0;
   }
 
+  .whitepaper-cover {
+    min-height: 185mm;
+    padding-top: 10mm;
+    break-after: page;
+  }
+
+  .whitepaper-cover .eyebrow {
+    color: #444;
+    font-size: 8.5pt;
+  }
+
+  .whitepaper-cover h1 {
+    max-width: 170mm;
+    margin: 10mm 0 7mm;
+    font-size: 27pt;
+    line-height: 1.08;
+  }
+
+  .whitepaper-dek {
+    max-width: 155mm;
+    color: #333;
+    font-size: 12pt;
+  }
+
+  .document-profile {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9mm 10mm;
+    margin-top: 16mm;
+  }
+
+  .document-profile div {
+    border-top: 0.5pt solid #aaa;
+  }
+
+  .document-profile dt {
+    color: #555;
+    font-size: 7.5pt;
+  }
+
+  .document-profile dd {
+    font-size: 10pt;
+  }
+
+  .omission-note {
+    border-left: 2pt solid #888;
+    background: #fff;
+    color: #333;
+  }
+
+  .whitepaper-toc {
+    background: #fff;
+    break-after: page;
+  }
+
+  .whitepaper-toc h2,
+  .references-section h2 {
+    font-size: 16pt;
+  }
+
+  .whitepaper-toc ol {
+    gap: 5pt;
+  }
+
+  .whitepaper-toc a,
+  .section-sources a,
+  a {
+    color: #111;
+    text-decoration: none;
+  }
+
+  .toc-note,
+  .section-sources span {
+    display: none;
+  }
+
   .document-section {
-    break-inside: avoid;
+    border-top: 0.5pt solid #cfcfcf;
+    padding: 12mm 0 8mm;
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  .document-section:first-child {
+    border-top: 0;
+  }
+
+  .document-section.low-relevance {
+    opacity: 1;
+  }
+
+  .section-kicker {
+    color: #555;
+    font-size: 7.5pt;
   }
 
   .document-section h2 {
+    max-width: 165mm;
+    font-size: 16pt;
+    line-height: 1.22;
     break-after: avoid;
   }
 
-  .grid-two,
-  .hero-workspace,
-  .quiz-grid {
-    display: block;
+  .document-subsection h3 {
+    font-size: 12pt;
+  }
+
+  .section-summary {
+    color: #333;
+    font-size: 10.5pt;
+  }
+
+  .document-section p,
+  .document-subsection,
+  .whitepaper-dek {
+    max-width: 165mm;
+  }
+
+  .technical-detail {
+    border-left: 2pt solid #777;
+    background: #fff;
+    padding: 7pt 9pt;
+  }
+
+  .technical-detail svg {
+    display: none;
+  }
+
+  .section-sources {
+    margin-top: 10pt;
+    font-size: 8.5pt;
+  }
+
+  .references-section {
+    break-before: page;
+  }
+
+  .references-section ol {
+    gap: 7pt;
+  }
+
+  .references-section code {
+    color: #555;
+    font-size: 7.5pt;
   }
 }
