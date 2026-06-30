@@ -19,6 +19,22 @@ export const sources = {
     label: "Systematic review of economic evaluations of whole-genome sequencing for pathogen identification and surveillance",
     path: "knowledge-base/source-cards/wgs-economic-evaluation-review.md",
   },
+  "genometrakr-economic-2021": {
+    label: "Brown et al. 2021, Economic evaluation of the U.S. GenomeTrakr WGS source tracking program",
+    path: "knowledge-base/source-cards/genometrakr-economic-evaluation-2021.md",
+  },
+  "national-investment-case-2025": {
+    label: "Khoo et al. 2025, National investment case development for pathogen genomics",
+    path: "knowledge-base/source-cards/national-investment-case-pathogen-genomics-2025.md",
+  },
+  "wgs-costing-tool-2024": {
+    label: "Akande et al. 2024, Genomics costing tool for next-generation sequencing",
+    path: "knowledge-base/source-cards/genomics-costing-tool-2024.md",
+  },
+  "foodborne-genomics-allard-2018": {
+    label: "Allard et al. 2018, Genomics of foodborne pathogens for microbial food safety",
+    path: "knowledge-base/source-cards/foodborne-genomics-microbial-food-safety-2018.md",
+  },
 } as const;
 
 export type SourceId = keyof typeof sources;

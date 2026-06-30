@@ -45,7 +45,16 @@ export const guidanceBlocks: GuidanceBlock[] = [
     organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
     topics: ["framing", "decision-use", "public-health", "costing", "value"],
     detailLevel: "summary",
-    sourceIds: ["who-genomic-surveillance-2022", "cdc-nejm-2019", "phe-case-study", "wgs-economic-review"],
+    sourceIds: [
+      "who-genomic-surveillance-2022",
+      "cdc-nejm-2019",
+      "phe-case-study",
+      "foodborne-genomics-allard-2018",
+      "genometrakr-economic-2021",
+      "national-investment-case-2025",
+      "wgs-costing-tool-2024",
+      "wgs-economic-review",
+    ],
     gaps: ["A formal review of economic value, cost-effectiveness, and setting-specific benefit evidence is still needed."],
   },
   {
