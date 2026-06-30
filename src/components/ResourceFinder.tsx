@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { ExternalLink, Search } from "lucide-react";
+import { Download, ExternalLink, Search, Wand2 } from "lucide-react";
+import { GnomeyWizard } from "./GnomeyWizard";
 import { resources } from "../data/resources";
 import { scoreResource } from "../lib/recommendations";
 import { organismLabels, parseProfileFromUrl, roleLabels, stageLabels } from "../lib/profile";
@@ -23,15 +24,28 @@ const defaultFilters: FinderFilters = {
   stage: "all",
 };
 
+const pageSize = 8;
+
+const sourceStatusLabels = {
+  extracted: "Reviewed for guide",
+  candidate: "Needs review",
+} as const;
+
 export function ResourceFinder() {
   const [profile, setProfile] = useState<Profile>(defaultProfile);
+  const [wizardOpen, setWizardOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [onlyRecommended, setOnlyRecommended] = useState(true);
   const [filters, setFilters] = useState<FinderFilters>(defaultFilters);
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     setProfile(parseProfileFromUrl(window.location.search));
   }, []);
+
+  useEffect(() => {
+    setPage(1);
+  }, [profile, query, onlyRecommended, filters]);
 
   const filterOptions = useMemo(() => {
     return {
@@ -81,27 +95,37 @@ export function ResourceFinder() {
     setFilters((current) => ({ ...current, [key]: value }));
   }
 
+  const totalPages = Math.max(1, Math.ceil(results.length / pageSize));
+  const pageResults = results.slice((page - 1) * pageSize, page * pageSize);
+
   return (
     <section>
-      <div className="hero-workspace">
-        <div>
-          <p className="eyebrow">Resource finder</p>
-          <h1 className="workspace-title">Find the public-health genomics documents that match the job.</h1>
-          <p className="workspace-copy">
-            This catalogue separates extracted source material from candidate documents that still need careful extraction.
-            Search terms are matched against titles, agencies, topics, and hand-curated keywords.
-          </p>
-        </div>
-        <aside className="panel">
-          <div className="panel-body">
-            <h2 style={{ marginTop: 0, fontSize: "1.1rem" }}>Profile used for ranking</h2>
-            <p className="muted">
-              {roleLabels[profile.role]} at {stageLabels[profile.stage].toLowerCase()} stage, focused on{" "}
-              {profile.organisms.map((organism) => organismLabels[organism]).join(", ")}.
-            </p>
+      <div inert={wizardOpen ? true : undefined} aria-hidden={wizardOpen ? "true" : undefined}>
+        <div className="hero-workspace">
+          <div>
+            <p className="eyebrow">Resource finder</p>
+            <h1 className="workspace-title">Find the documents that match your genomics job.</h1>
           </div>
-        </aside>
-      </div>
+          <aside className="panel resource-profile-panel">
+            <div className="panel-body">
+              <div className="gnomey-tile compact">
+                <img className="gnomey-image" src="/assets/gnomey.png" alt="" aria-hidden="true" />
+                <div>
+                  <p className="eyebrow">Gnomey ranks these for</p>
+                  <h2 style={{ margin: "4px 0 8px", fontSize: "1.1rem" }}>Your current profile</h2>
+                  <p className="muted">
+                    {roleLabels[profile.role]} at {stageLabels[profile.stage].toLowerCase()} stage, focused on{" "}
+                    {profile.organisms.map((organism) => organismLabels[organism]).join(", ")}.
+                  </p>
+                  <button className="button primary" type="button" onClick={() => setWizardOpen(true)}>
+                    <Wand2 size={18} />
+                    Change profile
+                  </button>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
 
       <div className="toolbar">
         <label className="form-field" style={{ flex: "1 1 320px" }}>
@@ -189,33 +213,54 @@ export function ResourceFinder() {
       </section>
 
       <div className="resource-grid">
-        {results.map(({ resource, score }) => (
+        {pageResults.map(({ resource, score }) => (
           <article className="resource-card" key={resource.id}>
-            <div className="toolbar" style={{ marginBottom: 8 }}>
-              <div>
-                <p className="eyebrow">{resource.agency} / {resource.year}</p>
-                <h2>{resource.title}</h2>
+            <div className="resource-card-head">
+              <p className="eyebrow">{resource.agency} / {resource.year}</p>
+              <h2>{resource.title}</h2>
+              <div className="resource-meta-row">
+                <span className="badge match">match {score}</span>
+                <span className={resource.sourceStatus === "extracted" ? "badge source" : "badge gap"}>
+                  {sourceStatusLabels[resource.sourceStatus]}
+                </span>
+                {resource.topics.slice(0, 5).map((topic) => (
+                  <span className="badge" key={topic}>{topic}</span>
+                ))}
               </div>
-              <span className={resource.sourceStatus === "extracted" ? "badge source" : "badge gap"}>
-                {resource.sourceStatus}
-              </span>
             </div>
-            <p>{resource.summary}</p>
-            <p className="muted">{resource.whyUseful}</p>
-            <div className="block-meta">
-              <span className="badge">match score {score}</span>
-              {resource.topics.slice(0, 5).map((topic) => (
-                <span className="badge" key={topic}>{topic}</span>
-              ))}
+            <div className="resource-summary">
+              <h3>Executive summary</h3>
+              <p>{resource.summary}</p>
+              <p className="muted">{resource.whyUseful}</p>
             </div>
-            <p>
+            <div className="resource-actions">
               <a href={resource.url} target="_blank" rel="noreferrer">
                 Open source <ExternalLink size={14} aria-hidden="true" />
               </a>
-            </p>
+              {resource.pdfUrl ? (
+                <a href={resource.pdfUrl} target="_blank" rel="noreferrer">
+                  Download PDF <Download size={14} aria-hidden="true" />
+                </a>
+              ) : null}
+            </div>
           </article>
         ))}
       </div>
+
+        <nav className="pagination" aria-label="Resource result pages">
+          <button className="button" type="button" disabled={page <= 1} onClick={() => setPage((current) => Math.max(1, current - 1))}>
+            Previous
+          </button>
+          <span>
+            Page {page} of {totalPages}
+          </span>
+          <button className="button" type="button" disabled={page >= totalPages} onClick={() => setPage((current) => Math.min(totalPages, current + 1))}>
+            Next
+          </button>
+        </nav>
+      </div>
+
+      {wizardOpen ? <GnomeyWizard profile={profile} onApply={setProfile} onClose={() => setWizardOpen(false)} /> : null}
     </section>
   );
 }

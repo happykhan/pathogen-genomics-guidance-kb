@@ -52,7 +52,7 @@ export function GuidanceApp() {
         <section className="hero-workspace">
           <div>
             <p className="eyebrow">Dynamic guidance document</p>
-            <h1 className="workspace-title">Set up pathogen genomics infrastructure for the context you actually have.</h1>
+            <h1 className="workspace-title">Build pathogen genomics services that fit your setting.</h1>
             <div className="control-row no-print hero-utility-actions" aria-label="Document actions">
               <button className="button" type="button" onClick={() => window.print()}>
                 <FileDown size={18} />

@@ -32,6 +32,7 @@ export type ResourceRecord = {
   agency: string;
   year: string;
   url: string;
+  pdfUrl?: string;
   documentType: "paper" | "guidance" | "strategy" | "toolkit" | "case-study" | "source-pack";
   audiences: Audience[];
   topics: string[];

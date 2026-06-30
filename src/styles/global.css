@@ -191,6 +191,11 @@ select {
   box-shadow: 0 4px 10px rgba(19, 31, 63, 0.06);
 }
 
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
 .button.primary {
   border-color: var(--accent);
   background: var(--accent);
@@ -533,6 +538,13 @@ select {
   color: #5b3c00;
 }
 
+.badge.match {
+  border-color: #bfdbfe;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-weight: 750;
+}
+
 .hero-workspace {
   display: grid;
   gap: 16px;
@@ -587,6 +599,10 @@ select {
   align-items: center;
 }
 
+.gnomey-tile.compact {
+  grid-template-columns: 92px minmax(0, 1fr);
+}
+
 .gnomey-tile p:not(.eyebrow) {
   margin: 6px 0 14px;
   color: var(--ink);
@@ -598,6 +614,11 @@ select {
   height: 104px;
   object-fit: contain;
   object-position: center bottom;
+}
+
+.gnomey-tile.compact .gnomey-image {
+  width: 84px;
+  height: 84px;
 }
 
 .modal-header .gnomey-image {
@@ -941,13 +962,88 @@ select {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface);
-  padding: 16px;
+  padding: 18px;
 }
 
-.resource-card h2,
-.resource-card h3 {
+.resource-card-head {
+  display: grid;
+  gap: 8px;
+}
+
+.resource-card h2 {
   margin: 0 0 8px;
-  font-size: 1.15rem;
+  font-size: 1.28rem;
+  line-height: 1.2;
+}
+
+.resource-card h3 {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.resource-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.resource-summary {
+  margin-top: 16px;
+}
+
+.resource-summary p {
+  max-width: 920px;
+}
+
+.resource-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.resource-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.code-sample {
+  margin: 12px 0 0;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--gx-code-bg);
+  padding: 10px 12px;
+}
+
+.code-sample code {
+  font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.86rem;
+}
+
+.resource-profile-panel {
+  max-width: 820px;
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.pagination span {
+  color: var(--muted);
+  font-weight: 650;
 }
 
 .quiz-grid {
