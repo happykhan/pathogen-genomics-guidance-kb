@@ -24,6 +24,14 @@ function loadGuidanceBlocks() {
   return Function(source)();
 }
 
+function loadResources() {
+  const source = read("src/data/resources.ts")
+    .replace(/import type \{ ResourceRecord \} from "\.\.\/types\/content";\n\n/, "")
+    .replace(/export const resources: ResourceRecord\[] =/, "const resources =")
+    .replace(/;\s*$/, ";\nreturn resources;");
+  return Function(source)();
+}
+
 function collectSourceIds(value, activeKey = "", output = new Set()) {
   if (Array.isArray(value)) {
     if (activeKey.endsWith("SourceIds") || activeKey === "sourceIds") {
@@ -44,9 +52,12 @@ function collectSourceIds(value, activeKey = "", output = new Set()) {
 
 const sources = loadSources();
 const guidanceBlocks = loadGuidanceBlocks();
+const resources = loadResources();
 const sourceIds = new Set(Object.keys(sources));
 const validStatuses = new Set(["reviewed", "partial", "gap"]);
+const validResourceStatuses = new Set(["extracted", "candidate"]);
 const errors = [];
+const seenResourceIds = new Set();
 
 Object.entries(sources).forEach(([sourceId, source]) => {
   if (!source?.label || !source?.path) {
@@ -76,6 +87,46 @@ guidanceBlocks.forEach((block) => {
   });
 });
 
+resources.forEach((resource) => {
+  if (seenResourceIds.has(resource.id)) {
+    errors.push(`Resource ID is duplicated: ${resource.id}`);
+  }
+  seenResourceIds.add(resource.id);
+
+  if (!resource.id || !resource.title || !resource.url || !resource.summary || !resource.whyUseful) {
+    errors.push(`Resource ${resource.id ?? "(missing id)"} must include id, title, url, summary, and whyUseful.`);
+  }
+
+  if (!validResourceStatuses.has(resource.sourceStatus)) {
+    errors.push(`Resource ${resource.id} has invalid sourceStatus: ${resource.sourceStatus}`);
+  }
+
+  if (resource.sourceStatus === "extracted" && !resource.sourceCardPath) {
+    errors.push(`Extracted resource ${resource.id} must include sourceCardPath.`);
+  }
+
+  for (const field of ["url", "pdfUrl", "sourceCardPath"]) {
+    const value = resource[field];
+    if (typeof value === "string" && value.includes("/Users/")) {
+      errors.push(`Resource ${resource.id} exposes a local path in ${field}.`);
+    }
+  }
+
+  if (resource.pdfUrl && !/^https?:\/\//.test(resource.pdfUrl)) {
+    errors.push(`Resource ${resource.id} has a non-public pdfUrl: ${resource.pdfUrl}`);
+  }
+
+  if (resource.sourceCardPath) {
+    if (!resource.sourceCardPath.startsWith("knowledge-base/source-cards/")) {
+      errors.push(`Resource ${resource.id} sourceCardPath must point under knowledge-base/source-cards/.`);
+    }
+
+    if (!existsSync(path.join(repoRoot, resource.sourceCardPath))) {
+      errors.push(`Resource ${resource.id} points to missing source card: ${resource.sourceCardPath}`);
+    }
+  }
+});
+
 if (errors.length) {
   console.error("Content validation failed:");
   errors.forEach((error) => console.error(`- ${error}`));
@@ -83,5 +134,5 @@ if (errors.length) {
 }
 
 console.log(
-  `Content validation passed: ${guidanceBlocks.length} guidance blocks and ${sourceIds.size} source records checked.`,
+  `Content validation passed: ${guidanceBlocks.length} guidance blocks, ${resources.length} resources, and ${sourceIds.size} source records checked.`,
 );

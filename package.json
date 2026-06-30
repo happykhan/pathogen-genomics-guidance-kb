@@ -8,6 +8,7 @@
     "build": "next build",
     "preview": "next start",
     "content:check": "node scripts/validate-content.mjs",
+    "qa:scenarios": "node scripts/qa-scenarios.mjs",
     "pubmed:discover": "node scripts/pubmed-discover.mjs"
   },
   "dependencies": {

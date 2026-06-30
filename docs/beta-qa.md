@@ -5,6 +5,7 @@ Use this checklist before calling the guide beta-ready.
 ## Automated Checks
 
 - `npm run content:check`
+- `npm run qa:scenarios`
 - `npm run build`
 - Confirm no large source binaries are tracked:
 
@@ -28,6 +29,7 @@ The API checks should confirm:
 - guidance blocks expose `sourceStatus`;
 - cited `sourceIds` resolve through `/api/sources`;
 - resource records include `pdfUrl`, `doi`, and `sourceCardPath` where available;
+- extracted resource records include source cards;
 - no public API exposes local `/Users/...` paths.
 
 ## Visual Checks
@@ -59,6 +61,14 @@ Run the wizard for these profiles and verify that section ranking and resources 
 - Bioinformatician, routine service, validate workflows and share data.
 - IT/security, national scale, data residency concern and cloud not allowed.
 - Mixed team, exploring, design infrastructure.
+
+`npm run qa:scenarios` covers the constraint-specific checks that can be automated:
+
+- unreliable internet raises local storage/backup guidance and lowers data-sharing-platform ranking;
+- no bioinformatics staff raises workforce and support-relevant guidance;
+- no central IT raises operating-model and backup/sustainability guidance;
+- no LIMS raises metadata and data-lifecycle guidance;
+- cloud restrictions or data-residency concern raise governance/sharing caution and lower cloud-heavy recommendations.
 
 ## Editorial Checks
 
