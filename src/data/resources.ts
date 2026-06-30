@@ -217,7 +217,7 @@ export const resources: ResourceRecord[] = [
     whyUseful:
       "Likely source for surveillance integration and strategic public-health use cases.",
     keywords: ["ECDC", "WGS", "surveillance", "strategy"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "aphl-ngs-implementation",
@@ -237,7 +237,7 @@ export const resources: ResourceRecord[] = [
     whyUseful:
       "Priority source for practical implementation, QC, data handling, and reporting checklists.",
     keywords: ["APHL", "NGS", "implementation", "laboratory", "quality"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "ukhsa-pathogen-genomics-strategy",
@@ -257,7 +257,7 @@ export const resources: ResourceRecord[] = [
     whyUseful:
       "Useful for national strategy, shared infrastructure, data-sharing policy, and public-health service framing.",
     keywords: ["UKHSA", "strategy", "pathogen genomics", "data sharing"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "australia-microbial-genomics-framework",
@@ -276,7 +276,7 @@ export const resources: ResourceRecord[] = [
     whyUseful:
       "Candidate source for national governance, implementation activities, and capability framing.",
     keywords: ["Australia", "microbial genomics", "framework", "public health"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "cdc-amd-program",
@@ -486,7 +486,7 @@ export const resources: ResourceRecord[] = [
       "infection prevention",
       "AMR",
     ],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "foodborne-genomics-allard",
@@ -527,7 +527,7 @@ export const resources: ResourceRecord[] = [
     whyUseful:
       "Strong candidate for national programme design, governance, and implementation lessons.",
     keywords: ["AusPathoGen", "Australia", "national programme", "AusTrakka", "ethics", "data sharing", "training"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "east-africa-genomics-landscape-2024",
@@ -548,7 +548,7 @@ export const resources: ResourceRecord[] = [
     whyUseful:
       "Useful counterweight to high-resource examples; highlights dependence on external sequencing, limited compute, bioinformatics expertise, and data-sharing mechanisms.",
     keywords: ["East Africa", "AMR", "capacity", "equity", "bioinformatics", "NGS", "outbreak response"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "who-regional-genomic-surveillance-2023",

@@ -7,7 +7,7 @@
 
 ## Status
 
-`candidate source; full text available locally; high-level extraction`
+`source-backed; full text available locally; extracted note available`
 
 ## Relevance
 
@@ -25,13 +25,13 @@ This national framework is a strong source for governance, collaboration, accred
 
 - The foreword frames microbial genomics as a tool to understand infectious diseases, improve surveillance, strengthen public-health decision-making, and support vaccines and treatments.
 - The framework reinforces integration of microbial genomics into laboratory and public-health systems.
+- Detailed extracted note: `knowledge-base/extracted-notes/national-frameworks-ukhsa-australia-auspathogen.md`
 
 ## Current Use In App
 
 - Resource finder candidate source.
-- Not yet cited in guidance prose.
+- Cited in data-sharing and national implementation guidance prose.
 
 ## Gaps
 
-- Needs detailed extraction against implementation maturity and governance sections.
-
+- Needs detailed extraction if the guide develops a formal governance or maturity rubric.

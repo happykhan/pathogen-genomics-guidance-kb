@@ -7,7 +7,7 @@
 
 ## Status
 
-`candidate source; full text available locally; high-level extraction`
+`source-backed; full text available locally; extracted note available`
 
 ## Relevance
 
@@ -26,13 +26,13 @@ This is a practical implementation guide for public-health laboratories starting
 
 - The guide is organised around instrument selection and laboratory preparation, information technology, workforce, validation, and what to do with the data.
 - It includes an information-technology checklist and a PulseNet WGS implementation appendix.
+- Detailed extracted note: `knowledge-base/extracted-notes/aphl-ngs-implementation.md`
 
 ## Current Use In App
 
 - Resource finder candidate source.
-- Not yet cited in guidance prose.
+- Cited in validation and quality guidance prose.
 
 ## Gaps
 
-- Needs detailed extraction into QC, validation, storage, and workforce modules.
-
+- Needs a structured checklist table mapped to QC, validation, storage, and workforce modules.

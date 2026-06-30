@@ -203,6 +203,54 @@ export const guidanceBlocks: GuidanceBlock[] = [
     sourceIds: ["who-national-genomic-surveillance-strategy-2023", "pha4ge-infrastructure", "phe-case-study"],
   },
   {
+    id: "implementation-model-dependencies",
+    title: "Choose an implementation model by its dependencies",
+    summary:
+      "Centralised, local, hybrid, collaborative, and managed models can all be valid, but each depends on different people, infrastructure, governance, and support.",
+    sourceStatus: "partial",
+    body: [
+      "A genomics programme does not have to own every layer of the service to be credible. It does need to know which layers it operates, which layers are delegated, and which dependencies would stop public-health use if they failed.",
+      "PHA4GE frames this as a responsibility question: where analysis is run, how data move, and who has access. The clinical microbiology implementation review describes centralised reference laboratory, decentralised in-house sequencing, and hybrid or collaborative models. AusPathoGen shows a national collaborative model built around public-health laboratories, agencies, academic partners, standard bioinformatics, governance committees, and a shared data platform.",
+      "The right model depends on constraints. A centralised reference model can concentrate expertise, validation, infrastructure, and quality systems, but it creates sample-transfer, turnaround-time, and service-dependency questions. A local model can improve local control and responsiveness, but it requires staff, validation, storage, IT support, and continuity. A hybrid or collaborative model can spread capability while preserving shared standards, but it needs explicit governance, data-sharing agreements, and support routes.",
+      "The East African Community landscape shows why this matters. External sequencing and analysis can be useful during capability building, but long-term reliance on third parties may delay real-time surveillance decisions and limit local interpretation if local sequencing, compute, bioinformatics, and data-sharing capacity are not developed. The guide should therefore treat external support as a dependency to manage, not as a failure or a complete solution.",
+    ],
+    bodySourceIds: {
+      0: ["pha4ge-infrastructure", "clinical-microbiology-implementation-2026"],
+      1: ["pha4ge-infrastructure", "clinical-microbiology-implementation-2026", "auspathogen-implementation-2025"],
+      2: [
+        "clinical-microbiology-implementation-2026",
+        "auspathogen-implementation-2025",
+        "australia-microbial-genomics-framework-2025",
+      ],
+      3: ["east-africa-genomics-landscape-2024"],
+    },
+    technicalDetail: [
+      "For each proposed model, record the service owner, laboratory operator, sequencing location, analysis location, workflow owner, data host, access manager, support route, validation owner, and fallback if the primary provider or network route is unavailable.",
+    ],
+    audiences: ["director", "policy", "lab-lead", "bioinformatician", "it-security", "funder", "data-manager"],
+    implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
+    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
+    topics: [
+      "implementation",
+      "infrastructure",
+      "operating-model",
+      "managed-platform",
+      "local-compute",
+      "workforce",
+      "governance",
+      "sustainability",
+    ],
+    detailLevel: "operational",
+    sourceIds: [
+      "pha4ge-infrastructure",
+      "clinical-microbiology-implementation-2026",
+      "auspathogen-implementation-2025",
+      "australia-microbial-genomics-framework-2025",
+      "east-africa-genomics-landscape-2024",
+    ],
+    gaps: ["A formal dependency matrix for implementation models still needs to be designed as an editable figure or table."],
+  },
+  {
     id: "workflow-reproducibility",
     title: "Use managed, traceable workflows for routine analysis",
     summary:

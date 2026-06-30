@@ -7,7 +7,7 @@
 
 ## Status
 
-`candidate source; full text available locally; high-level extraction`
+`source-backed; full text available locally; extracted note available`
 
 ## Relevance
 
@@ -25,13 +25,13 @@ This strategy is useful for national public-health framing, agency-wide genomics
 
 - The strategy frames UKHSA's ambition to integrate genomics into infectious disease control and public-health decision-making.
 - It explicitly names workforce, laboratories, data and analytics capabilities, and collaboration as implementation requirements.
+- Detailed extracted note: `knowledge-base/extracted-notes/national-frameworks-ukhsa-australia-auspathogen.md`
 
 ## Current Use In App
 
 - Resource finder candidate source.
-- Not yet cited in guidance prose.
+- Cited in data-sharing, workforce, and national implementation guidance prose.
 
 ## Gaps
 
-- Needs extraction into national strategy, governance, workforce, and decision-use modules.
-
+- Needs further extraction if the guide develops a dedicated national strategy module.

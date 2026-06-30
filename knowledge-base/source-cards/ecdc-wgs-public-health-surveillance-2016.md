@@ -7,7 +7,7 @@
 
 ## Status
 
-`candidate source; full text available locally; high-level extraction`
+`source-backed; full text available locally; extracted note available`
 
 ## Relevance
 
@@ -25,13 +25,13 @@ This ECDC scientific advice is a core public-health surveillance source. It is u
 
 - The report's subtitle frames WGS as a strategy to strengthen outbreak investigations and public-health surveillance.
 - The contents include an executive summary, background, methods, results/discussion, conclusions, and a process overview for WGS data production, analysis, and epidemiological integration.
+- Detailed extracted note: `knowledge-base/extracted-notes/ecdc-wgs-surveillance.md`
 
 ## Current Use In App
 
 - Resource finder candidate source.
-- Not yet cited in guidance prose.
+- Cited in metadata, epidemiology integration, and surveillance-oriented guidance prose.
 
 ## Gaps
 
-- Needs detailed extraction for lifecycle, surveillance, and genomic-epidemiology integration sections.
-
+- Needs disease-specific extraction before organism-specific surveillance advice is added.

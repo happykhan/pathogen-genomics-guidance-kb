@@ -7,7 +7,7 @@
 
 ## Status
 
-`candidate source; full text available locally; extracted at high level`
+`source-backed; full text available locally; extracted note available`
 
 ## Relevance
 
@@ -31,13 +31,13 @@ This review is a strong source for implementation detail at the clinical microbi
 - Key implementation considerations include scope of testing, staff competencies, sequencing platform selection, laboratory setup, SOPs, analysis pipelines, data storage, transfer, sharing, reporting, interpretation, quality control, validation, verification, and EQA/PT.
 - The review describes implementation models including centralised reference laboratories, decentralised in-house sequencing, and hybrid/collaborative models.
 - Reported barriers include cost, infrastructure, workflow requirements, wet-lab and dry-lab capacity, staffing and training, bioinformatics implementation, regulatory requirements, standardised quality systems, and interpretive uncertainty.
+- Detailed extracted note: `knowledge-base/extracted-notes/implementation-realism-clinical-and-east-africa.md`
 
 ## Current Use In App
 
 - Resource finder candidate source.
-- Not yet cited in guidance prose.
+- Cited in validation, reporting, workforce, and implementation-realism guidance prose.
 
 ## Gaps
 
-- Needs detailed extraction before being used for clinical-laboratory-specific recommendations.
-- Needs mapping against existing quality, workforce, bioinformatics, and infrastructure sections.
+- Needs deeper extraction before being used for clinical-laboratory-specific recommendations.

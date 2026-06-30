@@ -7,7 +7,7 @@
 
 ## Status
 
-`candidate source; full text available locally; high-level extraction`
+`source-backed; full text available locally; extracted note available`
 
 ## Relevance
 
@@ -27,13 +27,13 @@ This is a detailed national implementation account. It is useful for turning the
 
 - The paper describes a national partnership between academia, public-health laboratories, and public-health agencies.
 - It identifies enablers including inclusive collaboration, clear public-health priorities, data integration and analysis platforms, standard bioinformatics methods, ethics/data-sharing agreements, training, and evaluation.
+- Detailed extracted note: `knowledge-base/extracted-notes/national-frameworks-ukhsa-australia-auspathogen.md`
 
 ## Current Use In App
 
 - Resource finder candidate source.
-- Not yet cited in guidance prose.
+- Cited in metadata, data-sharing, and maturity guidance prose.
 
 ## Gaps
 
-- Needs detailed extraction into national implementation, data-sharing, workforce, and maturity-model modules.
-
+- Needs deeper extraction if the guide develops an implementation-model case study.

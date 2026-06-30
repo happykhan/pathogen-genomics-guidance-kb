@@ -2,6 +2,10 @@
 
 Use this checklist before calling the guide beta-ready.
 
+Latest recorded run:
+
+- `docs/beta-qa-results-2026-07-01.md`
+
 ## Automated Checks
 
 - `npm run content:check`

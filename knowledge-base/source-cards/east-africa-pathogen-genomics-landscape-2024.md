@@ -7,7 +7,7 @@
 
 ## Status
 
-`candidate source; full text available locally; high-level extraction`
+`source-backed; full text available locally; extracted note available`
 
 ## Relevance
 
@@ -26,13 +26,13 @@ This paper is important for equity and implementation realism. It documents disp
 - The abstract reports heavy reliance on third-party organisations for bacterial NGS, with most publicly available high-quality bacterial genome assemblies processed and analysed externally.
 - Identified barriers include insufficient local sequencing facilities, limited bioinformatics expertise, inadequate compute, and inadequate data-sharing mechanisms.
 - The paper argues for equipment, technology, capacity-building, regional collaboration, standards, and long-term training.
+- Detailed extracted note: `knowledge-base/extracted-notes/implementation-realism-clinical-and-east-africa.md`
 
 ## Current Use In App
 
 - Resource finder candidate source.
-- Not yet cited in guidance prose.
+- Cited in workforce and maturity guidance prose.
 
 ## Gaps
 
-- Needs extraction into capability maturity, workforce, infrastructure, and data-sharing sections.
-
+- Needs deeper extraction for a formal capability/dependency model.
