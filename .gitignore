@@ -4,6 +4,11 @@
 *.tmp
 tmp/
 
+# Node/Astro generated output
+node_modules/
+.astro/
+dist/
+
 # Local source packs and generated extracts should not be committed by default.
 Best Practices and Vision/
 source-material/local/

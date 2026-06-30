@@ -1,0 +1,44 @@
+---
+import "../styles/global.css";
+
+type Props = {
+  title?: string;
+  description?: string;
+};
+
+const {
+  title = "Pathogen Genomics Guidance",
+  description = "Profile-aware guidance for pathogen genomics data, bioinformatics, and compute infrastructure.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar no-print">
+        <div class="topbar-inner">
+          <a class="brand" href="/">
+            <strong>Pathogen genomics guidance</strong>
+            <span>Data, bioinformatics, compute, and implementation</span>
+          </a>
+          <nav class="nav" aria-label="Main navigation">
+            <a href="/">Guidance</a>
+            <a href="/resources/">Resource finder</a>
+            <a href="/quizzes/">Quizzes</a>
+            <a href="/about/">About</a>
+          </nav>
+        </div>
+      </header>
+      <main class="page">
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>

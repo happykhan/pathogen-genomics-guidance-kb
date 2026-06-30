@@ -4,6 +4,8 @@ This repository is a Markdown-first, source-backed knowledge base for WHO-orient
 
 The aim is not to keep a filing system of sources. The aim is to build readable guidance chapters from extracted source material, with provenance visible enough that each substantive point can be checked.
 
+The current product direction is an interactive web guide: profile-aware guidance, a short tailoring wizard, a resource finder, and practical assessment tools built from the same source-backed knowledge base.
+
 ## Editorial Rule
 
 Do not draft new substantive guidance from scratch. Do write clear prose when the source basis exists.
@@ -25,6 +27,24 @@ outputs/               Draft products assembled from the knowledge base
 ```
 
 `resources/` has been renamed to `knowledge-base/`.
+
+## Web App
+
+The first implementation slice is a static-first Astro app with React islands for the interactive parts.
+
+```bash
+npm install
+npm run dev
+npm run build
+```
+
+Local development runs at <http://127.0.0.1:4321/> by default. The app currently includes:
+
+- Tailored guidance document with role, stage, organism, infrastructure, and goal profile controls.
+- Gnomey wizard for quickly setting a profile.
+- Shareable profile URLs and browser print/PDF export.
+- Resource finder backed by a structured catalogue of extracted and candidate sources.
+- Bioinformatics infrastructure tier quiz.
 
 ## Current Source Pack
 
