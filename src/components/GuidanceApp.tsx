@@ -88,69 +88,68 @@ export function GuidanceApp() {
           </aside>
         </section>
 
-        <div className="grid-two">
-          <div>
-            <section className="panel print-only" aria-label="Printed profile summary">
-              <div className="panel-body">
-                <h2 style={{ marginTop: 0 }}>Tailored profile</h2>
-                <ProfileSummary profile={profile} />
-                <p className="muted">Generated {generatedDate}. Source identifiers are shown under each guidance block.</p>
-              </div>
-            </section>
-            <GuidanceRenderer profile={profile} showTechnical={showTechnical} showAllSections={showAllSections} />
-          </div>
-          <aside className="side-stack no-print" aria-label="Current profile">
-            <section className="panel">
-              <div className="panel-body">
-                <div className="toolbar">
-                  <h2 style={{ margin: 0, fontSize: "1.1rem" }}>Current profile</h2>
-                  <div className="control-row">
-                    <button className="button" type="button" onClick={() => setWizardOpen(true)}>
-                      Edit
-                    </button>
-                    <button className="button icon-button" type="button" onClick={() => setProfile(defaultProfile)} aria-label="Reset profile">
-                      <RotateCcw size={17} />
-                    </button>
-                  </div>
-                </div>
-                <ProfileSummary profile={profile} />
-              </div>
-            </section>
-            <section className="panel">
-              <div className="panel-body">
-                <h2 style={{ marginTop: 0, fontSize: "1.1rem" }}>Share with</h2>
-                <div className="handoff-grid">
-                  {(["director", "lab-lead", "bioinformatician", "it-security"] as UserRole[]).map((role) => (
-                    <button className="button" type="button" key={role} onClick={() => copyShareUrl(handoffProfile(role))}>
-                      <Share2 size={16} />
-                      {roleLabels[role]}
-                    </button>
-                  ))}
+        <section className="guidance-control-band no-print" aria-label="Guidance controls">
+          <section className="panel">
+            <div className="panel-body">
+              <div className="toolbar">
+                <h2 style={{ margin: 0, fontSize: "1.1rem" }}>Current profile</h2>
+                <div className="control-row">
+                  <button className="button" type="button" onClick={() => setWizardOpen(true)}>
+                    Edit
+                  </button>
+                  <button className="button icon-button" type="button" onClick={() => setProfile(defaultProfile)} aria-label="Reset profile">
+                    <RotateCcw size={17} />
+                  </button>
                 </div>
               </div>
-            </section>
-            <section className="panel">
-              <div className="panel-body">
-                <h2 style={{ marginTop: 0, fontSize: "1.1rem" }}>Detail controls</h2>
-                <label className="check-row">
-                  <input
-                    type="checkbox"
-                    checked={showTechnical}
-                    onChange={(event) => setShowTechnical(event.target.checked)}
-                  />
-                  <span>Show technical detail for non-technical roles</span>
-                </label>
-                <label className="check-row">
-                  <input
-                    type="checkbox"
-                    checked={showAllSections}
-                    onChange={(event) => setShowAllSections(event.target.checked)}
-                  />
-                  <span>Show lower-ranked sections</span>
-                </label>
+              <ProfileSummary profile={profile} />
+            </div>
+          </section>
+          <section className="panel">
+            <div className="panel-body">
+              <h2 style={{ marginTop: 0, fontSize: "1.1rem" }}>Share with</h2>
+              <div className="handoff-grid">
+                {(["director", "lab-lead", "bioinformatician", "it-security"] as UserRole[]).map((role) => (
+                  <button className="button" type="button" key={role} onClick={() => copyShareUrl(handoffProfile(role))}>
+                    <Share2 size={16} />
+                    {roleLabels[role]}
+                  </button>
+                ))}
               </div>
-            </section>
-          </aside>
+            </div>
+          </section>
+          <section className="panel">
+            <div className="panel-body">
+              <h2 style={{ marginTop: 0, fontSize: "1.1rem" }}>Detail controls</h2>
+              <label className="check-row">
+                <input
+                  type="checkbox"
+                  checked={showTechnical}
+                  onChange={(event) => setShowTechnical(event.target.checked)}
+                />
+                <span>Show technical detail for non-technical roles</span>
+              </label>
+              <label className="check-row">
+                <input
+                  type="checkbox"
+                  checked={showAllSections}
+                  onChange={(event) => setShowAllSections(event.target.checked)}
+                />
+                <span>Show lower-ranked sections</span>
+              </label>
+            </div>
+          </section>
+        </section>
+
+        <div className="document-wrap">
+          <section className="panel print-only" aria-label="Printed profile summary">
+            <div className="panel-body">
+              <h2 style={{ marginTop: 0 }}>Tailored profile</h2>
+              <ProfileSummary profile={profile} />
+              <p className="muted">Generated {generatedDate}. Source identifiers are shown under each guidance block.</p>
+            </div>
+          </section>
+          <GuidanceRenderer profile={profile} showTechnical={showTechnical} showAllSections={showAllSections} />
         </div>
       </div>
 

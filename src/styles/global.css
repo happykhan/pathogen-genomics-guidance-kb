@@ -242,6 +242,10 @@ select {
   padding: 20px;
 }
 
+.document-wrap {
+  width: 100%;
+}
+
 .whitepaper {
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -501,6 +505,31 @@ select {
   margin-bottom: 24px;
 }
 
+.guidance-control-band {
+  display: grid;
+  grid-template-columns: minmax(300px, 1.15fr) minmax(260px, 0.85fr) minmax(260px, 0.85fr);
+  gap: 14px;
+  align-items: stretch;
+  margin: 0 0 20px;
+}
+
+.guidance-control-band .panel {
+  min-width: 0;
+}
+
+.guidance-control-band .panel-body {
+  height: 100%;
+}
+
+.guidance-control-band .profile-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 16px;
+}
+
+.guidance-control-band .profile-list div {
+  grid-template-columns: 92px minmax(0, 1fr);
+}
+
 .workspace-title {
   margin: 8px 0 10px;
   max-width: 780px;
@@ -629,7 +658,7 @@ select {
 
 .handoff-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 8px;
 }
 
@@ -847,8 +876,14 @@ select {
 @media (max-width: 860px) {
   .topbar-inner,
   .hero-workspace,
+  .guidance-control-band,
   .grid-two,
   .quiz-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guidance-control-band .profile-list,
+  .handoff-grid {
     grid-template-columns: 1fr;
   }
 
