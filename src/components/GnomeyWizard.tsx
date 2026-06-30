@@ -1,23 +1,20 @@
-import { Check, X } from "lucide-react";
+import { useState } from "react";
+import { Check, RotateCcw, X } from "lucide-react";
 import {
+  cloneProfile,
+  constraintLabels,
   goalLabels,
   infrastructureLabels,
   organismLabels,
   roleLabels,
   stageLabels,
 } from "../lib/profile";
-import type {
-  ImmediateGoal,
-  InfrastructureContext,
-  OrganismFocus,
-  Profile,
-  UserRole,
-  ImplementationStage,
-} from "../types/profile";
+import { defaultProfile, type ImmediateGoal, type ImplementationStage, type InfrastructureContext, type OrganismFocus, type Profile, type UserRole } from "../types/profile";
+import { ProfileSummary } from "./ProfileSummary";
 
 type Props = {
   profile: Profile;
-  onChange: (profile: Profile) => void;
+  onApply: (profile: Profile) => void;
   onClose: () => void;
 };
 
@@ -26,24 +23,42 @@ const stages = Object.keys(stageLabels) as ImplementationStage[];
 const organisms = Object.keys(organismLabels) as OrganismFocus[];
 const infrastructures = Object.keys(infrastructureLabels) as InfrastructureContext[];
 const goals = Object.keys(goalLabels) as ImmediateGoal[];
+const constraintKeys = Object.keys(constraintLabels) as Array<keyof Profile["constraints"]>;
 
-export function GnomeyWizard({ profile, onChange, onClose }: Props) {
+export function GnomeyWizard({ profile, onApply, onClose }: Props) {
+  const [draft, setDraft] = useState<Profile>(() => cloneProfile(profile));
+
   function update(patch: Partial<Profile>) {
-    onChange({ ...profile, ...patch });
+    setDraft((current) => ({ ...current, ...patch }));
+  }
+
+  function updateConstraint(key: keyof Profile["constraints"], value: boolean | null) {
+    setDraft((current) => ({
+      ...current,
+      constraints: {
+        ...current.constraints,
+        [key]: value,
+      },
+    }));
   }
 
   function toggleOrganism(organism: OrganismFocus) {
-    const next = profile.organisms.includes(organism)
-      ? profile.organisms.filter((item) => item !== organism)
-      : [...profile.organisms.filter((item) => item !== "general"), organism];
+    const next = draft.organisms.includes(organism)
+      ? draft.organisms.filter((item) => item !== organism)
+      : [...draft.organisms.filter((item) => item !== "general"), organism];
     update({ organisms: next.length ? next : ["general"] });
   }
 
   function toggleGoal(goal: ImmediateGoal) {
-    const next = profile.goals.includes(goal)
-      ? profile.goals.filter((item) => item !== goal)
-      : [...profile.goals, goal];
+    const next = draft.goals.includes(goal)
+      ? draft.goals.filter((item) => item !== goal)
+      : [...draft.goals, goal];
     update({ goals: next.length ? next : ["design-infrastructure"] });
+  }
+
+  function apply() {
+    onApply(draft);
+    onClose();
   }
 
   return (
@@ -73,7 +88,7 @@ export function GnomeyWizard({ profile, onChange, onClose }: Props) {
                 key={role}
                 className="choice"
                 type="button"
-                aria-pressed={profile.role === role}
+                aria-pressed={draft.role === role}
                 onClick={() => update({ role })}
               >
                 {roleLabels[role]}
@@ -90,7 +105,7 @@ export function GnomeyWizard({ profile, onChange, onClose }: Props) {
                 key={stage}
                 className="choice"
                 type="button"
-                aria-pressed={profile.stage === stage}
+                aria-pressed={draft.stage === stage}
                 onClick={() => update({ stage })}
               >
                 {stageLabels[stage]}
@@ -107,7 +122,7 @@ export function GnomeyWizard({ profile, onChange, onClose }: Props) {
                 key={organism}
                 className="choice"
                 type="button"
-                aria-pressed={profile.organisms.includes(organism)}
+                aria-pressed={draft.organisms.includes(organism)}
                 onClick={() => toggleOrganism(organism)}
               >
                 {organismLabels[organism]}
@@ -124,7 +139,7 @@ export function GnomeyWizard({ profile, onChange, onClose }: Props) {
                 key={infrastructure}
                 className="choice"
                 type="button"
-                aria-pressed={profile.infrastructure === infrastructure}
+                aria-pressed={draft.infrastructure === infrastructure}
                 onClick={() => update({ infrastructure })}
               >
                 {infrastructureLabels[infrastructure]}
@@ -141,7 +156,7 @@ export function GnomeyWizard({ profile, onChange, onClose }: Props) {
                 key={goal}
                 className="choice"
                 type="button"
-                aria-pressed={profile.goals.includes(goal)}
+                aria-pressed={draft.goals.includes(goal)}
                 onClick={() => toggleGoal(goal)}
               >
                 {goalLabels[goal]}
@@ -151,9 +166,51 @@ export function GnomeyWizard({ profile, onChange, onClose }: Props) {
         </div>
 
         <div className="wizard-section">
-          <button className="button primary" type="button" onClick={onClose}>
+          <h3>What constraints should Gnomey consider?</h3>
+          <div className="constraint-grid">
+            {constraintKeys.map((key) => (
+              <div className="constraint-row" key={key}>
+                <span>{constraintLabels[key]}</span>
+                <div className="segmented-control" aria-label={constraintLabels[key]}>
+                  {[
+                    ["yes", true, "Yes"],
+                    ["no", false, "No"],
+                    ["unknown", null, "Not sure"],
+                  ].map(([id, value, label]) => (
+                    <button
+                      key={id as string}
+                      className="segment"
+                      type="button"
+                      aria-pressed={draft.constraints[key] === value}
+                      onClick={() => updateConstraint(key, value as boolean | null)}
+                    >
+                      {label as string}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="wizard-section">
+          <h3>Profile summary</h3>
+          <div className="summary-box">
+            <ProfileSummary profile={draft} />
+          </div>
+        </div>
+
+        <div className="wizard-section wizard-actions">
+          <button className="button primary" type="button" onClick={apply}>
             <Check size={18} />
             Apply profile
+          </button>
+          <button className="button" type="button" onClick={() => setDraft(cloneProfile(defaultProfile))}>
+            <RotateCcw size={18} />
+            Reset
+          </button>
+          <button className="button ghost" type="button" onClick={onClose}>
+            Skip for now
           </button>
         </div>
       </section>

@@ -1,4 +1,11 @@
-import { goalLabels, infrastructureLabels, organismLabels, roleLabels, stageLabels } from "../lib/profile";
+import {
+  constraintLabels,
+  goalLabels,
+  infrastructureLabels,
+  organismLabels,
+  roleLabels,
+  stageLabels,
+} from "../lib/profile";
 import type { Profile } from "../types/profile";
 
 type Props = {
@@ -6,6 +13,10 @@ type Props = {
 };
 
 export function ProfileSummary({ profile }: Props) {
+  const setConstraints = Object.entries(profile.constraints)
+    .filter(([, value]) => value !== null)
+    .map(([key, value]) => `${constraintLabels[key as keyof Profile["constraints"]]}: ${value ? "yes" : "no"}`);
+
   return (
     <dl className="profile-list">
       <div>
@@ -28,6 +39,12 @@ export function ProfileSummary({ profile }: Props) {
         <dt>Goal</dt>
         <dd>{profile.goals.map((goal) => goalLabels[goal]).join(", ")}</dd>
       </div>
+      {setConstraints.length ? (
+        <div>
+          <dt>Constraints</dt>
+          <dd>{setConstraints.join("; ")}</dd>
+        </div>
+      ) : null}
     </dl>
   );
 }

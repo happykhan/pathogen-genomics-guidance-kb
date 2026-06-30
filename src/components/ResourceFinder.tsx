@@ -5,15 +5,39 @@ import { ExternalLink, Search } from "lucide-react";
 import { resources } from "../data/resources";
 import { scoreResource } from "../lib/recommendations";
 import { organismLabels, parseProfileFromUrl, roleLabels, stageLabels } from "../lib/profile";
-import { defaultProfile, type Profile } from "../types/profile";
+import { defaultProfile, type ImplementationStage, type OrganismFocus, type Profile, type UserRole } from "../types/profile";
+
+type FinderFilters = {
+  audience: "all" | UserRole;
+  topic: "all" | string;
+  organism: "all" | OrganismFocus;
+  agency: "all" | string;
+  stage: "all" | ImplementationStage;
+};
+
+const defaultFilters: FinderFilters = {
+  audience: "all",
+  topic: "all",
+  organism: "all",
+  agency: "all",
+  stage: "all",
+};
 
 export function ResourceFinder() {
   const [profile, setProfile] = useState<Profile>(defaultProfile);
   const [query, setQuery] = useState("");
   const [onlyRecommended, setOnlyRecommended] = useState(true);
+  const [filters, setFilters] = useState<FinderFilters>(defaultFilters);
 
   useEffect(() => {
     setProfile(parseProfileFromUrl(window.location.search));
+  }, []);
+
+  const filterOptions = useMemo(() => {
+    return {
+      agencies: [...new Set(resources.map((resource) => resource.agency))].sort(),
+      topics: [...new Set(resources.flatMap((resource) => resource.topics))].sort(),
+    };
   }, []);
 
   const results = useMemo(() => {
@@ -35,10 +59,27 @@ export function ResourceFinder() {
           .toLowerCase();
         const matchesText = !q || haystack.includes(q);
         const matchesRecommendation = !onlyRecommended || score >= 5;
-        return matchesText && matchesRecommendation;
+        const matchesAudience = filters.audience === "all" || resource.audiences.includes(filters.audience);
+        const matchesTopic = filters.topic === "all" || resource.topics.includes(filters.topic);
+        const matchesOrganism = filters.organism === "all" || resource.organisms.includes(filters.organism);
+        const matchesAgency = filters.agency === "all" || resource.agency === filters.agency;
+        const matchesStage = filters.stage === "all" || resource.implementationStages.includes(filters.stage);
+        return (
+          matchesText &&
+          matchesRecommendation &&
+          matchesAudience &&
+          matchesTopic &&
+          matchesOrganism &&
+          matchesAgency &&
+          matchesStage
+        );
       })
       .sort((a, b) => b.score - a.score || a.resource.title.localeCompare(b.resource.title));
-  }, [profile, query, onlyRecommended]);
+  }, [profile, query, onlyRecommended, filters]);
+
+  function updateFilter<Key extends keyof FinderFilters>(key: Key, value: FinderFilters[Key]) {
+    setFilters((current) => ({ ...current, [key]: value }));
+  }
 
   return (
     <section>
@@ -84,6 +125,68 @@ export function ResourceFinder() {
           <span>Prioritise this profile</span>
         </label>
       </div>
+
+      <section className="panel filter-panel" aria-label="Resource filters">
+        <div className="panel-body">
+          <div className="filter-grid">
+            <label className="form-field">
+              <span className="muted">Audience</span>
+              <select value={filters.audience} onChange={(event) => updateFilter("audience", event.target.value as FinderFilters["audience"])}>
+                <option value="all">All audiences</option>
+                {(Object.keys(roleLabels) as UserRole[]).map((role) => (
+                  <option value={role} key={role}>{roleLabels[role]}</option>
+                ))}
+              </select>
+            </label>
+            <label className="form-field">
+              <span className="muted">Topic</span>
+              <select value={filters.topic} onChange={(event) => updateFilter("topic", event.target.value)}>
+                <option value="all">All topics</option>
+                {filterOptions.topics.map((topic) => (
+                  <option value={topic} key={topic}>{topic}</option>
+                ))}
+              </select>
+            </label>
+            <label className="form-field">
+              <span className="muted">Organism</span>
+              <select value={filters.organism} onChange={(event) => updateFilter("organism", event.target.value as FinderFilters["organism"])}>
+                <option value="all">All organisms</option>
+                {(Object.keys(organismLabels) as OrganismFocus[]).map((organism) => (
+                  <option value={organism} key={organism}>{organismLabels[organism]}</option>
+                ))}
+              </select>
+            </label>
+            <label className="form-field">
+              <span className="muted">Agency</span>
+              <select value={filters.agency} onChange={(event) => updateFilter("agency", event.target.value)}>
+                <option value="all">All agencies</option>
+                {filterOptions.agencies.map((agency) => (
+                  <option value={agency} key={agency}>{agency}</option>
+                ))}
+              </select>
+            </label>
+            <label className="form-field">
+              <span className="muted">Stage</span>
+              <select value={filters.stage} onChange={(event) => updateFilter("stage", event.target.value as FinderFilters["stage"])}>
+                <option value="all">All stages</option>
+                {(Object.keys(stageLabels) as ImplementationStage[]).map((stage) => (
+                  <option value={stage} key={stage}>{stageLabels[stage]}</option>
+                ))}
+              </select>
+            </label>
+            <div className="form-field filter-actions">
+              <span className="muted">{results.length} result{results.length === 1 ? "" : "s"}</span>
+              <button className="button" type="button" onClick={() => {
+                setQuery("");
+                setFilters(defaultFilters);
+                setOnlyRecommended(false);
+              }}>
+                Clear filters
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <div className="resource-grid">
         {results.map(({ resource, score }) => (
