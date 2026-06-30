@@ -35,6 +35,15 @@ export const sources = {
     label: "Allard et al. 2018, Genomics of foodborne pathogens for microbial food safety",
     path: "knowledge-base/source-cards/foodborne-genomics-microbial-food-safety-2018.md",
   },
+  "lancet-wgs-economic-strategies-2026": {
+    label:
+      "Egli and Howden 2026, Economic perspective on continuous WGS surveillance versus outbreak-triggered investigations",
+    path: "knowledge-base/source-cards/lancet-microbe-wgs-economic-strategies-2026.md",
+  },
+  "clinical-microbiology-implementation-2026": {
+    label: "Gador-Whyte et al. 2026, Implementation of pathogen genomics in clinical microbiology laboratories",
+    path: "knowledge-base/source-cards/clinical-microbiology-implementation-gador-whyte-2026.md",
+  },
 } as const;
 
 export type SourceId = keyof typeof sources;

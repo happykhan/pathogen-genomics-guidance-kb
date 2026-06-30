@@ -56,7 +56,13 @@ export const guidanceBlocks: GuidanceBlock[] = [
           "The current knowledge base has a strong service case from PHE and a broad public-health case from WHO and Armstrong et al. It still needs a fuller review of economic evaluations before making general claims about cost-effectiveness or return on investment.",
         ],
         bodySourceIds: {
-          0: ["genometrakr-economic-2021", "national-investment-case-2025", "wgs-costing-tool-2024", "wgs-economic-review"],
+          0: [
+            "genometrakr-economic-2021",
+            "lancet-wgs-economic-strategies-2026",
+            "national-investment-case-2025",
+            "wgs-costing-tool-2024",
+            "wgs-economic-review",
+          ],
         },
         bodyCitationAnchors: {
           1: [
@@ -79,6 +85,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "phe-case-study",
       "foodborne-genomics-allard-2018",
       "genometrakr-economic-2021",
+      "lancet-wgs-economic-strategies-2026",
       "national-investment-case-2025",
       "wgs-costing-tool-2024",
       "wgs-economic-review",
