@@ -71,10 +71,10 @@ export function GuidanceRenderer({ profile, showTechnical, showAllSections }: Pr
       <nav className="whitepaper-toc" aria-label="Document contents">
         <h2>Contents</h2>
         <ol>
-          {visible.map(({ block, index, score }) => (
+          {visible.map(({ block, score }, visibleIndex) => (
             <li key={block.id}>
               <a href={`#${block.id}`}>
-                <span>{index + 1}.</span>
+                <span>{visibleIndex + 1}.</span>
                 {block.title}
               </a>
               {score < relevanceThreshold ? <span className="toc-note">expanded view</span> : null}
@@ -84,14 +84,14 @@ export function GuidanceRenderer({ profile, showTechnical, showAllSections }: Pr
       </nav>
 
       <div className="whitepaper-body">
-        {visible.map(({ block, index, score }) => (
+        {visible.map(({ block, score }, visibleIndex) => (
           <section
             className={score < relevanceThreshold ? "document-section low-relevance" : "document-section"}
             id={block.id}
             key={block.id}
           >
             <div className="section-kicker">
-              <span>Section {index + 1}</span>
+              <span>Section {visibleIndex + 1}</span>
               <span>{block.detailLevel}</span>
             </div>
             <h2>{block.title}</h2>

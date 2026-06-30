@@ -255,13 +255,12 @@ select {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface);
-  box-shadow: var(--shadow);
+  box-shadow: none;
   overflow: hidden;
 }
 
 .whitepaper-cover {
-  border-bottom: 1px solid var(--line);
-  padding: clamp(24px, 4vw, 44px);
+  padding: clamp(28px, 4vw, 48px) clamp(24px, 4vw, 44px) 20px;
 }
 
 .whitepaper-cover h1 {
@@ -311,9 +310,11 @@ select {
 }
 
 .whitepaper-toc {
+  border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  background: var(--surface-2);
-  padding: 24px clamp(24px, 4vw, 44px);
+  background: transparent;
+  margin: 0 clamp(24px, 4vw, 44px);
+  padding: 20px 0;
 }
 
 .whitepaper-toc h2 {
@@ -362,16 +363,20 @@ select {
 }
 
 .whitepaper-body {
-  padding: 0 clamp(24px, 4vw, 44px) 36px;
+  padding: 8px clamp(24px, 4vw, 44px) 36px;
 }
 
 .document-section {
-  border-top: 1px solid var(--line);
-  padding: 30px 0;
+  border-top: 0;
+  padding: 26px 0 18px;
 }
 
 .document-section:first-child {
   border-top: 0;
+}
+
+.document-section + .document-section {
+  border-top: 1px solid #edf1f4;
 }
 
 .document-section.low-relevance {
@@ -1154,7 +1159,7 @@ select {
 @media print {
   @page {
     size: A4;
-    margin: 18mm 17mm 20mm;
+    margin: 17mm 18mm 20mm;
   }
 
   .topbar,
@@ -1174,9 +1179,11 @@ select {
   html,
   body {
     background: #fff;
-    color: #111;
-    font-size: 10.5pt;
-    line-height: 1.45;
+    color: #101828;
+    font-size: 9.6pt;
+    line-height: 1.48;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
   }
 
   .page {
@@ -1202,6 +1209,7 @@ select {
 
   .whitepaper {
     overflow: visible;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
   .whitepaper-cover,
@@ -1213,66 +1221,131 @@ select {
   }
 
   .whitepaper-cover {
-    min-height: 185mm;
-    padding-top: 10mm;
-    break-after: page;
+    position: relative;
+    min-height: auto;
+    overflow: visible;
+    border-bottom: 0.6pt solid #d7dee8;
+    background: #fff;
+    color: #101828;
+    padding: 0 0 12mm;
+    break-after: auto;
+  }
+
+  .whitepaper-cover::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 46mm;
+    height: 2.2mm;
+    background: #0b7d71;
+    content: "";
+  }
+
+  .whitepaper-cover::after {
+    display: none;
   }
 
   .whitepaper-cover .eyebrow {
-    color: #444;
-    font-size: 8.5pt;
+    position: relative;
+    z-index: 1;
+    margin-top: 12mm;
+    color: #0b7d71;
+    font-size: 8pt;
+    font-weight: 800;
+    letter-spacing: 0.08em;
   }
 
   .whitepaper-cover h1 {
-    max-width: 170mm;
-    margin: 10mm 0 7mm;
-    font-size: 27pt;
-    line-height: 1.08;
+    position: relative;
+    z-index: 1;
+    max-width: 156mm;
+    margin: 6mm 0 7mm;
+    color: #111827;
+    font-size: 29pt;
+    font-weight: 640;
+    line-height: 1.12;
   }
 
   .whitepaper-dek {
-    max-width: 155mm;
-    color: #333;
+    position: relative;
+    z-index: 1;
+    max-width: 144mm;
+    color: #475467;
     font-size: 12pt;
+    line-height: 1.45;
   }
 
   .document-profile {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 9mm 10mm;
-    margin-top: 16mm;
+    gap: 6mm 10mm;
+    position: relative;
+    z-index: 1;
+    max-width: 150mm;
+    margin-top: 10mm;
   }
 
   .document-profile div {
-    border-top: 0.5pt solid #aaa;
+    border-top: 0.8pt solid #b9d4cc;
   }
 
   .document-profile dt {
-    color: #555;
-    font-size: 7.5pt;
+    color: #667085;
+    font-size: 7pt;
   }
 
   .document-profile dd {
-    font-size: 10pt;
+    color: #101828;
+    font-size: 9.5pt;
+    font-weight: 600;
   }
 
   .omission-note {
-    border-left: 2pt solid #888;
-    background: #fff;
-    color: #333;
+    position: relative;
+    z-index: 1;
+    max-width: 136mm;
+    border-left: 2.5pt solid #d39b2a;
+    background: #fff7e6;
+    color: #6b4b00;
+    margin-top: 8mm;
   }
 
   .whitepaper-toc {
+    position: relative;
+    min-height: auto;
+    overflow: visible;
+    border-top: 0;
+    border-bottom: 0.6pt solid #d7dee8;
     background: #fff;
-    break-after: page;
+    margin: 0;
+    padding: 9mm 0 8mm;
+    break-after: auto;
+  }
+
+  .whitepaper-toc::before {
+    display: none;
+  }
+
+  .whitepaper-toc::after {
+    display: none;
   }
 
   .whitepaper-toc h2,
   .references-section h2 {
-    font-size: 16pt;
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+    font-size: 15pt;
+    font-weight: 500;
+    line-height: 1.14;
   }
 
   .whitepaper-toc ol {
-    gap: 5pt;
+    position: relative;
+    z-index: 1;
+    max-width: 156mm;
+    gap: 4pt;
+    margin-top: 5mm;
+    counter-reset: toc;
   }
 
   .whitepaper-toc a,
@@ -1282,14 +1355,41 @@ select {
     text-decoration: none;
   }
 
+  .whitepaper-toc li {
+    display: grid;
+    grid-template-columns: 14mm 1fr;
+    gap: 3mm;
+    align-items: start;
+    border-top: 0;
+    padding-top: 0;
+    counter-increment: toc;
+  }
+
+  .whitepaper-toc a {
+    display: contents;
+    font-weight: 500;
+  }
+
+  .whitepaper-toc a span {
+    min-width: 0;
+    color: #0b7d71;
+    font-size: 12pt;
+    font-weight: 700;
+  }
+
   .toc-note,
   .section-sources span {
     display: none;
   }
 
+  .whitepaper-body {
+    padding: 0;
+  }
+
   .document-section {
-    border-top: 0.5pt solid #cfcfcf;
-    padding: 12mm 0 8mm;
+    position: relative;
+    border-top: 0;
+    padding: 8mm 0 6mm;
     break-inside: auto;
     page-break-inside: auto;
   }
@@ -1298,62 +1398,120 @@ select {
     border-top: 0;
   }
 
+  .document-section::before {
+    display: none;
+  }
+
+  .document-section + .document-section {
+    border-top: 0.4pt solid #e4e9ee;
+    break-before: auto;
+  }
+
   .document-section.low-relevance {
     opacity: 1;
   }
 
   .section-kicker {
-    color: #555;
-    font-size: 7.5pt;
+    display: none;
   }
 
   .document-section h2 {
-    max-width: 165mm;
-    font-size: 16pt;
-    line-height: 1.22;
+    max-width: 148mm;
+    margin: 0 0 3.5mm;
+    color: #111827;
+    font-size: 18pt;
+    font-weight: 500;
+    line-height: 1.18;
     break-after: avoid;
   }
 
+  .document-subsection {
+    margin-top: 4mm;
+  }
+
   .document-subsection h3 {
-    font-size: 12pt;
+    margin-bottom: 2mm;
+    color: #111827;
+    font-size: 11.5pt;
+    font-weight: 700;
   }
 
   .section-summary {
-    color: #333;
+    max-width: 148mm;
+    margin-bottom: 4mm;
+    color: #344054;
     font-size: 10.5pt;
+    font-weight: 600;
   }
 
   .document-section p,
   .document-subsection,
   .whitepaper-dek {
-    max-width: 165mm;
+    max-width: 148mm;
+  }
+
+  .document-section p {
+    margin-top: 0;
+    margin-bottom: 3.2mm;
   }
 
   .technical-detail {
-    border-left: 2pt solid #777;
-    background: #fff;
-    padding: 7pt 9pt;
+    max-width: 144mm;
+    margin-top: 4mm;
+    border: 0.5pt solid #b9d4cc;
+    border-left: 3pt solid #0b7d71;
+    background: #f2f8f6;
+    padding: 4mm 5mm;
   }
 
   .technical-detail svg {
     display: none;
   }
 
-  .section-sources {
-    margin-top: 10pt;
+  .technical-detail strong {
+    color: #086b61;
     font-size: 8.5pt;
+  }
+
+  .section-sources {
+    max-width: 148mm;
+    margin-top: 3.5mm;
+    padding-top: 2mm;
+    border-top: 0.5pt solid #d7dee8;
+    color: #475467;
+    font-size: 8.5pt;
+  }
+
+  .section-sources a {
+    display: inline-block;
+    margin-right: 2mm;
+    color: #0b7d71;
+    font-weight: 700;
   }
 
   .references-section {
     break-before: page;
+    min-height: auto;
+    padding-top: 8mm;
+    background: #fff;
   }
 
   .references-section ol {
+    display: grid;
+    max-width: 148mm;
     gap: 7pt;
+    padding-left: 5mm;
+  }
+
+  .references-section li {
+    padding-left: 1mm;
   }
 
   .references-section code {
-    color: #555;
-    font-size: 7.5pt;
+    display: block;
+    margin-top: 1mm;
+    color: #667085;
+    font-size: 7.2pt;
+    word-break: break-word;
   }
 }
