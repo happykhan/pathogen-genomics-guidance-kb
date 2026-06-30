@@ -36,6 +36,13 @@ The first source pack is PHA4GE infrastructure material:
 
 The strongest current coverage is compute infrastructure, responsibility models, workflow systems, portability, data flow, IAM, backup/power/cooling notes, vignettes, and survey dimensions. Metadata, repositories, broader governance, analysis-to-decision use, costing, and formal maturity assessment remain gaps.
 
+Additional local PDF sources have been indexed as source cards:
+
+- `knowledge-base/source-cards/cdc-pathogen-genomics-public-health-2019.md`
+- `knowledge-base/source-cards/phe-implementing-pathogen-genomics-case-study.md`
+
+These strengthen public-health framing, data integration, workflow implementation, validation, reporting, data sharing, workforce, and implementation planning, but do not replace the need for WHO/ECDC/APHL/UKHSA/Australian framework sources.
+
 ## Working Flow
 
 1. Add or clone source material under ignored local paths.

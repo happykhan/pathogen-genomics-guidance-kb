@@ -13,10 +13,12 @@ Build the knowledge base as a source-backed extraction and assembly system rathe
 - PHA4GE local source archive and extracted text.
 - Public `pha4ge/infrastructure-resources` repository cloned under ignored local source material.
 - Source card committed at `knowledge-base/source-cards/pha4ge-infrastructure.md`.
+- Armstrong et al. 2019 `Pathogen Genomics in Public Health`, indexed at `knowledge-base/source-cards/cdc-pathogen-genomics-public-health-2019.md`.
+- Grant et al. 2018 `Implementing pathogen genomics: a case study`, indexed at `knowledge-base/source-cards/phe-implementing-pathogen-genomics-case-study.md`.
 
 ## Immediate Next Steps
 
 1. Review and expand extracted notes from the PHA4GE manuscript.
 2. Redraw only source-backed figure concepts using the minimalist figure system.
-3. Add source cards for metadata, governance, repository/data-sharing, reporting, costing, and quality-management sources.
+3. Extract candidate WHO/ECDC/APHL/UKHSA/Australian agency sources listed in `source-material/candidate-public-health-agency-sources.md`.
 4. Keep missing material as explicit gaps until sources are added.
