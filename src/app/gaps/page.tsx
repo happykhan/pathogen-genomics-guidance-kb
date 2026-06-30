@@ -6,6 +6,13 @@ const sourceLookup: Record<string, { label: string; path: string }> = sources;
 
 const chapterGaps = [
   {
+    title: "Economic and public-health value case",
+    detail:
+      "The guide needs a review-style evidence synthesis on benefits, limitations, cost-effectiveness, and return on investment for pathogen genomics across settings and organisms.",
+    sourceNeed:
+      "WHO strategy documents, national implementation reports, economic evaluations, systematic reviews, and public-health outbreak case studies.",
+  },
+  {
     title: "Metadata and identifier model",
     detail:
       "A source-backed model is still needed for linking sample or isolate identifiers, sequencing runs, raw data, workflow runs, results, reports, and repository accessions.",

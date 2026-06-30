@@ -11,6 +11,10 @@ export type GuidanceBlock = {
   title: string;
   summary: string;
   body: string[];
+  subsections?: {
+    title: string;
+    body: string[];
+  }[];
   technicalDetail?: string[];
   audiences: Audience[];
   implementationStages: ImplementationStage[];

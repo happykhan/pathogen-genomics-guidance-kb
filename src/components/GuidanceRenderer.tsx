@@ -99,6 +99,14 @@ export function GuidanceRenderer({ profile, showTechnical, showAllSections }: Pr
             {block.body.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
+            {block.subsections?.map((subsection) => (
+              <section className="document-subsection" key={subsection.title}>
+                <h3>{subsection.title}</h3>
+                {subsection.body.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </section>
+            ))}
             {block.technicalDetail && revealTechnical ? (
               <aside className="technical-detail">
                 <strong>

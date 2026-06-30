@@ -11,6 +11,14 @@ export const sources = {
     label: "Armstrong et al. 2019, Pathogen Genomics in Public Health",
     path: "knowledge-base/source-cards/cdc-pathogen-genomics-public-health-2019.md",
   },
+  "who-genomic-surveillance-2022": {
+    label: "WHO 2022, Global genomic surveillance strategy for pathogens with pandemic and epidemic potential",
+    path: "knowledge-base/source-cards/who-global-genomic-surveillance-strategy-2022.md",
+  },
+  "wgs-economic-review": {
+    label: "Systematic review of economic evaluations of whole-genome sequencing for pathogen identification and surveillance",
+    path: "knowledge-base/source-cards/wgs-economic-evaluation-review.md",
+  },
 } as const;
 
 export type SourceId = keyof typeof sources;

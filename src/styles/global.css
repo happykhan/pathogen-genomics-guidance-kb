@@ -397,6 +397,21 @@ select {
   line-height: 1.18;
 }
 
+.document-subsection {
+  max-width: 820px;
+  margin-top: 22px;
+}
+
+.document-subsection h3 {
+  margin: 0 0 8px;
+  font-size: 1.12rem;
+  line-height: 1.25;
+}
+
+.document-subsection p {
+  margin: 10px 0;
+}
+
 .document-section p {
   max-width: 780px;
 }
