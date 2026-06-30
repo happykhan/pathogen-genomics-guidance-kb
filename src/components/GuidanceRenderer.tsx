@@ -1,5 +1,6 @@
 import { AlertTriangle, BookOpen, SlidersHorizontal } from "lucide-react";
 import { guidanceBlocks } from "../data/guidanceBlocks";
+import { sources } from "../data/sources";
 import {
   goalLabels,
   infrastructureLabels,
@@ -18,6 +19,7 @@ type Props = {
 };
 
 const relevanceThreshold = 7;
+const sourceLookup: Record<string, { label: string; path: string }> = sources;
 
 export function GuidanceRenderer({ profile, showTechnical, showAllSections }: Props) {
   const scored = guidanceBlocks.map((block, index) => ({
@@ -121,7 +123,7 @@ export function GuidanceRenderer({ profile, showTechnical, showAllSections }: Pr
                 Source basis
               </span>
               {block.sourceIds.map((sourceId) => (
-                <code key={sourceId}>{sourceId}</code>
+                <code key={sourceId}>{sourceLookup[sourceId]?.label ?? sourceId}</code>
               ))}
             </footer>
           </section>
