@@ -10,7 +10,9 @@ export function GuidanceApp() {
   const [profile, setProfile] = useState<Profile>(defaultProfile);
   const [wizardOpen, setWizardOpen] = useState(false);
   const [showTechnical, setShowTechnical] = useState(false);
+  const [showAllSections, setShowAllSections] = useState(false);
   const [copied, setCopied] = useState(false);
+  const generatedDate = useMemo(() => new Date().toLocaleDateString("en-GB"), []);
 
   useEffect(() => {
     setProfile(parseProfileFromUrl(window.location.search));
@@ -76,7 +78,16 @@ export function GuidanceApp() {
       </section>
 
       <div className="grid-two">
-        <GuidanceRenderer profile={profile} showTechnical={showTechnical} />
+        <div>
+          <section className="panel print-only" aria-label="Printed profile summary">
+            <div className="panel-body">
+              <h2 style={{ marginTop: 0 }}>Tailored profile</h2>
+              <ProfileSummary profile={profile} />
+              <p className="muted">Generated {generatedDate}. Source identifiers are shown under each guidance block.</p>
+            </div>
+          </section>
+          <GuidanceRenderer profile={profile} showTechnical={showTechnical} showAllSections={showAllSections} />
+        </div>
         <aside className="side-stack no-print" aria-label="Current profile">
           <section className="panel">
             <div className="panel-body">
@@ -99,6 +110,14 @@ export function GuidanceApp() {
                   onChange={(event) => setShowTechnical(event.target.checked)}
                 />{" "}
                 Show technical detail for non-technical roles
+              </label>
+              <label className="choice active" style={{ marginTop: 8 }}>
+                <input
+                  type="checkbox"
+                  checked={showAllSections}
+                  onChange={(event) => setShowAllSections(event.target.checked)}
+                />{" "}
+                Show lower-ranked sections
               </label>
             </div>
           </section>

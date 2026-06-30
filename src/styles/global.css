@@ -158,6 +158,10 @@ select {
   color: var(--muted);
 }
 
+.print-only {
+  display: none;
+}
+
 .grid-two {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 340px;
@@ -490,6 +494,10 @@ select {
   .modal-backdrop,
   .no-print {
     display: none !important;
+  }
+
+  .print-only {
+    display: block;
   }
 
   body {

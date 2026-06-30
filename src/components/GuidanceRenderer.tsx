@@ -7,12 +7,13 @@ import type { Profile } from "../types/profile";
 type Props = {
   profile: Profile;
   showTechnical: boolean;
+  showAllSections: boolean;
 };
 
-export function GuidanceRenderer({ profile, showTechnical }: Props) {
+export function GuidanceRenderer({ profile, showTechnical, showAllSections }: Props) {
   const ranked = [...guidanceBlocks]
     .map((block) => ({ block, score: scoreGuidanceBlock(block, profile) }))
-    .filter((item) => item.score >= 4)
+    .filter((item) => showAllSections || item.score >= 4)
     .sort((a, b) => b.score - a.score);
   const revealTechnical = showTechnical || isTechnicalProfile(profile);
 
