@@ -234,14 +234,15 @@ export function ResourceFinder() {
               <p className="muted">{resource.whyUseful}</p>
             </div>
             <div className="resource-actions">
-              <a href={resource.url} target="_blank" rel="noreferrer">
-                Open source <ExternalLink size={14} aria-hidden="true" />
-              </a>
               {resource.pdfUrl ? (
-                <a href={resource.pdfUrl} target="_blank" rel="noreferrer">
-                  Download PDF <Download size={14} aria-hidden="true" />
+                <a className="button primary" href={resource.pdfUrl} target="_blank" rel="noreferrer">
+                  <Download size={16} aria-hidden="true" />
+                  Download PDF
                 </a>
               ) : null}
+              <a className="button" href={resource.url} target="_blank" rel="noreferrer">
+                Open source <ExternalLink size={14} aria-hidden="true" />
+              </a>
             </div>
           </article>
         ))}
