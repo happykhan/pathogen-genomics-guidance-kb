@@ -2,7 +2,21 @@
 
 ## Purpose
 
-Define the repository scope as a source-backed knowledge base for WHO-oriented pathogen genomics data and bioinformatics infrastructure guidance.
+Set the scope for a source-backed knowledge base on pathogen genomics data systems, bioinformatics infrastructure, and public-health use.
+
+## Guidance Draft
+
+Pathogen genomics has moved from specialist research into routine public-health work. Armstrong et al. describe its use in foodborne outbreak investigation, tuberculosis control, influenza surveillance, antimicrobial-resistance surveillance, parasitic disease investigation, and molecular surveillance. The PHE case study shows the same transition from the service side: a national reference laboratory moved major gastrointestinal pathogens into a WGS-led workflow with central sequencing, bioinformatics analysis, LIMS integration, reporting, and public-health response.
+
+This knowledge base is intended to support guidance for programmes that need to build or improve that kind of capability. The focus is not wet-lab sequencing protocols alone. It is the whole system around pathogen genomics data: data lifecycle, QC, metadata, storage, compute infrastructure, workflows, provenance, sharing, governance, reporting, workforce, costing, and maturity.
+
+The PHA4GE infrastructure work gives the first organising frame. It treats pathogen genomics infrastructure as a set of decisions about responsibility model, workflow execution, physical or cloud location, data flow, and access. That frame is useful because many implementation failures happen when a programme buys technology without deciding who will operate it, validate it, support users, manage data, and maintain the system.
+
+The PHE case study adds a concrete implementation pattern. It shows that routine WGS implementation required business planning, capital planning, laboratory redesign, robotics, sequencing capacity, IT infrastructure, LIMS, bioinformatics pipelines, validation, accreditation, workforce development, and service-user engagement. This is the kind of operational detail that a WHO-oriented guide will need.
+
+The CDC/NEJM review adds the public-health rationale. It shows that the value of pathogen genomics comes from better outbreak detection, better pathogen characterisation, data integration, data sharing, and faster movement from laboratory result to public-health action. It also makes clear that genomics programmes need bioinformatics, data science, and epidemiological interpretation capacity.
+
+The repo should therefore read as a guidance knowledge base, not as a library catalogue. Source cards and extracted notes preserve provenance. The `docs/` chapters should turn source-backed material into readable prose. Gaps should remain visible, but they should not be the main product.
 
 ## Source Basis
 
@@ -12,21 +26,6 @@ Define the repository scope as a source-backed knowledge base for WHO-oriented p
 - PHA4GE VeriXiv manuscript abstract, background, five-factor framing, and discussion.
 - Armstrong et al. 2019, `Pathogen Genomics in Public Health`, doi:10.1056/NEJMsr1813907.
 - Grant et al. 2018, `Implementing pathogen genomics: a case study`, Public Health England.
-
-## Extracted/Adapted Text
-
-The PHA4GE source material frames pathogen genomics infrastructure as a public-health capability that depends on data management, analysis methods, interpretation tools, workflow execution, user management, provenance, and maintainability. It presents compute infrastructure as a platform for pathogen genomic analyses, not as hardware alone.
-
-The current repository therefore treats the PHA4GE infrastructure source pack as the first source set for infrastructure, workflow, data-flow, access, storage, vignettes, and implementation-comparison material. Topics outside that source coverage remain marked as gaps until additional source material is extracted.
-
-Armstrong et al. broaden the frame from infrastructure to public-health use, including outbreak detection, tuberculosis control, influenza surveillance, antimicrobial-resistance surveillance, data integration, data sharing, and workforce development. The PHE case study adds an operational implementation example for a centralised WGS service and a genomics-led reference laboratory.
-
-## Implementation Notes
-
-- This repository separates source cards, extracted notes, figure briefs, and assembled guidance modules.
-- `docs/` modules are not final guidance. They are source-status-aware working chapters.
-- `knowledge-base/extracted-notes/` holds cleaned source-derived notes before they are promoted into guidance text.
-- Local source packs and cloned source repositories are intentionally excluded from git.
 
 ## Figures
 
@@ -39,4 +38,4 @@ Armstrong et al. broaden the frame from infrastructure to public-health use, inc
 
 ## Status
 
-`source-backed skeleton`
+`source-backed draft`

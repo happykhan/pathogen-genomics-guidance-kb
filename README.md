@@ -2,14 +2,16 @@
 
 This repository is a Markdown-first, source-backed knowledge base for WHO-oriented pathogen genomics data and bioinformatics infrastructure guidance.
 
+The aim is not to keep a filing system of sources. The aim is to build readable guidance chapters from extracted source material, with provenance visible enough that each substantive point can be checked.
+
 ## Editorial Rule
 
-Do not draft new substantive guidance from scratch.
+Do not draft new substantive guidance from scratch. Do write clear prose when the source basis exists.
 
 - Extract or adapt from source material first.
 - Preserve provenance in source cards and extracted notes.
 - Improve rough source text for clarity only when the source basis is recorded.
-- If a topic lacks source material, create a `Gap` note or skeleton section.
+- If a topic lacks source material, mark the missing part as a gap instead of filling it with generic advice.
 - Keep large DOCX/PDF/XLSX/TIFF/EPS files out of git unless deliberately agreed later.
 
 ## Structure
@@ -47,6 +49,6 @@ These strengthen public-health framing, data integration, workflow implementatio
 
 1. Add or clone source material under ignored local paths.
 2. Commit only source cards, indexes, extracted notes, CSV extracts when appropriate, and lightweight editable figures.
-3. Promote extracted notes into `docs/` only when each module records `Source Basis`, `Status`, and `Gaps`.
+3. Promote extracted notes into readable `docs/` prose when each module records `Source Basis`, `Status`, and `Gaps`.
 4. Use figure briefs before redrawing figures.
 5. Keep missing topics visible as gaps instead of filling them with generic prose.
