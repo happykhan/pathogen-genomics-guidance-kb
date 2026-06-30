@@ -15,6 +15,10 @@ export const sources = {
     label: "WHO 2022, Global genomic surveillance strategy for pathogens with pandemic and epidemic potential",
     path: "knowledge-base/source-cards/who-global-genomic-surveillance-strategy-2022.md",
   },
+  "who-pathogen-genome-data-sharing-2022": {
+    label: "WHO 2022, Guiding principles for pathogen genome data sharing",
+    path: "knowledge-base/source-cards/who-pathogen-genome-data-sharing-2022.md",
+  },
   "wgs-economic-review": {
     label: "Systematic review of economic evaluations of whole-genome sequencing for pathogen identification and surveillance",
     path: "knowledge-base/source-cards/wgs-economic-evaluation-review.md",
@@ -43,6 +47,30 @@ export const sources = {
   "clinical-microbiology-implementation-2026": {
     label: "Gador-Whyte et al. 2026, Implementation of pathogen genomics in clinical microbiology laboratories",
     path: "knowledge-base/source-cards/clinical-microbiology-implementation-gador-whyte-2026.md",
+  },
+  "who-national-genomic-surveillance-strategy-2023": {
+    label: "WHO 2023, Developing a national genomic surveillance strategy or action plan",
+    path: "knowledge-base/source-cards/who-national-genomic-surveillance-strategy-2023.md",
+  },
+  "who-genomic-data-sharing-platforms-2025": {
+    label: "WHO 2025, Genomic data-sharing platform attributes and principles",
+    path: "knowledge-base/source-cards/who-genomic-data-sharing-platforms-2025.md",
+  },
+  "who-genomics-costing-tool-manual-2024": {
+    label: "WHO 2024, Genomics costing tool user manual",
+    path: "knowledge-base/source-cards/who-genomics-costing-tool-user-manual-2024.md",
+  },
+  "who-science-council-genomics-access-2022": {
+    label: "WHO Science Council 2022, Accelerating access to genomics for global health",
+    path: "knowledge-base/source-cards/who-science-council-genomics-access-2022.md",
+  },
+  "who-genomic-surveillance-progress-2023": {
+    label: "WHO 2023, Global genomic surveillance strategy progress report",
+    path: "knowledge-base/source-cards/who-genomic-surveillance-progress-report-2023.md",
+  },
+  "ipsn-source-pack": {
+    label: "IPSN source pack",
+    path: "knowledge-base/source-cards/ipsn-source-pack.md",
   },
 } as const;
 

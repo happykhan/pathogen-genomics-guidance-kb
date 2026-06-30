@@ -8,27 +8,27 @@ const chapterGaps = [
   {
     title: "Economic and public-health value case",
     detail:
-      "The guide needs a review-style evidence synthesis on benefits, limitations, cost-effectiveness, and return on investment for pathogen genomics across settings and organisms.",
+      "The guide now has WHO costing categories and several economic sources, but still needs a review-style synthesis on benefits, limitations, cost-effectiveness, and return on investment across settings and organisms.",
     sourceNeed:
-      "WHO strategy documents, national implementation reports, economic evaluations, systematic reviews, and public-health outbreak case studies.",
+      "Economic evaluations, systematic reviews, national implementation reports, and organism-specific public-health outbreak case studies.",
   },
   {
     title: "Metadata and identifier model",
     detail:
-      "A source-backed model is still needed for linking sample or isolate identifiers, sequencing runs, raw data, workflow runs, results, reports, and repository accessions.",
-    sourceNeed: "WHO, INSDC/NCBI, GA4GH, APHL, UKHSA, or other public-health metadata guidance.",
+      "WHO platform guidance now supports metadata scope, but a concrete identifier lineage model is still needed for linking samples or isolates, sequencing runs, raw data, workflow runs, results, reports, and repository accessions.",
+    sourceNeed: "INSDC/NCBI, ENA, GISAID, GA4GH, APHL, UKHSA, or public-health metadata implementation guidance.",
   },
   {
     title: "Repository and data-sharing decision pathway",
     detail:
-      "The current sources support the principle that sharing must consider purpose, confidentiality, risk, and access model, but do not yet provide a reusable decision pathway.",
-    sourceNeed: "WHO, ECDC, UKHSA, CDC, APHL, GISAID, NCBI, or national public-health data-sharing guidance.",
+      "WHO platform principles now provide selection dimensions. The KB still needs to turn those dimensions into a practical decision pathway for public, controlled, operational, and internal sharing.",
+    sourceNeed: "WHO platform guidance, INSDC/NCBI, GISAID, ECDC, UKHSA, CDC, APHL, and national public-health data-sharing guidance.",
   },
   {
     title: "Governance beyond identity and access management",
     detail:
-      "PHA4GE supports IAM, auditability, user lifecycle, and information-governance coordination. Broader privacy, ethics, legal basis, benefit sharing, and cross-border governance need additional sources.",
-    sourceNeed: "WHO, national public-health ethics, data protection, and pathogen data-sharing sources.",
+      "WHO platform guidance now covers governance, access, benefit sharing, security, and sustainability. The remaining work is to translate that into country/laboratory governance roles, legal review points, and cross-border sharing options.",
+    sourceNeed: "WHO platform guidance plus national public-health ethics, data protection, and pathogen data-sharing sources.",
   },
   {
     title: "Pipeline validation and change control",
@@ -39,8 +39,8 @@ const chapterGaps = [
   {
     title: "Costing and recurrent service model",
     detail:
-      "The current evidence supports capital-planning and service-transition lessons from PHE, but not a generic total-cost model for storage, compute, software maintenance, people, support, and renewal.",
-    sourceNeed: "WHO implementation, procurement, costing, or health-system planning sources.",
+      "WHO's costing tool provides a category model for many recurrent costs. The remaining gap is a setting-specific synthesis that links those costs to service models, staffing patterns, pathogen programmes, and value evidence.",
+    sourceNeed: "WHO costing tool, national implementation reports, procurement evidence, and economic evaluations.",
   },
   {
     title: "Formal maturity model",

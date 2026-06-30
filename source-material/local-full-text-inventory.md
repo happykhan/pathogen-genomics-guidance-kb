@@ -18,4 +18,14 @@ These files are available locally for extraction. Large PDFs are not committed t
 | Stona et al. 2026, Supply chains for pathogen genomic surveillance in Asia | `/Users/nfareed/Downloads/e019241.full.pdf` | Full text available; high-level source card |
 | Egli and Howden 2026, Continuous WGS surveillance versus outbreak-triggered investigations | `/Users/nfareed/Downloads/PIIS2666524726000716.pdf` | Full text available; high-level source card |
 | Gador-Whyte et al. 2026, Clinical microbiology implementation | `/Users/nfareed/Downloads/gador-whyte-et-al-2026-implementation-of-pathogen-genomics-in-clinical-microbiology-laboratories.pdf` | Full text available; high-level source card |
-
+| WHO 2023, National genomic surveillance strategy/action plan considerations | `source-material/local/who-ipsn/9789240076563-eng.pdf` | Downloaded from WHO IRIS; source card |
+| WHO 2025, Genomic data-sharing platform attributes and principles | `source-material/local/who-ipsn/9789240113831-eng.pdf` | Downloaded from WHO IRIS; source card |
+| WHO 2024, Genomics costing tool user manual | `source-material/local/who-ipsn/9789240090866-eng.pdf` | Downloaded from WHO IRIS; source card |
+| WHO Science Council 2022, Accelerating access to genomics for global health | `source-material/local/who-ipsn/9789240052857-eng.pdf` | Downloaded from WHO IRIS; source card |
+| WHO 2023, Global genomic surveillance strategy progress report | `source-material/local/who-ipsn/9789240084773-eng.pdf` | Downloaded from WHO IRIS; source card |
+| WHO 2022, Global genomic surveillance strategy consultation meeting report | `source-material/local/who-ipsn/9789240057401-eng.pdf` | Downloaded from WHO IRIS; local full text available |
+| WHO TAG-G 2023, report of first meeting | `source-material/local/who-ipsn/9789240086982-eng.pdf` | Downloaded from WHO IRIS; local full text available |
+| WHO EMRO 2022, Genomic sequencing for epidemic and pandemic preparedness and response | `source-material/local/who-ipsn/1020-3397-2022-2812-851-852-eng.pdf` | Downloaded from WHO IRIS; local full text available |
+| WHO WPRO 2025, Emerging molecular pathogen characterization technologies network | `source-material/local/who-ipsn/9789290621201-eng.pdf` | Downloaded from WHO IRIS; local full text available |
+| WHO EURO 2024, Sustaining gains in genomics for managing pandemic and epidemic threats | `source-material/local/who-ipsn/WHO-EURO-2024-9728-49500-74064-eng.pdf` | Downloaded from WHO IRIS; local full text available |
+| IPSN one-slide overview and core PDFs | `source-material/local/who-ipsn/` | Downloaded from WHO/IPSN CDN; source pack card |
