@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useMemo, useState } from "react";
 import { ExternalLink, Search } from "lucide-react";
 import { resources } from "../data/resources";

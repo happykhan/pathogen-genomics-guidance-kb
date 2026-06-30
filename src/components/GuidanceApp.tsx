@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useMemo, useState } from "react";
 import { FileDown, Share2, Wand2 } from "lucide-react";
 import { GnomeyWizard } from "./GnomeyWizard";

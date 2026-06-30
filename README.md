@@ -30,7 +30,7 @@ outputs/               Draft products assembled from the knowledge base
 
 ## Web App
 
-The first implementation slice is a static-first Astro app with React islands for the interactive parts.
+The first implementation slice is a static-exportable Next.js app using the same broad framework pattern as QualiBact: Next App Router, React client components for interactive tools, Tailwind/PostCSS, and GenomicX-style `gx-*` design tokens.
 
 ```bash
 npm install
