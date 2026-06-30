@@ -265,15 +265,15 @@ select {
 }
 
 .whitepaper-cover h1 {
-  max-width: 900px;
+  max-width: 820px;
   margin: 10px 0 14px;
-  font-size: clamp(2.2rem, 4vw, 3.45rem);
+  font-size: clamp(2rem, 3.4vw, 3rem);
   font-weight: 520;
-  line-height: 1.06;
+  line-height: 1.1;
 }
 
 .whitepaper-dek {
-  max-width: 820px;
+  max-width: 760px;
   margin: 0;
   color: var(--muted);
   font-size: 1.08rem;
@@ -284,7 +284,7 @@ select {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 14px 18px;
-  max-width: 900px;
+  max-width: 820px;
   margin: 28px 0 0;
 }
 
@@ -306,7 +306,7 @@ select {
 }
 
 .omission-note {
-  max-width: 900px;
+  max-width: 760px;
   margin: 22px 0 0;
   border-left: 3px solid var(--gx-warning);
   background: #fffaf0;
@@ -330,8 +330,8 @@ select {
 
 .whitepaper-toc ol {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 8px 24px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 7px 22px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -349,6 +349,7 @@ select {
   gap: 8px;
   color: var(--ink);
   font-weight: 520;
+  line-height: 1.35;
   text-decoration: none;
 }
 
@@ -408,15 +409,15 @@ select {
 }
 
 .document-section h2 {
-  max-width: 900px;
+  max-width: 780px;
   margin: 0 0 10px;
-  font-size: clamp(1.55rem, 2vw, 2.05rem);
+  font-size: clamp(1.42rem, 1.8vw, 1.85rem);
   font-weight: 560;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 .document-subsection {
-  max-width: 840px;
+  max-width: 760px;
   margin-top: 22px;
 }
 
@@ -431,15 +432,25 @@ select {
 }
 
 .document-section p {
-  max-width: 840px;
-  line-height: 1.65;
+  max-width: 760px;
+  line-height: 1.72;
 }
 
 .section-summary {
-  max-width: 840px;
+  max-width: 760px;
   color: var(--muted);
   font-size: 1.03rem;
   font-weight: 600;
+  hyphens: none;
+  text-align: left;
+}
+
+.document-section > p:not(.section-summary),
+.document-subsection p,
+.technical-detail p {
+  hyphens: auto;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .citation-run {
@@ -463,14 +474,23 @@ select {
 
 .references-section ol {
   display: grid;
-  gap: 12px;
-  max-width: 900px;
+  gap: 10px;
+  max-width: 820px;
   margin: 14px 0 0;
   padding-left: 1.5rem;
 }
 
 .references-section li {
   padding-left: 4px;
+  line-height: 1.45;
+}
+
+@media (max-width: 760px) {
+  .document-section > p:not(.section-summary),
+  .document-subsection p,
+  .technical-detail p {
+    text-align: left;
+  }
 }
 
 .references-section code {
@@ -1161,7 +1181,7 @@ select {
 @media print {
   @page {
     size: A4;
-    margin: 17mm 18mm 20mm;
+    margin: 19mm 21mm 22mm;
   }
 
   .topbar,
@@ -1182,8 +1202,8 @@ select {
   body {
     background: #fff;
     color: #101828;
-    font-size: 9.6pt;
-    line-height: 1.48;
+    font-size: 9.4pt;
+    line-height: 1.52;
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
   }
@@ -1226,21 +1246,16 @@ select {
     position: relative;
     min-height: auto;
     overflow: visible;
+    border-top: 1.4pt solid #0b7d71;
     border-bottom: 0.6pt solid #d7dee8;
     background: #fff;
     color: #101828;
-    padding: 0 0 12mm;
+    padding: 5mm 0 10mm;
     break-after: auto;
   }
 
   .whitepaper-cover::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 46mm;
-    height: 2.2mm;
-    background: #0b7d71;
-    content: "";
+    display: none;
   }
 
   .whitepaper-cover::after {
@@ -1250,7 +1265,7 @@ select {
   .whitepaper-cover .eyebrow {
     position: relative;
     z-index: 1;
-    margin-top: 12mm;
+    margin-top: 0;
     color: #0b7d71;
     font-size: 8pt;
     font-weight: 800;
@@ -1260,21 +1275,21 @@ select {
   .whitepaper-cover h1 {
     position: relative;
     z-index: 1;
-    max-width: 156mm;
-    margin: 6mm 0 7mm;
+    max-width: 150mm;
+    margin: 5mm 0 6mm;
     color: #111827;
-    font-size: 29pt;
-    font-weight: 640;
-    line-height: 1.12;
+    font-size: 25pt;
+    font-weight: 600;
+    line-height: 1.16;
   }
 
   .whitepaper-dek {
     position: relative;
     z-index: 1;
-    max-width: 144mm;
+    max-width: 138mm;
     color: #475467;
-    font-size: 12pt;
-    line-height: 1.45;
+    font-size: 10.8pt;
+    line-height: 1.5;
   }
 
   .document-profile {
@@ -1282,8 +1297,8 @@ select {
     gap: 6mm 10mm;
     position: relative;
     z-index: 1;
-    max-width: 150mm;
-    margin-top: 10mm;
+    max-width: 145mm;
+    margin-top: 8mm;
   }
 
   .document-profile div {
@@ -1308,7 +1323,8 @@ select {
     border-left: 2.5pt solid #d39b2a;
     background: #fff7e6;
     color: #6b4b00;
-    margin-top: 8mm;
+    margin-top: 7mm;
+    padding: 3mm 4mm;
   }
 
   .whitepaper-toc {
@@ -1319,7 +1335,7 @@ select {
     border-bottom: 0.6pt solid #d7dee8;
     background: #fff;
     margin: 0;
-    padding: 9mm 0 8mm;
+    padding: 7mm 0 7mm;
     break-after: auto;
   }
 
@@ -1336,7 +1352,7 @@ select {
     position: relative;
     z-index: 1;
     margin-top: 0;
-    font-size: 15pt;
+    font-size: 14pt;
     font-weight: 500;
     line-height: 1.14;
   }
@@ -1344,7 +1360,7 @@ select {
   .whitepaper-toc ol {
     position: relative;
     z-index: 1;
-    max-width: 156mm;
+    max-width: 145mm;
     gap: 4pt;
     margin-top: 5mm;
     counter-reset: toc;
@@ -1391,7 +1407,7 @@ select {
   .document-section {
     position: relative;
     border-top: 0;
-    padding: 8mm 0 6mm;
+    padding: 7mm 0 5mm;
     break-inside: auto;
     page-break-inside: auto;
   }
@@ -1405,7 +1421,7 @@ select {
   }
 
   .document-section + .document-section {
-    border-top: 0.4pt solid #e4e9ee;
+    border-top: 0.3pt solid #e7ecea;
     break-before: auto;
   }
 
@@ -1418,12 +1434,12 @@ select {
   }
 
   .document-section h2 {
-    max-width: 148mm;
+    max-width: 145mm;
     margin: 0 0 3.5mm;
     color: #111827;
-    font-size: 18pt;
-    font-weight: 500;
-    line-height: 1.18;
+    font-size: 15.5pt;
+    font-weight: 600;
+    line-height: 1.22;
     break-after: avoid;
   }
 
@@ -1434,36 +1450,41 @@ select {
   .document-subsection h3 {
     margin-bottom: 2mm;
     color: #111827;
-    font-size: 11.5pt;
+    font-size: 10.8pt;
     font-weight: 700;
   }
 
   .section-summary {
-    max-width: 148mm;
+    max-width: 138mm;
     margin-bottom: 4mm;
     color: #344054;
-    font-size: 10.5pt;
+    font-size: 9.8pt;
     font-weight: 600;
+    hyphens: none;
+    text-align: left;
   }
 
   .document-section p,
   .document-subsection,
   .whitepaper-dek {
-    max-width: 148mm;
+    max-width: 138mm;
   }
 
   .document-section p {
     margin-top: 0;
-    margin-bottom: 3.2mm;
+    margin-bottom: 3mm;
+    hyphens: auto;
+    text-align: justify;
+    text-justify: inter-word;
   }
 
   .technical-detail {
-    max-width: 144mm;
+    max-width: 136mm;
     margin-top: 4mm;
     border: 0.5pt solid #b9d4cc;
     border-left: 3pt solid #0b7d71;
     background: #f2f8f6;
-    padding: 4mm 5mm;
+    padding: 3.5mm 4.5mm;
   }
 
   .technical-detail svg {
@@ -1491,14 +1512,14 @@ select {
   .references-section {
     break-before: page;
     min-height: auto;
-    padding-top: 8mm;
+    padding-top: 7mm;
     background: #fff;
   }
 
   .references-section ol {
     display: grid;
-    max-width: 148mm;
-    gap: 7pt;
+    max-width: 138mm;
+    gap: 6pt;
     padding-left: 5mm;
   }
 
@@ -1510,7 +1531,7 @@ select {
     display: block;
     margin-top: 1mm;
     color: #667085;
-    font-size: 7.2pt;
+    font-size: 7pt;
     word-break: break-word;
   }
 }
