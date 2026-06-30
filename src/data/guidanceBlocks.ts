@@ -6,6 +6,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     title: "Why pathogen genomics?",
     summary:
       "Pathogen genomics can improve public-health action when it is connected to decisions, surveillance systems, and response capacity.",
+    sourceStatus: "partial",
     summarySourceIds: [
       "who-genomic-surveillance-2022",
       "who-national-genomic-surveillance-strategy-2023",
@@ -111,6 +112,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     title: "Start from the public-health decision",
     summary:
       "Pathogen genomics infrastructure should be planned around the decisions it supports, not around sequencing output alone.",
+    sourceStatus: "reviewed",
     body: [
       "A sequencing programme is useful when it helps public-health teams detect outbreaks, rule cases in or out of clusters, monitor resistance, track pathogen evolution, or report results faster. The analysis pipeline is part of a larger decision system.",
       "Before selecting infrastructure, define the services the programme must support: routine surveillance, outbreak response, AMR monitoring, national reporting, international sharing, or research support. Each use case implies different needs for speed, quality, data integration, governance, and sustainability.",
@@ -135,6 +137,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     title: "Treat infrastructure as an operating model",
     summary:
       "Compute infrastructure is not only CPUs and storage. It includes workflows, data movement, access, monitoring, support, and responsibility.",
+    sourceStatus: "reviewed",
     body: [
       "The PHA4GE infrastructure framing asks five questions: what the infrastructure solves, how analysis is run, where analysis is run, how data flow, and who has access. These questions separate responsibility from technology.",
       "A programme can use local servers, institutional HPC, cloud platforms, laptops, or a managed service. The central implementation question is who operates each layer, who validates analysis, who supports users, and who carries the risk when service delivery fails.",
@@ -156,6 +159,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     title: "Avoid one-size-fits-all infrastructure choices",
     summary:
       "Cloud, HPC, managed platforms, and local workflows all solve different problems and create different dependencies.",
+    sourceStatus: "reviewed",
     body: [
       "A high-abstraction cloud or managed platform can reduce local administration and improve scalability, but it may require reliable internet, data transfer capacity, external accounts, procurement routes, and clarity on data residency.",
       "A local or laptop workflow can be appropriate for field work, unreliable connectivity, or early capability building, but it creates risks around reproducibility, backup, access control, maintenance, and single-person dependency.",
@@ -175,6 +179,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     title: "Design the sample-to-report data lifecycle",
     summary:
       "A genomics service must connect samples, metadata, sequence data, analysis, reports, sharing, and archives.",
+    sourceStatus: "partial",
     body: [
       "A sequencing programme is not only producing FASTQ files. It receives samples or isolates, links them to metadata, generates sequence data, checks quality, runs analysis, interprets outputs, produces reports, shares selected data, stores records, and decides what should be archived or deleted.",
       "The WHO national strategy support tool provides a general value-chain frame: establish priority use cases, collect samples and metadata, extract genetic material, sequence, run bioinformatics analysis, interpret with multisource data, publish or share data, and return results for public-health analysis. The PHE case study gives a concrete service example: extracted DNA entered a central sequencing service, robotic processes checked quality and prepared libraries, sample information was captured through LIMS, sequence data were stored and analysed on IT and bioinformatics infrastructure, and outputs were combined with LIMS data to produce reports.",
@@ -202,6 +207,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     title: "Use managed, traceable workflows for routine analysis",
     summary:
       "Routine public-health analysis should not depend on undocumented scripts run by one person on one machine.",
+    sourceStatus: "partial",
     body: [
       "Public-health outputs may be used to detect outbreaks, rule cases in or out of clusters, support control measures, monitor antimicrobial resistance, and inform policy. The analysis therefore needs to be repeatable enough for service delivery and transparent enough for review.",
       "The PHA4GE source links public-health requirements for transparency and portability to containerised bioinformatics workflows expressed in workflow languages or workflow systems.",
@@ -224,6 +230,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     title: "Validate before replacing established methods",
     summary:
       "WGS should not replace an established public-health method until expected performance and quality controls are clear.",
+    sourceStatus: "partial",
     body: [
       "The PHE case study provides a useful implementation pattern. Before switching Salmonella typing from conventional methods to WGS, PHE ran conventional and WGS workflows in parallel, compared datasets, performed gap analysis, adjusted protocols, and established quality parameters.",
       "Validation needs to cover the whole service chain: input material, extraction, sequencing, laboratory handling, data quality, analysis outputs, reporting, and troubleshooting. WHO's national strategy support tool also treats data quality, internal consistency, SOPs, and internal and external quality assessment for genomics and analytics as part of data-management design.",
@@ -252,6 +259,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     title: "Integrate genomic, laboratory, and epidemiological data",
     summary:
       "Genome data have more public-health value when linked to sample context, epidemiology, and reporting systems.",
+    sourceStatus: "partial",
     body: [
       "Armstrong et al. state that laboratory and epidemiological data are often managed separately, but pathogen genomic data need to be integrated with epidemiological data to realise the value of both.",
       "The PHE case study shows this in practice: LIMS sample data and sequence-analysis outputs were combined to produce final sample reports.",
@@ -285,6 +293,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     title: "Plan data sharing as a governed decision",
     summary:
       "Data sharing has public-health value, but openness needs to be balanced with confidentiality, risk, and purpose.",
+    sourceStatus: "reviewed",
     body: [
       "Armstrong et al. describe public-health agencies sharing pathogen sequence data through NCBI-hosted databases, ReSeqTB, and GISAID. They also state that openness cannot be complete and unconditional because agencies must consider confidentiality and risk.",
       "Programmes need to decide what data should be shared, with whom, at what stage, through which repository or platform, under what access model, and with what metadata.",
@@ -315,6 +324,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     title: "Treat identity and access as ongoing operations",
     summary:
       "Access control is not a one-time setup. Users, roles, collaborations, and risks change over time.",
+    sourceStatus: "reviewed",
     body: [
       "The PHA4GE source frames identity and access management as a continuous responsibility: provisioning, authentication, authorisation, role assignment, access review, offboarding, monitoring, and auditability.",
       "Genomics programmes often need coordination between the laboratory, central IT, external providers, cybersecurity, and information governance.",
@@ -339,6 +349,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     title: "Separate active storage, backup, archive, and retention",
     summary:
       "Raw reads, intermediate files, reports, logs, and shared outputs do not all need the same storage or recovery rules.",
+    sourceStatus: "partial",
     body: [
       "The disaster-recovery source distinguishes active data storage, long-term storage, disaster recovery, and backup strategy. Backup is a point-in-time copy for recovery, not the same thing as replication.",
       "The WHO national strategy support tool adds that data storage policy should be defined from hardware, software, connectivity and retention strategy, and that backup can require one or two locations depending on the criticality of the data. The PHE case study shows an implementation with high-performance compute storage, distributed archive storage, and data-lifecycle management software. These details are context-specific, but the categories are useful.",
@@ -371,6 +382,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     title: "Plan workforce and training as core infrastructure",
     summary:
       "A genomics service needs trained laboratory, bioinformatics, data, software, IT, epidemiology, and user-facing capacity.",
+    sourceStatus: "reviewed",
     body: [
       "Armstrong et al. describe workforce development as central to public-health genomics. Microbiologists need microbial genomics knowledge, epidemiologists need tools to translate genomic data into action, and both groups need basic bioinformatics vocabulary.",
       "The PHE case study shows implementation needs in practice: laboratory training, specialist bioinformatics staff, computing and software-development expertise, cross-training for epidemiologists and clinical scientists, and user engagement.",
@@ -397,10 +409,73 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
   },
   {
+    id: "reporting-decision-use",
+    title: "Report results for decisions, not only for analysis completion",
+    summary:
+      "A genomics service should define who receives results, how uncertainty is communicated, and what action the result can support.",
+    sourceStatus: "partial",
+    body: [
+      "The end point of a public-health genomics workflow is not a tree, lineage call, resistance gene table, or FASTQ archive. The end point is an interpreted result that a laboratory, epidemiology team, incident manager, clinician, or policy lead can use appropriately.",
+      "The WHO national strategy support tool asks countries to define data users, how those users will analyse or use genomic surveillance data, and the intended outcomes. The PHE case study shows this in service form: sequence-analysis outputs were combined with LIMS data to produce reports, and implementation required engagement with users of the service.",
+      "Reporting therefore needs explicit boundaries. A report should make clear what was analysed, which method or workflow version was used, what quality limits apply, what the result can support, and what it cannot prove without epidemiological or clinical context.",
+      "For a beta guidance product, this section can safely set the reporting principle. A more detailed reporting template still needs extraction from laboratory-quality, pathogen-specific, or national reporting sources before the guide can prescribe report wording or uncertainty categories.",
+    ],
+    bodySourceIds: {
+      0: ["cdc-nejm-2019", "who-national-genomic-surveillance-strategy-2023"],
+      1: ["who-national-genomic-surveillance-strategy-2023", "phe-case-study"],
+      2: ["phe-case-study", "who-national-genomic-surveillance-strategy-2023"],
+      3: ["phe-case-study", "clinical-microbiology-implementation-2026"],
+    },
+    audiences: ["director", "policy", "lab-lead", "bioinformatician", "data-manager", "all"],
+    implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
+    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
+    topics: ["reporting", "decision-use", "quality", "metadata"],
+    detailLevel: "operational",
+    sourceIds: [
+      "cdc-nejm-2019",
+      "who-national-genomic-surveillance-strategy-2023",
+      "phe-case-study",
+      "clinical-microbiology-implementation-2026",
+    ],
+    gaps: ["Detailed reporting templates and uncertainty categories still need source extraction."],
+  },
+  {
+    id: "maturity-next-steps",
+    title: "Use maturity as a planning conversation, not a score for its own sake",
+    summary:
+      "Capability assessment is useful when it identifies the next service risk to reduce, not when it produces false precision.",
+    sourceStatus: "partial",
+    body: [
+      "The PHA4GE infrastructure material and vignettes support capability thinking: different implementation models carry different responsibilities, dependencies, and risks. WHO progress reporting similarly treats access, workforce, data sharing, connectivity, and readiness as linked capabilities that need to be sustained beyond emergency response.",
+      "A useful maturity conversation asks what the programme can reliably do today, which responsibility is fragile, and what would fail if a key person, supplier, network connection, platform, or storage system became unavailable.",
+      "For an early programme, the next step may be documentation, version control, backup testing, a defined sample-to-report route, or a second person who can run the workflow. For a routine service, the next step may be formal change control, quality review, access review, costed renewal, or clearer reporting and data-sharing policy.",
+      "The current KB should not pretend to have a validated maturity scoring instrument. It can use maturity language to structure planning, while keeping a formal assessment rubric as a separate source-backed gap.",
+    ],
+    bodySourceIds: {
+      0: ["pha4ge-infrastructure", "who-genomic-surveillance-progress-2023"],
+      1: ["pha4ge-infrastructure", "who-genomic-surveillance-progress-2023"],
+      2: ["pha4ge-infrastructure", "phe-case-study", "who-genomics-costing-tool-manual-2024"],
+      3: ["pha4ge-infrastructure"],
+    },
+    audiences: ["director", "policy", "funder", "lab-lead", "bioinformatician", "it-security", "data-manager", "all"],
+    implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
+    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
+    topics: ["implementation", "infrastructure", "sustainability", "workforce", "quality"],
+    detailLevel: "summary",
+    sourceIds: [
+      "pha4ge-infrastructure",
+      "who-genomic-surveillance-progress-2023",
+      "phe-case-study",
+      "who-genomics-costing-tool-manual-2024",
+    ],
+    gaps: ["A formal maturity rubric and scoring method still need source-backed review."],
+  },
+  {
     id: "costing-recurrent",
     title: "Cost the recurrent service, not only the initial purchase",
     summary:
       "Sustainability depends on storage growth, compute renewal, workflow maintenance, validation, support, and staff retention.",
+    sourceStatus: "partial",
     body: [
       "The PHE case study describes capital planning for sequencing equipment, robotics, IT, data management, and project management. It also considered laboratory-space remodelling, health and safety, workforce, training, sample requirements, turnaround times, and result format.",
       "Programmes should collect evidence on value as well as cost. PHE reported replacement of multiple conventional processes, reduced sample handling, reduced animal use, reduced staff costs in the reference laboratory, and a shift of scientific effort toward data analysis and interpretation.",

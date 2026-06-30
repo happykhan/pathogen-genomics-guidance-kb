@@ -23,6 +23,11 @@ type Props = {
 
 const relevanceThreshold = 7;
 const sourceLookup: Record<string, { label: string; path: string }> = sources;
+const sourceStatusLabels = {
+  reviewed: "Reviewed source basis",
+  partial: "Partial source basis",
+  gap: "Gap placeholder",
+} as const;
 
 function CitationRun({ sourceIds, referenceNumber }: { sourceIds: string[]; referenceNumber: Map<string, number> }) {
   if (!sourceIds.length) return null;
@@ -154,6 +159,7 @@ export function GuidanceRenderer({ profile, showTechnical, showAllSections }: Pr
             <div className="section-kicker">
               <span>Section {visibleIndex + 1}</span>
               <span>{block.detailLevel}</span>
+              <span className={`source-status ${block.sourceStatus}`}>{sourceStatusLabels[block.sourceStatus]}</span>
             </div>
             <h2>{block.title}</h2>
             <p className="section-summary">

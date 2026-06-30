@@ -10,6 +10,7 @@ export type GuidanceBlock = {
   id: string;
   title: string;
   summary: string;
+  sourceStatus: "reviewed" | "partial" | "gap";
   summarySourceIds?: string[];
   body: string[];
   bodySourceIds?: Record<number, string[]>;
@@ -40,6 +41,8 @@ export type ResourceRecord = {
   year: string;
   url: string;
   pdfUrl?: string;
+  doi?: string;
+  sourceCardPath?: string;
   documentType: "paper" | "guidance" | "strategy" | "toolkit" | "case-study" | "source-pack";
   audiences: Audience[];
   topics: string[];

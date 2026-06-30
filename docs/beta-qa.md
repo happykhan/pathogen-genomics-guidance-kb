@@ -1,0 +1,67 @@
+# Beta 0.2 QA Checklist
+
+Use this checklist before calling the guide beta-ready.
+
+## Automated Checks
+
+- `npm run content:check`
+- `npm run build`
+- Confirm no large source binaries are tracked:
+
+```bash
+git ls-files | rg -i '\\.(pdf|docx|xlsx|tiff?|eps)$' || true
+```
+
+## Static Route Smoke Checks
+
+After `npm run build`, serve `out/` locally and check:
+
+- `/`
+- `/resources`
+- `/gaps`
+- `/api/guidance`
+- `/api/resources`
+- `/api/sources`
+
+The API checks should confirm:
+
+- guidance blocks expose `sourceStatus`;
+- cited `sourceIds` resolve through `/api/sources`;
+- resource records include `pdfUrl`, `doi`, and `sourceCardPath` where available;
+- no public API exposes local `/Users/...` paths.
+
+## Visual Checks
+
+Check desktop and mobile widths for:
+
+- guidance page and whitepaper body;
+- Gnomey wizard;
+- resource finder cards and pagination;
+- gaps page.
+
+The whitepaper should read as one continuous document, not a stack of unrelated cards.
+
+## Print / PDF Export
+
+Use the browser `Export PDF` control and verify:
+
+- web controls, navigation, Gnomey, and buttons are hidden;
+- title, profile summary, contents, sections, inline citations, and numbered references print cleanly;
+- section text does not overlap or clip;
+- references remain numbered and match inline citations.
+
+## Scenario Checks
+
+Run the wizard for these profiles and verify that section ranking and resources are plausible:
+
+- Director, exploring, make the case.
+- Laboratory lead, pilot, validate workflows.
+- Bioinformatician, routine service, validate workflows and share data.
+- IT/security, national scale, data residency concern and cloud not allowed.
+- Mixed team, exploring, design infrastructure.
+
+## Editorial Checks
+
+- Blocks marked `reviewed` should not have unresolved gaps.
+- Blocks marked `partial` should explain what source work remains.
+- Gaps page should reflect current missing work, not stale gaps already filled by WHO/IPSN extraction.

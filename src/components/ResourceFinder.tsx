@@ -27,8 +27,8 @@ const defaultFilters: FinderFilters = {
 const pageSize = 8;
 
 const sourceStatusLabels = {
-  extracted: "Reviewed for guide",
-  candidate: "Needs review",
+  extracted: "Reviewed in guide",
+  candidate: "Needs extraction",
 } as const;
 
 export function ResourceFinder() {
@@ -226,6 +226,9 @@ export function ResourceFinder() {
                 {resource.topics.slice(0, 5).map((topic) => (
                   <span className="badge" key={topic}>{topic}</span>
                 ))}
+                {resource.pdfUrl ? <span className="badge source">PDF available</span> : null}
+                {resource.sourceCardPath ? <span className="badge source">Source card available</span> : null}
+                {resource.doi ? <span className="badge">DOI</span> : null}
               </div>
             </div>
             <div className="resource-summary">

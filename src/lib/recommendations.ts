@@ -1,23 +1,58 @@
 import type { GuidanceBlock, ResourceRecord } from "../types/content";
 import type { Profile } from "../types/profile";
 
+function hasAny(topics: string[], candidates: string[]) {
+  return topics.some((topic) => candidates.includes(topic));
+}
+
 export function scoreTopics(profile: Profile, topics: string[]): number {
   let score = 0;
   if (profile.goals.includes("design-infrastructure")) {
-    score += topics.some((topic) => ["infrastructure", "cloud", "local-compute", "operating-model"].includes(topic)) ? 3 : 0;
+    score += hasAny(topics, ["infrastructure", "cloud", "local-compute", "operating-model"]) ? 3 : 0;
   }
   if (profile.goals.includes("validate-workflows")) {
-    score += topics.some((topic) => ["workflow", "validation", "quality", "provenance"].includes(topic)) ? 3 : 0;
+    score += hasAny(topics, ["workflow", "validation", "quality", "provenance"]) ? 3 : 0;
   }
   if (profile.goals.includes("share-data")) {
-    score += topics.some((topic) => ["data-sharing", "repositories", "governance", "metadata"].includes(topic)) ? 3 : 0;
+    score += hasAny(topics, ["data-sharing", "repositories", "governance", "metadata"]) ? 3 : 0;
   }
   if (profile.goals.includes("make-case")) {
-    score += topics.some((topic) => ["strategy", "decision-use", "public-health", "costing", "workforce"].includes(topic)) ? 3 : 0;
+    score += hasAny(topics, ["strategy", "decision-use", "public-health", "costing", "workforce"]) ? 3 : 0;
   }
   if (profile.goals.includes("assess-tier")) {
-    score += topics.some((topic) => ["implementation", "infrastructure", "sustainability"].includes(topic)) ? 2 : 0;
+    score += hasAny(topics, ["implementation", "infrastructure", "sustainability"]) ? 2 : 0;
   }
+  return score;
+}
+
+function scoreConstraints(profile: Profile, topics: string[]): number {
+  let score = 0;
+  const constraints = profile.constraints;
+
+  if (constraints.internetReliable === false) {
+    if (hasAny(topics, ["local-compute", "storage", "backup", "archive", "retention", "operating-model"])) score += 3;
+    if (hasAny(topics, ["cloud", "data-sharing", "repositories"])) score -= 2;
+  }
+
+  if (constraints.bioinformaticsStaff === false) {
+    if (hasAny(topics, ["workforce", "training", "sustainability", "operating-model", "managed-platform"])) score += 3;
+    if (hasAny(topics, ["workflow", "provenance", "validation"])) score += 1;
+  }
+
+  if (constraints.centralIT === false) {
+    if (hasAny(topics, ["sustainability", "procurement", "security", "iam", "operating-model", "backup"])) score += 2;
+    if (hasAny(topics, ["hpc", "local-compute"])) score -= 1;
+  }
+
+  if (constraints.lims === false) {
+    if (hasAny(topics, ["metadata", "lims", "data-lifecycle", "reporting", "interoperability"])) score += 3;
+  }
+
+  if (constraints.cloudAllowed === false || constraints.dataResidencyConcern === true) {
+    if (hasAny(topics, ["governance", "security", "storage", "backup", "data-sharing", "repositories", "local-compute"])) score += 2;
+    if (hasAny(topics, ["cloud"])) score -= 3;
+  }
+
   return score;
 }
 
@@ -29,6 +64,7 @@ export function scoreGuidanceBlock(block: GuidanceBlock, profile: Profile): numb
   if (profile.organisms.some((organism) => block.organisms.includes(organism))) score += 2;
   if (!block.infrastructure || block.infrastructure.includes(profile.infrastructure)) score += 1;
   score += scoreTopics(profile, block.topics);
+  score += scoreConstraints(profile, block.topics);
   return score;
 }
 
@@ -40,5 +76,6 @@ export function scoreResource(resource: ResourceRecord, profile: Profile): numbe
   if (profile.organisms.some((organism) => resource.organisms.includes(organism))) score += 3;
   if (resource.sourceStatus === "extracted") score += 2;
   score += scoreTopics(profile, resource.topics);
+  score += scoreConstraints(profile, resource.topics);
   return score;
 }

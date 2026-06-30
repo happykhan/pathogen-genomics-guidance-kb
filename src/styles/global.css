@@ -252,9 +252,9 @@ select {
 }
 
 .whitepaper {
-  border: 1px solid #dfe8e4;
+  border: 0;
   border-top: 4px solid var(--accent);
-  border-radius: 2px;
+  border-radius: 0;
   background: var(--surface);
   box-shadow: none;
   overflow: hidden;
@@ -384,7 +384,7 @@ select {
 }
 
 .document-section + .document-section {
-  border-top: 1px solid #eef3f1;
+  border-top: 1px solid #f1f5f3;
 }
 
 .document-section.low-relevance {
@@ -400,6 +400,23 @@ select {
   font-size: 0.72rem;
   font-weight: 800;
   text-transform: uppercase;
+}
+
+.source-status {
+  color: var(--muted);
+  font-weight: 750;
+}
+
+.source-status.reviewed {
+  color: #0b7d71;
+}
+
+.source-status.partial {
+  color: #7a5521;
+}
+
+.source-status.gap {
+  color: #9f1239;
 }
 
 .section-kicker span + span::before {
@@ -1181,6 +1198,36 @@ select {
 
   .nav {
     justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    overflow-x: hidden;
+  }
+
+  .workspace-title {
+    max-width: 100%;
+    font-size: clamp(2rem, 8vw, 2.45rem);
+    line-height: 1.08;
+    overflow-wrap: break-word;
+  }
+
+  .hero-workspace > .panel,
+  .guidance-control-band .panel,
+  .whitepaper {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .gnomey-tile {
+    min-width: 0;
+  }
+
+  .gnomey-tile p:not(.eyebrow) {
+    overflow-wrap: anywhere;
   }
 }
 
