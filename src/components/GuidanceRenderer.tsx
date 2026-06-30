@@ -1,4 +1,4 @@
-import { AlertTriangle, BookOpen, SlidersHorizontal } from "lucide-react";
+import { SlidersHorizontal } from "lucide-react";
 import { guidanceBlocks } from "../data/guidanceBlocks";
 import { sources } from "../data/sources";
 import {
@@ -30,6 +30,8 @@ export function GuidanceRenderer({ profile, showTechnical, showAllSections }: Pr
   const visible = scored.filter((item) => showAllSections || item.score >= relevanceThreshold);
   const hiddenCount = scored.filter((item) => item.score < relevanceThreshold).length;
   const revealTechnical = showTechnical || isTechnicalProfile(profile);
+  const referenceIds = Array.from(new Set(visible.flatMap(({ block }) => block.sourceIds)));
+  const referenceNumber = new Map(referenceIds.map((sourceId, index) => [sourceId, index + 1]));
 
   return (
     <section className="whitepaper" aria-label="Tailored guidance document">
@@ -107,27 +109,40 @@ export function GuidanceRenderer({ profile, showTechnical, showAllSections }: Pr
                 ))}
               </aside>
             ) : null}
-            {block.gaps?.length ? (
-              <aside className="gap-box">
-                <strong>
-                  <AlertTriangle size={16} aria-hidden="true" /> Evidence gap
-                </strong>
-                {block.gaps.map((gap) => (
-                  <p key={gap}>{gap}</p>
-                ))}
-              </aside>
-            ) : null}
             <footer className="section-sources">
-              <span>
-                <BookOpen size={14} aria-hidden="true" />
-                Source basis
-              </span>
+              <span>Sources</span>
               {block.sourceIds.map((sourceId) => (
-                <code key={sourceId}>{sourceLookup[sourceId]?.label ?? sourceId}</code>
+                <a href="#references" key={sourceId}>
+                  [{referenceNumber.get(sourceId)}]
+                </a>
               ))}
             </footer>
           </section>
         ))}
+
+        <section className="document-section references-section" id="references" aria-label="References">
+          <div className="section-kicker">
+            <span>References</span>
+          </div>
+          <h2>Sources Cited</h2>
+          <ol>
+            {referenceIds.map((sourceId) => {
+              const source = sourceLookup[sourceId];
+              return (
+                <li key={sourceId}>
+                  {source ? (
+                    <>
+                      <span>{source.label}</span>
+                      <code>{source.path}</code>
+                    </>
+                  ) : (
+                    <span>{sourceId}</span>
+                  )}
+                </li>
+              );
+            })}
+          </ol>
+        </section>
       </div>
     </section>
   );
