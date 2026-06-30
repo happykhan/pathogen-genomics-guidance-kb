@@ -62,9 +62,7 @@ export function GuidanceApp() {
         <aside className="panel">
           <div className="panel-body">
             <div className="gnomey-tile">
-              <div className="gnomey-face" aria-hidden="true">
-                <span className="gnomey-eyes" />
-              </div>
+              <img className="gnomey-image" src="/assets/gnomey.png" alt="" aria-hidden="true" />
               <div>
                 <p className="eyebrow">Gnomey says</p>
                 <p>
@@ -103,21 +101,21 @@ export function GuidanceApp() {
           <section className="panel">
             <div className="panel-body">
               <h2 style={{ marginTop: 0, fontSize: "1.1rem" }}>Detail controls</h2>
-              <label className="choice active">
+              <label className="check-row">
                 <input
                   type="checkbox"
                   checked={showTechnical}
                   onChange={(event) => setShowTechnical(event.target.checked)}
-                />{" "}
-                Show technical detail for non-technical roles
+                />
+                <span>Show technical detail for non-technical roles</span>
               </label>
-              <label className="choice active" style={{ marginTop: 8 }}>
+              <label className="check-row">
                 <input
                   type="checkbox"
                   checked={showAllSections}
                   onChange={(event) => setShowAllSections(event.target.checked)}
-                />{" "}
-                Show lower-ranked sections
+                />
+                <span>Show lower-ranked sections</span>
               </label>
             </div>
           </section>

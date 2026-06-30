@@ -51,9 +51,7 @@ export function GnomeyWizard({ profile, onChange, onClose }: Props) {
       <section className="modal" role="dialog" aria-modal="true" aria-labelledby="wizard-title">
         <div className="modal-header">
           <div className="gnomey-tile">
-            <div className="gnomey-face" aria-hidden="true">
-              <span className="gnomey-eyes" />
-            </div>
+            <img className="gnomey-image" src="/assets/gnomey.png" alt="" aria-hidden="true" />
             <div>
               <p className="eyebrow">Gnomey guidance wizard</p>
               <h2 id="wizard-title">Tailor the guidance</h2>

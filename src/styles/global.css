@@ -247,6 +247,7 @@ select {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
   gap: 22px;
+  align-items: start;
   margin-bottom: 24px;
 }
 
@@ -265,53 +266,57 @@ select {
 
 .gnomey-tile {
   display: grid;
-  grid-template-columns: 86px minmax(0, 1fr);
+  grid-template-columns: 112px minmax(0, 1fr);
   gap: 16px;
   align-items: center;
 }
 
-.gnomey-face {
-  position: relative;
-  width: 78px;
-  height: 78px;
-  border: 2px solid var(--ink);
-  border-radius: 50%;
-  background: #f2d2b8;
+.gnomey-image {
+  display: block;
+  width: 104px;
+  height: 104px;
+  object-fit: contain;
+  object-position: center bottom;
 }
 
-.gnomey-face::before {
-  content: "";
-  position: absolute;
-  left: 10px;
-  top: -30px;
-  width: 56px;
-  height: 44px;
-  border: 2px solid var(--ink);
-  border-bottom: 0;
-  background: var(--accent-2);
-  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+.modal-header .gnomey-image {
+  width: 116px;
+  height: 116px;
 }
 
-.gnomey-face::after {
-  content: "";
-  position: absolute;
-  left: 18px;
-  right: 18px;
-  bottom: 13px;
-  height: 18px;
-  border-bottom: 2px solid var(--ink);
-  border-radius: 0 0 50% 50%;
+.check-row {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 8px;
+  align-items: start;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+  padding: 9px 10px;
 }
 
-.gnomey-eyes {
-  position: absolute;
-  left: 22px;
-  top: 28px;
-  width: 34px;
-  height: 6px;
-  background:
-    radial-gradient(circle at 3px 3px, var(--ink) 0 3px, transparent 3px),
-    radial-gradient(circle at 31px 3px, var(--ink) 0 3px, transparent 3px);
+.check-row + .check-row {
+  margin-top: 8px;
+}
+
+.check-row input {
+  width: 16px;
+  height: 16px;
+  margin: 3px 0 0;
+}
+
+.check-row span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  line-height: 1.35;
+}
+
+.check-row:has(input:checked) {
+  border-color: var(--accent);
+  background: #e6f0eb;
 }
 
 .guidance-block {

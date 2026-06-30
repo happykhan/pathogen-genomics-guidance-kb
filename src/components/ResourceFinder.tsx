@@ -73,13 +73,13 @@ export function ResourceFinder() {
             />
           </span>
         </label>
-        <label className="choice active">
+        <label className="check-row" style={{ flex: "0 0 auto" }}>
           <input
             type="checkbox"
             checked={onlyRecommended}
             onChange={(event) => setOnlyRecommended(event.target.checked)}
-          />{" "}
-          Prioritise this profile
+          />
+          <span>Prioritise this profile</span>
         </label>
       </div>
 
