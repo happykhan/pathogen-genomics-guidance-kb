@@ -53,15 +53,7 @@ export function GuidanceApp() {
           <div>
             <p className="eyebrow">Dynamic guidance document</p>
             <h1 className="workspace-title">Set up pathogen genomics infrastructure for the context you actually have.</h1>
-            <p className="workspace-copy">
-              Use the wizard to tailor the document by role, programme stage, organism focus, and compute context. The visible
-              guidance can be printed or shared as a profile-specific link.
-            </p>
-            <div className="control-row no-print" aria-label="Guidance actions">
-              <button className="button primary" type="button" onClick={() => setWizardOpen(true)}>
-                <Wand2 size={18} />
-                Tailor guidance
-              </button>
+            <div className="control-row no-print hero-utility-actions" aria-label="Document actions">
               <button className="button" type="button" onClick={() => window.print()}>
                 <FileDown size={18} />
                 Export PDF
@@ -79,9 +71,14 @@ export function GuidanceApp() {
                 <div>
                   <p className="eyebrow">Gnomey says</p>
                   <p>
-                    Tell me who is reading, what you are building, and where the constraints are. I will bring the relevant
-                    sections forward.
+                    Tell me who is reading, what you are building, and where the constraints are. I will tailor the document by
+                    role, programme stage, organism focus, and compute context, then bring the relevant sections forward. The
+                    visible guidance can be printed or shared as a profile-specific link.
                   </p>
+                  <button className="button primary" type="button" onClick={() => setWizardOpen(true)}>
+                    <Wand2 size={18} />
+                    Tailor guidance
+                  </button>
                 </div>
               </div>
             </div>

@@ -535,10 +535,13 @@ select {
 
 .hero-workspace {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
-  gap: 22px;
+  gap: 16px;
   align-items: start;
   margin-bottom: 24px;
+}
+
+.hero-workspace > .panel {
+  max-width: 720px;
 }
 
 .guidance-control-band {
@@ -568,15 +571,13 @@ select {
 
 .workspace-title {
   margin: 8px 0 10px;
-  max-width: 780px;
-  font-size: clamp(2rem, 4vw, 3.8rem);
+  max-width: 1120px;
+  font-size: clamp(2.6rem, 5.2vw, 5.4rem);
   line-height: 1.02;
 }
 
-.workspace-copy {
-  max-width: 720px;
-  color: var(--muted);
-  font-size: 1.05rem;
+.hero-utility-actions {
+  margin-top: 14px;
 }
 
 .gnomey-tile {
@@ -584,6 +585,11 @@ select {
   grid-template-columns: 112px minmax(0, 1fr);
   gap: 16px;
   align-items: center;
+}
+
+.gnomey-tile p:not(.eyebrow) {
+  margin: 6px 0 14px;
+  color: var(--ink);
 }
 
 .gnomey-image {
@@ -970,6 +976,10 @@ select {
 
   .guidance-control-band .profile-list,
   .handoff-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gnomey-tile {
     grid-template-columns: 1fr;
   }
 
