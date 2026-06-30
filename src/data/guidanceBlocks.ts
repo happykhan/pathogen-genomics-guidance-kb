@@ -64,7 +64,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
         title: "The economic case needs care",
         body: [
           "The financial argument should be made with setting-specific evidence. Some programmes may save staff time, reduce duplicated testing, shorten reporting, or focus outbreak investigations more efficiently. Others may face higher near-term costs because they need new infrastructure, training, validation, quality systems, and data-management capacity.",
-          "The current knowledge base has a strong service case from PHE and a broad public-health case from WHO and Armstrong et al. It still needs a fuller review of economic evaluations before making general claims about cost-effectiveness or return on investment.",
+          "The current knowledge base now has a service-transition case from PHE, a broad public-health case from WHO and Armstrong et al., and a systematic review of economic evaluations by Price et al. The review found that included studies supported WGS surveillance on economic grounds, but the evidence was heterogeneous and stronger in high-income hospital and foodborne-surveillance settings than in low- and middle-income country implementation contexts.",
         ],
         bodySourceIds: {
           0: [
@@ -75,12 +75,21 @@ export const guidanceBlocks: GuidanceBlock[] = [
             "who-genomics-costing-tool-manual-2024",
             "wgs-economic-review",
           ],
+          1: ["phe-case-study", "who-genomic-surveillance-2022", "cdc-nejm-2019", "wgs-economic-review"],
         },
         bodyCitationAnchors: {
           1: [
             {
-              text: "The current knowledge base has a strong service case from PHE and a broad public-health case from WHO and Armstrong et al.",
+              text: "The current knowledge base now has a service-transition case from PHE, a broad public-health case from WHO and Armstrong et al.",
               sourceIds: ["phe-case-study", "who-genomic-surveillance-2022", "cdc-nejm-2019"],
+            },
+            {
+              text: "a systematic review of economic evaluations by Price et al.",
+              sourceIds: ["wgs-economic-review"],
+            },
+            {
+              text: "the evidence was heterogeneous and stronger in high-income hospital and foodborne-surveillance settings than in low- and middle-income country implementation contexts.",
+              sourceIds: ["wgs-economic-review"],
             },
           ],
         },
@@ -105,7 +114,9 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "who-genomics-costing-tool-manual-2024",
       "wgs-economic-review",
     ],
-    gaps: ["A formal review of economic value, cost-effectiveness, and setting-specific benefit evidence is still needed."],
+    gaps: [
+      "A structured extraction of individual economic evaluation methods, settings, pathogens, comparators, and numeric estimates is still needed before the guide makes general return-on-investment claims.",
+    ],
   },
   {
     id: "framing-public-health-use",
@@ -141,14 +152,14 @@ export const guidanceBlocks: GuidanceBlock[] = [
     body: [
       "The economic case for pathogen genomics should be made as a setting-specific service case. It should state which decisions will change, which pathogen or programme is in scope, how quickly results must arrive, and what response capacity exists once a signal is detected.",
       "The PHE case study supports a service-transition argument: WGS can replace or consolidate older processes and shift work toward analysis and interpretation, but only after capital planning, validation, accreditation, LIMS integration, training, reporting changes, and user engagement. GenomeTrakr supports a stronger quantitative value case for U.S. food-safety source tracking, but that evidence should not be generalized without checking pathogen, sampling, outbreak cost, and response-system assumptions.",
-      "Egli and Howden frame a useful strategic choice: continuous surveillance costs more in routine operation but may detect clusters earlier, while outbreak-triggered sequencing lowers routine expenditure but can miss cryptic transmission or delay control. Selective surveillance can be a middle path, but only if the criteria for which isolates are sequenced are explicit.",
+      "A systematic review by Price et al. found that nine included bacterial WGS surveillance studies supported use of WGS on economic grounds, while also warning that evidence was heterogeneous and that more low- and middle-income country analyses and real-world effectiveness data are needed. Egli and Howden frame a related strategic choice: continuous surveillance costs more in routine operation but may detect clusters earlier, while outbreak-triggered sequencing lowers routine expenditure but can miss cryptic transmission or delay control. Selective surveillance can be a middle path, but only if the criteria for which isolates are sequenced are explicit.",
       "WHO's costing manual provides the current best planning categories: throughput, sequencing platform, reagents and consumables, equipment, personnel and training, facilities and transport, bioinformatics, and quality management. For bioinformatics, the costing model should include cloud, in-house server, or hybrid arrangements; software licensing; storage; hardware; and maintenance fees.",
       "A credible investment case should therefore present scenarios rather than a single universal cost-per-sample or return-on-investment claim. Compare a small pilot, a routine single-pathogen service, a multi-pathogen national service, and a managed or shared-platform model. For each scenario, state what is counted, what is excluded, what benefits are expected, and what evidence is still uncertain.",
     ],
     bodySourceIds: {
       0: ["national-investment-case-2025", "who-national-genomic-surveillance-strategy-2023"],
       1: ["phe-case-study", "genometrakr-economic-2021"],
-      2: ["lancet-wgs-economic-strategies-2026"],
+      2: ["wgs-economic-review", "lancet-wgs-economic-strategies-2026"],
       3: ["who-genomics-costing-tool-manual-2024", "wgs-costing-tool-2024"],
       4: [
         "national-investment-case-2025",
@@ -167,6 +178,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     sourceIds: [
       "phe-case-study",
       "genometrakr-economic-2021",
+      "wgs-economic-review",
       "national-investment-case-2025",
       "lancet-wgs-economic-strategies-2026",
       "who-genomics-costing-tool-manual-2024",
@@ -607,13 +619,13 @@ export const guidanceBlocks: GuidanceBlock[] = [
     sourceStatus: "partial",
     body: [
       "The PHE case study describes capital planning for sequencing equipment, robotics, IT, data management, and project management. It also considered laboratory-space remodelling, health and safety, workforce, training, sample requirements, turnaround times, and result format.",
-      "Programmes should collect evidence on value as well as cost. PHE reported replacement of multiple conventional processes, reduced sample handling, reduced animal use, reduced staff costs in the reference laboratory, and a shift of scientific effort toward data analysis and interpretation.",
+      "Programmes should collect evidence on value as well as cost. PHE reported replacement of multiple conventional processes, reduced sample handling, reduced animal use, reduced staff costs in the reference laboratory, and a shift of scientific effort toward data analysis and interpretation. Price et al. found that included bacterial WGS surveillance economic studies supported WGS on economic grounds, but the evidence base was heterogeneous.",
       "Initial purchase cost is only one part of sustainability. WHO's costing manual provides a stronger category model for recurrent planning: throughput, platform, reagents and consumables, equipment, personnel and training, facilities and transport, bioinformatics, and quality management. For bioinformatics, it explicitly accommodates cloud, in-house server, and hybrid costs, including software licensing, storage, hardware, and maintenance.",
       "Use costing as a scenario exercise rather than a one-off budget line. Compare throughput assumptions, platform choices, procurement costs, staffing patterns, training needs, quality-management activities, storage and compute options, and whether costs are shared with other pathogen programmes. The current sources support a category model; they still do not justify a universal cost-per-sample or return-on-investment claim across pathogens and countries.",
     ],
     bodySourceIds: {
       0: ["phe-case-study"],
-      1: ["phe-case-study", "genometrakr-economic-2021", "lancet-wgs-economic-strategies-2026"],
+      1: ["phe-case-study", "genometrakr-economic-2021", "wgs-economic-review", "lancet-wgs-economic-strategies-2026"],
       2: ["who-genomics-costing-tool-manual-2024", "wgs-costing-tool-2024"],
       3: ["who-genomics-costing-tool-manual-2024", "who-national-genomic-surveillance-strategy-2023"],
     },
@@ -628,8 +640,11 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "who-genomics-costing-tool-manual-2024",
       "wgs-costing-tool-2024",
       "genometrakr-economic-2021",
+      "wgs-economic-review",
       "lancet-wgs-economic-strategies-2026",
     ],
-    gaps: ["A setting-specific economic synthesis is still needed before making general return-on-investment claims."],
+    gaps: [
+      "A setting-specific quantitative extraction is still needed before making general return-on-investment claims across pathogens and countries.",
+    ],
   },
 ];

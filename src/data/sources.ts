@@ -20,7 +20,7 @@ export const sources = {
     path: "knowledge-base/source-cards/who-pathogen-genome-data-sharing-2022.md",
   },
   "wgs-economic-review": {
-    label: "Systematic review of economic evaluations of whole-genome sequencing for pathogen identification and surveillance",
+    label: "Price et al. 2023, Systematic review of economic evaluations of WGS surveillance",
     path: "knowledge-base/source-cards/wgs-economic-evaluation-review.md",
   },
   "genometrakr-economic-2021": {
