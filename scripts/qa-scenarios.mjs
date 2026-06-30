@@ -99,18 +99,34 @@ function expectPenalty(label, scorer, targetId, profile, minimumDelta = 1) {
   }
 }
 
-const scenarios = [
+function topGuidanceIds(profile, limit = 5) {
+  return guidanceBlocks
+    .map((block) => ({ id: block.id, score: scoreGuidanceBlock(block, profile) }))
+    .sort((left, right) => right.score - left.score || left.id.localeCompare(right.id))
+    .slice(0, limit)
+    .map((entry) => entry.id);
+}
+
+function expectTopGuidance(label, profile, expectedIds, limit = 5) {
+  const topIds = topGuidanceIds(profile, limit);
+  const missingIds = expectedIds.filter((id) => !topIds.includes(id));
+  if (missingIds.length) {
+    errors.push(`${label}: expected top ${limit} guidance to include ${missingIds.join(", ")}; got ${topIds.join(", ")}`);
+  }
+}
+
+const constraintScenarios = [
   {
     label: "unreliable internet",
     profile: withProfile({ constraints: { internetReliable: false } }),
     checks: [
-      () => expectBoost("unreliable internet", scoreBlock, "storage-backup-archive-distinction", scenarios[0].profile, 3),
+      () => expectBoost("unreliable internet", scoreBlock, "storage-backup-archive-distinction", constraintScenarios[0].profile, 3),
       () =>
         expectPenalty(
           "unreliable internet",
           scoreNamedResource,
           "who-genomic-data-sharing-platforms-2025",
-          scenarios[0].profile,
+          constraintScenarios[0].profile,
           2,
         ),
     ],
@@ -119,37 +135,94 @@ const scenarios = [
     label: "no bioinformatics staff",
     profile: withProfile({ constraints: { bioinformaticsStaff: false } }),
     checks: [
-      () => expectBoost("no bioinformatics staff", scoreBlock, "workforce-is-part-of-system", scenarios[1].profile, 3),
-      () => expectBoost("no bioinformatics staff", scoreNamedResource, "clinical-microbiology-implementation-2026", scenarios[1].profile, 1),
+      () => expectBoost("no bioinformatics staff", scoreBlock, "workforce-is-part-of-system", constraintScenarios[1].profile, 3),
+      () =>
+        expectBoost(
+          "no bioinformatics staff",
+          scoreNamedResource,
+          "clinical-microbiology-implementation-2026",
+          constraintScenarios[1].profile,
+          1,
+        ),
     ],
   },
   {
     label: "no central IT",
     profile: withProfile({ constraints: { centralIT: false } }),
     checks: [
-      () => expectBoost("no central IT", scoreBlock, "infrastructure-operating-model", scenarios[2].profile, 2),
-      () => expectBoost("no central IT", scoreBlock, "storage-backup-archive-distinction", scenarios[2].profile, 2),
+      () => expectBoost("no central IT", scoreBlock, "infrastructure-operating-model", constraintScenarios[2].profile, 2),
+      () => expectBoost("no central IT", scoreBlock, "storage-backup-archive-distinction", constraintScenarios[2].profile, 2),
     ],
   },
   {
     label: "no LIMS",
     profile: withProfile({ constraints: { lims: false } }),
     checks: [
-      () => expectBoost("no LIMS", scoreBlock, "metadata-and-epidemiology-integration", scenarios[3].profile, 3),
-      () => expectBoost("no LIMS", scoreBlock, "data-lifecycle-sample-to-report", scenarios[3].profile, 3),
+      () => expectBoost("no LIMS", scoreBlock, "metadata-and-epidemiology-integration", constraintScenarios[3].profile, 3),
+      () => expectBoost("no LIMS", scoreBlock, "data-lifecycle-sample-to-report", constraintScenarios[3].profile, 3),
     ],
   },
   {
     label: "cloud restricted",
     profile: withProfile({ constraints: { cloudAllowed: false, dataResidencyConcern: true } }),
     checks: [
-      () => expectBoost("cloud restricted", scoreBlock, "sharing-is-not-unconditional", scenarios[4].profile, 2),
-      () => expectPenalty("cloud restricted", scoreBlock, "avoid-one-size-fits-all-cloud", scenarios[4].profile, 1),
+      () => expectBoost("cloud restricted", scoreBlock, "sharing-is-not-unconditional", constraintScenarios[4].profile, 2),
+      () => expectPenalty("cloud restricted", scoreBlock, "avoid-one-size-fits-all-cloud", constraintScenarios[4].profile, 1),
     ],
   },
 ];
 
-scenarios.forEach((scenario) => scenario.checks.forEach((check) => check()));
+const representativeProfiles = [
+  {
+    label: "director making the investment case",
+    profile: withProfile({
+      role: "director",
+      stage: "exploring",
+      goals: ["make-case"],
+    }),
+    expectedTopGuidance: ["why-pathogen-genomics", "investment-case-assumptions"],
+  },
+  {
+    label: "laboratory lead piloting a service",
+    profile: withProfile({
+      role: "lab-lead",
+      stage: "pilot",
+      goals: ["design-infrastructure", "validate-workflows"],
+    }),
+    expectedTopGuidance: ["quality-validation-before-switch"],
+  },
+  {
+    label: "bioinformatician validating workflows",
+    profile: withProfile({
+      role: "bioinformatician",
+      stage: "routine-service",
+      infrastructure: "hpc",
+      goals: ["validate-workflows"],
+    }),
+    expectedTopGuidance: ["workflow-reproducibility"],
+  },
+  {
+    label: "IT/security reviewing data sharing and residency",
+    profile: withProfile({
+      role: "it-security",
+      stage: "national-scale",
+      infrastructure: "cloud",
+      goals: ["share-data"],
+      constraints: { cloudAllowed: false, dataResidencyConcern: true },
+    }),
+    expectedTopGuidance: ["sharing-is-not-unconditional", "iam-is-continuous"],
+  },
+  {
+    label: "mixed team exploring infrastructure options",
+    profile: defaultProfile,
+    expectedTopGuidance: ["infrastructure-operating-model", "implementation-model-dependencies"],
+  },
+];
+
+constraintScenarios.forEach((scenario) => scenario.checks.forEach((check) => check()));
+representativeProfiles.forEach((scenario) =>
+  expectTopGuidance(scenario.label, scenario.profile, scenario.expectedTopGuidance, 7),
+);
 
 if (errors.length) {
   console.error("Scenario QA failed:");
@@ -157,4 +230,6 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`Scenario QA passed: ${scenarios.map((scenario) => scenario.label).join(", ")}.`);
+console.log(
+  `Scenario QA passed: ${constraintScenarios.length} constraint scenarios and ${representativeProfiles.length} representative profiles.`,
+);

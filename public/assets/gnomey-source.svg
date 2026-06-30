@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Gnomey mascot editable source</title>
+  <desc id="desc">Simple editable source drawing for the pathogen genomics guidance helper mascot.</desc>
+  <defs>
+    <style>
+      .line { fill: none; stroke: #1f2937; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+      .skin { fill: #f2c7a4; }
+      .hat { fill: #c96732; }
+      .coat { fill: #475569; }
+      .accent { fill: #0d9488; }
+      .paper { fill: #fff7ed; }
+      .boot { fill: #5b3a29; }
+    </style>
+  </defs>
+  <path class="hat" d="M256 45 156 210h200L256 45Z" />
+  <path class="line" d="M256 45 156 210h200L256 45Z" />
+  <circle class="skin" cx="256" cy="245" r="82" />
+  <path class="line" d="M180 248c0 43 34 76 76 76s76-33 76-76" />
+  <path class="line" d="M222 236h1M289 236h1M218 283c20 16 56 16 76 0" />
+  <path class="coat" d="M182 340c22-37 54-56 74-56s52 19 74 56l-24 100H206l-24-100Z" />
+  <path class="line" d="M182 340c22-37 54-56 74-56s52 19 74 56l-24 100H206l-24-100Z" />
+  <path class="paper" d="M235 318h88v96h-88z" />
+  <path class="line" d="M235 318h88v96h-88zM250 346h52M250 374h44" />
+  <path class="accent" d="M214 351c-12 12-27 22-45 29l-18-33c16-6 28-15 38-27l25 31Z" />
+  <path class="accent" d="M298 351c12 12 27 22 45 29l18-33c-16-6-28-15-38-27l-25 31Z" />
+  <path class="line" d="M214 351c-12 12-27 22-45 29l-18-33c16-6 28-15 38-27M298 351c12 12 27 22 45 29l18-33c-16-6-28-15-38-27" />
+  <path class="boot" d="M204 440h52v28h-66c-8 0-12-9-7-15l21-13ZM308 440h-52v28h66c8 0 12-9 7-15l-21-13Z" />
+  <path class="line" d="M204 440h52v28h-66M308 440h-52v28h66" />
+</svg>

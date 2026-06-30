@@ -10,6 +10,7 @@ import {
   stageLabels,
 } from "../lib/profile";
 import { defaultProfile, type ImmediateGoal, type ImplementationStage, type InfrastructureContext, type OrganismFocus, type Profile, type UserRole } from "../types/profile";
+import { GnomeyCard } from "./GnomeyCard";
 import { ProfileSummary } from "./ProfileSummary";
 
 type Props = {
@@ -73,16 +74,11 @@ export function GnomeyWizard({ profile, onApply, onClose }: Props) {
     <div className="modal-backdrop" role="presentation">
       <section className="modal" role="dialog" aria-modal="true" aria-labelledby="wizard-title">
         <div className="modal-header">
-          <div className="gnomey-tile">
-            <img className="gnomey-image" src="/assets/gnomey.png" alt="" aria-hidden="true" />
-            <div>
-              <p className="eyebrow">Gnomey guidance wizard</p>
-              <h2 id="wizard-title">Tailor the guidance</h2>
-              <p className="muted">
-                A few choices decide which guidance blocks, technical details, and resources are most prominent.
-              </p>
-            </div>
-          </div>
+          <GnomeyCard state="thinking" eyebrow="Gnomey guidance wizard" title="Tailor the guidance" titleId="wizard-title">
+            <p className="muted">
+              A few choices decide which guidance blocks, technical details, and resources are most prominent.
+            </p>
+          </GnomeyCard>
           <button className="button icon-button" type="button" onClick={onClose} aria-label="Close wizard">
             <X size={18} />
           </button>

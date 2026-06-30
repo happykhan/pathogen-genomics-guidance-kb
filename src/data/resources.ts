@@ -386,7 +386,7 @@ export const resources: ResourceRecord[] = [
     whyUseful:
       "Priority source for the money/value argument, but estimates should be treated as U.S. food-safety specific until extracted carefully.",
     keywords: ["GenomeTrakr", "economic evaluation", "food safety", "WGS", "source tracking", "Salmonella", "Listeria", "E. coli"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "national-investment-case-2025",
@@ -406,7 +406,7 @@ export const resources: ResourceRecord[] = [
     whyUseful:
       "Directly relevant to building the leadership-facing case for investment and connecting benefits to system requirements.",
     keywords: ["investment case", "pathogen genomics", "surveillance", "cost benefit", "national programme"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "genomics-costing-tool-2024",
@@ -426,7 +426,7 @@ export const resources: ResourceRecord[] = [
     whyUseful:
       "Useful source for turning the guide's costing section into a practical planning tool.",
     keywords: ["costing tool", "WHO", "APHL", "UKHSA", "NGS", "bioinformatics", "budget"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "lancet-wgs-economic-strategies-2026",
@@ -456,7 +456,7 @@ export const resources: ResourceRecord[] = [
       "return on investment",
       "healthcare-associated infections",
     ],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "clinical-microbiology-implementation-2026",

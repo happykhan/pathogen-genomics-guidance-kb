@@ -8,15 +8,15 @@ const chapterGaps = [
   {
     title: "Economic and public-health value case",
     detail:
-      "The guide now has WHO costing categories and several economic sources, but still needs a review-style synthesis on benefits, limitations, cost-effectiveness, and return on investment across settings and organisms.",
+      "The guide now has a source-backed investment-case section and economic synthesis note. The remaining gap is comparative extraction of study methods and quantitative estimates before making numeric return-on-investment claims.",
     sourceNeed:
       "Economic evaluations, systematic reviews, national implementation reports, and organism-specific public-health outbreak case studies.",
   },
   {
     title: "Metadata and identifier model",
     detail:
-      "WHO platform guidance now supports metadata scope, but a concrete identifier lineage model is still needed for linking samples or isolates, sequencing runs, raw data, workflow runs, results, reports, and repository accessions.",
-    sourceNeed: "INSDC/NCBI, ENA, GISAID, GA4GH, APHL, UKHSA, or public-health metadata implementation guidance.",
+      "A draft source-backed lineage table now links samples or isolates, metadata, sequencing runs, raw data, QC, workflow runs, results, reports, sharing events, and retention. The remaining work is repository- and organism-specific field mapping.",
+    sourceNeed: "INSDC/NCBI, ENA, GISAID, GA4GH, APHL, UKHSA, or public-health metadata field implementation guidance.",
   },
   {
     title: "Repository and data-sharing decision pathway",
@@ -39,7 +39,7 @@ const chapterGaps = [
   {
     title: "Costing and recurrent service model",
     detail:
-      "WHO's costing tool provides a category model for many recurrent costs. The remaining gap is a setting-specific synthesis that links those costs to service models, staffing patterns, pathogen programmes, and value evidence.",
+      "WHO's costing tool and the new economic synthesis provide category and scenario framing. The remaining gap is a setting-specific quantitative model that links costs to service models, staffing patterns, pathogen programmes, and measured value evidence.",
     sourceNeed: "WHO costing tool, national implementation reports, procurement evidence, and economic evaluations.",
   },
   {

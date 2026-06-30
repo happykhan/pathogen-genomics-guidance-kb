@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { Download, ExternalLink, Search, Wand2 } from "lucide-react";
+import { GnomeyCard } from "./GnomeyCard";
 import { GnomeyWizard } from "./GnomeyWizard";
 import { resources } from "../data/resources";
 import { scoreResource } from "../lib/recommendations";
@@ -108,21 +109,23 @@ export function ResourceFinder() {
           </div>
           <aside className="panel resource-profile-panel">
             <div className="panel-body">
-              <div className="gnomey-tile compact">
-                <img className="gnomey-image" src="/assets/gnomey.png" alt="" aria-hidden="true" />
-                <div>
-                  <p className="eyebrow">Gnomey ranks these for</p>
-                  <h2 style={{ margin: "4px 0 8px", fontSize: "1.1rem" }}>Your current profile</h2>
-                  <p className="muted">
-                    {roleLabels[profile.role]} at {stageLabels[profile.stage].toLowerCase()} stage, focused on{" "}
-                    {profile.organisms.map((organism) => organismLabels[organism]).join(", ")}.
-                  </p>
+              <GnomeyCard
+                compact
+                state={wizardOpen ? "thinking" : "collapsed"}
+                eyebrow="Gnomey ranks these for"
+                title="Your current profile"
+                action={
                   <button className="button primary" type="button" onClick={() => setWizardOpen(true)}>
                     <Wand2 size={18} />
                     Change profile
                   </button>
-                </div>
-              </div>
+                }
+              >
+                <p className="muted">
+                  {roleLabels[profile.role]} at {stageLabels[profile.stage].toLowerCase()} stage, focused on{" "}
+                  {profile.organisms.map((organism) => organismLabels[organism]).join(", ")}.
+                </p>
+              </GnomeyCard>
             </div>
           </aside>
         </div>

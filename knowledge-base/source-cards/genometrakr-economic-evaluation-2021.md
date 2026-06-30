@@ -8,7 +8,7 @@
 
 ## Status
 
-`candidate extracted summary`
+`source-backed; extracted synthesis note available`
 
 ## Relevance
 
@@ -23,8 +23,10 @@ This is a priority source for the economic value case for pathogen genomics in f
 ## Current Use In App
 
 - `src/data/guidanceBlocks.ts`: `why-pathogen-genomics`
+- `src/data/guidanceBlocks.ts`: `investment-case-assumptions`
+- Synthesis note: `knowledge-base/extracted-notes/economic-value-and-costing-synthesis.md`
 
 ## Gaps
 
 - Needs full-text extraction before using exact quantitative estimates in the public-facing guide.
-- Needs careful framing because estimates are U.S. food-safety specific and may not generalise to other organisms or health systems.
+- Estimates should remain framed as U.S. food-safety specific unless compared with other settings.

@@ -25,6 +25,7 @@ Source-backed. Priority source for costing, recurrent-service planning, staff/tr
 ## Relevant Guide Sections
 
 - Cost the recurrent service, not only the initial purchase
+- Make the investment case with explicit assumptions
 - Treat infrastructure as an operating model
 - Separate active storage, backup, archive, and retention
 - Plan workforce and training as core infrastructure
@@ -33,3 +34,4 @@ Source-backed. Priority source for costing, recurrent-service planning, staff/tr
 ## Gaps
 
 - Current tool version is SARS-CoV-2 focused and does not fully solve multi-pathogen or mixed-platform costing. It still provides a strong source-backed category model.
+- Synthesis note: `knowledge-base/extracted-notes/economic-value-and-costing-synthesis.md`

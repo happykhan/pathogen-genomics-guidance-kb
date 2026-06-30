@@ -8,7 +8,7 @@
 
 ## Status
 
-`candidate extracted summary`
+`source-backed; extracted synthesis note available`
 
 ## Relevance
 
@@ -23,7 +23,9 @@ This review proposes a framework for developing national investment cases for pa
 ## Current Use In App
 
 - `src/data/guidanceBlocks.ts`: `why-pathogen-genomics`
+- `src/data/guidanceBlocks.ts`: `investment-case-assumptions`
+- Synthesis note: `knowledge-base/extracted-notes/economic-value-and-costing-synthesis.md`
 
 ## Gaps
 
-- Needs full extraction of the proposed framework, its steps, and any evidence categories before being converted into guidance or an interactive investment-case helper.
+- Needs full extraction of the proposed framework, its steps, and any evidence categories before being converted into an interactive investment-case helper.

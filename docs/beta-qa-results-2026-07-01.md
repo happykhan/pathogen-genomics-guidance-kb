@@ -15,10 +15,10 @@ Passed:
 
 Results:
 
-- 16 guidance blocks validated.
+- 17 guidance blocks validated.
 - 30 resource records validated.
 - 24 source registry entries validated.
-- 5 profile-constraint scenarios passed.
+- 5 profile-constraint scenarios and 5 representative reader profiles passed.
 - No tracked PDF/DOCX/XLSX/TIFF/EPS files were found.
 
 ## Static Route Smoke Checks
@@ -53,9 +53,10 @@ Generated local QA artifacts under ignored `tmp/qa/`:
 - `guidance-mobile.png`
 - `resources-desktop.png`
 - `gaps-desktop.png`
+- `wizard-desktop.png`
 - `guidance-print.pdf`
 
-The mobile guidance screenshot was checked for hero/card overflow after the previous mobile fix.
+The mobile guidance screenshot was checked for hero/card overflow after the previous mobile fix. The wizard screenshot confirms that Gnomey opens the modal and exposes the profile, organism, compute, goal, and constraint controls over the document.
 
 ## Print / PDF Export
 
@@ -63,7 +64,7 @@ Generated with headless Chrome:
 
 - `tmp/qa/guidance-print.pdf`
 - A4 page size.
-- 9 pages.
+- 11 pages.
 - Browser controls hidden by print CSS.
 
 ## Scenario QA
@@ -78,13 +79,16 @@ Automated scenario checks passed for:
 
 These checks verify that the constraints change guidance and resource ranking in the intended direction.
 
-## Pending Manual QA
+Representative profile checks also passed for:
 
-- Wizard modal screenshot and click-through review.
-- Full representative human review for director, laboratory lead, bioinformatician, IT/security, and mixed-team profiles.
+- director making the investment case;
+- laboratory lead piloting a service;
+- bioinformatician validating workflows;
+- IT/security reviewing data sharing and residency;
+- mixed team exploring infrastructure options.
 
-Reason: headless Chrome screenshot capture worked for static pages and print, but the local runtime did not have a WebSocket client available for DevTools modal interaction. Computer-use was also blocked by macOS Accessibility/Screen Recording permissions during this run.
+These checks verify that the expected source-backed guidance blocks appear in the top-ranked material for each representative profile.
 
 ## Outcome
 
-The automated and static beta gate passed. The remaining QA work is manual interaction review, not build or data integrity work.
+The automated and static beta gate passed. Remaining review work is editorial/user review of the guidance prose, not build, data integrity, or interaction gating.

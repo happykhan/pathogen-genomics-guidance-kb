@@ -713,6 +713,14 @@ select {
   height: 116px;
 }
 
+.gnomey-tile[data-state="thinking"] .gnomey-image {
+  transform: translateY(-1px);
+}
+
+.gnomey-tile[data-state="complete"] .gnomey-image {
+  filter: saturate(1.08);
+}
+
 .check-row {
   display: grid;
   grid-template-columns: 18px minmax(0, 1fr);
@@ -1228,6 +1236,17 @@ select {
 
   .gnomey-tile p:not(.eyebrow) {
     overflow-wrap: anywhere;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
 

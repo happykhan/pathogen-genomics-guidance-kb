@@ -133,6 +133,51 @@ export const guidanceBlocks: GuidanceBlock[] = [
     sourceIds: ["who-national-genomic-surveillance-strategy-2023", "cdc-nejm-2019", "phe-case-study"],
   },
   {
+    id: "investment-case-assumptions",
+    title: "Make the investment case with explicit assumptions",
+    summary:
+      "The financial case for pathogen genomics should explain the service model, expected public-health benefit, recurrent costs, and limits of the evidence.",
+    sourceStatus: "partial",
+    body: [
+      "The economic case for pathogen genomics should be made as a setting-specific service case. It should state which decisions will change, which pathogen or programme is in scope, how quickly results must arrive, and what response capacity exists once a signal is detected.",
+      "The PHE case study supports a service-transition argument: WGS can replace or consolidate older processes and shift work toward analysis and interpretation, but only after capital planning, validation, accreditation, LIMS integration, training, reporting changes, and user engagement. GenomeTrakr supports a stronger quantitative value case for U.S. food-safety source tracking, but that evidence should not be generalized without checking pathogen, sampling, outbreak cost, and response-system assumptions.",
+      "Egli and Howden frame a useful strategic choice: continuous surveillance costs more in routine operation but may detect clusters earlier, while outbreak-triggered sequencing lowers routine expenditure but can miss cryptic transmission or delay control. Selective surveillance can be a middle path, but only if the criteria for which isolates are sequenced are explicit.",
+      "WHO's costing manual provides the current best planning categories: throughput, sequencing platform, reagents and consumables, equipment, personnel and training, facilities and transport, bioinformatics, and quality management. For bioinformatics, the costing model should include cloud, in-house server, or hybrid arrangements; software licensing; storage; hardware; and maintenance fees.",
+      "A credible investment case should therefore present scenarios rather than a single universal cost-per-sample or return-on-investment claim. Compare a small pilot, a routine single-pathogen service, a multi-pathogen national service, and a managed or shared-platform model. For each scenario, state what is counted, what is excluded, what benefits are expected, and what evidence is still uncertain.",
+    ],
+    bodySourceIds: {
+      0: ["national-investment-case-2025", "who-national-genomic-surveillance-strategy-2023"],
+      1: ["phe-case-study", "genometrakr-economic-2021"],
+      2: ["lancet-wgs-economic-strategies-2026"],
+      3: ["who-genomics-costing-tool-manual-2024", "wgs-costing-tool-2024"],
+      4: [
+        "national-investment-case-2025",
+        "who-genomics-costing-tool-manual-2024",
+        "lancet-wgs-economic-strategies-2026",
+      ],
+    },
+    technicalDetail: [
+      "Minimum scenario fields: pathogen or programme, use case, sampling strategy, annual throughput, turnaround target, sequencing model, bioinformatics model, storage/retention model, staff roles, quality-management scope, data-sharing route, expected benefit, excluded costs, and evidence confidence.",
+    ],
+    audiences: ["director", "policy", "funder", "lab-lead"],
+    implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
+    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
+    topics: ["costing", "strategy", "public-health", "decision-use", "sustainability", "value"],
+    detailLevel: "summary",
+    sourceIds: [
+      "phe-case-study",
+      "genometrakr-economic-2021",
+      "national-investment-case-2025",
+      "lancet-wgs-economic-strategies-2026",
+      "who-genomics-costing-tool-manual-2024",
+      "wgs-costing-tool-2024",
+      "who-national-genomic-surveillance-strategy-2023",
+    ],
+    gaps: [
+      "A comparative extraction of economic evaluation methods and quantitative estimates is still needed before the guide makes numeric return-on-investment claims.",
+    ],
+  },
+  {
     id: "infrastructure-operating-model",
     title: "Treat infrastructure as an operating model",
     summary:

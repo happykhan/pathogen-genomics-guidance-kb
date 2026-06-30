@@ -6,7 +6,7 @@
 
 ## Status
 
-`candidate source`
+`candidate source; synthesis note available`
 
 ## Relevance
 
@@ -21,6 +21,8 @@ This source category is needed for claims about financial value, cost-effectiven
 ## Current Use In App
 
 - `src/data/guidanceBlocks.ts`: `why-pathogen-genomics`
+- `src/data/guidanceBlocks.ts`: `investment-case-assumptions`
+- Synthesis note: `knowledge-base/extracted-notes/economic-value-and-costing-synthesis.md`
 
 ## Gaps
 

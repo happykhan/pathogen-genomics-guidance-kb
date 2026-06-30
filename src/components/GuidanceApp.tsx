@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { FileDown, RotateCcw, Share2, Wand2 } from "lucide-react";
+import { GnomeyCard } from "./GnomeyCard";
 import { GnomeyWizard } from "./GnomeyWizard";
 import { GuidanceRenderer } from "./GuidanceRenderer";
 import { ProfileSummary } from "./ProfileSummary";
@@ -66,21 +67,22 @@ export function GuidanceApp() {
           </div>
           <aside className="panel">
             <div className="panel-body">
-              <div className="gnomey-tile">
-                <img className="gnomey-image" src="/assets/gnomey.png" alt="" aria-hidden="true" />
-                <div>
-                  <p className="eyebrow">Gnomey says</p>
-                  <p>
-                    Tell me who is reading, what you are building, and where the constraints are. I will tailor the document by
-                    role, programme stage, organism focus, and compute context, then bring the relevant sections forward. The
-                    visible guidance can be printed or shared as a profile-specific link.
-                  </p>
+              <GnomeyCard
+                eyebrow="Gnomey says"
+                state={wizardOpen ? "thinking" : copied ? "complete" : "expanded"}
+                action={
                   <button className="button primary" type="button" onClick={() => setWizardOpen(true)}>
                     <Wand2 size={18} />
                     Tailor guidance
                   </button>
-                </div>
-              </div>
+                }
+              >
+                <p>
+                  Tell me who is reading, what you are building, and where the constraints are. I will tailor the document by
+                  role, programme stage, organism focus, and compute context, then bring the relevant sections forward. The
+                  visible guidance can be printed or shared as a profile-specific link.
+                </p>
+              </GnomeyCard>
             </div>
           </aside>
         </section>

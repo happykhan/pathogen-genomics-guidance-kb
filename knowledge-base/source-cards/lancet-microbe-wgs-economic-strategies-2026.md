@@ -7,7 +7,7 @@
 
 ## Status
 
-`candidate source; full text available locally; extracted at high level`
+`source-backed; full text available locally; extracted synthesis note available`
 
 ## Relevance
 
@@ -33,6 +33,8 @@ This Personal View directly addresses the economic strategy question for pathoge
 ## Current Use In App
 
 - `src/data/guidanceBlocks.ts`: cited in the `Why pathogen genomics?` economic case subsection.
+- `src/data/guidanceBlocks.ts`: cited in `investment-case-assumptions`.
+- Synthesis note: `knowledge-base/extracted-notes/economic-value-and-costing-synthesis.md`
 
 ## Gaps
 
