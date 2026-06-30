@@ -1,0 +1,879 @@
+# PubMed Discovery Report
+
+Generated: 2026-06-30T17:33:57.675Z
+
+Search scope: 2018+; max 20 records per query.
+
+## Summary
+
+- Total unique records: 72
+- Priority review: 16
+- Screen: 28
+
+## Priority Review
+
+### Global Genomic Surveillance: On-The-Ground Responses.
+
+- PMID: [40982124](https://pubmed.ncbi.nlm.nih.gov/40982124/)
+- Year / journal: 2026 / Current topics in microbiology and immunology
+- Authors: Alcantara LCJ, de Filippis AMB, Giovanetti M
+- DOI: 10.1007/82_2025_287
+- Recommendation: `priority-review` (score 22)
+- Matched searches: Why genomics: public-health value, benefits, and limitations; National implementation, readiness, and capability building; Bioinformatics, data systems, workflows, and infrastructure
+- Theme hits: value case: impact, decision, preparedness, response; implementation: implementation, capacity, national; data/bioinformatics infrastructure: infrastructure, data integration, sequencing capacity; limits/equity/constraints: challenge, barrier, disparit
+
+Genomic surveillance has emerged as a fundamental tool in the global response to dengue virus (DENV), enabling the rapid detection of viral strains, monitoring of transmission dynamics, and assessment of evolutionary changes that may impact disease control strategies. This chapter examines the critical role of genomic surveillance in addressing the ongoing dengue crisis, highlighting its contributions to outbreak detection, strain characterization, and vaccine efficacy assessments. We provide a comparative analysis of regional approaches to genomic surveillance, emphasizing disparities in infrastructure, sequencing capacity, and data-sharing frameworks across different epidemiological settings. Despite its transformative potential, the implementation of genomic surveillance faces significant challenges, including logistical constraints, limited sequencing accessibility in resource-limited settings, and issues related to data integration and public health decision-making. We discuss these barriers and propose strategies to enhance genomic surveillance efforts, such as strengthening international collaborations, fostering capacity-building initiatives, and integrating real-time sequencing technologies with epidemiological and ecological modeling. Finally, we explore future directions in genomic surveillance, advocating for a more coordinated and sustainable approach to genomic data generation and utilization, ultimately improving global preparedness and response to dengue and other emerging arboviruses.
+
+### Genomic-informed pathogen surveillance in Africa: opportunities and challenges.
+
+- PMID: [33587898](https://pubmed.ncbi.nlm.nih.gov/33587898/)
+- Year / journal: 2021 / The Lancet. Infectious diseases
+- Authors: Inzaule SC, Tessema SK, Kebede Y, Ogwell Ouma AE, Nkengasong JN
+- DOI: 10.1016/S1473-3099(20)30939-7
+- Recommendation: `priority-review` (score 18)
+- Matched searches: Why genomics: public-health value, benefits, and limitations; Foodborne pathogen genomics and microbial food safety; National implementation, readiness, and capability building; Bioinformatics, data systems, workflows, and infrastructure
+- Theme hits: value case: benefit, preparedness; foodborne: foodborne; implementation: capacity, programme; data/bioinformatics infrastructure: data sharing; limits/equity/constraints: challenge
+
+The ongoing COVID-19 pandemic has highlighted the need to incorporate pathogen genomics for enhanced disease surveillance and outbreak management in Africa. The genomics of SARS-CoV-2 has been instrumental to the timely development of diagnostics and vaccines and in elucidating transmission dynamics. Global disease control programmes, including those for tuberculosis, malaria, HIV, foodborne pathogens, and antimicrobial resistance, also recommend genomics-based surveillance as an integral strategy towards control and elimination of these diseases. Despite the potential benefits, capacity remains low for many public health programmes in Africa. The COVID-19 pandemic presents an opportunity to reassess and strengthen surveillance systems and potentially integrate emerging technologies for preparedness of future epidemics and control of endemic diseases. We discuss opportunities and challenges for integrating pathogen genomics into public health surveillance systems in Africa. Improving accessibility through the creation of functional continent-wide networks, building multipathogen sequencing cores, training a critical mass of local experts, development of standards and policies to facilitate best practices for data sharing, and establishing a community of practice of genomics experts are all needed to use genomics for improved disease surveillance in Africa. Coordination and leadership are also crucial, which the Africa Centres for Disease Control and Prevention seeks to provide through its institute for pathogen genomics.
+
+### Genomics for public health and international surveillance of antimicrobial resistance.
+
+- PMID: [37977162](https://pubmed.ncbi.nlm.nih.gov/37977162/)
+- Year / journal: 2023 / The Lancet. Microbe
+- Authors: Baker KS, Jauneikaite E, Hopkins KL, Lo SW, S&#xe1;nchez-Bus&#xf3; L, Getino M et al.
+- DOI: 10.1016/S2666-5247(23)00283-5
+- Recommendation: `priority-review` (score 17)
+- Matched searches: Why genomics: public-health value, benefits, and limitations; National implementation, readiness, and capability building; Bioinformatics, data systems, workflows, and infrastructure
+- Theme hits: implementation: implementation, capacity, national; data/bioinformatics infrastructure: data sharing; limits/equity/constraints: barrier
+
+Historically, epidemiological investigation and surveillance for bacterial antimicrobial resistance (AMR) has relied on low-resolution isolate-based phenotypic analyses undertaken at local and national reference laboratories. Genomic sequencing has the potential to provide a far more high-resolution picture of AMR evolution and transmission, and is already beginning to revolutionise how public health surveillance networks monitor and tackle bacterial AMR. However, the routine integration of genomics in surveillance pipelines still has considerable barriers to overcome. In 2022, a workshop series and online consultation brought together international experts in AMR and pathogen genomics to assess the status of genomic applications for AMR surveillance in a range of settings. Here we focus on discussions around the use of genomics for public health and international AMR surveillance, noting the potential advantages of, and barriers to, implementation, and proposing recommendations from the working group to help to drive the adoption of genomics in public health AMR surveillance. These recommendations include the need to build capacity for genome sequencing and analysis, harmonising and standardising surveillance systems, developing equitable data sharing and governance frameworks, and strengthening interactions and relationships among stakeholders at multiple levels.
+
+### Challenges and Opportunities for Global Genomic Surveillance Strategies in the COVID-19 Era.
+
+- PMID: [36423141](https://pubmed.ncbi.nlm.nih.gov/36423141/)
+- Year / journal: 2022 / Viruses
+- Authors: Ling-Hu T, Rios-Guzman E, Lorenzo-Redondo R, Ozer EA, Hultquist JF
+- DOI: 10.3390/v14112532
+- Recommendation: `priority-review` (score 16)
+- Matched searches: Why genomics: public-health value, benefits, and limitations; National implementation, readiness, and capability building; Bioinformatics, data systems, workflows, and infrastructure
+- Theme hits: value case: impact, preparedness, response; implementation: implementation; data/bioinformatics infrastructure: metadata; limits/equity/constraints: limitation, challenge
+
+Global SARS-CoV-2 genomic surveillance efforts have provided critical data on the ongoing evolution of the virus to inform best practices in clinical care and public health throughout the pandemic. Impactful genomic surveillance strategies generally follow a multi-disciplinary pipeline involving clinical sample collection, viral genotyping, metadata linkage, data reporting, and public health responses. Unfortunately, current limitations in each of these steps have compromised the overall effectiveness of these strategies. Biases from convenience-based sampling methods can obfuscate the true distribution of circulating variants. The lack of standardization in genotyping strategies and bioinformatic expertise can create bottlenecks in data processing and complicate interpretation. Limitations and inconsistencies in clinical and demographic data collection and sharing can slow the compilation and limit the utility of comprehensive datasets. This likewise can complicate data reporting, restricting the availability of timely data. Finally, gaps and delays in the implementation of genomic surveillance data in the public health sphere can prevent officials from formulating effective mitigation strategies to prevent outbreaks. In this review, we outline current SARS-CoV-2 global genomic surveillance methods and assess roadblocks at each step of the pipeline to identify potential solutions. Evaluating the current obstacles that impede effective surveillance can improve both global coordination efforts and pandemic preparedness for future outbreaks.
+
+### Genomics for antimicrobial resistance-progress and future directions.
+
+- PMID: [40227048](https://pubmed.ncbi.nlm.nih.gov/40227048/)
+- Year / journal: 2025 / Antimicrobial agents and chemotherapy
+- Authors: Sherry NL, Lee JYH, Giulieri SG, Connor CH, Horan K, Lacey JA et al.
+- DOI: 10.1128/aac.01082-24
+- Recommendation: `priority-review` (score 15)
+- Matched searches: Why genomics: public-health value, benefits, and limitations; National implementation, readiness, and capability building; Bioinformatics, data systems, workflows, and infrastructure
+- Theme hits: value case: impact; implementation: implementation, national; data/bioinformatics infrastructure: workflow, data sharing; limits/equity/constraints: barrier
+
+Antimicrobial resistance (AMR) is a critical global public health threat, with bacterial pathogens of primary concern. Pathogen genomics has revolutionized the study of bacterial pathogens and provided deep insights into the mechanisms and dissemination of AMR, with the precision of whole-genome sequencing informing better control strategies. However, generating actionable data from genomic surveillance and diagnostic efforts requires integration at the public health and clinical interface that goes beyond academic efforts to identify resistance mechanisms, undertake post hoc analyses of outbreaks, and share data after research publications. In addition to timely genomics data, consideration also needs to be given to epidemiological sampling frames, analysis, and reporting mechanisms that meet International Organization for Standardization (ISO) standards and generation of reports that are interpretable and actionable for public health and clinical "end-users." Importantly, ensuring all countries have equitable access to data and technology is critical, through timely data sharing following the FAIR principles (findable, accessible, interoperable, and re-usable). In this review, we describe (i) advances in genomic approaches for AMR research and surveillance to understand emergence, evolution, and transmission of AMR and the key requirements to enable this work and (ii) discuss emerging and future applications of genomics at the clinical and public health interface, including barriers to implementation. Harnessing advances in genomics-enhanced AMR research and embedding robust and reproducible workflows within clinical and public health practice promises to maximize the impact of pathogen genomics for AMR globally in the coming decade.
+
+### National investment case development for pathogen genomics.
+
+- PMID: [40020687](https://pubmed.ncbi.nlm.nih.gov/40020687/)
+- Year / journal: 2025 / Cell genomics
+- Authors: Khoo YK, Wulandari S, Getchell M, Moe L, Kumar SS, Liu EJ et al.
+- DOI: 10.1016/j.xgen.2025.100781
+- Recommendation: `priority-review` (score 15)
+- Matched searches: Investment, costing, economics, and return on investment; National implementation, readiness, and capability building
+- Theme hits: value case: benefit; economic/costing: cost, investment; implementation: capacity, national
+
+Sustaining and expanding genomic surveillance capacity requires broader investment in genomics that target both novel and pandemic pathogens. Currently, there is no standardized methodology to evaluate the cost and benefit of a multi-pathogen surveillance system. We propose a framework for pathogen genomic surveillance that links public health and systems considerations to a stepwise approach.
+
+### Precision public health in the era of genomics and big data.
+
+- PMID: [38992127](https://pubmed.ncbi.nlm.nih.gov/38992127/)
+- Year / journal: 2024 / Nature medicine
+- Authors: Roberts MC, Holt KE, Del Fiol G, Baccarelli AA, Allen CG
+- DOI: 10.1038/s41591-024-03098-0
+- Recommendation: `priority-review` (score 14)
+- Matched searches: Why genomics: public-health value, benefits, and limitations; National implementation, readiness, and capability building
+- Theme hits: implementation: implementation, capacity; limits/equity/constraints: challenge, equity
+
+Precision public health (PPH) considers the interplay between genetics, lifestyle and the environment to improve disease prevention, diagnosis and treatment on a population level-thereby delivering the right interventions to the right populations at the right time. In this Review, we explore the concept of PPH as the next generation of public health. We discuss the historical context of using individual-level data in public health interventions and examine recent advancements in how data from human and pathogen genomics and social, behavioral and environmental research, as well as artificial intelligence, have transformed public health. Real-world examples of PPH are discussed, emphasizing how these approaches are becoming a mainstay in public health, as well as outstanding challenges in their development, implementation and sustainability. Data sciences, ethical, legal and social implications research, capacity building, equity research and implementation science will have a crucial role in realizing the potential for 'precision' to enhance traditional public health approaches.
+
+### The rise of pathogen genomics in Africa.
+
+- PMID: [39464779](https://pubmed.ncbi.nlm.nih.gov/39464779/)
+- Year / journal: 2024 / F1000Research
+- Authors: Mboowa G, Kakooza F, Egesa M, Tukwasibwe S, Kanyerezi S, Sserwadda I et al.
+- DOI: 10.12688/f1000research.147114.2
+- Recommendation: `priority-review` (score 14)
+- Matched searches: Investment, costing, economics, and return on investment; National implementation, readiness, and capability building; Bioinformatics, data systems, workflows, and infrastructure
+- Theme hits: economic/costing: investment; implementation: capacity; data/bioinformatics infrastructure: data sharing, infrastructure; limits/equity/constraints: challenge
+
+The routine genomic surveillance of pathogens in diverse geographical settings and equitable data sharing are critical to inform effective infection control and therapeutic development. The coronavirus disease 2019 (COVID-19) pandemic highlighted the importance of routine genomic surveillance of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) to detect emerging variants of concern. However, the majority of high-income countries sequenced >0.5% of their COVID-19 cases, unlike low- and middle-income countries. By the end of 2022, many countries around the world had managed to establish capacity for pathogen genomic surveillance. Notably, Beta and Omicron; 2 of the 5 current SARS-CoV-2 variants of concern were first discovered in Africa through an aggressive sequencing campaign led by African scientists. To sustain such infrastructure and expertise beyond this pandemic, other endemic pathogens should leverage this investment. Therefore, countries are establishing multi-pathogen genomic surveillance strategies. Here we provide a catalog of the current landscape of sequenced and publicly shared pathogens in different countries in Africa. Drawing upon our collective knowledge and expertise, we review the ever-evolving challenges and propose innovative recommendations.
+
+### Toward a global virus genomic surveillance network.
+
+- PMID: [36921604](https://pubmed.ncbi.nlm.nih.gov/36921604/)
+- Year / journal: 2023 / Cell host & microbe
+- Authors: Hill V, Githinji G, Vogels CBF, Bento AI, Chaguza C, Carrington CVF et al.
+- DOI: 10.1016/j.chom.2023.03.003
+- Recommendation: `priority-review` (score 14)
+- Matched searches: Investment, costing, economics, and return on investment; National implementation, readiness, and capability building; Bioinformatics, data systems, workflows, and infrastructure
+- Theme hits: economic/costing: cost, cost-effectiveness; implementation: readiness; data/bioinformatics infrastructure: infrastructure; limits/equity/constraints: challenge
+
+The COVID-19 pandemic galvanized the field of virus genomic surveillance, demonstrating its utility for public health. Now, we must harness the momentum that led to increased infrastructure, training, and political will to build a sustainable global genomic surveillance network for other epidemic and endemic viruses. We suggest a generalizable modular sequencing framework wherein users can easily switch between virus targets to maximize cost-effectiveness and maintain readiness for new threats. We also highlight challenges associated with genomic surveillance and when global inequalities persist. We propose solutions to mitigate some of these issues, including training and multilateral partnerships. Exploring alternatives to clinical sequencing can also reduce the cost of surveillance programs. Finally, we discuss how establishing genomic surveillance would aid control programs and potentially provide a warning system for outbreaks, using a global respiratory virus (RSV), an arbovirus (dengue virus), and a regional zoonotic virus (Lassa virus) as examples.
+
+### Integrating whole-genome sequencing into antimicrobial resistance surveillance: methodologies, challenges, and perspectives.
+
+- PMID: [40910632](https://pubmed.ncbi.nlm.nih.gov/40910632/)
+- Year / journal: 2025 / Clinical microbiology reviews
+- Authors: Matsumura Y, Yamamoto M, Gomi R, Tsuchido Y, Shinohara K, Noguchi T et al.
+- DOI: 10.1128/cmr.00140-22
+- Recommendation: `priority-review` (score 13)
+- Matched searches: Why genomics: public-health value, benefits, and limitations; Bioinformatics, data systems, workflows, and infrastructure
+- Theme hits: value case: decision; data/bioinformatics infrastructure: bioinformatics, workflow, data sharing; limits/equity/constraints: limitation, challenge
+
+Antimicrobial resistance (AMR) poses a significant threat to global public health. Surveillance is a fundamental method for controlling AMR and guiding clinical decisions, public health interventions, and policymaking. Whole-genome sequencing (WGS) provides a comprehensive and accurate understanding of AMR mechanisms, gene profiling, and transmission dynamics. Public health authorities, academic scholars, hospitals, and laboratories have increasingly employed WGS-based surveillance for retrospective, real-time, and prospective monitoring of AMR and investigations of outbreaks. WGS-based surveillance has improved the accuracy and effectiveness of disease and AMR surveillance by identifying hidden transmissions and sources missed by conventional methods and by rapidly investigating and deploying infection control interventions. However, WGS analysis involves a complex combination of workflows of next-generation sequencing and bioinformatics data analysis, making it difficult to effectively compare surveillance results. It is crucial to understand the limitations of our existing WGS analyses by implementing rigorous validation practices across different WGS analyses, developing practice guidelines, and establishing appropriate quality assurance measures. These efforts will aid in the development of reliable and robust WGS systems, the harmonization and standardization of surveillance programs, and the development of public data sharing and governance frameworks. Despite these challenges, the expansion of WGS-based AMR surveillance is expected to be driven by technological advances, standardization efforts, and the recognition of its advantages among stakeholders. The integration of genomic data with nongenomic information, as well as interdisciplinary collaborations will further enhance knowledge regarding AMR and promote the development of countermeasures.
+
+### Advancing pathogen genomics in resource-limited settings.
+
+- PMID: [38116115](https://pubmed.ncbi.nlm.nih.gov/38116115/)
+- Year / journal: 2023 / Cell genomics
+- Authors: Pronyk PM, de Alwis R, Rockett R, Basile K, Boucher YF, Pang V et al.
+- DOI: 10.1016/j.xgen.2023.100443
+- Recommendation: `priority-review` (score 13)
+- Matched searches: Why genomics: public-health value, benefits, and limitations; Investment, costing, economics, and return on investment
+- Theme hits: value case: value, impact, decision; economic/costing: cost; implementation: national, laboratory
+
+Genomic sequencing has emerged as a powerful tool to enhance early pathogen detection and characterization with implications for public health and clinical decision making. Although widely available in developed countries, the application of pathogen genomics among low-resource, high-disease burden settings remains at an early stage. In these contexts, tailored approaches for integrating pathogen genomics within infectious disease control programs will be essential to optimize cost efficiency and public health impact. We propose a framework for embedding pathogen genomics within national surveillance plans across a spectrum of surveillance and laboratory capacities. We adopt a public health approach to genomics and examine its application to high-priority diseases relevant in resource-limited settings. For each grouping, we assess the value proposition for genomics to inform public health and clinical decision-making, alongside its contribution toward research and development of novel diagnostics, therapeutics, and vaccines.
+
+### Foodborne pathogens in the omics era.
+
+- PMID: [33783282](https://pubmed.ncbi.nlm.nih.gov/33783282/)
+- Year / journal: 2022 / Critical reviews in food science and nutrition
+- Authors: Vieira KCO, Silva HRAD, Rocha IPM, Barboza E, Eller LKW
+- DOI: 10.1080/10408398.2021.1905603
+- Recommendation: `priority-review` (score 13)
+- Matched searches: Foodborne pathogen genomics and microbial food safety
+- Theme hits: economic/costing: cost; foodborne: foodborne, food safety, salmonella, listeria, escherichia coli
+
+Outbreaks and deaths related to Foodborne Diseases (FBD) occur constantly in the world, as a result of the consumption of contaminated foodstuffs with pathogens such as Listeria monocytogenes, Escherichia coli, Staphylococcus aureus, Salmonella spp, Clostridium spp. and Campylobacter spp. The purpose of this review is to discuss the main omic techniques applied in foodborne pathogen and to demonstrate their functionalities through the food chain and to guarantee the food safety. The main techniques presented are genomic, transcriptomic, secretomic, proteomic, and metabolomic, which together, in the field of food and nutrition, are known as "Foodomics." This review had highlighted the potential of omics to integrate variables that contribute to food safety and to enable us to understand their application on foodborne diseases. The appropriate use of these techniques had driven the definition of critical parameters to achieve successful results in the improvement of consumers health, costs and to obtain safe and high-quality products.
+
+### Phylogenomic Pipeline Validation for Foodborne Pathogen Disease Surveillance.
+
+- PMID: [30728194](https://pubmed.ncbi.nlm.nih.gov/30728194/)
+- Year / journal: 2019 / Journal of clinical microbiology
+- Authors: Timme RE, Strain E, Baugher JD, Davis S, Gonzalez-Escalona N, Sanchez Leon M et al.
+- DOI: 10.1128/JCM.01816-18
+- Recommendation: `priority-review` (score 13)
+- Matched searches: Foodborne pathogen genomics and microbial food safety
+- Theme hits: value case: decision, response; foodborne: foodborne; implementation: national; data/bioinformatics infrastructure: workflow
+
+Foodborne pathogen surveillance in the United States is transitioning from strain identification using restriction digest technology (pulsed-field gel electrophoresis [PFGE]) to shotgun sequencing of the entire genome (whole-genome sequencing [WGS]). WGS requires a new suite of analysis tools, some of which have long histories in academia but are new to the field of public health and regulatory decision making. Although the general workflow is fairly standard for collecting and analyzing WGS data for disease surveillance, there are a number of differences in how the data are collected and analyzed across public health agencies, both nationally and internationally. This impedes collaborative public health efforts, so national and international efforts are underway to enable direct comparison of these different analysis methods. Ultimately, the harmonization efforts will allow the (mutually trusted and understood) production and analysis of WGS data by labs and agencies worldwide, thus improving outbreak response capabilities globally. This review provides a historical perspective on the use of WGS for pathogen tracking and summarizes the efforts underway to ensure the major steps in phylogenomic pipelines used for pathogen disease surveillance can be readily validated. The tools for doing this will ensure that the results produced are sound, reproducible, and comparable across different analytic approaches.
+
+### Innovations in genomic antimicrobial resistance surveillance.
+
+- PMID: [37977163](https://pubmed.ncbi.nlm.nih.gov/37977163/)
+- Year / journal: 2023 / The Lancet. Microbe
+- Authors: Wheeler NE, Price V, Cunningham-Oakes E, Tsang KK, Nunn JG, Midega JT et al.
+- DOI: 10.1016/S2666-5247(23)00285-9
+- Recommendation: `priority-review` (score 12)
+- Matched searches: Investment, costing, economics, and return on investment; National implementation, readiness, and capability building
+- Theme hits: economic/costing: cost, investment; implementation: implementation, capacity; data/bioinformatics infrastructure: data sharing
+
+Whole-genome sequencing of antimicrobial-resistant pathogens is increasingly being used for antimicrobial resistance (AMR) surveillance, particularly in high-income countries. Innovations in genome sequencing and analysis technologies promise to revolutionise AMR surveillance and epidemiology; however, routine adoption of these technologies is challenging, particularly in low-income and middle-income countries. As part of a wider series of workshops and online consultations, a group of experts in AMR pathogen genomics and computational tool development conducted a situational analysis, identifying the following under-used innovations in genomic AMR surveillance: clinical metagenomics, environmental metagenomics, gene or plasmid tracking, and machine learning. The group recommended developing cost-effective use cases for each approach and mapping data outputs to clinical outcomes of interest to justify additional investment in capacity, training, and staff required to implement these technologies. Harmonisation and standardisation of methods, and the creation of equitable data sharing and governance frameworks, will facilitate successful implementation of these innovations.
+
+### Evolutionary Traits and Genomic Surveillance of SARS-CoV-2 in South America.
+
+- PMID: [35655960](https://pubmed.ncbi.nlm.nih.gov/35655960/)
+- Year / journal: 2022 / Global health, epidemiology and genomics
+- Authors: Ortiz-Pineda PA, Sierra-Torres CH
+- DOI: 10.1155/2022/8551576
+- Recommendation: `priority-review` (score 12)
+- Matched searches: Investment, costing, economics, and return on investment; Bioinformatics, data systems, workflows, and infrastructure
+- Theme hits: value case: impact, decision; economic/costing: cost, economic; data/bioinformatics infrastructure: data sharing
+
+Since the zoonotic event from which SARS-CoV-2 started infecting humans late in 2019, the virus has caused more than 5 million deaths and has infected over 500 million people around the world. The pandemic has had a severe impact on social and economic activities, with greater repercussions in low-income countries. South America, with almost 5% of the world's population, has reckoned with almost a fifth of the total people infected and more than 26% (>1/4) of the deceased. Fortunately, the full genome structure and sequence of SARS-CoV-2 have been rapidly obtained and studied thanks to all the scientific efforts and data sharing around the world. Such molecular analysis of SARS-CoV-2 dynamics showed that rates of mutation, similar to other members of the Coronaviridae family, along with natural selection forces, could result in the emergence of new variants; few of them might be of high consequence. However, this is a serious threat to controlling the pandemic and, of course, enduring the process of returning to normalization with the implicit monetary cost of such a contingency. The lack of updated knowledge in South America justifies the need to develop a structured genomic surveillance program of current and emerging SARS-CoV-2 variants. The modeling of the molecular events and microevolution of the virus will contribute to making better decisions on public health management of the pandemic and developing accurate treatments and more efficient vaccines.
+
+### Genomics of foodborne pathogens for microbial food safety.
+
+- PMID: [29169072](https://pubmed.ncbi.nlm.nih.gov/29169072/)
+- Year / journal: 2018 / Current opinion in biotechnology
+- Authors: Allard MW, Bell R, Ferreira CM, Gonzalez-Escalona N, Hoffmann M, Muruvanda T et al.
+- DOI: 10.1016/j.copbio.2017.11.002
+- Recommendation: `priority-review` (score 12)
+- Matched searches: Foodborne pathogen genomics and microbial food safety
+- Theme hits: foodborne: foodborne, food safety, salmonella, listeria, escherichia coli
+
+Whole genome sequencing (WGS) has been broadly used to provide detailed characterization of foodborne pathogens. These genomes for diverse species including Salmonella, Escherichia coli, Listeria, Campylobacter and Vibrio have provided great insight into the genetic make-up of these pathogens. Numerous government agencies, industry and academia have developed new applications in food safety using WGS approaches such as outbreak detection and characterization, source tracking, determining the root cause of a contamination event, profiling of virulence and pathogenicity attributes, antimicrobial resistance monitoring, quality assurance for microbiology testing, as well as many others. The future looks bright for additional applications that come with the new technologies and tools in genomics and metagenomics.
+
+### Real-Time Genomic Surveillance for Enhanced Healthcare Outbreak Detection and Control: Clinical and Economic Impact.
+
+- PMID: [40302215](https://pubmed.ncbi.nlm.nih.gov/40302215/)
+- Year / journal: 2026 / Clinical infectious diseases : an official publication of the Infectious Diseases Society of America
+- Authors: Sundermann AJ, Kumar P, Griffith MP, Waggle KD, Rangachar Srinivasa V, Raabe N et al.
+- DOI: 10.1093/cid/ciaf216
+- Recommendation: `screen` (score 11)
+- Matched searches: Investment, costing, economics, and return on investment
+- Theme hits: value case: benefit, impact; economic/costing: cost, economic, investment, return on investment
+
+BACKGROUND: Current methods are insufficient alone for outbreak detection in hospitals. Real-time genomic surveillance offers the potential to detect otherwise unidentified outbreaks. We initiated and evaluated the Enhanced Detection System for Healthcare-associated Transmission (EDS-HAT), a real-time genomic surveillance program for outbreak detection and mitigation. METHODS: This study was conducted at UPMC Presbyterian Hospital from November 2021 to October 2023. Whole genome sequencing (WGS) was performed weekly on healthcare-associated clinical bacterial isolates to identify otherwise undetected outbreaks. IP&C interventions were implemented in real-time based on identified transmission. A clinical and economic impact analysis was conducted to estimate infections avoided and net cost savings. RESULTS: There were 3921 bacterial isolates from patient healthcare-associated infections that underwent WGS, of which 476 (12.1%) clustered into 172 outbreaks (size 2-16 patients). Of the outbreak isolates, 292 (61.3%) had an identified epidemiological link. Among the outbreaks with interventions, 95.6% showed no further transmission on the intervened transmission route. The impact analysis estimated that, over the 2-year period, 62 infections and 4.8 deaths were avoided, with gross cost savings of $1,011,146, and net savings of $695,706, which translates to a 3.2-fold return on investment. Probabilistic sensitivity analysis showed EDS-HAT was cost saving and more effective in 98% of simulations. CONCLUSIONS: Real-time genomic surveillance enabled the rapid detection and control of outbreaks in our hospital and resulted in patient and economic benefits. This study demonstrates the feasibility and effectiveness of integrating genomic surveillance into routine infection prevention practice, offering a paradigm shift in healthcare outbreak detection and control.
+
+### Boosting pathogen genomics and bioinformatics workforce in Africa.
+
+- PMID: [37778362](https://pubmed.ncbi.nlm.nih.gov/37778362/)
+- Year / journal: 2024 / The Lancet. Infectious diseases
+- Authors: Onywera H, Ondoa P, Nfii F, Ogwell A, Kebede Y, Christoffels A et al.
+- DOI: 10.1016/S1473-3099(23)00394-8
+- Recommendation: `screen` (score 11)
+- Matched searches: Why genomics: public-health value, benefits, and limitations; Bioinformatics, data systems, workflows, and infrastructure
+- Theme hits: value case: value; data/bioinformatics infrastructure: bioinformatics, infrastructure; limits/equity/constraints: workforce
+
+Next-generation sequencing (NGS) of genomic data has established its fundamental value in public health surveillance, research and development, and precision medicine. In Africa, severe shortages of competent experts in genomics and bioinformatics, few opportunities for research, and inadequate genomic infrastructure have had a knock-on effect on the use of NGS technologies for research and public health practice. Several reasons-ranging from poor funding, inadequate infrastructure for training and practice, to brain drain-might partly account for the scarcity of genomics and bioinformatics expertise in the region. In recognition of these shortcomings and the importance of NGS genomic data, which was amplified during the COVID-19 pandemic in mid-2021, the Africa Centres for Disease Control and Prevention (Africa CDC) through the Africa Pathogen Genomics Initiative began building and expanding Africa's workforce in pathogen surveillance. By the end of 2022, the Africa CDC in collaboration with its partners and centres of excellence had trained 413 personnel, mostly from public health institutions, in 53 (96%) of 55 African Union Member States. Although this training has increased genomics, bioinformatics, and genomic epidemiology literacy, and genomic-informed pathogen surveillance, there is still a need for a strategic and sustainable public health workforce development in Africa.
+
+### Exploiting genomics to mitigate the public health impact of antimicrobial resistance.
+
+- PMID: [35172877](https://pubmed.ncbi.nlm.nih.gov/35172877/)
+- Year / journal: 2022 / Genome medicine
+- Authors: Waddington C, Carey ME, Boinett CJ, Higginson E, Veeraraghavan B, Baker S
+- DOI: 10.1186/s13073-022-01020-2
+- Recommendation: `screen` (score 11)
+- Matched searches: Why genomics: public-health value, benefits, and limitations
+- Theme hits: value case: impact; implementation: national; limits/equity/constraints: challenge
+
+Antimicrobial resistance (AMR) is a major global public health threat, which has been largely driven by the excessive use of antimicrobials. Control measures are urgently needed to slow the trajectory of AMR but are hampered by an incomplete understanding of the interplay between pathogens, AMR encoding genes, and mobile genetic elements at a microbial level. These factors, combined with the human, animal, and environmental interactions that underlie AMR dissemination at a population level, make for a highly complex landscape. Whole-genome sequencing (WGS) and, more recently, metagenomic analyses have greatly enhanced our understanding of these processes, and these approaches are informing mitigation strategies for how we better understand and control AMR. This review explores how WGS techniques have advanced global, national, and local AMR surveillance, and how this improved understanding is being applied to inform solutions, such as novel diagnostic methods that allow antimicrobial use to be optimised and vaccination strategies for better controlling AMR. We highlight some future opportunities for AMR control informed by genomic sequencing, along with the remaining challenges that must be overcome to fully realise the potential of WGS approaches for international AMR control.
+
+### Global disparities in SARS-CoV-2 genomic surveillance.
+
+- PMID: [36385137](https://pubmed.ncbi.nlm.nih.gov/36385137/)
+- Year / journal: 2022 / Nature communications
+- Authors: Brito AF, Semenova E, Dudas G, Hassler GW, Kalinich CC, Kraemer MUG et al.
+- DOI: 10.1038/s41467-022-33713-y
+- Recommendation: `screen` (score 11)
+- Matched searches: Why genomics: public-health value, benefits, and limitations; National implementation, readiness, and capability building
+- Theme hits: value case: impact, preparedness, response; economic/costing: economic; implementation: capacity; data/bioinformatics infrastructure: sequencing capacity; limits/equity/constraints: disparit
+
+Genomic sequencing is essential to track the evolution and spread of SARS-CoV-2, optimize molecular tests, treatments, vaccines, and guide public health responses. To investigate the global SARS-CoV-2 genomic surveillance, we used sequences shared via GISAID to estimate the impact of sequencing intensity and turnaround times on variant detection in 189 countries. In the first two years of the pandemic, 78% of high-income countries sequenced >0.5% of their COVID-19 cases, while 42% of low- and middle-income countries reached that mark. Around 25% of the genomes from high income countries were submitted within 21 days, a pattern observed in 5% of the genomes from low- and middle-income countries. We found that sequencing around 0.5% of the cases, with a turnaround time <21 days, could provide a benchmark for SARS-CoV-2 genomic surveillance. Socioeconomic inequalities undermine the global pandemic preparedness, and efforts must be made to support low- and middle-income countries improve their local sequencing capacity.
+
+### The COVID-19 Pandemic: Public Health Responses in Sub-Saharan Africa.
+
+- PMID: [35457314](https://pubmed.ncbi.nlm.nih.gov/35457314/)
+- Year / journal: 2022 / International journal of environmental research and public health
+- Authors: Murewanhema G, Dzinamarira T
+- DOI: 10.3390/ijerph19084448
+- Recommendation: `screen` (score 11)
+- Matched searches: National implementation, readiness, and capability building
+- Theme hits: value case: response; economic/costing: economic; implementation: capacity, national, laboratory; limits/equity/constraints: challenge
+
+The World Health Organisation declared the ongoing COVID-19 global health challenge a pandemic in March 2020. Since then, countries across the globe have implemented different public health control strategies-including global vaccination programs-in attempts to mitigate the further transmission of severe acute respiratory syndrome coronavirus 2. However, to date, the virus has continued to spread rapidly despite these interventions. Countries across sub-Saharan Africa have implemented variable control strategies to combat the pandemic; however, despite the continent being among the least affected in terms of direct case burden, morbidity, and mortality, it has experienced marked socioeconomic disruption. Therefore, economic resuscitation is an urgent priority. The continent is vastly underrepresented in the body of scientific evidence due to limited research resources, testing capacity and genomic surveillance leading to empirical responses or responses guided by evidence from elsewhere. To inform the ongoing pandemic, and to prepare for the future, this Special Issue calls for manuscripts on global COVID-19 responses, and encourages researchers and stakeholders from resource-limited settings, particularly from sub-Saharan Africa, to share their COVID-19 public health responses. Areas to be covered include, but are not limited to, surveillance, case management, infection prevention and control, risk communication and community engagement, logistics, laboratory, ports of entry, and co-ordination. Manuscripts including primary research, viewpoints/perspectives, and comprehensive literature reviews are all welcome.
+
+### Genetics and microbiology of meat.
+
+- PMID: [29735357](https://pubmed.ncbi.nlm.nih.gov/29735357/)
+- Year / journal: 2018 / Meat science
+- Authors: Weinroth MD, Britton BC, Belk KE
+- DOI: 10.1016/j.meatsci.2018.04.017
+- Recommendation: `screen` (score 11)
+- Matched searches: Foodborne pathogen genomics and microbial food safety; Bioinformatics, data systems, workflows, and infrastructure
+- Theme hits: value case: impact; foodborne: foodborne, food safety; data/bioinformatics infrastructure: bioinformatics
+
+Detection, reduction, and public health monitoring of foodborne pathogens has advanced in precision and efficiency as technology has progressed. Here, we look back on the evolution of food safety management and public health, and attempt to provide a view of how the technology and tools have changed, and how emerging technologies and tools may impact how we manage food safety and public health in the future. With the revolution of gene editing techniques (e.g. CRISPR-Cas9, etc.), Next Generation Sequencing (NGS) and "omics"-based technologies, along with the bioinformatics tools that go with them, we now have a very new array of tools that can impact foodborne disease management. In addition to overall improvement in food safety, these tools have helped understand antibiotic resistance and virulence factors in meat to a higher degree than ever before. These technological advancements will allow food safety to move beyond strain-level characterization and control of pathogens to pinpointing genes of public health concern.
+
+### Molecular Detection of Salmonella.
+
+- PMID: [41161594](https://pubmed.ncbi.nlm.nih.gov/41161594/)
+- Year / journal: 2025 / Journal of food protection
+- Authors: Fu H, Xu W, Huang M, Cong Y
+- DOI: 10.1016/j.jfp.2025.100659
+- Recommendation: `screen` (score 10)
+- Matched searches: Investment, costing, economics, and return on investment
+- Theme hits: economic/costing: cost; foodborne: foodborne, salmonella; limits/equity/constraints: limitation, challenge
+
+The genus Salmonella consists of a group of globally significant foodborne pathogens that pose substantial public health risks. Traditional detection methods are inadequate for rapid diagnosis and effective epidemic surveillance due to limitations such as time-consuming procedures and insufficient sensitivity. In recent years, the development of molecular techniques has driven innovations in Salmonella detection. Nucleic acid-based detection methods including polymerase chain reaction (PCR), real-time fluorescent quantitative PCR (qPCR), whole genome sequencing (WGS) and more emerge as crucial approaches for Salmonella detection due to their high sensitivity, specificity, and rapidity. Our review systematically summarized technological advancements in molecular detection of Salmonella, including specific genetic targets and drug resistance genes used for molecular detection, typing technologies, and emerging techniques such as CRISPR-Cas systems and microfluidic chips. This review comprehensively covers a wide array of molecular detection and characterization technologies, including conventional PCR, qPCR, multiplex PCR, digital PCR (dPCR), isothermal amplification techniques (such as loop-mediated isothermal amplification, recombinase polymerase amplification), genotyping methods (including pulsed-field gel electrophoresis, multilocus sequence typing, etc.), WGS, melting curve analysis (MCA), and other emerging technologies. The review also discusses the balance between sensitivity and specificity in complex samples, challenges regarding the cost and accessibility of advanced technologies, as well as prospects for future development directions including portable point-of-care testing devices, automated detection equipment. Ongoing optimization of molecular detection technologies will provide critical support for the prevention and control of Salmonella infections.
+
+### Streamlining whole genome sequencing for clinical diagnostics with ONT technology.
+
+- PMID: [39979452](https://pubmed.ncbi.nlm.nih.gov/39979452/)
+- Year / journal: 2025 / Scientific reports
+- Authors: Wu HC, Chiu YT, Wu IC, Liou CH, Cheng HW, Kuo SC et al.
+- DOI: 10.1038/s41598-025-90127-8
+- Recommendation: `screen` (score 10)
+- Matched searches: Investment, costing, economics, and return on investment
+- Theme hits: value case: response; economic/costing: cost; foodborne: salmonella; implementation: implementation; data/bioinformatics infrastructure: bioinformatics, workflow; limits/equity/constraints: limitation, challenge
+
+Recent advances in whole-genome sequencing (WGS) have increased the accessibility of this tool, offering substantial potential for pathogen surveillance, outbreak response, and diagnostics. However, the routine clinical adoption of WGS is hindered by factors such as high costs, technical complexity, and the requirement for bioinformatics expertise for data analysis. To address these challenges, we propose RapidONT, a workflow designed for cost-effective and accessible WGS-based pathogen analysis. RapidONT employs a mechanical shearing-based DNA extraction protocol, followed by library construction by using a multiplexing Oxford nanopore technologies (ONT) rapid barcoding kit. Flye software is used for de novo assembly without manual intervention, followed by basic assembly polishing using Medaka and Homopolish. The polished assemblies are then analyzed using the user-friendly web-based platform Pathogenwatch, which facilitates species identification, molecular typing, and antimicrobial resistance (AMR) prediction, all while requiring minimal bioinformatics expertise. The efficacy of RapidONT was evaluated using nine clinically relevant pathogens, encompassing a total of 90 gram-positive and gram-negative bacterial strains. The workflow demonstrated high accuracy in critical tasks such as multilocus sequence typing (MLST) and AMR identification, using only ONT R9.4.1 flowcell data. Notably, limitations were observed with Salmonella spp. and Neisseria gonorrhoeae. Furthermore, RapidONT enabled the generation of genomic information for 48 bacterial isolates by using a single flow cell, significantly reducing sequencing costs. This approach eliminates the need for extensive experimentation in obtaining crucial genomic information. This workflow facilitates broader WGS implementation in clinical pathogen analysis and diagnostics.
+
+### Diagnosis and management of invasive fungal diseases by next-generation sequencing: are we there yet?
+
+- PMID: [39623670](https://pubmed.ncbi.nlm.nih.gov/39623670/)
+- Year / journal: 2024 / Expert review of molecular diagnostics
+- Authors: Babady NE, Chiu CY, Craney A, Gaston DC, Hicklen RS, Hogan CA et al.
+- DOI: 10.1080/14737159.2024.2436396
+- Recommendation: `screen` (score 10)
+- Matched searches: Investment, costing, economics, and return on investment
+- Theme hits: value case: decision; economic/costing: cost; implementation: implementation; limits/equity/constraints: limitation, challenge
+
+INTRODUCTION: Invasive fungal diseases (IFDs) are a serious threat to immunocompromised patients. Routine diagnostic methods have limited performance in identifying IFDs. Next-generation sequencing (NGS), including metagenomic NGS (mNGS) and whole-genome sequencing (WGS), recently emerged as diagnostic methods that could provide more accurate and timely diagnoses and management of IFDs. AREAS COVERED: This article describes the emergence of NGS as a diagnostic tool to address the limitations of current tests. The literature regarding its application and clinical utility in the diagnosis of IFDs is reviewed. Practical considerations, challenges, and opportunities as they relate to the development and implementation of mNGS and WGS for fungal pathogens are discussed. EXPERT OPINION: NGS emerged over a decade ago with the potential to solve many of the challenges in diagnosing infectious diseases, including IFDs. However, published literature has yielded conflicting data about its clinical utility. The increased clinical adoption of NGS is improving our understanding of how to interpret and use its results to guide actionable decisions. Still, several gaps remain. As the cost, effort, and expertise involved in performing NGS decrease and the reporting of its results becomes standardized, NGS is poised to fill current gaps in the diagnosis of IFDs.
+
+### Genomic perspectives on foodborne illness.
+
+- PMID: [39499629](https://pubmed.ncbi.nlm.nih.gov/39499629/)
+- Year / journal: 2024 / Proceedings of the National Academy of Sciences of the United States of America
+- Authors: Lipman DJ, Cherry JL, Strain E, Agarwala R, Musser SM
+- DOI: 10.1073/pnas.2411894121
+- Recommendation: `screen` (score 10)
+- Matched searches: Foodborne pathogen genomics and microbial food safety
+- Theme hits: foodborne: foodborne, salmonella, listeria, escherichia coli; implementation: national
+
+Whole-genome sequencing of bacterial pathogens is used by public health agencies to link cases of food poisoning caused by the same source of contamination. The vast majority of these appear to be sporadic cases associated with small contamination episodes and do not trigger investigations. A "contamination episode" refers to one or more contamination events from a single source over a period of time. We examine clusters of sequenced clinical isolates of Salmonella, Escherichia coli, Campylobacter, and Listeria that differ by only a small number of mutations (SNPs) to identify features of the underlying contamination episodes. These analyses provide additional evidence that the youngest age groups have greater susceptibility to infection by Salmonella, E. coli, and Campylobacter than older age groups. This age bias is weaker for the common Salmonella serovar Enteritidis than Salmonella in general. A large fraction of the contamination episodes causing sickness appear to have a long duration. For example, 50% of the Salmonella cases are in clusters that persist for almost 3 y. For all four pathogen species, the majority of the cases were part of genetic clusters with illnesses in multiple states and likely to be caused by contaminated commercially distributed foods. Salmonella infections in infants under 3 mo are predominantly acquired from the same contaminated food, pet food, or environmental sources as older individuals, rather than infant formula contaminated during production.
+
+### Metagenomics Approaches for Improving Food Safety: A Review.
+
+- PMID: [34706052](https://pubmed.ncbi.nlm.nih.gov/34706052/)
+- Year / journal: 2022 / Journal of food protection
+- Authors: Billington C, Kingsbury JM, Rivas L
+- DOI: 10.4315/JFP-21-301
+- Recommendation: `screen` (score 10)
+- Matched searches: Foodborne pathogen genomics and microbial food safety
+- Theme hits: economic/costing: cost; foodborne: foodborne, food safety; implementation: laboratory; limits/equity/constraints: limitation
+
+ABSTRACT: Advancements in next-generation sequencing technology have dramatically reduced the cost and increased the ease of microbial whole genome sequencing. This approach is revolutionizing the identification and analysis of foodborne microbial pathogens, facilitating expedited detection and mitigation of foodborne outbreaks, improving public health outcomes, and limiting costly recalls. However, next-generation sequencing is still anchored in the traditional laboratory practice of the selection and culture of a single isolate. Metagenomic-based approaches, including metabarcoding and shotgun and long-read metagenomics, are part of the next disruptive revolution in food safety diagnostics and offer the potential to directly identify entire microbial communities in a single food, ingredient, or environmental sample. In this review, metagenomic-based approaches are introduced and placed within the context of conventional detection and diagnostic techniques, and essential considerations for undertaking metagenomic assays and data analysis are described. Recent applications of the use of metagenomics for food safety are discussed alongside current limitations and knowledge gaps and new opportunities arising from the use of this technology.
+
+### Whole genome sequencing of Mycobacterium tuberculosis: current standards and open issues.
+
+- PMID: [31209399](https://pubmed.ncbi.nlm.nih.gov/31209399/)
+- Year / journal: 2019 / Nature reviews. Microbiology
+- Authors: Meehan CJ, Goig GA, Kohl TA, Verboven L, Dippenaar A, Ezewudo M et al.
+- DOI: 10.1038/s41579-019-0214-5
+- Recommendation: `screen` (score 10)
+- Matched searches: Investment, costing, economics, and return on investment; Bioinformatics, data systems, workflows, and infrastructure
+- Theme hits: economic/costing: cost; implementation: national; data/bioinformatics infrastructure: bioinformatics
+
+Whole genome sequencing (WGS) of Mycobacterium tuberculosis has rapidly progressed from a research tool to a clinical application for the diagnosis and management of tuberculosis and in public health surveillance. This development has been facilitated by drastic drops in cost, advances in technology and concerted efforts to translate sequencing data into actionable information. There is, however, a risk that, in the absence of a consensus and international standards, the widespread use of WGS technology may result in data and processes that lack harmonization, comparability and validation. In this Review, we outline the current landscape of WGS pipelines and applications, and set out best practices for M. tuberculosis WGS, including standards for bioinformatics pipelines, curated repositories of resistance-causing variants, phylogenetic analyses, quality control and standardized reporting.
+
+### Whole Genome Sequencing: Bridging One-Health Surveillance of Foodborne Diseases.
+
+- PMID: [31316960](https://pubmed.ncbi.nlm.nih.gov/31316960/)
+- Year / journal: 2019 / Frontiers in public health
+- Authors: Gerner-Smidt P, Besser J, Concepci&#xf3;n-Acevedo J, Folster JP, Huffman J, Joseph LA et al.
+- DOI: 10.3389/fpubh.2019.00172
+- Recommendation: `screen` (score 10)
+- Matched searches: Foodborne pathogen genomics and microbial food safety
+- Theme hits: foodborne: foodborne; limits/equity/constraints: challenge
+
+Infections caused by pathogens commonly acquired from consumption of food are not always transmitted by that route. They may also be transmitted through contact to animals, other humans or the environment. Additionally, many outbreaks are associated with food contaminated from these non-food sources. For this reason, such presumed foodborne outbreaks are best investigated through a One Health approach working across human, animal and environmental sectors and disciplines. Outbreak strains or clones that have propagated and continue to evolve in non-human sources and environments often show more sequence variation than observed in typical monoclonal point-source outbreaks. This represents a challenge when using whole genome sequencing (WGS), the new gold standard for molecular surveillance of foodborne pathogens, for outbreak detection and investigation. In this review, using recent examples from outbreaks investigated in the United States (US) some aspects of One Health approaches that have been used successfully to solve such outbreaks are presented. These include using different combinations of flexible WGS based case definition, efficient epidemiological follow-up, traceback, surveillance, and testing of potential food and environmental sources and animal hosts.
+
+### Diagnostic Techniques for Dengue Virus.
+
+- PMID: [40495084](https://pubmed.ncbi.nlm.nih.gov/40495084/)
+- Year / journal: 2026 / Current topics in microbiology and immunology
+- Authors: Gularte JS, Strottmann DM, Spilki FR, Zanluca C
+- DOI: 10.1007/82_2025_307
+- Recommendation: `screen` (score 9)
+- Matched searches: Bioinformatics, data systems, workflows, and infrastructure
+- Theme hits: implementation: laboratory; data/bioinformatics infrastructure: infrastructure; limits/equity/constraints: limitation, challenge
+
+Dengue is a mosquito-borne viral disease that poses a global public health problem, particularly in tropical and subtropical regions. It is caused by the dengue virus (DENV), which comprises four antigenically distinct serotypes. The clinical manifestations of the disease overlap with those of other febrile diseases, including other arboviruses such as Zika and chikungunya, making clinical and epidemiological diagnosis difficult. Therefore, an accurate laboratory diagnosis is essential for effective clinical management, especially during the early stages of the disease, to prevent progression to severe forms.Over the years, significant advancements have been achieved in dengue diagnostics. This chapter provides a comprehensive overview of current diagnostic techniques, detailing their principles, applications, and limitations. It covers a range of methodologies, including virus isolation, nucleic acid amplification tests (NAATs), nonstructural protein 1 (NS1) antigen detection assays, immunohistochemistry, serological tests for IgM and IgG antibodies, and lateral flow point-of-care tests. Additionally, novel approaches such as multiplex platforms, next-generation sequencing (NGS), and biosensor-based tests are explored for their potential to address existing challenges and improve diagnostic accuracy.The choice of diagnostic strategy largely depends on the time course of infection and the available methodologies, resources, infrastructure, and technical expertise. Furthermore, the high degree of cross-reactivity between flaviviruses makes diagnosis by serological assays difficult, particularly in regions where multiple flaviviruses co-circulate. Dengue vaccination is also expected to influence the results of serological assays, requiring adjustments to algorithms and careful interpretation of results. By tailoring diagnostic approaches to local capabilities and accounting for the effects of vaccination, dengue diagnosis, and disease management can be improved.
+
+### Genomic perspectives on foodborne illness.
+
+- PMID: [38903069](https://pubmed.ncbi.nlm.nih.gov/38903069/)
+- Year / journal: 2024 / medRxiv : the preprint server for health sciences
+- Authors: Lipman DJ, Cherry JL, Strain E, Agarwala R, Musser SM
+- DOI: 10.1101/2024.05.16.24307425
+- Recommendation: `screen` (score 9)
+- Matched searches: Foodborne pathogen genomics and microbial food safety
+- Theme hits: foodborne: foodborne, salmonella, listeria, escherichia coli
+
+Whole-genome sequencing of bacterial pathogens is used by public health agencies to link cases of food poisoning caused by the same source of contamination. The vast majority of these appear to be sporadic cases associated with small contamination episodes and do not trigger investigations. We analyzed clusters of sequenced clinical isolates of Salmonella, Escherichia coli, Campylobacter, and Listeria that differ by only a small number of mutations to provide a new understanding of the underlying contamination episodes. These analyses provide new evidence that the youngest age groups have greater susceptibility to infection from Salmonella, Escherichia coli, and Campylobacter than older age groups. This age bias is weaker for the common Salmonella serovar Enteritidis than Salmonella in general. Analysis of these clusters reveals significant regional variations in relative frequencies of Salmonella serovars across the United States. A large fraction of the contamination episodes causing sickness appear to have long duration. For example, 50% of the Salmonella cases are in clusters that persist for almost three years. For all four pathogen species, the majority of the cases were part of genetic clusters with illnesses in multiple states and likely to be caused by contaminated commercially distributed foods. The vast majority of Salmonella cases among infants < 6 months of age appear to be caused by cross-contamination from foods consumed by older age groups or by environmental bacteria rather than infant formula contaminated at production sites.
+
+### Exploiting genomics for antimicrobial resistance surveillance at One Health interfaces.
+
+- PMID: [37977165](https://pubmed.ncbi.nlm.nih.gov/37977165/)
+- Year / journal: 2023 / The Lancet. Microbe
+- Authors: Muloi DM, Jauneikaite E, Anjum MF, Essack SY, Singleton DA, Kasudi MR et al.
+- DOI: 10.1016/S2666-5247(23)00284-7
+- Recommendation: `screen` (score 9)
+- Matched searches: National implementation, readiness, and capability building
+- Theme hits: implementation: implementation, national; limits/equity/constraints: challenge, barrier
+
+The intersection of human, animal, and ecosystem health at One Health interfaces is recognised as being of key importance in the evolution and spread of antimicrobial resistance (AMR) and represents an important, and yet rarely realised opportunity to undertake vital AMR surveillance. A working group of international experts in pathogen genomics, AMR, and One Health convened to take part in a workshop series and online consultation focused on the opportunities and challenges facing genomic AMR surveillance in a range of settings. Here we outline the working group's discussion of the potential utility, advantages of, and barriers to, the implementation of genomic AMR surveillance at One Health interfaces and propose a series of recommendations for addressing these challenges. Embedding AMR surveillance at One Health interfaces will require the development of clear beneficial use cases, especially in low-income and middle-income countries. Evidence of directionality, risks to human and animal health, and potential trade implications were also identified by the working group as key issues. Addressing these challenges will be vital to enable genomic surveillance technology to reach its full potential for assessing the risk of transmission of AMR between the environment, animals, and humans at One Health interfaces.
+
+### Proficiency testing for SARS-CoV-2 whole genome sequencing.
+
+- PMID: [35778290](https://pubmed.ncbi.nlm.nih.gov/35778290/)
+- Year / journal: 2022 / Pathology
+- Authors: Lau KA, Horan K, Gon&#xe7;alves da Silva A, Kaufer A, Theis T, Ballard SA et al.
+- DOI: 10.1016/j.pathol.2022.04.002
+- Recommendation: `screen` (score 9)
+- Matched searches: Why genomics: public-health value, benefits, and limitations; Bioinformatics, data systems, workflows, and infrastructure
+- Theme hits: implementation: implementation, capacity, capability, laboratory; data/bioinformatics infrastructure: bioinformatics
+
+Extensive studies and analyses into the molecular features of severe acute respiratory syndrome related coronavirus 2 (SARS-CoV-2) have enhanced the surveillance and investigation of its clusters and transmission worldwide. The whole genome sequencing (WGS) approach is crucial in identifying the source of infection and transmission routes by monitoring the emergence of variants over time and through communities. Varying SARS-CoV-2 genomics capacity and capability levels have been established in public health laboratories across different Australian states and territories. Therefore, laboratories performing SARS-CoV-2 WGS for public health purposes are recommended to participate in an external proficiency testing program (PTP). This study describes the development of a SARS-CoV-2 WGS PTP. The PTP assessed the performance of laboratories while providing valuable insight into the current state of SARS-CoV-2 genomics in public health across Australia. Part 1 of the PTP contained eight simulated SARS-CoV-2 positive and negative specimens to assess laboratories' wet and dry laboratory capacity. Part 2 involved the analysis of a genomic dataset that consisted of a multi-FASTA file of 70 consensus genomes of SARS-CoV-2. Participating laboratories were required to (1) submit raw data for independent bioinformatics analysis, (2) analyse the data with their processes, and (3) answer relevant questions about the data. The performance of the laboratories was commendable, despite some variation in the reported results due to the different sequencing and bioinformatics approaches used by laboratories. The overall outcome is positive and demonstrates the critical role of the PTP in supporting the implementation and validation of SARS-CoV-2 WGS processes. The data derived from this PTP will contribute to the development of SARS-CoV-2 bioinformatic quality control (QC) and performance benchmarking for accreditation.
+
+### Mycobacterium tuberculosis Next-Generation Whole Genome Sequencing: Opportunities and Challenges.
+
+- PMID: [30631597](https://pubmed.ncbi.nlm.nih.gov/30631597/)
+- Year / journal: 2018 / Tuberculosis research and treatment
+- Authors: Iketleng T, Lessells R, Dlamini MT, Mogashoa T, Mupfumi L, Moyo S et al.
+- DOI: 10.1155/2018/1298542
+- Recommendation: `screen` (score 9)
+- Matched searches: Why genomics: public-health value, benefits, and limitations
+- Theme hits: value case: value, impact; implementation: implementation; limits/equity/constraints: challenge
+
+Mycobacterium tuberculosis drug resistance is a threat to global tuberculosis (TB) control. Comprehensive and timely drug susceptibility determination is critical to inform appropriate treatment of drug-resistant tuberculosis (DR-TB). Phenotypic drug susceptibility testing (DST) is the gold standard for M. tuberculosis drug resistance determination. M. tuberculosis whole genome sequencing (WGS) has the potential to be a one-stop method for both comprehensive DST and epidemiological investigations. We discuss in this review the tremendous opportunities that next-generation WGS presents in terms of understanding the molecular epidemiology of tuberculosis and mechanisms of drug resistance. The potential clinical value and public health impact in the areas of DST for patient management and tracing of transmission chains for timely public health intervention are also discussed. We present the current challenges for the implementation of WGS in low and middle-income settings. WGS analysis has already been adapted routinely in laboratories to inform patient management and public health interventions in low burden high-income settings such as the United Kingdom. We predict that the technology will be adapted similarly in high burden settings where the impact on the epidemic will be greatest.
+
+### Use of whole genome sequencing in surveillance of drug resistant tuberculosis.
+
+- PMID: [29718745](https://pubmed.ncbi.nlm.nih.gov/29718745/)
+- Year / journal: 2018 / Expert review of anti-infective therapy
+- Authors: McNerney R, Zignol M, Clark TG
+- DOI: 10.1080/14787210.2018.1472577
+- Recommendation: `screen` (score 9)
+- Matched searches: Investment, costing, economics, and return on investment
+- Theme hits: economic/costing: cost; implementation: capacity; data/bioinformatics infrastructure: bioinformatics; limits/equity/constraints: challenge
+
+The threat of resistance to anti-tuberculosis drugs is of global concern. Current efforts to monitor resistance rely on phenotypic testing where cultured bacteria are exposed to critical concentrations of the drugs. Capacity for such testing is low in TB endemic countries. Drug resistance is caused by mutations in the Mycobacterium tuberculosis genome and whole genome sequencing to detect these mutations offers an alternative means of assessing resistance. Areas covered: The challenges of assessing TB drug resistance are discussed. Progress in elucidating the M. tuberculosis resistome and evidence of the accuracy of next generation sequencing for detecting resistance is reviewed. Expert Commentary: There are considerable advantages to using next generation sequencing for TB drug resistance surveillance. Accuracy is high for detecting resistance to the major first-line drugs but is currently lower for the second-line drugs due to our incomplete knowledge regarding resistance causing mutations. With the advances in sequencing technology and the opportunity to replace phenotypic drug susceptibility testing with safer and more cost effective methods it would appear that the question is when to implement. Current bottlenecks are sample extraction to allow whole genome sequencing directly from sputum and the lack of bioinformatics expertise in some TB endemic countries.
+
+### GenomeTrakr proficiency testing for foodborne pathogen surveillance: an exercise from 2015.
+
+- PMID: [29906258](https://pubmed.ncbi.nlm.nih.gov/29906258/)
+- Year / journal: 2018 / Microbial genomics
+- Authors: Timme RE, Rand H, Sanchez Leon M, Hoffmann M, Strain E, Allard M et al.
+- DOI: 10.1099/mgen.0.000185
+- Recommendation: `screen` (score 9)
+- Matched searches: Foodborne pathogen genomics and microbial food safety
+- Theme hits: value case: decision; foodborne: foodborne, food safety, genometrakr
+
+Pathogen monitoring is becoming more precise as sequencing technologies become more affordable and accessible worldwide. This transition is especially apparent in the field of food safety, which has demonstrated how whole-genome sequencing (WGS) can be used on a global scale to protect public health. GenomeTrakr coordinates the WGS performed by public-health agencies and other partners by providing a public database with real-time cluster analysis for foodborne pathogen surveillance. Because WGS is being used to support enforcement decisions, it is essential to have confidence in the quality of the data being used and the downstream data analyses that guide these decisions. Routine proficiency tests, such as the one described here, have an important role in ensuring the validity of both data and procedures. In 2015, the GenomeTrakr proficiency test distributed eight isolates of common foodborne pathogens to participating laboratories, who were required to follow a specific protocol for performing WGS. Resulting sequence data were evaluated for several metrics, including proper labelling, sequence quality and new single nucleotide polymorphisms (SNPs). Illumina MiSeq sequence data collected for the same set of strains across 21 different laboratories exhibited high reproducibility, while revealing a narrow range of technical and biological variance. The numbers of SNPs reported for sequencing runs of the same isolates across multiple laboratories support the robustness of our cluster analysis pipeline in that each individual isolate cultured and resequenced multiple times in multiple places are all easily identifiable as originating from the same source.
+
+### Whole Genome Sequencing: Applications in Clinical Bacteriology.
+
+- PMID: [38402870](https://pubmed.ncbi.nlm.nih.gov/38402870/)
+- Year / journal: 2024 / Medical principles and practice : international journal of the Kuwait University, Health Science Centre
+- Authors: Mustafa AS
+- DOI: 10.1159/000538002
+- Recommendation: `screen` (score 8)
+- Matched searches: Investment, costing, economics, and return on investment
+- Theme hits: economic/costing: cost; implementation: national; data/bioinformatics infrastructure: bioinformatics
+
+The success in determining the whole genome sequence of a bacterial pathogen was first achieved in 1995 by determining the complete nucleotide sequence of Haemophilus influenzae Rd using the chain-termination method established by Sanger et al. in 1977 and automated by Hood et al. in 1987. However, this technology was laborious, costly, and time-consuming. Since 2004, high-throughput next-generation sequencing technologies have been developed, which are highly efficient, require less time, and are cost-effective for whole genome sequencing (WGS) of all organisms, including bacterial pathogens. In recent years, the data obtained using WGS technologies coupled with bioinformatics analyses of the sequenced genomes have been projected to revolutionize clinical bacteriology. WGS technologies have been used in the identification of bacterial species, strains, and genotypes from cultured organisms and directly from clinical specimens. WGS has also helped in determining resistance to antibiotics by the detection of antimicrobial resistance genes and point mutations. Furthermore, WGS data have helped in the epidemiological tracking and surveillance of pathogenic bacteria in healthcare settings as well as in communities. This review focuses on the applications of WGS in clinical bacteriology.
+
+### Overcoming colonialism in pathogen genomics.
+
+- PMID: [38906617](https://pubmed.ncbi.nlm.nih.gov/38906617/)
+- Year / journal: 2024 / The Lancet. Digital health
+- Authors: Saha S, Hooda Y, Malavige GN, Nisar MI
+- DOI: 10.1016/S2589-7500(24)00091-8
+- Recommendation: `screen` (score 8)
+- Matched searches: National implementation, readiness, and capability building
+- Theme hits: value case: value; implementation: capacity; limits/equity/constraints: challenge
+
+Historical legacies of colonialism affect the distribution and control of scientific knowledge today, including within the pathogen genomics field, which remains dominated by high-income countries (HICs). We discuss the imperatives for decolonising pathogen genomics, including the need for more equitable representation, collaboration, and capacity-strengthening, and the shared responsibilities that both low-income and middle-income countries (LMICs) and HICs have in this endeavour. By highlighting examples from LMICs, we illuminate the pathways and challenges that researchers in LMICs face in the bid to gain autonomy in this crucial domain. Recognising the inherent value of local expertise and resources, we argue for a more inclusive, globally collaborative approach to pathogen genomics. Such an approach not only fosters scientific growth and innovation, but also strengthens global health security by equipping all nations with the tools needed to respond to health crises.
+
+### An overview of next generation sequencing strategies and genomics tools used for tuberculosis research.
+
+- PMID: [39003248](https://pubmed.ncbi.nlm.nih.gov/39003248/)
+- Year / journal: 2024 / Journal of applied microbiology
+- Authors: Deb S, Basu J, Choudhary M
+- DOI: 10.1093/jambio/lxae174
+- Recommendation: `screen` (score 8)
+- Matched searches: Bioinformatics, data systems, workflows, and infrastructure
+- Theme hits: value case: benefit; data/bioinformatics infrastructure: bioinformatics; limits/equity/constraints: limitation
+
+Tuberculosis (TB) is a grave public health concern and is considered the foremost contributor to human mortality resulting from infectious disease. Due to the stringent clonality and extremely restricted genomic diversity, conventional methods prove inefficient for in-depth exploration of minor genomic variations and the evolutionary dynamics operating in Mycobacterium tuberculosis (M.tb) populations. Until now, the majority of reviews have primarily focused on delineating the application of whole-genome sequencing (WGS) in predicting antibiotic resistant genes, surveillance of drug resistance strains, and M.tb lineage classifications. Despite the growing use of next generation sequencing (NGS) and WGS analysis in TB research, there are limited studies that provide a comprehensive summary of there role in studying macroevolution, minor genetic variations, assessing mixed TB infections, and tracking transmission networks at an individual level. This highlights the need for systematic effort to fully explore the potential of WGS and its associated tools in advancing our understanding of TB epidemiology and disease transmission. We delve into the recent bioinformatics pipelines and NGS strategies that leverage various genetic features and simultaneous exploration of host-pathogen protein expression profile to decipher the genetic heterogeneity and host-pathogen interaction dynamics of the M.tb infections. This review highlights the potential benefits and limitations of NGS and bioinformatics tools and discusses their role in TB detection and epidemiology. Overall, this review could be a valuable resource for researchers and clinicians interested in NGS-based approaches in TB research.
+
+### Genome-Based Characterization of Listeria monocytogenes, Costa Rica.
+
+- PMID: [37987595](https://pubmed.ncbi.nlm.nih.gov/37987595/)
+- Year / journal: 2023 / Emerging infectious diseases
+- Authors: Giralt-Z&#xfa;&#xf1;iga M, Redondo-Solano M, Moura A, Tessaud-Rita N, Bracq-Dieye H, Vales G et al.
+- DOI: 10.3201/eid2912.230774
+- Recommendation: `screen` (score 8)
+- Matched searches: Foodborne pathogen genomics and microbial food safety
+- Theme hits: economic/costing: cost; foodborne: foodborne, listeria
+
+Genomic data on the foodborne pathogen Listeria monocytogenes from Central America are scarce. We analyzed 92 isolates collected during 2009-2019 from different regions in Costa Rica, compared those to publicly available genomes, and identified unrecognized outbreaks. Our findings suggest mandatory reporting of listeriosis in Costa Rica would improve pathogen surveillance.
+
+### Food Safety Genomics and Connections to One Health and the Clinical Microbiology Laboratory.
+
+- PMID: [33121622](https://pubmed.ncbi.nlm.nih.gov/33121622/)
+- Year / journal: 2020 / Clinics in laboratory medicine
+- Authors: Allard MW, Zheng J, Cao G, Timme R, Stevens E, Brown EW
+- DOI: 10.1016/j.cll.2020.08.011
+- Recommendation: `screen` (score 8)
+- Matched searches: Foodborne pathogen genomics and microbial food safety
+- Theme hits: foodborne: foodborne, food safety; implementation: laboratory
+
+This article describes the potential for one health surveillance of foodborne pathogens and disease using the revolutionary methodologies of whole genome sequencing. Whole genome sequencing of viral and bacterial pathogens is a natural fit to a one health perspective because these pathogens reside and are shared by humans, animals, and the environment and their genomes are compared easily regardless of where or from what host the pathogen was isolated. A genome provides a huge amount of data that can be analyzed for numerous applications. Sharing data coordinates surveillance efforts across the various disciplines.
+
+### Utilizing the Public GenomeTrakr Database for Foodborne Pathogen Traceback.
+
+- PMID: [30580411](https://pubmed.ncbi.nlm.nih.gov/30580411/)
+- Year / journal: 2019 / Methods in molecular biology (Clifton, N.J.)
+- Authors: Timme RE, Sanchez Leon M, Allard MW
+- DOI: 10.1007/978-1-4939-9000-9_17
+- Recommendation: `screen` (score 8)
+- Matched searches: Foodborne pathogen genomics and microbial food safety
+- Theme hits: foodborne: foodborne, genometrakr; implementation: national
+
+This protocol outlines the all the steps necessary to become a GenomeTrakr data contributor. GenomeTrakr is an international genomic reference database of mostly food and environmental isolates from foodborne pathogens. The data and analyses are housed at the National Center for Biotechnology Information (NCBI), which is a database freely available to anyone in the world. The Pathogen Detection browser at NCBI computes daily cluster results adding the newly submitted data to the existing phylogenetic clusters of closely related genomes. Contributors to this database can see how their new isolates are related to the real-time foodborne pathogen surveillance program established in the USA and a few other countries, and at the same time adding valuable new data to the reference database.
+
+### Listeria monocytogenes in Foods.
+
+- PMID: [30077222](https://pubmed.ncbi.nlm.nih.gov/30077222/)
+- Year / journal: 2018 / Advances in food and nutrition research
+- Authors: Jordan K, McAuliffe O
+- DOI: 10.1016/bs.afnr.2018.02.006
+- Recommendation: `screen` (score 8)
+- Matched searches: Foodborne pathogen genomics and microbial food safety
+- Theme hits: foodborne: foodborne, listeria; implementation: national
+
+Listeria monocytogenes causes listeriosis, a rare foodborne disease with a mortality rate of 20%-30%. The elderly and immunocompromised are particularly susceptible to listeriosis. L. monocytogenes is ubiquitous in nature and can contaminate food-processing environments, posing a threat to the food chain. This is particularly important for ready-to-eat foods as there is no heat treatment or other antimicrobial step between production and consumption. Thus, occurrence and control of L. monocytogenes are important for industry and public health. Advances in whole-genome sequence technology are facilitating the investigation of disease outbreaks, linking sporadic cases to outbreaks, and linking outbreaks internationally. Novel control methods, such as bacteriophage and bacteriocins, can contribute to a reduction in the occurrence of L. monocytogenes in the food-processing environment, thereby reducing the risk of food contamination and contributing to a reduction in public health issues.
+
+### Antimicrobial Resistance in Nontyphoidal Salmonella.
+
+- PMID: [30027887](https://pubmed.ncbi.nlm.nih.gov/30027887/)
+- Year / journal: 2018 / Microbiology spectrum
+- Authors: McDermott PF, Zhao S, Tate H
+- DOI: 10.1128/microbiolspec.ARBA-0014-2017
+- Recommendation: `screen` (score 8)
+- Matched searches: Foodborne pathogen genomics and microbial food safety
+- Theme hits: foodborne: foodborne, food safety, salmonella
+
+Non-typhoidal Salmonella is the most common foodborne bacterial pathogen in most countries. It is widely present in food animal species, and therefore blocking its transmission through the food supply is a prominent focus of food safety activities worldwide. Antibiotic resistance in non-typhoidal Salmonella arises in large part because of antibiotic use in animal husbandry. Tracking resistance in Salmonella is required to design targeted interventions to contain or diminish resistance and refine use practices in production. Many countries have established systems to monitor antibiotic resistance in Salmonella and other bacteria, the earliest ones appearing the Europe and the US. In this chapter, we compare recent Salmonella antibiotic susceptibility data from Europe and the US. In addition, we summarize the state of known resistance genes that have been identified in the genus. The advent of routine whole genome sequencing has made it possible to conduct genomic surveillance of resistance based on DNA sequences alone. This points to a new model of surveillance in the future that will provide more definitive information on the sources of resistant Salmonella, the specific types of resistance genes involved, and information on how resistance spreads.
+
+## Lower Priority / Probably Skip
+
+### Invasive Neonatal Listeriosis.
+
+- PMID: [40887071](https://pubmed.ncbi.nlm.nih.gov/40887071/)
+- Year / journal: 2025 / NeoReviews
+- Authors: LaTuga MS
+- DOI: 10.1542/neo.26-9-052
+- Recommendation: `low-priority` (score 7)
+- Matched searches: Foodborne pathogen genomics and microbial food safety
+- Theme hits: foodborne: foodborne, listeria
+
+Listeriosis, an invasive disease caused by Listeria monocytogenes, is an uncommon cause of perinatal infection with a high risk of morbidity in neonates. Pregnant persons can acquire this foodborne pathogen from deli meats and unprocessed cheese, placing their neonate at risk. In the past 10&#xa0;years, whole-genome sequencing has been used to track L monocytogenes isolates from clinical samples and those obtained from food processing facilities in the United States. Over time, use of this robust public health surveillance system may lead to a reduction of invasive listeriosis among immunocompromised patients. This review will summarize the epidemiology, pathogenesis, clinical presentation, management, and outcomes of pregnant persons and neonates with invasive Listeria disease.
+
+### Genomic surveillance of multidrug-resistant organisms based on long-read sequencing.
+
+- PMID: [39587617](https://pubmed.ncbi.nlm.nih.gov/39587617/)
+- Year / journal: 2024 / Genome medicine
+- Authors: Landman F, Jamin C, de Haan A, Witteveen S, Bos J, van der Heide HGJ et al.
+- DOI: 10.1186/s13073-024-01412-6
+- Recommendation: `low-priority` (score 7)
+- Matched searches: Why genomics: public-health value, benefits, and limitations; National implementation, readiness, and capability building
+- Theme hits: economic/costing: cost; foodborne: escherichia coli; implementation: implementation
+
+BACKGROUND: Multidrug-resistant organisms (MDRO) pose a significant threat to public health worldwide. The ability to identify antimicrobial resistance determinants, to assess changes in molecular types, and to detect transmission are essential for surveillance and infection prevention of MDRO. Molecular characterization based on long-read sequencing has emerged as a promising alternative to short-read sequencing. The aim of this study was to characterize MDRO for surveillance and transmission studies based on long-read sequencing only. METHODS: Genomic DNA of 356 MDRO was automatically extracted using the Maxwell-RSC48. The MDRO included 106 Klebsiella pneumoniae isolates, 85 Escherichia coli, 15 Enterobacter cloacae complex, 10 Citrobacter freundii, 34 Pseudomonas aeruginosa, 16 Acinetobacter baumannii, and 69 methicillin-resistant Staphylococcus aureus (MRSA), of which 24 were from an outbreak. MDRO were sequenced using both short-read (Illumina NextSeq 550) and long-read (Nanopore Rapid Barcoding Kit-24-V14, R10.4.1) whole-genome sequencing (WGS). Basecalling was performed for two distinct models using Dorado-0.3.2 duplex mode. Long-read data was assembled using Flye, Canu, Miniasm, Unicycler, Necat, Raven, and Redbean assemblers. Long-read WGS data with&#x2009;>&#x2009;40&#x2009;&#xd7;&#x2009;coverage was used for multi-locus sequence typing (MLST), whole-genome MLST (wgMLST), whole-genome single-nucleotide polymorphisms (wgSNP), in silico multiple locus variable-number of tandem repeat analysis (iMLVA) for MRSA, and identification of resistance genes (ABRicate). RESULTS: Comparison of wgMLST profiles based on long-read and short-read WGS data revealed&#x2009;>&#x2009;95% of wgMLST profiles within the species-specific cluster cut-off, except for P. aeruginosa. The wgMLST profiles obtained by long-read and short-read WGS differed only one to nine wgMLST alleles or SNPs for K. pneumoniae, E. coli, E. cloacae complex, C. freundii, A. baumannii complex, and MRSA. For P. aeruginosa, differences were up to 27 wgMLST alleles between long-read and short-read wgMLST and 0-10 SNPs. MLST sequence types and iMLVA types were concordant between long-read and short-read WGS data and conventional MLVA typing. Antimicrobial resistance genes were detected in long-read sequencing data with high sensitivity/specificity (92-100%/99-100%). Long-read sequencing enabled analysis of an MRSA outbreak. CONCLUSIONS: We demonstrate that molecular characterization of automatically extracted DNA followed by long-read sequencing is as accurate compared to short-read sequencing and suitable for typing and outbreak analysis as part of genomic surveillance of MDRO. However, the analysis of P. aeruginosa requires further improvement which may be obtained by other basecalling algorithms. The low implementation costs and rapid library preparation for long-read sequencing of MDRO extends its applicability to resource-constrained settings and low-income countries worldwide.
+
+### A genome sequencing system for universal newborn screening, diagnosis, and precision medicine for severe genetic diseases.
+
+- PMID: [36007526](https://pubmed.ncbi.nlm.nih.gov/36007526/)
+- Year / journal: 2022 / American journal of human genetics
+- Authors: Kingsmore SF, Smith LD, Kunard CM, Bainbridge M, Batalov S, Benson W et al.
+- DOI: 10.1016/j.ajhg.2022.08.003
+- Recommendation: `low-priority` (score 7)
+- Matched searches: Investment, costing, economics, and return on investment
+- Theme hits: value case: value; economic/costing: cost
+
+Newborn screening (NBS) dramatically improves outcomes in severe childhood disorders by treatment before symptom onset. In many genetic diseases, however, outcomes remain poor because NBS has lagged behind drug development. Rapid whole-genome sequencing (rWGS) is attractive for comprehensive NBS because it concomitantly examines almost all genetic diseases and is gaining acceptance for genetic disease diagnosis in ill newborns. We describe prototypic methods for scalable, parentally consented, feedback-informed NBS and diagnosis of genetic diseases by rWGS and virtual, acute management guidance (NBS-rWGS). Using established criteria and the Delphi method, we reviewed 457 genetic diseases for NBS-rWGS, retaining 388 (85%) with effective treatments. Simulated NBS-rWGS in 454,707&#xa0;UK Biobank subjects with 29,865 pathogenic or likely pathogenic variants associated with 388 disorders had a true negative rate (specificity) of 99.7% following root cause analysis. In 2,208 critically ill children with suspected genetic disorders and 2,168 of their parents, simulated NBS-rWGS for 388 disorders identified 104 (87%) of 119 diagnoses previously made by rWGS and 15 findings not previously reported (NBS-rWGS negative predictive value 99.6%, true positive rate [sensitivity] 88.8%). Retrospective NBS-rWGS diagnosed 15 children with disorders that had been undetected by conventional NBS. In 43 of the 104 children, had NBS-rWGS-based interventions been started on day of life 5, the Delphi consensus was that symptoms could have been avoided completely in seven critically ill children, mostly in 21, and partially in 13. We invite groups worldwide to refine these NBS-rWGS conditions and join us to prospectively examine clinical utility and cost effectiveness.
+
+### Benchmark datasets for SARS-CoV-2 surveillance bioinformatics.
+
+- PMID: [36093336](https://pubmed.ncbi.nlm.nih.gov/36093336/)
+- Year / journal: 2022 / PeerJ
+- Authors: Xiaoli L, Hagey JV, Park DJ, Gulvik CA, Young EL, Alikhan NF et al.
+- DOI: 10.7717/peerj.13821
+- Recommendation: `low-priority` (score 7)
+- Matched searches: Bioinformatics, data systems, workflows, and infrastructure
+- Theme hits: value case: value; implementation: capacity, national; data/bioinformatics infrastructure: bioinformatics, workflow
+
+BACKGROUND: Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2), the cause of coronavirus disease 2019 (COVID-19), has spread globally and is being surveilled with an international genome sequencing effort. Surveillance consists of sample acquisition, library preparation, and whole genome sequencing. This has necessitated a classification scheme detailing Variants of Concern (VOC) and Variants of Interest (VOI), and the rapid expansion of bioinformatics tools for sequence analysis. These bioinformatic tools are means for major actionable results: maintaining quality assurance and checks, defining population structure, performing genomic epidemiology, and inferring lineage to allow reliable and actionable identification and classification. Additionally, the pandemic has required public health laboratories to reach high throughput proficiency in sequencing library preparation and downstream data analysis rapidly. However, both processes can be limited by a lack of a standardized sequence dataset. METHODS: We identified six SARS-CoV-2 sequence datasets from recent publications, public databases and internal resources. In addition, we created a method to mine public databases to identify representative genomes for these datasets. Using this novel method, we identified several genomes as either VOI/VOC representatives or non-VOI/VOC representatives. To describe each dataset, we utilized a previously published datasets format, which describes accession information and whole dataset information. Additionally, a script from the same publication has been enhanced to download and verify all data from this study. RESULTS: The benchmark datasets focus on the two most widely used sequencing platforms: long read sequencing data from the Oxford Nanopore Technologies platform and short read sequencing data from the Illumina platform. There are six datasets: three were derived from recent publications; two were derived from data mining public databases to answer common questions not covered by published datasets; one unique dataset representing common sequence failures was obtained by rigorously scrutinizing data that did not pass quality checks. The dataset summary table, data mining script and quality control (QC) values for all sequence data are publicly available on GitHub: https://github.com/CDCgov/datasets-sars-cov-2. DISCUSSION: The datasets presented here were generated to help public health laboratories build sequencing and bioinformatics capacity, benchmark different workflows and pipelines, and calibrate QC thresholds to ensure sequencing quality. Together, improvements in these areas support accurate and timely outbreak investigation and surveillance, providing actionable data for pandemic management. Furthermore, these publicly available and standardized benchmark data will facilitate the development and adjudication of new pipelines.
+
+### Next-Generation Molecular Surveillance of TriTryp Diseases.
+
+- PMID: [32191850](https://pubmed.ncbi.nlm.nih.gov/32191850/)
+- Year / journal: 2020 / Trends in parasitology
+- Authors: Domagalska MA, Dujardin JC
+- DOI: 10.1016/j.pt.2020.01.008
+- Recommendation: `low-priority` (score 7)
+- Matched searches: Why genomics: public-health value, benefits, and limitations
+- Theme hits: value case: value; limits/equity/constraints: challenge
+
+Elimination programs targeting TriTryp diseases (Leishmaniasis, Chagas' disease, human African trypanosomiasis) significantly reduced the number of cases. Continued surveillance is crucial to sustain this progress, but parasite molecular surveillance by genotyping is currently lacking. We explain here which epidemiological questions of public health and clinical relevance could be answered by means of molecular surveillance. Whole-genome sequencing (WGS) for molecular surveillance will be an important added value, where we advocate that preference should be given to direct sequencing of the parasite's genome in host tissues instead of analysis of cultivated isolates. The main challenges here, and recent technological advances, are discussed. We conclude with a series of recommendations for implementing whole-genome sequencing for molecular surveillance.
+
+### The Epidemiology of Monophasic Salmonella Typhimurium.
+
+- PMID: [31532231](https://pubmed.ncbi.nlm.nih.gov/31532231/)
+- Year / journal: 2020 / Foodborne pathogens and disease
+- Authors: Sun H, Wan Y, Du P, Bai L
+- DOI: 10.1089/fpd.2019.2676
+- Recommendation: `low-priority` (score 7)
+- Matched searches: Foodborne pathogen genomics and microbial food safety
+- Theme hits: foodborne: foodborne, salmonella
+
+Salmonella enterica remains an important foodborne pathogen in all regions of the world, with Typhimurium as one of the most frequent serotypes causing foodborne disease. However, the past two decades have seen a rapid worldwide emergence of a new Salmonella serotype, namely monophasic variant of S. Typhimurium, whose antigenic formula is 1,4,[5],12:i:-. It has become one of the 2-5 most common Salmonella serotypes responsible for animal and human infections in different regions. The global epidemic of monophasic S. 1,4,[5],12:i:- has mainly been characterized by an increase in multidrug-resistant S. 1,4,[5],12:i:- isolated in Europe since 1997. The unexpected link to swine has escalated monophasic S. Typhimurium infections to the status of a global public health emergency. The large-scale application of whole genome sequencing (WGS) in the last 10 years has revealed the phylogenetic associations of the bacterium and its antimicrobial resistance (AMR) genes. Local and global transmission reconstructed by WGS have shown that different clones have emerged following multiple independent events worldwide, and have elucidated the role of this zoonotic pathogen in the spread of AMR. This article discusses our current knowledge of the global ecology, epidemiology, transmission, bacterial adaptation, and evolution of this emerging Salmonella serotype.
+
+### The evolving SARS-CoV-2 epidemic in Africa: Insights from rapidly expanding genomic surveillance.
+
+- PMID: [36108049](https://pubmed.ncbi.nlm.nih.gov/36108049/)
+- Year / journal: 2022 / Science (New York, N.Y.)
+- Authors: Tegally H, San JE, Cotten M, Moir M, Tegomoh B, Mboowa G et al.
+- DOI: 10.1126/science.abq5358
+- Recommendation: `low-priority` (score 6)
+- Matched searches: Investment, costing, economics, and return on investment
+- Theme hits: value case: preparedness, response; economic/costing: investment; limits/equity/constraints: limitation
+
+Investment in severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) sequencing in Africa over the past year has led to a major increase in the number of sequences that have been generated and used to track the pandemic on the continent, a number that now exceeds 100,000 genomes. Our results show an increase in the number of African countries that are able to sequence domestically and highlight that local sequencing enables faster turnaround times and more-regular routine surveillance. Despite limitations of low testing proportions, findings from this genomic surveillance study underscore the heterogeneous nature of the pandemic and illuminate the distinct dispersal dynamics of variants of concern-particularly Alpha, Beta, Delta, and Omicron-on the continent. Sustained investment for diagnostics and genomic surveillance in Africa is needed as the virus continues to evolve while the continent faces many emerging and reemerging infectious disease threats. These investments are crucial for pandemic preparedness and response and will serve the health of the continent well into the 21st century.
+
+### Whole Genome Sequencing in the Management of Non-Tuberculous Mycobacterial Infections.
+
+- PMID: [34835363](https://pubmed.ncbi.nlm.nih.gov/34835363/)
+- Year / journal: 2021 / Microorganisms
+- Authors: Doh&#xe1;l M, Porvazn&#xed;k I, Solovi&#x10d; I, Mokr&#xfd; J
+- DOI: 10.3390/microorganisms9112237
+- Recommendation: `low-priority` (score 6)
+- Matched searches: Investment, costing, economics, and return on investment
+- Theme hits: economic/costing: economic
+
+Infections caused by non-tuberculous mycobacteria (NTM) have been a public health problem in recent decades and contribute significantly to the clinical and economic burden globally. The diagnosis of infections is difficult and time-consuming and, in addition, the conventional diagnostics tests do not have sufficient discrimination power in species identification due to cross-reactions and not fully specific probes. However, technological advances have been made and the whole genome sequencing (WGS) method has been shown to be an essential part of routine diagnostics in clinical mycobacteriology laboratories. The use of this technology has contributed to the characterization of new species of mycobacteria, as well as the identification of gene mutations encoding resistance and virulence factors. Sequencing data also allowed to track global outbreaks of nosocomial NTM infections caused by M. abscessus complex and M. chimaera. To highlight the utility of WGS, we summarize recent scientific studies on WGS as a tool suitable for the management of NTM-induced infections in clinical practice.
+
+### The global meningitis genome partnership.
+
+- PMID: [32615197](https://pubmed.ncbi.nlm.nih.gov/32615197/)
+- Year / journal: 2020 / The Journal of infection
+- Authors: Rodgers E, Bentley SD, Borrow R, Bratcher HB, Brisse S, Brueggemann AB et al.
+- DOI: 10.1016/j.jinf.2020.06.064
+- Recommendation: `low-priority` (score 6)
+- Matched searches: National implementation, readiness, and capability building; Bioinformatics, data systems, workflows, and infrastructure
+- Theme hits: implementation: capacity; data/bioinformatics infrastructure: metadata
+
+Genomic surveillance of bacterial meningitis pathogens is essential for effective disease control globally, enabling identification of emerging and expanding strains and consequent public health interventions. While there has been a rise in the use of whole genome sequencing, this has been driven predominately by a subset of countries with adequate capacity and resources. Global capacity to participate in surveillance needs to be expanded, particularly in low and middle-income countries with high disease burdens. In light of this, the WHO-led collaboration, Defeating Meningitis by 2030 Global Roadmap, has called for the establishment of a Global Meningitis Genome Partnership that links resources for: N. meningitidis (Nm), S. pneumoniae (Sp), H. influenzae (Hi) and S. agalactiae (Sa) to improve worldwide co-ordination of strain identification and tracking. Existing platforms containing relevant genomes include: PubMLST: Nm (31,622), Sp (15,132), Hi (1935), Sa (9026); The Wellcome Sanger Institute: Nm (13,711), Sp (>&#xa0;24,000), Sa (6200), Hi (1738); and BMGAP: Nm (8785), Hi (2030). A steering group is being established to coordinate the initiative and encourage high-quality data curation. Next steps include: developing guidelines on open-access sharing of genomic data; defining a core set of metadata; and facilitating development of user-friendly interfaces that represent publicly available data.
+
+### Genomic epidemiology of multidrug-resistant Gram-negative organisms.
+
+- PMID: [29604079](https://pubmed.ncbi.nlm.nih.gov/29604079/)
+- Year / journal: 2019 / Annals of the New York Academy of Sciences
+- Authors: Hawken SE, Snitkin ES
+- DOI: 10.1111/nyas.13672
+- Recommendation: `low-priority` (score 6)
+- Matched searches: Why genomics: public-health value, benefits, and limitations
+- Theme hits: value case: impact
+
+The emergence and spread of antibiotic-resistant Gram-negative bacteria (rGNB) across global healthcare networks presents a significant threat to public health. As the number of effective antibiotics available to treat these resistant organisms dwindles, it is essential that we devise more effective strategies for controlling their proliferation. Recently, whole-genome sequencing has emerged as a disruptive technology that has transformed our understanding of the evolution and epidemiology of diverse rGNB species, and it has the potential to guide strategies for controlling the evolution and spread of resistance. Here, we review specific areas in which genomics has already made a significant impact, including outbreak investigations, regional epidemiology, clinical diagnostics, resistance evolution, and the study of epidemic lineages. While highlighting early successes, we also point to the next steps needed to translate this technology into strategies to improve public health and clinical medicine.
+
+### Molecular Diagnosis of Tuberculosis.
+
+- PMID: [29399559](https://pubmed.ncbi.nlm.nih.gov/29399559/)
+- Year / journal: 2018 / Chonnam medical journal
+- Authors: Nurwidya F, Handayani D, Burhan E, Yunus F
+- DOI: 10.4068/cmj.2018.54.1.1
+- Recommendation: `low-priority` (score 6)
+- Matched searches: Investment, costing, economics, and return on investment
+- Theme hits: economic/costing: cost
+
+Tuberculosis (TB) is one of the leading causes of adult death in the Asia-Pacific Region, including Indonesia. As an infectious disease caused by Mycobacterium tuberculosis (MTB), TB remains a major public health issue especially in developing nations due to the lack of adequate diagnostic testing facilities. Diagnosis of TB has entered an era of molecular detection that provides faster and more cost-effective methods to diagnose and confirm drug resistance in TB cases, meanwhile, diagnosis by conventional culture systems requires several weeks. New advances in the molecular detection of TB, including the faster and simpler nucleic acid amplification test (NAAT) and whole-genome sequencing (WGS), have resulted in a shorter time for diagnosis and, therefore, faster TB treatments. In this review, we explored the current findings on molecular diagnosis of TB and drug-resistant TB to see how this advancement could be integrated into public health systems in order to control TB.
+
+### Salmonella Serotyping Using Whole Genome Sequencing.
+
+- PMID: [30619114](https://pubmed.ncbi.nlm.nih.gov/30619114/)
+- Year / journal: 2018 / Frontiers in microbiology
+- Authors: Ibrahim GM, Morin PM
+- DOI: 10.3389/fmicb.2018.02993
+- Recommendation: `low-priority` (score 6)
+- Matched searches: Foodborne pathogen genomics and microbial food safety
+- Theme hits: foodborne: foodborne, food safety, salmonella; implementation: laboratory
+
+Until recently, traditional serology and the Kauffmann White Scheme (KWS) have been the gold standard for Salmonella serotyping. Whole Genome Sequencing (WGS) has now emerged as an alternative in this field. Serotype information remains a cornerstone in food safety and public health activities to reduce the burden of salmonellosis. At the same time, recent advances in WGS have improved the ability to perform advanced pathogen characterization while improving trace back investigations to determine the source of foodborne illness during outbreaks. Serovar prediction based on WGS can be performed using in silico data analysis tools. Three such tools have been developed: (a). Salmonella in silico Typing Resource (SISTR), (b). SeqSero, and (c). in silico 7-gene MLST ST (Multilocus Sequence Typing Sub-Typing) which was generated using the SISTR platform. Public health officials around the world are diligently working to validate these tools for replacing traditional surveillance methods to provide a more powerful approach for molecular epidemiology in support of public health investigations. In this study, we report a retrospective analysis of our laboratory inventory of 1,041 Salmonella isolates collected between 1999 and 2017. These isolates are of public health significance since they all came from either food, feed or environmental swabs. They were all serotyped by both traditional serology and WGS using an in silico SeqSero tool for serovar prediction. Both predicted identical Salmonella serotypes in 899 isolates (86.4% of the 1,041 Salmonella isolates). SeqSero assignments differed from traditional serological testing in 80 isolates (7.7%) and no serotype prediction was ascertained from 62 isolates (5.9%). This retrospective study is an excellent example of using WGS and SeqSero as a data analysis tool to predict Salmonella serotypes that can provide numerous advantages including molecular and genetic details regarding the characteristics of the Salmonella isolates compared to traditional KWS serotyping. In conclusion, it is evident that using WGS and in silico tools for Salmonella serotyping might someday replace traditional serotyping.
+
+### Real-Time Analysis and Visualization of Pathogen Sequence Data.
+
+- PMID: [30135232](https://pubmed.ncbi.nlm.nih.gov/30135232/)
+- Year / journal: 2018 / Journal of clinical microbiology
+- Authors: Neher RA, Bedford T
+- DOI: 10.1128/JCM.00480-18
+- Recommendation: `low-priority` (score 6)
+- Matched searches: Bioinformatics, data systems, workflows, and infrastructure
+- Theme hits: data/bioinformatics infrastructure: workflow
+
+The rapid development of sequencing technologies has to led to an explosion of pathogen sequence data, which are increasingly collected as part of routine surveillance or clinical diagnostics. In public health, sequence data are used to reconstruct the evolution of pathogens, to anticipate future spread, and to target interventions. In clinical settings, whole-genome sequencing can identify pathogens at the strain level, can be used to predict phenotypes such as drug resistance and virulence, and can inform treatment by linking closely related cases. While sequencing has become cheaper, the analysis of sequence data has become an important bottleneck. Deriving interpretable and actionable results for a large variety of pathogens, each with its own complexity, from continuously updated data is a daunting task that requires flexible bioinformatic workflows and dissemination platforms. Here, we review recent developments in real-time analyses of pathogen sequence data, with a particular focus on the visualization and integration of sequence and phenotype data.
+
+### varVAMP: degenerate primer design for tiled full genome sequencing and qPCR.
+
+- PMID: [40449995](https://pubmed.ncbi.nlm.nih.gov/40449995/)
+- Year / journal: 2025 / Nature communications
+- Authors: Fuchs J, Kleine J, Schemmerer M, Kreibich J, Maier W, Battur N et al.
+- DOI: 10.1038/s41467-025-60175-9
+- Recommendation: `low-priority` (score 5)
+- Matched searches: Investment, costing, economics, and return on investment
+- Theme hits: economic/costing: cost; data/bioinformatics infrastructure: bioinformatics; limits/equity/constraints: challenge
+
+Time- and cost-saving surveillance of viral pathogens is achieved by tiled sequencing in which a viral genome is amplified in overlapping PCR amplicons and qPCR. However, designing pan-specific primers for viral pathogens with high genomic variability represents a significant challenge. Here, we present a bioinformatics command-line tool, called varVAMP (variable virus amplicons), which addresses this issue. It relies on multiple sequence alignments of highly variable virus sequences and enables degenerate primer design for qPCR or tiled amplicon whole genome sequencing. We demonstrate the utility of varVAMP by designing and evaluating novel pan-specific primer schemes suitable for sequencing the genomes of SARS-CoV-2, Hepatitis E virus, rat Hepatitis E virus, Hepatitis A virus, Borna-disease-virus-1, and Poliovirus using clinical samples. Importantly, we also designed primers on the same input data using the software packages PrimalScheme and Olivar and showed that varVAMP minimizes primer mismatches most efficiently. Finally, we established highly sensitive and specific Poliovirus qPCR assays that could potentially simplify current Poliovirus surveillance. varVAMP is open-source and available through PyPI, UseGalaxy, Bioconda, and https://github.com/jonas-fuchs/varVAMP .
+
+### Population-scale genomics-Enabling precision public health.
+
+- PMID: [30904093](https://pubmed.ncbi.nlm.nih.gov/30904093/)
+- Year / journal: 2019 / Advances in genetics
+- Authors: Sivadas A, Scaria V
+- DOI: 10.1016/bs.adgen.2018.09.001
+- Recommendation: `low-priority` (score 5)
+- Matched searches: Why genomics: public-health value, benefits, and limitations
+- Theme hits: value case: response; implementation: implementation, national
+
+The current excitement for affordable genomics technologies and national precision medicine initiatives marks a turning point in worldwide healthcare practices. The last decade of global population sequencing efforts has defined the enormous extent of genetic variation in the human population resulting in insights into differential disease burden and response to therapy within and between populations. Population-scale pharmacogenomics helps to provide insights into the choice of optimal therapies and an opportunity to estimate, predict and minimize adverse events. Such an approach can potentially empower countries to formulate national selection and dosing policies for therapeutic agents thereby promoting public health with precision. We review the breadth and depth of worldwide population-scale sequencing efforts and its implications for the implementation of clinical pharmacogenetics toward making precision medicine a reality.
+
+### Advancing real-time infectious disease forecasting using large language models.
+
+- PMID: [40481184](https://pubmed.ncbi.nlm.nih.gov/40481184/)
+- Year / journal: 2025 / Nature computational science
+- Authors: Du H, Zhao Y, Zhao J, Xu S, Lin X, Chen Y et al.
+- DOI: 10.1038/s43588-025-00798-6
+- Recommendation: `probably-skip` (score 4)
+- Matched searches: Why genomics: public-health value, benefits, and limitations
+- Theme hits: value case: benefit; limits/equity/constraints: challenge
+
+Forecasting the short-term spread of an ongoing disease outbreak poses a challenge owing to the complexity of contributing factors, some of which can be characterized through interlinked, multi-modality variables, and the intersection of public policy and human behavior. Here we introduce PandemicLLM, a framework with multi-modal large language models (LLMs) that reformulates real-time forecasting of disease spread as a text-reasoning problem, with the ability to incorporate real-time, complex, non-numerical information. This approach, through an artificial intelligence-human cooperative prompt design and time-series representation learning, encodes multi-modal data for LLMs. The model is applied to the COVID-19 pandemic, and trained to utilize textual public health policies, genomic surveillance, spatial and epidemiological time-series data, and is tested across all 50&#x2009;states of the United States for a duration of 19&#x2009;months. PandemicLLM opens avenues for incorporating various pandemic-related data in heterogeneous formats and shows performance benefits over existing models.
+
+### Accurate and reproducible whole-genome genotyping for bacterial genomic surveillance with Nanopore sequencing data.
+
+- PMID: [40511924](https://pubmed.ncbi.nlm.nih.gov/40511924/)
+- Year / journal: 2025 / Journal of clinical microbiology
+- Authors: Prior K, Becker K, Brandt C, Cabal Rosel A, Dabernig-Heinz J, Kohler C et al.
+- DOI: 10.1128/jcm.00369-25
+- Recommendation: `probably-skip` (score 4)
+- Matched searches: Investment, costing, economics, and return on investment
+- Theme hits: economic/costing: cost, investment
+
+Despite recent advances in error rate reduction, until recently, Oxford Nanopore Technologies (ONT) sequences lacked the accuracy required for fine-scale bacterial genomic analysis. Here, recent software improvements of ONT and the ONT-core-genome multilocus sequence typing (cgMLST)-Polisher within the SeqSphere+ software were evaluated. We used short-read (Illumina) and long-read ONT sequences of 80 multidrug-resistant organisms (MDROs) for benchmarking. Illumina reads were de novo assembled using SKESA. For ONT, Dorado Super Accurate (SUP) model v.4.3 or v.5.0 basecalled reads were assembled with Flye and then polished with Medaka v.1.12 m4.3 or Medaka v.2.0 bacterial methylation model. In addition, the ONT-cgMLST-Polisher was run over all assemblies. The "ground truth" (GT) hybrid assemblies were created using Hybracter v.0.10.0. Sixteen isolates from four species out of the original 80 isolates were sent to six laboratories for a ring trial. The 80 MDROs basecalled with SUP m4.3 had an average cgMLST allele distance (AD) to the GT of 4.94 with Medaka v.1.12 and 1.78 with Medaka v.2.0, respectively. After further polishing the Medaka v.2.0 data with the ONT-cgMLST-Polisher, the AD dropped to 0.09. Using data basecalled with SUP m5.0 with Medaka v.2.0 further reduced the AD significantly to 0.04. While the ring trial data basecalled with Dorado SUP m4.3 showed more variability and insufficient results for some samples, model 5.0 data resulted in average ADs of 0.36 and 0.17 without and with the ONT-cgMLST-Polisher, respectively. In conclusion, recent ONT Dorado and Medaka models combined with the ONT-cgMLST-Polisher improved ONT sequencing accuracy and made it sufficiently reproducible for genomic surveillance of bacteria.IMPORTANCEONT sequencing methodology is especially attractive for small and medium-sized laboratories due to its relatively low capital investment and price per sample consumable costs. However, until recently, it lacked accuracy and reproducibility for bacterial genomic genotyping. Here, we present an evaluation of the most recent ONT bioinformatic (basecalling and polishing of consensus) improvements and a new ONT-cgMLST-Polisher tool. We demonstrate that by applying those procedures, ONT whole-genome genotyping-based surveillance of bacteria is finally accurate and reproducible enough for routine application even in small laboratories.
+
+### On the SARS-CoV-2 Variants.
+
+- PMID: [38667750](https://pubmed.ncbi.nlm.nih.gov/38667750/)
+- Year / journal: 2024 / Infectious disease reports
+- Authors: Scarpa F, Branda F, Petrosillo N, Ciccozzi M
+- DOI: 10.3390/idr16020024
+- Recommendation: `probably-skip` (score 4)
+- Matched searches: Why genomics: public-health value, benefits, and limitations
+- Theme hits: value case: impact, response
+
+The evolutionary dynamics of viruses, particularly exemplified by SARS-CoV-2 during the ongoing COVID-19 pandemic, underscore the intricate interplay between genetics, host adaptation, and viral spread. This paper delves into the genetic evolution of SARS-CoV-2, emphasizing the implications of viral variants on global health. Initially emerging from the Wuhan-Hu-1 lineage, SARS-CoV-2 rapidly diversified into numerous variants, each characterized by distinct mutations in the spike protein and other genomic regions. Notable variants such as B.1.1.7 (&#x3b1;), B.1.351 (&#x3b2;), P.1 (&#x3b3;), B.1.617.2 (&#x3b4;), and the Omicron variant have garnered significant attention due to their heightened transmissibility and immune evasion capabilities. In particular, the Omicron variant has presented a myriad of subvariants, raising concerns about its potential impact on public health. Despite the emergence of numerous variants, the vast majority have exhibited limited expansion capabilities and have not posed significant threats akin to early pandemic strains. Continued genomic surveillance is imperative to identify emerging variants of concern promptly. While genetic adaptation is intrinsic to viral evolution, effective public health responses must be grounded in empirical evidence to navigate the evolving landscape of the pandemic with resilience and precision.
+
+### International and regional spread of carbapenem-resistant Klebsiella pneumoniae in Europe.
+
+- PMID: [38877000](https://pubmed.ncbi.nlm.nih.gov/38877000/)
+- Year / journal: 2024 / Nature communications
+- Authors: Budia-Silva M, Kostyanev T, Ayala-Monta&#xf1;o S, Bravo-Ferrer Acosta J, Garcia-Castillo M, Cant&#xf3;n R et al.
+- DOI: 10.1038/s41467-024-49349-z
+- Recommendation: `probably-skip` (score 4)
+- Matched searches: National implementation, readiness, and capability building
+- Theme hits: implementation: implementation, national
+
+Carbapenem-resistant Klebsiella pneumoniae (CRKP) are of particular concern due to the spread of antibiotic resistance genes associated with mobile genetic elements. In this study, we collected 687 carbapenem-resistant strains recovered among clinical samples from 41 hospitals in nine Southern European countries (2016-2018). We identified 11 major clonal lineages, with most isolates belonging to the high-risk clones ST258/512, ST101, ST11, and ST307. blaKPC-like was the most prevalent carbapenemase-encoding gene (46%), with blaOXA-48 present in 39% of isolates. Through the combination and comparison of this EURECA&#xa0;collection with the previous EuSCAPE collection (2013-2014), we investigated the spread of high-risk clones circulating in Europe exhibiting regional differences. We particularly found blaKPC-like ST258/512 in Greece, Italy, and Spain, blaOXA-48 ST101 in Serbia and Romania, blaNDM ST11 in Greece, and blaOXA-48-like ST14 in T&#xfc;rkiye. Genomic surveillance across Europe thus provides crucial insights for local risk mapping and informs necessary adaptions for implementation of control strategies.
+
+### Genomic surveillance of Salmonella spp. in the Philippines during 2013-2014.
+
+- PMID: [35999186](https://pubmed.ncbi.nlm.nih.gov/35999186/)
+- Year / journal: 2022 / Transactions of the Royal Society of Tropical Medicine and Hygiene
+- Authors: Lagrada ML, Argim&#xf3;n S, Borlasa JB, Abad JP, Gayeta JM, Masim ML et al.
+- DOI: 10.1093/trstmh/trac080
+- Recommendation: `probably-skip` (score 4)
+- Matched searches: Foodborne pathogen genomics and microbial food safety
+- Theme hits: foodborne: salmonella; implementation: laboratory
+
+BACKGROUND: Increasing antimicrobial resistance (AMR) in Salmonella has been observed in the Philippines. We aimed to characterise the population and AMR mechanisms of Salmonella with whole genome sequencing (WGS) and compare it with laboratory surveillance methods. METHODS: The serotype, multilocus sequence type, AMR genes and relatedness between isolates were determined from the genomes of 148 Salmonella Typhi (S. Typhi) and 65 non-typhoidal Salmonella (NTS) collected by the Antimicrobial Resistance Surveillance Program during 2013-2014. Genotypic serotypes and AMR prediction were compared with phenotypic data. RESULTS: AMR rates in S. Typhi were low, with sparse acquisition of mutations associated with reduced susceptibility to fluoroquinolones or extended-spectrum beta-lactamases (ESBL) genes. By contrast, 75% of NTS isolates were insusceptible to at least one antimicrobial, with more than half carrying mutations and/or genes linked to fluoroquinolone resistance. ESBL genes were detected in five genomes, which also carried other AMR determinants. The population of S. Typhi was dominated by likely endemic genotype 3.0, which caused a putative local outbreak. The main NTS clades were global epidemic S. Enteritidis ST11 and S. Typhimurium monophasic variant (I,4,[5],12: i: -) ST34. CONCLUSION: We provide the first genomic characterisation of Salmonella from the Philippines and evidence of WGS utility for ongoing surveillance.
+
+### SPEAR: Systematic ProtEin AnnotatoR.
+
+- PMID: [35695776](https://pubmed.ncbi.nlm.nih.gov/35695776/)
+- Year / journal: 2022 / Bioinformatics (Oxford, England)
+- Authors: Crown M, Teruel N, Najmanovich R, Bashton M
+- DOI: 10.1093/bioinformatics/btac391
+- Recommendation: `probably-skip` (score 4)
+- Matched searches: National implementation, readiness, and capability building
+- Theme hits: implementation: implementation; data/bioinformatics infrastructure: bioinformatics
+
+SUMMARY: We present Systematic ProtEin AnnotatoR (SPEAR), a lightweight and rapid SARS-CoV-2 variant annotation and scoring tool, for identifying mutations contributing to potential immune escape and transmissibility (ACE2 binding) at point of sequencing. SPEAR can be used in the field to evaluate genomic surveillance results in real time and features a powerful interactive data visualization report. AVAILABILITY AND IMPLEMENTATION: SPEAR and documentation are freely available on GitHub: https://github.com/m-crown/SPEAR and are implemented in Python and installable via Conda environment. SUPPLEMENTARY INFORMATION: Supplementary data are available at Bioinformatics online.
+
+### SARS-CoV-2 Variants in Rhode Island.
+
+- PMID: [34279520](https://pubmed.ncbi.nlm.nih.gov/34279520/)
+- Year / journal: 2021 / Rhode Island medical journal (2013)
+- Authors: Kantor R, Novitsky V, Carpenter-Azevedo K, Howison M, Manne A, Darpolor JK et al.
+- DOI: not returned
+- Recommendation: `probably-skip` (score 4)
+- Matched searches: National implementation, readiness, and capability building
+- Theme hits: value case: response; implementation: capacity
+
+COVID-19 is a worldwide public health emergency caused by SARS-CoV-2. Genomic surveillance of SARS-CoV-2 emerging variants is important for pandemic monitoring and informing public health responses. Through an interstate academic-public health partnership, we established Rhode Island's capacity to sequence SARS-CoV-2 genomes and created a systematic surveillance program to monitor the prevalence of SARS-CoV-2 variants in the state. We describe circulating SARS-CoV-2 lineages in Rhode Island; provide a timeline for the emerging and expanding contribution of variants of concern (VOC) and variants of interest (VOI), from their first introduction to their eventual predominance over other lineages; and outline the frequent identification of known adaptively beneficial spike protein mutations that appear to have independently arisen in non-VOC/non-VOI lineages. Overall, the described Rhode Island- centric genomic surveillance initiative provides a valuable perspective on SARS-CoV-2 in the state and contributes data of interest for future epidemiological studies and state-to-state comparisons.
+
+### Metagenomic sequencing with spiked primer enrichment for viral diagnostics and genomic surveillance.
+
+- PMID: [31932713](https://pubmed.ncbi.nlm.nih.gov/31932713/)
+- Year / journal: 2020 / Nature microbiology
+- Authors: Deng X, Achari A, Federman S, Yu G, Somasekar S, B&#xe1;rtolo I et al.
+- DOI: 10.1038/s41564-019-0637-9
+- Recommendation: `probably-skip` (score 4)
+- Matched searches: Investment, costing, economics, and return on investment
+- Theme hits: economic/costing: cost; implementation: laboratory
+
+Metagenomic next-generation sequencing (mNGS), the shotgun sequencing of RNA and DNA from clinical samples, has proved useful for broad-spectrum pathogen detection and the genomic surveillance of viral outbreaks. An additional target enrichment step is generally needed for high-sensitivity pathogen identification in low-titre infections, yet available methods using PCR or capture probes can be limited by high cost, narrow scope of detection, lengthy protocols and/or cross-contamination. Here, we developed metagenomic sequencing with spiked primer enrichment (MSSPE), a method for enriching targeted RNA viral sequences while simultaneously retaining metagenomic sensitivity for other pathogens. We evaluated MSSPE for 14 different viruses, yielding a median tenfold enrichment and mean 47% (&#xb1;16%) increase in the breadth of genome coverage over mNGS alone. Virus detection using MSSPE arboviral or haemorrhagic fever viral panels was comparable in sensitivity to specific PCR, demonstrating 95% accuracy for the detection of Zika, Ebola, dengue, chikungunya and yellow fever viruses in plasma samples from infected patients. Notably, sequences from re-emerging and/or co-infecting viruses that have not been specifically targeted a priori, including Powassan and Usutu, were successfully enriched using MSSPE. MSSPE is simple, low cost, fast and deployable on either benchtop or portable nanopore sequencers, making this method directly applicable for diagnostic laboratory and field use.
+
+### Whole genome sequencing analysis of body mass index identifies novel African ancestry-specific risk allele.
+
+- PMID: [40216759](https://pubmed.ncbi.nlm.nih.gov/40216759/)
+- Year / journal: 2025 / Nature communications
+- Authors: Zhang X, Brody JA, Graff M, Highland HM, Chami N, Xu H et al.
+- DOI: 10.1038/s41467-025-58420-2
+- Recommendation: `probably-skip` (score 3)
+- Matched searches: Why genomics: public-health value, benefits, and limitations
+- Theme hits: value case: benefit
+
+Obesity is a major public health crisis associated with high mortality rates. Previous genome-wide association studies (GWAS) investigating body mass index (BMI) have largely relied on imputed data from European individuals. This study leveraged whole-genome sequencing (WGS) data from 88,873 participants from the Trans-Omics for Precision Medicine (TOPMed) Program, of which 51% were of non-European population groups. We discovered 18 BMI-associated signals (P&#x2009;-9), including two secondary signals. Notably, we identified and replicated a novel low-frequency single nucleotide polymorphism (SNP) in MTMR3 that was common in individuals of African descent. Using a diverse study population, we further identified two novel secondary signals in known BMI loci and pinpointed two likely causal variants in the POC5 and DMD loci. Our work demonstrates the benefits of combining WGS and diverse cohorts in expanding current catalog of variants and genes confer risk for obesity, bringing us one step closer to personalized medicine.
+
+### Cov2clusters: genomic clustering of SARS-CoV-2 sequences.
+
+- PMID: [36258173](https://pubmed.ncbi.nlm.nih.gov/36258173/)
+- Year / journal: 2022 / BMC genomics
+- Authors: Sobkowiak B, Kamelian K, Zlosnik JEA, Tyson J, Silva AGD, Hoang LMN et al.
+- DOI: 10.1186/s12864-022-08936-4
+- Recommendation: `probably-skip` (score 3)
+- Matched searches: Bioinformatics, data systems, workflows, and infrastructure
+- Theme hits: limits/equity/constraints: challenge
+
+BACKGROUND: The COVID-19 pandemic remains a global public health concern. Advances in sequencing technologies has allowed for high numbers of SARS-CoV-2 whole genome sequence (WGS) data and rapid sharing of sequences through global repositories to enable almost real-time genomic analysis of the pathogen. WGS data has been used previously to group genetically similar viral pathogens to reveal evidence of transmission, including methods that identify distinct clusters on a phylogenetic tree. Identifying clusters of linked cases can aid in the regional surveillance and management of the disease. In this study, we present a novel method for producing stable genomic clusters of SARS-CoV-2 cases, cov2clusters, and compare the accuracy and stability of our approach to previous methods used for phylogenetic clustering using real-world SARS-CoV-2 sequence data obtained from British Columbia, Canada. RESULTS: We found that cov2clusters produced more stable clusters than previously used phylogenetic clustering methods when adding sequence data through time, mimicking an increase in sequence data through the pandemic. Our method also showed high accuracy when predicting epidemiologically informed clusters from sequence data. CONCLUSIONS: Our new approach allows for the identification of stable clusters of SARS-CoV-2 from WGS data. Producing high-resolution SARS-CoV-2 clusters from sequence data alone can a challenge and, where possible, both genomic and epidemiological data should be used in combination.
+
+### Editorial: Integration of NGS in clinical and public health microbiology workflows: applications, compliance, quality considerations.
+
+- PMID: [38322128](https://pubmed.ncbi.nlm.nih.gov/38322128/)
+- Year / journal: 2024 / Frontiers in public health
+- Authors: Yang S, Kozyreva VK, Timme RE, Hemarajata P
+- DOI: 10.3389/fpubh.2024.1357098
+- Recommendation: `probably-skip` (score 2)
+- Matched searches: Bioinformatics, data systems, workflows, and infrastructure
+- Theme hits: data/bioinformatics infrastructure: workflow
+
+No abstract returned by PubMed.
+
+### Pathogen Genomics in Public Health.
+
+- PMID: [31881145](https://pubmed.ncbi.nlm.nih.gov/31881145/)
+- Year / journal: 2019 / The New England journal of medicine
+- Authors: Armstrong GL, MacCannell DR, Taylor J, Carleton HA, Neuhaus EB, Bradbury RS et al.
+- DOI: 10.1056/NEJMsr1813907
+- Recommendation: `probably-skip` (score 0)
+- Matched searches: Foodborne pathogen genomics and microbial food safety
+- Theme hits: foodborne: foodborne
+
+Rapid advances in DNA sequencing technology ("next-generation sequencing") have inspired optimism about the potential of human genomics for "precision medicine." Meanwhile, pathogen genomics is already delivering "precision public health" through more effective investigations of outbreaks of foodborne illnesses, better-targeted tuberculosis control, and more timely and granular influenza surveillance to inform the selection of vaccine strains. In this article, we describe how public health agencies have been adopting pathogen genomics to improve their effectiveness in almost all domains of infectious disease. This momentum is likely to continue, given the ongoing development in sequencing and sequencing-related technologies.
+
+### Editorial: Pathogen Genomics: Empowering Infectious Disease Surveillance and Outbreak Investigations.
+
+- PMID: [32509718](https://pubmed.ncbi.nlm.nih.gov/32509718/)
+- Year / journal: 2020 / Frontiers in public health
+- Authors: Struelens MJ, Sintchenko V
+- DOI: 10.3389/fpubh.2020.00179
+- Recommendation: `probably-skip` (score -2)
+- Matched searches: National implementation, readiness, and capability building
+- Theme hits: none
+
+No abstract returned by PubMed.

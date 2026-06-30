@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next dev --hostname 127.0.0.1 --port 4321",
     "build": "next build",
-    "preview": "next start"
+    "preview": "next start",
+    "pubmed:discover": "node scripts/pubmed-discover.mjs"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.19",
