@@ -1,37 +1,22 @@
-# Briefing Note: Proposed Pathogen Genomics Data Guidance Initiative
+# Briefing Note: Source-Backed Knowledge Base Build
 
 ## Opportunity
 
-There is a clear gap in pathogen-agnostic best practices for managing pathogen genomics data and the infrastructure required for sustainable surveillance. Existing disease-specific programmes, including AMR, are developing guidance that shares many common foundations across pathogens.
+Existing PHA4GE infrastructure material provides a strong starting source pack for pathogen genomics compute infrastructure, workflow execution, data flow, IAM, storage/backup facilities notes, and implementation vignettes.
 
 ## Proposed Response
 
-Establish a technical working group to consolidate existing community best practices into practical guidance covering the full data lifecycle, including QC, storage, backup, infrastructure, standards, analytical principles, governance, and sustainability.
+Build the knowledge base as a source-backed extraction and assembly system rather than as a freshly drafted guidance document. Each module records source basis, extracted/adapted text, figures, gaps, and status.
 
-## Proposed Partners
+## Current Source Pack
 
-- WHO
-- CPG
-- CGPS
-- Fiocruz
-- PHA4GE
-- disease-programme experts
-- country implementation partners
-
-## Proposed Outputs
-
-- pathogen-agnostic guidance document
-- modular knowledge base
-- implementation checklists
-- country readiness assessment
-- infrastructure requirements framework
-- case studies/vignettes
+- PHA4GE local source archive and extracted text.
+- Public `pha4ge/infrastructure-resources` repository cloned under ignored local source material.
+- Source card committed at `knowledge-base/source-cards/pha4ge-infrastructure.md`.
 
 ## Immediate Next Steps
 
-1. Confirm interest and scope with proposed partners.
-2. Establish a technical working group.
-3. Inventory existing guidance and source material.
-4. Agree chapter structure and editorial process.
-5. Draft first reusable modules from existing PHA4GE and partner material.
-
+1. Review and expand extracted notes from the PHA4GE manuscript.
+2. Redraw only source-backed figure concepts using the minimalist figure system.
+3. Add source cards for metadata, governance, repository/data-sharing, reporting, costing, and quality-management sources.
+4. Keep missing material as explicit gaps until sources are added.

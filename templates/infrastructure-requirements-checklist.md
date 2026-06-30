@@ -1,5 +1,18 @@
 # Infrastructure Requirements Checklist
 
+## Status
+
+`draft template / partially source-backed`
+
+## Source Basis
+
+- Partial basis: PHA4GE five-factor framing, workflow section, data-flow section, IAM section, vignettes, and disaster recovery draft.
+- Missing basis: formal requirements, procurement, service-level, costing, and validation sources.
+
+## Use
+
+Use this checklist as a prompt sheet for requirements discovery. Do not treat it as a complete procurement specification.
+
 ## Use Cases
 
 - [ ] Routine surveillance workflows defined.
@@ -41,3 +54,8 @@
 - [ ] Offboarding process defined.
 - [ ] Data export rules defined.
 
+## Gaps
+
+- Source-backed service levels, support model, and monitoring requirements needed.
+- Source-backed validation/change-control requirements needed.
+- Source-backed costing and procurement requirements needed.

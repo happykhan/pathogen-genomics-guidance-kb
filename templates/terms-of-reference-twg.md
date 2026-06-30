@@ -1,5 +1,17 @@
 # Terms of Reference: Technical Working Group
 
+## Status
+
+`draft template / gap`
+
+## Source Basis
+
+- This is an administrative placeholder. It is not yet source-backed by WHO or partner governance material.
+
+## Use
+
+Use as a starting prompt only. It needs partner review before use as a formal terms of reference.
+
 ## Name
 
 Pathogen Genomics Data and Infrastructure Guidance Technical Working Group
@@ -40,3 +52,6 @@ To develop pathogen-agnostic best-practice guidance for the management of pathog
 
 The group should include expertise in public health genomics, bioinformatics, data management, laboratory operations, central IT, cybersecurity, cloud/HPC infrastructure, standards, AMR, One Health, and country implementation.
 
+## Gaps
+
+- Source-backed mandate, membership rules, decision rights, and review process needed.

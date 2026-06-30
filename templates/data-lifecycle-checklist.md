@@ -1,5 +1,19 @@
 # Data Lifecycle Checklist
 
+## Status
+
+`draft template / mostly gap`
+
+## Source Basis
+
+- Partial basis: PHA4GE data-flow and workflow provenance framing.
+- Partial basis: disaster recovery draft for backup/restoration prompts.
+- Missing basis: full source-backed pathogen genomics data lifecycle model.
+
+## Use
+
+Use this checklist as a placeholder prompt sheet. Items need source review before being treated as guidance.
+
 ## Before Sequencing
 
 - [ ] Required sample metadata fields are defined.
@@ -37,3 +51,9 @@
 - [ ] Restoration has been tested.
 - [ ] Disaster recovery responsibilities are assigned.
 
+## Gaps
+
+- Source-backed metadata and identifier requirements needed.
+- Source-backed QC stages and records needed.
+- Source-backed retention/deletion rules needed.
+- Source-backed reporting and data-sharing requirements needed.

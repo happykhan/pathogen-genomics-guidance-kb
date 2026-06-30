@@ -1,5 +1,18 @@
 # Country Readiness Assessment
 
+## Status
+
+`draft template / not fully source-backed`
+
+## Source Basis
+
+- Partial basis: PHA4GE five-factor framing, data-flow section, IAM section, vignettes, and survey dimensions.
+- Missing basis: formal WHO country-readiness assessment source and scoring rubric.
+
+## Use
+
+Use this as a prompt sheet for collecting information. Do not present it as an endorsed readiness assessment until the gaps below are resolved.
+
 ## Context
 
 - Country/programme:
@@ -43,3 +56,8 @@
 | 2 |  |  |  |  |
 | 3 |  |  |  |  |
 
+## Gaps
+
+- Source-backed scoring method needed.
+- Source-backed country-readiness maturity levels needed.
+- Source-backed interpretation rules needed.

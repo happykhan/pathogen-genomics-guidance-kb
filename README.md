@@ -1,53 +1,45 @@
-# Pathogen Genomics Data and Infrastructure Guidance Knowledge Base
+# Pathogen Genomics Data and Infrastructure Knowledge Base
 
-This repository is a Markdown-first knowledge base for pathogen-agnostic best practices in pathogen genomics data management, bioinformatics infrastructure, workflow execution, storage, backup, standards, access control, and sustainable surveillance operations.
+This repository is a Markdown-first, source-backed knowledge base for WHO-oriented pathogen genomics data and bioinformatics infrastructure guidance.
 
-The immediate aim is to consolidate existing community work into reusable guidance blocks that can feed WHO guidance, AMR-specific guidance, country implementation plans, training material, grant proposals, checklists, and technical working group outputs.
+## Editorial Rule
 
-## Working Principle
+Do not draft new substantive guidance from scratch.
 
-This is not one monolithic document. It is a source-of-truth library:
+- Extract or adapt from source material first.
+- Preserve provenance in source cards and extracted notes.
+- Improve rough source text for clarity only when the source basis is recorded.
+- If a topic lacks source material, create a `Gap` note or skeleton section.
+- Keep large DOCX/PDF/XLSX/TIFF/EPS files out of git unless deliberately agreed later.
 
-- `docs/` contains synthesized guidance modules.
-- `resources/` contains reusable technical notes, vignettes, and implementation material.
-- `source-material/` records provenance for source packs and external materials.
-- `templates/` contains practical checklists and working group templates.
-- `outputs/` contains draft products assembled from the knowledge base.
+## Structure
 
-Keep source material and synthesized guidance separate. Source material preserves provenance; guidance modules should be practical, pathogen-agnostic, and reusable.
+```text
+docs/                  Assembled source-status-aware guidance modules
+knowledge-base/        Extracted notes, source cards, vignettes, and figure briefs
+source-material/       Source-pack indexes and ignored local source clones/packs
+templates/             Module and figure templates
+outputs/               Draft products assembled from the knowledge base
+```
+
+`resources/` has been renamed to `knowledge-base/`.
 
 ## Current Source Pack
 
-The local folder `Best Practices and Vision/` contains an extracted PHA4GE infrastructure source pack. It is intentionally ignored by git because it includes large DOCX/PDF/spreadsheet/figure files.
+The first source pack is PHA4GE infrastructure material:
 
-Local readout:
+- Local ignored archive/extracts: `Best Practices and Vision/`
+- Local readout: `Best Practices and Vision/CONTENT_READOUT.md`
+- Public repository clone, ignored by git: `source-material/local/pha4ge-infrastructure-resources/`
+- Public repository: <https://github.com/pha4ge/infrastructure-resources>
+- Committed source card: `knowledge-base/source-cards/pha4ge-infrastructure.md`
 
-`Best Practices and Vision/CONTENT_READOUT.md`
+The strongest current coverage is compute infrastructure, responsibility models, workflow systems, portability, data flow, IAM, backup/power/cooling notes, vignettes, and survey dimensions. Metadata, repositories, broader governance, analysis-to-decision use, costing, and formal maturity assessment remain gaps.
 
-The cleanest current manuscript source in that pack appears to be:
+## Working Flow
 
-`Best Practices and Vision/MANUSCRIPT Framework for Compute Infrastructure for Pathogen Genomics Labs/VerixivSubmitted/PHA4GE_InfrastructureRecommendations.docx`
-
-## Suggested Use
-
-1. Add or index source material under `source-material/`.
-2. Distill each source into one or more short guidance modules in `docs/` or `resources/`.
-3. Preserve provenance in each module using a `Source basis` section.
-4. Assemble audience-specific products in `outputs/`.
-5. Use pull requests for substantive changes once the repo is published.
-
-## Initial Scope
-
-This knowledge base covers the whole data lifecycle:
-
-- planning and governance
-- sample/data ingestion
-- quality control
-- metadata and standards
-- storage, backup, archiving, and retention
-- compute infrastructure
-- workflow management and reproducibility
-- access control and security
-- analysis principles
-- skills, staffing, sustainability, and procurement
-
+1. Add or clone source material under ignored local paths.
+2. Commit only source cards, indexes, extracted notes, CSV extracts when appropriate, and lightweight editable figures.
+3. Promote extracted notes into `docs/` only when each module records `Source Basis`, `Status`, and `Gaps`.
+4. Use figure briefs before redrawing figures.
+5. Keep missing topics visible as gaps instead of filling them with generic prose.

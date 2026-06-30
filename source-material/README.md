@@ -1,17 +1,15 @@
 # Source Material
 
-Use this directory to index source packs and preserve provenance. Do not dump large unpublished files here unless the project has agreed how they should be licensed and stored.
+Use this directory to index source packs and preserve provenance. Do not commit large unpublished source files unless storage, licensing, and redistribution have been agreed.
 
-Recommended pattern:
+## Pattern
 
 ```text
 source-material/
   pha4ge-infrastructure/
     README.md
-    source-index.md
   local/
-    ignored-source-pack/
+    ignored-source-pack-or-clone/
 ```
 
-For large local-only archives, place the files under `source-material/local/` or another git-ignored folder and commit only a source index or readout.
-
+`source-material/local/` is git-ignored. Commit source cards, extracted notes, indexes, and lightweight editable assets instead of large binaries.
