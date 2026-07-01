@@ -31,7 +31,8 @@ This national framework is a strong source for governance, collaboration, accred
 
 - Resource finder candidate source.
 - Cited in data-sharing and national implementation guidance prose.
+- Supports the beta national capability-domain checklist.
 
 ## Gaps
 
-- Needs detailed extraction if the guide develops a formal governance or maturity rubric.
+- Needs detailed extraction if the guide develops a formal governance model, national operating model, or maturity rubric.

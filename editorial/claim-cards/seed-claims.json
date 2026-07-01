@@ -877,5 +877,30 @@
     "confidence": "medium",
     "limitations": "Does not define metagenomic diagnostic workflows, thresholds, clinical decision rules or report wording.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "claim-beta-national-capability-domains",
+    "sourceId": "ukhsa-pathogen-genomics-strategy-2024",
+    "sourceLocator": "UKHSA 2024 strategy; Australian National Microbial Genomics Framework 2025-2027; AusPathoGen national implementation account",
+    "evidenceItemIds": [
+      "evidence-beta-national-capability-domains",
+      "evidence-beta-implementation-dependency-matrix",
+      "evidence-beta-workforce-responsibility-template"
+    ],
+    "claim": "A national pathogen genomics programme should be planned across capability domains, including public-health use cases, laboratory services, workforce, data and analytics, governance, collaboration, data sharing, quality, sustainability and evaluation.",
+    "extractedText": "UKHSA, the Australian national framework and AusPathoGen all frame national pathogen genomics as more than sequencing capacity: they name laboratories, workforce, data and analytics, governance, collaboration, data sharing, standard methods, secure platforms, quality assurance, training, sustainability and evaluation.",
+    "notes": "Use for a national-scale capability-domain table. Do not present as a certified maturity rubric.",
+    "tags": ["national-capability", "governance", "workforce", "data-analytics", "laboratories", "collaboration", "evaluation"],
+    "candidateSectionIds": [
+      "implementation-patterns-case-studies",
+      "workforce-sustainability-costing",
+      "maturity-next-steps"
+    ],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "national-scale",
+    "confidence": "high",
+    "limitations": "Does not define universal governance structures, staffing ratios, national architecture, procurement rules or a validated maturity score.",
+    "reviewStatus": "reviewed"
   }
 ]

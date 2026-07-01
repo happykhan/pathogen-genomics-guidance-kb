@@ -3456,6 +3456,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "PHA4GE's implementation comparison gives the practical trade-off. A laptop model can be useful when internet or power is unreliable, but it shifts management to the operator and limits scalability and access-control structures. On-premises systems can meet local needs, but job-processing infrastructure requires expertise. Cloud platforms can reduce local hardware barriers, but they depend on internet connectivity for upload and may shift cost, data-residency and vendor-dependency questions elsewhere.",
       "The East African Community assessment shows why this matters. External sequencing and analysis can be useful during capability building, but long-term reliance on third parties may delay real-time surveillance decisions and limit local interpretation if local sequencing, compute, bioinformatics, and data-sharing capacity are not developed. The guide should therefore treat external support as a dependency to manage, not as a failure or a complete solution.",
       "The implementation collection adds concrete network examples: Kenya's AMR paper describes training public-health scientists to generate genomic data and harmonized reports; the European reference-laboratory rollout paper describes guidance and support for national food, feed, and veterinary laboratories; California COVIDNet shows a large collaborative model linking many sequencing laboratories, cloud-based analysis, training, and visualization workflows.",
+      "National strategies and frameworks add another layer: they treat pathogen genomics as a capability across laboratories, workforce, data and analytics, governance, collaboration, data sharing, quality, sustainability and evaluation. UKHSA, the Australian framework and AusPathoGen all support this domain view. A national programme should therefore compare models by capability domains as well as by where sequencing and analysis happen.",
       "For beta, compare implementation models in a dependency matrix. The purpose is not to rank laptop, local server, HPC, cloud, managed platform, centralised reference, hybrid, collaborative, or external-support models as universally better or worse. The purpose is to make the dependencies explicit: who owns each layer, which public-health use case is supported, what happens when internet, power, staff, storage, provider access, or partner support fails, and what local capability is being built.",
     ],
     bodySourceIds: {
@@ -3474,6 +3475,12 @@ export const guidanceBlocks: GuidanceBlock[] = [
         "mgen-california-covidnet-2023",
       ],
       6: [
+        "ukhsa-pathogen-genomics-strategy-2024",
+        "australia-microbial-genomics-framework-2025",
+        "auspathogen-implementation-2025",
+        "who-genomic-surveillance-progress-2023",
+      ],
+      7: [
         "pha4ge-infrastructure",
         "clinical-microbiology-implementation-2026",
         "auspathogen-implementation-2025",
@@ -3486,6 +3493,108 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "Beta matrix columns: supported use case, sample route, sequencing location, analysis location, data host, workflow owner, validation owner, access manager, support route, internet or power dependency, data-residency issue, recurring cost line, local capability built, failure mode, and fallback route.",
     ],
     tables: [
+      {
+        title: "Beta national capability-domain checklist",
+        summary:
+          "Use this table for national-scale planning before choosing a centralised, distributed, collaborative or managed implementation model.",
+        columns: ["Capability domain", "What to define", "Why it matters", "Beta caution"],
+        rows: [
+          {
+            cells: [
+              "Public-health priorities and users",
+              "Priority pathogens or programmes, decisions to support, users of results, response routes and expected outcomes.",
+              "National strategy sources start from public-health decision-making rather than sequencing capacity alone.",
+              "Do not build a national platform without naming the decisions and users it serves.",
+            ],
+            sourceIds: [
+              "who-national-genomic-surveillance-strategy-2023",
+              "ukhsa-pathogen-genomics-strategy-2024",
+              "australia-microbial-genomics-framework-2025",
+            ],
+          },
+          {
+            cells: [
+              "Laboratory network and quality",
+              "Participating laboratories, reference functions, sequencing routes, standard methods, QA, EQA or proficiency testing, and comparability across sites.",
+              "National capability depends on reliable, comparable generation of data across the network.",
+              "Shared national goals do not remove local laboratory validation and quality responsibilities.",
+            ],
+            sourceIds: [
+              "australia-microbial-genomics-framework-2025",
+              "auspathogen-implementation-2025",
+              "mgen-eurl-amr-proficiency-test-2023",
+            ],
+          },
+          {
+            cells: [
+              "Data, analytics and platforms",
+              "Data model, analysis routes, standard bioinformatics methods, secure platform or workspace, visualisation, interoperability and support route.",
+              "AusPathoGen and the Australian framework both emphasise data integration, analysis platforms and infrastructure for storage and sharing.",
+              "A national platform is a governed service; it is not only shared file storage or a dashboard.",
+            ],
+            sourceIds: [
+              "auspathogen-implementation-2025",
+              "australia-microbial-genomics-framework-2025",
+              "ukhsa-pathogen-genomics-strategy-2024",
+              "who-genomic-data-sharing-platforms-2025",
+            ],
+          },
+          {
+            cells: [
+              "Governance and data sharing",
+              "Governance committees, pathogen working groups, ethics and data-sharing agreements, access model, contributor recognition and legal or policy route.",
+              "National collaborations need trust, transparency and controlled sharing before data move across organisations.",
+              "The beta guide can name governance functions, but not jurisdiction-specific legal terms.",
+            ],
+            sourceIds: [
+              "auspathogen-implementation-2025",
+              "australia-microbial-genomics-framework-2025",
+              "who-pathogen-genome-data-sharing-2022",
+              "who-genomic-data-sharing-platforms-2025",
+            ],
+          },
+          {
+            cells: [
+              "Workforce, training and interpretation",
+              "Laboratory, bioinformatics, epidemiology, data-management, quality, reporting and public-health user competencies; training for data generators and end users.",
+              "National implementation requires users who can generate, interpret and act on genomic data.",
+              "Training should include interpretation and action routes, not only sequencing or pipeline operation.",
+            ],
+            sourceIds: [
+              "ukhsa-pathogen-genomics-strategy-2024",
+              "auspathogen-implementation-2025",
+              "who-genomic-surveillance-progress-2023",
+              "clinical-microbiology-implementation-2026",
+            ],
+          },
+          {
+            cells: [
+              "Sustainability and evaluation",
+              "Financing, procurement, support, value-for-money or cost-effectiveness evaluation, service metrics and review of public-health usefulness.",
+              "National programmes need evidence that capability is sustainable and useful, not only technically impressive.",
+              "The current guide does not provide a universal national cost model or certified maturity score.",
+            ],
+            sourceIds: [
+              "ukhsa-pathogen-genomics-strategy-2024",
+              "auspathogen-implementation-2025",
+              "who-genomics-costing-tool-manual-2024",
+              "wgs-economic-review",
+            ],
+          },
+        ],
+        sourceIds: [
+          "ukhsa-pathogen-genomics-strategy-2024",
+          "australia-microbial-genomics-framework-2025",
+          "auspathogen-implementation-2025",
+          "who-national-genomic-surveillance-strategy-2023",
+          "who-genomic-surveillance-progress-2023",
+          "who-pathogen-genome-data-sharing-2022",
+          "who-genomic-data-sharing-platforms-2025",
+          "clinical-microbiology-implementation-2026",
+          "who-genomics-costing-tool-manual-2024",
+          "wgs-economic-review",
+        ],
+      },
       {
         title: "Beta implementation dependency matrix",
         summary:

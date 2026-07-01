@@ -655,5 +655,16 @@
     "tags": ["metagenomics", "scope", "clinical-microbiology", "reporting", "validation", "public-health"],
     "limitations": "Supports a scope boundary and service-model prompt. It does not provide a metagenomic diagnostic workflow, validation standard, sensitivity threshold, report template or clinical decision rule.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-beta-national-capability-domains",
+    "sourceId": "ukhsa-pathogen-genomics-strategy-2024",
+    "sourceLocator": "UKHSA 2024 strategy; Australian National Microbial Genomics Framework 2025-2027; AusPathoGen national implementation account; extracted note national-frameworks-ukhsa-australia-auspathogen.md",
+    "evidenceType": "passage-note",
+    "excerpt": "workforce, laboratories, data and analytics capabilities",
+    "passageSummary": "UKHSA frames pathogen genomics as part of infectious-disease control and public-health decision-making, naming workforce, laboratories, data and analytics, collaboration, standardised laboratory services, bioinformatic pipelines, translational services, data sharing, sustainability and value-for-money evaluation. The Australian framework is aimed at decision-makers, funders and policymakers and identifies governance, leadership, financing, laboratory capability, human resources, information systems, access to technologies, service delivery, data governance, interoperability, quality assurance, proficiency testing and HPC infrastructure. AusPathoGen describes a national partnership across academia, public-health laboratories and public-health agencies with governance committees, pathogen-specific working groups, bioinformatics sub-working groups, a secure data-analysis platform, ethics and data-sharing arrangements, training and evaluation.",
+    "tags": ["national-capability", "governance", "workforce", "data-analytics", "laboratories", "collaboration", "evaluation"],
+    "limitations": "Supports a beta national capability-domain checklist. It does not define a universal national operating model, governance template, staffing structure or maturity score.",
+    "reviewStatus": "reviewed"
   }
 ]

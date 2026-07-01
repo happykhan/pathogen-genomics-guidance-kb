@@ -18,6 +18,8 @@ The risk is false precision. A laptop-based field workflow may be low maturity f
 
 The dynamic guide now includes a beta maturity risk-reduction worksheet. It asks what the programme can reliably do today, which dependency is fragile, and what would fail if a key person, supplier, network connection, platform, storage system, workflow, report route, or support route became unavailable. It should be used to choose the next service risk to reduce, not to produce a certified score.
 
+The dynamic guide also now includes a beta national capability-domain checklist. UKHSA, the Australian national framework, and AusPathoGen support treating national implementation as a set of linked capabilities: public-health priorities and users, laboratory network and quality, data and analytics platforms, governance and data sharing, workforce and interpretation, sustainability and evaluation. This is a planning checklist, not a national architecture or maturity score.
+
 For now, this chapter should remain a design note plus beta worksheet. The next step is to extract WHO, ECDC, APHL, UKHSA, and Australian framework sources to see whether they already define capability levels, implementation stages, evidence requirements, or readiness dimensions that can be adapted with provenance.
 
 ## Source Basis
@@ -27,6 +29,8 @@ For now, this chapter should remain a design note plus beta worksheet. The next 
 - `knowledge-base/extracted-notes/vignettes-and-survey-scoring.md`
 - `knowledge-base/source-cards/phe-implementing-pathogen-genomics-case-study.md`
 - `knowledge-base/source-cards/who-genomic-surveillance-progress-2023.md`
+- `knowledge-base/source-cards/ukhsa-pathogen-genomics-strategy-2024.md`
+- `knowledge-base/source-cards/australia-national-microbial-genomics-framework-2025.md`
 - `knowledge-base/source-cards/east-africa-genomics-landscape-2024.md`
 - `knowledge-base/source-cards/auspathogen-implementation-2025.md`
 - `knowledge-base/source-cards/clinical-microbiology-implementation-2026.md`
@@ -42,6 +46,7 @@ For now, this chapter should remain a design note plus beta worksheet. The next 
 - Formal source-backed maturity levels are still needed before any scoring tool is presented.
 - Scoring rubric, evidence requirements, interpretation rules, and validation against real programmes are still needed.
 - Country/laboratory readiness mapping is still needed.
+- National governance templates, operating-model examples, and capability-level definitions still need deeper extraction before being turned into an assessment tool.
 
 ## Status
 

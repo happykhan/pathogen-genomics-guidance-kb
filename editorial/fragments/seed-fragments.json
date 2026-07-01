@@ -1282,6 +1282,57 @@
     "updatedAt": "2026-07-01"
   },
   {
+    "id": "fragment-beta-national-capability-domain-checklist",
+    "sectionId": "implementation-patterns-case-studies",
+    "title": "Beta national capability-domain checklist",
+    "kind": "table",
+    "text": "For national-scale planning, compare capability domains before selecting an implementation model. The beta domains are public-health priorities and users, laboratory network and quality, data and analytics platforms, governance and data sharing, workforce and interpretation, and sustainability and evaluation.",
+    "claimIds": [
+      "claim-beta-national-capability-domains",
+      "claim-beta-implementation-dependency-matrix",
+      "claim-beta-workforce-responsibility-template"
+    ],
+    "sourceIds": [
+      "ukhsa-pathogen-genomics-strategy-2024",
+      "australia-microbial-genomics-framework-2025",
+      "auspathogen-implementation-2025",
+      "who-national-genomic-surveillance-strategy-2023",
+      "who-genomic-surveillance-progress-2023",
+      "who-pathogen-genome-data-sharing-2022",
+      "who-genomic-data-sharing-platforms-2025",
+      "clinical-microbiology-implementation-2026",
+      "who-genomics-costing-tool-manual-2024",
+      "wgs-economic-review"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "policy",
+        "funder",
+        "lab-lead",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "national-scale",
+        "upgrading",
+        "exploring"
+      ],
+      "topics": [
+        "national-capability",
+        "implementation",
+        "governance",
+        "workforce",
+        "data-sharing",
+        "sustainability"
+      ]
+    },
+    "order": 45,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta capability-domain checklist, not a national architecture, governance template or maturity score.",
+    "updatedAt": "2026-07-01"
+  },
+  {
     "id": "fragment-beta-implementation-dependency-matrix",
     "sectionId": "implementation-patterns-case-studies",
     "title": "Beta implementation dependency matrix",

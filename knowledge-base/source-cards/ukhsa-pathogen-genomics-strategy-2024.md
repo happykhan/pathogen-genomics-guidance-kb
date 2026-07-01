@@ -31,7 +31,8 @@ This strategy is useful for national public-health framing, agency-wide genomics
 
 - Resource finder candidate source.
 - Cited in data-sharing, workforce, and national implementation guidance prose.
+- Supports the beta national capability-domain checklist.
 
 ## Gaps
 
-- Needs further extraction if the guide develops a dedicated national strategy module.
+- Needs further extraction if the guide develops a dedicated national strategy module, national operating model, or maturity/capability assessment.
