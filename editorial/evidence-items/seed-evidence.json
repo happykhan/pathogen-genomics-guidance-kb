@@ -23,7 +23,7 @@
   {
     "id": "evidence-phe-implementation-scope",
     "sourceId": "phe-case-study",
-    "sourceLocator": "tmp/pdfs/source-extracts/implementing_pathogen_genomics_a_case_study.txt; sections 3.1, 3.3 and 3.5",
+    "sourceLocator": "PHE case study, sections 3.1 Business and capital planning, 3.3 Workflow development, and 3.5 Staff training and engagement",
     "evidenceType": "short-excerpt",
     "excerpt": "A sequencing service requires extensive IT infrastructure",
     "passageSummary": "The PHE case study describes business/capital planning, IT infrastructure, storage and processing requirements, workflow development from sample receipt to reporting, LIMS interaction with bioinformatics infrastructure, and staff training needs.",
@@ -34,7 +34,7 @@
   {
     "id": "evidence-pha4ge-five-infrastructure-questions",
     "sourceId": "pha4ge-infrastructure",
-    "sourceLocator": "Best Practices and Vision/extracted_text/pdf/MANUSCRIPT_Framework_for_Compute_Infrastructure_for_Pathogen_Genomics_Labs_2025-researchsquare-preprint.txt; Five factors for bioinformatics infrastructure",
+    "sourceLocator": "PHA4GE infrastructure manuscript, Five factors for bioinformatics infrastructure",
     "evidenceType": "short-excerpt",
     "excerpt": "which parts of the pathogen bioinformatics analysis solution do you want to be responsible for?",
     "passageSummary": "The PHA4GE manuscript introduces five infrastructure questions covering responsibility, workflow management, compute location, data flow, and access.",
@@ -45,7 +45,7 @@
   {
     "id": "evidence-pha4ge-beyond-cpu-storage",
     "sourceId": "pha4ge-infrastructure",
-    "sourceLocator": "Best Practices and Vision/extracted_text/pdf/MANUSCRIPT_Framework_for_Compute_Infrastructure_for_Pathogen_Genomics_Labs_2025-researchsquare-preprint.txt; conclusion",
+    "sourceLocator": "PHA4GE infrastructure manuscript, conclusion",
     "evidenceType": "short-excerpt",
     "excerpt": "not achieved by CPU cores and terabytes of storage alone",
     "passageSummary": "The PHA4GE manuscript states that compute infrastructure must include workflow execution engines, data management systems, system configuration, and people to maintain the infrastructure.",

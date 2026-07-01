@@ -168,7 +168,9 @@ const claimCards = readJsonRecords("editorial/claim-cards");
 const sectionBriefs = readJsonRecords("editorial/section-briefs");
 const fragments = readJsonRecords("editorial/fragments");
 const evidenceItemIds = new Set();
+const reviewedEvidenceItemIds = new Set();
 const claimIds = new Set();
+const reviewedClaimIds = new Set();
 const fragmentIds = new Set();
 
 function assertNoLocalPaths(record, label) {
@@ -198,9 +200,19 @@ evidenceItems.forEach((item) => {
     errors.push(`Evidence item ID is duplicated: ${item.id}`);
   }
   evidenceItemIds.add(item.id);
+  if (item.reviewStatus === "reviewed") reviewedEvidenceItemIds.add(item.id);
 
   if (!sourceIds.has(item.sourceId)) {
     errors.push(`Evidence item ${item.id} references unknown source ID: ${item.sourceId}`);
+  }
+
+  if (
+    typeof item.sourceLocator === "string" &&
+    (item.sourceLocator.includes("tmp/") ||
+      item.sourceLocator.includes("Best Practices and Vision/") ||
+      item.sourceLocator.includes("source-material/local/"))
+  ) {
+    errors.push(`Evidence item ${item.id} sourceLocator must be a public/human locator, not a local file path.`);
   }
 
   if (!validEditorialStatuses.has(item.reviewStatus)) {
@@ -232,6 +244,7 @@ claimCards.forEach((claim) => {
     errors.push(`Claim card ID is duplicated: ${claim.id}`);
   }
   claimIds.add(claim.id);
+  if (claim.reviewStatus === "reviewed") reviewedClaimIds.add(claim.id);
 
   if (!sourceIds.has(claim.sourceId)) {
     errors.push(`Claim card ${claim.id} references unknown source ID: ${claim.sourceId}`);
@@ -248,6 +261,9 @@ claimCards.forEach((claim) => {
   claim.evidenceItemIds.forEach((itemId) => {
     if (!evidenceItemIds.has(itemId)) {
       errors.push(`Claim card ${claim.id} references unknown evidence item ID: ${itemId}`);
+    }
+    if (claim.reviewStatus === "reviewed" && !reviewedEvidenceItemIds.has(itemId)) {
+      errors.push(`Reviewed claim card ${claim.id} depends on non-reviewed evidence item: ${itemId}`);
     }
   });
 
@@ -308,6 +324,9 @@ fragments.forEach((fragment) => {
     fragment.claimIds.forEach((claimId) => {
       if (!claimIds.has(claimId)) {
         errors.push(`Whitepaper fragment ${fragment.id} references unknown claim ID: ${claimId}`);
+      }
+      if (fragment.reviewStatus === "reviewed" && !reviewedClaimIds.has(claimId)) {
+        errors.push(`Reviewed whitepaper fragment ${fragment.id} depends on non-reviewed claim: ${claimId}`);
       }
     });
   }

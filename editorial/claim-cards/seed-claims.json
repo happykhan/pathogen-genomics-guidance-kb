@@ -14,7 +14,7 @@
     "implementationStage": "multiple",
     "confidence": "high",
     "limitations": "Broad strategic source; does not provide local implementation detail or cost estimates.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "draft"
   },
   {
     "id": "claim-phe-service-transition",
@@ -90,7 +90,7 @@
     "implementationStage": "multiple",
     "confidence": "medium",
     "limitations": "Does not justify a universal return-on-investment claim.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "draft"
   },
   {
     "id": "claim-mgen-bioinformatics-implementation",
@@ -110,6 +110,6 @@
     "implementationStage": "multiple",
     "confidence": "high",
     "limitations": "Needs conversion into concrete checklists and examples.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "draft"
   }
 ]

@@ -3,6 +3,7 @@
 *.swp
 *.tmp
 tmp/
+outputs/evidence-candidates/
 
 # Node/framework generated output
 node_modules/

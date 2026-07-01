@@ -110,6 +110,25 @@ http://127.0.0.1:5177
 
 The local review tool writes only to `editorial/fragments/*.json`. It is intended for laptop review and should not be deployed. The public `/backstage` page is read-only and safe to share as a debug view.
 
+## Fresh Evidence Extraction
+
+Run:
+
+```bash
+npm run evidence:extract
+```
+
+The extraction script reads `editorial/evidence-searches.json`, searches local extracted text files, and writes candidate evidence records under `outputs/evidence-candidates/`. That output is git-ignored because it is a local review aid and may contain source snippets.
+
+Candidate evidence is not approved evidence. A candidate must be reviewed, shortened if needed, and converted into an `editorial/evidence-items/*.json` record before a claim or fragment can depend on it.
+
+Evidence status rules:
+
+- `reviewed` evidence should come from a source-text excerpt, figure, table, or precise passage note.
+- `source-card-summary` evidence can be useful during triage, but it must remain `draft`.
+- A `reviewed` claim cannot depend on draft evidence.
+- A `reviewed` fragment cannot depend on draft claims.
+
 ## Content QA Checklist
 
 - Every `sourceId`, `summarySourceId`, and `bodySourceId` exists in `src/data/sources.ts`.

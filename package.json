@@ -10,6 +10,7 @@
     "content:check": "node scripts/validate-content.mjs",
     "qa:scenarios": "node scripts/qa-scenarios.mjs",
     "pubmed:discover": "node scripts/pubmed-discover.mjs",
+    "evidence:extract": "node scripts/extract-evidence-candidates.mjs",
     "editorial:review": "node scripts/editorial-review-server.mjs"
   },
   "dependencies": {
