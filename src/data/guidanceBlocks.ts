@@ -308,6 +308,157 @@ export const guidanceBlocks: GuidanceBlock[] = [
     technicalDetail: [
       "Minimum scenario fields: pathogen or programme, use case, sampling strategy, annual throughput, turnaround target, sequencing model, bioinformatics model, storage/retention model, staff roles, quality-management scope, data-sharing route, expected benefit, excluded costs, and evidence confidence.",
     ],
+    tables: [
+      {
+        title: "Beta investment-case scenario table",
+        summary:
+          "Use this to compare service options before making a funding request. It keeps costs, benefits and evidence limits visible instead of presenting a generic return-on-investment claim.",
+        columns: ["Scenario", "Assumptions to state", "Benefits that may be argued", "Evidence caution"],
+        rows: [
+          {
+            cells: [
+              "Pilot or proof of service",
+              "Pathogen or programme, use case, pilot volume, sample route, expected output, validation boundary, staff roles, data-management route and what is deliberately out of scope.",
+              "Can show feasibility, local workflow requirements, training needs, data bottlenecks, turnaround constraints and whether the planned service is plausible.",
+              "A pilot does not prove routine throughput, sustained cost, replacement of older methods or national-scale benefit.",
+            ],
+            sourceIds: [
+              "who-national-genomic-surveillance-strategy-2023",
+              "phe-case-study",
+              "who-genomics-costing-tool-manual-2024",
+            ],
+          },
+          {
+            cells: [
+              "Outbreak-triggered sequencing",
+              "Trigger criteria, expected surge volume, turnaround need, response team, comparison data, reporting route, costs during quiet periods and costs during incidents.",
+              "May reduce routine expenditure compared with continuous surveillance and can support targeted investigation when an outbreak is suspected.",
+              "Egli and Howden caution that outbreak-triggered sequencing may detect clusters later than continuous or selective surveillance.",
+            ],
+            sourceIds: ["lancet-wgs-economic-strategies-2026", "wgs-economic-review"],
+          },
+          {
+            cells: [
+              "Selective routine surveillance",
+              "Selection criteria, sampling strategy, representativeness limits, annual throughput, laboratory and bioinformatics capacity, reporting cadence and review point for changing criteria.",
+              "Can balance recurrent cost with earlier detection or monitoring where continuous sequencing of all eligible samples is not feasible.",
+              "The case depends heavily on explicit selection criteria and whether unsampled material weakens the intended public-health interpretation.",
+            ],
+            sourceIds: [
+              "lancet-wgs-economic-strategies-2026",
+              "who-national-genomic-surveillance-strategy-2023",
+              "wgs-economic-review",
+            ],
+          },
+          {
+            cells: [
+              "Continuous or routine service",
+              "Expected annual volume, turnaround target, replacement or consolidation of current methods, validation plan, reporting products, user engagement, recurrent staffing, storage, compute and quality costs.",
+              "Can support repeatable surveillance, faster reporting, method consolidation, outbreak detection, AMR or variant monitoring and ongoing service review.",
+              "PHE supports a service-transition pattern, but its scale, infrastructure and cost context should not be treated as universal.",
+            ],
+            sourceIds: [
+              "phe-case-study",
+              "wgs-economic-review",
+              "who-genomics-costing-tool-manual-2024",
+              "national-investment-case-2025",
+            ],
+          },
+          {
+            cells: [
+              "National or distributed capability",
+              "Priority pathogens, geographic coverage, data-flow expectations, laboratory network model, platform or repository strategy, workforce plan, procurement risks and recurrent support.",
+              "Can argue for preparedness, equity of access, earlier detection, national coordination, shared standards and reduced dependency on external analysis.",
+              "Distributed-capability and global-health-security arguments are source-backed, but local cost and benefit estimates still need country-specific assumptions.",
+            ],
+            sourceIds: [
+              "global-solidarity-genomic-surveillance-2026",
+              "who-genomic-surveillance-2022",
+              "who-genomic-surveillance-progress-2023",
+              "national-investment-case-2025",
+            ],
+          },
+        ],
+        sourceIds: [
+          "who-national-genomic-surveillance-strategy-2023",
+          "phe-case-study",
+          "who-genomics-costing-tool-manual-2024",
+          "lancet-wgs-economic-strategies-2026",
+          "wgs-economic-review",
+          "national-investment-case-2025",
+          "global-solidarity-genomic-surveillance-2026",
+          "who-genomic-surveillance-2022",
+          "who-genomic-surveillance-progress-2023",
+        ],
+      },
+      {
+        title: "Evidence transferability check",
+        summary:
+          "Use this before importing a published economic conclusion into a local business case.",
+        columns: ["Check", "Question to answer", "Why it matters", "Beta caution"],
+        rows: [
+          {
+            cells: [
+              "Pathogen and use case",
+              "Is the published evidence about the same pathogen, surveillance objective, report user and response route?",
+              "Economic value depends on what decision changes and what action follows the result.",
+              "Do not transfer foodborne, hospital IPC, respiratory-virus or TB/AMR conclusions without checking the use case.",
+            ],
+            sourceIds: ["wgs-economic-review", "lancet-wgs-economic-strategies-2026", "national-investment-case-2025"],
+          },
+          {
+            cells: [
+              "Sampling and response capacity",
+              "Does the local programme have comparable sampling coverage, turnaround, epidemiology capacity, reporting route and intervention capacity?",
+              "Earlier detection only creates value if the service can sample, analyse, report and respond in time.",
+              "Economic arguments should not assume action from a signal unless the response route is funded and staffed.",
+            ],
+            sourceIds: [
+              "who-national-genomic-surveillance-strategy-2023",
+              "lancet-wgs-economic-strategies-2026",
+              "genometrakr-economic-2021",
+            ],
+          },
+          {
+            cells: [
+              "Cost categories included",
+              "Are personnel, training, quality management, bioinformatics, storage, software, maintenance, facilities, transport and recurrent support included?",
+              "Sequencing cost alone can understate the cost of a sustainable service.",
+              "WHO costing categories support broad costing, not universal prices or salaries.",
+            ],
+            sourceIds: ["who-genomics-costing-tool-manual-2024", "wgs-costing-tool-2024", "phe-case-study"],
+          },
+          {
+            cells: [
+              "Comparator and excluded costs",
+              "What current methods, manual work, duplicated testing, outbreak costs, staff time, delayed reporting or downstream actions are compared or excluded?",
+              "A claimed saving depends on the baseline service and what costs are displaced, added or ignored.",
+              "PHE and GenomeTrakr support specific service cases; they do not remove the need for a local comparator.",
+            ],
+            sourceIds: ["phe-case-study", "genometrakr-economic-2021", "wgs-economic-review"],
+          },
+          {
+            cells: [
+              "Evidence confidence",
+              "Is the claim based on direct local data, a closely matched published evaluation, a modelled scenario, expert judgement or an explicit gap?",
+              "Decision makers need to know which benefits are demonstrated and which are assumptions to test during implementation.",
+              "Price et al. found supportive but heterogeneous evidence and highlighted gaps in LMIC and real-world effectiveness studies.",
+            ],
+            sourceIds: ["wgs-economic-review", "national-investment-case-2025"],
+          },
+        ],
+        sourceIds: [
+          "wgs-economic-review",
+          "lancet-wgs-economic-strategies-2026",
+          "national-investment-case-2025",
+          "who-national-genomic-surveillance-strategy-2023",
+          "genometrakr-economic-2021",
+          "who-genomics-costing-tool-manual-2024",
+          "wgs-costing-tool-2024",
+          "phe-case-study",
+        ],
+      },
+    ],
     audiences: ["director", "policy", "funder", "lab-lead"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
     organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
@@ -322,6 +473,9 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "who-genomics-costing-tool-manual-2024",
       "wgs-costing-tool-2024",
       "who-national-genomic-surveillance-strategy-2023",
+      "global-solidarity-genomic-surveillance-2026",
+      "who-genomic-surveillance-2022",
+      "who-genomic-surveillance-progress-2023",
     ],
     gaps: [
       "A comparative extraction of economic evaluation methods and quantitative estimates is still needed before the guide makes numeric return-on-investment claims.",

@@ -2930,5 +2930,60 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is a beta register for programme design. It does not prescribe organism-specific sampling fractions, cluster thresholds or surveillance targets.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-investment-case-scenario-table",
+    "sectionId": "why-pathogen-genomics",
+    "title": "Investment-case scenario and transferability tables",
+    "kind": "table",
+    "text": "A beta investment case should compare explicit scenarios rather than make a generic return-on-investment claim. The scenario table should distinguish pilots, outbreak-triggered sequencing, selective surveillance, continuous routine service and national or distributed capability. A transferability check should state whether published economic evidence matches the local pathogen, sampling strategy, response capacity, comparator, cost categories and evidence confidence.",
+    "claimIds": [
+      "claim-beta-economic-strategy-choice",
+      "claim-costing-recurrent-service-categories",
+      "claim-price-economic-review-heterogeneous",
+      "claim-beta-distributed-capability-early-detection",
+      "claim-beta-costed-implementation-action-register"
+    ],
+    "sourceIds": [
+      "who-national-genomic-surveillance-strategy-2023",
+      "phe-case-study",
+      "genometrakr-economic-2021",
+      "wgs-economic-review",
+      "national-investment-case-2025",
+      "lancet-wgs-economic-strategies-2026",
+      "who-genomics-costing-tool-manual-2024",
+      "wgs-costing-tool-2024",
+      "global-solidarity-genomic-surveillance-2026",
+      "who-genomic-surveillance-2022",
+      "who-genomic-surveillance-progress-2023"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "policy",
+        "funder",
+        "lab-lead",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "investment-case",
+        "costing",
+        "value",
+        "scenario-planning",
+        "sustainability"
+      ]
+    },
+    "order": 42,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta planning structure. It does not provide local prices, cost-per-sample estimates, funding mechanisms or universal ROI claims.",
+    "updatedAt": "2026-07-01"
   }
 ]
