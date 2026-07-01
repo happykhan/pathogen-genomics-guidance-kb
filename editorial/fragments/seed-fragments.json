@@ -2985,5 +2985,55 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is a beta planning structure. It does not provide local prices, cost-per-sample estimates, funding mechanisms or universal ROI claims.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-routine-workflow-run-record",
+    "sectionId": "workflow-reproducibility",
+    "title": "Routine workflow run record",
+    "kind": "table",
+    "text": "For each workflow run that may contribute to a report, dashboard, repository submission or later reanalysis, the service should record run identity, linked sample identifiers, workflow and environment versions, reference data, parameters, QC outputs, acceptance decisions, exceptions, report links, sharing state and retention category. This turns provenance into a routine service record rather than a retrospective reconstruction exercise.",
+    "claimIds": [
+      "claim-qc-annotation-version-control",
+      "claim-platform-metadata-provenance-interoperability",
+      "claim-metadata-identifier-lineage-core",
+      "claim-release-change-control-validation",
+      "claim-lifecycle-service-loop"
+    ],
+    "sourceIds": [
+      "pha4ge-infrastructure",
+      "mgen-accelerating-bioinformatics-implementation-2023",
+      "clinical-microbiology-implementation-2026",
+      "who-genomic-data-sharing-platforms-2025",
+      "phe-case-study",
+      "aphl-ngs-implementation-2016",
+      "who-national-genomic-surveillance-strategy-2023"
+    ],
+    "conditions": {
+      "audiences": [
+        "bioinformatician",
+        "lab-lead",
+        "data-manager",
+        "it-security",
+        "mixed"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "workflow",
+        "provenance",
+        "quality",
+        "metadata",
+        "reporting",
+        "reanalysis"
+      ]
+    },
+    "order": 43,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta run-record structure. It does not prescribe a workflow engine, database schema, LIMS integration pattern or accredited audit-log format.",
+    "updatedAt": "2026-07-01"
   }
 ]

@@ -1984,6 +1984,85 @@ export const guidanceBlocks: GuidanceBlock[] = [
           "phe-case-study",
         ],
       },
+      {
+        title: "Routine workflow run record",
+        summary:
+          "Use this record for each run that may contribute to a report, repository submission, dashboard or later reanalysis.",
+        columns: ["Run-record item", "What to record", "Why it matters", "Beta caution"],
+        rows: [
+          {
+            cells: [
+              "Run identity and service route",
+              "Workflow-run ID, service or programme, use case, analyst or system, run date, input sample or isolate IDs and link to LIMS or sample system.",
+              "Connects analysis back to the service route, sample metadata, report and later correction or reanalysis.",
+              "Do not rely on output folder names as the only run identifier.",
+            ],
+            sourceIds: ["phe-case-study", "who-genomic-data-sharing-platforms-2025", "aphl-ngs-implementation-2016"],
+          },
+          {
+            cells: [
+              "Approved workflow and execution environment",
+              "Workflow name and version, workflow engine or platform, container or software versions, execution environment, compute location and any external platform dependency.",
+              "Results can change when the workflow, environment or platform changes; the service needs this record for audit and interpretation.",
+              "A managed or shared platform still needs local records of the approved version used for reporting.",
+            ],
+            sourceIds: ["pha4ge-infrastructure", "mgen-accelerating-bioinformatics-implementation-2023"],
+          },
+          {
+            cells: [
+              "Reference data and parameters",
+              "Reference genome, database, nomenclature, rule set, parameter set, report-template version and date of interpretation.",
+              "Reference data and interpretation rules may change reportable outputs even when pipeline code is unchanged.",
+              "Version records should include databases and rule sets, not only the workflow release number.",
+            ],
+            sourceIds: ["clinical-microbiology-implementation-2026", "who-genomic-data-sharing-platforms-2025"],
+          },
+          {
+            cells: [
+              "Inputs, outputs and QC",
+              "Input data locations, input checks, QC methods, QC outputs, acceptance thresholds, final outputs reviewed, intermediate outputs retained and low-quality annotations.",
+              "Users need to know whether outputs were accepted, repeated, overridden, released with limitations or excluded.",
+              "Low-quality or incomplete data may still be useful only when QC methods and limits remain visible.",
+            ],
+            sourceIds: [
+              "who-genomic-data-sharing-platforms-2025",
+              "clinical-microbiology-implementation-2026",
+              "aphl-ngs-implementation-2016",
+            ],
+          },
+          {
+            cells: [
+              "Exception, override and correction route",
+              "Pipeline failure, manual workaround, QC override, ambiguous result, report correction, reanalysis trigger, approver and user notification where needed.",
+              "Exceptions are often where service risk appears; they need to be traceable to the decision taken.",
+              "Manual workarounds should not become routine without validation and change control.",
+            ],
+            sourceIds: ["clinical-microbiology-implementation-2026", "phe-case-study"],
+          },
+          {
+            cells: [
+              "Report, sharing and retention links",
+              "Report ID, dashboard or product generated, repository or platform accession where used, sharing state, archive location, retention category and correction history.",
+              "The workflow run remains part of the data asset after reporting, especially for repository updates, audit, reanalysis and service review.",
+              "Repository submission, archive and deletion rules need local governance and source-specific extraction before becoming final policy.",
+            ],
+            sourceIds: [
+              "who-genomic-data-sharing-platforms-2025",
+              "who-national-genomic-surveillance-strategy-2023",
+              "aphl-ngs-implementation-2016",
+            ],
+          },
+        ],
+        sourceIds: [
+          "pha4ge-infrastructure",
+          "mgen-accelerating-bioinformatics-implementation-2023",
+          "clinical-microbiology-implementation-2026",
+          "who-genomic-data-sharing-platforms-2025",
+          "phe-case-study",
+          "aphl-ngs-implementation-2016",
+          "who-national-genomic-surveillance-strategy-2023",
+        ],
+      },
     ],
     audiences: ["bioinformatician", "lab-lead", "data-manager", "it-security"],
     implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
@@ -1995,6 +2074,8 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "cdc-nejm-2019",
       "phe-case-study",
       "who-genomic-data-sharing-platforms-2025",
+      "who-national-genomic-surveillance-strategy-2023",
+      "aphl-ngs-implementation-2016",
       "clinical-microbiology-implementation-2026",
       "mgen-accelerating-bioinformatics-implementation-2023",
       "mgen-stec-bioinformatics-validation-2021",
