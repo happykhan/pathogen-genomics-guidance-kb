@@ -643,5 +643,34 @@
     "confidence": "high",
     "limitations": "Does not provide numeric thresholds or a validated scoring instrument.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "claim-beta-organism-service-model-matrix",
+    "sourceId": "who-national-genomic-surveillance-strategy-2023",
+    "sourceLocator": "WHO 2023 national strategy support tool, ECDC 2016 expert opinion, PHE case study, Armstrong et al. 2019, WHO 2021 SARS-CoV-2 guide, Gador-Whyte et al. 2026, and Microbial Genomics implementation collection",
+    "evidenceItemIds": [
+      "evidence-beta-organism-service-model-matrix",
+      "evidence-service-model-choices",
+      "evidence-ecdc-reporting-objectives",
+      "evidence-phe-enteric-users-actions",
+      "evidence-armstrong-tb-influenza-amr-reporting",
+      "evidence-who-sarscov2-metadata-sharing"
+    ],
+    "claim": "The beta guide should use an organism and use-case service-model matrix to show how routine surveillance, outbreak response, AMR monitoring, repository submission, clinical support and research support change sampling, metadata, QC, reporting, sharing, validation and infrastructure needs.",
+    "extractedText": "WHO places use-case definition at the start of strategy design. ECDC says outputs should be agreed for each disease or pathogen and separates transmission linkage from phenotype prediction. PHE, Armstrong et al., WHO SARS-CoV-2 guidance, the clinical implementation review and implementation examples show that enteric bacteria, respiratory viruses, TB, AMR and healthcare-associated infection services have different users, outputs and constraints.",
+    "notes": "Use to close the beta service-model table gap without prescribing pathogen-specific thresholds.",
+    "tags": ["service-model", "organism-specific", "use-case", "sampling", "metadata", "reporting", "validation"],
+    "candidateSectionIds": [
+      "use-case-service-model",
+      "sampling-programme-design",
+      "reporting-decision-use",
+      "metadata-identifier-lineage"
+    ],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "multiple",
+    "confidence": "high",
+    "limitations": "Does not define organism-specific thresholds, exact report wording, repository fields or sampling fractions.",
+    "reviewStatus": "reviewed"
   }
 ]

@@ -1130,5 +1130,63 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is a dependency matrix, not a maturity score or procurement recommendation.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-organism-service-model-matrix",
+    "sectionId": "use-case-service-model",
+    "title": "Beta organism and use-case service-model matrix",
+    "kind": "table",
+    "text": "Use an organism and use-case service-model matrix before prescribing technical details. Rows should include routine surveillance, outbreak response, AMR monitoring, repository submission, clinical or hospital support, and research support. Columns should include organism or programme, decision user, sampling route, expected output, turnaround pressure, metadata dependency, QC or validation boundary, reporting route, sharing route, infrastructure dependency, and fallback if the result is delayed or inconclusive.",
+    "claimIds": [
+      "claim-beta-organism-service-model-matrix",
+      "claim-service-model-choices",
+      "claim-reporting-products-fit-decision"
+    ],
+    "sourceIds": [
+      "who-national-genomic-surveillance-strategy-2023",
+      "ecdc-wgs-surveillance-2016",
+      "phe-case-study",
+      "cdc-nejm-2019",
+      "who-sars-cov-2-sequencing-implementation-2021",
+      "clinical-microbiology-implementation-2026",
+      "mgen-uk-delphi-health-protection-2023",
+      "mgen-centre-specific-typing-ipc-2021",
+      "mgen-local-sarscov2-large-scale-2020",
+      "mgen-polymicrobial-mdr-critical-care-2021",
+      "mgen-belgian-influenza-phylogenomics-2021",
+      "mgen-salmonella-typhi-paratyphi-england-2021",
+      "mgen-gonorrhoea-wgs-amr-genogroups-2021"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "policy",
+        "lab-lead",
+        "bioinformatician",
+        "data-manager",
+        "it-security",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "use-case",
+        "service-model",
+        "sampling",
+        "metadata",
+        "reporting",
+        "validation"
+      ]
+    },
+    "order": 25,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta matrix to structure thinking. It does not provide organism-specific thresholds, report templates or sampling fractions.",
+    "updatedAt": "2026-07-01"
   }
 ]

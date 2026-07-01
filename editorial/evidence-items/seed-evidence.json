@@ -556,5 +556,16 @@
     "tags": ["implementation-model", "dependency-matrix", "local-compute", "cloud", "managed-platform", "hybrid", "external-support"],
     "limitations": "Supports dependency comparison, not a universal ranked recommendation or validated scoring rubric.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-beta-organism-service-model-matrix",
+    "sourceId": "who-national-genomic-surveillance-strategy-2023",
+    "sourceLocator": "WHO 2023 national strategy support tool; ECDC 2016 surveillance objectives and reporting sections; PHE case study enteric service sections; Armstrong et al. 2019 organism use cases; WHO 2021 SARS-CoV-2 implementation guide; Gador-Whyte et al. 2026 clinical implementation review; Microbial Genomics implementation collection",
+    "evidenceType": "passage-note",
+    "excerpt": "For each disease or public health priority",
+    "passageSummary": "WHO asks programmes to define priority use cases, data users, sampling strategy, analysis, result sharing and intended outcomes for each public-health priority. ECDC states that reporting and visualization outputs should be agreed for each pathogen according to surveillance objectives and distinguishes transmission linkage from phenotype prediction. PHE gives an enteric-bacterial service example covering surveillance, outbreak investigation, AMR and One Health users. Armstrong et al. describe tuberculosis, influenza and AMR use cases and caveats. WHO's SARS-CoV-2 guide links sequencing to stakeholders, metadata, consensus or partial genomes, raw reads and feedback. The clinical implementation review distinguishes reactive and prospective sequencing for hospital-facing services. The Microbial Genomics collection adds organism-specific examples for AMR capacity, foodborne pathogens, influenza, SARS-CoV-2, healthcare-associated outbreaks and validation.",
+    "tags": ["service-model", "organism-specific", "use-case", "reporting", "sampling", "validation"],
+    "limitations": "Supports a beta service-model matrix. It does not provide pathogen-specific thresholds, report templates, sampling fractions or clinical rules.",
+    "reviewStatus": "reviewed"
   }
 ]
