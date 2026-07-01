@@ -33,6 +33,73 @@
     "reviewStatus": "draft"
   },
   {
+    "id": "brief-use-case-service-model",
+    "sectionId": "use-case-service-model",
+    "purpose": "Help readers decide what service they are actually building before they choose data systems, workflows, infrastructure, or reports.",
+    "readerActionAfterReading": "Write down the priority use cases, intended users, result products, turnaround targets, validation boundary, and response route for the service.",
+    "mustCover": [
+      "Routine surveillance, outbreak response, AMR monitoring, repository submission, research support, clinical support, and hybrid services have different operational requirements.",
+      "A use case should define who uses the result, what decision changes, how quickly the result is needed, and what downstream action is possible.",
+      "The guide should distinguish validated service use from exploratory or research-facing analysis."
+    ],
+    "doNotClaim": [
+      "Do not imply that a single service design fits every pathogen or public-health use case.",
+      "Do not present research flexibility as equivalent to routine reporting readiness.",
+      "Do not recommend a technical platform before the service products and users are defined."
+    ],
+    "preferredClaimIds": [
+      "claim-who-strategy-integrated-surveillance",
+      "claim-phe-service-transition"
+    ],
+    "conditionalVariantsNeeded": [
+      "Director/funder readers need service scenarios and decision value.",
+      "Bioinformaticians need validation boundary and workflow ownership.",
+      "Laboratory leads need sample flow, reporting route, and service readiness."
+    ],
+    "figuresTablesWanted": [
+      "Use-case-to-service-requirement table.",
+      "Research/project workflow versus routine service comparison."
+    ],
+    "knownGaps": [
+      "Need stronger extraction from national strategy documents on use-case prioritisation and service models."
+    ],
+    "reviewNotes": "This should prevent the guide from jumping straight to infrastructure.",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "brief-sampling-programme-design",
+    "sectionId": "sampling-programme-design",
+    "purpose": "Make sampling strategy visible as a core determinant of whether genomic outputs can answer the public-health question.",
+    "readerActionAfterReading": "Describe which samples or isolates enter the programme, which are excluded, what bias this creates, and how sampling changes interpretation.",
+    "mustCover": [
+      "Genomic interpretation depends on what was sampled and what was not sampled.",
+      "Routine sampling, outbreak-triggered sampling, sentinel surveillance, convenience sampling, and targeted sampling support different claims.",
+      "Sampling design affects cluster interpretation, trend analysis, repository value, and claims about representativeness."
+    ],
+    "doNotClaim": [
+      "Do not imply that more sequencing automatically means representative surveillance.",
+      "Do not give universal sampling fractions or thresholds without source-backed organism-specific evidence.",
+      "Do not separate sampling from metadata, reporting, and response capacity."
+    ],
+    "preferredClaimIds": [
+      "claim-who-strategy-integrated-surveillance",
+      "claim-who-national-strategy-value-chain"
+    ],
+    "conditionalVariantsNeeded": [
+      "Enteric and foodborne programmes need outbreak and source-tracking examples.",
+      "Respiratory virus programmes need variant monitoring and timeliness examples.",
+      "AMR and healthcare-associated infection programmes need sampling-frame and setting-specific interpretation text."
+    ],
+    "figuresTablesWanted": [
+      "Sampling strategy versus interpretation limits table."
+    ],
+    "knownGaps": [
+      "Need source-backed organism-specific sampling and representativeness material."
+    ],
+    "reviewNotes": "This is likely under-sourced at present; use gap notes where needed.",
+    "reviewStatus": "draft"
+  },
+  {
     "id": "brief-infrastructure-operating-model",
     "sectionId": "infrastructure-operating-model",
     "purpose": "Make readers define how the genomic surveillance service will be operated, supported, monitored, and recovered, rather than treating infrastructure as a purchase list.",
@@ -66,6 +133,139 @@
       "Need stronger source-backed procurement and support-model examples from public-health agencies."
     ],
     "reviewNotes": "This is central to Gnomey. Keep practical and implementation-oriented.",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "brief-failure-handling-continuous-improvement",
+    "sectionId": "failure-handling-continuous-improvement",
+    "purpose": "Make routine service failure handling explicit, so the guide covers what happens when real samples, runs, workflows, reports, and data submissions go wrong.",
+    "readerActionAfterReading": "Define local routes for failed samples, failed sequencing runs, low-quality outputs, missing metadata, ambiguous results, corrected reports, and periodic service review.",
+    "mustCover": [
+      "A prospective service must manage exceptions in real time, not only describe the ideal successful path.",
+      "Failure handling should connect laboratory process, bioinformatics process, reporting, user communication, and quality review.",
+      "Service review should examine turnaround time, failure rates, metadata completeness, pipeline incidents, report corrections, and user feedback."
+    ],
+    "doNotClaim": [
+      "Do not prescribe specific failure thresholds without source-backed QC material.",
+      "Do not imply that failure handling is only a bioinformatics responsibility.",
+      "Do not hide this material only in technical detail."
+    ],
+    "preferredClaimIds": [
+      "claim-phe-service-transition",
+      "claim-who-national-strategy-value-chain",
+      "claim-mgen-bioinformatics-implementation"
+    ],
+    "conditionalVariantsNeeded": [
+      "No LIMS should raise manual identifier checks and exception logging.",
+      "No central IT should raise incident-routing and backup-testing warnings.",
+      "Routine-service and national-scale profiles should see more quality-review detail."
+    ],
+    "figuresTablesWanted": [
+      "Exception route table for sample, sequencing, analysis, reporting, and sharing failures.",
+      "Service metrics checklist."
+    ],
+    "knownGaps": [
+      "Need stronger extraction from quality-management and laboratory implementation sources."
+    ],
+    "reviewNotes": "This section should turn the guide from a happy-path description into a service guide.",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "brief-storage-backup-archive-retention",
+    "sectionId": "storage-backup-archive-retention",
+    "purpose": "Separate storage concepts that are often conflated, and make retention and recovery decisions visible.",
+    "readerActionAfterReading": "Classify each data type as active analysis data, intermediate workflow data, report or record, shared output, archive item, or backup target.",
+    "mustCover": [
+      "Active storage, backup, replication, archive, disaster recovery, retention, and deletion are different decisions.",
+      "Raw reads, intermediate files, workflow logs, reports, QC records, reference data, and repository accessions do not need identical rules.",
+      "Storage choices affect cost, recovery, auditability, reanalysis, and data sharing."
+    ],
+    "doNotClaim": [
+      "Do not define universal retention periods without jurisdictional or institutional source material.",
+      "Do not confuse backup with replication or archive.",
+      "Do not give storage-size rules without explicitly marking them as context-specific."
+    ],
+    "preferredClaimIds": [
+      "claim-pha4ge-operating-questions",
+      "claim-phe-service-transition",
+      "claim-who-national-strategy-value-chain"
+    ],
+    "conditionalVariantsNeeded": [
+      "Unreliable internet should raise local recovery and offline-first considerations.",
+      "Data residency concern should raise controlled storage and governance review.",
+      "High-throughput or national-scale profiles should see cost-growth and lifecycle-management detail."
+    ],
+    "figuresTablesWanted": [
+      "Storage, backup, archive, and retention distinction table."
+    ],
+    "knownGaps": [
+      "Need public-health retention-policy sources before prescribing retention periods."
+    ],
+    "reviewNotes": "This should stay practical and avoid fake precision.",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "brief-implementation-patterns-case-studies",
+    "sectionId": "implementation-patterns-case-studies",
+    "purpose": "Give readers concrete implementation models they can compare and adapt rather than leaving them with abstract principles.",
+    "readerActionAfterReading": "Select one or two plausible implementation patterns and list the dependencies, risks, and responsibilities for each.",
+    "mustCover": [
+      "Central reference laboratory, local laboratory with central bioinformatics, managed platform, collaborative network, low-connectivity local-first, and academic-to-service transition models solve different problems.",
+      "Each pattern should state what is operated locally, what is delegated, what could fail, and what evidence supports the example.",
+      "Case studies should be examples to adapt, not universal templates."
+    ],
+    "doNotClaim": [
+      "Do not rank one implementation model as universally best.",
+      "Do not generalise a high-income national implementation without context.",
+      "Do not describe a model without naming its dependencies."
+    ],
+    "preferredClaimIds": [
+      "claim-phe-service-transition",
+      "claim-pha4ge-operating-questions",
+      "claim-mgen-bioinformatics-implementation"
+    ],
+    "conditionalVariantsNeeded": [
+      "No bioinformatics staff should raise managed or shared-service examples.",
+      "Unreliable internet should raise local-first and hybrid examples.",
+      "National-scale profiles should raise collaborative network examples."
+    ],
+    "figuresTablesWanted": [
+      "Implementation pattern comparison table.",
+      "Source-backed case-study cards."
+    ],
+    "knownGaps": [
+      "Need extraction from each case study into comparable dependency fields."
+    ],
+    "reviewNotes": "This is where practical copyable examples should live.",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "brief-needs-more-work",
+    "sectionId": "needs-more-work",
+    "purpose": "Keep unresolved evidence needs visible without cluttering the main whitepaper text.",
+    "readerActionAfterReading": "Understand which recommendations are source-backed, which are partial, and which need more extraction or external review.",
+    "mustCover": [
+      "Evidence gaps should be organised by whitepaper section.",
+      "Gaps should name the type of source needed, not just say more evidence is needed.",
+      "The section should include organism-specific gaps, figure/table gaps, and source-extraction gaps."
+    ],
+    "doNotClaim": [
+      "Do not use the gaps section to introduce unsupported guidance.",
+      "Do not hide major limitations only in backstage tooling.",
+      "Do not make the public guide look more complete than the evidence base."
+    ],
+    "preferredClaimIds": [],
+    "conditionalVariantsNeeded": [
+      "Public view should be concise.",
+      "Backstage/editorial view can show fuller extraction tasks and source needs."
+    ],
+    "figuresTablesWanted": [
+      "Gap inventory grouped by section and severity."
+    ],
+    "knownGaps": [
+      "This section should eventually be generated from structured gap records."
+    ],
+    "reviewNotes": "Keep light-touch in the public guide and detailed in backstage.",
     "reviewStatus": "draft"
   },
   {

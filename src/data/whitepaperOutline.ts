@@ -22,8 +22,26 @@ export const whitepaperOutline: WhitepaperOutlineSection[] = [
     publicByDefault: true,
   },
   {
-    id: "data-lifecycle-sample-to-report",
+    id: "use-case-service-model",
     order: 30,
+    title: "Define the use case and service model",
+    purpose:
+      "Help teams specify whether they are building routine surveillance, outbreak response, AMR monitoring, repository submission, research support, clinical support, or a hybrid service, because each model changes turnaround time, QC, reporting, sharing, and support requirements.",
+    expectedFragments: ["use-case-selection", "service-products", "decision-latency", "validated-versus-research-use"],
+    publicByDefault: true,
+  },
+  {
+    id: "sampling-programme-design",
+    order: 40,
+    title: "Plan sampling strategy and programme design",
+    purpose:
+      "Explain how sample selection, representativeness, priority pathogens, outbreak-triggered sampling, routine sampling, and missing samples affect interpretation and public-health value.",
+    expectedFragments: ["sampling-core", "representativeness", "sampling-bias", "organism-specific-sampling"],
+    publicByDefault: true,
+  },
+  {
+    id: "data-lifecycle-sample-to-report",
+    order: 50,
     title: "Build a sample-to-decision data service",
     purpose:
       "Describe the operational data asset created by a genomic surveillance service: sample records, metadata, sequence data, QC, workflow runs, reports, sharing events, stored records, and feedback loops.",
@@ -32,7 +50,7 @@ export const whitepaperOutline: WhitepaperOutlineSection[] = [
   },
   {
     id: "metadata-identifier-lineage",
-    order: 40,
+    order: 60,
     title: "Protect metadata and identifier lineage",
     purpose:
       "Explain why broken identifiers and weak metadata make genomic outputs difficult to interpret or act on.",
@@ -41,16 +59,25 @@ export const whitepaperOutline: WhitepaperOutlineSection[] = [
   },
   {
     id: "quality-validation-before-switch",
-    order: 50,
-    title: "Validate workflows before switching service decisions",
+    order: 70,
+    title: "Build quality management, validation, and change control",
     purpose:
-      "Separate exploratory analysis from validated public-health service use, including change control and revalidation.",
-    expectedFragments: ["validation-core", "organism-qc-variants", "change-control"],
+      "Separate exploratory analysis from validated public-health service use, and describe the quality system needed around QC, SOPs, version control, change control, revalidation, audit trails, training records, and incident review.",
+    expectedFragments: ["validation-core", "organism-qc-variants", "change-control", "quality-system-core", "accreditation-pathway"],
+    publicByDefault: true,
+  },
+  {
+    id: "failure-handling-continuous-improvement",
+    order: 80,
+    title: "Handle failures and improve the service",
+    purpose:
+      "Make operational failure handling explicit: failed samples, failed runs, low-quality data, missing metadata, ambiguous outputs, delayed reports, corrected reports, pipeline failures, repository errors, and periodic service review.",
+    expectedFragments: ["failure-routes", "service-metrics", "incident-review", "continuous-improvement"],
     publicByDefault: true,
   },
   {
     id: "infrastructure-operating-model",
-    order: 60,
+    order: 120,
     title: "Define the service operating model",
     purpose:
       "Show that infrastructure choices define responsibilities: who operates compute, workflows, storage, access, validation, monitoring, support, and recovery when the service fails.",
@@ -59,16 +86,25 @@ export const whitepaperOutline: WhitepaperOutlineSection[] = [
   },
   {
     id: "workflow-reproducibility",
-    order: 70,
-    title: "Make workflows reproducible and portable",
+    order: 90,
+    title: "Run reproducible workflows with provenance",
     purpose:
       "Describe practical reproducibility controls: versioned workflows, containers, reference data, parameters, audit trails, and portable execution.",
     expectedFragments: ["workflow-core", "technical-detail", "managed-platform-variant"],
     publicByDefault: true,
   },
   {
+    id: "storage-backup-archive-retention",
+    order: 100,
+    title: "Plan storage, backup, archive, and retention",
+    purpose:
+      "Distinguish active analysis storage, intermediate workflow storage, long-term archive, report storage, backups, disaster recovery, retention, deletion, and cost growth.",
+    expectedFragments: ["storage-categories", "backup-versus-replication", "retention-gap", "low-connectivity-variant"],
+    publicByDefault: true,
+  },
+  {
     id: "repository-data-sharing",
-    order: 80,
+    order: 130,
     title: "Choose data-sharing and repository routes deliberately",
     purpose:
       "Help teams decide what should be shared publicly, operationally, internally, or under controlled access.",
@@ -77,29 +113,47 @@ export const whitepaperOutline: WhitepaperOutlineSection[] = [
   },
   {
     id: "reporting-decision-use",
-    order: 90,
-    title: "Turn analysis into decisions",
+    order: 140,
+    title: "Interpret, report, and communicate uncertainty",
     purpose:
-      "Describe reporting products, interpretation boundaries, and the handoff from bioinformatics to public-health action.",
-    expectedFragments: ["reporting-core", "audience-specific-products", "limits"],
+      "Describe reporting products, interpretation boundaries, uncertainty, and the handoff from bioinformatics to public-health action.",
+    expectedFragments: ["reporting-core", "audience-specific-products", "interpretation-boundaries", "uncertainty-language"],
     publicByDefault: true,
   },
   {
     id: "workforce-sustainability-costing",
-    order: 100,
-    title: "Plan for people, support, and recurrent cost",
+    order: 150,
+    title: "Plan workforce, procurement, support, and recurrent cost",
     purpose:
-      "Make staffing, training, succession, support, procurement, and recurrent costs visible as service requirements.",
-    expectedFragments: ["workforce-core", "costing-scenarios", "limited-staff-variant"],
+      "Make staffing, training, succession, procurement, vendor or partner due diligence, support, renewal, and recurrent costs visible as service requirements.",
+    expectedFragments: ["workforce-core", "procurement-due-diligence", "costing-scenarios", "limited-staff-variant"],
+    publicByDefault: true,
+  },
+  {
+    id: "implementation-patterns-case-studies",
+    order: 160,
+    title: "Compare implementation patterns and case studies",
+    purpose:
+      "Give readers source-backed implementation patterns they can adapt: central reference laboratory, local laboratory with central bioinformatics, managed platform, national collaborative network, low-connectivity local-first model, and academic-to-service transition.",
+    expectedFragments: ["central-reference-model", "local-plus-central-bioinformatics", "managed-platform-model", "collaborative-network-model", "low-connectivity-model"],
     publicByDefault: true,
   },
   {
     id: "maturity-next-steps",
-    order: 110,
+    order: 170,
     title: "Assess maturity and choose next steps",
     purpose:
       "Translate the profile and constraints into practical next actions without implying a false universal ladder.",
     expectedFragments: ["maturity-core", "profile-next-actions", "known-gaps"],
+    publicByDefault: true,
+  },
+  {
+    id: "needs-more-work",
+    order: 180,
+    title: "Needs more work",
+    purpose:
+      "Collect the evidence gaps, unresolved implementation questions, and source needs that should not be hidden inside confident guidance prose.",
+    expectedFragments: ["evidence-gaps", "source-needs", "figure-gaps", "organism-specific-gaps"],
     publicByDefault: true,
   },
 ];
