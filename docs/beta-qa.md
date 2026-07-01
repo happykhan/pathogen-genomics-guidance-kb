@@ -34,7 +34,7 @@ The API checks should confirm:
 - cited `sourceIds` resolve through `/api/sources`;
 - resource records include `pdfUrl`, `doi`, and `sourceCardPath` where available;
 - extracted resource records include source cards;
-- no public API exposes local `/Users/...` paths.
+- no public API exposes local user-home paths.
 
 ## Visual Checks
 

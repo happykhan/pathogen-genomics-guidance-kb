@@ -43,7 +43,7 @@ Passed:
 - 14 public PDF links.
 - 24 source-card paths.
 - 14 resources marked `extracted`.
-- No `/Users/...` local path leakage.
+- No local user-home path leakage.
 
 ## Visual Artifacts
 

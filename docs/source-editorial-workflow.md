@@ -157,5 +157,5 @@ Evidence status rules:
 - Every fragment source ID exists.
 - Every brief and fragment points to a valid whitepaper outline section.
 - Inline citation numbers match the numbered reference list.
-- No public API exposes local `/Users/...` PDF paths.
+- No public API exposes local user-home PDF paths.
 - No PDF/DOCX/XLSX/TIFF/EPS source files are committed.

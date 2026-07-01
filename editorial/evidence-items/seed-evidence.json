@@ -666,5 +666,16 @@
     "tags": ["national-capability", "governance", "workforce", "data-analytics", "laboratories", "collaboration", "evaluation"],
     "limitations": "Supports a beta national capability-domain checklist. It does not define a universal national operating model, governance template, staffing structure or maturity score.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-beta-local-infrastructure-resilience",
+    "sourceId": "pha4ge-infrastructure",
+    "sourceLocator": "PHA4GE source pack rough disaster-recovery and power/cooling notes; PHE implementation case study IT infrastructure sections; WHO 2023 data-management and storage sections",
+    "evidenceType": "passage-note",
+    "excerpt": "secure access-controlled server rooms",
+    "passageSummary": "The PHA4GE source pack distinguishes active storage, long-term storage, backup strategy and disaster-recovery planning, and asks whether an organisation could recover if its main data store were destroyed. Its power and cooling notes identify secure access-controlled server rooms, environmental monitoring, dust and temperature control, hot-aisle/cold-aisle layouts, UPS sizing and maintenance, and generator support for longer outages. PHE describes high-performance storage, archive storage, data-lifecycle management software and IT infrastructure as part of operational WGS delivery. WHO's national strategy support tool treats storage, backup, retention, infrastructure, connectivity, local/cloud security and data criticality as part of data-management planning.",
+    "tags": ["storage", "backup", "disaster-recovery", "power", "cooling", "on-premises", "business-continuity"],
+    "limitations": "The PHA4GE disaster-recovery and power/cooling notes are rough source material. This supports beta checklist questions for local infrastructure resilience, not formal facilities standards, UPS sizing rules, generator specifications, RTO/RPO targets or business-continuity policy.",
+    "reviewStatus": "reviewed"
   }
 ]

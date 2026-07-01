@@ -1757,6 +1757,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "The PHE case study shows what this means in a real service: WGS implementation required IT infrastructure to manage and store sequence data, run analysis software, maintain a high-performance computing cluster, provide enough storage and processing speed for service delivery, and use both high-performance and archive storage. Those details are PHE-specific, but the categories are not.",
       "PHA4GE's data-flow framing links ingestion, storage, processing, delivery, archiving, retention policy, role-based access, provenance, and data-management plans. Treating all data as one storage bucket makes it harder to control cost, recover from failure, govern access, or explain which records must be retained.",
       "Backup should be treated as a recovery process. The PHA4GE disaster-recovery note is still rough, but its central question is useful: if the main data store were destroyed, what could the organisation recover, how quickly, and what would be lost? That question should be answered before routine service depends on the system.",
+      "For local servers or local storage, physical resilience is part of the same data service. The PHA4GE source pack's rough power and cooling notes point to secure server-room access, environmental monitoring, dust and temperature control, cooling design, UPS maintenance and generator support as local infrastructure concerns. These should be treated as resilience questions, not as decorative facilities details.",
     ],
     bodySourceIds: {
       0: ["who-national-genomic-surveillance-strategy-2023", "phe-case-study", "pha4ge-infrastructure"],
@@ -1764,10 +1765,12 @@ export const guidanceBlocks: GuidanceBlock[] = [
       2: ["phe-case-study"],
       3: ["pha4ge-infrastructure"],
       4: ["pha4ge-infrastructure"],
+      5: ["pha4ge-infrastructure", "phe-case-study", "who-national-genomic-surveillance-strategy-2023"],
     },
     technicalDetail: [
       "Minimum storage map: active analysis storage, raw data archive, processed data archive, report storage, workflow-log storage, QC-output storage, repository-submission records, backup copies, and deleted or expired records.",
       "Minimum recovery questions: what data cannot be regenerated, how long each copy is retained, where backups are held, how backup versions are managed, how backup jobs are scheduled, who receives failure alerts, how restoration is tested, and what service work stops during recovery.",
+      "Minimum local resilience questions: who owns the server room or storage location, who can enter it, how temperature and dust are controlled, what UPS or generator support exists, who receives power or cooling alerts, and when a restore test last succeeded.",
     ],
     tables: [
       {
@@ -1946,6 +1949,65 @@ export const guidanceBlocks: GuidanceBlock[] = [
           "clinical-microbiology-implementation-2026",
         ],
       },
+      {
+        title: "Beta local infrastructure resilience checklist",
+        summary:
+          "Use this when storage, compute or backup depend on local servers, local storage rooms or institutional facilities. It is not a formal facilities or business-continuity standard.",
+        columns: ["Resilience area", "What to record", "Why it matters", "Beta caution"],
+        rows: [
+          {
+            cells: [
+              "Server-room or storage-location owner",
+              "Physical location, accountable facilities or IT owner, access-control route, visitor or contractor access, and out-of-hours contact.",
+              "Data recovery depends on knowing who can physically access and support the local system during an incident.",
+              "Do not assume laboratory staff control facilities owned by central IT or estates.",
+            ],
+            sourceIds: ["pha4ge-infrastructure", "phe-case-study"],
+          },
+          {
+            cells: [
+              "Environmental monitoring",
+              "Temperature, humidity or other monitoring available locally, alert recipient, review route, and what service action follows an alert.",
+              "Overheating, dust and poor environmental control can turn a storage or compute issue into a service-continuity problem.",
+              "The beta guide can name the need for monitoring; local facilities standards define thresholds.",
+            ],
+            sourceIds: ["pha4ge-infrastructure"],
+          },
+          {
+            cells: [
+              "Power-failure protection",
+              "UPS coverage, UPS maintenance owner, generator or longer-outage route, graceful shutdown plan, and systems that remain unavailable during outage.",
+              "Local analysis, active storage and backups may fail differently during short and long outages.",
+              "The source base does not support universal UPS sizing, generator capacity or runtime targets.",
+            ],
+            sourceIds: ["pha4ge-infrastructure"],
+          },
+          {
+            cells: [
+              "Backup and restore ownership",
+              "Backup job owner, failure alert owner, version history, restore-test date, restore-test result and decision owner during recovery.",
+              "A backup copy only protects the service if someone knows it exists, monitors it and can restore from it.",
+              "Backup should not be confused with replication or archive; restore testing remains a local responsibility.",
+            ],
+            sourceIds: ["pha4ge-infrastructure", "who-national-genomic-surveillance-strategy-2023"],
+          },
+          {
+            cells: [
+              "Incident escalation",
+              "Who is contacted for power, cooling, storage failure, accidental deletion, corruption, cyber incident or unavailable institutional infrastructure.",
+              "The reporting service may stop even when sequencing continues if storage, access or recovery routes fail.",
+              "This beta checklist does not replace local incident, cyber, disaster-recovery or business-continuity plans.",
+            ],
+            sourceIds: ["pha4ge-infrastructure", "who-genomic-data-sharing-platforms-2025"],
+          },
+        ],
+        sourceIds: [
+          "pha4ge-infrastructure",
+          "phe-case-study",
+          "who-national-genomic-surveillance-strategy-2023",
+          "who-genomic-data-sharing-platforms-2025",
+        ],
+      },
     ],
     audiences: ["it-security", "bioinformatician", "data-manager", "lab-lead"],
     implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
@@ -1963,7 +2025,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     gaps: [
       "The beta retention and recovery worksheet still needs local legal, public-health, institutional, repository and business-continuity review before numeric retention periods, restore-time targets, restore-point targets or deletion rules can be prescribed.",
-      "The PHA4GE disaster-recovery note and local business-continuity sources still need editorial review before the guide can support a formal recovery runbook.",
+      "The PHA4GE disaster-recovery and power/cooling notes and local business-continuity sources still need editorial review before the guide can support a formal recovery or facilities runbook.",
     ],
   },
   {

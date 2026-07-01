@@ -4,7 +4,7 @@
 
 - Gador-Whyte AP et al. *Implementation of pathogen genomics in clinical microbiology laboratories*. *Clinical Microbiology Reviews*. 2026;39:e00177-25. doi:10.1128/cmr.00177-25.
 - Nguinkal JA et al. *Assessment of the pathogen genomics landscape highlights disparities and challenges for effective AMR surveillance and outbreak response in the East African Community*. *BMC Public Health*. 2024;24:1500. doi:10.1186/s12889-024-18990-0.
-- Local full texts listed in `source-material/local-full-text-inventory.md` (not committed).
+- Local full texts reviewed outside git; inventory is intentionally not part of public API output.
 
 ## Status
 

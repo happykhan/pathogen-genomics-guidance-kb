@@ -2,8 +2,8 @@
 
 ## Source Basis
 
-- `Best Practices and Vision/extracted_text/docx/Disaster_Recovery_best_practices.txt`
-- `Best Practices and Vision/extracted_text/docx/Power_and_Cooling.txt`
+- PHA4GE source-pack rough disaster-recovery note.
+- PHA4GE source-pack rough power and cooling note.
 - VeriXiv manuscript discussion noting that power management, disaster management, backup, cyber incident management, threat assessments, data management, and retention are outside its scope.
 
 ## Status

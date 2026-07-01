@@ -3,8 +3,8 @@
 ## Source Basis
 
 - `knowledge-base/source-cards/pha4ge-infrastructure.md`
-- `Best Practices and Vision/extracted_text/docx/MANUSCRIPT_Framework_for_Compute_Infrastructure_for_Pathogen_Genomics_Labs_VerixivSubmitted_PHA4GE_InfrastructureRecommendations.txt`
-- `source-material/local/pha4ge-infrastructure-resources/docs/recommendations.md`
+- Local PHA4GE VeriXiv manuscript extract reviewed outside the public source tree.
+- Public PHA4GE infrastructure-resources repository recommendation draft.
 
 ## Status
 

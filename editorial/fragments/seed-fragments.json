@@ -2298,6 +2298,52 @@
     "updatedAt": "2026-07-01"
   },
   {
+    "id": "fragment-beta-local-infrastructure-resilience-checklist",
+    "sectionId": "storage-backup-archive-retention",
+    "title": "Beta local infrastructure resilience checklist",
+    "kind": "table",
+    "text": "When storage, compute or backup depend on local servers, local storage rooms or institutional facilities, the service should record physical location ownership, access control, environmental monitoring, power-failure protection, backup and restore ownership, and incident escalation routes.",
+    "claimIds": [
+      "claim-beta-local-infrastructure-resilience",
+      "claim-storage-backup-retention-policy",
+      "claim-infrastructure-recurrent-responsibility"
+    ],
+    "sourceIds": [
+      "pha4ge-infrastructure",
+      "phe-case-study",
+      "who-national-genomic-surveillance-strategy-2023",
+      "who-genomic-data-sharing-platforms-2025"
+    ],
+    "conditions": {
+      "audiences": [
+        "it-security",
+        "bioinformatician",
+        "data-manager",
+        "lab-lead",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "storage",
+        "backup",
+        "disaster-recovery",
+        "power",
+        "cooling",
+        "business-continuity"
+      ]
+    },
+    "order": 33,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta local-resilience checklist. It does not define formal facilities standards, UPS sizing, generator capacity, RTO/RPO targets, cyber-incident procedures or business-continuity policy.",
+    "updatedAt": "2026-07-01"
+  },
+  {
     "id": "fragment-beta-workforce-capacity-worksheet",
     "sectionId": "workforce-sustainability-costing",
     "title": "Beta workforce capacity worksheet",

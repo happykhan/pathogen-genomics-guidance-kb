@@ -128,4 +128,4 @@ The deployed `/api/editorial` endpoint is read-only. Local fragment approval use
 - Do not synthesize new public guidance directly from documents. Use the pipeline: source card, evidence item, extracted claim card, section brief, draft fragment, reviewed fragment.
 - Do not assume every source has a direct PDF. Some publishers provide HTML pages only, and some PDFs are behind publisher controls.
 - The API is read-only and currently unversioned beyond the `version` field in each response.
-- Public API records must not expose local file paths under `/Users/...`; local full-text inventory remains repository documentation only.
+- Public API records must not expose local user-home file paths; local full-text inventory remains repository documentation only.

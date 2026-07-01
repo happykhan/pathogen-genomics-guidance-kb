@@ -25,7 +25,7 @@ For now, this chapter should remain a design note plus beta worksheet. The next 
 ## Source Basis
 
 - PHA4GE vignettes and survey dimensions.
-- Public repository `source-material/local/pha4ge-infrastructure-resources/docs/tiers_table.md`.
+- PHA4GE infrastructure-resources repository `docs/tiers_table.md`.
 - `knowledge-base/extracted-notes/vignettes-and-survey-scoring.md`
 - `knowledge-base/source-cards/phe-implementing-pathogen-genomics-case-study.md`
 - `knowledge-base/source-cards/who-genomic-surveillance-progress-2023.md`

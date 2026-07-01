@@ -3,8 +3,8 @@
 ## Source Basis
 
 - VeriXiv manuscript Table 1, Figure 3 caption, and Figure 4 caption.
-- Supplement extract: `Best Practices and Vision/extracted_text/docx/MANUSCRIPT_Framework_for_Compute_Infrastructure_for_Pathogen_Genomics_Labs_01_Supplementary_materials_for_Framework_for_Compute_Infrastructure_for_Pathogen_Genomics_Labs.txt`.
-- Survey CSV extracts under `Best Practices and Vision/extracted_text/xlsx/`.
+- Local PHA4GE supplementary-material extract reviewed outside the public source tree.
+- Survey CSV extracts reviewed from the PHA4GE source pack.
 - Public repository files: `docs/survey_data_anon.tsv`, `docs/infra_recs_analyses.ipynb`, `docs/figures/datainfra_impactoffeaturechoices.ipynb`.
 
 ## Status

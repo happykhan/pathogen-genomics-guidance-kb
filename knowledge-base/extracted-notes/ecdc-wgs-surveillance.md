@@ -3,7 +3,7 @@
 ## Source Basis
 
 - European Centre for Disease Prevention and Control. *Expert opinion on whole genome sequencing for public health surveillance*. Stockholm: ECDC; 2016.
-- Local full text: `/Users/nfareed/Downloads/whole-genome-sequencing-for-public-health-surveillance.pdf` (not committed).
+- Local full text reviewed outside git; public PDF copy available through the beta site where licensed/appropriate.
 - Source card: `knowledge-base/source-cards/ecdc-wgs-public-health-surveillance-2016.md`
 
 ## Status

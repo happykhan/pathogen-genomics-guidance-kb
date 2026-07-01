@@ -5,7 +5,7 @@
 - UK Health Security Agency. *UKHSA Pathogen Genomics Strategy*. January 2024.
 - Interim Australian Centre for Disease Control. *National Microbial Genomics Framework for Public Health 2025-2027*.
 - Webb JR et al. *Implementing a national programme of pathogen genomics for public health: the Australian Pathogen Genomics Program (AusPathoGen)*. *The Lancet Microbe*. 2025;6:100969. doi:10.1016/j.lanmic.2024.100969.
-- Local full texts listed in `source-material/local-full-text-inventory.md` (not committed).
+- Local full texts reviewed outside git; inventory is intentionally not part of public API output.
 
 ## Status
 

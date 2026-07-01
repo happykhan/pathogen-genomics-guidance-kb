@@ -70,7 +70,7 @@ export default function ApiDocsPage() {
           <p>
             PDF links are included only where a direct PDF URL has been identified. Publisher pages, PubMed pages, and some PMC
             pages may still provide downloadable files through their own interfaces. Public API responses must not expose local
-            <code>/Users/...</code> source-material paths.
+            local user-home source-material paths.
           </p>
         </div>
       </section>

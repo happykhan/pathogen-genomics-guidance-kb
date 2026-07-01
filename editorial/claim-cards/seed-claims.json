@@ -902,5 +902,31 @@
     "confidence": "high",
     "limitations": "Does not define universal governance structures, staffing ratios, national architecture, procurement rules or a validated maturity score.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "claim-beta-local-infrastructure-resilience",
+    "sourceId": "pha4ge-infrastructure",
+    "sourceLocator": "PHA4GE source pack rough disaster-recovery and power/cooling notes; PHE case study IT infrastructure sections; WHO 2023 national strategy support tool",
+    "evidenceItemIds": [
+      "evidence-beta-local-infrastructure-resilience",
+      "evidence-who-2023-storage-backup-retention",
+      "evidence-phe-it-storage-scalability",
+      "evidence-pha4ge-data-flow-iam-responsibility"
+    ],
+    "claim": "A programme using local servers or local storage should include physical infrastructure resilience in its storage and recovery plan, including controlled server-room access, environmental monitoring, cooling, UPS or power-failure planning, backup ownership, restore testing and escalation routes.",
+    "extractedText": "PHA4GE rough source notes distinguish active storage, backup strategy and disaster recovery, and identify server-room access, environmental monitoring, cooling, UPS maintenance and generator support as local infrastructure concerns. PHE shows that operational WGS required high-performance and archive storage, data-lifecycle software, maintenance and enough storage and processing capacity for service delivery. WHO links storage, backup, retention, infrastructure, connectivity, local/cloud security and data criticality in national strategy planning.",
+    "notes": "Use to add local infrastructure resilience checks for on-premises or hybrid storage. Keep formal facilities standards and numeric targets as gaps.",
+    "tags": ["storage", "backup", "disaster-recovery", "power", "cooling", "on-premises", "business-continuity"],
+    "candidateSectionIds": [
+      "storage-backup-archive-retention",
+      "infrastructure-operating-model",
+      "maturity-next-steps"
+    ],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "multiple",
+    "confidence": "medium",
+    "limitations": "Does not define formal business-continuity policy, facilities standards, UPS sizing, generator capacity, RTO/RPO targets, retention periods or legal requirements.",
+    "reviewStatus": "reviewed"
   }
 ]

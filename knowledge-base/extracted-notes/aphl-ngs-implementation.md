@@ -3,7 +3,7 @@
 ## Source Basis
 
 - Association of Public Health Laboratories. *Next Generation Sequencing Implementation Guide*. October 2016.
-- Local full text: `/Users/nfareed/Downloads/id-ngs-implementation-guide102016.pdf` (not committed).
+- Local full text reviewed outside git; public PDF copy available through the beta site where licensed/appropriate.
 - Source card: `knowledge-base/source-cards/aphl-ngs-implementation-guide-2016.md`
 
 ## Status
