@@ -1827,6 +1827,100 @@ export const guidanceBlocks: GuidanceBlock[] = [
           "cdc-nejm-2019",
         ],
       },
+      {
+        title: "Before turning beta fields into pathogen-specific report templates",
+        summary:
+          "Use this review table before prescribing exact report wording, thresholds or uncertainty categories for a specific organism or programme.",
+        columns: ["Template area", "What source material is needed", "Why it matters", "Current beta position"],
+        rows: [
+          {
+            cells: [
+              "Enteric bacteria",
+              "Current Salmonella, STEC, Listeria and other enteric report examples; cluster interpretation rules; source-attribution language; One Health recipient routes; AMR or virulence marker wording.",
+              "Enteric reports often support multi-agency outbreak and source investigations, not only sample-level relatedness statements.",
+              "The beta guide can require sample, cluster, exposure/source, marker, recipient and action fields, but not final organism-specific wording or thresholds.",
+            ],
+            sourceIds: [
+              "phe-case-study",
+              "foodborne-genomics-allard-2018",
+              "mgen-salmonella-typhi-paratyphi-england-2021",
+              "mgen-shotgun-metagenomics-salmonella-food-2021",
+            ],
+          },
+          {
+            cells: [
+              "Respiratory viruses",
+              "Current lineage or clade nomenclature rules; genome-completeness thresholds; repository or platform field requirements; variant-risk or vaccine-assessment reporting examples.",
+              "A lineage or variant call is only useful when connected to sampling frame, collection time, data quality, repository status and any phenotyping or expert review still needed.",
+              "The beta guide can require sampling, quality, lineage, sharing and correction fields, but not current influenza, RSV or SARS-CoV-2 nomenclature rules.",
+            ],
+            sourceIds: [
+              "who-sars-cov-2-sequencing-implementation-2021",
+              "cdc-nejm-2019",
+              "mgen-belgian-influenza-phylogenomics-2021",
+              "mgen-local-sarscov2-large-scale-2020",
+            ],
+          },
+          {
+            cells: [
+              "TB and AMR",
+              "Current resistance database guidance, genotype-phenotype validation sources, drug or organism-specific confidence rules, confirmatory-testing policy and report examples.",
+              "Transmission inference and resistance inference have different evidence bases, and genotype-to-phenotype confidence varies by organism, drug, mechanism and workflow.",
+              "The beta guide can require separate relatedness, resistance, validation, follow-up and action-boundary fields, but not treatment guidance or resistance-calling thresholds.",
+            ],
+            sourceIds: [
+              "cdc-nejm-2019",
+              "ecdc-wgs-surveillance-2016",
+              "clinical-microbiology-implementation-2026",
+              "mgen-discordant-amr-predictions-2020",
+            ],
+          },
+          {
+            cells: [
+              "Healthcare-associated infection",
+              "Local infection-control report examples, organism-specific relatedness interpretation, ward or exposure-context requirements, clinical governance routes and verbal-discussion expectations.",
+              "Hospital-facing results may affect infection-control decisions and can carry tighter reporting, regulatory and interpretive obligations.",
+              "The beta guide can require recipient, setting, comparison set, relatedness, uncertainty, action boundary and feedback fields, but not local clinical governance wording.",
+            ],
+            sourceIds: [
+              "clinical-microbiology-implementation-2026",
+              "mgen-centre-specific-typing-ipc-2021",
+              "mgen-polymicrobial-mdr-critical-care-2021",
+            ],
+          },
+          {
+            cells: [
+              "Cross-cutting report governance",
+              "Laboratory-quality sign-off, national reporting requirements, correction policy, uncertainty language, data-sharing route, repository requirements and legal or privacy review.",
+              "Report wording becomes part of a governed service once results support public-health, clinical, regulatory or cross-agency action.",
+              "The beta guide can structure the review, but final wording and approval remain local or programme-specific.",
+            ],
+            sourceIds: [
+              "who-national-genomic-surveillance-strategy-2023",
+              "who-sars-cov-2-sequencing-implementation-2021",
+              "clinical-microbiology-implementation-2026",
+              "who-genomic-data-sharing-platforms-2025",
+            ],
+          },
+        ],
+        sourceIds: [
+          "who-national-genomic-surveillance-strategy-2023",
+          "who-sars-cov-2-sequencing-implementation-2021",
+          "ecdc-wgs-surveillance-2016",
+          "phe-case-study",
+          "foodborne-genomics-allard-2018",
+          "cdc-nejm-2019",
+          "clinical-microbiology-implementation-2026",
+          "who-genomic-data-sharing-platforms-2025",
+          "mgen-salmonella-typhi-paratyphi-england-2021",
+          "mgen-shotgun-metagenomics-salmonella-food-2021",
+          "mgen-belgian-influenza-phylogenomics-2021",
+          "mgen-local-sarscov2-large-scale-2020",
+          "mgen-discordant-amr-predictions-2020",
+          "mgen-centre-specific-typing-ipc-2021",
+          "mgen-polymicrobial-mdr-critical-care-2021",
+        ],
+      },
     ],
     audiences: ["director", "policy", "lab-lead", "bioinformatician", "data-manager", "all"],
     implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
@@ -1852,7 +1946,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "who-genomic-data-sharing-platforms-2025",
     ],
     gaps: [
-      "The beta checklist still needs review against laboratory-quality, national reporting and pathogen-specific template sources before it can become prescribed report wording.",
+      "The beta report-template readiness review still needs current laboratory-quality, national reporting and pathogen-specific template sources before any section can prescribe final report wording.",
       "Detailed uncertainty categories and final wording still need full-text extraction and review from pathogen-specific, national reporting and laboratory-quality sources.",
     ],
   },

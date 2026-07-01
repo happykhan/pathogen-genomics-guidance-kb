@@ -1990,5 +1990,63 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is a limitations checklist. It does not prescribe report wording, legal sign-off, or pathogen-specific uncertainty categories.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-report-template-readiness-review",
+    "sectionId": "reporting-decision-use",
+    "title": "Beta report-template readiness review",
+    "kind": "table",
+    "text": "Before converting beta reporting fields into prescribed pathogen-specific wording, review whether the required template sources, interpretation rules, QC thresholds, nomenclature rules, repository fields and governance approvals exist for that organism and use case.",
+    "claimIds": [
+      "claim-reporting-products-fit-decision",
+      "claim-beta-organism-service-model-matrix",
+      "claim-beta-enteric-respiratory-reporting-fields",
+      "claim-beta-tb-amr-hai-reporting-fields"
+    ],
+    "sourceIds": [
+      "who-national-genomic-surveillance-strategy-2023",
+      "who-sars-cov-2-sequencing-implementation-2021",
+      "ecdc-wgs-surveillance-2016",
+      "phe-case-study",
+      "foodborne-genomics-allard-2018",
+      "cdc-nejm-2019",
+      "clinical-microbiology-implementation-2026",
+      "who-genomic-data-sharing-platforms-2025",
+      "mgen-salmonella-typhi-paratyphi-england-2021",
+      "mgen-shotgun-metagenomics-salmonella-food-2021",
+      "mgen-belgian-influenza-phylogenomics-2021",
+      "mgen-local-sarscov2-large-scale-2020",
+      "mgen-discordant-amr-predictions-2020",
+      "mgen-centre-specific-typing-ipc-2021",
+      "mgen-polymicrobial-mdr-critical-care-2021"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "policy",
+        "lab-lead",
+        "bioinformatician",
+        "data-manager",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "reporting",
+        "decision-use",
+        "quality",
+        "organism-specific",
+        "templates"
+      ]
+    },
+    "order": 36,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a readiness review for future templates. It should not be read as current pathogen-specific report wording.",
+    "updatedAt": "2026-07-01"
   }
 ]
