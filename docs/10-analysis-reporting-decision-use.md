@@ -18,6 +18,8 @@ A useful pathogen genomics report should separate technical outputs from interpr
 
 The dynamic guide now includes beta reporting decision checklists, limitation prompts, report-template readiness checks, and organism-focused reporting-field tables for enteric bacteria, respiratory viruses, TB/AMR, and healthcare-associated infection. These support practical structure and review questions, not final report wording or interpretation rules.
 
+The dynamic guide also now includes a beta decision-product map. It separates urgent alerts, sample-level reports, cluster or incident briefings, surveillance summaries, repository or platform updates, and service-review dashboards. The point is to stop every output being treated as the same kind of report: each product has different users, timing, quality annotations, action boundaries, and feedback routes.
+
 This chapter still needs disease-programme sources before it can prescribe detailed interpretation rules. The current evidence supports the general principle: analysis and reporting should be designed backwards from the public-health decision, with enough provenance, uncertainty language, and context for users to understand what the result can and cannot support.
 
 ## Source Basis
@@ -40,6 +42,7 @@ This chapter still needs disease-programme sources before it can prescribe detai
 
 - Current report templates, uncertainty categories, cluster interpretation rules, nomenclature rules, and QC/reportability thresholds still need organism-specific source extraction.
 - Local clinical governance, infection-control, public-health reporting requirements, and verbal-discussion routes need programme review.
+- Decision-product examples still need review with disease-programme users before the beta map becomes a report catalogue.
 - The beta field tables need testing with disease-programme users before being treated as final templates.
 
 ## Status

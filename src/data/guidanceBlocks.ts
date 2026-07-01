@@ -2320,6 +2320,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "ECDC makes the same point from a surveillance perspective. It says visualisation and plain-language reporting should be agreed for each disease or pathogen according to surveillance objectives, and it separates two broad output types: inference about transmission linkage and prediction of clinically or epidemiologically relevant phenotypes.",
       "Clinical microbiology implementation adds a further caution: diagnostic or hospital-facing genomics can carry tighter reporting expectations, direct patient-care implications, regulatory obligations, and interpretive uncertainty. A public-health guide should therefore avoid a single universal report template; it should separate outbreak, surveillance, AMR, hospital infection-control, and clinical diagnostic reporting needs.",
       "The UK Delphi study directly supports this decision-use framing by developing expert consensus on how pathogen genomic information should be used in health-protection policy, planning, and practice. Other collection papers show why the receiving context matters: centre-specific typing can affect infection-control decisions, regional SARS-CoV-2 sequencing can support local outbreak management, genomic surveillance can guide intervention in MDR critical-care outbreaks, and organism-specific surveillance can support influenza, typhoidal Salmonella, gonorrhoea AMR, foodborne Salmonella source attribution, and rapid AMR outbreak investigation.",
+      "A routine service also needs more than one reporting product. The same data asset may feed urgent alerts, sample-level reports, cluster or incident briefings, weekly or monthly surveillance summaries, AMR or variant trend updates, repository or platform submissions, and service-review dashboards. These products have different recipients, turnaround needs, quality annotations, and feedback routes.",
       "For a beta guidance product, this section can safely set the reporting principle and give source-backed examples. A more detailed reporting template still needs extraction from laboratory-quality, pathogen-specific, or national reporting sources before the guide can prescribe report wording or uncertainty categories.",
     ],
     bodySourceIds: {
@@ -2340,9 +2341,110 @@ export const guidanceBlocks: GuidanceBlock[] = [
         "mgen-shotgun-metagenomics-salmonella-food-2021",
         "mgen-rapid-nanopore-amr-outbreak-2021",
       ],
-      7: ["phe-case-study", "clinical-microbiology-implementation-2026", "mgen-uk-delphi-health-protection-2023"],
+      7: [
+        "who-national-genomic-surveillance-strategy-2023",
+        "phe-case-study",
+        "who-sars-cov-2-sequencing-implementation-2021",
+        "mgen-uk-delphi-health-protection-2023",
+        "mgen-california-covidnet-2023",
+      ],
+      8: ["phe-case-study", "clinical-microbiology-implementation-2026", "mgen-uk-delphi-health-protection-2023"],
     },
     tables: [
+      {
+        title: "Beta decision-product map",
+        summary:
+          "Use this to separate different reporting products that may be generated from the same genomic data asset. It does not define final report wording.",
+        columns: ["Product", "Primary user", "What it should make clear", "Beta caution"],
+        rows: [
+          {
+            cells: [
+              "Urgent alert or incident signal",
+              "Incident manager, health-protection team, infection-control team or clinical/public-health lead.",
+              "Why the signal matters now, quality status, comparison set, action boundary, missing context and who owns immediate follow-up.",
+              "An alert should not imply that genomics alone proves source, direction of transmission or intervention choice.",
+            ],
+            sourceIds: [
+              "who-national-genomic-surveillance-strategy-2023",
+              "who-sars-cov-2-sequencing-implementation-2021",
+              "mgen-polymicrobial-mdr-critical-care-2021",
+            ],
+          },
+          {
+            cells: [
+              "Sample-level report",
+              "Submitting laboratory, reference service, clinician where applicable, epidemiologist or surveillance analyst.",
+              "Sample identity, method and version, QC status, interpreted result, uncertainty, reportable boundary, follow-up testing and correction route.",
+              "Clinical or hospital-facing reports may require local regulatory, accreditation and clinical-governance review.",
+            ],
+            sourceIds: ["phe-case-study", "clinical-microbiology-implementation-2026", "aphl-ngs-implementation-2016"],
+          },
+          {
+            cells: [
+              "Cluster or outbreak briefing",
+              "Outbreak control team, epidemiology team, food-safety or environmental-health partners, infection-control users.",
+              "Cases included and excluded, sampling frame, comparison set, metadata limits, genomic signal, epidemiological context needed and next investigation question.",
+              "A cluster briefing should separate genomic relatedness from exposure, source attribution and control action.",
+            ],
+            sourceIds: ["phe-case-study", "ecdc-wgs-surveillance-2016", "foodborne-genomics-allard-2018"],
+          },
+          {
+            cells: [
+              "Surveillance summary",
+              "Programme lead, national surveillance team, policy lead, funder or partner network.",
+              "Trends over time, sampling coverage, representativeness, lineage or AMR patterns, missing data, changed methods and public-health interpretation.",
+              "Trend reports are only interpretable if sampling strategy and method changes are visible.",
+            ],
+            sourceIds: [
+              "who-national-genomic-surveillance-strategy-2023",
+              "cdc-nejm-2019",
+              "mgen-belgian-influenza-phylogenomics-2021",
+              "mgen-salmonella-typhi-paratyphi-england-2021",
+            ],
+          },
+          {
+            cells: [
+              "Repository or platform update",
+              "Data manager, repository submitter, platform users, collaborators or public database users.",
+              "Data type, minimum metadata, accessions, release state, QC status, correction or replacement route and attribution.",
+              "Submission is a stewardship event; accession tracking and correction routes remain part of the service.",
+            ],
+            sourceIds: [
+              "who-genomic-data-sharing-platforms-2025",
+              "who-pathogen-genome-data-sharing-2022",
+              "aphl-ngs-implementation-2016",
+            ],
+          },
+          {
+            cells: [
+              "Service-review dashboard",
+              "Service lead, quality lead, laboratory, bioinformatics, data-management and programme owners.",
+              "Volume, failures, repeats, missing metadata, delayed or corrected reports, user feedback, unresolved actions and investment needs.",
+              "A service dashboard is for improvement and accountability; it should not replace pathogen-specific public-health interpretation.",
+            ],
+            sourceIds: [
+              "phe-case-study",
+              "who-national-genomic-surveillance-strategy-2023",
+              "clinical-microbiology-implementation-2026",
+            ],
+          },
+        ],
+        sourceIds: [
+          "who-national-genomic-surveillance-strategy-2023",
+          "who-sars-cov-2-sequencing-implementation-2021",
+          "phe-case-study",
+          "ecdc-wgs-surveillance-2016",
+          "clinical-microbiology-implementation-2026",
+          "who-genomic-data-sharing-platforms-2025",
+          "who-pathogen-genome-data-sharing-2022",
+          "aphl-ngs-implementation-2016",
+          "cdc-nejm-2019",
+          "foodborne-genomics-allard-2018",
+          "mgen-polymicrobial-mdr-critical-care-2021",
+          "mgen-belgian-influenza-phylogenomics-2021",
+          "mgen-salmonella-typhi-paratyphi-england-2021",
+        ],
+      },
       {
         title: "Beta reporting decision checklist",
         summary:
@@ -2678,6 +2780,10 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "mgen-shotgun-metagenomics-salmonella-food-2021",
       "mgen-rapid-nanopore-amr-outbreak-2021",
       "who-genomic-data-sharing-platforms-2025",
+      "who-pathogen-genome-data-sharing-2022",
+      "aphl-ngs-implementation-2016",
+      "foodborne-genomics-allard-2018",
+      "mgen-california-covidnet-2023",
     ],
     gaps: [
       "The beta report-template readiness review still needs current laboratory-quality, national reporting and pathogen-specific template sources before any section can prescribe final report wording.",

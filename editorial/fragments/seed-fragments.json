@@ -2055,6 +2055,61 @@
     "updatedAt": "2026-07-01"
   },
   {
+    "id": "fragment-beta-decision-product-map",
+    "sectionId": "reporting-decision-use",
+    "title": "Beta decision-product map",
+    "kind": "table",
+    "text": "A routine genomics service may produce urgent alerts, sample-level reports, cluster or incident briefings, surveillance summaries, repository or platform updates, and service-review dashboards from the same data asset. Each product should name its user, timing, quality limits, action boundary and feedback route.",
+    "claimIds": [
+      "claim-reporting-products-fit-decision",
+      "claim-lifecycle-service-loop",
+      "claim-beta-data-sharing-decision-table"
+    ],
+    "sourceIds": [
+      "who-national-genomic-surveillance-strategy-2023",
+      "who-sars-cov-2-sequencing-implementation-2021",
+      "phe-case-study",
+      "ecdc-wgs-surveillance-2016",
+      "clinical-microbiology-implementation-2026",
+      "who-genomic-data-sharing-platforms-2025",
+      "who-pathogen-genome-data-sharing-2022",
+      "aphl-ngs-implementation-2016",
+      "cdc-nejm-2019",
+      "foodborne-genomics-allard-2018",
+      "mgen-polymicrobial-mdr-critical-care-2021",
+      "mgen-belgian-influenza-phylogenomics-2021",
+      "mgen-salmonella-typhi-paratyphi-england-2021"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "policy",
+        "lab-lead",
+        "bioinformatician",
+        "data-manager",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "reporting",
+        "decision-use",
+        "quality",
+        "metadata",
+        "data-sharing"
+      ]
+    },
+    "order": 28,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta product map. It does not define final report wording, legal sign-off, pathogen-specific thresholds or mandatory dashboard metrics.",
+    "updatedAt": "2026-07-01"
+  },
+  {
     "id": "fragment-beta-reporting-decision-checklist",
     "sectionId": "reporting-decision-use",
     "title": "Beta reporting decision checklist",
