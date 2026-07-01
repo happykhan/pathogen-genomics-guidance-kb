@@ -1044,6 +1044,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "PHA4GE's implementation comparison gives the practical trade-off. A laptop model can be useful when internet or power is unreliable, but it shifts management to the operator and limits scalability and access-control structures. On-premises systems can meet local needs, but job-processing infrastructure requires expertise. Cloud platforms can reduce local hardware barriers, but they depend on internet connectivity for upload and may shift cost, data-residency and vendor-dependency questions elsewhere.",
       "The East African Community assessment shows why this matters. External sequencing and analysis can be useful during capability building, but long-term reliance on third parties may delay real-time surveillance decisions and limit local interpretation if local sequencing, compute, bioinformatics, and data-sharing capacity are not developed. The guide should therefore treat external support as a dependency to manage, not as a failure or a complete solution.",
       "The implementation collection adds concrete network examples: Kenya's AMR paper describes training public-health scientists to generate genomic data and harmonized reports; the European reference-laboratory rollout paper describes guidance and support for national food, feed, and veterinary laboratories; California COVIDNet shows a large collaborative model linking many sequencing laboratories, cloud-based analysis, training, and visualization workflows.",
+      "For beta, compare implementation models in a dependency matrix. The purpose is not to rank laptop, local server, HPC, cloud, managed platform, centralised reference, hybrid, collaborative, or external-support models as universally better or worse. The purpose is to make the dependencies explicit: who owns each layer, which public-health use case is supported, what happens when internet, power, staff, storage, provider access, or partner support fails, and what local capability is being built.",
     ],
     bodySourceIds: {
       0: ["pha4ge-infrastructure", "clinical-microbiology-implementation-2026"],
@@ -1060,9 +1061,17 @@ export const guidanceBlocks: GuidanceBlock[] = [
         "mgen-eurl-wgs-rollout-europe-2023",
         "mgen-california-covidnet-2023",
       ],
+      6: [
+        "pha4ge-infrastructure",
+        "clinical-microbiology-implementation-2026",
+        "auspathogen-implementation-2025",
+        "east-africa-genomics-landscape-2024",
+      ],
     },
     technicalDetail: [
       "For each proposed model, record the service owner, laboratory operator, sequencing location, analysis location, workflow owner, data host, access manager, support route, validation owner, and fallback if the primary provider or network route is unavailable.",
+      "Beta matrix rows: laptop or field workflow; local workstation; institutional server or HPC; cloud workflow platform; managed SaaS-style platform; centralised reference service; hybrid local and central model; national collaborative network; externally supported sequencing or analysis.",
+      "Beta matrix columns: supported use case, sample route, sequencing location, analysis location, data host, workflow owner, validation owner, access manager, support route, internet or power dependency, data-residency issue, recurring cost line, local capability built, failure mode, and fallback route.",
     ],
     audiences: ["director", "policy", "lab-lead", "bioinformatician", "it-security", "funder", "data-manager"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
@@ -1088,7 +1097,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "mgen-eurl-wgs-rollout-europe-2023",
       "mgen-california-covidnet-2023",
     ],
-    gaps: ["A formal dependency matrix for implementation models still needs to be designed as an editable figure or table."],
+    gaps: ["The beta dependency matrix still needs rendering as an editable table and testing against the wizard constraint scenarios."],
   },
   {
     id: "maturity-next-steps",
@@ -1103,6 +1112,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "The current KB should not pretend to have a validated maturity scoring instrument. It can use maturity language to structure planning, while keeping a formal assessment rubric as a separate source-backed gap.",
       "The East African Community assessment is a reminder that maturity is not only a local laboratory question. Sequencing access, bioinformatics expertise, compute infrastructure, regional collaboration, standards, and data-sharing mechanisms can all determine whether a programme can act independently or must rely on external partners. A maturity discussion should therefore separate internal capability, external dependency, and the support arrangements that make a chosen model reliable.",
       "The implementation collection helps define practical maturity signals: participation in proficiency testing, harmonised inter-laboratory methods, validated bioinformatics workflows, reproducible AMR prediction, trained users, and routine links between genomic outputs and health-protection decisions.",
+      "The dependency matrix is the practical bridge between implementation model and maturity. A programme can be immature if it owns too much without support, or fragile if it outsources too much without fallback, local interpretation, access governance, or cost control. The useful question is which dependency is unmanaged for the service being promised.",
       "For beta, maturity should be framed as risk reduction. Ask which dependency would stop the service from being used: one person leaving, internet failing, storage filling, access not being reviewed, a workflow changing without validation, a report not being understood, or a partner service becoming unavailable.",
     ],
     bodySourceIds: {
@@ -1119,10 +1129,17 @@ export const guidanceBlocks: GuidanceBlock[] = [
         "mgen-kenya-amr-genomics-capacity-2023",
         "mgen-uk-delphi-health-protection-2023",
       ],
-      6: ["pha4ge-infrastructure", "phe-case-study", "who-genomic-surveillance-progress-2023"],
+      6: [
+        "pha4ge-infrastructure",
+        "clinical-microbiology-implementation-2026",
+        "east-africa-genomics-landscape-2024",
+        "auspathogen-implementation-2025",
+      ],
+      7: ["pha4ge-infrastructure", "phe-case-study", "who-genomic-surveillance-progress-2023"],
     },
     technicalDetail: [
       "Beta maturity dimensions: use case clarity, sampling route, metadata lineage, QC and validation, workflow provenance, storage and backup, access control, reporting route, data-sharing route, workforce cover, recurrent cost, and service review.",
+      "Dependency questions: Which functions are internal, external, shared, or unmanaged? Which dependency would stop reporting? Which dependency would stop interpretation? Which dependency would create unacceptable delay? Which dependency has no documented fallback?",
       "Do not use the current maturity language as a certified score. Use it to choose the next risk to reduce and record the evidence gap.",
     ],
     audiences: ["director", "policy", "funder", "lab-lead", "bioinformatician", "it-security", "data-manager", "all"],

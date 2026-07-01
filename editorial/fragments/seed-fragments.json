@@ -1080,5 +1080,55 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "Renderer currently exposes this as structured prose/technical detail rather than a native table.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-implementation-dependency-matrix",
+    "sectionId": "implementation-patterns-case-studies",
+    "title": "Beta implementation dependency matrix",
+    "kind": "table",
+    "text": "Compare implementation models by dependency and fallback, not by a generic ranking. For each local, centralised, cloud, managed-platform, hybrid, collaborative, or external-support model, record who owns the service, where sequencing and analysis happen, who validates workflows, where data are hosted, how access is managed, what internet or power dependency exists, what local capability is built, what happens if the provider or network route fails, and which costs recur.",
+    "claimIds": [
+      "claim-beta-implementation-dependency-matrix",
+      "claim-maturity-risk-reduction",
+      "claim-beta-workforce-responsibility-template"
+    ],
+    "sourceIds": [
+      "pha4ge-infrastructure",
+      "clinical-microbiology-implementation-2026",
+      "auspathogen-implementation-2025",
+      "east-africa-genomics-landscape-2024",
+      "who-genomics-costing-tool-manual-2024"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "policy",
+        "funder",
+        "lab-lead",
+        "bioinformatician",
+        "it-security",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "implementation",
+        "infrastructure",
+        "operating-model",
+        "managed-platform",
+        "hybrid",
+        "sustainability"
+      ]
+    },
+    "order": 50,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a dependency matrix, not a maturity score or procurement recommendation.",
+    "updatedAt": "2026-07-01"
   }
 ]

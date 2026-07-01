@@ -545,5 +545,16 @@
     "tags": ["workforce", "responsibility-template", "training", "support", "implementation-model", "capacity"],
     "limitations": "Supports a responsibility template and capability questions, not staffing ratios or grade structures by throughput.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-beta-implementation-dependency-matrix",
+    "sourceId": "pha4ge-infrastructure",
+    "sourceLocator": "PHA4GE implementation comparison; Gador-Whyte et al. 2026 implementation models; AusPathoGen 2025 national implementation account; East African Community 2024 landscape assessment",
+    "evidenceType": "passage-note",
+    "excerpt": "where internet and power were unreliable",
+    "passageSummary": "PHA4GE compares laptop, on-premises, workflow-platform, Galaxy, Terra and IRIDA-like implementations across scalability, access control, provenance, user control, external access requirements and administrative burden. The clinical implementation review describes centralised reference laboratory, decentralised in-house, hybrid and collaborative models. AusPathoGen describes a national collaborative model with public-health laboratories, agencies, academic partners, standard bioinformatics methods, governance committees and a shared data platform. The East African Community assessment shows that external sequencing or analysis can help during capability building but may delay real-time surveillance decisions and limit local interpretation if local sequencing, compute, bioinformatics and data-sharing capacity are not developed.",
+    "tags": ["implementation-model", "dependency-matrix", "local-compute", "cloud", "managed-platform", "hybrid", "external-support"],
+    "limitations": "Supports dependency comparison, not a universal ranked recommendation or validated scoring rubric.",
+    "reviewStatus": "reviewed"
   }
 ]

@@ -617,5 +617,31 @@
     "confidence": "high",
     "limitations": "Does not define full-time equivalents, grades, salaries, or minimum staffing by throughput.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "claim-beta-implementation-dependency-matrix",
+    "sourceId": "pha4ge-infrastructure",
+    "sourceLocator": "PHA4GE implementation comparison, clinical implementation review, AusPathoGen national implementation account, and East African Community landscape assessment",
+    "evidenceItemIds": [
+      "evidence-beta-implementation-dependency-matrix",
+      "evidence-pha4ge-implementation-dependencies",
+      "evidence-beta-workforce-responsibility-template",
+      "evidence-service-model-choices"
+    ],
+    "claim": "The beta guide should compare local, centralised, managed-platform, cloud, hybrid, collaborative and external-support models by dependencies, owners and failure modes rather than ranking one model as universally best.",
+    "extractedText": "PHA4GE compares implementation examples across constraints such as internet, power, scalability, access control, provenance and administrative burden. The clinical implementation review names centralised, decentralised, hybrid and collaborative models. AusPathoGen provides a national collaborative example. The East African Community assessment shows why external sequencing or analysis should be treated as a managed dependency during capacity building.",
+    "notes": "Use for the implementation-model dependency matrix and Gnomey constraint logic.",
+    "tags": ["implementation-model", "dependency-matrix", "constraints", "managed-platform", "hybrid", "external-support"],
+    "candidateSectionIds": [
+      "implementation-patterns-case-studies",
+      "infrastructure-operating-model",
+      "maturity-next-steps"
+    ],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "multiple",
+    "confidence": "high",
+    "limitations": "Does not provide numeric thresholds or a validated scoring instrument.",
+    "reviewStatus": "reviewed"
   }
 ]
