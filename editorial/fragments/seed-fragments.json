@@ -1451,5 +1451,53 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is a beta checklist for guide use. It still needs local quality-system and accreditation review before use as an SOP.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-costing-scenario-templates",
+    "sectionId": "workforce-sustainability-costing",
+    "title": "Beta costing scenario templates",
+    "kind": "table",
+    "text": "Use scenario templates to compare service models before committing to procurement. Each scenario should state the use case, throughput, sequencing model, analysis model, storage model, workforce and support roles, quality-management scope, sharing route, expected benefit, excluded costs and evidence confidence.",
+    "claimIds": [
+      "claim-costing-recurrent-service-categories",
+      "claim-beta-implementation-dependency-matrix",
+      "claim-infrastructure-recurrent-responsibility"
+    ],
+    "sourceIds": [
+      "who-genomics-costing-tool-manual-2024",
+      "wgs-costing-tool-2024",
+      "pha4ge-infrastructure",
+      "phe-case-study",
+      "clinical-microbiology-implementation-2026",
+      "auspathogen-implementation-2025",
+      "east-africa-genomics-landscape-2024"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "policy",
+        "funder",
+        "lab-lead",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "costing",
+        "sustainability",
+        "procurement",
+        "implementation-model"
+      ]
+    },
+    "order": 40,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a planning template. It should not be used as a quantitative cost estimate without local data.",
+    "updatedAt": "2026-07-01"
   }
 ]

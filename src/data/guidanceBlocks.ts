@@ -1820,6 +1820,97 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "Minimum recurrent infrastructure cost lines: cloud compute, cloud storage, data egress if relevant, in-house server hardware, high-performance storage, archive storage, backup storage, redundancy, software licences, maintenance fees, systems administration, systems engineering, user support, validation or revalidation time, and quality-management activities.",
       "Minimum workforce cost lines: wet-lab staff, sequencing operation, bioinformatics operation, data management, quality management, IT or security support, system administration, reporting or interpretation, user training, programme management, and cover for leave or turnover.",
     ],
+    tables: [
+      {
+        title: "Beta costing and implementation scenario templates",
+        summary:
+          "Use these templates to compare plausible service models before procurement. Replace all placeholders with local throughput, staff, infrastructure and quality-management assumptions.",
+        columns: ["Scenario", "Define before costing", "Cost and support lines to test", "Evidence caution"],
+        rows: [
+          {
+            cells: [
+              "Pilot or proof of service",
+              "Pathogen or programme, use case, small test throughput, comparator method, reportable output, validation boundary and stop/go decision.",
+              "Sequencing consumables, limited staff time, training, validation dataset, bioinformatics support, storage, user feedback and quality review.",
+              "A pilot can prove feasibility but does not prove recurrent service cost, workforce cover or long-term sustainability.",
+            ],
+            sourceIds: [
+              "who-genomics-costing-tool-manual-2024",
+              "aphl-ngs-implementation-2016",
+              "clinical-microbiology-implementation-2026",
+            ],
+          },
+          {
+            cells: [
+              "Routine single-pathogen service",
+              "Expected annual throughput, sampling route, turnaround target, reporting route, repository route, validation and accreditation scope.",
+              "Dedicated wet-lab, bioinformatics, data-management, quality, reporting and user-support time; storage growth; workflow maintenance; revalidation.",
+              "The PHE case study shows a centralised enteric-bacterial service, not a universal staffing or cost model.",
+            ],
+            sourceIds: ["phe-case-study", "who-genomics-costing-tool-manual-2024"],
+          },
+          {
+            cells: [
+              "Multi-pathogen service",
+              "Which organisms share sequencing, analysis, storage, data-management, reporting and quality systems, and which require separate validation or reporting.",
+              "Shared infrastructure, multiple workflows, pathogen-specific validation, training, report templates, repository routes and support cover.",
+              "Shared platforms can reduce duplication, but organism-specific QC, reporting and interpretation boundaries remain.",
+            ],
+            sourceIds: [
+              "who-genomics-costing-tool-manual-2024",
+              "clinical-microbiology-implementation-2026",
+              "pha4ge-infrastructure",
+            ],
+          },
+          {
+            cells: [
+              "National or collaborative network",
+              "Roles of local laboratories, national reference service, academic partners, data platform, governance committees and user groups.",
+              "Training, coordination, shared methods, proficiency testing or EQA, data-sharing agreements, platform costs, support desk and evaluation.",
+              "Network models need governance and shared standards; they are not just scaled-up local workflows.",
+            ],
+            sourceIds: [
+              "auspathogen-implementation-2025",
+              "australia-microbial-genomics-framework-2025",
+              "mgen-california-covidnet-2023",
+            ],
+          },
+          {
+            cells: [
+              "Managed platform, cloud or hybrid model",
+              "Which layers are delegated, which responsibilities remain local, data-residency constraints, access model, internet dependency and fallback route.",
+              "Platform fees, cloud compute and storage, data egress, account management, provider support, local validation, local interpretation and user training.",
+              "Delegating workflow execution does not delegate public-health responsibility for validation, interpretation, access and support.",
+            ],
+            sourceIds: [
+              "pha4ge-infrastructure",
+              "who-genomics-costing-tool-manual-2024",
+              "clinical-microbiology-implementation-2026",
+            ],
+          },
+          {
+            cells: [
+              "Externally supported capacity building",
+              "Which sequencing, analysis or interpretation tasks are external; what local capability is being built; and what must become locally sustainable.",
+              "Sample shipment or transfer, external analysis fees, training, local compute or data access, governance, turnaround and transition plan.",
+              "External support can be useful, but unmanaged dependence can delay real-time surveillance and limit local interpretation.",
+            ],
+            sourceIds: ["east-africa-genomics-landscape-2024", "who-genomic-surveillance-progress-2023"],
+          },
+        ],
+        sourceIds: [
+          "who-genomics-costing-tool-manual-2024",
+          "wgs-costing-tool-2024",
+          "pha4ge-infrastructure",
+          "phe-case-study",
+          "clinical-microbiology-implementation-2026",
+          "auspathogen-implementation-2025",
+          "australia-microbial-genomics-framework-2025",
+          "east-africa-genomics-landscape-2024",
+          "who-genomic-surveillance-progress-2023",
+        ],
+      },
+    ],
     audiences: ["director", "policy", "funder", "lab-lead"],
     implementationStages: ["exploring", "pilot", "upgrading", "national-scale"],
     organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
@@ -1833,10 +1924,17 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "genometrakr-economic-2021",
       "wgs-economic-review",
       "lancet-wgs-economic-strategies-2026",
+      "clinical-microbiology-implementation-2026",
+      "auspathogen-implementation-2025",
+      "australia-microbial-genomics-framework-2025",
+      "east-africa-genomics-landscape-2024",
+      "who-genomic-surveillance-progress-2023",
+      "aphl-ngs-implementation-2016",
+      "mgen-california-covidnet-2023",
     ],
     gaps: [
       "A setting-specific quantitative extraction is still needed before making general return-on-investment claims across pathogens and countries.",
-      "The guide still needs scenario templates for pilot, single-pathogen routine service, multi-pathogen service, national network, and managed-platform models.",
+      "The scenario templates still need local quantitative examples with throughput, staffing, procurement and recurrent-cost assumptions by service model.",
     ],
   },
   {
