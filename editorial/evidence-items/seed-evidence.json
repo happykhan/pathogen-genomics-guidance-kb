@@ -523,5 +523,16 @@
     "tags": ["change-control", "validation", "qc", "version-control", "workflow-audit", "revalidation"],
     "limitations": "Supports a beta release-control checklist; a formal accredited SOP still needs local quality-system review.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-beta-metadata-accession-field-model",
+    "sourceId": "who-genomic-data-sharing-platforms-2025",
+    "sourceLocator": "WHO 2025 platform guidance section 2.4 and 2.7; WHO 2021 SARS-CoV-2 implementation guide section 6.2; ECDC 2016 metadata linkage section; APHL 2016 NCBI and isolate tracking sections",
+    "evidenceType": "passage-note",
+    "excerpt": "Minimum metadata are defined and include sample information",
+    "passageSummary": "WHO platform guidance defines a platform data scope including pathogen scope, data type, laboratory and bioinformatics methods, linked metadata, minimum metadata such as time, place, host, source, sampling strategy, sequencing strategy and attribution, optional pre-set metadata for epidemic and One Health analysis, and provenance across the sequence and metadata generation continuum. WHO's SARS-CoV-2 guide sets date and location of sample collection as absolute minimum metadata and encourages specimen type, sequencing method, duplicate-sample flags, demographic or clinical data when confidentiality permits, and consistent formats. ECDC requires genomic records to link to source patient or environmental metadata through a common source identifier and separates public non-confidential metadata from restricted sensitive data. APHL recommends tracking multiple isolate identifiers and repository fields, including state ID, WGS_ID, SAMN ID, SRA ID, DNA extraction date, NCBI upload date, BioSample export date, analysis-engine submission and retrieval dates, and national database upload dates.",
+    "tags": ["metadata", "field-model", "accessions", "provenance", "repository", "sensitive-data"],
+    "limitations": "This supports a beta field model, not a complete organism-specific repository schema.",
+    "reviewStatus": "reviewed"
   }
 ]

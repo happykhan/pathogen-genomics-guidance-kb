@@ -942,5 +942,48 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is beta guidance, not a full accreditation SOP.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-metadata-accession-model",
+    "sectionId": "metadata-identifier-lineage",
+    "title": "Beta metadata and accession model",
+    "kind": "paragraph",
+    "text": "For beta, treat metadata as five linked buckets: public minimum metadata, restricted contextual metadata, technical provenance, repository accession fields, and service-management fields. The buckets can be implemented in different systems, but they need a common identifier lineage so a report, repository record, reanalysis or correction can be traced back to the same sample or isolate.",
+    "claimIds": [
+      "claim-beta-metadata-accession-field-model",
+      "claim-metadata-identifier-lineage-core"
+    ],
+    "sourceIds": [
+      "who-genomic-data-sharing-platforms-2025",
+      "who-sars-cov-2-sequencing-implementation-2021",
+      "ecdc-wgs-surveillance-2016",
+      "aphl-ngs-implementation-2016"
+    ],
+    "conditions": {
+      "audiences": [
+        "data-manager",
+        "bioinformatician",
+        "lab-lead",
+        "it-security",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "metadata",
+        "identifier-lineage",
+        "repositories",
+        "privacy"
+      ]
+    },
+    "order": 20,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta model, not a full pathogen-specific schema.",
+    "updatedAt": "2026-07-01"
   }
 ]

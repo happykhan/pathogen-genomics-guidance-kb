@@ -310,7 +310,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "aphl-ngs-implementation-2016",
     ],
     gaps: [
-      "A formal field dictionary still needs extraction from repository and pathogen-specific metadata standards before the guide can recommend required fields for each organism or programme.",
+      "The beta metadata buckets still need conversion into a formal field dictionary with required, optional, public, restricted, and system-generated fields by organism and use case.",
       "The guide still needs a source-backed service-review table for sample failures, run failures, delayed reports, repository submission failures, user feedback and corrective actions.",
     ],
   },
@@ -325,6 +325,8 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "The PHE case study shows this in practice: LIMS sample data and sequence-analysis outputs were combined to produce final sample reports.",
       "The minimum design issue is linkage. A programme needs stable ways to connect the sample or isolate, submitted metadata, sequencing run, raw data, QC outputs, workflow run, interpreted result, report, and any repository or sharing event. This should be treated as a service requirement, not a spreadsheet tidy-up task after analysis is finished.",
       "WHO's platform principles provide a practical starting point for metadata scope: sample information, sampling strategy, sequencing strategy, bioinformatics methods, attribution data, and optional fields for richer epidemic or One Health analysis. The same guidance links richer metadata to deeper inference, while noting that sensitive or privileged data may require stricter access policies.",
+      "For beta, the guide can use five linked metadata buckets. Public minimum metadata are the fields that can normally travel with shared sequence data, such as collection date, location at an appropriate resolution, host or source, sample type, sampling strategy, sequencing strategy, bioinformatics method and attribution. Restricted contextual metadata are fields that improve interpretation but may need tighter access, such as clinical details, exposure information, hospitalisation, outcome, travel history, food-chain details, animal-health links or environmental context.",
+      "The remaining three buckets keep the service auditable. Technical provenance records who collected the sample, who generated metadata, which laboratory processed and sequenced it, which bioinformatics unit analysed it, how the data entered a platform, and which identifiers link it to other resources. Repository accession fields record BioSample or equivalent sample accessions, raw-read accessions such as SRA or ENA records, consensus-genome accessions where used, upload dates, correction dates and platform status. Service-management fields record internal workflow dates and identifiers, including extraction date, sequencing run, QC status, analysis submission and retrieval dates, report date, repository-submission status, repeat-analysis events and follow-up owner.",
       "Poor linkage reduces the value of analysis even when sequencing and bioinformatics are technically sound. It can make reports harder to interpret, weaken outbreak investigation, complicate reanalysis, break repository submission, and make it harder to audit who generated, saw, changed, or reused data.",
       "ECDC and AusPathoGen add the implementation point: WGS becomes more useful when genomic analysis is integrated into surveillance and epidemiological interpretation, not held as a separate laboratory artifact. That means the metadata model should be designed with the people who will investigate outbreaks, interpret surveillance signals, or act on AMR and healthcare-associated infection information.",
     ],
@@ -333,8 +335,18 @@ export const guidanceBlocks: GuidanceBlock[] = [
       1: ["phe-case-study"],
       2: ["who-national-genomic-surveillance-strategy-2023", "who-genomic-data-sharing-platforms-2025"],
       3: ["who-genomic-data-sharing-platforms-2025"],
-      4: ["who-genomic-data-sharing-platforms-2025", "cdc-nejm-2019", "phe-case-study"],
-      5: ["ecdc-wgs-surveillance-2016", "auspathogen-implementation-2025"],
+      4: [
+        "who-genomic-data-sharing-platforms-2025",
+        "who-sars-cov-2-sequencing-implementation-2021",
+        "ecdc-wgs-surveillance-2016",
+      ],
+      5: [
+        "who-genomic-data-sharing-platforms-2025",
+        "aphl-ngs-implementation-2016",
+        "who-sars-cov-2-sequencing-implementation-2021",
+      ],
+      6: ["who-genomic-data-sharing-platforms-2025", "cdc-nejm-2019", "phe-case-study"],
+      7: ["ecdc-wgs-surveillance-2016", "auspathogen-implementation-2025"],
     },
     bodyCitationAnchors: {
       2: [
@@ -361,6 +373,8 @@ export const guidanceBlocks: GuidanceBlock[] = [
     technicalDetail: [
       "Minimum internal lineage: sample or isolate identifier, submitter or collection route, collection date/place/source where appropriate, sampling strategy or reason for sequencing, sequencing run, raw data location, QC status, workflow run and version, reference data version, interpreted result, released report, correction history, sharing event, repository accession or platform identifier, and retention/archive decision.",
       "Minimum platform questions: What metadata are required? What fields are optional but pre-set? Are provenance and attribution recorded? Are persistent identifiers or accessions issued? Can the platform exchange data through documented APIs or standards? How are restricted metadata handled?",
+      "Beta metadata buckets: public minimum metadata; restricted contextual metadata; technical provenance; repository accession fields; service-management fields. Do not require all buckets to live in one system, but require stable identifiers that join them.",
+      "Beta accession fields: local sample or isolate identifier, submitter identifier, repository sample accession, raw-read accession, consensus-genome accession if used, platform project or workspace identifier, upload date, correction or replacement date, and status of public, controlled or internal release.",
     ],
     audiences: ["data-manager", "bioinformatician", "lab-lead", "it-security"],
     implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
@@ -373,12 +387,14 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "pha4ge-infrastructure",
       "who-national-genomic-surveillance-strategy-2023",
       "who-genomic-data-sharing-platforms-2025",
+      "who-sars-cov-2-sequencing-implementation-2021",
       "ecdc-wgs-surveillance-2016",
+      "aphl-ngs-implementation-2016",
       "auspathogen-implementation-2025",
     ],
     gaps: [
-      "The guide still needs organism-specific metadata field sets for enteric bacteria, tuberculosis, respiratory viruses, AMR, and healthcare-associated infection.",
-      "The guide still needs extraction from INSDC, NCBI, GISAID, and pathogen-specific repository guidance before recommending repository-specific submission fields.",
+      "The beta field model still needs organism-specific field sets for enteric bacteria, tuberculosis, respiratory viruses, AMR, and healthcare-associated infection.",
+      "Current INSDC/NCBI, GISAID, and organism-specific repository templates still need direct extraction before the guide can prescribe repository-specific submission fields.",
     ],
   },
   {
@@ -707,7 +723,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "auspathogen-implementation-2025",
     ],
     gaps: [
-      "The guide still needs repository-specific submission guidance for INSDC/NCBI, GISAID and organism-specific platforms.",
+      "Current INSDC/NCBI, GISAID and organism-specific repository templates still need direct extraction before the guide can prescribe repository-specific submission fields.",
       "The beta decision pathway still needs to be converted into an editable figure or table and checked against jurisdiction-specific legal and ethical requirements.",
     ],
   },

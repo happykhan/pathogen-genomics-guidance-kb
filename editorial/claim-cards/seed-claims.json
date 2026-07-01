@@ -563,5 +563,32 @@
     "confidence": "high",
     "limitations": "Does not define jurisdiction-specific accreditation wording or organism-specific acceptance thresholds.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "claim-beta-metadata-accession-field-model",
+    "sourceId": "who-genomic-data-sharing-platforms-2025",
+    "sourceLocator": "WHO 2025 platform guidance, WHO 2021 SARS-CoV-2 implementation guide, ECDC 2016 expert opinion, and APHL 2016 implementation guide",
+    "evidenceItemIds": [
+      "evidence-beta-metadata-accession-field-model",
+      "evidence-who-2025-metadata-provenance-interoperability",
+      "evidence-who-sarscov2-metadata-sharing",
+      "evidence-ecdc-public-sensitive-metadata-sharing",
+      "evidence-aphl-multiday-workflow-lims-accessions"
+    ],
+    "claim": "The beta metadata model should separate public minimum metadata, restricted contextual metadata, technical provenance, repository accession fields, and service-management fields, while preserving a common identifier lineage.",
+    "extractedText": "WHO 2025 defines minimum metadata, optional metadata, provenance and identifiers across the sequence and metadata generation continuum. WHO 2021 gives date and location as absolute minimum SARS-CoV-2 metadata and encourages specimen type, sequencing method, duplicate flags and clinical or demographic data where confidentiality permits. ECDC separates non-confidential public metadata from sensitive clinical and epidemiological data. APHL shows how local services can track multiple isolate and repository identifiers, including SAMN and SRA IDs and dates for extraction, upload and database submission.",
+    "notes": "Use to turn the metadata gap into a beta field model without pretending to have organism-specific schemas.",
+    "tags": ["metadata", "identifier-lineage", "repository", "accession", "provenance", "privacy"],
+    "candidateSectionIds": [
+      "metadata-identifier-lineage",
+      "data-lifecycle-sample-to-report",
+      "repository-data-sharing"
+    ],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "multiple",
+    "confidence": "high",
+    "limitations": "Organism-specific metadata fields, repository templates and legal requirements still need separate extraction and review.",
+    "reviewStatus": "reviewed"
   }
 ]
