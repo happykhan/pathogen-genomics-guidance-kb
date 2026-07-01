@@ -296,6 +296,8 @@ export const guidanceBlocks: GuidanceBlock[] = [
     technicalDetail: [
       "Minimum lineage fields for beta: sample or isolate identifier; submitting organisation or service route; collection date, place and source where appropriate; sampling frame or reason for sequencing; sequencing run; raw data; QC status and QC outputs; workflow run, workflow version and reference data; interpreted result; released report; correction or repeat-analysis event; sharing event; repository accession or platform identifier; and retention or archive decision.",
       "Minimum service-review fields: sample volume, failed or repeated samples, failed or repeated runs, missing metadata fields, median turnaround by use case, delayed report reasons, corrected report count, repository-submission status, user-feedback items, and follow-up action owner.",
+      "Beta service-review rows: routine volume; failed or repeated samples; failed or repeated runs; missing metadata; delayed reports; corrected reports; repository-submission status; user feedback; corrective actions.",
+      "Beta service-review columns: event or measure, use case affected, sample or report count, owner, user impact, decision taken, corrective action, due date, closure status, and whether the issue changes validation, SOPs, training, metadata capture, infrastructure, or reporting.",
     ],
     audiences: ["lab-lead", "bioinformatician", "data-manager", "it-security"],
     implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
@@ -311,7 +313,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     gaps: [
       "The beta metadata buckets still need conversion into a formal field dictionary with required, optional, public, restricted, and system-generated fields by organism and use case.",
-      "The guide still needs a source-backed service-review table for sample failures, run failures, delayed reports, repository submission failures, user feedback and corrective actions.",
+      "The beta service-review rows still need rendering as an editable table and testing with pilot, routine-service, and national-network scenarios.",
     ],
   },
   {
@@ -476,6 +478,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "The PHE case study supports this service view because implementation covered workflow development from sample receipt to reporting, LIMS interaction, validation, quality parameters, accreditation, training, and user engagement. WHO's national strategy support tool also treats data quality, consistency, storage, backup, reporting, and interpretation as part of genomic surveillance data management.",
       "A practical service should review its own performance over time. Candidate measures include turnaround time, sample and run failure rates, metadata completeness, workflow incidents, report corrections, repository submission success, unresolved access problems, and user feedback. These measures should be connected to corrective actions, not only reported as dashboard numbers.",
       "The guide can now state a beta-level principle: low-quality, incomplete, repeated, corrected, or overridden results should not disappear into the workflow. They should be labelled, reviewed, and linked to the decision taken. WHO's platform guidance supports QC annotation for low-quality or incomplete data; the clinical microbiology review supports local acceptance thresholds, wet-lab and dry-lab QC, version control, and EQA/PT where available.",
+      "For beta, the service-review table should connect each exception or performance measure to an owner and a decision. A useful row records the event, the use case affected, the number of samples or reports involved, user impact, corrective action, closure status, and whether the issue changes validation, SOPs, training, metadata capture, infrastructure, or reporting.",
     ],
     bodySourceIds: {
       0: ["phe-case-study", "who-national-genomic-surveillance-strategy-2023"],
@@ -483,9 +486,17 @@ export const guidanceBlocks: GuidanceBlock[] = [
       2: ["phe-case-study", "who-national-genomic-surveillance-strategy-2023"],
       3: ["phe-case-study", "aphl-ngs-implementation-2016", "clinical-microbiology-implementation-2026"],
       4: ["who-genomic-data-sharing-platforms-2025", "clinical-microbiology-implementation-2026"],
+      5: [
+        "phe-case-study",
+        "aphl-ngs-implementation-2016",
+        "who-national-genomic-surveillance-strategy-2023",
+        "clinical-microbiology-implementation-2026",
+      ],
     },
     technicalDetail: [
       "Minimum exception log fields for beta: sample or isolate identifier, failure point, QC signal, acceptance threshold affected, workflow or database version, decision taken, person or role responsible, user notification, repeat or override decision, report impact, repository or sharing impact, corrective action, and closure status.",
+      "Minimum service-review rows for beta: routine volume, failed or repeated samples, failed or repeated runs, missing metadata, delayed reports, corrected reports, repository-submission status, user feedback, and corrective actions.",
+      "Minimum review questions: did the issue affect a released result, a public-health decision, a repository record, a user's trust in the service, a validation boundary, or a recurring cost line?",
     ],
     audiences: ["lab-lead", "bioinformatician", "data-manager", "it-security", "director"],
     implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],

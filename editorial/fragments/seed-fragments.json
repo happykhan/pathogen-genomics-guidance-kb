@@ -1035,5 +1035,50 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "Use as a beta role/responsibility map. It does not define FTE, grades, salaries, or staffing ratios.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-service-review-table",
+    "sectionId": "data-lifecycle-sample-to-report",
+    "title": "Beta service-review table",
+    "kind": "table",
+    "text": "A beta service review should track routine volume, failed or repeated samples, failed or repeated runs, missing metadata, delayed reports, corrected reports, repository-submission status, user feedback and corrective actions. Each row should connect the event to an owner, decision, user impact and closure status.",
+    "claimIds": [
+      "claim-lifecycle-service-loop",
+      "claim-release-change-control-validation"
+    ],
+    "sourceIds": [
+      "phe-case-study",
+      "aphl-ngs-implementation-2016",
+      "who-national-genomic-surveillance-strategy-2023",
+      "who-genomic-data-sharing-platforms-2025",
+      "clinical-microbiology-implementation-2026"
+    ],
+    "conditions": {
+      "audiences": [
+        "lab-lead",
+        "bioinformatician",
+        "data-manager",
+        "director",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "data-lifecycle",
+        "quality",
+        "failure-handling",
+        "continuous-improvement",
+        "reporting"
+      ]
+    },
+    "order": 40,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "Renderer currently exposes this as structured prose/technical detail rather than a native table.",
+    "updatedAt": "2026-07-01"
   }
 ]
