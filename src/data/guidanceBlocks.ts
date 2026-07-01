@@ -834,6 +834,83 @@ export const guidanceBlocks: GuidanceBlock[] = [
           "global-solidarity-genomic-surveillance-2026",
         ],
       },
+      {
+        title: "Sampling design and interpretation guardrails",
+        summary:
+          "Use this before turning genomic patterns into public-health claims. The table does not set organism-specific sampling fractions.",
+        columns: ["Sampling design", "What it can support", "Do not claim without more evidence", "What to record"],
+        rows: [
+          {
+            cells: [
+              "Routine surveillance",
+              "Trend monitoring, recurring reporting, cluster detection against a defined surveillance stream, and comparison over time when methods and sampling are stable.",
+              "Population incidence, absence of transmission, or national representativeness unless the sampling frame and coverage support those claims.",
+              "Sampling frame, submitting sites, inclusion and exclusion rules, changes over time, missing sample classes, metadata completeness and reporting cadence.",
+            ],
+            sourceIds: ["who-national-genomic-surveillance-strategy-2023", "ecdc-wgs-surveillance-2016"],
+          },
+          {
+            cells: [
+              "Sentinel or periodic survey",
+              "Structured snapshots, trend signals within the sentinel frame, and comparison across planned periods or sites.",
+              "Real-time outbreak detection or complete national coverage unless the survey was designed for that purpose.",
+              "Sentinel sites, survey period, selection method, expected volume, actual volume, geographic coverage, turnaround and any site dropouts.",
+            ],
+            sourceIds: ["ecdc-wgs-surveillance-2016", "who-national-genomic-surveillance-strategy-2023"],
+          },
+          {
+            cells: [
+              "Outbreak-triggered or targeted sampling",
+              "Case inclusion or exclusion, investigation focus, comparison with suspected sources, and testing of a specific epidemiological hypothesis.",
+              "Background prevalence, wider trend direction, or source attribution without comparison samples and exposure or epidemiological evidence.",
+              "Trigger, case definition, comparison set, unsampled cases or sources, exposure data available, turnaround target and action route.",
+            ],
+            sourceIds: ["phe-case-study", "foodborne-genomics-allard-2018", "ecdc-wgs-surveillance-2016"],
+          },
+          {
+            cells: [
+              "Clinical or hospital support",
+              "Patient-care discussion, infection-control assessment, suspected transmission review, or targeted follow-up sampling when clinical governance supports the use.",
+              "General surveillance trends or definitive transmission direction without ward, patient-movement, exposure and sampling context.",
+              "Recipient, clinical or infection-control question, sampling trigger, comparison set, validation boundary, uncertainty and feedback route.",
+            ],
+            sourceIds: ["clinical-microbiology-implementation-2026", "mgen-centre-specific-typing-ipc-2021"],
+          },
+          {
+            cells: [
+              "Repository submission",
+              "Discovery, comparison, reuse, cross-jurisdictional surveillance and later reanalysis when metadata, QC status and accessions are complete enough.",
+              "Local public-health action or representativeness unless submission reflects a defined sampling and reporting route.",
+              "Data type, minimum metadata, restricted metadata status, QC status, accession, correction route, release state and sampling reason.",
+            ],
+            sourceIds: [
+              "who-genomic-data-sharing-platforms-2025",
+              "who-sars-cov-2-sequencing-implementation-2021",
+              "aphl-ngs-implementation-2016",
+            ],
+          },
+          {
+            cells: [
+              "Research or method-development sampling",
+              "Exploratory analysis, method development, retrospective learning and hypothesis generation.",
+              "Validated public-health reporting, routine service performance or clinical decision support unless validation and reporting boundaries have been defined.",
+              "Study purpose, selection method, exclusions, ethics or governance route, validation boundary and whether outputs are excluded from operational reporting.",
+            ],
+            sourceIds: ["who-national-genomic-surveillance-strategy-2023", "clinical-microbiology-implementation-2026"],
+          },
+        ],
+        sourceIds: [
+          "who-national-genomic-surveillance-strategy-2023",
+          "ecdc-wgs-surveillance-2016",
+          "phe-case-study",
+          "foodborne-genomics-allard-2018",
+          "clinical-microbiology-implementation-2026",
+          "mgen-centre-specific-typing-ipc-2021",
+          "who-genomic-data-sharing-platforms-2025",
+          "who-sars-cov-2-sequencing-implementation-2021",
+          "aphl-ngs-implementation-2016",
+        ],
+      },
     ],
     audiences: ["director", "policy", "lab-lead", "bioinformatician", "data-manager", "all"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
@@ -851,6 +928,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "who-sars-cov-2-sequencing-implementation-2021",
       "phe-case-study",
       "global-solidarity-genomic-surveillance-2026",
+      "mgen-centre-specific-typing-ipc-2021",
     ],
     gaps: [
       "Organism-specific sampling strategies and representativeness rules still need extraction before this section can give detailed programme recommendations.",

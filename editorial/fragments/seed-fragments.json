@@ -3200,5 +3200,60 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is a starter dictionary structure. It does not prescribe exact repository-required fields, controlled vocabularies, jurisdictional access rules or organism-specific schemas.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-sampling-interpretation-guardrails",
+    "sectionId": "sampling-programme-design",
+    "title": "Sampling interpretation guardrails",
+    "kind": "table",
+    "text": "The beta guide should help users connect sampling design to interpretation. Routine surveillance, sentinel surveys, outbreak-triggered sampling, clinical or hospital support, repository submission and research sampling can all produce sequence data, but they support different claims. The table should make overclaiming visible without prescribing organism-specific sampling fractions.",
+    "claimIds": [
+      "claim-who-sampling-representativeness-turnaround",
+      "claim-service-model-choices",
+      "claim-beta-organism-service-model-matrix",
+      "claim-reporting-products-fit-decision",
+      "claim-data-sharing-governed-route"
+    ],
+    "sourceIds": [
+      "who-national-genomic-surveillance-strategy-2023",
+      "ecdc-wgs-surveillance-2016",
+      "phe-case-study",
+      "foodborne-genomics-allard-2018",
+      "clinical-microbiology-implementation-2026",
+      "mgen-centre-specific-typing-ipc-2021",
+      "who-genomic-data-sharing-platforms-2025",
+      "who-sars-cov-2-sequencing-implementation-2021",
+      "aphl-ngs-implementation-2016"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "policy",
+        "lab-lead",
+        "bioinformatician",
+        "data-manager",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "sampling",
+        "surveillance",
+        "interpretation",
+        "reporting",
+        "metadata",
+        "data-sharing"
+      ]
+    },
+    "order": 47,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is an interpretation guardrail table. It does not define organism-specific sampling fractions, representativeness thresholds, or report wording.",
+    "updatedAt": "2026-07-01"
   }
 ]
