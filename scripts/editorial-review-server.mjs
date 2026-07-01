@@ -112,17 +112,17 @@ function renderPage() {
               return `<span class="evidence-item">
                 ${
                   item.excerpt
-                    ? `<em>Original short excerpt: "${escapeHtml(item.excerpt)}"</em>`
-                    : "<em>No short source excerpt captured yet; using locator and passage summary.</em>"
+                    ? `<em>Layer 1 / Original short excerpt: "${escapeHtml(item.excerpt)}"</em>`
+                    : "<em>Layer 1 / No short source excerpt captured yet; use the locator and passage note to check the original source.</em>"
                 }
-                <span><strong>Passage summary:</strong> ${escapeHtml(item.passageSummary)}</span>
+                <span><strong>Public-safe passage note:</strong> ${escapeHtml(item.passageSummary)}</span>
                 <small>${escapeHtml(item.evidenceType)}; ${escapeHtml(item.sourceLocator)}</small>
               </span>`;
             })
             .join("");
           return `<li>
             ${evidenceDetails}
-            <span><strong>Extracted claim, not verbatim source text:</strong> ${escapeHtml(claim.claim)}</span>
+            <span><strong>Layer 2 / Extracted claim, not verbatim source text:</strong> ${escapeHtml(claim.claim)}</span>
             <small>Source pointer: ${escapeHtml(claim.sourceLocator)}; source ID: ${escapeHtml(claim.sourceId)}</small>
           </li>`;
         })
@@ -136,10 +136,10 @@ function renderPage() {
             </div>
             <span class="status ${escapeHtml(fragment.reviewStatus)}">${escapeHtml(fragment.reviewStatus)}</span>
           </header>
-          <p class="label">Draft whitepaper text</p>
+          <p class="label">Layer 3 / Synthesized whitepaper fragment</p>
           <p class="fragment-text">${escapeHtml(fragment.text)}</p>
           <div class="evidence">
-            <p><strong>Evidence chain used for this fragment:</strong></p>
+            <p><strong>Evidence chain used for this fragment:</strong> approve only after layer 1 supports layer 2, and layer 2 supports this fragment.</p>
             <ul>${claimDetails}</ul>
           </div>
           <p class="meta"><strong>Sources:</strong> ${escapeHtml(fragment.sourceIds.join(", "))}</p>
@@ -241,7 +241,7 @@ function renderPage() {
       <section class="hero">
         <p class="kicker">Local only / writes to repo JSON</p>
         <h1>Editorial fragment review</h1>
-        <p>This tool binds to 127.0.0.1 and updates files under <code>editorial/fragments/</code>. The main paragraph is draft whitepaper text. Under it, source evidence notes point back to the original documents, and extracted claims show our source-backed interpretation. Use the public <code>/backstage</code> page for read-only deployed debugging.</p>
+        <p>This tool binds to 127.0.0.1 and updates files under <code>editorial/fragments/</code>. Review each fragment as a three-layer chain: layer 1 is the source evidence pointer, layer 2 is the extracted claim, and layer 3 is the synthesized whitepaper text. Use the public <code>/backstage</code> page for read-only deployed debugging.</p>
         <div class="metrics">
           <span class="pill">${fragments.length} fragments</span>
           <span class="pill">${evidenceItems.length} evidence items</span>

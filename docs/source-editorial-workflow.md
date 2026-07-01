@@ -87,6 +87,18 @@ original source text or page/table/figure pointer
 
 For copyright and clarity, public debug views should show source locators, page or section pointers, short passage notes, short allowed excerpts, and extracted claims. They should not expose full-text passages from copyrighted PDFs.
 
+## Three-Layer Review Model
+
+Use the same review model in `/backstage`, `npm run editorial:review`, and manual review:
+
+| Layer | Object | Review question |
+| --- | --- | --- |
+| 1 | Evidence item | Does the source locator, short excerpt if present, passage note, limitation, and source ID point to a real, relevant source passage, figure, table, or source-card record? |
+| 2 | Claim card | Does the extracted claim follow from the evidence item without overstating the source, and are its candidate sections, confidence, limitations, audience, organism, and stage tags correct? |
+| 3 | Whitepaper fragment | Does the synthesized paragraph, table, checklist, box, figure brief, or gap note use the claim cards faithfully, cite the right sources, and fit the section synthesis brief and profile conditions? |
+
+Approve a fragment only when layer 1 supports layer 2, and layer 2 supports layer 3. If layer 1 is only a source-card summary, keep the evidence, claim, and fragment in draft until the original source passage has been checked. If the source supports the topic but not the proposed action, mark the fragment as `gap` or rewrite it as a caution rather than approving it as guidance.
+
 ## Adding Guidance Prose
 
 1. Start from claim cards, not from an empty prompt.

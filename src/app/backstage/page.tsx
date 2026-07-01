@@ -49,9 +49,10 @@ export default function BackstagePage() {
         <p className="eyebrow">Backstage</p>
         <h1>Editorial debug view</h1>
         <p>
-          This unlinked page exposes the source-to-whitepaper pipeline for review: outline sections, extracted claim cards,
-          synthesis briefs, draft fragments, source IDs, conditions, and gaps. Claim cards are source-backed interpretations,
-          not verbatim source text. This view is public-safe and does not expose local files or full copyrighted source text.
+          This unlinked page exposes the source-to-whitepaper pipeline for review: source evidence pointers, extracted claim
+          cards, synthesis briefs, draft fragments, source IDs, conditions, and gaps. The evidence pointer is the closest
+          public-safe link back to the original source. The claim card is our source-backed interpretation. The fragment is
+          synthesized whitepaper prose. This view does not expose local files or full copyrighted source text.
         </p>
       </section>
 
@@ -233,7 +234,7 @@ export default function BackstagePage() {
                           </div>
                         </div>
                         <div className="backstage-prose-block">
-                          <p className="eyebrow">Draft whitepaper text</p>
+                          <p className="eyebrow">Layer 3 / Synthesized whitepaper fragment</p>
                           <p>{fragment.text}</p>
                         </div>
                         {fragment.conditions ? (
@@ -244,7 +245,8 @@ export default function BackstagePage() {
                         </p>
                         <div className="backstage-evidence">
                           <p>
-                            <strong>Evidence chain used for this fragment:</strong>
+                            <strong>Evidence chain used for this fragment:</strong> read from layer 1 to layer 3 before
+                            approving.
                           </p>
                           <ul>
                             {fragment.claimIds.map((claimId) => {
@@ -258,12 +260,15 @@ export default function BackstagePage() {
                                         {item ? (
                                           <>
                                             {item.excerpt ? (
-                                              <em>Original short excerpt: "{item.excerpt}"</em>
+                                              <em>Layer 1 / Original short excerpt: "{item.excerpt}"</em>
                                             ) : (
-                                              <em>No short source excerpt captured yet; using locator and passage summary.</em>
+                                              <em>
+                                                Layer 1 / No short source excerpt captured yet; use the locator and passage
+                                                summary to check the original source.
+                                              </em>
                                             )}
                                             <span>
-                                              <strong>Passage summary:</strong> {item.passageSummary}
+                                              <strong>Public-safe passage note:</strong> {item.passageSummary}
                                             </span>
                                             <small>
                                               {item.evidenceType}; {item.sourceLocator}
@@ -277,11 +282,12 @@ export default function BackstagePage() {
                                   })}
                                   {!claim?.evidenceItemIds?.length && claim?.extractedText ? (
                                     <span>
-                                      <strong>Legacy source evidence note / short excerpt:</strong> {claim.extractedText}
+                                      <strong>Layer 1 / Legacy source evidence note or short excerpt:</strong>{" "}
+                                      {claim.extractedText}
                                     </span>
                                   ) : null}
                                   <span>
-                                    <strong>Extracted claim, not verbatim source text:</strong>{" "}
+                                    <strong>Layer 2 / Extracted claim, not verbatim source text:</strong>{" "}
                                     {claim?.claim ?? `Missing claim: ${claimId}`}
                                   </span>
                                   {claim ? (
@@ -315,9 +321,9 @@ export default function BackstagePage() {
             <span className="badge">{evidenceClaimCards.length} cards</span>
           </div>
           <p className="muted" style={{ marginTop: 0 }}>
-            A claim card links a source evidence note or short excerpt to our concise interpretation of what the source
-            supports. The source locator points back to the source card, page, section, table, or figure that should justify
-            the claim.
+            A claim card is layer 2 of the editorial chain. It links one or more layer-1 source evidence pointers to a
+            concise interpretation of what those sources support. It is not original source text and should not be approved
+            unless the source locator, passage note, limitation and candidate section all make sense.
           </p>
           <div className="claim-card-grid">
             {evidenceClaimCards.map((claim) => (
@@ -329,11 +335,11 @@ export default function BackstagePage() {
                   <StatusBadge status={claim.reviewStatus} />
                 </div>
                 <p>
-                  <strong>Extracted claim:</strong> {claim.claim}
+                  <strong>Layer 2 / Extracted claim:</strong> {claim.claim}
                 </p>
                 <div className="backstage-evidence compact">
                   <p>
-                    <strong>Evidence items behind this claim:</strong>
+                    <strong>Layer 1 / Evidence pointers behind this claim:</strong>
                   </p>
                   <ul>
                     {claim.evidenceItemIds.map((itemId) => {
@@ -343,9 +349,9 @@ export default function BackstagePage() {
                           {item?.excerpt ? (
                             <span>Original short excerpt: "{item.excerpt}"</span>
                           ) : (
-                            <span>No short source excerpt captured yet; using locator and passage summary.</span>
+                            <span>No short source excerpt captured yet; use the locator and passage note.</span>
                           )}
-                          <span>Passage summary: {item?.passageSummary ?? `Missing evidence item: ${itemId}`}</span>
+                          <span>Public-safe passage note: {item?.passageSummary ?? `Missing evidence item: ${itemId}`}</span>
                           {item ? (
                             <small>
                               {item.evidenceType}; {item.sourceLocator}
