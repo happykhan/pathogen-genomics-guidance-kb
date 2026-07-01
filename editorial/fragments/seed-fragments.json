@@ -2147,5 +2147,62 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is a beta profile QA scaffold. Disease-programme user review remains required.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-maturity-risk-reduction-worksheet",
+    "sectionId": "maturity-next-steps",
+    "title": "Beta maturity risk-reduction worksheet",
+    "kind": "table",
+    "text": "Use maturity as a structured planning conversation that identifies the next service risk to reduce across use-case ownership, sample and metadata lineage, workflow validation and provenance, storage and access recovery, workforce cover, recurrent cost, dependencies and improvement review. Do not treat the beta worksheet as a validated maturity score.",
+    "claimIds": [
+      "claim-maturity-risk-reduction",
+      "claim-beta-implementation-dependency-matrix",
+      "claim-costing-recurrent-service-categories"
+    ],
+    "sourceIds": [
+      "who-national-genomic-surveillance-strategy-2023",
+      "who-genomic-data-sharing-platforms-2025",
+      "pha4ge-infrastructure",
+      "who-genomics-costing-tool-manual-2024",
+      "who-genomic-surveillance-progress-2023",
+      "clinical-microbiology-implementation-2026",
+      "phe-case-study",
+      "east-africa-genomics-landscape-2024",
+      "auspathogen-implementation-2025",
+      "mgen-stec-bioinformatics-validation-2021",
+      "mgen-discordant-amr-predictions-2020"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "policy",
+        "funder",
+        "lab-lead",
+        "bioinformatician",
+        "it-security",
+        "data-manager",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "maturity",
+        "risk",
+        "implementation",
+        "dependency",
+        "sustainability",
+        "workforce"
+      ]
+    },
+    "order": 39,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta planning worksheet, not a validated maturity rubric or scoring instrument.",
+    "updatedAt": "2026-07-01"
   }
 ]

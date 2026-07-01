@@ -3208,6 +3208,108 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "Dependency questions: Which functions are internal, external, shared, or unmanaged? Which dependency would stop reporting? Which dependency would stop interpretation? Which dependency would create unacceptable delay? Which dependency has no documented fallback?",
       "Do not use the current maturity language as a certified score. Use it to choose the next risk to reduce and record the evidence gap.",
     ],
+    tables: [
+      {
+        title: "Beta maturity risk-reduction worksheet",
+        summary:
+          "Use this as a planning worksheet. It helps identify the next fragile part of the service; it is not a validated score.",
+        columns: ["Dimension", "Evidence to check", "Next risk to reduce", "Beta caution"],
+        rows: [
+          {
+            cells: [
+              "Use case and service owner",
+              "Named priority use cases, decision users, reporting route, and person or group accountable for service delivery.",
+              "Clarify what decision the service must support and who accepts the operational risk if the route fails.",
+              "A genomics programme can be technically capable but immature as a service if no one owns turnaround, reporting, user feedback and failure response.",
+            ],
+            sourceIds: [
+              "who-national-genomic-surveillance-strategy-2023",
+              "phe-case-study",
+              "clinical-microbiology-implementation-2026",
+            ],
+          },
+          {
+            cells: [
+              "Sample, metadata and data lineage",
+              "Documented linkage from sample or isolate to run, QC result, analysis output, interpreted report, repository submission and archive record.",
+              "Fix the point where identifiers, metadata, correction history or handoffs are most likely to break.",
+              "The public-health value of sequence data depends on metadata quality, stable linkage and context for interpretation.",
+            ],
+            sourceIds: [
+              "who-genomic-data-sharing-platforms-2025",
+              "aphl-ngs-implementation-2016",
+              "phe-case-study",
+            ],
+          },
+          {
+            cells: [
+              "Workflow validation and provenance",
+              "Workflow version, execution environment, parameters, inputs, outputs, validation boundary, change-control record and rollback route.",
+              "Move the most important routine workflow from informal execution to documented, repeatable, reviewable operation.",
+              "Shared or managed workflows reduce some local burden, but the reporting service still needs to know what changed and whether results remain comparable.",
+            ],
+            sourceIds: [
+              "pha4ge-infrastructure",
+              "mgen-stec-bioinformatics-validation-2021",
+              "mgen-discordant-amr-predictions-2020",
+              "clinical-microbiology-implementation-2026",
+            ],
+          },
+          {
+            cells: [
+              "Storage, backup, access and recovery",
+              "Storage ownership, retention rule, backup schedule, restore test, access review, security responsibility and data-residency decision.",
+              "Test whether the service can recover the files and records needed to reissue or defend a report.",
+              "Owning infrastructure without support is a risk; outsourcing infrastructure without access, portability and governance is also a risk.",
+            ],
+            sourceIds: [
+              "pha4ge-infrastructure",
+              "who-genomics-costing-tool-manual-2024",
+              "who-genomic-data-sharing-platforms-2025",
+            ],
+          },
+          {
+            cells: [
+              "Workforce and support cover",
+              "Named cover for laboratory operation, bioinformatics, systems administration, interpretation, reporting, user support and quality review.",
+              "Remove single-person dependency for the step most likely to stop reporting or interpretation.",
+              "Capability is not only staff training; it includes support routes, cross-cover, communities of practice, EQA and retained local interpretation.",
+            ],
+            sourceIds: [
+              "who-genomic-surveillance-progress-2023",
+              "phe-case-study",
+              "east-africa-genomics-landscape-2024",
+              "clinical-microbiology-implementation-2026",
+            ],
+          },
+          {
+            cells: [
+              "Cost, dependency and improvement review",
+              "Recurrent cost lines, supplier or partner dependencies, renewal dates, feedback records, EQA outcomes, incident reviews and improvement actions.",
+              "Turn the largest unmanaged dependency into a costed, owned, reviewed service decision.",
+              "Maturity should not reward the most complex architecture. A simpler model can be more mature if responsibilities, fallback routes and review loops are clearer.",
+            ],
+            sourceIds: [
+              "who-genomics-costing-tool-manual-2024",
+              "pha4ge-infrastructure",
+              "auspathogen-implementation-2025",
+              "east-africa-genomics-landscape-2024",
+            ],
+          },
+        ],
+        sourceIds: [
+          "who-national-genomic-surveillance-strategy-2023",
+          "who-genomic-data-sharing-platforms-2025",
+          "pha4ge-infrastructure",
+          "who-genomics-costing-tool-manual-2024",
+          "who-genomic-surveillance-progress-2023",
+          "clinical-microbiology-implementation-2026",
+          "phe-case-study",
+          "east-africa-genomics-landscape-2024",
+          "auspathogen-implementation-2025",
+        ],
+      },
+    ],
     audiences: ["director", "policy", "funder", "lab-lead", "bioinformatician", "it-security", "data-manager", "all"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
     organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
@@ -3228,7 +3330,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "mgen-uk-delphi-health-protection-2023",
     ],
     gaps: [
-      "A formal maturity rubric and scoring method still need source-backed review.",
+      "The beta worksheet supports risk-reduction planning, but a formal maturity rubric and scoring method still need source-backed review.",
       "The PHA4GE tier table is useful for discussion but needs editorial review before it becomes an assessment tool.",
     ],
   }
