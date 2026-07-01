@@ -229,6 +229,39 @@
     "reviewStatus": "reviewed"
   },
   {
+    "id": "evidence-who-2022-sharing-principles-public-health",
+    "sourceId": "who-pathogen-genome-data-sharing-2022",
+    "sourceLocator": "WHO 2022 guiding principles for pathogen genome data sharing, scope and principles 1 and 8",
+    "evidenceType": "short-excerpt",
+    "excerpt": "ethical, equitable, efficient, and effective",
+    "passageSummary": "WHO's guiding principles state that pathogen genome data sharing protects global public health, supports epidemic and pandemic prevention, detection and response, endemic disease monitoring, and AMR tracking. The principles apply to rapid public sharing of pathogen genome data with appropriate non-sensitive metadata and support timely sharing, capacity development, equitable access to benefits, and an 'as open as possible and as closed as necessary' access approach.",
+    "tags": ["data-sharing", "public-health", "equity", "metadata", "access"],
+    "limitations": "Principles source; local implementation still requires jurisdiction-specific policy and platform decisions.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-who-2023-sharing-policy-national-database",
+    "sourceId": "who-national-genomic-surveillance-strategy-2023",
+    "sourceLocator": "WHO 2023 national genomic surveillance strategy support tool, section 2.5 Promote data sharing and collaboration",
+    "evidenceType": "short-excerpt",
+    "excerpt": "Data sharing is essential to inform risk assessment",
+    "passageSummary": "WHO's national strategy support tool states that data sharing supports risk assessment and public-health decisions at local, national, regional and global levels, should be governed by a national pathogen genome data-sharing policy, and may include a national database that centralizes sequencing data and metadata while integrating with public genomic sequence databases.",
+    "tags": ["data-sharing", "policy", "national-database", "risk-assessment", "metadata"],
+    "limitations": "National strategy source; does not prescribe a local platform architecture or legal template.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-who-2025-governance-access-benefit-sharing",
+    "sourceId": "who-genomic-data-sharing-platforms-2025",
+    "sourceLocator": "WHO 2025 pathogen genomic data-sharing platform guidance, sections 2.1 governance, 2.8 access, and 2.10 data use and benefits sharing",
+    "evidenceType": "short-excerpt",
+    "excerpt": "code of practice or terms of use, access policies",
+    "passageSummary": "WHO's platform guidance states that governance should cover legal, ethical, privacy, access, licensing and accountability arrangements. Its access section distinguishes anonymous, account-linked, verified/vetted, restricted and closed access, with documented policies. Its data-use section covers licences, user responsibilities, acknowledgement, onward sharing, withdrawal or deletion, and benefit-sharing expectations.",
+    "tags": ["governance", "access", "data-sharing", "licence", "benefit-sharing"],
+    "limitations": "Platform-level framework; national legal and ethical requirements still need local review.",
+    "reviewStatus": "reviewed"
+  },
+  {
     "id": "evidence-mgen-bioinformatics-implementation",
     "sourceId": "mgen-accelerating-bioinformatics-implementation-2023",
     "sourceLocator": "knowledge-base/source-cards/microbial-genomics-implementation-collection.md",

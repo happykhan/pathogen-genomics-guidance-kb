@@ -427,5 +427,50 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "Use for workflow provenance and change-control sections. A formal release/rollback runbook remains a gap.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-data-sharing-governed-route-core",
+    "sectionId": "repository-data-sharing",
+    "title": "Governed sharing routes",
+    "kind": "paragraph",
+    "text": "Data sharing should be designed as a set of governed routes, not as a single upload habit. A programme should decide what is shared for operations, national surveillance, public repositories, controlled-access platforms, and later reuse; when each route is used; what metadata travel with the data; who can access it; and what licences, attribution, acknowledgement, withdrawal, or benefit-sharing expectations apply.",
+    "claimIds": [
+      "claim-data-sharing-governed-route",
+      "claim-platform-metadata-provenance-interoperability"
+    ],
+    "sourceIds": [
+      "who-pathogen-genome-data-sharing-2022",
+      "who-national-genomic-surveillance-strategy-2023",
+      "who-genomic-data-sharing-platforms-2025"
+    ],
+    "conditions": {
+      "audiences": [
+        "policy",
+        "director",
+        "data-manager",
+        "it-security",
+        "lab-lead",
+        "bioinformatician",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "data-sharing",
+        "repositories",
+        "governance",
+        "metadata"
+      ]
+    },
+    "order": 10,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "Reviewed against WHO 2022 principles, WHO 2023 national strategy support tool, and WHO 2025 platform attributes.",
+    "updatedAt": "2026-07-01"
   }
 ]

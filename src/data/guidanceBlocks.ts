@@ -603,25 +603,47 @@ export const guidanceBlocks: GuidanceBlock[] = [
     title: "Plan data sharing as a governed decision",
     summary:
       "Data sharing has public-health value, but openness needs to be balanced with confidentiality, risk, and purpose.",
-    sourceStatus: "reviewed",
+    sourceStatus: "partial",
     body: [
       "Armstrong et al. describe public-health agencies sharing pathogen sequence data through NCBI-hosted databases, ReSeqTB, and GISAID. They also state that openness cannot be complete and unconditional because agencies must consider confidentiality and risk.",
       "Programmes need to decide what data should be shared, with whom, at what stage, through which repository or platform, under what access model, and with what metadata.",
       "Operational sharing and public or controlled repository release should be treated as different decisions. Operational sharing may involve laboratories, epidemiologists, collaborators, national services, or platform workspaces. Repository release may support international comparison, outbreak detection, research, and method development.",
-      "WHO's 2025 platform guidance gives concrete selection dimensions: governance, transparency, infrastructure and security, data scope, submission options, curation, access, provenance, interoperability, data use and benefit sharing, analytical and reporting capabilities, and sustainability. PHA4GE's examples show that sharing can be implemented through local files, HPC-mediated access, cloud object storage, platform workspaces, Galaxy histories, IRIDA-like projects, or public repositories. The appropriate route depends on purpose, sensitivity, identity management, connectivity, and governance.",
+      "WHO's 2022 data-sharing principles frame pathogen genome data sharing as a public-health activity that should be timely, ethical, equitable, efficient, and effective. WHO's national strategy support tool adds that countries should define a national pathogen genome data-sharing policy and may use a national database to centralise sequencing data and metadata while integrating with public sequence databases.",
+      "WHO's 2025 platform guidance gives concrete selection dimensions: governance, transparency, infrastructure and security, data scope, submission options, curation, access, provenance, interoperability, data use and benefit sharing, analytical and reporting capabilities, and sustainability. It also distinguishes access options such as anonymous access, user accounts, vetted users, restricted access, closed access, and restrictions by data type or platform function.",
+      "The practical design is a route map. Decide what is shared for operations, what is stored in a national service, what is submitted to a public repository, what needs controlled access, and what is held back because the metadata or legal context is not ready. For each route, define timing, metadata, access, licence or terms of use, attribution, user responsibilities, withdrawal or correction process, and who answers questions from data users.",
+      "PHA4GE's examples show that sharing can be implemented through local files, HPC-mediated access, cloud object storage, platform workspaces, Galaxy histories, IRIDA-like projects, or public repositories. The appropriate route depends on purpose, sensitivity, identity management, connectivity, and governance.",
       "National implementation examples point in the same direction. UKHSA treats data, analytics, transparency, and partnership as part of pathogen genomics strategy. The Australian framework and AusPathoGen source cards both emphasise collaboration, public-health system integration, data integration, and data-sharing or ethics agreements. Those sources support the principle that data sharing should be planned as a service and governance function, not left to individual upload habits.",
     ],
     bodySourceIds: {
       0: ["cdc-nejm-2019"],
       1: ["who-pathogen-genome-data-sharing-2022", "who-genomic-data-sharing-platforms-2025"],
       2: ["cdc-nejm-2019", "who-genomic-data-sharing-platforms-2025", "pha4ge-infrastructure"],
-      3: ["who-genomic-data-sharing-platforms-2025", "pha4ge-infrastructure"],
-      4: [
+      3: ["who-pathogen-genome-data-sharing-2022", "who-national-genomic-surveillance-strategy-2023"],
+      4: ["who-genomic-data-sharing-platforms-2025"],
+      5: ["who-genomic-data-sharing-platforms-2025", "who-pathogen-genome-data-sharing-2022"],
+      6: ["pha4ge-infrastructure"],
+      7: [
         "ukhsa-pathogen-genomics-strategy-2024",
         "australia-microbial-genomics-framework-2025",
         "auspathogen-implementation-2025",
       ],
     },
+    bodyCitationAnchors: {
+      5: [
+        {
+          text: "For each route, define timing, metadata, access, licence or terms of use, attribution, user responsibilities, withdrawal or correction process, and who answers questions from data users.",
+          sourceIds: [
+            "who-pathogen-genome-data-sharing-2022",
+            "who-genomic-data-sharing-platforms-2025",
+            "who-national-genomic-surveillance-strategy-2023",
+          ],
+        },
+      ],
+    },
+    technicalDetail: [
+      "Minimum route map: internal operational sharing, national surveillance database, public repository, controlled-access platform, partner workspace, and retained-but-not-shared data.",
+      "For each route, record purpose, data types, minimum metadata, QC requirement, timing, access model, licence or terms of use, attribution, submitter contact, accession or persistent identifier, correction route, withdrawal route, and local owner.",
+    ],
     audiences: ["policy", "director", "data-manager", "it-security", "lab-lead"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
     organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
@@ -636,6 +658,10 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "ukhsa-pathogen-genomics-strategy-2024",
       "australia-microbial-genomics-framework-2025",
       "auspathogen-implementation-2025",
+    ],
+    gaps: [
+      "The guide still needs repository-specific submission guidance for INSDC/NCBI, GISAID and organism-specific platforms.",
+      "The guide still needs a jurisdiction-neutral data-sharing decision pathway that separates operational sharing, national reporting, public repository submission, controlled access and non-sharing.",
     ],
   },
   {

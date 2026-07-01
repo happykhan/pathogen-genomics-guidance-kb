@@ -3,11 +3,11 @@
 ## Source Basis
 
 - World Health Organization. *WHO guiding principles for pathogen genome data sharing*. 2022.
-- Full-text PDF supplied locally: `/Users/nfareed/Downloads/9789240061743-eng.pdf`.
+- Public PDF served with the beta site: `public/pdfs/who-pathogen-genome-data-sharing-principles-2022.pdf`.
 
 ## Status
 
-`candidate source; full text available locally; high-level extraction`
+`source-backed; public PDF available; partial extraction`
 
 ## Relevance
 
@@ -25,6 +25,8 @@ This is a priority source for the guide's data-sharing, governance, repository, 
 
 - The foreword states that timely, high-quality, geographically representative pathogen genome data sharing supports epidemic and pandemic prevention, detection, and response.
 - The source explicitly links data sharing to equity, standards, trust, and avoiding disincentives for countries that report emerging threats.
+- The principles apply to rapid public sharing of pathogen genome data with appropriate non-sensitive metadata, support timely sharing of quality data, and link sharing to capacity development and equitable access to benefits.
+- Principle 8 is useful for route design: pathogen genome data should be as open as possible and as closed as necessary.
 
 ## Current Use In App
 
@@ -34,4 +36,3 @@ This is a priority source for the guide's data-sharing, governance, repository, 
 ## Gaps
 
 - Needs detailed extraction of the principles and translation into a practical data-sharing decision framework.
-

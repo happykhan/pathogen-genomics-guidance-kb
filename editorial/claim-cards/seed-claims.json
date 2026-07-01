@@ -239,6 +239,33 @@
     "reviewStatus": "reviewed"
   },
   {
+    "id": "claim-data-sharing-governed-route",
+    "sourceId": "who-genomic-data-sharing-platforms-2025",
+    "sourceLocator": "WHO 2022 guiding principles; WHO 2023 national strategy support tool; WHO 2025 platform attributes and principles",
+    "evidenceItemIds": [
+      "evidence-who-2022-sharing-principles-public-health",
+      "evidence-who-2023-sharing-policy-national-database",
+      "evidence-who-2025-governance-access-benefit-sharing",
+      "evidence-who-2025-metadata-provenance-interoperability"
+    ],
+    "claim": "A pathogen genomics programme should define governed sharing routes for operational sharing, national databases, and public or controlled repositories, including metadata, timing, access, licences, attribution, and benefit-sharing expectations.",
+    "extractedText": "WHO 2022 frames pathogen genome data sharing as a public-health activity that should be timely, ethical, equitable, efficient and effective. WHO 2023 calls for a national pathogen genome data-sharing policy and potential national databases linked to public sequence databases. WHO 2025 describes governance, access models, licences, user responsibilities, provenance, interoperability, and benefit-sharing as platform attributes.",
+    "notes": "Use to avoid presenting data sharing as a single upload step.",
+    "tags": ["data-sharing", "governance", "repositories", "access", "licence", "metadata"],
+    "candidateSectionIds": [
+      "repository-data-sharing",
+      "metadata-identifier-lineage",
+      "reporting-decision-use",
+      "implementation-patterns-case-studies"
+    ],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "multiple",
+    "confidence": "high",
+    "limitations": "Does not replace local legal, ethical, data-protection or international-access review.",
+    "reviewStatus": "reviewed"
+  },
+  {
     "id": "claim-price-economic-review-heterogeneous",
     "sourceId": "wgs-economic-review",
     "sourceLocator": "Price et al. 2023, abstract and discussion of systematic review of WGS economic evaluations",
