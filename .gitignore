@@ -23,4 +23,6 @@ source-material/local/
 *.pdf
 *.tiff
 *.eps
+!public/pdfs/
+!public/pdfs/*.pdf
 .vercel

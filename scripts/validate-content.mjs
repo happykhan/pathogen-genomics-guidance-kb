@@ -148,8 +148,15 @@ resources.forEach((resource) => {
     }
   }
 
-  if (resource.pdfUrl && !/^https?:\/\//.test(resource.pdfUrl)) {
-    errors.push(`Resource ${resource.id} has a non-public pdfUrl: ${resource.pdfUrl}`);
+  if (resource.pdfUrl && !/^https?:\/\//.test(resource.pdfUrl) && !resource.pdfUrl.startsWith("/pdfs/")) {
+    errors.push(`Resource ${resource.id} has an unsupported pdfUrl: ${resource.pdfUrl}`);
+  }
+
+  if (resource.pdfUrl?.startsWith("/pdfs/")) {
+    const publicPdfPath = path.join(repoRoot, "public", resource.pdfUrl.replace(/^\//, ""));
+    if (!existsSync(publicPdfPath)) {
+      errors.push(`Resource ${resource.id} points to missing public PDF: ${resource.pdfUrl}`);
+    }
   }
 
   if (resource.sourceCardPath) {
