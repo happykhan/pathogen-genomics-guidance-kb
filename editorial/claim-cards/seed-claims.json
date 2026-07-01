@@ -590,5 +590,32 @@
     "confidence": "high",
     "limitations": "Organism-specific metadata fields, repository templates and legal requirements still need separate extraction and review.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "claim-beta-workforce-responsibility-template",
+    "sourceId": "clinical-microbiology-implementation-2026",
+    "sourceLocator": "APHL 2016 implementation guide, PHE case study, WHO 2023 progress report, Gador-Whyte et al. 2026, and East African Community 2024 landscape assessment",
+    "evidenceItemIds": [
+      "evidence-beta-workforce-responsibility-template",
+      "evidence-armstrong-workforce-development",
+      "evidence-phe-staff-training-engagement",
+      "evidence-who-progress-workforce-capacity",
+      "evidence-clinical-review-staff-competencies"
+    ],
+    "claim": "The beta guide can use a responsibility template that names required service functions and owners across laboratory, bioinformatics, data management, quality, IT, reporting, interpretation, user support and programme oversight, while leaving staffing ratios setting-specific.",
+    "extractedText": "APHL, PHE, WHO, the clinical implementation review and the East African Community assessment all frame workforce as a multi-function service requirement. They support naming responsibilities across wet lab, bioinformatics, data handling, quality, reporting, interpretation, IT support, training and user engagement, but they do not provide universal staffing ratios.",
+    "notes": "Use for a practical beta responsibility map in the workforce and costing section.",
+    "tags": ["workforce", "responsibility-map", "training", "support", "capacity", "sustainability"],
+    "candidateSectionIds": [
+      "workforce-sustainability-costing",
+      "implementation-patterns-case-studies",
+      "maturity-next-steps"
+    ],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "multiple",
+    "confidence": "high",
+    "limitations": "Does not define full-time equivalents, grades, salaries, or minimum staffing by throughput.",
+    "reviewStatus": "reviewed"
   }
 ]

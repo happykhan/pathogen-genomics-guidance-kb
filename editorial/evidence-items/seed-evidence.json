@@ -534,5 +534,16 @@
     "tags": ["metadata", "field-model", "accessions", "provenance", "repository", "sensitive-data"],
     "limitations": "This supports a beta field model, not a complete organism-specific repository schema.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-beta-workforce-responsibility-template",
+    "sourceId": "clinical-microbiology-implementation-2026",
+    "sourceLocator": "APHL 2016 workforce and implementation sections; PHE case study section 3.5; WHO 2023 progress report workforce objective; Gador-Whyte et al. 2026 implementation considerations; East African Community 2024 landscape assessment",
+    "evidenceType": "passage-note",
+    "excerpt": "staffing, competencies, sequencing platform selection",
+    "passageSummary": "APHL treats personnel time, training, cross-training and bioinformatics support as explicit implementation needs. PHE describes laboratory training, specialist bioinformatics, computing and software-development expertise, epidemiology and clinical-scientist cross-training, user engagement and multidisciplinary collaboration. WHO's progress report frames workforce strengthening, training packages, communities of practice, EQA, costing and data-management resources as surveillance capacity. The clinical implementation review lists staffing, competencies, laboratory setup, SOPs, bioinformatics, storage, transfer, sharing, reporting, interpretation, QC, validation, EQA and implementation model as linked implementation considerations. The East African Community assessment shows that limited sequencing facilities, bioinformatics expertise, compute and data-sharing mechanisms can create dependence on external sequencing or analysis.",
+    "tags": ["workforce", "responsibility-template", "training", "support", "implementation-model", "capacity"],
+    "limitations": "Supports a responsibility template and capability questions, not staffing ratios or grade structures by throughput.",
+    "reviewStatus": "reviewed"
   }
 ]

@@ -985,5 +985,55 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is a beta model, not a full pathogen-specific schema.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-workforce-responsibility-template",
+    "sectionId": "workforce-sustainability-costing",
+    "title": "Beta workforce responsibility template",
+    "kind": "paragraph",
+    "text": "For beta, use a responsibility template rather than a fixed staffing ratio. Every service model should name owners for wet-lab processing, sequencing operation, bioinformatics workflow operation, QC review, validation and change control, data management, storage and backup, access review, reporting, interpretation, user training, incident support, procurement or costing, and programme oversight. The same person may cover more than one function in a small service, but no function should be invisible.",
+    "claimIds": [
+      "claim-beta-workforce-responsibility-template",
+      "claim-workforce-support-service-core",
+      "claim-costing-recurrent-service-categories"
+    ],
+    "sourceIds": [
+      "aphl-ngs-implementation-2016",
+      "phe-case-study",
+      "who-genomic-surveillance-progress-2023",
+      "clinical-microbiology-implementation-2026",
+      "east-africa-genomics-landscape-2024",
+      "who-genomics-costing-tool-manual-2024"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "policy",
+        "funder",
+        "lab-lead",
+        "bioinformatician",
+        "it-security",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "workforce",
+        "training",
+        "sustainability",
+        "responsibility-model",
+        "costing"
+      ]
+    },
+    "order": 30,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "Use as a beta role/responsibility map. It does not define FTE, grades, salaries, or staffing ratios.",
+    "updatedAt": "2026-07-01"
   }
 ]
