@@ -48,6 +48,23 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                 <Link href="/api-docs">API</Link>
                 <Link href="/about">About</Link>
               </nav>
+              <details className="mobile-nav">
+                <summary aria-label="Open main navigation">
+                  <span className="hamburger-lines" aria-hidden="true">
+                    <span />
+                    <span />
+                    <span />
+                  </span>
+                </summary>
+                <nav aria-label="Mobile navigation">
+                  <Link href="/">Guidance</Link>
+                  <Link href="/resources">Resource finder</Link>
+                  <Link href="/quizzes">Quizzes</Link>
+                  <Link href="/gaps">Needs more work</Link>
+                  <Link href="/api-docs">API</Link>
+                  <Link href="/about">About</Link>
+                </nav>
+              </details>
             </div>
           </header>
           <main id="main-content" className="page">{children}</main>
