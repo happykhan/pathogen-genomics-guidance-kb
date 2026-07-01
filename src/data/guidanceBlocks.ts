@@ -264,6 +264,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "A sequencing programme is not only producing FASTQ files or a final report. It receives samples or isolates, links them to metadata, generates sequence data, checks quality, runs analysis, interprets outputs, produces reports, shares selected data, stores records, and decides what should be archived or deleted.",
       "The WHO national strategy support tool provides a general value-chain frame: establish priority use cases, collect samples and metadata, extract genetic material, sequence, run bioinformatics analysis, interpret with multisource data, publish or share data, and return results for public-health analysis. The PHE case study gives a concrete service example: extracted DNA entered a central sequencing service, robotic processes checked quality and prepared libraries, sample information was captured through LIMS, sequence data were stored and analysed on IT and bioinformatics infrastructure, and outputs were combined with LIMS data to produce reports.",
       "That lifecycle is partly technical and partly organisational. The programme needs a route for sample receipt, metadata capture, sequencing, raw-data storage, workflow execution, interpretation, reporting, data sharing, and long-term record keeping. It also needs named routes for failed samples, failed sequencing runs, low-quality data, unexpected organisms, ambiguous outputs, repository-submission errors, and corrected reports.",
+      "The minimum design task is to keep those events connected. WHO's platform guidance treats provenance as an auditable trail through sample collection, metadata collection, laboratory processing, sequencing, bioinformatics, submission, publications, entry route, and identifiers that link the same data across resources. A local service may not need every field used by a public platform, but it does need enough internal lineage to explain where a result came from and what changed when it is corrected, shared, archived, or reanalysed.",
       "The lifecycle should be designed around use cases, not files. A national surveillance use case may need sampling representativeness, routine reporting, repository submission, and trend analysis over months or years. An outbreak use case may need faster analysis, tighter operational sharing, and incident review. A research support use case may need more flexible workflows but clearer boundaries around what is not yet validated for public-health action.",
       "The practical design target is a data asset that can safely feed different products: urgent alerts, sample-level reports, weekly service summaries, monthly or quarterly trend reports, annual reviews, public repository submissions, quality dashboards, and reanalysis when methods or public-health questions change.",
     ],
@@ -271,18 +272,27 @@ export const guidanceBlocks: GuidanceBlock[] = [
       0: ["who-national-genomic-surveillance-strategy-2023", "phe-case-study"],
       1: ["who-national-genomic-surveillance-strategy-2023", "phe-case-study"],
       2: ["who-national-genomic-surveillance-strategy-2023", "pha4ge-infrastructure"],
-      3: ["who-national-genomic-surveillance-strategy-2023", "phe-case-study"],
-      4: ["who-national-genomic-surveillance-strategy-2023", "phe-case-study", "pha4ge-infrastructure"],
+      3: ["who-genomic-data-sharing-platforms-2025", "phe-case-study"],
+      4: ["who-national-genomic-surveillance-strategy-2023", "phe-case-study"],
+      5: ["who-national-genomic-surveillance-strategy-2023", "phe-case-study", "pha4ge-infrastructure"],
     },
     technicalDetail: [
-      "At minimum, track the sample or isolate identifier, sequencing run, raw data, QC outputs, workflow run, final result, report, and sharing or repository event. A formal field model still needs source extraction.",
+      "Minimum lineage fields for beta: sample or isolate identifier; submitting organisation or service route; collection date, place and source where appropriate; sampling frame or reason for sequencing; sequencing run; raw data; QC status and QC outputs; workflow run, workflow version and reference data; interpreted result; released report; correction or repeat-analysis event; sharing event; repository accession or platform identifier; and retention or archive decision.",
     ],
     audiences: ["lab-lead", "bioinformatician", "data-manager", "it-security"],
     implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
     organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
     topics: ["data-lifecycle", "lims", "reporting", "metadata"],
     detailLevel: "operational",
-    sourceIds: ["who-national-genomic-surveillance-strategy-2023", "pha4ge-infrastructure", "phe-case-study"],
+    sourceIds: [
+      "who-national-genomic-surveillance-strategy-2023",
+      "who-genomic-data-sharing-platforms-2025",
+      "pha4ge-infrastructure",
+      "phe-case-study",
+    ],
+    gaps: [
+      "A formal field dictionary still needs extraction from repository and pathogen-specific metadata standards before the guide can recommend required fields for each organism or programme.",
+    ],
   },
   {
     id: "metadata-and-epidemiology-integration",
@@ -293,19 +303,44 @@ export const guidanceBlocks: GuidanceBlock[] = [
     body: [
       "Armstrong et al. state that laboratory and epidemiological data are often managed separately, but pathogen genomic data need to be integrated with epidemiological data to realise the value of both.",
       "The PHE case study shows this in practice: LIMS sample data and sequence-analysis outputs were combined to produce final sample reports.",
-      "The minimum design issue is linkage. A programme needs stable ways to connect the sample or isolate, submitted metadata, sequencing run, raw data, QC outputs, workflow run, interpreted result, report, and any repository or sharing event.",
-      "WHO's platform principles provide a practical starting point for metadata scope: sample information, sampling strategy, sequencing strategy, bioinformatics methods, attribution data, and optional fields for richer epidemic or One Health analysis. Poor linkage reduces the value of analysis even when sequencing and bioinformatics are technically sound. It can make reports harder to interpret, weaken outbreak investigation, complicate reanalysis, and make it harder to audit who saw or changed data.",
+      "The minimum design issue is linkage. A programme needs stable ways to connect the sample or isolate, submitted metadata, sequencing run, raw data, QC outputs, workflow run, interpreted result, report, and any repository or sharing event. This should be treated as a service requirement, not a spreadsheet tidy-up task after analysis is finished.",
+      "WHO's platform principles provide a practical starting point for metadata scope: sample information, sampling strategy, sequencing strategy, bioinformatics methods, attribution data, and optional fields for richer epidemic or One Health analysis. The same guidance links richer metadata to deeper inference, while noting that sensitive or privileged data may require stricter access policies.",
+      "Poor linkage reduces the value of analysis even when sequencing and bioinformatics are technically sound. It can make reports harder to interpret, weaken outbreak investigation, complicate reanalysis, break repository submission, and make it harder to audit who generated, saw, changed, or reused data.",
       "ECDC and AusPathoGen add the implementation point: WGS becomes more useful when genomic analysis is integrated into surveillance and epidemiological interpretation, not held as a separate laboratory artifact. That means the metadata model should be designed with the people who will investigate outbreaks, interpret surveillance signals, or act on AMR and healthcare-associated infection information.",
     ],
     bodySourceIds: {
       0: ["cdc-nejm-2019"],
       1: ["phe-case-study"],
       2: ["who-national-genomic-surveillance-strategy-2023", "who-genomic-data-sharing-platforms-2025"],
-      3: ["who-genomic-data-sharing-platforms-2025", "cdc-nejm-2019", "phe-case-study"],
-      4: ["ecdc-wgs-surveillance-2016", "auspathogen-implementation-2025"],
+      3: ["who-genomic-data-sharing-platforms-2025"],
+      4: ["who-genomic-data-sharing-platforms-2025", "cdc-nejm-2019", "phe-case-study"],
+      5: ["ecdc-wgs-surveillance-2016", "auspathogen-implementation-2025"],
+    },
+    bodyCitationAnchors: {
+      2: [
+        {
+          text: "A programme needs stable ways to connect the sample or isolate, submitted metadata, sequencing run, raw data, QC outputs, workflow run, interpreted result, report, and any repository or sharing event.",
+          sourceIds: [
+            "who-national-genomic-surveillance-strategy-2023",
+            "who-genomic-data-sharing-platforms-2025",
+            "phe-case-study",
+          ],
+        },
+      ],
+      3: [
+        {
+          text: "sample information, sampling strategy, sequencing strategy, bioinformatics methods, attribution data, and optional fields for richer epidemic or One Health analysis.",
+          sourceIds: ["who-genomic-data-sharing-platforms-2025"],
+        },
+        {
+          text: "sensitive or privileged data may require stricter access policies.",
+          sourceIds: ["who-genomic-data-sharing-platforms-2025"],
+        },
+      ],
     },
     technicalDetail: [
-      "The KB still needs a formal identifier model linking sample, sequencing run, raw data, workflow run, result, report, and repository accession.",
+      "Minimum internal lineage: sample or isolate identifier, submitter or collection route, collection date/place/source where appropriate, sampling strategy or reason for sequencing, sequencing run, raw data location, QC status, workflow run and version, reference data version, interpreted result, released report, correction history, sharing event, repository accession or platform identifier, and retention/archive decision.",
+      "Minimum platform questions: What metadata are required? What fields are optional but pre-set? Are provenance and attribution recorded? Are persistent identifiers or accessions issued? Can the platform exchange data through documented APIs or standards? How are restricted metadata handled?",
     ],
     audiences: ["data-manager", "bioinformatician", "lab-lead", "it-security"],
     implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
@@ -320,6 +355,10 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "who-genomic-data-sharing-platforms-2025",
       "ecdc-wgs-surveillance-2016",
       "auspathogen-implementation-2025",
+    ],
+    gaps: [
+      "The guide still needs organism-specific metadata field sets for enteric bacteria, tuberculosis, respiratory viruses, AMR, and healthcare-associated infection.",
+      "The guide still needs extraction from INSDC, NCBI, GISAID, and pathogen-specific repository guidance before recommending repository-specific submission fields.",
     ],
   },
   {

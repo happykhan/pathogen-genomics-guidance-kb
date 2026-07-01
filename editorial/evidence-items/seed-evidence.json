@@ -97,6 +97,17 @@
     "reviewStatus": "reviewed"
   },
   {
+    "id": "evidence-who-2023-metadata-quality-interoperability",
+    "sourceId": "who-national-genomic-surveillance-strategy-2023",
+    "sourceLocator": "WHO 2023 national genomic surveillance strategy support tool, section 2.4 data management",
+    "evidenceType": "short-excerpt",
+    "excerpt": "should consider all data relevant to surveillance systems",
+    "passageSummary": "WHO states that genomic surveillance data-management policy should not focus only on genetic sequence data, but should consider all data relevant to surveillance systems to support interoperability. The same section links data quality, internal consistency, metadata completeness, metadata quality, storage, privacy/security, and reporting for public-health action.",
+    "tags": ["data-management", "metadata", "interoperability", "quality", "reporting"],
+    "limitations": "Strategy-level guidance; it does not define a complete local identifier schema.",
+    "reviewStatus": "reviewed"
+  },
+  {
     "id": "evidence-armstrong-resolution-integration-workflows",
     "sourceId": "cdc-nejm-2019",
     "sourceLocator": "Armstrong et al. 2019, sections on bacterial foodborne illness, data integration, and NGS workflows",
@@ -108,6 +119,17 @@
     "reviewStatus": "reviewed"
   },
   {
+    "id": "evidence-armstrong-lab-epi-integration",
+    "sourceId": "cdc-nejm-2019",
+    "sourceLocator": "Armstrong et al. 2019, section on integrating laboratory and epidemiological data",
+    "evidenceType": "short-excerpt",
+    "excerpt": "these data need to be integrated",
+    "passageSummary": "Armstrong et al. state that laboratory and epidemiological data are often stored and managed separately, and that pathogen genomic data need to be integrated with epidemiological data to realise the value of both.",
+    "tags": ["metadata", "epidemiology", "data-integration", "decision-use"],
+    "limitations": "Supports the integration principle; does not prescribe a field-level metadata model.",
+    "reviewStatus": "reviewed"
+  },
+  {
     "id": "evidence-phe-end-to-end-service",
     "sourceId": "phe-case-study",
     "sourceLocator": "PHE case study, section 3.3 Workflow development and bioinformatics",
@@ -116,6 +138,17 @@
     "passageSummary": "The PHE case study describes operationalising WGS at scale by considering infrastructure and workflow stages together, including sample management, LIMS interaction, bioinformatics pipelines, quality reporting, storage configuration, user access, and results returned to users.",
     "tags": ["service-chain", "lims", "bioinformatics", "reporting", "storage", "user-access"],
     "limitations": "Specific to a centralised PHE service model, but useful as a concrete service-design example.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-phe-lims-report-linkage",
+    "sourceId": "phe-case-study",
+    "sourceLocator": "PHE case study, section 3.3 Workflow development, specimen receipt and management",
+    "evidenceType": "short-excerpt",
+    "excerpt": "The interaction between LIMS and the bioinformatics infrastructure",
+    "passageSummary": "The PHE case study describes workflow development from sample receipt to reporting and identifies sample tracking, service-user tracking, LIMS interaction with bioinformatics infrastructure, data quality reporting, storage configuration, data access, sample-context integration, and report design as part of the end-to-end service.",
+    "tags": ["lims", "reporting", "metadata", "data-lifecycle", "bioinformatics"],
+    "limitations": "Centralised UK service example; implementation details may differ in other systems.",
     "reviewStatus": "reviewed"
   },
   {
@@ -138,6 +171,17 @@
     "passageSummary": "Price et al. identified 681 articles, assessed 49 full texts, and included 9 studies. All included studies supported WGS surveillance on economic grounds, but evidence was heterogeneous, concentrated in hospital infection prevention/control and foodborne surveillance, and limited for low- and middle-income country implementation and real-world effectiveness.",
     "tags": ["economics", "cost-effectiveness", "evidence-gap", "value-case"],
     "limitations": "Does not support a universal return-on-investment claim.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-who-2025-metadata-provenance-interoperability",
+    "sourceId": "who-genomic-data-sharing-platforms-2025",
+    "sourceLocator": "WHO 2025 pathogen genomic data-sharing platform guidance, sections 2.4 data scope, 2.7 data provenance, and 2.9 interoperability",
+    "evidenceType": "short-excerpt",
+    "excerpt": "auditable trail all along the sequence and metadata generation continuum",
+    "passageSummary": "WHO's platform guidance defines minimum metadata as including sample information, high-level sampling strategy, sequencing strategy, bioinformatics methods, and attribution data. It also describes provenance as an auditable trail across sample collection, metadata collection, laboratories, sequencing, bioinformatics, submission, publications, entry route, and identifiers linking records across resources. Its interoperability section supports documented APIs and standards for exchange with other systems.",
+    "tags": ["metadata", "provenance", "interoperability", "repositories", "api", "platforms"],
+    "limitations": "Written for data-sharing platforms; local service databases may need a smaller but compatible internal model.",
     "reviewStatus": "reviewed"
   },
   {

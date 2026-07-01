@@ -262,5 +262,87 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "Central fragment for sample-to-decision service framing.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-metadata-identifier-lineage-core",
+    "sectionId": "metadata-identifier-lineage",
+    "title": "Identifier lineage",
+    "kind": "paragraph",
+    "text": "The minimum data model should preserve the lineage from sample or isolate to metadata, sequencing run, raw data, QC result, workflow run, interpreted result, report, sharing event, repository accession, and retention or archive decision. Without that linkage, a technically sound analysis can become hard to interpret, audit, correct, share, or reuse.",
+    "claimIds": [
+      "claim-metadata-identifier-lineage-core"
+    ],
+    "sourceIds": [
+      "who-national-genomic-surveillance-strategy-2023",
+      "who-genomic-data-sharing-platforms-2025",
+      "phe-case-study",
+      "cdc-nejm-2019"
+    ],
+    "conditions": {
+      "audiences": [
+        "lab-lead",
+        "bioinformatician",
+        "data-manager",
+        "it-security",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "metadata",
+        "lims",
+        "provenance",
+        "reporting"
+      ]
+    },
+    "order": 10,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "Reviewed against WHO 2023 data-management text, WHO 2025 platform provenance text, PHE LIMS/report linkage, and Armstrong lab/epi integration.",
+    "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-platform-provenance-core",
+    "sectionId": "repository-data-sharing",
+    "title": "Platform provenance",
+    "kind": "paragraph",
+    "text": "A repository or data-sharing platform should be assessed by more than upload capability. The programme should check metadata scope, provenance, persistent identifiers, access controls, curation, interoperability, documented APIs, reporting functions, and how data contributors and downstream users are acknowledged.",
+    "claimIds": [
+      "claim-platform-metadata-provenance-interoperability"
+    ],
+    "sourceIds": [
+      "who-genomic-data-sharing-platforms-2025"
+    ],
+    "conditions": {
+      "audiences": [
+        "policy",
+        "director",
+        "data-manager",
+        "it-security",
+        "bioinformatician",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "data-sharing",
+        "repositories",
+        "metadata",
+        "interoperability"
+      ]
+    },
+    "order": 20,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "Use when expanding repository/platform selection and data-sharing sections.",
+    "updatedAt": "2026-07-01"
   }
 ]

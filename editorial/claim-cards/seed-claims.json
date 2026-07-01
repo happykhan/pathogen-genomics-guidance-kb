@@ -137,6 +137,54 @@
     "reviewStatus": "reviewed"
   },
   {
+    "id": "claim-metadata-identifier-lineage-core",
+    "sourceId": "who-genomic-data-sharing-platforms-2025",
+    "sourceLocator": "WHO 2025 pathogen genomic data-sharing platform guidance, sections 2.4 data scope and 2.7 data provenance",
+    "evidenceItemIds": [
+      "evidence-who-2023-metadata-quality-interoperability",
+      "evidence-who-2025-metadata-provenance-interoperability",
+      "evidence-phe-lims-report-linkage",
+      "evidence-armstrong-lab-epi-integration"
+    ],
+    "claim": "A routine pathogen genomics service should preserve an identifier lineage from sample or isolate through metadata, sequencing, QC, workflow, interpretation, report, repository submission, and later reuse.",
+    "extractedText": "WHO 2023 links data management to all surveillance-relevant data, interoperability, data quality, metadata quality, reporting, and public-health action. WHO 2025 defines minimum metadata and provenance across the sequence and metadata generation continuum. PHE shows LIMS, sequence analysis, quality, storage, access, and reports operating together in a service. Armstrong et al. state that pathogen genomic and epidemiological data need to be integrated to realise their value.",
+    "notes": "Use as the central source-backed claim for the metadata/identifier lineage section.",
+    "tags": ["metadata", "identifier-lineage", "lims", "provenance", "reporting", "repository"],
+    "candidateSectionIds": [
+      "data-lifecycle-sample-to-report",
+      "metadata-identifier-lineage",
+      "repository-data-sharing",
+      "workflow-reproducibility",
+      "reporting-decision-use"
+    ],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "multiple",
+    "confidence": "high",
+    "limitations": "Supports a general lineage model; field-level organism-specific metadata requirements still need extraction from repository and pathogen-specific sources.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "claim-platform-metadata-provenance-interoperability",
+    "sourceId": "who-genomic-data-sharing-platforms-2025",
+    "sourceLocator": "WHO 2025 pathogen genomic data-sharing platform guidance, sections 2.4 data scope, 2.7 data provenance, and 2.9 interoperability",
+    "evidenceItemIds": ["evidence-who-2025-metadata-provenance-interoperability"],
+    "claim": "Repository and platform choices should be assessed against metadata scope, provenance, identifiers, interoperability, access, curation, and onward use, not only whether sequence files can be uploaded.",
+    "extractedText": "WHO's platform guidance defines minimum metadata, provenance across the data-generation continuum, identifiers linking records across resources, and documented APIs and standards for exchange with other systems.",
+    "notes": "Use for resource finder, data-sharing, repository, and API sections.",
+    "tags": ["repositories", "platforms", "metadata", "provenance", "interoperability", "api"],
+    "candidateSectionIds": [
+      "metadata-identifier-lineage",
+      "repository-data-sharing"
+    ],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "multiple",
+    "confidence": "high",
+    "limitations": "Platform guidance does not decide which repository is appropriate for every pathogen, jurisdiction, or sensitivity level.",
+    "reviewStatus": "reviewed"
+  },
+  {
     "id": "claim-price-economic-review-heterogeneous",
     "sourceId": "wgs-economic-review",
     "sourceLocator": "Price et al. 2023, abstract and discussion of systematic review of WGS economic evaluations",
