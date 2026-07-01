@@ -586,6 +586,101 @@ export const guidanceBlocks: GuidanceBlock[] = [
       2: ["who-national-genomic-surveillance-strategy-2023"],
       3: ["who-national-genomic-surveillance-strategy-2023", "foodborne-genomics-allard-2018"],
     },
+    technicalDetail: [
+      "Minimum sampling-design fields: pathogen or programme, public-health use case, sampling route, inclusion rule, exclusion rule, sampling frame, expected volume, turnaround target, minimum metadata, restricted metadata, reporting route, sharing route, known bias, and review owner.",
+      "For each report or dashboard, state whether the data represent routine surveillance, targeted outbreak investigation, sentinel surveillance, convenience sampling, clinical support, repository submission, or research support.",
+      "Do not convert the beta sampling register into organism-specific sampling fractions until pathogen-specific source extraction and programme review are complete.",
+    ],
+    tables: [
+      {
+        title: "Beta sampling and programme-design register",
+        summary:
+          "Use this before interpreting trends, clusters or variant patterns. It records what entered the service, what did not, and which public-health question the data can support.",
+        columns: ["Register field", "What to record", "Why it matters", "Beta caution"],
+        rows: [
+          {
+            cells: [
+              "Public-health use case",
+              "Routine surveillance, outbreak response, AMR monitoring, sentinel survey, clinical support, repository submission, research support, or another defined service.",
+              "WHO places priority use cases, users, sampling strategy, analysis, sharing and intended outcomes at the start of strategy design.",
+              "The same sequence data can support different uses, but the interpretation changes when the use case changes.",
+            ],
+            sourceIds: ["who-national-genomic-surveillance-strategy-2023", "ecdc-wgs-surveillance-2016"],
+          },
+          {
+            cells: [
+              "Sampling route and frame",
+              "Where samples or isolates come from, who submits them, whether sampling is continuous, event-triggered, periodic sentinel, geographically distributed or convenience-based.",
+              "ECDC links storage and sharing requirements to surveillance objectives and study design, including continuous, real-time and periodic sentinel approaches.",
+              "Do not describe convenience or targeted outbreak sampling as representative routine surveillance.",
+            ],
+            sourceIds: [
+              "who-national-genomic-surveillance-strategy-2023",
+              "ecdc-wgs-surveillance-2016",
+              "clinical-microbiology-implementation-2026",
+            ],
+          },
+          {
+            cells: [
+              "Inclusion, exclusion and missed samples",
+              "Which specimens enter sequencing, which are excluded, what fails before analysis, and whether exclusions change over time.",
+              "Representativeness, data quality, metadata completeness and turnaround are linked design considerations.",
+              "A cluster, lineage trend or absence of detection can be misleading if the programme does not know what was not sampled.",
+            ],
+            sourceIds: ["who-national-genomic-surveillance-strategy-2023", "aphl-ngs-implementation-2016"],
+          },
+          {
+            cells: [
+              "Metadata and linkage needed for interpretation",
+              "Minimum public metadata, restricted contextual metadata, sampling reason, sample source, collection date and place where appropriate, and common identifiers linking records.",
+              "WHO platform guidance treats sample information, sampling strategy, sequencing strategy, bioinformatics method, attribution and provenance as data-scope issues.",
+              "Sensitive metadata may be essential for action but inappropriate for public release.",
+            ],
+            sourceIds: [
+              "who-genomic-data-sharing-platforms-2025",
+              "who-sars-cov-2-sequencing-implementation-2021",
+              "ecdc-wgs-surveillance-2016",
+            ],
+          },
+          {
+            cells: [
+              "Turnaround and reporting route",
+              "Who receives the result, when it must arrive, whether it supports a case report, alert, cluster review, periodic trend report, repository update or service dashboard.",
+              "Reports and visualisations should be agreed for each pathogen according to surveillance objectives.",
+              "A slow but comprehensive route may suit periodic surveillance but fail an outbreak-response use case.",
+            ],
+            sourceIds: [
+              "ecdc-wgs-surveillance-2016",
+              "who-sars-cov-2-sequencing-implementation-2021",
+              "phe-case-study",
+            ],
+          },
+          {
+            cells: [
+              "Review of bias and service changes",
+              "Sampling changes, submission gaps, failed or repeated samples, missing metadata, delayed reports, geography or facility gaps, and whether interpretation should be qualified.",
+              "WHO links timely feedback and data-management protocols to public-health action; PHE shows routine service planning around volume, turnaround, failures and user requirements.",
+              "Trend reports should record sampling changes before claiming changes in pathogen distribution or incidence.",
+            ],
+            sourceIds: [
+              "who-national-genomic-surveillance-strategy-2023",
+              "phe-case-study",
+              "global-solidarity-genomic-surveillance-2026",
+            ],
+          },
+        ],
+        sourceIds: [
+          "who-national-genomic-surveillance-strategy-2023",
+          "ecdc-wgs-surveillance-2016",
+          "clinical-microbiology-implementation-2026",
+          "aphl-ngs-implementation-2016",
+          "who-genomic-data-sharing-platforms-2025",
+          "who-sars-cov-2-sequencing-implementation-2021",
+          "phe-case-study",
+          "global-solidarity-genomic-surveillance-2026",
+        ],
+      },
+    ],
     audiences: ["director", "policy", "lab-lead", "bioinformatician", "data-manager", "all"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
     organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
@@ -595,6 +690,13 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "who-national-genomic-surveillance-strategy-2023",
       "cdc-nejm-2019",
       "foodborne-genomics-allard-2018",
+      "ecdc-wgs-surveillance-2016",
+      "clinical-microbiology-implementation-2026",
+      "aphl-ngs-implementation-2016",
+      "who-genomic-data-sharing-platforms-2025",
+      "who-sars-cov-2-sequencing-implementation-2021",
+      "phe-case-study",
+      "global-solidarity-genomic-surveillance-2026",
     ],
     gaps: [
       "Organism-specific sampling strategies and representativeness rules still need extraction before this section can give detailed programme recommendations.",

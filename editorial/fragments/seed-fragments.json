@@ -2876,5 +2876,59 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is a beta route map, not a complete organism-specific field dictionary or SOP.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-sampling-programme-design-register",
+    "sectionId": "sampling-programme-design",
+    "title": "Sampling and programme-design register",
+    "kind": "table",
+    "text": "Before interpreting genomic outputs, a programme should record the public-health use case, sampling route, inclusion and exclusion rules, sampling frame, expected volume, turnaround target, metadata needs, reporting route, sharing route, known bias and review owner. This makes clear what the data can support and what claims would overreach the sampling design.",
+    "claimIds": [
+      "claim-who-sampling-representativeness-turnaround",
+      "claim-service-model-choices",
+      "claim-beta-organism-service-model-matrix",
+      "claim-metadata-identifier-lineage-core",
+      "claim-reporting-products-fit-decision"
+    ],
+    "sourceIds": [
+      "who-national-genomic-surveillance-strategy-2023",
+      "ecdc-wgs-surveillance-2016",
+      "clinical-microbiology-implementation-2026",
+      "aphl-ngs-implementation-2016",
+      "who-genomic-data-sharing-platforms-2025",
+      "who-sars-cov-2-sequencing-implementation-2021",
+      "phe-case-study",
+      "global-solidarity-genomic-surveillance-2026"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "policy",
+        "lab-lead",
+        "bioinformatician",
+        "data-manager",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "sampling",
+        "surveillance",
+        "metadata",
+        "reporting",
+        "interpretation",
+        "data-lifecycle"
+      ]
+    },
+    "order": 41,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta register for programme design. It does not prescribe organism-specific sampling fractions, cluster thresholds or surveillance targets.",
+    "updatedAt": "2026-07-01"
   }
 ]
