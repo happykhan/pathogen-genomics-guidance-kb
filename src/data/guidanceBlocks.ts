@@ -1373,7 +1373,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       },
     ],
     audiences: ["lab-lead", "bioinformatician", "data-manager", "it-security"],
-    implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
+    implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
     organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
     topics: ["data-lifecycle", "lims", "reporting", "metadata"],
     detailLevel: "operational",
@@ -1726,7 +1726,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       },
     ],
     audiences: ["data-manager", "bioinformatician", "lab-lead", "it-security"],
-    implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
+    implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
     organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
     topics: ["metadata", "interoperability", "lims", "epidemiology"],
     detailLevel: "operational",
@@ -2384,7 +2384,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       },
     ],
     audiences: ["lab-lead", "bioinformatician", "data-manager", "it-security", "director"],
-    implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
+    implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
     organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
     topics: ["quality", "operations", "failure-handling", "reporting", "metadata", "continuous-improvement"],
     detailLevel: "operational",
@@ -2410,7 +2410,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     sourceStatus: "partial",
     body: [
       "Public-health outputs may be used to detect outbreaks, rule cases in or out of clusters, support control measures, monitor antimicrobial resistance, and inform policy. The analysis therefore needs to be repeatable enough for service delivery and transparent enough for review.",
-      "The PHA4GE source links public-health requirements for transparency and portability to containerised bioinformatics workflows expressed in workflow languages or workflow systems.",
+      "PHA4GE's infrastructure guidance links public-health requirements for transparency and portability to containerised bioinformatics workflows expressed in workflow languages or workflow systems.",
       "For routine service, a workflow should be more than a folder of scripts. The programme should know which version is approved, which reference data are used, which parameters are routine defaults, which outputs are reviewed, and which result is released to users.",
       "Workflow-sharing ecosystems can reduce local development effort, but they do not remove local responsibility. A programme still needs to decide who can introduce a workflow, who validates changes, who approves use for reporting, and how older results can be interpreted if software or reference data change.",
       "The same provenance requirement applies after a workflow is deployed. Routine results should preserve QC status, QC methods, acceptance thresholds, workflow version, software versions, database versions, reference data, and any exception or override. Without that record, reanalysis and change control become guesswork.",
@@ -2598,7 +2598,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       },
     ],
     audiences: ["bioinformatician", "lab-lead", "data-manager", "it-security"],
-    implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
+    implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
     organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
     topics: ["workflow", "provenance", "reproducibility", "validation"],
     detailLevel: "technical",
@@ -2641,6 +2641,16 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "Minimum storage map: active analysis storage, raw data archive, processed data archive, report storage, workflow-log storage, QC-output storage, repository-submission records, backup copies, and deleted or expired records.",
       "Minimum recovery questions: what data cannot be regenerated, how long each copy is retained, where backups are held, how backup versions are managed, how backup jobs are scheduled, who receives failure alerts, how restoration is tested, and what service work stops during recovery.",
       "Minimum local resilience questions: who owns the server room or storage location, who can enter it, how temperature and dust are controlled, what UPS or generator support exists, who receives power or cooling alerts, and when a restore test last succeeded.",
+    ],
+    figures: [
+      {
+        title: "Storage, backup and archive serve different jobs",
+        imageSrc: "/figures/storage-backup-archive.svg",
+        alt: "A service map separating active analysis storage, backup copies, archive storage, repository records, reports, and restore testing.",
+        caption:
+          "Use this distinction before buying storage or writing retention rules: active storage supports current work, backup supports recovery, archive supports retained records, and repository records support sharing and later linkage.",
+        sourceIds: ["who-national-genomic-surveillance-strategy-2023", "phe-case-study", "pha4ge-infrastructure"],
+      },
     ],
     tables: [
       {
@@ -2954,7 +2964,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       },
     ],
     audiences: ["it-security", "bioinformatician", "data-manager", "lab-lead"],
-    implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
+    implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
     organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
     topics: ["storage", "backup", "archive", "retention"],
     detailLevel: "technical",
@@ -3047,7 +3057,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "A useful decision pathway is: purpose, data type, minimum metadata, sensitive metadata, quality status, access model, platform or repository, timing, accession or persistent identifier, correction route, withdrawal route, and local owner. ECDC supports the sensitive-metadata distinction by separating non-confidential minimum datasets for public databases from clinical and epidemiological data restricted to competent authorities.",
       "Repository submission is also a data-management event. WHO's SARS-CoV-2 guide distinguishes consensus genomes, partial genomes and raw reads, and notes that platforms differ in data type, use conditions and metadata-upload mechanisms. APHL gives a concrete NCBI example: raw reads and limited metadata can be submitted after quality checks, and BioSample and SRA accession numbers then need to be tracked in the local database.",
       "PHA4GE's examples show that sharing can be implemented through local files, HPC-mediated access, cloud object storage, platform workspaces, Galaxy histories, IRIDA-like projects, or public repositories. The appropriate route depends on purpose, sensitivity, identity management, connectivity, and governance.",
-      "National implementation examples point in the same direction. UKHSA treats data, analytics, transparency, and partnership as part of pathogen genomics strategy. The Australian framework and AusPathoGen source cards both emphasise collaboration, public-health system integration, data integration, and data-sharing or ethics agreements. Those sources support the principle that data sharing should be planned as a service and governance function, not left to individual upload habits.",
+      "National implementation examples consistently treat data, analytics, transparency, and partnership as core components of pathogen genomics programmes. Effective implementation depends on integrating genomic data into public-health systems, establishing clear governance and ethics arrangements, and enabling routine data sharing across organisations. Data sharing should therefore be planned as a core service and governance function, rather than relying on ad hoc practices or individual initiative.",
     ],
     bodySourceIds: {
       0: ["cdc-nejm-2019"],
@@ -5216,7 +5226,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "PHA4GE's implementation comparison gives the practical trade-off. A laptop model can be useful when internet or power is unreliable, but it shifts management to the operator and limits scalability and access-control structures. On-premises systems can meet local needs, but job-processing infrastructure requires expertise. Cloud platforms can reduce local hardware barriers, but they depend on internet connectivity for upload and may shift cost, data-residency and vendor-dependency questions elsewhere.",
       "The East African Community assessment shows why this matters. External sequencing and analysis can be useful during capability building, but long-term reliance on third parties may delay real-time surveillance decisions and limit local interpretation if local sequencing, compute, bioinformatics, and data-sharing capacity are not developed. The guide should therefore treat external support as a dependency to manage, not as a failure or a complete solution.",
       "The implementation collection adds concrete network examples: Kenya's AMR paper describes training public-health scientists to generate genomic data and harmonized reports; the European reference-laboratory rollout paper describes guidance and support for national food, feed, and veterinary laboratories; California COVIDNet shows a large collaborative model linking many sequencing laboratories, cloud-based analysis, training, and visualization workflows.",
-      "National strategies and frameworks add another layer: they treat pathogen genomics as a capability across laboratories, workforce, data and analytics, governance, collaboration, data sharing, quality, sustainability and evaluation. UKHSA, the Australian framework and AusPathoGen all support this domain view. A national programme should therefore compare models by capability domains as well as by where sequencing and analysis happen.",
+      "National strategies and frameworks add another layer: they treat pathogen genomics as a capability across laboratories, workforce, data and analytics, governance, collaboration, data sharing, quality, sustainability and evaluation. A national programme should therefore compare models by capability domains as well as by where sequencing and analysis happen.",
       "For beta, compare implementation models in a dependency matrix. The purpose is not to rank laptop, local server, HPC, cloud, managed platform, centralised reference, hybrid, collaborative, or external-support models as universally better or worse. The purpose is to make the dependencies explicit: who owns each layer, which public-health use case is supported, what happens when internet, power, staff, storage, provider access, or partner support fails, and what local capability is being built.",
     ],
     bodySourceIds: {
@@ -5289,7 +5299,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
             cells: [
               "Data, analytics and platforms",
               "Data model, analysis routes, standard bioinformatics methods, secure platform or workspace, visualisation, interoperability and support route.",
-              "AusPathoGen and the Australian framework both emphasise data integration, analysis platforms and infrastructure for storage and sharing.",
+              "National collaborative models need data integration, analysis platforms, storage infrastructure and sharing infrastructure to work as routine services.",
               "A national platform is a governed service; it is not only shared file storage or a dashboard.",
             ],
             sourceIds: [
@@ -5784,10 +5794,10 @@ export const guidanceBlocks: GuidanceBlock[] = [
         ],
       },
     ],
-    audiences: ["director", "policy", "funder", "lab-lead", "bioinformatician", "it-security", "data-manager", "all"],
+    audiences: ["director", "policy", "funder", "lab-lead", "bioinformatician", "it-security", "data-manager"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
     organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
-    topics: ["implementation", "infrastructure", "sustainability", "workforce", "quality"],
+    topics: ["maturity", "implementation", "sustainability"],
     detailLevel: "summary",
     sourceIds: [
       "pha4ge-infrastructure",

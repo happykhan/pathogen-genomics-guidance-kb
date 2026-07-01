@@ -15,6 +15,7 @@ import type { Profile } from "../types/profile";
 
 type CitationAnchor = { text: string; sourceIds: string[] };
 type GuidanceTable = NonNullable<(typeof guidanceBlocks)[number]["tables"]>[number];
+type GuidanceFigure = NonNullable<(typeof guidanceBlocks)[number]["figures"]>[number];
 
 type Props = {
   profile: Profile;
@@ -32,16 +33,28 @@ const sourceStatusLabels = {
 
 function CitationRun({ sourceIds, referenceNumber }: { sourceIds: string[]; referenceNumber: Map<string, number> }) {
   if (!sourceIds.length) return null;
-  const numbers = sourceIds
-    .map((sourceId) => referenceNumber.get(sourceId))
-    .filter((number): number is number => number !== undefined)
-    .sort((a, b) => a - b);
-  if (!numbers.length) return null;
+  const refs = sourceIds
+    .map((sourceId) => {
+      const number = referenceNumber.get(sourceId);
+      const source = sourceLookup[sourceId];
+      return number ? { sourceId, number, label: source?.label ?? sourceId } : null;
+    })
+    .filter((ref): ref is { sourceId: string; number: number; label: string } => ref !== null)
+    .sort((a, b) => a.number - b.number);
+  if (!refs.length) return null;
+  const numbers = refs.map((ref) => ref.number);
 
   return (
-    <span className="citation-run" aria-label="Section sources">
-      <a href="#references">[{numbers.join(",")}]</a>
-    </span>
+    <details className="citation-run">
+      <summary aria-label={`Show cited sources ${numbers.join(", ")}`}>[{numbers.join(",")}]</summary>
+      <span className="citation-popover" role="list">
+        {refs.map((ref) => (
+          <a href={`#ref-${ref.number}`} key={ref.sourceId} role="listitem">
+            <span>[{ref.number}]</span> {ref.label}
+          </a>
+        ))}
+      </span>
+    </details>
   );
 }
 
@@ -88,11 +101,29 @@ function TextWithCitations({
   );
 }
 
+function tableUseLabel(title: string) {
+  const normalized = title.toLowerCase();
+  if (normalized.includes("checklist")) return "Checklist";
+  if (normalized.includes("register") || normalized.includes("log")) return "Record template";
+  if (normalized.includes("matrix") || normalized.includes("map") || normalized.includes("decision")) return "Decision aid";
+  if (normalized.includes("worksheet") || normalized.includes("scenario")) return "Worksheet";
+  return "Planning table";
+}
+
+function publicTableTitle(title: string) {
+  return title.replace(/^Beta\s+/i, "");
+}
+
+function publicColumnTitle(title: string) {
+  return title.replace(/^Beta\s+/i, "");
+}
+
 function GuidanceTableView({ table, referenceNumber }: { table: GuidanceTable; referenceNumber: Map<string, number> }) {
   return (
     <figure className="document-table">
       <figcaption>
-        <strong>{table.title}</strong>
+        <span className="table-kind">{tableUseLabel(table.title)}</span>
+        <strong>{publicTableTitle(table.title)}</strong>
         {table.summary ? <span>{table.summary}</span> : null}
         <CitationRun sourceIds={table.sourceIds ?? []} referenceNumber={referenceNumber} />
       </figcaption>
@@ -102,7 +133,7 @@ function GuidanceTableView({ table, referenceNumber }: { table: GuidanceTable; r
             <tr>
               {table.columns.map((column) => (
                 <th key={column} scope="col">
-                  {column}
+                  {publicColumnTitle(column)}
                 </th>
               ))}
             </tr>
@@ -130,6 +161,19 @@ function GuidanceTableView({ table, referenceNumber }: { table: GuidanceTable; r
   );
 }
 
+function GuidanceFigureView({ figure, referenceNumber }: { figure: GuidanceFigure; referenceNumber: Map<string, number> }) {
+  return (
+    <figure className="document-figure">
+      <img src={figure.imageSrc} alt={figure.alt} />
+      <figcaption>
+        <strong>{figure.title}</strong>
+        {figure.caption ? <span>{figure.caption}</span> : null}
+        <CitationRun sourceIds={figure.sourceIds ?? []} referenceNumber={referenceNumber} />
+      </figcaption>
+    </figure>
+  );
+}
+
 function collectBlockReferenceIds(block: (typeof guidanceBlocks)[number]) {
   const ids = new Set(block.sourceIds);
   block.summarySourceIds?.forEach((sourceId) => ids.add(sourceId));
@@ -153,6 +197,7 @@ function collectBlockReferenceIds(block: (typeof guidanceBlocks)[number]) {
     table.sourceIds?.forEach((sourceId) => ids.add(sourceId));
     table.rows.forEach((row) => row.sourceIds?.forEach((sourceId) => ids.add(sourceId)));
   });
+  block.figures?.forEach((figure) => figure.sourceIds?.forEach((sourceId) => ids.add(sourceId)));
   return Array.from(ids);
 }
 
@@ -162,7 +207,9 @@ export function GuidanceRenderer({ profile, showTechnical, showAllSections }: Pr
     index,
     score: scoreGuidanceBlock(block, profile),
   }));
-  const visible = scored.filter((item) => showAllSections || item.score >= relevanceThreshold);
+  const visible = scored
+    .filter((item) => showAllSections || item.score >= relevanceThreshold)
+    .sort((left, right) => right.score - left.score || left.index - right.index);
   const hiddenCount = scored.filter((item) => item.score < relevanceThreshold).length;
   const revealTechnical = showTechnical || isTechnicalProfile(profile);
   const referenceIds = Array.from(new Set(visible.flatMap(({ block }) => collectBlockReferenceIds(block))));
@@ -259,6 +306,9 @@ export function GuidanceRenderer({ profile, showTechnical, showAllSections }: Pr
                 ))}
               </section>
             ))}
+            {block.figures?.map((figure) => (
+              <GuidanceFigureView key={figure.title} figure={figure} referenceNumber={referenceNumber} />
+            ))}
             {block.tables?.map((table) => (
               <GuidanceTableView key={table.title} table={table} referenceNumber={referenceNumber} />
             ))}
@@ -288,10 +338,11 @@ export function GuidanceRenderer({ profile, showTechnical, showAllSections }: Pr
           </div>
           <h2>Sources Cited</h2>
           <ol>
-            {referenceIds.map((sourceId) => {
+            {referenceIds.map((sourceId, index) => {
               const source = sourceLookup[sourceId];
+              const number = index + 1;
               return (
-                <li key={sourceId}>
+                <li id={`ref-${number}`} key={sourceId} tabIndex={-1}>
                   {source ? (
                     <>
                       <span>{source.label}</span>

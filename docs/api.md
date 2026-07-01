@@ -10,7 +10,7 @@ Returns the dynamic whitepaper content.
 
 Includes:
 
-- `guidanceBlocks`: section titles, summaries, body text, subsections, technical detail, audiences, organisms, topics, source IDs, and unresolved evidence notes.
+- `guidanceBlocks`: section titles, summaries, body text, subsections, technical detail, figures, tables, audiences, organisms, topics, source IDs, and unresolved evidence notes.
 - `sourceStatus`: per-section evidence state: `reviewed`, `partial`, or `gap`.
 - `sources`: source registry used by the citation markers in the whitepaper.
 
@@ -25,6 +25,13 @@ Fetch section titles, evidence status, and source IDs:
 ```bash
 curl -s http://127.0.0.1:4321/api/guidance \
   | jq '.guidanceBlocks[] | {id, title, sourceStatus, sourceIds, gaps}'
+```
+
+Fetch figure assets and their citation source IDs:
+
+```bash
+curl -s http://127.0.0.1:4321/api/guidance \
+  | jq '.guidanceBlocks[] | select(.figures != null) | {id, title, figures: .figures}'
 ```
 
 Build a citation lookup for a guidance block:

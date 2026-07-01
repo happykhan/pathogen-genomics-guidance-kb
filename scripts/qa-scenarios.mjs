@@ -36,6 +36,7 @@ function loadRecommendationFunctions() {
     .replace(/export function /g, "function ")
     .replace(/function hasAny\(topics: string\[], candidates: string\[]\)/, "function hasAny(topics, candidates)")
     .replace(/function scoreTopics\(profile: Profile, topics: string\[\]\): number/, "function scoreTopics(profile, topics)")
+    .replace(/function scoreRoleNeeds\(profile: Profile, topics: string\[\]\): number/, "function scoreRoleNeeds(profile, topics)")
     .replace(/function scoreConstraints\(profile: Profile, topics: string\[\]\): number/, "function scoreConstraints(profile, topics)")
     .replace(/function scoreGuidanceBlock\(block: GuidanceBlock, profile: Profile\): number/, "function scoreGuidanceBlock(block, profile)")
     .replace(/function scoreResource\(resource: ResourceRecord, profile: Profile\): number/, "function scoreResource(resource, profile)")
@@ -230,7 +231,15 @@ const representativeProfiles = [
   {
     label: "mixed team exploring infrastructure options",
     profile: defaultProfile,
-    expectedTopGuidance: ["use-case-service-model", "infrastructure-operating-model"],
+    expectedTopGuidance: ["data-lifecycle-sample-to-report", "metadata-and-epidemiology-integration", "infrastructure-operating-model"],
+    expectedVisibleGuidance: [
+      "data-lifecycle-sample-to-report",
+      "metadata-and-epidemiology-integration",
+      "storage-backup-archive-distinction",
+      "workflow-reproducibility",
+      "infrastructure-operating-model",
+      "implementation-model-dependencies",
+    ],
   },
 ];
 
@@ -305,6 +314,11 @@ constraintScenarios.forEach((scenario) => scenario.checks.forEach((check) => che
 representativeProfiles.forEach((scenario) =>
   expectTopGuidance(scenario.label, scenario.profile, scenario.expectedTopGuidance, 7),
 );
+representativeProfiles.forEach((scenario) => {
+  if (scenario.expectedVisibleGuidance) {
+    expectVisibleGuidance(scenario.label, scenario.profile, scenario.expectedVisibleGuidance);
+  }
+});
 organismProfiles.forEach((scenario) =>
   expectVisibleGuidance(scenario.label, scenario.profile, scenario.expectedVisibleGuidance),
 );

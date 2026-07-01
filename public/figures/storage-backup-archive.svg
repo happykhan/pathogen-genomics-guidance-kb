@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="430" viewBox="0 0 960 430" role="img" aria-labelledby="title desc">
+  <title id="title">Storage, backup, archive and repository records serve different jobs</title>
+  <desc id="desc">A minimalist flow diagram showing active analysis storage, backup copies, archive storage, repository records, and restore testing as separate service functions.</desc>
+  <defs>
+    <style>
+      .box { fill: #ffffff; stroke: #34443f; stroke-width: 2; rx: 10; }
+      .accent { fill: #ecf8f5; stroke: #0b7d71; stroke-width: 2; rx: 10; }
+      .line { stroke: #34443f; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+      .dash { stroke: #0b7d71; stroke-width: 2; fill: none; stroke-dasharray: 6 7; marker-end: url(#arrowAccent); }
+      .title { font: 700 18px Arial, sans-serif; fill: #111827; }
+      .label { font: 700 15px Arial, sans-serif; fill: #111827; }
+      .small { font: 400 13px Arial, sans-serif; fill: #40534d; }
+      .micro { font: 700 11px Arial, sans-serif; fill: #0b7d71; letter-spacing: .08em; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#34443f" />
+    </marker>
+    <marker id="arrowAccent" markerWidth="10" markerHeight="8" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#0b7d71" />
+    </marker>
+  </defs>
+
+  <text x="40" y="42" class="title">Treat storage as a service map, not one folder</text>
+  <text x="40" y="68" class="small">Classify each data product by purpose, owner, access route, retention rule and recovery route.</text>
+
+  <rect x="42" y="112" width="190" height="120" class="accent" />
+  <text x="64" y="143" class="micro">WORKING COPY</text>
+  <text x="64" y="169" class="label">Active analysis</text>
+  <text x="64" y="193" class="small">FASTQ, QC, workflow</text>
+  <text x="64" y="213" class="small">outputs, re-runs</text>
+
+  <rect x="295" y="112" width="190" height="120" class="box" />
+  <text x="317" y="143" class="micro">RECOVERY</text>
+  <text x="317" y="169" class="label">Backup copies</text>
+  <text x="317" y="193" class="small">Scheduled, monitored,</text>
+  <text x="317" y="213" class="small">restorable versions</text>
+
+  <rect x="548" y="112" width="190" height="120" class="box" />
+  <text x="570" y="143" class="micro">RETAINED RECORD</text>
+  <text x="570" y="169" class="label">Archive storage</text>
+  <text x="570" y="193" class="small">Raw reads, reports, logs,</text>
+  <text x="570" y="213" class="small">retention categories</text>
+
+  <rect x="748" y="286" width="170" height="94" class="box" />
+  <text x="770" y="317" class="micro">SHARED RECORD</text>
+  <text x="770" y="342" class="label">Repository or</text>
+  <text x="770" y="362" class="label">platform ID</text>
+
+  <rect x="42" y="286" width="190" height="94" class="box" />
+  <text x="64" y="317" class="micro">PUBLIC HEALTH USE</text>
+  <text x="64" y="342" class="label">Reports and</text>
+  <text x="64" y="362" class="label">service review</text>
+
+  <rect x="330" y="286" width="190" height="94" class="box" />
+  <text x="352" y="317" class="micro">PROOF IT WORKS</text>
+  <text x="352" y="342" class="label">Restore test</text>
+  <text x="352" y="362" class="small">Owner, date, result</text>
+
+  <path d="M232 172 H288" class="line" />
+  <path d="M485 172 H541" class="line" />
+  <path d="M642 232 V253 C642 274 665 290 707 310 L742 326" class="line" />
+  <path d="M137 232 V280" class="line" />
+  <path d="M390 232 V280" class="dash" />
+  <path d="M330 333 H246" class="dash" />
+
+  <text x="252" y="157" class="small">copy</text>
+  <text x="505" y="157" class="small">retain</text>
+  <text x="416" y="267" class="small">test restore</text>
+  <text x="254" y="321" class="small">usable again</text>
+</svg>
