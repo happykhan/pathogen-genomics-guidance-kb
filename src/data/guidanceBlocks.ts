@@ -701,6 +701,90 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "Minimum validation record for beta: use case, intended reportable outputs, comparator or reference material, input-material requirements, sequencing-run acceptance criteria, analysis acceptance criteria, workflow and database versions, repeatability and reproducibility checks, known limitations, sign-off role, and trigger for revalidation.",
       "Minimum release record for beta: changed component, reason for change, affected outputs, test dataset or comparator, validation result, software and database versions, approver, release date, communication route, rollback option, emergency-fix criteria, and revalidation trigger.",
     ],
+    tables: [
+      {
+        title: "Beta release and change-control checklist",
+        summary:
+          "Use this checklist when a routine workflow, database, QC threshold, interpretation rule or report template changes.",
+        columns: ["Checklist item", "Record in the release file", "Why it matters", "Beta caution"],
+        rows: [
+          {
+            cells: [
+              "Change description",
+              "Component changed, previous version, new version, reason for change, affected organism or use case, and whether reportable outputs can change.",
+              "Services need to know when a result might differ because the method changed rather than the organism changed.",
+              "Small database or parameter changes can still change public-health interpretation.",
+            ],
+            sourceIds: ["clinical-microbiology-implementation-2026", "who-genomic-data-sharing-platforms-2025"],
+          },
+          {
+            cells: [
+              "Validation or verification evidence",
+              "Comparator, reference collection, test dataset, expected outputs, observed differences, repeatability or reproducibility checks, and known limitations.",
+              "The PHE case study shows that method transition required parallel testing, dataset comparison, gap analysis and quality parameters before switching off older methods.",
+              "Validation evidence must match the intended reportable output; a pipeline smoke test is not enough for public-health reporting.",
+            ],
+            sourceIds: [
+              "phe-case-study",
+              "aphl-ngs-implementation-2016",
+              "mgen-stec-bioinformatics-validation-2021",
+            ],
+          },
+          {
+            cells: [
+              "QC and acceptance rules",
+              "Run, sample, read, assembly or genome-quality criteria; low-quality annotation rules; threshold changes; and who can approve overrides.",
+              "QC status and QC methods need to travel with results so users can decide whether data are fit for purpose.",
+              "Organism-specific QC thresholds still need separate extraction before this guide can prescribe cut-offs.",
+            ],
+            sourceIds: [
+              "who-genomic-data-sharing-platforms-2025",
+              "aphl-ngs-implementation-2016",
+              "clinical-microbiology-implementation-2026",
+            ],
+          },
+          {
+            cells: [
+              "Software, workflow and database versions",
+              "Workflow version, container or software versions, reference database version, parameters, report-template version and release date.",
+              "Strict software and database version control is part of interpreting and auditing genomic results.",
+              "Version capture should include reference data and interpretation rules, not only the pipeline name.",
+            ],
+            sourceIds: ["clinical-microbiology-implementation-2026", "who-genomic-data-sharing-platforms-2025"],
+          },
+          {
+            cells: [
+              "Approval and communication",
+              "Approver role, release date, users affected, communication route, report wording affected, training note and support contact.",
+              "A change-control process is also a user-support process when reports, dashboards or interpretations change.",
+              "Approval routes should be fitted to the local quality system and regulatory context.",
+            ],
+            sourceIds: ["aphl-ngs-implementation-2016", "clinical-microbiology-implementation-2026"],
+          },
+          {
+            cells: [
+              "Rollback, correction and revalidation trigger",
+              "Rollback option, emergency-fix criteria, correction route for released results, reanalysis decision, and trigger for full or partial revalidation.",
+              "Routine services need a recorded way to deal with failed releases, corrected reports and method changes that alter previous interpretation.",
+              "This beta checklist is not a substitute for an accredited SOP or incident-management procedure.",
+            ],
+            sourceIds: [
+              "phe-case-study",
+              "clinical-microbiology-implementation-2026",
+              "mgen-accreditation-iso-pathogen-genomics-2023",
+            ],
+          },
+        ],
+        sourceIds: [
+          "phe-case-study",
+          "aphl-ngs-implementation-2016",
+          "clinical-microbiology-implementation-2026",
+          "who-genomic-data-sharing-platforms-2025",
+          "mgen-accreditation-iso-pathogen-genomics-2023",
+          "mgen-stec-bioinformatics-validation-2021",
+        ],
+      },
+    ],
     audiences: ["lab-lead", "bioinformatician", "data-manager", "director"],
     implementationStages: ["pilot", "routine-service", "upgrading"],
     organisms: ["general", "enteric-bacteria", "amr", "nosocomial", "tb"],
@@ -722,7 +806,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "mgen-discordant-amr-predictions-2020",
     ],
     gaps: [
-      "The beta release/change-control checklist still needs conversion into a local SOP template and review against laboratory-quality and accreditation requirements.",
+      "The beta release/change-control checklist still needs conversion into a local SOP template and review against local laboratory-quality, accreditation, regulatory and incident-management requirements.",
       "Organism-specific QC thresholds and reportability rules still need extraction before the guide can prescribe detailed acceptance criteria.",
     ],
   },

@@ -1404,5 +1404,52 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is a beta priority table, not a final repository schema or controlled vocabulary.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-release-change-control-checklist",
+    "sectionId": "quality-validation-before-switch",
+    "title": "Beta release and change-control checklist",
+    "kind": "table",
+    "text": "For beta, treat workflow, database, QC-threshold, interpretation-rule and report-template changes as controlled releases. The checklist records what changed, why it changed, what was tested, who approved it, how users are told, and when revalidation is triggered.",
+    "claimIds": [
+      "claim-release-change-control-validation",
+      "claim-quality-validation-whole-chain",
+      "claim-qc-annotation-version-control"
+    ],
+    "sourceIds": [
+      "phe-case-study",
+      "aphl-ngs-implementation-2016",
+      "clinical-microbiology-implementation-2026",
+      "who-genomic-data-sharing-platforms-2025",
+      "mgen-accreditation-iso-pathogen-genomics-2023",
+      "mgen-stec-bioinformatics-validation-2021",
+      "mgen-discordant-amr-predictions-2020"
+    ],
+    "conditions": {
+      "audiences": [
+        "lab-lead",
+        "bioinformatician",
+        "data-manager",
+        "director",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "quality",
+        "validation",
+        "change-control",
+        "workflow"
+      ]
+    },
+    "order": 31,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta checklist for guide use. It still needs local quality-system and accreditation review before use as an SOP.",
+    "updatedAt": "2026-07-01"
   }
 ]
