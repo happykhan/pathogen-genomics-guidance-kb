@@ -3148,5 +3148,57 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is a beta review cadence. It does not define formal KPIs, accreditation schedule, incident-classification thresholds or organism-specific review rules.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-metadata-field-dictionary-starter",
+    "sectionId": "metadata-identifier-lineage",
+    "title": "Beta metadata field dictionary starter",
+    "kind": "table",
+    "text": "The beta guide can now provide a starter field dictionary that classifies metadata into stable identifiers, public minimum metadata, restricted contextual metadata, technical provenance, repository or platform status, and internal service-management fields. The dictionary should help teams assign system of record, access status and correction route without pretending to be a repository-specific schema.",
+    "claimIds": [
+      "claim-beta-metadata-accession-field-model",
+      "claim-metadata-identifier-lineage-core",
+      "claim-platform-metadata-provenance-interoperability",
+      "claim-qc-annotation-version-control",
+      "claim-lifecycle-service-loop"
+    ],
+    "sourceIds": [
+      "who-genomic-data-sharing-platforms-2025",
+      "who-sars-cov-2-sequencing-implementation-2021",
+      "ecdc-wgs-surveillance-2016",
+      "aphl-ngs-implementation-2016",
+      "phe-case-study",
+      "clinical-microbiology-implementation-2026",
+      "pha4ge-infrastructure",
+      "who-national-genomic-surveillance-strategy-2023"
+    ],
+    "conditions": {
+      "audiences": [
+        "data-manager",
+        "bioinformatician",
+        "lab-lead",
+        "it-security",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "metadata",
+        "identifier-lineage",
+        "repositories",
+        "provenance",
+        "privacy",
+        "quality"
+      ]
+    },
+    "order": 46,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a starter dictionary structure. It does not prescribe exact repository-required fields, controlled vocabularies, jurisdictional access rules or organism-specific schemas.",
+    "updatedAt": "2026-07-01"
   }
 ]

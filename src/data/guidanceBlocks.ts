@@ -1282,6 +1282,102 @@ export const guidanceBlocks: GuidanceBlock[] = [
         ],
       },
       {
+        title: "Beta metadata field dictionary starter",
+        summary:
+          "Use this to start a local field dictionary. It classifies fields by purpose and access status; it is not a repository-specific schema.",
+        columns: ["Field group", "Example fields", "Status category", "System of record and access caution"],
+        rows: [
+          {
+            cells: [
+              "Stable identifiers",
+              "Local sample or isolate ID, submitter ID, LIMS record, sequencing run ID, workflow run ID, report ID, repository sample accession and raw-read or consensus accession where used.",
+              "Required for service linkage; mostly internal or controlled until mapped to public accessions.",
+              "The system of record may be LIMS, sample system, workflow system, repository account or interim pilot register. Do not use file names as the only identifiers.",
+            ],
+            sourceIds: [
+              "who-genomic-data-sharing-platforms-2025",
+              "aphl-ngs-implementation-2016",
+              "phe-case-study",
+            ],
+          },
+          {
+            cells: [
+              "Public minimum metadata",
+              "Collection date, collection place at appropriate resolution, host or source, sample or specimen type, high-level sampling strategy, sequencing strategy, bioinformatics method and attribution.",
+              "Candidate public or shared minimum metadata, subject to organism, repository and jurisdiction review.",
+              "WHO and SARS-CoV-2 guidance support these as minimum-style categories, but exact required fields and formats remain platform-specific.",
+            ],
+            sourceIds: [
+              "who-genomic-data-sharing-platforms-2025",
+              "who-sars-cov-2-sequencing-implementation-2021",
+              "ecdc-wgs-surveillance-2016",
+            ],
+          },
+          {
+            cells: [
+              "Restricted contextual metadata",
+              "Clinical details, exposure or travel history, hospitalisation, outcome, ward or facility context, patient-care context, food-chain or animal-health investigation details and precise location where sensitive.",
+              "Optional or restricted for interpretation; not automatically public.",
+              "ECDC supports separating public non-confidential metadata from sensitive clinical or epidemiological data restricted to competent authorities.",
+            ],
+            sourceIds: [
+              "ecdc-wgs-surveillance-2016",
+              "who-genomic-data-sharing-platforms-2025",
+              "clinical-microbiology-implementation-2026",
+            ],
+          },
+          {
+            cells: [
+              "Technical provenance",
+              "Collecting organisation, submitting organisation, processing laboratory, sequencing platform or method, bioinformatics unit, workflow version, database version, QC method and QC status.",
+              "Required for audit, reproducibility and interpretation; access depends on sensitivity and platform route.",
+              "Provenance should connect the sample, metadata, laboratory, sequencing, bioinformatics, submission and identifier trail.",
+            ],
+            sourceIds: [
+              "who-genomic-data-sharing-platforms-2025",
+              "clinical-microbiology-implementation-2026",
+              "pha4ge-infrastructure",
+            ],
+          },
+          {
+            cells: [
+              "Repository and platform status",
+              "BioSample or equivalent accession, SRA or ENA raw-read accession, consensus accession if used, platform project ID, upload date, release state, correction or replacement date and withdrawal state.",
+              "Required when data are shared, corrected, replaced, withdrawn or reused.",
+              "APHL gives an NCBI tracking example; the beta guide should not treat it as the only repository model.",
+            ],
+            sourceIds: [
+              "aphl-ngs-implementation-2016",
+              "who-genomic-data-sharing-platforms-2025",
+              "who-sars-cov-2-sequencing-implementation-2021",
+            ],
+          },
+          {
+            cells: [
+              "Service-management fields",
+              "Receipt date, extraction date, sequencing date, analysis submission and retrieval dates, report date, report recipient, repeat-analysis event, exception or override, correction history, follow-up owner and retention category.",
+              "Internal service fields needed for turnaround, quality review, correction, costing and improvement.",
+              "These fields may never belong in a public repository, but the service still needs them to operate and defend reports.",
+            ],
+            sourceIds: [
+              "phe-case-study",
+              "aphl-ngs-implementation-2016",
+              "who-national-genomic-surveillance-strategy-2023",
+            ],
+          },
+        ],
+        sourceIds: [
+          "who-genomic-data-sharing-platforms-2025",
+          "who-sars-cov-2-sequencing-implementation-2021",
+          "ecdc-wgs-surveillance-2016",
+          "aphl-ngs-implementation-2016",
+          "phe-case-study",
+          "clinical-microbiology-implementation-2026",
+          "pha4ge-infrastructure",
+          "who-national-genomic-surveillance-strategy-2023",
+        ],
+      },
+      {
         title: "Beta metadata governance register",
         summary:
           "Use this as a service-management register. It is not a repository schema; it records who owns each field group and how it can be used, corrected and shared.",
