@@ -1941,5 +1941,54 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is a governance-review scaffold, not legal advice or repository-specific submission policy.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-reporting-limitations-checklist",
+    "sectionId": "reporting-decision-use",
+    "title": "Beta reporting limitations checklist",
+    "kind": "table",
+    "text": "A beta report should make limitations visible without pretending to have a universal uncertainty taxonomy. At minimum, it should state sample and comparison limits, data quality, method and version, evidence type, interpretation boundary, follow-up needed, and the action the result can and cannot support.",
+    "claimIds": [
+      "claim-reporting-products-fit-decision",
+      "claim-qc-annotation-version-control",
+      "claim-quality-validation-whole-chain"
+    ],
+    "sourceIds": [
+      "who-national-genomic-surveillance-strategy-2023",
+      "who-sars-cov-2-sequencing-implementation-2021",
+      "ecdc-wgs-surveillance-2016",
+      "phe-case-study",
+      "clinical-microbiology-implementation-2026",
+      "who-genomic-data-sharing-platforms-2025",
+      "cdc-nejm-2019"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "policy",
+        "lab-lead",
+        "bioinformatician",
+        "data-manager",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "reporting",
+        "decision-use",
+        "quality",
+        "uncertainty",
+        "metadata"
+      ]
+    },
+    "order": 35,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a limitations checklist. It does not prescribe report wording, legal sign-off, or pathogen-specific uncertainty categories.",
+    "updatedAt": "2026-07-01"
   }
 ]

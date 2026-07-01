@@ -1757,6 +1757,76 @@ export const guidanceBlocks: GuidanceBlock[] = [
           "cdc-nejm-2019",
         ],
       },
+      {
+        title: "Making limitations and uncertainty visible",
+        summary:
+          "Use this checklist to make report limitations usable for non-specialist decision makers. It does not prescribe final wording or pathogen-specific uncertainty categories.",
+        columns: ["Limitation to surface", "What to state", "Why it matters", "Beta caution"],
+        rows: [
+          {
+            cells: [
+              "Sampling and comparison limits",
+              "What was sampled, what was not sampled, the timeframe, comparison set, sampling strategy, missing samples and missing metadata.",
+              "Relatedness, lineage or source-attribution signals depend on the samples and metadata available for comparison.",
+              "Do not imply that unsampled cases, locations, sources or time periods have been ruled out.",
+            ],
+            sourceIds: ["ecdc-wgs-surveillance-2016", "cdc-nejm-2019", "who-national-genomic-surveillance-strategy-2023"],
+          },
+          {
+            cells: [
+              "Data quality and completeness",
+              "QC status, genome completeness, partial or low-quality result status, contamination or mixture concerns, and whether repeat testing or expert review is pending.",
+              "Low-quality or incomplete data can still be useful, but only if users can judge fitness for their decision.",
+              "The beta guide does not yet prescribe organism-specific QC cut-offs.",
+            ],
+            sourceIds: ["who-genomic-data-sharing-platforms-2025", "who-sars-cov-2-sequencing-implementation-2021"],
+          },
+          {
+            cells: [
+              "Method, version and evidence basis",
+              "Workflow, database, rule set, version, date of interpretation, validation basis, and whether the output is transmission linkage, phenotype prediction, lineage surveillance or another product.",
+              "Method and database changes can change reportable outputs; output type determines how the evidence should be interpreted.",
+              "A validated linkage workflow does not automatically validate genotype-to-phenotype inference or clinical interpretation.",
+            ],
+            sourceIds: [
+              "ecdc-wgs-surveillance-2016",
+              "clinical-microbiology-implementation-2026",
+              "who-genomic-data-sharing-platforms-2025",
+            ],
+          },
+          {
+            cells: [
+              "Interpretation boundary",
+              "What the result supports, what it cannot prove alone, which epidemiological or clinical context is still needed, and what follow-up is recommended.",
+              "Genomic findings should inform public-health judgement rather than substitute for sampling strategy, epidemiology, laboratory quality or local context.",
+              "Avoid turning relatedness, lineage or resistance-marker outputs into automatic action instructions.",
+            ],
+            sourceIds: [
+              "who-sars-cov-2-sequencing-implementation-2021",
+              "clinical-microbiology-implementation-2026",
+              "cdc-nejm-2019",
+            ],
+          },
+          {
+            cells: [
+              "Communication and feedback",
+              "Plain-language limitations, whether verbal discussion is needed, feedback route, correction route, and who can answer questions after release.",
+              "WHO SARS-CoV-2 guidance links clear written reports, discussion of analytical limitations and structured feedback to useful public-health reporting.",
+              "The current beta checklist supports report components, not final report wording or legal sign-off.",
+            ],
+            sourceIds: ["who-sars-cov-2-sequencing-implementation-2021", "phe-case-study"],
+          },
+        ],
+        sourceIds: [
+          "who-national-genomic-surveillance-strategy-2023",
+          "who-sars-cov-2-sequencing-implementation-2021",
+          "ecdc-wgs-surveillance-2016",
+          "phe-case-study",
+          "clinical-microbiology-implementation-2026",
+          "who-genomic-data-sharing-platforms-2025",
+          "cdc-nejm-2019",
+        ],
+      },
     ],
     audiences: ["director", "policy", "lab-lead", "bioinformatician", "data-manager", "all"],
     implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
@@ -1783,7 +1853,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     gaps: [
       "The beta checklist still needs review against laboratory-quality, national reporting and pathogen-specific template sources before it can become prescribed report wording.",
-      "Detailed uncertainty categories still need full-text extraction and review.",
+      "Detailed uncertainty categories and final wording still need full-text extraction and review from pathogen-specific, national reporting and laboratory-quality sources.",
     ],
   },
   {
