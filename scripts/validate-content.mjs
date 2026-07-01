@@ -25,11 +25,17 @@ function loadGuidanceBlocks() {
 }
 
 function loadResources() {
+  const collectionSource = read("src/data/microbialGenomicsCollection.ts")
+    .replace(/import type \{ ResourceRecord \} from "\.\.\/types\/content";\n\n?/, "")
+    .replace(/export const microbialGenomicsCollectionResources: ResourceRecord\[] =/, "const microbialGenomicsCollectionResources =")
+    .replace(/;\s*$/, ";\nreturn microbialGenomicsCollectionResources;");
+  const microbialGenomicsCollectionResources = Function(collectionSource)();
   const source = read("src/data/resources.ts")
-    .replace(/import type \{ ResourceRecord \} from "\.\.\/types\/content";\n\n/, "")
+    .replace(/import type \{ ResourceRecord \} from "\.\.\/types\/content";\n\n?/, "")
+    .replace(/import \{ microbialGenomicsCollectionResources \} from "\.\/microbialGenomicsCollection";\n/, "")
     .replace(/export const resources: ResourceRecord\[] =/, "const resources =")
     .replace(/;\s*$/, ";\nreturn resources;");
-  return Function(source)();
+  return Function("microbialGenomicsCollectionResources", source)(microbialGenomicsCollectionResources);
 }
 
 function collectSourceIds(value, activeKey = "", output = new Set()) {

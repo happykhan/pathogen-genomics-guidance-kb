@@ -1,4 +1,5 @@
 import type { ResourceRecord } from "../types/content";
+import { microbialGenomicsCollectionResources } from "./microbialGenomicsCollection";
 
 export const resources: ResourceRecord[] = [
   {
@@ -641,4 +642,5 @@ export const resources: ResourceRecord[] = [
     keywords: ["supply chain", "procurement", "Asia", "sequencing", "reagents", "manufacturers", "LMIC"],
     sourceStatus: "candidate",
   },
+  ...microbialGenomicsCollectionResources,
 ];
