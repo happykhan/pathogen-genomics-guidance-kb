@@ -3544,6 +3544,105 @@ export const guidanceBlocks: GuidanceBlock[] = [
         ],
       },
       {
+        title: "Reporting product release record",
+        summary:
+          "Use this record whenever a result leaves the analysis team as an alert, report, briefing, dashboard, repository update or service-review product.",
+        columns: ["Release field", "What to record", "Why it matters", "Beta caution"],
+        rows: [
+          {
+            cells: [
+              "Product identity and recipient",
+              "Product type, recipient team or role, release date and time, public-health question, use case, and whether verbal discussion or urgent escalation occurred.",
+              "The same data asset can produce different products for different users; each release needs its own decision context.",
+              "Do not let an analysis file become an implicit report without a named recipient and purpose.",
+            ],
+            sourceIds: [
+              "who-national-genomic-surveillance-strategy-2023",
+              "who-sars-cov-2-sequencing-implementation-2021",
+              "phe-case-study",
+            ],
+          },
+          {
+            cells: [
+              "Included samples and comparison set",
+              "Sample or isolate identifiers, collection timeframe, sampling route, inclusion and exclusion criteria, comparison set, and any missing or repeated samples.",
+              "Users need to know the evidence base for relatedness, lineage, resistance, trend or source-support statements.",
+              "Sampling gaps and missing metadata should be visible before a result is used for action.",
+            ],
+            sourceIds: [
+              "ecdc-wgs-surveillance-2016",
+              "who-national-genomic-surveillance-strategy-2023",
+              "clinical-microbiology-implementation-2026",
+            ],
+          },
+          {
+            cells: [
+              "Method, version and validation boundary",
+              "Workflow version, database or nomenclature version, report-template version, validation basis, output type, and whether the result is inside or outside the approved reporting boundary.",
+              "A result can change when software, reference data, interpretation rules or report templates change.",
+              "A release record should capture reference data and interpretation rules, not only the pipeline name.",
+            ],
+            sourceIds: [
+              "clinical-microbiology-implementation-2026",
+              "who-genomic-data-sharing-platforms-2025",
+              "mgen-discordant-amr-predictions-2020",
+            ],
+          },
+          {
+            cells: [
+              "Quality status and limitations",
+              "Run QC, sample QC, genome completeness or coverage where relevant, partial or preliminary status, known limitations, uncertainty statement and follow-up testing or expert review needed.",
+              "Decision makers need enough quality context to decide whether the product is fit for the intended use.",
+              "Low-quality or incomplete results may still be useful, but only when limitations are explicit.",
+            ],
+            sourceIds: [
+              "who-genomic-data-sharing-platforms-2025",
+              "who-sars-cov-2-sequencing-implementation-2021",
+              "clinical-microbiology-implementation-2026",
+            ],
+          },
+          {
+            cells: [
+              "Action boundary and next owner",
+              "What the release can support, what it cannot prove, pending epidemiological or clinical context, next action owner, and whether a corrected or updated release is expected.",
+              "This keeps genomics as decision support rather than an automatic instruction.",
+              "Clinical and infection-control releases may need local governance, verbal discussion and escalation rules.",
+            ],
+            sourceIds: [
+              "who-sars-cov-2-sequencing-implementation-2021",
+              "clinical-microbiology-implementation-2026",
+              "mgen-centre-specific-typing-ipc-2021",
+            ],
+          },
+          {
+            cells: [
+              "Sharing, accession and feedback state",
+              "Repository or platform accession if relevant, sharing state, access restrictions, correction route, user feedback route, questions raised, and service-review action if the release changed practice.",
+              "Reporting, data sharing and service improvement should remain linked after release.",
+              "Repository submission, feedback and correction are stewardship tasks, not optional afterthoughts.",
+            ],
+            sourceIds: [
+              "who-genomic-data-sharing-platforms-2025",
+              "who-pathogen-genome-data-sharing-2022",
+              "aphl-ngs-implementation-2016",
+              "who-national-genomic-surveillance-strategy-2023",
+            ],
+          },
+        ],
+        sourceIds: [
+          "who-national-genomic-surveillance-strategy-2023",
+          "who-sars-cov-2-sequencing-implementation-2021",
+          "phe-case-study",
+          "ecdc-wgs-surveillance-2016",
+          "clinical-microbiology-implementation-2026",
+          "who-genomic-data-sharing-platforms-2025",
+          "mgen-discordant-amr-predictions-2020",
+          "mgen-centre-specific-typing-ipc-2021",
+          "who-pathogen-genome-data-sharing-2022",
+          "aphl-ngs-implementation-2016",
+        ],
+      },
+      {
         title: "Making limitations and uncertainty visible",
         summary:
           "Use this checklist to make report limitations usable for non-specialist decision makers. It does not prescribe final wording or pathogen-specific uncertainty categories.",

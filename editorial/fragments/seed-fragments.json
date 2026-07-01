@@ -3590,5 +3590,61 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is a beta claim-discipline table. It deliberately avoids numeric ROI, universal cost-effectiveness, organism-specific sampling thresholds and transmission or source-attribution rules.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-reporting-product-release-record",
+    "sectionId": "reporting-decision-use",
+    "title": "Reporting product release record",
+    "kind": "table",
+    "text": "Each reporting product should have a release record that names the product, recipient, public-health question, included samples, method and version, validation boundary, quality status, limitations, action boundary, next owner, sharing or accession state, correction route and feedback route. This connects reporting to service stewardship after release.",
+    "claimIds": [
+      "claim-reporting-products-fit-decision",
+      "claim-lifecycle-service-loop",
+      "claim-release-change-control-validation",
+      "claim-beta-data-sharing-decision-table",
+      "claim-platform-metadata-provenance-interoperability"
+    ],
+    "sourceIds": [
+      "who-national-genomic-surveillance-strategy-2023",
+      "who-sars-cov-2-sequencing-implementation-2021",
+      "phe-case-study",
+      "ecdc-wgs-surveillance-2016",
+      "clinical-microbiology-implementation-2026",
+      "who-genomic-data-sharing-platforms-2025",
+      "mgen-discordant-amr-predictions-2020",
+      "mgen-centre-specific-typing-ipc-2021",
+      "who-pathogen-genome-data-sharing-2022",
+      "aphl-ngs-implementation-2016"
+    ],
+    "conditions": {
+      "audiences": [
+        "lab-lead",
+        "bioinformatician",
+        "data-manager",
+        "director",
+        "policy",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "reporting",
+        "decision-use",
+        "quality",
+        "metadata",
+        "data-sharing",
+        "feedback",
+        "correction"
+      ]
+    },
+    "order": 54,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta operational release-record table. It does not define pathogen-specific report wording, legal sign-off, incident classification, clinical action rules or mandatory dashboard metrics.",
+    "updatedAt": "2026-07-01"
   }
 ]
