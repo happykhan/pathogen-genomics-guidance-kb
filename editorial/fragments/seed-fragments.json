@@ -3095,5 +3095,58 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is a beta action table. It is not a validated scoring rubric, certification framework or formal maturity model.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-service-review-cadence",
+    "sectionId": "failure-handling-continuous-improvement",
+    "title": "Service-review cadence",
+    "kind": "table",
+    "text": "A routine genomics service should review exceptions at more than one cadence: per run or batch, during routine operational review, during periodic quality review, after corrected or withdrawn results, and during service-planning review. Each review should connect failures, delays, corrections, user feedback, quality signals and recurrent risks to an owner and a decision.",
+    "claimIds": [
+      "claim-lifecycle-service-loop",
+      "claim-release-change-control-validation",
+      "claim-qc-annotation-version-control",
+      "claim-maturity-risk-reduction",
+      "claim-costing-recurrent-service-categories"
+    ],
+    "sourceIds": [
+      "phe-case-study",
+      "aphl-ngs-implementation-2016",
+      "who-national-genomic-surveillance-strategy-2023",
+      "who-genomic-data-sharing-platforms-2025",
+      "clinical-microbiology-implementation-2026",
+      "who-genomic-surveillance-progress-2023",
+      "who-genomics-costing-tool-manual-2024",
+      "pha4ge-infrastructure"
+    ],
+    "conditions": {
+      "audiences": [
+        "lab-lead",
+        "bioinformatician",
+        "data-manager",
+        "it-security",
+        "director",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "failure-handling",
+        "continuous-improvement",
+        "quality",
+        "reporting",
+        "metadata",
+        "sustainability"
+      ]
+    },
+    "order": 45,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta review cadence. It does not define formal KPIs, accreditation schedule, incident-classification thresholds or organism-specific review rules.",
+    "updatedAt": "2026-07-01"
   }
 ]

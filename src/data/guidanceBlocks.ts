@@ -1852,6 +1852,78 @@ export const guidanceBlocks: GuidanceBlock[] = [
           "ecdc-wgs-surveillance-2016",
         ],
       },
+      {
+        title: "Beta service-review cadence",
+        summary:
+          "Use this to turn failure logs into routine improvement. The cadence should be fitted to the local quality system and service volume.",
+        columns: ["Review cadence", "What to review", "Decision to make", "Beta caution"],
+        rows: [
+          {
+            cells: [
+              "Per run or batch",
+              "Failed samples, failed runs, QC overrides, missing metadata, workflow failures, repeated analysis and any result held from reporting.",
+              "Release, repeat, hold, report with limitation, correct metadata, escalate or open a corrective action.",
+              "A run can be technically complete while still not fit for the intended public-health report.",
+            ],
+            sourceIds: ["aphl-ngs-implementation-2016", "clinical-microbiology-implementation-2026", "phe-case-study"],
+          },
+          {
+            cells: [
+              "Weekly or routine operational review",
+              "Sample volume, turnaround, delayed reports, unresolved failures, repository-submission status, user questions and support bottlenecks.",
+              "Assign owners and due dates for problems that affect reporting, sharing or user trust.",
+              "PHE throughput is a service example, not a benchmark for other programmes.",
+            ],
+            sourceIds: ["phe-case-study", "who-national-genomic-surveillance-strategy-2023"],
+          },
+          {
+            cells: [
+              "Monthly or periodic quality review",
+              "Recurring failures, corrected reports, QC trend changes, metadata completeness, workflow incidents, access issues and repeated manual workarounds.",
+              "Decide whether SOPs, training, validation evidence, metadata capture, infrastructure or user communication need updating.",
+              "Dashboard counts should lead to owned corrective actions; counts alone do not improve the service.",
+            ],
+            sourceIds: [
+              "who-national-genomic-surveillance-strategy-2023",
+              "clinical-microbiology-implementation-2026",
+              "who-genomic-data-sharing-platforms-2025",
+            ],
+          },
+          {
+            cells: [
+              "After a corrected, superseded or withdrawn result",
+              "Original report or accession, reason for correction, downstream users affected, repository or platform state, notification route and reanalysis decision.",
+              "Decide who must be notified and whether the issue changes validation, reporting wording, workflow release, training or governance.",
+              "Corrections remain part of provenance; they should not be handled only in email or informal memory.",
+            ],
+            sourceIds: ["who-genomic-data-sharing-platforms-2025", "aphl-ngs-implementation-2016"],
+          },
+          {
+            cells: [
+              "Quarterly or service-planning review",
+              "Failure patterns, turnaround against use case, user feedback, recurrent cost pressure, staffing cover, storage pressure, EQA or proficiency-testing outcomes and open risks.",
+              "Decide which service risk should be reduced next and which investment, staffing, support or procurement action is needed.",
+              "This beta cadence is not a formal accreditation schedule or validated KPI framework.",
+            ],
+            sourceIds: [
+              "who-genomic-surveillance-progress-2023",
+              "who-genomics-costing-tool-manual-2024",
+              "clinical-microbiology-implementation-2026",
+              "pha4ge-infrastructure",
+            ],
+          },
+        ],
+        sourceIds: [
+          "phe-case-study",
+          "aphl-ngs-implementation-2016",
+          "who-national-genomic-surveillance-strategy-2023",
+          "who-genomic-data-sharing-platforms-2025",
+          "clinical-microbiology-implementation-2026",
+          "who-genomic-surveillance-progress-2023",
+          "who-genomics-costing-tool-manual-2024",
+          "pha4ge-infrastructure",
+        ],
+      },
     ],
     audiences: ["lab-lead", "bioinformatician", "data-manager", "it-security", "director"],
     implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
@@ -1864,6 +1936,9 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "aphl-ngs-implementation-2016",
       "clinical-microbiology-implementation-2026",
       "who-genomic-data-sharing-platforms-2025",
+      "who-genomic-surveillance-progress-2023",
+      "who-genomics-costing-tool-manual-2024",
+      "pha4ge-infrastructure",
     ],
     gaps: [
       "Detailed failure thresholds, service metrics, and review schedules need extraction from laboratory quality-management and accreditation sources.",
