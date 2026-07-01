@@ -881,6 +881,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "WHO's platform principles provide a practical starting point for metadata scope: sample information, sampling strategy, sequencing strategy, bioinformatics methods, attribution data, and optional fields for richer epidemic or One Health analysis. The same guidance links richer metadata to deeper inference, while noting that sensitive or privileged data may require stricter access policies.",
       "For beta, the guide can use five linked metadata buckets. Public minimum metadata are the fields that can normally travel with shared sequence data, such as collection date, location at an appropriate resolution, host or source, sample type, sampling strategy, sequencing strategy, bioinformatics method and attribution. Restricted contextual metadata are fields that improve interpretation but may need tighter access, such as clinical details, exposure information, hospitalisation, outcome, travel history, food-chain details, animal-health links or environmental context.",
       "The remaining three buckets keep the service auditable. Technical provenance records who collected the sample, who generated metadata, which laboratory processed and sequenced it, which bioinformatics unit analysed it, how the data entered a platform, and which identifiers link it to other resources. Repository accession fields record BioSample or equivalent sample accessions, raw-read accessions such as SRA or ENA records, consensus-genome accessions where used, upload dates, correction dates and platform status. Service-management fields record internal workflow dates and identifiers, including extraction date, sequencing run, QC status, analysis submission and retrieval dates, report date, repository-submission status, repeat-analysis events and follow-up owner.",
+      "Do not leave these buckets as a diagram or data dictionary that nobody owns. For beta, maintain a metadata governance register that records each identifier or field group, the system of record, allowed public or restricted use, correction route, accession or sharing status, and review owner. This turns metadata from a submission chore into a managed part of the service.",
       "Poor linkage reduces the value of analysis even when sequencing and bioinformatics are technically sound. It can make reports harder to interpret, weaken outbreak investigation, complicate reanalysis, break repository submission, and make it harder to audit who generated, saw, changed, or reused data.",
       "ECDC and AusPathoGen add the implementation point: WGS becomes more useful when genomic analysis is integrated into surveillance and epidemiological interpretation, not held as a separate laboratory artifact. That means the metadata model should be designed with the people who will investigate outbreaks, interpret surveillance signals, or act on AMR and healthcare-associated infection information.",
     ],
@@ -899,8 +900,14 @@ export const guidanceBlocks: GuidanceBlock[] = [
         "aphl-ngs-implementation-2016",
         "who-sars-cov-2-sequencing-implementation-2021",
       ],
-      6: ["who-genomic-data-sharing-platforms-2025", "cdc-nejm-2019", "phe-case-study"],
-      7: ["ecdc-wgs-surveillance-2016", "auspathogen-implementation-2025"],
+      6: [
+        "who-genomic-data-sharing-platforms-2025",
+        "ecdc-wgs-surveillance-2016",
+        "aphl-ngs-implementation-2016",
+        "who-pathogen-genome-data-sharing-2022",
+      ],
+      7: ["who-genomic-data-sharing-platforms-2025", "cdc-nejm-2019", "phe-case-study"],
+      8: ["ecdc-wgs-surveillance-2016", "auspathogen-implementation-2025"],
     },
     bodyCitationAnchors: {
       2: [
@@ -929,6 +936,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "Minimum platform questions: What metadata are required? What fields are optional but pre-set? Are provenance and attribution recorded? Are persistent identifiers or accessions issued? Can the platform exchange data through documented APIs or standards? How are restricted metadata handled?",
       "Beta metadata buckets: public minimum metadata; restricted contextual metadata; technical provenance; repository accession fields; service-management fields. Do not require all buckets to live in one system, but require stable identifiers that join them.",
       "Beta accession fields: local sample or isolate identifier, submitter identifier, repository sample accession, raw-read accession, consensus-genome accession if used, platform project or workspace identifier, upload date, correction or replacement date, and status of public, controlled or internal release.",
+      "Beta governance-register fields: field group, example fields, system of record, public/restricted/internal status, owner, permitted use, correction route, accession or sharing status, review frequency, and unresolved source gap.",
     ],
     tables: [
       {
@@ -1017,6 +1025,83 @@ export const guidanceBlocks: GuidanceBlock[] = [
           "mgen-polymicrobial-mdr-critical-care-2021",
         ],
       },
+      {
+        title: "Beta metadata governance register",
+        summary:
+          "Use this as a service-management register. It is not a repository schema; it records who owns each field group and how it can be used, corrected and shared.",
+        columns: ["Register item", "What to record", "Operational question", "Beta caution"],
+        rows: [
+          {
+            cells: [
+              "Identifier lineage",
+              "Local sample or isolate ID, submitter ID, LIMS record, sequencing run, workflow run, report ID, repository sample accession and raw-read or consensus accession where used.",
+              "Can the service trace a report, correction, sharing event or reanalysis back to the same sample or isolate?",
+              "Do not rely on file names as the only linkage between systems.",
+            ],
+            sourceIds: [
+              "who-genomic-data-sharing-platforms-2025",
+              "aphl-ngs-implementation-2016",
+              "ecdc-wgs-surveillance-2016",
+            ],
+          },
+          {
+            cells: [
+              "System of record",
+              "Which system owns each field group: LIMS, sample system, sequencing run sheet, workflow system, reporting system, repository account, national platform or spreadsheet during pilot.",
+              "Where should staff correct the record, and which systems should inherit that correction?",
+              "A pilot spreadsheet may be acceptable temporarily, but the owner and migration route should be explicit.",
+            ],
+            sourceIds: ["phe-case-study", "aphl-ngs-implementation-2016", "who-genomic-data-sharing-platforms-2025"],
+          },
+          {
+            cells: [
+              "Public, restricted and internal use",
+              "Which fields can be public, which require competent-authority or controlled access, and which should remain internal service-management data.",
+              "Can the programme share useful non-sensitive metadata without exposing sensitive clinical, epidemiological or operational details?",
+              "The beta guide can separate access categories, but local law, ethics and data-governance review must decide permissions.",
+            ],
+            sourceIds: [
+              "ecdc-wgs-surveillance-2016",
+              "who-pathogen-genome-data-sharing-2022",
+              "who-genomic-data-sharing-platforms-2025",
+            ],
+          },
+          {
+            cells: [
+              "Correction and withdrawal route",
+              "Who can correct sample context, report interpretation, repository accessions, platform status or sharing state; how recipients are notified; and whether previous outputs are retained.",
+              "What happens when metadata are wrong, an accession is replaced, or a report changes after more data arrive?",
+              "Correction routes need local SOPs and repository/platform rules before they are treated as final.",
+            ],
+            sourceIds: [
+              "who-genomic-data-sharing-platforms-2025",
+              "aphl-ngs-implementation-2016",
+              "who-pathogen-genome-data-sharing-2022",
+            ],
+          },
+          {
+            cells: [
+              "Review owner and cadence",
+              "Who reviews missing fields, accession failures, restricted-field use, delayed corrections, controlled-vocabulary problems and unresolved field-definition gaps.",
+              "Is metadata quality being improved as part of routine service review?",
+              "The current guide does not yet define formal KPIs or organism-specific completeness thresholds.",
+            ],
+            sourceIds: [
+              "who-national-genomic-surveillance-strategy-2023",
+              "who-genomic-data-sharing-platforms-2025",
+              "ecdc-wgs-surveillance-2016",
+            ],
+          },
+        ],
+        sourceIds: [
+          "who-genomic-data-sharing-platforms-2025",
+          "who-pathogen-genome-data-sharing-2022",
+          "who-national-genomic-surveillance-strategy-2023",
+          "ecdc-wgs-surveillance-2016",
+          "aphl-ngs-implementation-2016",
+          "phe-case-study",
+        ],
+      },
     ],
     audiences: ["data-manager", "bioinformatician", "lab-lead", "it-security"],
     implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
@@ -1038,9 +1123,10 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "mgen-discordant-amr-predictions-2020",
       "mgen-centre-specific-typing-ipc-2021",
       "mgen-polymicrobial-mdr-critical-care-2021",
+      "who-pathogen-genome-data-sharing-2022",
     ],
     gaps: [
-      "Current INSDC/NCBI, GISAID, pathogen-specific repository templates, controlled vocabularies, and jurisdiction-specific sensitive-field rules still need direct extraction before the guide can prescribe exact field names or required/optional status.",
+      "Current INSDC/NCBI, GISAID, pathogen-specific repository templates, controlled vocabularies, jurisdiction-specific sensitive-field rules, and formal metadata-quality KPIs still need direct extraction before the guide can prescribe exact field names, required/optional status, or completeness thresholds.",
     ],
   },
   {

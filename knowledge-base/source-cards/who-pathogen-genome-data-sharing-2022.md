@@ -31,8 +31,9 @@ This is a priority source for the guide's data-sharing, governance, repository, 
 ## Current Use In App
 
 - Resource finder candidate source.
-- Not yet cited in guidance prose.
+- Cited in data-sharing guidance prose.
+- Supports the beta metadata governance register.
 
 ## Gaps
 
-- Needs detailed extraction of the principles and translation into a practical data-sharing decision framework.
+- Needs detailed extraction of the principles before the guide presents jurisdiction-specific data-sharing decisions, benefit-sharing rules, or legal/ethical review routes.

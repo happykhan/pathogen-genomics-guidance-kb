@@ -16,6 +16,8 @@ The PHE case study shows a service example. Sample information was collected in 
 
 A future metadata chapter should turn this into a concrete model. At minimum, a programme needs to track sample or isolate identifier, sequencing run, raw data, workflow run, QC outputs, analysis result, report, and any repository accession or sharing event. The dynamic guide now has a beta lineage model and field-priority table that separates public minimum metadata, restricted contextual metadata, technical provenance, repository accessions, and service-management fields.
 
+The dynamic guide also now includes a beta metadata governance register. This is a practical operating tool, not a repository schema. It asks the programme to name the system of record for each field group, the public/restricted/internal status of the fields, the owner, the correction route, the accession or sharing status, the review cadence, and the unresolved schema gap. This keeps metadata quality visible during routine service review while exact repository templates and organism-specific controlled vocabularies are still being extracted.
+
 The main missing source area is now more specific: exact repository and organism schemas, controlled vocabularies, required/optional/public/restricted field status, and cross-system exchange rules. WHO, ECDC, APHL, UKHSA, Australian CDGN, INSDC/NCBI, ENA, GISAID, GA4GH, and national platform sources are likely needed here.
 
 ## Source Basis
@@ -25,6 +27,7 @@ The main missing source area is now more specific: exact repository and organism
 - `knowledge-base/source-cards/cdc-pathogen-genomics-public-health-2019.md`
 - `knowledge-base/source-cards/phe-implementing-pathogen-genomics-case-study.md`
 - `knowledge-base/source-cards/who-genomic-data-sharing-platforms-2025.md`
+- `knowledge-base/source-cards/who-pathogen-genome-data-sharing-2022.md`
 - `knowledge-base/source-cards/who-sars-cov-2-sequencing-implementation-2021.md`
 - `knowledge-base/source-cards/ecdc-wgs-public-health-surveillance-2016.md`
 - `knowledge-base/source-cards/aphl-ngs-implementation-2016.md`
@@ -38,7 +41,7 @@ The main missing source area is now more specific: exact repository and organism
 ## Gaps
 
 - The beta identifier-lineage model still needs conversion into a formal field dictionary with required, optional, public, restricted, and system-generated fields by organism and use case.
-- Current repository templates, controlled vocabularies, and API/interoperability rules still need direct extraction.
+- Current repository templates, controlled vocabularies, API/interoperability rules, and formal metadata-quality KPIs still need direct extraction.
 - Sensitive-field handling requires local legal, ethical, public-health, and data-governance review.
 
 ## Status
