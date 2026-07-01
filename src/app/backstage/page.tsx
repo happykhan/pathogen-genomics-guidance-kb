@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { CheckCircle2, CircleDashed, FileText, GitBranch, Search, TriangleAlert } from "lucide-react";
 import {
+  evidenceItems,
   evidenceClaimCards,
   getEditorialCoverage,
   sectionSynthesisBriefs,
@@ -40,6 +41,7 @@ export default function BackstagePage() {
     fragmentsBySection.set(fragment.sectionId, [...existing, fragment].sort((a, b) => a.order - b.order));
   });
   const claimsById = new Map(evidenceClaimCards.map((claim) => [claim.id, claim]));
+  const evidenceById = new Map(evidenceItems.map((item) => [item.id, item]));
 
   return (
     <div className="stack-page backstage-page">
@@ -94,6 +96,10 @@ export default function BackstagePage() {
               <span>Outline sections</span>
             </div>
             <div>
+              <strong>{coverage.evidenceItems}</strong>
+              <span>Evidence items</span>
+            </div>
+            <div>
               <strong>{coverage.claimCards}</strong>
               <span>Claim cards</span>
             </div>
@@ -117,6 +123,11 @@ export default function BackstagePage() {
           {coverage.missingClaimIds.length ? (
             <p className="backstage-warning">
               <TriangleAlert size={16} /> Missing claim IDs: {coverage.missingClaimIds.join(", ")}
+            </p>
+          ) : null}
+          {coverage.missingEvidenceItemIds.length ? (
+            <p className="backstage-warning">
+              <TriangleAlert size={16} /> Missing evidence item IDs: {coverage.missingEvidenceItemIds.join(", ")}
             </p>
           ) : null}
         </div>
@@ -204,9 +215,28 @@ export default function BackstagePage() {
                               const claim = claimsById.get(claimId);
                               return (
                                 <li key={claimId}>
-                                  {claim?.extractedText ? (
+                                  {claim?.evidenceItemIds?.map((itemId) => {
+                                    const item = evidenceById.get(itemId);
+                                    return (
+                                      <span className="evidence-item" key={itemId}>
+                                        <strong>Source evidence item:</strong>{" "}
+                                        {item ? (
+                                          <>
+                                            {item.passageSummary}
+                                            {item.excerpt ? <em> Short excerpt: "{item.excerpt}"</em> : null}
+                                            <small>
+                                              {item.evidenceType}; {item.sourceLocator}
+                                            </small>
+                                          </>
+                                        ) : (
+                                          `Missing evidence item: ${itemId}`
+                                        )}
+                                      </span>
+                                    );
+                                  })}
+                                  {!claim?.evidenceItemIds?.length && claim?.extractedText ? (
                                     <span>
-                                      <strong>Source evidence note / short excerpt:</strong> {claim.extractedText}
+                                      <strong>Legacy source evidence note / short excerpt:</strong> {claim.extractedText}
                                     </span>
                                   ) : null}
                                   <span>
@@ -260,11 +290,27 @@ export default function BackstagePage() {
                 <p>
                   <strong>Extracted claim:</strong> {claim.claim}
                 </p>
-                {claim.extractedText ? (
-                  <p className="muted">
-                    <strong>Source evidence note / short excerpt:</strong> {claim.extractedText}
+                <div className="backstage-evidence compact">
+                  <p>
+                    <strong>Evidence items behind this claim:</strong>
                   </p>
-                ) : null}
+                  <ul>
+                    {claim.evidenceItemIds.map((itemId) => {
+                      const item = evidenceById.get(itemId);
+                      return (
+                        <li key={itemId}>
+                          <span>{item?.passageSummary ?? `Missing evidence item: ${itemId}`}</span>
+                          {item?.excerpt ? <span>Short excerpt: "{item.excerpt}"</span> : null}
+                          {item ? (
+                            <small>
+                              {item.evidenceType}; {item.sourceLocator}
+                            </small>
+                          ) : null}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
                 <p className="muted">
                   <strong>Source:</strong> {sourceLabel(claim.sourceId)}
                 </p>

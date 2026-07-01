@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { defaultProfile, defaultProfileVersion } from "../../../data/defaultProfile";
 import {
+  evidenceItems,
   evidenceClaimCards,
   getEditorialCoverage,
   sectionSynthesisBriefs,
@@ -19,6 +20,7 @@ export function GET() {
     defaultProfile,
     whitepaperOutlineVersion,
     whitepaperOutline,
+    evidenceItems,
     evidenceClaimCards,
     sectionSynthesisBriefs,
     whitepaperFragments,

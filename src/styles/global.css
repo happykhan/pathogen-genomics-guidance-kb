@@ -1001,6 +1001,11 @@ select {
   padding: 12px;
 }
 
+.backstage-evidence.compact {
+  margin-top: 10px;
+  padding: 10px;
+}
+
 .backstage-evidence p {
   margin: 0 0 8px;
   color: var(--muted);
@@ -1016,6 +1021,19 @@ select {
 .backstage-evidence li span,
 .backstage-evidence li small {
   display: block;
+}
+
+.backstage-evidence .evidence-item {
+  margin: 0 0 6px;
+  border-left: 2px solid #cbd5e1;
+  padding-left: 8px;
+}
+
+.backstage-evidence .evidence-item em {
+  display: block;
+  margin-top: 3px;
+  color: #334155;
+  font-style: normal;
 }
 
 .backstage-evidence li small {

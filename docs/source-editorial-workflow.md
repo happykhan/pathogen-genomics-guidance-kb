@@ -11,7 +11,7 @@ The beta authoring path is moving from direct chapter editing toward a compiled 
 ```text
 source document
   -> source card
-  -> source evidence note / short excerpt
+  -> evidence item
   -> extracted claim card
   -> section synthesis brief
   -> draft fragments
@@ -26,8 +26,8 @@ Example: validation before replacing established methods.
 | Step | Repo artifact | What it records |
 | --- | --- | --- |
 | Source card | `knowledge-base/source-cards/phe-implementing-pathogen-genomics-case-study.md` | Provenance, relevance, extracted validation facts, and remaining limits. |
-| Source evidence note / short excerpt | `editorial/claim-cards/*.json` / `extractedText` | The relevant evidence pointer from the original source: page, section, table, figure, short allowed excerpt, or concise passage note. Avoid long copied passages. |
-| Claim cards | `editorial/claim-cards/*.json` / `claim` | Small extracted interpretations of what a source supports, with source IDs, source locator, tags, candidate sections, limitations, and review state. Claim cards are not verbatim source text. |
+| Evidence item | `editorial/evidence-items/*.json` | The relevant evidence pointer from the original source: page, section, table, figure, short allowed excerpt, or concise passage note. Avoid long copied passages. |
+| Claim cards | `editorial/claim-cards/*.json` / `claim` | Small extracted interpretations of what one or more evidence items support, with source IDs, tags, candidate sections, limitations, and review state. Claim cards are not verbatim source text. |
 | Section synthesis brief | `editorial/section-briefs/*.json` | Editorial instructions for a whitepaper section: purpose, must-cover points, do-not-claim rules, preferred claims, conditionals, figures, and gaps. |
 | Draft fragments | `editorial/fragments/*.json` | Paragraphs, boxes, tables, figures, or gap fragments generated from approved claim cards and section briefs. |
 | Reviewed fragments | `editorial/fragments/*.json` with `reviewStatus: "reviewed"` | Content approved for later public compilation into the dynamic whitepaper. |
@@ -59,12 +59,13 @@ Editorial object statuses:
 2. Add or update extracted notes under `knowledge-base/extracted-notes/` where useful.
 3. Register the source in `src/data/sources.ts`.
 4. Add a resource record in `src/data/resources.ts` with public URL, DOI, PDF URL where available, source-card path, topics, audiences, organisms, and extraction state.
-5. Create claim cards under `editorial/claim-cards/` for specific useful claims. Keep each card small enough that it can be mapped to a paragraph, figure, table, checklist item, or example box.
-6. Update relevant section briefs under `editorial/section-briefs/`.
-7. Create or regenerate draft fragments under `editorial/fragments/`.
-8. Review fragments locally with `npm run editorial:review`.
-9. Use source IDs in public guidance only where the prose is directly supported.
-10. Run `npm run content:check`.
+5. Create evidence items under `editorial/evidence-items/` for specific useful passages, figures, tables, or source-card summaries.
+6. Create claim cards under `editorial/claim-cards/` for specific useful claims, each linked to one or more evidence items. Keep each card small enough that it can be mapped to a paragraph, figure, table, checklist item, or example box.
+7. Update relevant section briefs under `editorial/section-briefs/`.
+8. Create or regenerate draft fragments under `editorial/fragments/`.
+9. Review fragments locally with `npm run editorial:review`.
+10. Use source IDs in public guidance only where the prose is directly supported.
+11. Run `npm run content:check`.
 
 ## Claim Cards Versus Source Text
 
@@ -74,7 +75,7 @@ Use this distinction:
 
 ```text
 original source text or page/table/figure pointer
-  -> source evidence note / short excerpt
+  -> evidence item
   -> extracted claim card
   -> draft whitepaper fragment
   -> reviewed public whitepaper prose
@@ -115,6 +116,8 @@ The local review tool writes only to `editorial/fragments/*.json`. It is intende
 - Every cited source has a source-card path.
 - Every resource marked `extracted` has a source card.
 - Every claim-card source ID exists.
+- Every evidence-item source ID exists.
+- Every claim-card evidence item ID exists.
 - Every fragment claim ID exists.
 - Every fragment source ID exists.
 - Every brief and fragment points to a valid whitepaper outline section.

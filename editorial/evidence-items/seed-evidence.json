@@ -1,0 +1,83 @@
+[
+  {
+    "id": "evidence-who-2022-strategy-public-health-integration",
+    "sourceId": "who-genomic-surveillance-2022",
+    "sourceLocator": "knowledge-base/source-cards/who-global-genomic-surveillance-strategy-2022.md",
+    "evidenceType": "source-card-summary",
+    "passageSummary": "The strategy frames genomic surveillance as a capability for epidemic and pandemic preparedness, detection, response, monitoring pathogen evolution, data sharing, connectivity, workforce, access, and emergency readiness.",
+    "tags": ["value-case", "preparedness", "surveillance", "decision-use"],
+    "limitations": "High-level strategy source; not an operational implementation runbook.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-phe-colindale-service-chain",
+    "sourceId": "phe-case-study",
+    "sourceLocator": "knowledge-base/source-cards/phe-implementing-pathogen-genomics-case-study.md; extracted text section 2, PHE Colindale WGS service",
+    "evidenceType": "short-excerpt",
+    "excerpt": "extracted bacterial DNA is received, sequencing is performed and short read sequences delivered",
+    "passageSummary": "The PHE case study describes a centralised high-throughput WGS service where extracted bacterial DNA is received, sequencing is performed, and sequence data are delivered to the requesting reference laboratory for further analysis.",
+    "tags": ["service-chain", "sequencing", "data-lifecycle", "implementation"],
+    "limitations": "Specific to PHE's centralized bacterial WGS service model.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-phe-implementation-scope",
+    "sourceId": "phe-case-study",
+    "sourceLocator": "knowledge-base/source-cards/phe-implementing-pathogen-genomics-case-study.md",
+    "evidenceType": "source-card-summary",
+    "passageSummary": "The source card records PHE implementation details across capital planning, laboratory-space changes, sequencing and robotics capacity, IT infrastructure, LIMS integration, bioinformatics pipelines, validation, accreditation, training, and service-user engagement.",
+    "tags": ["implementation", "lims", "validation", "workforce", "reporting", "infrastructure"],
+    "limitations": "UK/PHE-specific implementation context; should be adapted carefully.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-pha4ge-five-infrastructure-questions",
+    "sourceId": "pha4ge-infrastructure",
+    "sourceLocator": "knowledge-base/source-cards/pha4ge-infrastructure.md",
+    "evidenceType": "source-card-summary",
+    "passageSummary": "The PHA4GE source pack frames compute infrastructure around five questions: what infrastructure is responsible for, how analysis is run, where analysis is run, how data flow, and who has access.",
+    "tags": ["infrastructure", "workflow", "data-flow", "access", "responsibility-model"],
+    "limitations": "Infrastructure-heavy source; limited coverage of broader governance, repository policy, and economics.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-who-2023-value-chain",
+    "sourceId": "who-national-genomic-surveillance-strategy-2023",
+    "sourceLocator": "knowledge-base/source-cards/who-national-genomic-surveillance-strategy-2023.md; extracted text value-chain figure around lines 300-326",
+    "evidenceType": "figure",
+    "passageSummary": "WHO's value-chain figure links priority genomic surveillance use cases to sample and data collection, genetic material extraction, sequencing, bioinformatics analyses, public-health analyses, interpretation with multisource data, data publication, result sharing, and public-health use.",
+    "tags": ["strategy", "value-chain", "data-lifecycle", "metadata", "analysis", "sharing"],
+    "limitations": "Strategic value-chain figure; does not specify detailed operational thresholds or repository fields.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-who-2023-data-management",
+    "sourceId": "who-national-genomic-surveillance-strategy-2023",
+    "sourceLocator": "knowledge-base/source-cards/who-national-genomic-surveillance-strategy-2023.md; extracted text data management section around lines 515-566",
+    "evidenceType": "passage-note",
+    "passageSummary": "WHO describes data management as a key element for genomic surveillance and includes storage, backup, retention, data quality, metadata completeness, analysis and interpretation, privacy/security, and reporting for public-health action.",
+    "tags": ["data-management", "metadata", "storage", "quality", "privacy", "reporting"],
+    "limitations": "Supports planning categories, not a full local data architecture.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-price-economic-review-context",
+    "sourceId": "wgs-economic-review",
+    "sourceLocator": "knowledge-base/source-cards/wgs-economic-evaluation-review.md",
+    "evidenceType": "source-card-summary",
+    "passageSummary": "The source card summarises Price et al.'s finding that included WGS surveillance studies supported WGS on economic grounds, while evidence was heterogeneous and limited for low- and middle-income country implementation contexts.",
+    "tags": ["economics", "cost-effectiveness", "evidence-gap", "value-case"],
+    "limitations": "Does not support a universal return-on-investment claim.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-mgen-bioinformatics-implementation",
+    "sourceId": "mgen-accelerating-bioinformatics-implementation-2023",
+    "sourceLocator": "knowledge-base/source-cards/microbial-genomics-implementation-collection.md",
+    "evidenceType": "source-card-summary",
+    "passageSummary": "The Microbial Genomics implementation collection includes a bioinformatics implementation paper emphasizing standardized, reproducible, validated, auditable, scalable, portable, and secure analysis in public-health laboratory contexts.",
+    "tags": ["bioinformatics", "workflow", "validation", "audit", "security", "portability"],
+    "limitations": "Needs conversion into concrete implementation checklists before being used as operational instructions.",
+    "reviewStatus": "reviewed"
+  }
+]

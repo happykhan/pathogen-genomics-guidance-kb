@@ -37,10 +37,23 @@ export type WhitepaperOutlineSection = {
   publicByDefault: boolean;
 };
 
+export type EvidenceItem = {
+  id: string;
+  sourceId: string;
+  sourceLocator: string;
+  evidenceType: "short-excerpt" | "passage-note" | "figure" | "table" | "source-card-summary";
+  excerpt?: string;
+  passageSummary: string;
+  tags: string[];
+  limitations?: string;
+  reviewStatus: EditorialReviewStatus;
+};
+
 export type EvidenceClaimCard = {
   id: string;
   sourceId: string;
   sourceLocator: string;
+  evidenceItemIds: string[];
   claim: string;
   extractedText?: string;
   notes?: string;

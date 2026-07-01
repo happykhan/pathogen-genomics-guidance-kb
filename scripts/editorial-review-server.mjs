@@ -7,6 +7,7 @@ const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), ".."
 const host = "127.0.0.1";
 const port = Number(process.env.EDITORIAL_REVIEW_PORT ?? 5177);
 const fragmentDir = path.join(repoRoot, "editorial/fragments");
+const evidenceDir = path.join(repoRoot, "editorial/evidence-items");
 const claimDir = path.join(repoRoot, "editorial/claim-cards");
 const briefDir = path.join(repoRoot, "editorial/section-briefs");
 
@@ -26,6 +27,7 @@ function readJsonFiles(dir) {
 
 function loadEditorial() {
   return {
+    evidenceItems: readJsonFiles(evidenceDir),
     fragments: readJsonFiles(fragmentDir).sort((a, b) => {
       if (a.sectionId === b.sectionId) return (a.order ?? 0) - (b.order ?? 0);
       return String(a.sectionId).localeCompare(String(b.sectionId));
@@ -85,7 +87,8 @@ function updateFragment(fragmentId, patch) {
 }
 
 function renderPage() {
-  const { fragments, claims, briefs } = loadEditorial();
+  const { evidenceItems, fragments, claims, briefs } = loadEditorial();
+  const evidenceById = new Map(evidenceItems.map((item) => [item.id, item]));
   const claimsById = new Map(claims.map((claim) => [claim.id, claim]));
   const briefSections = new Set(briefs.map((brief) => brief.sectionId));
   const counts = fragments.reduce(
@@ -102,12 +105,19 @@ function renderPage() {
         .map((claimId) => {
           const claim = claimsById.get(claimId);
           if (!claim) return `<li><span>Missing claim: ${escapeHtml(claimId)}</span></li>`;
+          const evidenceDetails = (claim.evidenceItemIds ?? [])
+            .map((itemId) => {
+              const item = evidenceById.get(itemId);
+              if (!item) return `<span class="evidence-item">Missing evidence item: ${escapeHtml(itemId)}</span>`;
+              return `<span class="evidence-item">
+                <strong>Source evidence item:</strong> ${escapeHtml(item.passageSummary)}
+                ${item.excerpt ? `<em>Short excerpt: "${escapeHtml(item.excerpt)}"</em>` : ""}
+                <small>${escapeHtml(item.evidenceType)}; ${escapeHtml(item.sourceLocator)}</small>
+              </span>`;
+            })
+            .join("");
           return `<li>
-            ${
-              claim.extractedText
-                ? `<span><strong>Source evidence note / short excerpt:</strong> ${escapeHtml(claim.extractedText)}</span>`
-                : ""
-            }
+            ${evidenceDetails}
             <span><strong>Extracted claim, not verbatim source text:</strong> ${escapeHtml(claim.claim)}</span>
             <small>Source pointer: ${escapeHtml(claim.sourceLocator)}; source ID: ${escapeHtml(claim.sourceId)}</small>
           </li>`;
@@ -197,6 +207,8 @@ function renderPage() {
       .evidence p { margin: 0 0 8px; color: var(--muted); }
       .evidence ul { display: grid; gap: 8px; margin: 0; padding-left: 1.15rem; }
       .evidence li span, .evidence li small { display: block; }
+      .evidence .evidence-item { margin: 0 0 6px; border-left: 2px solid #cbd5e1; padding-left: 8px; }
+      .evidence .evidence-item em { display: block; margin-top: 3px; color: #334155; font-style: normal; }
       .evidence li small {
         margin-top: 3px; color: var(--muted); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
         font-size: 0.78rem; overflow-wrap: anywhere;
@@ -228,6 +240,7 @@ function renderPage() {
         <p>This tool binds to 127.0.0.1 and updates files under <code>editorial/fragments/</code>. The main paragraph is draft whitepaper text. Under it, source evidence notes point back to the original documents, and extracted claims show our source-backed interpretation. Use the public <code>/backstage</code> page for read-only deployed debugging.</p>
         <div class="metrics">
           <span class="pill">${fragments.length} fragments</span>
+          <span class="pill">${evidenceItems.length} evidence items</span>
           <span class="pill">${counts.draft ?? 0} draft</span>
           <span class="pill">${counts.reviewed ?? 0} reviewed</span>
           <span class="pill">${counts.gap ?? 0} gap</span>

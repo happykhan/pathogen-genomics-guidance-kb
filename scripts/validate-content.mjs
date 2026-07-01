@@ -163,9 +163,11 @@ resources.forEach((resource) => {
   }
 });
 
+const evidenceItems = readJsonRecords("editorial/evidence-items");
 const claimCards = readJsonRecords("editorial/claim-cards");
 const sectionBriefs = readJsonRecords("editorial/section-briefs");
 const fragments = readJsonRecords("editorial/fragments");
+const evidenceItemIds = new Set();
 const claimIds = new Set();
 const fragmentIds = new Set();
 
@@ -182,11 +184,43 @@ whitepaperOutline.forEach((section) => {
   }
 });
 
+evidenceItems.forEach((item) => {
+  assertNoLocalPaths(item, `Evidence item ${item.id ?? "(missing id)"}`);
+
+  if (!item.id || !item.sourceId || !item.sourceLocator || !item.evidenceType || !item.passageSummary) {
+    errors.push(
+      `Evidence item ${item.id ?? "(missing id)"} must include id, sourceId, sourceLocator, evidenceType, and passageSummary.`,
+    );
+    return;
+  }
+
+  if (evidenceItemIds.has(item.id)) {
+    errors.push(`Evidence item ID is duplicated: ${item.id}`);
+  }
+  evidenceItemIds.add(item.id);
+
+  if (!sourceIds.has(item.sourceId)) {
+    errors.push(`Evidence item ${item.id} references unknown source ID: ${item.sourceId}`);
+  }
+
+  if (!validEditorialStatuses.has(item.reviewStatus)) {
+    errors.push(`Evidence item ${item.id} has invalid reviewStatus: ${item.reviewStatus}`);
+  }
+});
+
 claimCards.forEach((claim) => {
   assertNoLocalPaths(claim, `Claim card ${claim.id ?? "(missing id)"}`);
 
-  if (!claim.id || !claim.sourceId || !claim.claim || !Array.isArray(claim.candidateSectionIds)) {
-    errors.push(`Claim card ${claim.id ?? "(missing id)"} must include id, sourceId, claim, and candidateSectionIds.`);
+  if (
+    !claim.id ||
+    !claim.sourceId ||
+    !claim.claim ||
+    !Array.isArray(claim.evidenceItemIds) ||
+    !Array.isArray(claim.candidateSectionIds)
+  ) {
+    errors.push(
+      `Claim card ${claim.id ?? "(missing id)"} must include id, sourceId, claim, evidenceItemIds, and candidateSectionIds.`,
+    );
     return;
   }
 
@@ -202,6 +236,16 @@ claimCards.forEach((claim) => {
   if (!validEditorialStatuses.has(claim.reviewStatus)) {
     errors.push(`Claim card ${claim.id} has invalid reviewStatus: ${claim.reviewStatus}`);
   }
+
+  if (!claim.evidenceItemIds.length) {
+    errors.push(`Claim card ${claim.id} must include at least one evidenceItemId.`);
+  }
+
+  claim.evidenceItemIds.forEach((itemId) => {
+    if (!evidenceItemIds.has(itemId)) {
+      errors.push(`Claim card ${claim.id} references unknown evidence item ID: ${itemId}`);
+    }
+  });
 
   claim.candidateSectionIds.forEach((sectionId) => {
     if (!outlineSectionIds.has(sectionId)) {
@@ -282,5 +326,5 @@ if (errors.length) {
 }
 
 console.log(
-  `Content validation passed: ${guidanceBlocks.length} guidance blocks, ${resources.length} resources, ${sourceIds.size} source records, ${claimCards.length} claim cards, ${sectionBriefs.length} briefs, and ${fragments.length} fragments checked.`,
+  `Content validation passed: ${guidanceBlocks.length} guidance blocks, ${resources.length} resources, ${sourceIds.size} source records, ${evidenceItems.length} evidence items, ${claimCards.length} claim cards, ${sectionBriefs.length} briefs, and ${fragments.length} fragments checked.`,
 );
