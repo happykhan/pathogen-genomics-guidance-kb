@@ -2905,6 +2905,84 @@ export const guidanceBlocks: GuidanceBlock[] = [
           "australia-microbial-genomics-framework-2025",
         ],
       },
+      {
+        title: "Repository submission handoff record",
+        summary:
+          "Use this record when sequence data move from the local service into a public repository, national database, controlled platform or partner workspace.",
+        columns: ["Record element", "What to capture", "Why it matters", "Beta caution"],
+        rows: [
+          {
+            cells: [
+              "Submission purpose and route",
+              "Public-health purpose, repository or platform, submitter, submission date, intended users, and whether the route is public, controlled, national, operational or partner-only.",
+              "A submission for public comparison, national surveillance, outbreak collaboration or internal operations has different metadata and access expectations.",
+              "The beta guide does not choose the legally or ethically appropriate route for a jurisdiction.",
+            ],
+            sourceIds: [
+              "who-pathogen-genome-data-sharing-2022",
+              "who-national-genomic-surveillance-strategy-2023",
+              "who-genomic-data-sharing-platforms-2025",
+            ],
+          },
+          {
+            cells: [
+              "Data package",
+              "Data type submitted, such as raw reads, consensus genome, partial genome, assembly, analysis output, reportable result, QC annotation, or linked metadata record.",
+              "Repositories and platforms accept different data types, and downstream users need to know whether the record is complete, partial, corrected or superseded.",
+              "Raw-read upload may be difficult where connectivity, storage or human-read filtering capacity is limited.",
+            ],
+            sourceIds: ["who-sars-cov-2-sequencing-implementation-2021", "who-genomic-data-sharing-platforms-2025"],
+          },
+          {
+            cells: [
+              "Public and restricted metadata",
+              "Public minimum metadata, withheld sensitive fields, restricted contextual metadata, attribution, sampling strategy, sequencing strategy and bioinformatics method.",
+              "Sequence data are hard to interpret without metadata, but some metadata may require restricted access or local approval before release.",
+              "Exact required fields and controlled vocabularies remain repository- and organism-specific.",
+            ],
+            sourceIds: [
+              "who-genomic-data-sharing-platforms-2025",
+              "ecdc-wgs-surveillance-2016",
+              "who-sars-cov-2-sequencing-implementation-2021",
+            ],
+          },
+          {
+            cells: [
+              "Identifier and accession chain",
+              "Local sample or isolate ID, sequencing run ID, repository project ID, BioSample or equivalent sample accession, raw-read accession, consensus accession if used, and dates for upload or replacement.",
+              "The local service needs to connect repository records back to reports, corrections, later reanalysis and stakeholder questions.",
+              "APHL gives an NCBI-oriented example; it is not a universal accession schema.",
+            ],
+            sourceIds: ["aphl-ngs-implementation-2016", "who-genomic-data-sharing-platforms-2025"],
+          },
+          {
+            cells: [
+              "Quality and release status",
+              "QC method, QC result, completeness, known limitations, contamination or filtering status, release decision, and whether the record is preliminary, final, corrected, replaced or withdrawn.",
+              "Low-quality or incomplete data may still be useful if limitations and quality annotations are visible to users.",
+              "Local reporting rules should decide when partial or preliminary records can support public-health action.",
+            ],
+            sourceIds: ["who-genomic-data-sharing-platforms-2025", "who-sars-cov-2-sequencing-implementation-2021"],
+          },
+          {
+            cells: [
+              "Terms, correction and stewardship",
+              "Licence or terms of use, attribution, contributor contact, correction route, replacement route, withdrawal route, user-support contact and accountable owner.",
+              "Submission creates an ongoing stewardship obligation when data are corrected, questioned, reused or linked to new evidence.",
+              "Local legal, privacy, data-residency, benefit-sharing and repository-specific review remains required.",
+            ],
+            sourceIds: ["who-pathogen-genome-data-sharing-2022", "who-genomic-data-sharing-platforms-2025"],
+          },
+        ],
+        sourceIds: [
+          "who-pathogen-genome-data-sharing-2022",
+          "who-national-genomic-surveillance-strategy-2023",
+          "who-genomic-data-sharing-platforms-2025",
+          "ecdc-wgs-surveillance-2016",
+          "who-sars-cov-2-sequencing-implementation-2021",
+          "aphl-ngs-implementation-2016",
+        ],
+      },
     ],
     audiences: ["policy", "director", "data-manager", "it-security", "lab-lead"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],

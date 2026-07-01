@@ -3366,5 +3366,55 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is a beta competency and cover log. It supports named ownership, training evidence and support routes, but does not define FTE ratios, grades, credentialing rules, salaries or formal accreditation requirements.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-repository-submission-handoff",
+    "sectionId": "repository-data-sharing",
+    "title": "Repository submission handoff record",
+    "kind": "table",
+    "text": "A repository or platform submission should be recorded as a handoff event with purpose, route, data package, public and restricted metadata, identifier and accession chain, quality and release status, terms, correction route and local owner. This supports stewardship after release without prescribing repository-specific schemas.",
+    "claimIds": [
+      "claim-beta-data-sharing-decision-table",
+      "claim-data-sharing-governed-route",
+      "claim-beta-metadata-accession-field-model",
+      "claim-platform-metadata-provenance-interoperability"
+    ],
+    "sourceIds": [
+      "who-pathogen-genome-data-sharing-2022",
+      "who-national-genomic-surveillance-strategy-2023",
+      "who-genomic-data-sharing-platforms-2025",
+      "ecdc-wgs-surveillance-2016",
+      "who-sars-cov-2-sequencing-implementation-2021",
+      "aphl-ngs-implementation-2016"
+    ],
+    "conditions": {
+      "audiences": [
+        "data-manager",
+        "bioinformatician",
+        "lab-lead",
+        "it-security",
+        "policy",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "data-sharing",
+        "repositories",
+        "metadata",
+        "accessions",
+        "governance",
+        "quality"
+      ]
+    },
+    "order": 50,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta operational handoff record. It deliberately avoids exact INSDC, NCBI, ENA, GISAID or organism-specific field requirements until those templates are extracted directly.",
+    "updatedAt": "2026-07-01"
   }
 ]
