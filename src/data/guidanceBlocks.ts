@@ -95,6 +95,75 @@ export const guidanceBlocks: GuidanceBlock[] = [
         },
       },
     ],
+    tables: [
+      {
+        title: "Value-case evidence to collect",
+        summary:
+          "Use this table before making an investment argument. It keeps public-health value, operational change, and recurrent cost evidence connected.",
+        columns: ["Value question", "Evidence to collect", "Why it matters", "Caution"],
+        rows: [
+          {
+            cells: [
+              "Which public-health decision will change?",
+              "Use case, decision user, current decision route, genomic result or report that would change the route, and response action available once the result arrives.",
+              "Genomics has value when the result changes surveillance, outbreak response, AMR action, variant assessment, or another defined public-health decision.",
+              "Do not argue for genomics as a technology upgrade without naming the decision and response pathway.",
+            ],
+            sourceIds: [
+              "who-genomic-surveillance-2022",
+              "who-national-genomic-surveillance-strategy-2023",
+              "cdc-nejm-2019",
+            ],
+          },
+          {
+            cells: [
+              "What improves compared with the current process?",
+              "Current method, comparator, turnaround, sample handling, duplicated processes, cluster resolution, report route, user communication, and quality or validation boundary.",
+              "The PHE case study supports a service-transition argument where WGS changed workflows, reporting timelines, validation, user engagement, and outbreak resolution.",
+              "A service example from one setting should not be turned into a universal performance or cost claim.",
+            ],
+            sourceIds: ["phe-case-study", "foodborne-genomics-allard-2018"],
+          },
+          {
+            cells: [
+              "What recurring costs and responsibilities are created?",
+              "People, training, quality management, storage, compute, software, maintenance, support, validation, data sharing, and user engagement.",
+              "A realistic business case counts the service that surrounds sequencing, not only instruments, reagents, or cost per genome.",
+              "Near-term costs can rise while infrastructure, validation, staffing and data-management capacity are built.",
+            ],
+            sourceIds: [
+              "who-genomics-costing-tool-manual-2024",
+              "wgs-costing-tool-2024",
+              "phe-case-study",
+              "pha4ge-infrastructure",
+            ],
+          },
+          {
+            cells: [
+              "What economic evidence is transferable?",
+              "Pathogen, setting, comparator, surveillance application, analysis type, included costs, measured benefits, health-system context, and implementation maturity.",
+              "Economic evidence is useful only when the assumptions resemble the programme being planned.",
+              "The current systematic-review evidence supports careful economic argument, but not a universal return-on-investment estimate.",
+            ],
+            sourceIds: [
+              "wgs-economic-review",
+              "genometrakr-economic-2021",
+              "national-investment-case-2025",
+              "lancet-wgs-economic-strategies-2026",
+            ],
+          },
+        ],
+        sourceIds: [
+          "who-genomic-surveillance-2022",
+          "who-national-genomic-surveillance-strategy-2023",
+          "cdc-nejm-2019",
+          "phe-case-study",
+          "who-genomics-costing-tool-manual-2024",
+          "wgs-economic-review",
+          "national-investment-case-2025",
+        ],
+      },
+    ],
     audiences: ["director", "policy", "funder", "lab-lead", "all"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
     organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],

@@ -76,6 +76,59 @@
     "updatedAt": "2026-07-01"
   },
   {
+    "id": "fragment-beta-value-case-evidence-table",
+    "sectionId": "why-pathogen-genomics",
+    "title": "Value-case evidence to collect",
+    "kind": "table",
+    "text": "A credible value case should collect evidence about the public-health decision that will change, the operational improvement compared with current practice, the recurring costs and responsibilities created by the service, and whether published economic evidence is transferable to the planned setting. The table should prevent generic return-on-investment claims where the source base is heterogeneous or setting-specific.",
+    "claimIds": [
+      "claim-who-strategy-integrated-surveillance",
+      "claim-phe-service-transition",
+      "claim-costing-recurrent-service-categories",
+      "claim-price-economic-review-heterogeneous"
+    ],
+    "sourceIds": [
+      "who-genomic-surveillance-2022",
+      "who-national-genomic-surveillance-strategy-2023",
+      "cdc-nejm-2019",
+      "phe-case-study",
+      "foodborne-genomics-allard-2018",
+      "who-genomics-costing-tool-manual-2024",
+      "wgs-costing-tool-2024",
+      "wgs-economic-review",
+      "genometrakr-economic-2021",
+      "national-investment-case-2025",
+      "lancet-wgs-economic-strategies-2026"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "policy",
+        "funder",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "value",
+        "costing",
+        "investment-case",
+        "public-health",
+        "decision-use"
+      ]
+    },
+    "order": 30,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta value-case evidence table. It does not support universal ROI or cost-effectiveness claims.",
+    "updatedAt": "2026-07-01"
+  },
+  {
     "id": "fragment-infra-operating-model-core",
     "sectionId": "infrastructure-operating-model",
     "title": "Operating model core",
