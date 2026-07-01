@@ -1747,5 +1747,53 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is a beta stage-use guide. It still needs review with real pilot, routine and network programmes.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-sop-handoff-checklist",
+    "sectionId": "quality-validation-before-switch",
+    "title": "Beta SOP handoff checklist",
+    "kind": "table",
+    "text": "Use the release and change-control checklist as a handoff into the local quality system. The beta guide can name what the SOP package should contain, but local laboratory, bioinformatics, quality, accreditation and regulatory owners must approve the actual SOP before it is used for service reporting.",
+    "claimIds": [
+      "claim-release-change-control-validation",
+      "claim-quality-validation-whole-chain",
+      "claim-qc-annotation-version-control"
+    ],
+    "sourceIds": [
+      "phe-case-study",
+      "aphl-ngs-implementation-2016",
+      "clinical-microbiology-implementation-2026",
+      "who-genomic-data-sharing-platforms-2025",
+      "mgen-accreditation-iso-pathogen-genomics-2023",
+      "mgen-stec-bioinformatics-validation-2021",
+      "mgen-discordant-amr-predictions-2020"
+    ],
+    "conditions": {
+      "audiences": [
+        "lab-lead",
+        "bioinformatician",
+        "data-manager",
+        "director",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "quality",
+        "validation",
+        "change-control",
+        "workflow",
+        "accreditation"
+      ]
+    },
+    "order": 31,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta SOP handoff checklist, not an accredited SOP template or a substitute for local regulatory review.",
+    "updatedAt": "2026-07-01"
   }
 ]

@@ -847,6 +847,105 @@ export const guidanceBlocks: GuidanceBlock[] = [
           "mgen-stec-bioinformatics-validation-2021",
         ],
       },
+      {
+        title: "Turning the beta checklist into a local SOP package",
+        summary:
+          "Use this as a handoff into the local quality system. It names the package to assemble; it does not replace local QA, accreditation or regulatory approval.",
+        columns: ["SOP package item", "What to include", "Owner to name", "Beta caution"],
+        rows: [
+          {
+            cells: [
+              "Scope and intended use",
+              "Priority use case, organisms covered, reportable outputs, users, decision pathway, validation boundary and conditions where the workflow must not be used.",
+              "Service lead with laboratory, bioinformatics and public-health user input.",
+              "Do not turn a beta pathway into a universal SOP; intended use should be narrower than the whole technology.",
+            ],
+            sourceIds: [
+              "phe-case-study",
+              "aphl-ngs-implementation-2016",
+              "clinical-microbiology-implementation-2026",
+            ],
+          },
+          {
+            cells: [
+              "Inputs and acceptance criteria",
+              "Input material, sample or isolate requirements, required metadata, run-level QC, sample-level QC, analysis QC, acceptance thresholds and override route.",
+              "Laboratory quality lead with bioinformatics owner and data manager.",
+              "Thresholds and reportability rules remain organism-specific; the beta guide should not prescribe cut-offs where source coverage is incomplete.",
+            ],
+            sourceIds: [
+              "aphl-ngs-implementation-2016",
+              "clinical-microbiology-implementation-2026",
+              "who-genomic-data-sharing-platforms-2025",
+            ],
+          },
+          {
+            cells: [
+              "Workflow, database and version record",
+              "Workflow name, software versions, container or environment, reference database versions, parameters, report-template version, release date and provenance capture.",
+              "Bioinformatics owner with quality sign-off.",
+              "Version control should include reference data and interpretation rules, not only the pipeline code.",
+            ],
+            sourceIds: ["clinical-microbiology-implementation-2026", "who-genomic-data-sharing-platforms-2025"],
+          },
+          {
+            cells: [
+              "Validation and verification evidence",
+              "Comparator or reference material, expected and observed outputs, repeatability or reproducibility checks, discordance review, limitations and revalidation triggers.",
+              "Quality lead, laboratory lead and bioinformatics lead.",
+              "Evidence should match the reportable output; a workflow smoke test is not enough for public-health reporting.",
+            ],
+            sourceIds: [
+              "phe-case-study",
+              "aphl-ngs-implementation-2016",
+              "mgen-stec-bioinformatics-validation-2021",
+              "mgen-discordant-amr-predictions-2020",
+            ],
+          },
+          {
+            cells: [
+              "Release and change control",
+              "Changed component, reason for change, affected outputs, approval route, release date, user communication, rollback route, correction route and emergency-fix criteria.",
+              "Service owner with quality-system owner and affected technical owners.",
+              "Emergency fixes and corrected reports need the local incident-management procedure, not only a release note.",
+            ],
+            sourceIds: [
+              "clinical-microbiology-implementation-2026",
+              "mgen-accreditation-iso-pathogen-genomics-2023",
+            ],
+          },
+          {
+            cells: [
+              "Reporting and user communication",
+              "Report template, limitations text, uncertainty route, recipient route, feedback route, support contact and training or change notice for users.",
+              "Reporting scientist or service-user lead with quality and technical owners.",
+              "This beta package can define report components, but final wording needs local reporting governance and pathogen-specific templates.",
+            ],
+            sourceIds: ["aphl-ngs-implementation-2016", "clinical-microbiology-implementation-2026"],
+          },
+          {
+            cells: [
+              "EQA, proficiency testing and accreditation review",
+              "EQA or PT plan where available, audit trail, deviation route, competency or training record, and accreditation or regulatory review requirements.",
+              "Quality/accreditation owner with laboratory and bioinformatics leads.",
+              "The source base supports the need for quality-system review; it does not prove that this beta checklist satisfies any specific accreditation scheme.",
+            ],
+            sourceIds: [
+              "clinical-microbiology-implementation-2026",
+              "mgen-accreditation-iso-pathogen-genomics-2023",
+            ],
+          },
+        ],
+        sourceIds: [
+          "phe-case-study",
+          "aphl-ngs-implementation-2016",
+          "clinical-microbiology-implementation-2026",
+          "who-genomic-data-sharing-platforms-2025",
+          "mgen-accreditation-iso-pathogen-genomics-2023",
+          "mgen-stec-bioinformatics-validation-2021",
+          "mgen-discordant-amr-predictions-2020",
+        ],
+      },
     ],
     audiences: ["lab-lead", "bioinformatician", "data-manager", "director"],
     implementationStages: ["pilot", "routine-service", "upgrading"],
@@ -869,7 +968,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "mgen-discordant-amr-predictions-2020",
     ],
     gaps: [
-      "The beta release/change-control checklist still needs conversion into a local SOP template and review against local laboratory-quality, accreditation, regulatory and incident-management requirements.",
+      "The beta SOP handoff checklist still needs local laboratory-quality, accreditation, regulatory and incident-management review before adoption as an SOP.",
       "Organism-specific QC thresholds and reportability rules still need extraction before the guide can prescribe detailed acceptance criteria.",
     ],
   },
