@@ -122,6 +122,21 @@ guidanceBlocks.forEach((block) => {
       errors.push(`Guidance block ${block.id} references unknown source ID: ${sourceId}`);
     }
   });
+
+  block.tables?.forEach((table, tableIndex) => {
+    if (!table.title || !Array.isArray(table.columns) || !table.columns.length || !Array.isArray(table.rows)) {
+      errors.push(`Guidance block ${block.id} table ${tableIndex + 1} must include title, columns, and rows.`);
+      return;
+    }
+
+    table.rows.forEach((row, rowIndex) => {
+      if (!Array.isArray(row.cells) || row.cells.length !== table.columns.length) {
+        errors.push(
+          `Guidance block ${block.id} table ${table.title} row ${rowIndex + 1} has ${row.cells?.length ?? 0} cells for ${table.columns.length} columns.`,
+        );
+      }
+    });
+  });
 });
 
 resources.forEach((resource) => {

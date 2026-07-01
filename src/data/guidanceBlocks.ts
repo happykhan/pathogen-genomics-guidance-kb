@@ -232,6 +232,81 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "Beta matrix columns: organism or programme, decision user, sampling route, expected output, turnaround pressure, metadata dependency, QC or validation boundary, reporting route, sharing route, infrastructure dependency, and fallback if the result is delayed or inconclusive.",
       "Organism prompts for beta: enteric bacteria need outbreak/source/One Health routes; respiratory viruses need variant or lineage reporting with sampling context and repository choices; TB and AMR need separation of relatedness and resistance inference; healthcare-associated infection support needs a clear clinical or infection-control reporting route; research support needs a boundary between exploratory analysis and validated public-health reporting.",
     ],
+    tables: [
+      {
+        title: "Beta organism and use-case service-model matrix",
+        summary:
+          "Use this as a structuring table before choosing infrastructure or report detail. It is a beta planning matrix, not a set of organism-specific thresholds.",
+        columns: ["Use case", "Primary decision user", "What changes in the service model", "Main source-backed caution"],
+        rows: [
+          {
+            cells: [
+              "Routine surveillance",
+              "Surveillance programme, laboratory lead, epidemiology team",
+              "Prioritises repeatable sampling, trend reporting, metadata consistency, storage, repository or platform routes, and service review over one-off speed.",
+              "Sampling frame and data users must be defined before interpreting trends.",
+            ],
+            sourceIds: ["who-national-genomic-surveillance-strategy-2023", "ecdc-wgs-surveillance-2016"],
+          },
+          {
+            cells: [
+              "Outbreak response",
+              "Incident team, health protection, infection control, environmental or food-safety partners",
+              "Prioritises turnaround, controlled sharing, investigation identifiers, user communication, and exception routes for ambiguous or delayed results.",
+              "A genetic cluster is not enough without epidemiological and sampling context.",
+            ],
+            sourceIds: ["phe-case-study", "ecdc-wgs-surveillance-2016", "mgen-uk-delphi-health-protection-2023"],
+          },
+          {
+            cells: [
+              "AMR monitoring",
+              "AMR programme, reference laboratory, clinical or public-health users",
+              "Requires separation of relatedness, resistance determinants, database or tool version, validation boundary, and any need for phenotypic confirmation.",
+              "Genotype-phenotype inference varies by organism, drug, mechanism, database and workflow.",
+            ],
+            sourceIds: ["cdc-nejm-2019", "clinical-microbiology-implementation-2026", "mgen-gonorrhoea-wgs-amr-genogroups-2021"],
+          },
+          {
+            cells: [
+              "Repository submission",
+              "Data manager, reference laboratory, national or international platform users",
+              "Prioritises accession tracking, public minimum metadata, restricted metadata handling, QC status, correction routes and persistent identifiers.",
+              "Repository submission is a data-management event, not only an upload step.",
+            ],
+            sourceIds: [
+              "who-sars-cov-2-sequencing-implementation-2021",
+              "aphl-ngs-implementation-2016",
+              "who-genomic-data-sharing-platforms-2025",
+            ],
+          },
+          {
+            cells: [
+              "Clinical or hospital support",
+              "Clinician, infection-control team, hospital microbiology, public-health team",
+              "Requires explicit diagnostic or infection-control reporting route, uncertainty language, regulatory boundary, and rapid discussion route where patient care may be affected.",
+              "Clinical-facing services may have tighter reporting, validation and regulatory expectations than public-health surveillance alone.",
+            ],
+            sourceIds: ["clinical-microbiology-implementation-2026", "mgen-centre-specific-typing-ipc-2021"],
+          },
+          {
+            cells: [
+              "Research support",
+              "Research team, methods developer, programme evaluator",
+              "Can allow more flexible analysis and richer exploration, but must mark what is not validated for public-health reporting.",
+              "Exploratory outputs should not be presented as operational reports unless the validation and reporting boundary has been defined.",
+            ],
+            sourceIds: ["who-national-genomic-surveillance-strategy-2023", "clinical-microbiology-implementation-2026"],
+          },
+        ],
+        sourceIds: [
+          "who-national-genomic-surveillance-strategy-2023",
+          "ecdc-wgs-surveillance-2016",
+          "phe-case-study",
+          "cdc-nejm-2019",
+          "clinical-microbiology-implementation-2026",
+        ],
+      },
+    ],
     audiences: ["director", "policy", "lab-lead", "bioinformatician", "data-manager", "it-security", "funder", "all"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
     organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
@@ -320,6 +395,77 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "Minimum service-review fields: sample volume, failed or repeated samples, failed or repeated runs, missing metadata fields, median turnaround by use case, delayed report reasons, corrected report count, repository-submission status, user-feedback items, and follow-up action owner.",
       "Beta service-review rows: routine volume; failed or repeated samples; failed or repeated runs; missing metadata; delayed reports; corrected reports; repository-submission status; user feedback; corrective actions.",
       "Beta service-review columns: event or measure, use case affected, sample or report count, owner, user impact, decision taken, corrective action, due date, closure status, and whether the issue changes validation, SOPs, training, metadata capture, infrastructure, or reporting.",
+    ],
+    tables: [
+      {
+        title: "Beta service-review table",
+        summary:
+          "Use this table in routine review meetings to connect sample-to-report events with decisions, owners and corrective action.",
+        columns: ["Review row", "Why it matters", "Minimum owner or decision", "Source-backed caution"],
+        rows: [
+          {
+            cells: [
+              "Routine volume",
+              "Shows whether throughput assumptions, staffing, storage and reporting routes match the actual service.",
+              "Programme or service lead reviews volume by use case and period.",
+              "Do not generalise one service's throughput to another setting without checking service model and resources.",
+            ],
+            sourceIds: ["phe-case-study", "who-national-genomic-surveillance-strategy-2023"],
+          },
+          {
+            cells: [
+              "Failed or repeated samples",
+              "Can affect surveillance inclusion, turnaround, user trust and whether a public-health question can still be answered.",
+              "Laboratory and quality owners record reason, repeat decision, user notification and closure.",
+              "Sample or sequencing failure is a service event, not only a bench problem.",
+            ],
+            sourceIds: ["phe-case-study", "aphl-ngs-implementation-2016"],
+          },
+          {
+            cells: [
+              "Failed or repeated runs",
+              "Can indicate instrument, library, workflow, reagent, staffing or QC threshold problems.",
+              "Laboratory, bioinformatics and quality owners decide repeat, release, hold or investigate.",
+              "QC and validation need to span wet-lab and bioinformatics steps.",
+            ],
+            sourceIds: ["aphl-ngs-implementation-2016", "clinical-microbiology-implementation-2026"],
+          },
+          {
+            cells: [
+              "Missing metadata",
+              "Can weaken interpretation, repository submission, linkage to epidemiology and later reanalysis.",
+              "Data manager or submitting service owner records missing fields, follow-up route and reporting impact.",
+              "Metadata should be planned as part of the service, not added after analysis.",
+            ],
+            sourceIds: ["who-genomic-data-sharing-platforms-2025", "ecdc-wgs-surveillance-2016"],
+          },
+          {
+            cells: [
+              "Delayed or corrected reports",
+              "Can affect outbreak response, clinical or public-health action, and confidence in the service.",
+              "Reporting owner records reason, recipients, correction history, user impact and action taken.",
+              "Feedback should link to public-health action and service improvement.",
+            ],
+            sourceIds: ["who-national-genomic-surveillance-strategy-2023", "who-sars-cov-2-sequencing-implementation-2021"],
+          },
+          {
+            cells: [
+              "Repository submission status",
+              "Connects local reports to public or controlled data-sharing routes, accession records and correction pathways.",
+              "Data manager records accession, upload date, release state, correction or withdrawal route and support contact.",
+              "Repository submission needs accession tracking and platform-specific metadata decisions.",
+            ],
+            sourceIds: ["aphl-ngs-implementation-2016", "who-genomic-data-sharing-platforms-2025"],
+          },
+        ],
+        sourceIds: [
+          "phe-case-study",
+          "aphl-ngs-implementation-2016",
+          "who-national-genomic-surveillance-strategy-2023",
+          "who-genomic-data-sharing-platforms-2025",
+          "clinical-microbiology-implementation-2026",
+        ],
+      },
     ],
     audiences: ["lab-lead", "bioinformatician", "data-manager", "it-security"],
     implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
@@ -982,6 +1128,81 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "Beta responsibility-template columns: service function, accountable owner, backup owner, supporting role or partner, documentation location, training requirement, review frequency, cost line, and failure mode if unavailable.",
       "Functions that should not be unnamed: sample receipt, wet-lab processing, sequencing operation, bioinformatics workflow operation, QC review, validation and change control, data management, storage and backup, access review, reporting, interpretation, user training, incident support, procurement or costing, and programme oversight.",
     ],
+    tables: [
+      {
+        title: "Beta workforce responsibility template",
+        summary:
+          "Use this as a role map. It does not imply that every function needs a separate person in a small service.",
+        columns: ["Service function", "What must be owned", "Failure mode if unnamed", "Typical owner to identify"],
+        rows: [
+          {
+            cells: [
+              "Sample receipt and wet-lab processing",
+              "Sample acceptance, extraction, library preparation, sequencing operation, run records and wet-lab QC.",
+              "Failed or unsuitable inputs become invisible until analysis or reporting is delayed.",
+              "Laboratory lead, sequencing lead, quality lead or delegated bench owner.",
+            ],
+            sourceIds: ["aphl-ngs-implementation-2016", "phe-case-study", "clinical-microbiology-implementation-2026"],
+          },
+          {
+            cells: [
+              "Bioinformatics operation",
+              "Workflow execution, reference data, pipeline versions, troubleshooting, reruns, provenance and release boundaries.",
+              "A service depends on undocumented scripts or one person who knows how results were produced.",
+              "Bioinformatics lead, platform owner, managed-service support route or shared national service.",
+            ],
+            sourceIds: ["pha4ge-infrastructure", "phe-case-study", "clinical-microbiology-implementation-2026"],
+          },
+          {
+            cells: [
+              "Data management and access",
+              "Identifier lineage, metadata quality, storage, backup, repository accessions, access review and correction history.",
+              "Reports, repository records and reanalysis cannot be traced back to the same sample or isolate.",
+              "Data manager, LIMS owner, IT/security owner or platform data steward.",
+            ],
+            sourceIds: ["who-genomic-data-sharing-platforms-2025", "ecdc-wgs-surveillance-2016", "aphl-ngs-implementation-2016"],
+          },
+          {
+            cells: [
+              "Validation and quality review",
+              "Validation evidence, QC thresholds, change control, EQA or proficiency testing where available, and service review.",
+              "Workflow or reporting changes alter public-health interpretation without review.",
+              "Quality lead, laboratory director, bioinformatics lead and relevant reporting owner.",
+            ],
+            sourceIds: ["phe-case-study", "aphl-ngs-implementation-2016", "clinical-microbiology-implementation-2026"],
+          },
+          {
+            cells: [
+              "Reporting, interpretation and user support",
+              "Report route, uncertainty language, stakeholder discussion, feedback, training and incident support.",
+              "Technically correct outputs fail because users cannot interpret or act on them.",
+              "Reporting scientist, epidemiology lead, clinical or public-health liaison, user-support owner.",
+            ],
+            sourceIds: ["cdc-nejm-2019", "phe-case-study", "who-sars-cov-2-sequencing-implementation-2021"],
+          },
+          {
+            cells: [
+              "Programme oversight and costing",
+              "Service model, recurrent costs, procurement, staffing cover, training, renewal, partner agreements and escalation route.",
+              "The service works only while hidden labour, temporary funding or informal support persists.",
+              "Programme director, funder, laboratory manager, finance/procurement owner or governance board.",
+            ],
+            sourceIds: [
+              "who-genomic-surveillance-progress-2023",
+              "who-genomics-costing-tool-manual-2024",
+              "east-africa-genomics-landscape-2024",
+            ],
+          },
+        ],
+        sourceIds: [
+          "aphl-ngs-implementation-2016",
+          "phe-case-study",
+          "clinical-microbiology-implementation-2026",
+          "who-genomic-surveillance-progress-2023",
+          "who-genomics-costing-tool-manual-2024",
+        ],
+      },
+    ],
     audiences: ["director", "policy", "funder", "lab-lead", "bioinformatician"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
     organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
@@ -1094,6 +1315,76 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "For each proposed model, record the service owner, laboratory operator, sequencing location, analysis location, workflow owner, data host, access manager, support route, validation owner, and fallback if the primary provider or network route is unavailable.",
       "Beta matrix rows: laptop or field workflow; local workstation; institutional server or HPC; cloud workflow platform; managed SaaS-style platform; centralised reference service; hybrid local and central model; national collaborative network; externally supported sequencing or analysis.",
       "Beta matrix columns: supported use case, sample route, sequencing location, analysis location, data host, workflow owner, validation owner, access manager, support route, internet or power dependency, data-residency issue, recurring cost line, local capability built, failure mode, and fallback route.",
+    ],
+    tables: [
+      {
+        title: "Beta implementation dependency matrix",
+        summary:
+          "Use this to compare implementation models by dependencies and fallback routes, not as a universal ranking.",
+        columns: ["Model", "Works best when", "Key dependencies to manage", "Fallback or maturity question"],
+        rows: [
+          {
+            cells: [
+              "Laptop or field workflow",
+              "Connectivity, power or institutional infrastructure are unreliable, and a narrow workflow is needed.",
+              "Local operator skill, device management, data transfer, version control, backup, access control and limited scalability.",
+              "What happens if the operator is absent, the laptop fails, or results need to be shared and audited?",
+            ],
+            sourceIds: ["pha4ge-infrastructure"],
+          },
+          {
+            cells: [
+              "Local server, institutional server or HPC",
+              "A programme has local IT support, data-residency needs, predictable throughput and capacity to operate job-processing infrastructure.",
+              "Systems administration, storage growth, backup, queue management, workflow deployment, security review and hardware renewal.",
+              "Who owns maintenance, recovery testing, user support and workflow validation when demand grows?",
+            ],
+            sourceIds: ["pha4ge-infrastructure", "who-genomics-costing-tool-manual-2024"],
+          },
+          {
+            cells: [
+              "Cloud workflow platform",
+              "Internet connectivity, upload capacity, governance and budget can support remote processing and storage.",
+              "Data residency, egress or storage cost, account governance, workflow approval, provider availability and recurrent funding.",
+              "What is the plan when upload is slow, data cannot leave jurisdiction, or cloud cost becomes unpredictable?",
+            ],
+            sourceIds: ["pha4ge-infrastructure", "who-genomics-costing-tool-manual-2024"],
+          },
+          {
+            cells: [
+              "Managed platform or SaaS-style service",
+              "Local bioinformatics staffing is limited and the service can use a controlled set of validated workflows.",
+              "Provider support, access model, platform roadmap, data portability, validation boundary, cost model and user training.",
+              "Which responsibilities remain local even when the platform runs the workflow?",
+            ],
+            sourceIds: ["pha4ge-infrastructure", "clinical-microbiology-implementation-2026"],
+          },
+          {
+            cells: [
+              "Centralised reference service",
+              "Expertise, validation, sequencing, analysis and quality systems are concentrated to support multiple submitting sites.",
+              "Sample transfer, turnaround, user communication, LIMS integration, reporting route and dependency on the central service.",
+              "How are delays, failed samples, user feedback and local interpretation handled?",
+            ],
+            sourceIds: ["phe-case-study", "clinical-microbiology-implementation-2026"],
+          },
+          {
+            cells: [
+              "Hybrid, collaborative or externally supported model",
+              "Capability is being built across laboratories, agencies, academic partners, regional networks or external providers.",
+              "Governance, data-sharing agreements, standard methods, training, shared platforms, support routes and local capability development.",
+              "Which dependencies are temporary capacity-building support, and which are permanent service risks?",
+            ],
+            sourceIds: ["auspathogen-implementation-2025", "east-africa-genomics-landscape-2024", "mgen-california-covidnet-2023"],
+          },
+        ],
+        sourceIds: [
+          "pha4ge-infrastructure",
+          "clinical-microbiology-implementation-2026",
+          "auspathogen-implementation-2025",
+          "east-africa-genomics-landscape-2024",
+        ],
+      },
     ],
     audiences: ["director", "policy", "lab-lead", "bioinformatician", "it-security", "funder", "data-manager"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],

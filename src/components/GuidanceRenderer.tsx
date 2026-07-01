@@ -14,6 +14,7 @@ import { scoreGuidanceBlock } from "../lib/recommendations";
 import type { Profile } from "../types/profile";
 
 type CitationAnchor = { text: string; sourceIds: string[] };
+type GuidanceTable = NonNullable<(typeof guidanceBlocks)[number]["tables"]>[number];
 
 type Props = {
   profile: Profile;
@@ -87,6 +88,74 @@ function TextWithCitations({
   );
 }
 
+function GuidanceTableView({ table, referenceNumber }: { table: GuidanceTable; referenceNumber: Map<string, number> }) {
+  return (
+    <figure className="document-table">
+      <figcaption>
+        <strong>{table.title}</strong>
+        {table.summary ? <span>{table.summary}</span> : null}
+        <CitationRun sourceIds={table.sourceIds ?? []} referenceNumber={referenceNumber} />
+      </figcaption>
+      <div className="document-table-scroll">
+        <table>
+          <thead>
+            <tr>
+              {table.columns.map((column) => (
+                <th key={column} scope="col">
+                  {column}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {table.rows.map((row, rowIndex) => (
+              <tr key={`${table.title}-${rowIndex}`}>
+                {row.cells.map((cell, cellIndex) => (
+                  <td key={`${table.title}-${rowIndex}-${cellIndex}`}>
+                    {cell}
+                    {cellIndex === row.cells.length - 1 ? (
+                      <>
+                        {" "}
+                        <CitationRun sourceIds={row.sourceIds ?? []} referenceNumber={referenceNumber} />
+                      </>
+                    ) : null}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </figure>
+  );
+}
+
+function collectBlockReferenceIds(block: (typeof guidanceBlocks)[number]) {
+  const ids = new Set(block.sourceIds);
+  block.summarySourceIds?.forEach((sourceId) => ids.add(sourceId));
+  Object.values(block.bodySourceIds ?? {}).forEach((sourceIds) => sourceIds.forEach((sourceId) => ids.add(sourceId)));
+  Object.values(block.bodyCitationAnchors ?? {}).forEach((anchors) =>
+    anchors.forEach((anchor) => anchor.sourceIds.forEach((sourceId) => ids.add(sourceId))),
+  );
+  block.subsections?.forEach((subsection) => {
+    Object.values(subsection.bodySourceIds ?? {}).forEach((sourceIds) => sourceIds.forEach((sourceId) => ids.add(sourceId)));
+    Object.values(subsection.bodyCitationAnchors ?? {}).forEach((anchors) =>
+      anchors.forEach((anchor) => anchor.sourceIds.forEach((sourceId) => ids.add(sourceId))),
+    );
+  });
+  Object.values(block.technicalDetailSourceIds ?? {}).forEach((sourceIds) =>
+    sourceIds.forEach((sourceId) => ids.add(sourceId)),
+  );
+  Object.values(block.technicalDetailCitationAnchors ?? {}).forEach((anchors) =>
+    anchors.forEach((anchor) => anchor.sourceIds.forEach((sourceId) => ids.add(sourceId))),
+  );
+  block.tables?.forEach((table) => {
+    table.sourceIds?.forEach((sourceId) => ids.add(sourceId));
+    table.rows.forEach((row) => row.sourceIds?.forEach((sourceId) => ids.add(sourceId)));
+  });
+  return Array.from(ids);
+}
+
 export function GuidanceRenderer({ profile, showTechnical, showAllSections }: Props) {
   const scored = guidanceBlocks.map((block, index) => ({
     block,
@@ -96,7 +165,7 @@ export function GuidanceRenderer({ profile, showTechnical, showAllSections }: Pr
   const visible = scored.filter((item) => showAllSections || item.score >= relevanceThreshold);
   const hiddenCount = scored.filter((item) => item.score < relevanceThreshold).length;
   const revealTechnical = showTechnical || isTechnicalProfile(profile);
-  const referenceIds = Array.from(new Set(visible.flatMap(({ block }) => block.sourceIds)));
+  const referenceIds = Array.from(new Set(visible.flatMap(({ block }) => collectBlockReferenceIds(block))));
   const referenceNumber = new Map(referenceIds.map((sourceId, index) => [sourceId, index + 1]));
 
   return (
@@ -189,6 +258,9 @@ export function GuidanceRenderer({ profile, showTechnical, showAllSections }: Pr
                   </p>
                 ))}
               </section>
+            ))}
+            {block.tables?.map((table) => (
+              <GuidanceTableView key={table.title} table={table} referenceNumber={referenceNumber} />
             ))}
             {block.technicalDetail && revealTechnical ? (
               <aside className="technical-detail">

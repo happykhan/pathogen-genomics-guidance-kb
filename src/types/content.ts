@@ -24,6 +24,16 @@ export type GuidanceBlock = {
   technicalDetail?: string[];
   technicalDetailSourceIds?: Record<number, string[]>;
   technicalDetailCitationAnchors?: Record<number, { text: string; sourceIds: string[] }[]>;
+  tables?: {
+    title: string;
+    summary?: string;
+    columns: string[];
+    rows: {
+      cells: string[];
+      sourceIds?: string[];
+    }[];
+    sourceIds?: string[];
+  }[];
   audiences: Audience[];
   implementationStages: ImplementationStage[];
   organisms: OrganismFocus[];

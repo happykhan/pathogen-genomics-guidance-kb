@@ -7,7 +7,7 @@ const endpoints = [
     path: "/api/guidance",
     title: "Guidance text",
     description:
-      "Structured whitepaper content: section titles, summaries, paragraphs, subsections, technical detail, audience tags, organism tags, topics, source IDs, sourceStatus, and unresolved evidence notes.",
+      "Structured whitepaper content: section titles, summaries, paragraphs, subsections, source-backed tables, technical detail, audience tags, organism tags, topics, source IDs, sourceStatus, and unresolved evidence notes.",
   },
   {
     path: "/api/resources",

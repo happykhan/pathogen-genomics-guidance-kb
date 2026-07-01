@@ -470,6 +470,67 @@ select {
   text-justify: inter-word;
 }
 
+.document-table {
+  max-width: 100%;
+  margin: 24px 0;
+}
+
+.document-table figcaption {
+  max-width: 760px;
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.45;
+}
+
+.document-table figcaption strong {
+  display: block;
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.document-table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.document-table table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  line-height: 1.42;
+}
+
+.document-table th,
+.document-table td {
+  border-bottom: 1px solid #e5ebe8;
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.document-table th {
+  color: #315048;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: #f5f8f6;
+}
+
+.document-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.document-table td:first-child {
+  color: var(--ink);
+  font-weight: 700;
+}
+
 .citation-run {
   display: inline-flex;
   flex-wrap: wrap;
@@ -1765,6 +1826,49 @@ select {
     hyphens: auto;
     text-align: justify;
     text-justify: inter-word;
+  }
+
+  .document-table {
+    max-width: 170mm;
+    margin: 5mm 0 6mm;
+    break-inside: avoid;
+  }
+
+  .document-table figcaption {
+    max-width: 145mm;
+    margin-bottom: 2.5mm;
+    color: #344054;
+    font-size: 8.6pt;
+  }
+
+  .document-table figcaption strong {
+    color: #111827;
+    font-size: 9.4pt;
+  }
+
+  .document-table-scroll {
+    overflow: visible;
+    border-top: 0.6pt solid #98a9a3;
+    border-bottom: 0.6pt solid #98a9a3;
+  }
+
+  .document-table table {
+    min-width: 0;
+    width: 100%;
+    font-size: 7.7pt;
+    line-height: 1.32;
+  }
+
+  .document-table th,
+  .document-table td {
+    border-bottom: 0.35pt solid #d8e0dd;
+    padding: 2.4mm 2.2mm;
+  }
+
+  .document-table th {
+    color: #0b5f57;
+    font-size: 6.7pt;
+    background: #f3f7f5;
   }
 
   .technical-detail {
