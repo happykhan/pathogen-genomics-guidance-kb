@@ -131,6 +131,17 @@ function expectVisibleGuidance(label, profile, expectedIds, minimumScore = 7) {
   });
 }
 
+function expectDifferentTopOrder(label, leftProfile, rightProfile, minimumDifference = 3, limit = 8) {
+  const leftTop = topGuidanceIds(leftProfile, limit);
+  const rightTop = topGuidanceIds(rightProfile, limit);
+  const changedPositions = leftTop.filter((id, index) => rightTop[index] !== id).length;
+  if (changedPositions < minimumDifference) {
+    errors.push(
+      `${label}: expected at least ${minimumDifference} changed top-${limit} positions; left=${leftTop.join(", ")}; right=${rightTop.join(", ")}`,
+    );
+  }
+}
+
 const constraintScenarios = [
   {
     label: "unreliable internet",
@@ -321,6 +332,16 @@ representativeProfiles.forEach((scenario) => {
 });
 organismProfiles.forEach((scenario) =>
   expectVisibleGuidance(scenario.label, scenario.profile, scenario.expectedVisibleGuidance),
+);
+expectDifferentTopOrder(
+  "Gnomey profile tailoring changes section order",
+  defaultProfile,
+  withProfile({ role: "director", goals: ["make-case"] }),
+);
+expectDifferentTopOrder(
+  "Gnomey technical tailoring changes section order",
+  defaultProfile,
+  withProfile({ role: "bioinformatician", stage: "routine-service", infrastructure: "hpc", goals: ["validate-workflows"] }),
 );
 
 if (errors.length) {

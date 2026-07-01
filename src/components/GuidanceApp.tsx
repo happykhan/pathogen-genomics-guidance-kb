@@ -47,6 +47,13 @@ export function GuidanceApp() {
     };
   }
 
+  function applyProfile(nextProfile: Profile) {
+    setProfile(nextProfile);
+    window.requestAnimationFrame(() => {
+      document.querySelector(".whitepaper")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+
   return (
     <>
       <div inert={wizardOpen ? true : undefined} aria-hidden={wizardOpen ? "true" : undefined}>
@@ -152,7 +159,7 @@ export function GuidanceApp() {
         </div>
       </div>
 
-      {wizardOpen ? <GnomeyWizard profile={profile} onApply={setProfile} onClose={() => setWizardOpen(false)} /> : null}
+      {wizardOpen ? <GnomeyWizard profile={profile} onApply={applyProfile} onClose={() => setWizardOpen(false)} /> : null}
     </>
   );
 }

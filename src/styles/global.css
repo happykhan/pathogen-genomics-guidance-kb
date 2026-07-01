@@ -407,6 +407,15 @@ select {
   font-weight: 650;
 }
 
+.profile-priority-note {
+  max-width: 760px;
+  margin: 22px 0 0;
+  border-left: 3px solid var(--accent);
+  background: #f0faf7;
+  color: #25413a;
+  padding: 10px 12px;
+}
+
 .omission-note {
   max-width: 760px;
   margin: 22px 0 0;
@@ -1076,9 +1085,14 @@ select {
 }
 
 .wizard-actions {
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  background: color-mix(in srgb, var(--surface) 94%, transparent);
+  box-shadow: 0 -10px 22px rgba(15, 23, 42, 0.06);
 }
 
 .handoff-grid {
@@ -2009,6 +2023,15 @@ select {
     font-weight: 600;
     hyphens: none;
     text-align: left;
+  }
+
+  .profile-priority-note {
+    max-width: 138mm;
+    margin: 5mm 0 0;
+    border-left: 2pt solid #0b7d71;
+    background: #f2f8f6;
+    color: #111827;
+    padding: 2.5mm 3mm;
   }
 
   .document-section p,
