@@ -452,6 +452,91 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     tables: [
       {
+        title: "Sample-to-decision route map",
+        summary:
+          "Use this as the first service map. It links each lifecycle step to the record that must persist, the decision it supports, and the exception route that should be owned.",
+        columns: ["Lifecycle step", "Record that must persist", "Decision or product supported", "Exception route to define"],
+        rows: [
+          {
+            cells: [
+              "Sample or isolate enters the service",
+              "Local sample or isolate identifier, submitter, collection date and place where appropriate, source or specimen type, sampling reason and service route.",
+              "Whether the specimen belongs in routine surveillance, outbreak response, AMR monitoring, repository submission, clinical support or research support.",
+              "Unsuitable input, missing submitter information, duplicate record, unexpected organism, wrong service route or insufficient metadata.",
+            ],
+            sourceIds: ["who-national-genomic-surveillance-strategy-2023", "phe-case-study", "aphl-ngs-implementation-2016"],
+          },
+          {
+            cells: [
+              "Metadata are captured and linked",
+              "Required public metadata, restricted contextual metadata, LIMS or sample-system record, correction history and person or system responsible for updates.",
+              "Whether the sequence can be interpreted, reported, shared, searched later and linked to epidemiological or laboratory context.",
+              "Missing minimum metadata, sensitive fields needing restricted access, broken identifier linkage or corrected information after a report has been issued.",
+            ],
+            sourceIds: [
+              "who-genomic-data-sharing-platforms-2025",
+              "who-national-genomic-surveillance-strategy-2023",
+              "ecdc-wgs-surveillance-2016",
+            ],
+          },
+          {
+            cells: [
+              "Sequencing and QC happen",
+              "Run identifier, instrument or platform, wet-lab method, raw data location, run QC, sample QC, repeat decision and any quality annotation attached to downstream records.",
+              "Whether data are accepted for analysis, held, repeated, released with a quality note or excluded from a specific use.",
+              "Failed sample, failed run, low-quality sequence, partial genome, contamination concern, delayed repeat or QC override.",
+            ],
+            sourceIds: ["phe-case-study", "aphl-ngs-implementation-2016", "clinical-microbiology-implementation-2026"],
+          },
+          {
+            cells: [
+              "Workflow is executed",
+              "Workflow name and version, reference data or database version, parameters, execution environment, inputs, outputs, analyst or system, and provenance record.",
+              "Whether the result is reproducible enough for the intended report, dashboard, repository submission or reanalysis.",
+              "Pipeline failure, changed workflow version, changed database, missing provenance, manual workaround or result that conflicts with another method.",
+            ],
+            sourceIds: ["pha4ge-infrastructure", "who-genomic-data-sharing-platforms-2025", "clinical-microbiology-implementation-2026"],
+          },
+          {
+            cells: [
+              "Interpretation and report are produced",
+              "Interpreted result, report recipient, report date, limitation or uncertainty note, supporting metadata, decision-use category and correction route.",
+              "Alert, case report, cluster report, AMR or phenotype inference, weekly summary, trend review, infection-control discussion or national surveillance product.",
+              "Ambiguous result, report delay, corrected report, user challenge, changed interpretation after more data arrive or result outside validation boundary.",
+            ],
+            sourceIds: [
+              "who-national-genomic-surveillance-strategy-2023",
+              "who-sars-cov-2-sequencing-implementation-2021",
+              "ecdc-wgs-surveillance-2016",
+              "clinical-microbiology-implementation-2026",
+            ],
+          },
+          {
+            cells: [
+              "Data are shared, stored and reviewed",
+              "Sharing decision, repository or platform accession, access state, archive location, retention or deletion decision, feedback item and service-review action.",
+              "Public or controlled sharing, later discovery, reanalysis, audit, correction, quality review, funding case and continuous improvement.",
+              "Upload failure, accession mismatch, data-residency restriction, withdrawal or correction request, restore failure, storage growth or unresolved user feedback.",
+            ],
+            sourceIds: [
+              "who-genomic-data-sharing-platforms-2025",
+              "who-pathogen-genome-data-sharing-2022",
+              "aphl-ngs-implementation-2016",
+              "pha4ge-infrastructure",
+            ],
+          },
+        ],
+        sourceIds: [
+          "who-national-genomic-surveillance-strategy-2023",
+          "who-genomic-data-sharing-platforms-2025",
+          "phe-case-study",
+          "aphl-ngs-implementation-2016",
+          "pha4ge-infrastructure",
+          "clinical-microbiology-implementation-2026",
+          "ecdc-wgs-surveillance-2016",
+        ],
+      },
+      {
         title: "Beta service-review table",
         summary:
           "Use this table in routine review meetings to connect sample-to-report events with decisions, owners and corrective action.",

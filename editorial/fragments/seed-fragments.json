@@ -2204,5 +2204,60 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is a beta planning worksheet, not a validated maturity rubric or scoring instrument.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-sample-to-decision-route-map",
+    "sectionId": "data-lifecycle-sample-to-report",
+    "title": "Sample-to-decision route map",
+    "kind": "table",
+    "text": "A routine genomics service should map each sample-to-decision step to the record that must persist, the decision or product that record supports, and the exception route that should be owned. The route map should cover sample entry, metadata linkage, sequencing and QC, workflow execution, interpretation and reporting, sharing, storage, review and correction.",
+    "claimIds": [
+      "claim-who-national-strategy-value-chain",
+      "claim-phe-service-transition",
+      "claim-metadata-identifier-lineage-core",
+      "claim-quality-validation-whole-chain",
+      "claim-pha4ge-operating-questions"
+    ],
+    "sourceIds": [
+      "who-national-genomic-surveillance-strategy-2023",
+      "who-genomic-data-sharing-platforms-2025",
+      "phe-case-study",
+      "aphl-ngs-implementation-2016",
+      "pha4ge-infrastructure",
+      "clinical-microbiology-implementation-2026",
+      "ecdc-wgs-surveillance-2016",
+      "who-sars-cov-2-sequencing-implementation-2021",
+      "who-pathogen-genome-data-sharing-2022"
+    ],
+    "conditions": {
+      "audiences": [
+        "lab-lead",
+        "bioinformatician",
+        "data-manager",
+        "it-security",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "data-lifecycle",
+        "metadata",
+        "lims",
+        "quality",
+        "reporting",
+        "sharing",
+        "storage"
+      ]
+    },
+    "order": 40,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta route map, not a complete organism-specific field dictionary or SOP.",
+    "updatedAt": "2026-07-01"
   }
 ]
