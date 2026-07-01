@@ -726,5 +726,34 @@
     "confidence": "high",
     "limitations": "Does not provide detailed Salmonella, STEC, Listeria, influenza, RSV or SARS-CoV-2 report wording or thresholds.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "claim-beta-data-sharing-decision-table",
+    "sourceId": "who-genomic-data-sharing-platforms-2025",
+    "sourceLocator": "WHO 2022, WHO 2023, WHO 2025, ECDC 2016, WHO 2021 SARS-CoV-2 guide, and APHL 2016",
+    "evidenceItemIds": [
+      "evidence-beta-data-sharing-decision-table",
+      "evidence-who-2022-sharing-principles-public-health",
+      "evidence-who-2023-sharing-policy-national-database",
+      "evidence-who-2025-governance-access-benefit-sharing",
+      "evidence-who-2025-metadata-provenance-interoperability",
+      "evidence-ecdc-public-sensitive-metadata-sharing",
+      "evidence-sarscov2-repository-data-types",
+      "evidence-aphl-multiday-workflow-lims-accessions"
+    ],
+    "claim": "The beta guide can present data sharing as a decision table that separates purpose, route, data type, minimum metadata, sensitive metadata, quality status, access model, platform, timing, accession tracking, correction, withdrawal and local ownership.",
+    "extractedText": "WHO, ECDC and APHL sources support a structured route map for data sharing: public-health purpose, national policy, platform attributes, public versus restricted metadata, data types, access model, repository or platform choice, BioSample and SRA accession tracking, correction routes, withdrawal routes and local responsibility. The source set supports a beta decision table but not jurisdiction-specific legal rules.",
+    "notes": "Use to render the data-sharing pathway as an editable guidance table while retaining jurisdiction-specific caveats.",
+    "tags": ["data-sharing", "decision-table", "repositories", "metadata", "governance", "accessions"],
+    "candidateSectionIds": [
+      "repository-data-sharing",
+      "metadata-identifier-lineage"
+    ],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "multiple",
+    "confidence": "high",
+    "limitations": "Does not prescribe repository-specific fields or legal/ethical decisions for a jurisdiction.",
+    "reviewStatus": "reviewed"
   }
 ]

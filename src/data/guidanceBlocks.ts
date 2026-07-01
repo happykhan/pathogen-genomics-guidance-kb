@@ -883,6 +883,102 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "For each route, record purpose, data types, minimum metadata, QC requirement, timing, access model, licence or terms of use, attribution, submitter contact, accession or persistent identifier, correction route, withdrawal route, and local owner.",
       "Minimum decision sequence: purpose, data type, public metadata, restricted metadata, quality status, access model, platform, timing, accession or identifier, correction route, withdrawal route, data-use expectations, and support contact.",
     ],
+    tables: [
+      {
+        title: "Beta data-sharing decision table",
+        summary:
+          "Use this route map before data leave the programme or move into a shared platform, national database or public repository.",
+        columns: ["Decision point", "What to record", "Why it matters", "Source-backed caution"],
+        rows: [
+          {
+            cells: [
+              "Purpose and route",
+              "Operational sharing, national surveillance database, public repository, controlled-access platform, partner workspace, or retained-but-not-shared data.",
+              "Different routes support different users, timelines, access rules and public-health purposes.",
+              "Do not treat all sharing as a single upload step.",
+            ],
+            sourceIds: [
+              "who-pathogen-genome-data-sharing-2022",
+              "who-national-genomic-surveillance-strategy-2023",
+              "who-genomic-data-sharing-platforms-2025",
+            ],
+          },
+          {
+            cells: [
+              "Data type",
+              "Consensus genome, partial genome, raw reads, analysis output, report, metadata record, dashboard, or accession record.",
+              "Platforms and repositories differ in accepted data types, upload mechanisms and intended downstream use.",
+              "Raw-read sharing can be operationally hard where connectivity, storage or upload capacity is limited.",
+            ],
+            sourceIds: ["who-sars-cov-2-sequencing-implementation-2021", "pha4ge-infrastructure"],
+          },
+          {
+            cells: [
+              "Minimum metadata",
+              "Collection date and location where appropriate, sample or isolate source, host or setting, sampling strategy, sequencing strategy, bioinformatics method and attribution.",
+              "Metadata make shared sequence data interpretable and reusable.",
+              "Repository-specific field templates still need direct extraction before prescribing exact fields.",
+            ],
+            sourceIds: ["who-genomic-data-sharing-platforms-2025", "who-sars-cov-2-sequencing-implementation-2021"],
+          },
+          {
+            cells: [
+              "Sensitive metadata",
+              "Clinical, epidemiological, personal, precise geographic, commercial, legal, or privileged data that should not travel with the public record.",
+              "Sensitive metadata may still be needed for public-health action, but it may require restricted access.",
+              "ECDC separates public non-confidential minimum datasets from sensitive data restricted to competent authorities.",
+            ],
+            sourceIds: ["ecdc-wgs-surveillance-2016", "who-genomic-data-sharing-platforms-2025"],
+          },
+          {
+            cells: [
+              "Quality status",
+              "QC status, completeness, limitations, annotation method, and whether the result is final, partial, corrected, or superseded.",
+              "Users need to know whether a shared record is fit for their purpose.",
+              "Low-quality or incomplete data may still have value if QC methods and limitations are visible.",
+            ],
+            sourceIds: ["who-genomic-data-sharing-platforms-2025", "who-sars-cov-2-sequencing-implementation-2021"],
+          },
+          {
+            cells: [
+              "Access model",
+              "Anonymous access, registered user, vetted user, restricted access, closed access, project workspace, or restriction by data type or platform function.",
+              "Access controls should match purpose, sensitivity, governance and trust requirements.",
+              "Openness has public-health value, but it is not unconditional where confidentiality or risk applies.",
+            ],
+            sourceIds: ["who-genomic-data-sharing-platforms-2025", "cdc-nejm-2019"],
+          },
+          {
+            cells: [
+              "Identifiers and accessions",
+              "Local sample or isolate ID, project or platform ID, BioSample ID, raw-read accession, consensus accession if used, upload date, replacement date and status.",
+              "Accession tracking connects repository records back to local reports, corrections and later reuse.",
+              "APHL gives an NCBI tracking example, not a universal accession schema.",
+            ],
+            sourceIds: ["aphl-ngs-implementation-2016", "who-genomic-data-sharing-platforms-2025"],
+          },
+          {
+            cells: [
+              "Terms, correction and owner",
+              "Licence or terms of use, attribution, benefit-sharing expectations, user responsibilities, correction route, withdrawal route and accountable local owner.",
+              "Shared data need stewardship after release, especially when records are corrected, superseded, withdrawn or questioned by downstream users.",
+              "Local legal, ethical, privacy, data-residency and benefit-sharing review remains required.",
+            ],
+            sourceIds: ["who-pathogen-genome-data-sharing-2022", "who-genomic-data-sharing-platforms-2025"],
+          },
+        ],
+        sourceIds: [
+          "who-pathogen-genome-data-sharing-2022",
+          "who-national-genomic-surveillance-strategy-2023",
+          "who-genomic-data-sharing-platforms-2025",
+          "ecdc-wgs-surveillance-2016",
+          "who-sars-cov-2-sequencing-implementation-2021",
+          "aphl-ngs-implementation-2016",
+          "cdc-nejm-2019",
+          "pha4ge-infrastructure",
+        ],
+      },
+    ],
     audiences: ["policy", "director", "data-manager", "it-security", "lab-lead"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
     organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
@@ -903,7 +999,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     gaps: [
       "Current INSDC/NCBI, GISAID and organism-specific repository templates still need direct extraction before the guide can prescribe repository-specific submission fields.",
-      "The beta decision pathway still needs to be converted into an editable figure or table and checked against jurisdiction-specific legal and ethical requirements.",
+      "The beta decision pathway still needs checking against jurisdiction-specific legal, ethical, privacy, data-residency and benefit-sharing requirements.",
     ],
   },
   {

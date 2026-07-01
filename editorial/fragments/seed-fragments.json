@@ -1296,5 +1296,55 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is a beta field model, not pathogen-specific report wording or thresholds.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-data-sharing-decision-table",
+    "sectionId": "repository-data-sharing",
+    "title": "Beta data-sharing decision table",
+    "kind": "table",
+    "text": "A data-sharing decision should be recorded as a route map rather than a single upload instruction. The beta table separates the public-health purpose, sharing route, data type, metadata, quality status, access model, timing, accession tracking, correction, withdrawal and accountable owner.",
+    "claimIds": [
+      "claim-beta-data-sharing-decision-table",
+      "claim-data-sharing-governed-route",
+      "claim-metadata-identifier-lineage-core"
+    ],
+    "sourceIds": [
+      "who-pathogen-genome-data-sharing-2022",
+      "who-national-genomic-surveillance-strategy-2023",
+      "who-genomic-data-sharing-platforms-2025",
+      "ecdc-wgs-surveillance-2016",
+      "who-sars-cov-2-sequencing-implementation-2021",
+      "aphl-ngs-implementation-2016",
+      "cdc-nejm-2019",
+      "pha4ge-infrastructure"
+    ],
+    "conditions": {
+      "audiences": [
+        "policy",
+        "director",
+        "data-manager",
+        "it-security",
+        "lab-lead",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "data-sharing",
+        "repositories",
+        "governance",
+        "metadata"
+      ]
+    },
+    "order": 31,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This table is a beta route map. It must not be read as legal, ethical or repository-specific submission advice.",
+    "updatedAt": "2026-07-01"
   }
 ]

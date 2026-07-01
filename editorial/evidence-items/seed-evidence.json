@@ -589,5 +589,16 @@
     "tags": ["reporting", "enteric-bacteria", "respiratory-viruses", "metadata", "source-attribution", "variant-monitoring"],
     "limitations": "Supports beta reporting fields and cautions for enteric and respiratory-virus services. It does not define pathogen-specific report templates, cluster thresholds, lineage nomenclature rules or repository-required fields.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-beta-data-sharing-decision-table",
+    "sourceId": "who-genomic-data-sharing-platforms-2025",
+    "sourceLocator": "WHO 2022 data-sharing principles; WHO 2023 national strategy support tool; WHO 2025 genomic data-sharing platform attributes; ECDC 2016 WGS public-health surveillance guidance; WHO 2021 SARS-CoV-2 sequencing implementation guide; APHL 2016 NGS implementation guide",
+    "evidenceType": "passage-note",
+    "excerpt": "timely, ethical, equitable, efficient and effective",
+    "passageSummary": "WHO's data-sharing principles frame pathogen genome data sharing as a public-health activity that should be timely, ethical, equitable, efficient and effective. WHO's national strategy support tool asks countries to define a data-sharing policy and possible national database linked to public sequence databases. WHO's 2025 platform guidance lists governance, infrastructure and security, data scope, submission, curation, access, provenance, interoperability, data use, benefit sharing, analytical/reporting capabilities and sustainability as platform attributes. ECDC separates non-confidential minimum metadata for public databases from sensitive data restricted to competent authorities. WHO SARS-CoV-2 guidance distinguishes consensus genomes, partial genomes and raw reads. APHL describes NCBI BioSample and SRA accession tracking after quality-checked submission.",
+    "tags": ["data-sharing", "decision-table", "governance", "repositories", "metadata", "accessions"],
+    "limitations": "Supports a beta decision pathway. It does not replace local legal, ethical, privacy, data-protection, data-residency or benefit-sharing review.",
+    "reviewStatus": "reviewed"
   }
 ]
