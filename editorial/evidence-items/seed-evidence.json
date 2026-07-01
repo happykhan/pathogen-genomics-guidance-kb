@@ -1123,7 +1123,7 @@
     "directQuote": "workforce, laboratories, data and analytics capabilities"
   },
   {
-    "id": "evidence-beta-local-infrastructure-resilience",
+    "id": "evidence-local-infrastructure-resilience",
     "sourceId": "pha4ge-infrastructure",
     "sourceLocator": "PHA4GE source pack rough disaster-recovery and power/cooling notes; PHE implementation case study IT infrastructure sections; WHO 2023 data-management and storage sections",
     "evidenceType": "passage-note",
@@ -1138,7 +1138,7 @@
       "on-premises",
       "business-continuity"
     ],
-    "limitations": "The PHA4GE disaster-recovery and power/cooling notes are rough source material. This supports beta checklist questions for local infrastructure resilience, not formal facilities standards, UPS sizing rules, generator specifications, RTO/RPO targets or business-continuity policy.",
+    "limitations": "The PHA4GE disaster-recovery and power/cooling notes are rough source material. This supports checklist questions for local infrastructure resilience, not formal facilities standards, UPS sizing rules, generator specifications, RTO/RPO targets or business-continuity policy.",
     "reviewStatus": "reviewed",
     "directQuote": "secure access-controlled server rooms"
   },

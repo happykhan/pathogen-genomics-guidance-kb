@@ -904,11 +904,11 @@
     "reviewStatus": "reviewed"
   },
   {
-    "id": "claim-beta-local-infrastructure-resilience",
+    "id": "claim-local-infrastructure-resilience",
     "sourceId": "pha4ge-infrastructure",
     "sourceLocator": "PHA4GE source pack rough disaster-recovery and power/cooling notes; PHE case study IT infrastructure sections; WHO 2023 national strategy support tool",
     "evidenceItemIds": [
-      "evidence-beta-local-infrastructure-resilience",
+      "evidence-local-infrastructure-resilience",
       "evidence-who-2023-storage-backup-retention",
       "evidence-phe-it-storage-scalability",
       "evidence-pha4ge-data-flow-iam-responsibility"

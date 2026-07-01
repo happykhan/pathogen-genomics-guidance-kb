@@ -186,9 +186,11 @@
       "Do not give storage-size rules without explicitly marking them as context-specific."
     ],
     "preferredClaimIds": [
-      "claim-pha4ge-operating-questions",
-      "claim-phe-service-transition",
-      "claim-who-national-strategy-value-chain"
+      "claim-storage-backup-retention-policy",
+      "claim-infrastructure-recurrent-responsibility",
+      "claim-local-infrastructure-resilience",
+      "claim-metadata-identifier-lineage-core",
+      "claim-costing-recurrent-service-categories"
     ],
     "conditionalVariantsNeeded": [
       "Unreliable internet should raise local recovery and offline-first considerations.",
@@ -196,13 +198,17 @@
       "High-throughput or national-scale profiles should see cost-growth and lifecycle-management detail."
     ],
     "figuresTablesWanted": [
-      "Storage, backup, archive, and retention distinction table."
+      "Minimal storage, backup and archive distinction figure.",
+      "Storage, backup, archive and recovery map.",
+      "Retention and recovery target worksheet.",
+      "Backup restore-drill record.",
+      "Local infrastructure resilience checklist."
     ],
     "knownGaps": [
       "Need public-health retention-policy sources before prescribing retention periods."
     ],
-    "reviewNotes": "This should stay practical and avoid fake precision.",
-    "reviewStatus": "draft"
+    "reviewNotes": "Reviewed as the first vertical slice for the evidence-to-fragment-to-compiled-whitepaper workflow. It should stay practical and avoid false precision.",
+    "reviewStatus": "reviewed"
   },
   {
     "id": "brief-implementation-patterns-case-studies",

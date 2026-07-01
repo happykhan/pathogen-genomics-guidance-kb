@@ -100,6 +100,21 @@ export type WhitepaperFragment = {
   title?: string;
   kind: "paragraph" | "exampleBox" | "checklist" | "table" | "figure" | "gap";
   text: string;
+  table?: {
+    summary?: string;
+    columns: string[];
+    rows: {
+      cells: string[];
+      sourceIds?: string[];
+    }[];
+    sourceIds?: string[];
+  };
+  figure?: {
+    imageSrc: string;
+    alt: string;
+    caption?: string;
+    sourceIds?: string[];
+  };
   claimIds: string[];
   sourceIds: string[];
   conditions?: ProfileCondition;

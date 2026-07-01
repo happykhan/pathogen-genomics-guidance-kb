@@ -17,6 +17,7 @@ source document
   -> section synthesis brief
   -> draft fragments
   -> reviewed fragments
+  -> compiled guidance section
   -> dynamic whitepaper
 ```
 
@@ -35,6 +36,7 @@ Example: validation before replacing established methods.
 | Section synthesis brief | `editorial/section-briefs/*.json` | Editorial instructions for a whitepaper section: purpose, must-cover points, do-not-claim rules, preferred claims, conditionals, figures, and gaps. |
 | Draft fragments | `editorial/fragments/*.json` | Paragraphs, boxes, tables, figures, or gap fragments generated from approved claim cards and section briefs. |
 | Reviewed fragments | `editorial/fragments/*.json` with `reviewStatus: "reviewed"` | Content approved for later public compilation into the dynamic whitepaper. |
+| Compiled guidance section | `outputs/compiled-guidance-blocks/*.json` | Static compiled section assembled from reviewed fragments, structured tables and figures, linked claims, evidence items, source IDs, profile conditions, and gaps. |
 | Current structured guidance block | `src/data/guidanceBlocks.ts` / `quality-validation-before-switch` | Existing public-facing prose, source IDs, paragraph-level `bodySourceIds`, technical detail, audiences, topics, and gaps. |
 | Source registry | `src/data/sources.ts` | Stable source ID and source-card path used by citations and API output. |
 | Rendered guide | `src/components/GuidanceRenderer.tsx` | Inline citations, numbered references, source status, technical details, and gap notes. |
@@ -68,8 +70,9 @@ Editorial object statuses:
 7. Update relevant section briefs under `editorial/section-briefs/`.
 8. Create or regenerate draft fragments under `editorial/fragments/`.
 9. Review fragments locally with `npm run editorial:review`.
-10. Use source IDs in public guidance only where the prose is directly supported.
-11. Run `npm run content:check`.
+10. Compile reviewed fragments with `npm run guidance:compile`.
+11. Use source IDs in public guidance only where the prose is directly supported.
+12. Run `npm run content:check`.
 
 ## Evidence Items, Direct Quotes, And Claim Cards
 
@@ -111,6 +114,30 @@ Approve a fragment only when layer 1 supports layer 2, and layer 2 supports laye
 6. Add a gap when a runbook, model, figure, field list, or numeric estimate is not yet source-backed.
 7. Approve fragments locally before they are compiled into the public whitepaper.
 8. Check the web guide and print output if the change affects document structure.
+
+## Compiling Reviewed Fragments
+
+Run:
+
+```bash
+npm run guidance:compile
+```
+
+By default this compiles the storage, backup, archive and retention section into:
+
+```text
+outputs/compiled-guidance-blocks/storage-backup-archive-retention.json
+```
+
+The compiled file is an editorial handoff artifact, not a replacement for public rendering yet. It contains the reviewed fragments in section order, table and figure payloads, profile conditions, claim IDs, evidence item IDs, source IDs, direct quotes in the evidence chain, and known gaps. This makes one complete vertical slice inspectable before wiring the compiler into the public guide.
+
+To compile a specific section:
+
+```bash
+node scripts/compile-guidance-fragments.mjs storage-backup-archive-retention
+```
+
+The storage slice is the first worked example. It starts from reviewed evidence items for WHO 2023 storage policy, the PHE implementation case study, and PHA4GE infrastructure material; maps them to storage and local-resilience claim cards; applies the reviewed section synthesis brief; and emits reviewed paragraph, table, and figure fragments.
 
 ## Local Fragment Review
 
