@@ -2,10 +2,10 @@
   {
     "id": "claim-who-strategy-integrated-surveillance",
     "sourceId": "who-genomic-surveillance-2022",
-    "sourceLocator": "knowledge-base/source-cards/who-global-genomic-surveillance-strategy-2022.md",
+    "sourceLocator": "WHO 2022 global genomic surveillance strategy, goal and objectives section, pp. 4-9",
     "evidenceItemIds": ["evidence-who-2022-strategy-public-health-integration"],
     "claim": "Genomic surveillance has public-health value when it is integrated into preparedness, surveillance, and response systems rather than treated as a stand-alone sequencing activity.",
-    "extractedText": "Source evidence note: strategy sections describe genomic surveillance as part of preparedness, detection, response, monitoring pathogen evolution, data sharing, connectivity, and emergency readiness.",
+    "extractedText": "WHO frames genomic surveillance as part of broader surveillance and laboratory systems and links it to quality, timely and appropriate public-health action, data sharing, connectivity, workforce, and emergency readiness.",
     "notes": "Use for the opening value-case framing and decision-use sections.",
     "tags": ["value-case", "surveillance", "preparedness", "decision-use"],
     "candidateSectionIds": ["why-pathogen-genomics", "framing-public-health-use", "reporting-decision-use"],
@@ -14,21 +14,29 @@
     "implementationStage": "multiple",
     "confidence": "high",
     "limitations": "Broad strategic source; does not provide local implementation detail or cost estimates.",
-    "reviewStatus": "draft"
+    "reviewStatus": "reviewed"
   },
   {
     "id": "claim-phe-service-transition",
     "sourceId": "phe-case-study",
     "sourceLocator": "knowledge-base/source-cards/phe-implementing-pathogen-genomics-case-study.md",
-    "evidenceItemIds": ["evidence-phe-colindale-service-chain", "evidence-phe-implementation-scope"],
+    "evidenceItemIds": [
+      "evidence-phe-colindale-service-chain",
+      "evidence-phe-implementation-scope",
+      "evidence-phe-end-to-end-service",
+      "evidence-phe-public-health-value"
+    ],
     "claim": "Implementing pathogen genomics as a public-health service changes laboratory workflows, reporting, accreditation, staffing, IT infrastructure, LIMS integration, validation, and user engagement.",
     "extractedText": "Source evidence note: PHE case study sections on the Colindale WGS service, implementation planning, validation, accreditation, workforce, reporting, and public-health impact.",
     "notes": "Strong implementation example for explaining that infrastructure is an operating model, not just servers.",
     "tags": ["implementation", "service-transition", "lims", "validation", "workforce", "infrastructure"],
     "candidateSectionIds": [
       "why-pathogen-genomics",
+      "framing-public-health-use",
+      "data-lifecycle-sample-to-report",
       "infrastructure-operating-model",
       "quality-validation-before-switch",
+      "implementation-patterns-case-studies",
       "workforce-sustainability-costing"
     ],
     "organism": "enteric-bacteria",
@@ -59,12 +67,19 @@
     "id": "claim-who-national-strategy-value-chain",
     "sourceId": "who-national-genomic-surveillance-strategy-2023",
     "sourceLocator": "knowledge-base/source-cards/who-national-genomic-surveillance-strategy-2023.md",
-    "evidenceItemIds": ["evidence-who-2023-value-chain", "evidence-who-2023-data-management"],
+    "evidenceItemIds": [
+      "evidence-who-2023-value-chain",
+      "evidence-who-2023-use-case-definition",
+      "evidence-who-2023-sampling-turnaround",
+      "evidence-who-2023-data-management"
+    ],
     "claim": "A national genomic surveillance strategy should define priority use cases, data users, sample and metadata flows, analysis, interpretation, sharing, and return of results.",
-    "extractedText": "Source evidence note: WHO value-chain figure links priority use cases with sample/data collection, sequencing, bioinformatics analysis, public-health analysis, interpretation, data publication, and result sharing.",
+    "extractedText": "WHO places priority use cases at the start of the genomic surveillance value chain and connects objectives, users, sampling strategy, sample and metadata collection, sequencing, analysis, interpretation, data publication, result sharing, and public-health action.",
     "tags": ["strategy", "data-lifecycle", "metadata", "reporting", "sharing"],
     "candidateSectionIds": [
       "framing-public-health-use",
+      "use-case-service-model",
+      "sampling-programme-design",
       "data-lifecycle-sample-to-report",
       "metadata-identifier-lineage",
       "reporting-decision-use"
@@ -77,12 +92,57 @@
     "reviewStatus": "reviewed"
   },
   {
+    "id": "claim-armstrong-data-integration-workflows",
+    "sourceId": "cdc-nejm-2019",
+    "sourceLocator": "Armstrong et al. 2019, sections on bacterial foodborne illness, data integration, and NGS workflows",
+    "evidenceItemIds": ["evidence-armstrong-resolution-integration-workflows"],
+    "claim": "The practical value of pathogen genomics depends on integrating higher-resolution sequence results with epidemiological data, workflow management, storage, and secure information sharing.",
+    "extractedText": "Armstrong et al. describe WGS as higher-resolution than PFGE and state that pathogen genomic data need integration with epidemiological data, workflow management, storage, and secure sharing to realise their public-health value.",
+    "notes": "Use to avoid presenting sequencing as sufficient on its own.",
+    "tags": ["value-case", "data-integration", "workflow", "public-health", "secure-sharing"],
+    "candidateSectionIds": [
+      "why-pathogen-genomics",
+      "framing-public-health-use",
+      "data-lifecycle-sample-to-report",
+      "metadata-identifier-lineage",
+      "workflow-reproducibility"
+    ],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "multiple",
+    "confidence": "high",
+    "limitations": "Review source; needs implementation sources for concrete local runbooks.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "claim-who-sampling-representativeness-turnaround",
+    "sourceId": "who-national-genomic-surveillance-strategy-2023",
+    "sourceLocator": "WHO 2023 national genomic surveillance strategy support tool, section 2.2 principles",
+    "evidenceItemIds": ["evidence-who-2023-sampling-turnaround"],
+    "claim": "Sampling strategy, representativeness, turnaround time, data quality, metadata completeness, and public-health reporting should be designed together because each affects how genomic data can be interpreted and used.",
+    "extractedText": "WHO identifies multisource integration, representative sampling, quick turnaround, data quality, metadata completeness, and public-health reporting as linked strategy and data-management considerations.",
+    "notes": "Use for sampling and lifecycle sections; do not infer organism-specific thresholds.",
+    "tags": ["sampling", "representativeness", "turnaround", "metadata", "reporting", "quality"],
+    "candidateSectionIds": [
+      "sampling-programme-design",
+      "data-lifecycle-sample-to-report",
+      "metadata-identifier-lineage",
+      "reporting-decision-use"
+    ],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "multiple",
+    "confidence": "high",
+    "limitations": "Does not provide organism-specific sampling fractions, turnaround targets, or QC thresholds.",
+    "reviewStatus": "reviewed"
+  },
+  {
     "id": "claim-price-economic-review-heterogeneous",
     "sourceId": "wgs-economic-review",
-    "sourceLocator": "knowledge-base/source-cards/wgs-economic-evaluation-review.md",
+    "sourceLocator": "Price et al. 2023, abstract and discussion of systematic review of WGS economic evaluations",
     "evidenceItemIds": ["evidence-price-economic-review-context"],
     "claim": "Published economic evaluations generally support bacterial WGS surveillance on economic grounds, but the evidence is heterogeneous and stronger in high-income hospital and foodborne-surveillance settings than in low- and middle-income implementation contexts.",
-    "extractedText": "Source evidence note: source card summarises the review's finding that included studies supported WGS on economic grounds, with heterogeneity and limited LMIC evidence.",
+    "extractedText": "Price et al. included 9 studies after screening 681 records and 49 full texts. All included studies supported WGS surveillance on economic grounds, but the evidence was heterogeneous and limited for low- and middle-income country implementation and real-world effectiveness.",
     "tags": ["economics", "cost-effectiveness", "evidence-gap", "value-case"],
     "candidateSectionIds": ["why-pathogen-genomics", "workforce-sustainability-costing"],
     "organism": "enteric-bacteria",
@@ -90,7 +150,7 @@
     "implementationStage": "multiple",
     "confidence": "medium",
     "limitations": "Does not justify a universal return-on-investment claim.",
-    "reviewStatus": "draft"
+    "reviewStatus": "reviewed"
   },
   {
     "id": "claim-mgen-bioinformatics-implementation",

@@ -7,7 +7,7 @@
 
 ## Status
 
-`candidate source; full text available locally; high-level extraction`
+`source-backed; full text available locally; high-level extraction`
 
 ## Relevance
 
@@ -29,6 +29,7 @@ This source supports the high-level public-health rationale for pathogen genomic
 ## Current Use In App
 
 - `src/data/guidanceBlocks.ts`: `why-pathogen-genomics`
+- `editorial/evidence-items/seed-evidence.json`: source-text-backed evidence for the opening public-health value claim.
 
 ## Gaps
 

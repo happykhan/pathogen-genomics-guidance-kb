@@ -7,7 +7,7 @@
 - PMCID: PMC9997737.
 - Public full text: <https://pmc.ncbi.nlm.nih.gov/articles/PMC9997737/>.
 - Public PDF: <https://pmc.ncbi.nlm.nih.gov/articles/PMC9997737/pdf/mgen-9-947.pdf>.
-- Local PDF: not committed. Command-line PDF fetch returned a PMC download-preparation page during this update, so use the public full-text URL for extraction unless a real local PDF is provided later.
+- Local PDF: not committed. Command-line PDF fetch returned a PMC download-preparation page during this update, so extraction used the public full-text HTML rather than a committed PDF.
 
 ## Status
 
@@ -41,6 +41,7 @@ This paper is directly useful for the guide's economic value case. It reviews ec
 - `src/data/guidanceBlocks.ts`: `investment-case-assumptions`.
 - `src/data/guidanceBlocks.ts`: `costing-recurrent`.
 - `src/data/resources.ts`: `wgs-economic-review`.
+- `editorial/evidence-items/seed-evidence.json`: passage-level evidence for economic-review limits.
 - Synthesis note: `knowledge-base/extracted-notes/economic-value-and-costing-synthesis.md`.
 
 ## Gaps

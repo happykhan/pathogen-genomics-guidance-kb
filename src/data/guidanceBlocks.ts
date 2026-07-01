@@ -192,6 +192,37 @@ export const guidanceBlocks: GuidanceBlock[] = [
     sourceIds: ["who-national-genomic-surveillance-strategy-2023", "cdc-nejm-2019", "phe-case-study"],
   },
   {
+    id: "use-case-service-model",
+    title: "Define the use case and service model",
+    summary:
+      "The first design decision is the public-health service being built: who needs the result, how quickly, for what decision, and with what response route.",
+    sourceStatus: "partial",
+    body: [
+      "Before choosing a platform, workflow engine, or storage model, the programme should define the service it is trying to operate. The minimum description is the public-health use case, the users of the result, the sampling strategy, the expected output, the turnaround need, and the action that should follow.",
+      "WHO places priority genomic surveillance use cases at the start of the national genomic surveillance value chain. For each disease or public-health priority, the role of genomic surveillance should be described through objectives, data users, sampling strategy, analysis, result sharing, and intended outcomes.",
+      "This distinction matters because the same sequencing capacity can support different services. Routine surveillance may prioritise representative sampling, repeatable reporting, and trend analysis. Outbreak response may prioritise speed, controlled operational sharing, and incident review. Repository submission may prioritise metadata completeness and accession tracking. Research support may prioritise flexible analysis, but it should not be presented as validated public-health reporting unless that boundary has been defined.",
+      "A useful service model names the product as well as the technology. The product might be a sample-level result, an outbreak alert, a weekly surveillance summary, an AMR report, a dashboard, a repository submission, or an annual review. Each product implies different requirements for QC, metadata, interpretation, access, retention, and user support.",
+    ],
+    bodySourceIds: {
+      0: ["who-national-genomic-surveillance-strategy-2023", "cdc-nejm-2019"],
+      1: ["who-national-genomic-surveillance-strategy-2023"],
+      2: ["who-national-genomic-surveillance-strategy-2023", "phe-case-study", "cdc-nejm-2019"],
+      3: ["who-national-genomic-surveillance-strategy-2023", "phe-case-study"],
+    },
+    technicalDetail: [
+      "Minimum service-model fields: pathogen or programme, use case, data users, sampling route, expected output, turnaround target, validation boundary, reporting route, data-sharing route, owner of follow-up action, and fallback when the result is delayed or inconclusive.",
+    ],
+    audiences: ["director", "policy", "lab-lead", "bioinformatician", "data-manager", "it-security", "funder", "all"],
+    implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
+    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
+    topics: ["use-case", "service-model", "decision-use", "sampling", "reporting", "validation"],
+    detailLevel: "operational",
+    sourceIds: ["who-national-genomic-surveillance-strategy-2023", "cdc-nejm-2019", "phe-case-study"],
+    gaps: [
+      "The guide still needs a source-backed service-model table comparing routine surveillance, outbreak response, AMR monitoring, repository submission, clinical support, and research support.",
+    ],
+  },
+  {
     id: "sampling-programme-design",
     title: "Plan sampling strategy and programme design",
     summary:

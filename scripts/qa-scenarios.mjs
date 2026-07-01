@@ -107,8 +107,8 @@ function expectPenalty(label, scorer, targetId, profile, minimumDelta = 1) {
 
 function topGuidanceIds(profile, limit = 5) {
   return guidanceBlocks
-    .map((block) => ({ id: block.id, score: scoreGuidanceBlock(block, profile) }))
-    .sort((left, right) => right.score - left.score || left.id.localeCompare(right.id))
+    .map((block, index) => ({ id: block.id, index, score: scoreGuidanceBlock(block, profile) }))
+    .sort((left, right) => right.score - left.score || left.index - right.index)
     .slice(0, limit)
     .map((entry) => entry.id);
 }
@@ -221,7 +221,7 @@ const representativeProfiles = [
   {
     label: "mixed team exploring infrastructure options",
     profile: defaultProfile,
-    expectedTopGuidance: ["infrastructure-operating-model", "implementation-model-dependencies"],
+    expectedTopGuidance: ["use-case-service-model", "infrastructure-operating-model"],
   },
 ];
 

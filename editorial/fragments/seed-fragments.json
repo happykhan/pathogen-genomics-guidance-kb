@@ -6,7 +6,9 @@
     "kind": "paragraph",
     "text": "Pathogen genomics is useful when higher-resolution evidence changes public-health action: detecting linked cases, ruling clusters in or out, monitoring pathogen evolution, supporting antimicrobial-resistance surveillance, and helping teams decide where to investigate or intervene.",
     "claimIds": [
-      "claim-who-strategy-integrated-surveillance"
+      "claim-who-strategy-integrated-surveillance",
+      "claim-armstrong-data-integration-workflows",
+      "claim-phe-service-transition"
     ],
     "sourceIds": [
       "who-genomic-surveillance-2022",
@@ -35,8 +37,8 @@
       ]
     },
     "order": 10,
-    "reviewStatus": "draft",
-    "reviewerNotes": "Good candidate for public opening, but keep draft until claim-who-strategy-integrated-surveillance is backed by reviewed source-text evidence.",
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "Reviewed after WHO 2022, Armstrong 2019, and PHE evidence items were backed by source-text locators.",
     "updatedAt": "2026-07-01"
   },
   {
@@ -69,8 +71,8 @@
       ]
     },
     "order": 20,
-    "reviewStatus": "draft",
-    "reviewerNotes": "Keep as a director-facing paragraph after source review. Needs reviewed economic-review claim before approval.",
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "Reviewed after Price et al. economic-review evidence was converted from source-card summary to passage-level evidence.",
     "updatedAt": "2026-07-01"
   },
   {
@@ -164,6 +166,101 @@
     "order": 10,
     "reviewStatus": "reviewed",
     "reviewerNotes": "Candidate for core lifecycle prose.",
+    "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-use-case-service-model-core",
+    "sectionId": "use-case-service-model",
+    "title": "Use case before platform",
+    "kind": "paragraph",
+    "text": "Before choosing a platform, workflow engine, or storage model, the programme should define the service it is trying to operate. The minimum description is the public-health use case, the users of the result, the sampling strategy, the expected output, the turnaround need, and the action that should follow.",
+    "claimIds": [
+      "claim-who-national-strategy-value-chain",
+      "claim-armstrong-data-integration-workflows"
+    ],
+    "sourceIds": [
+      "who-national-genomic-surveillance-strategy-2023",
+      "cdc-nejm-2019"
+    ],
+    "conditions": {
+      "audiences": [
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ]
+    },
+    "order": 10,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "Foundation fragment for the service-model section.",
+    "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-sampling-representativeness-core",
+    "sectionId": "sampling-programme-design",
+    "title": "Sampling defines interpretation",
+    "kind": "paragraph",
+    "text": "A genomic result can only answer the question supported by the samples entering the system. Sampling strategy, representativeness, turnaround time, data quality, metadata completeness, and reporting route should therefore be designed together, not treated as separate technical details.",
+    "claimIds": [
+      "claim-who-sampling-representativeness-turnaround"
+    ],
+    "sourceIds": [
+      "who-national-genomic-surveillance-strategy-2023"
+    ],
+    "conditions": {
+      "audiences": [
+        "all"
+      ],
+      "topics": [
+        "sampling",
+        "metadata",
+        "reporting"
+      ]
+    },
+    "order": 10,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "General sampling principle only. Organism-specific sampling details remain gaps.",
+    "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-lifecycle-data-asset-core",
+    "sectionId": "data-lifecycle-sample-to-report",
+    "title": "Data asset, not one report",
+    "kind": "paragraph",
+    "text": "A routine genomics service should maintain a data asset that can feed more than one product: sample-level reports, outbreak alerts, surveillance summaries, repository submissions, quality review, and later reanalysis. This requires preserved links between sample identifiers, metadata, sequence data, QC outputs, workflow runs, interpreted results, reports, and sharing events.",
+    "claimIds": [
+      "claim-who-national-strategy-value-chain",
+      "claim-phe-service-transition",
+      "claim-armstrong-data-integration-workflows"
+    ],
+    "sourceIds": [
+      "who-national-genomic-surveillance-strategy-2023",
+      "phe-case-study",
+      "cdc-nejm-2019"
+    ],
+    "conditions": {
+      "audiences": [
+        "lab-lead",
+        "bioinformatician",
+        "data-manager",
+        "it-security",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ]
+    },
+    "order": 20,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "Central fragment for sample-to-decision service framing.",
     "updatedAt": "2026-07-01"
   }
 ]

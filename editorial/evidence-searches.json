@@ -73,7 +73,7 @@
   {
     "sourceId": "wgs-economic-review",
     "title": "Price et al. WGS economic evaluation review",
-    "localTextPath": "",
+    "localTextPath": "tmp/pdfs/source-extracts/mgen-9-947-html.txt",
     "candidateSectionIds": ["why-pathogen-genomics", "workforce-sustainability-costing"],
     "searches": [
       {
