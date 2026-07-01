@@ -1863,6 +1863,85 @@ export const guidanceBlocks: GuidanceBlock[] = [
           "who-genomics-costing-tool-manual-2024",
         ],
       },
+      {
+        title: "Beta responsibility variants by implementation model",
+        summary:
+          "Use this table to adapt the responsibility template to the service model. The rows identify likely ownership patterns, not staffing ratios.",
+        columns: ["Implementation model", "Responsibilities to make explicit", "Roles or partners commonly involved", "Main risk if unnamed"],
+        rows: [
+          {
+            cells: [
+              "Pilot or proof of service",
+              "Who runs the workflow, records versions, checks QC, stores data, writes the test report, and decides whether the pilot can move into routine use.",
+              "Pilot lead, laboratory scientist, bioinformatician, quality lead, data manager, service user and programme sponsor.",
+              "The pilot works because one person knows the details, but the programme cannot repeat, validate or support it as a service.",
+            ],
+            sourceIds: [
+              "aphl-ngs-implementation-2016",
+              "clinical-microbiology-implementation-2026",
+              "who-genomics-costing-tool-manual-2024",
+            ],
+          },
+          {
+            cells: [
+              "Routine single-pathogen service",
+              "Sample receipt, sequencing, QC review, validated workflow operation, report release, repository submission, user support, incident handling and recurrent budget.",
+              "Laboratory service lead, bioinformatics owner, quality manager, data manager, reporting scientist, IT support and finance or procurement owner.",
+              "A routine service becomes dependent on informal cover, unclear report ownership or unbudgeted maintenance.",
+            ],
+            sourceIds: ["phe-case-study", "clinical-microbiology-implementation-2026", "who-genomics-costing-tool-manual-2024"],
+          },
+          {
+            cells: [
+              "National or regional network",
+              "Shared methods, training, proficiency testing or EQA, data-sharing agreements, platform governance, user feedback, escalation and evaluation.",
+              "National public-health agency, participating laboratories, governance committees, pathogen working groups, data platform owner and training or support teams.",
+              "Different sites generate data that cannot be compared, governed, supported or interpreted consistently.",
+            ],
+            sourceIds: [
+              "auspathogen-implementation-2025",
+              "australia-microbial-genomics-framework-2025",
+              "mgen-california-covidnet-2023",
+              "who-genomic-surveillance-progress-2023",
+            ],
+          },
+          {
+            cells: [
+              "Managed platform or SaaS-style service",
+              "Which workflow, storage, access, support and recovery tasks are delegated; which validation, interpretation, governance and user-support tasks remain local.",
+              "Platform provider, local service owner, bioinformatics or data lead, IT/security owner, quality lead and reporting or interpretation owner.",
+              "The platform runs analysis, but no local owner accepts responsibility for validation boundary, access, reporting, correction or continuity.",
+            ],
+            sourceIds: ["pha4ge-infrastructure", "clinical-microbiology-implementation-2026", "who-genomics-costing-tool-manual-2024"],
+          },
+          {
+            cells: [
+              "Hybrid, collaborative or externally supported model",
+              "Which tasks are local, central, academic, regional or external; how data move; who signs off reports; and how local capability will be built.",
+              "Local laboratory, central reference service, academic or external partner, regional network, data-governance owner, training lead and programme sponsor.",
+              "External support helps delivery but leaves real-time interpretation, turnaround, data access or sustainability fragile.",
+            ],
+            sourceIds: [
+              "clinical-microbiology-implementation-2026",
+              "auspathogen-implementation-2025",
+              "east-africa-genomics-landscape-2024",
+              "pha4ge-infrastructure",
+            ],
+          },
+        ],
+        sourceIds: [
+          "aphl-ngs-implementation-2016",
+          "phe-case-study",
+          "clinical-microbiology-implementation-2026",
+          "pha4ge-infrastructure",
+          "auspathogen-implementation-2025",
+          "australia-microbial-genomics-framework-2025",
+          "east-africa-genomics-landscape-2024",
+          "mgen-california-covidnet-2023",
+          "who-genomic-surveillance-progress-2023",
+          "who-genomics-costing-tool-manual-2024",
+        ],
+      },
     ],
     audiences: ["director", "policy", "funder", "lab-lead", "bioinformatician"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
@@ -1883,9 +1962,11 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "mgen-kenya-amr-genomics-capacity-2023",
       "mgen-eurl-wgs-rollout-europe-2023",
       "mgen-california-covidnet-2023",
+      "auspathogen-implementation-2025",
+      "australia-microbial-genomics-framework-2025",
     ],
     gaps: [
-      "The beta responsibility template still needs model-specific variants for pilot, routine single-pathogen service, national network, managed-platform, and hybrid models.",
+      "The beta responsibility variants still need review against real programme examples and local organisational structures.",
       "The guide still needs source-backed staffing ratios or FTE examples by service scale, throughput, organism focus, and implementation model.",
       "Detailed training curricula and competency-assessment templates need extraction from APHL, PulseNet, WHO, ECDC and national programme sources.",
     ],

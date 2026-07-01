@@ -1546,5 +1546,58 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is a category map. Retention periods, RTO, RPO and deletion rules remain jurisdiction-specific gaps.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-model-specific-responsibility-variants",
+    "sectionId": "workforce-sustainability-costing",
+    "title": "Beta model-specific responsibility variants",
+    "kind": "table",
+    "text": "The same service functions appear in every implementation model, but the accountable owner changes. For beta, compare responsibility variants for pilot, routine single-pathogen service, national network, managed-platform and hybrid or collaborative models before assigning staffing or procurement.",
+    "claimIds": [
+      "claim-beta-workforce-responsibility-template",
+      "claim-beta-implementation-dependency-matrix",
+      "claim-infrastructure-recurrent-responsibility"
+    ],
+    "sourceIds": [
+      "aphl-ngs-implementation-2016",
+      "phe-case-study",
+      "clinical-microbiology-implementation-2026",
+      "pha4ge-infrastructure",
+      "auspathogen-implementation-2025",
+      "australia-microbial-genomics-framework-2025",
+      "east-africa-genomics-landscape-2024",
+      "mgen-california-covidnet-2023",
+      "who-genomic-surveillance-progress-2023",
+      "who-genomics-costing-tool-manual-2024"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "policy",
+        "funder",
+        "lab-lead",
+        "bioinformatician",
+        "it-security",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "workforce",
+        "responsibility-model",
+        "implementation-model",
+        "sustainability"
+      ]
+    },
+    "order": 31,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a responsibility variant table, not a staffing ratio or procurement recommendation.",
+    "updatedAt": "2026-07-01"
   }
 ]
