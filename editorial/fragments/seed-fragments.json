@@ -3472,5 +3472,61 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is a beta boundary table. It does not prescribe organism-specific thresholds, validation sample sizes, exact nomenclature rules, legal reportability, or clinical decision rules.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-project-to-service-transition",
+    "sectionId": "use-case-service-model",
+    "title": "When a project becomes a service",
+    "kind": "table",
+    "text": "The guide should distinguish retrospective, project-led or research-style sequencing from prospective service operation. Moving into routine public-health use changes the trigger for sequencing, failure handling, output definition, validation boundary, responsibility model and improvement loop.",
+    "claimIds": [
+      "claim-service-model-choices",
+      "claim-lifecycle-service-loop",
+      "claim-quality-validation-whole-chain",
+      "claim-release-change-control-validation",
+      "claim-workforce-support-service-core",
+      "claim-costing-recurrent-service-categories"
+    ],
+    "sourceIds": [
+      "who-national-genomic-surveillance-strategy-2023",
+      "ecdc-wgs-surveillance-2016",
+      "phe-case-study",
+      "aphl-ngs-implementation-2016",
+      "clinical-microbiology-implementation-2026",
+      "who-sars-cov-2-sequencing-implementation-2021",
+      "mgen-stec-bioinformatics-validation-2021",
+      "who-genomic-surveillance-progress-2023",
+      "who-genomics-costing-tool-manual-2024"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "policy",
+        "lab-lead",
+        "bioinformatician",
+        "data-manager",
+        "funder",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "upgrading"
+      ],
+      "topics": [
+        "service-model",
+        "implementation",
+        "validation",
+        "operations",
+        "workforce",
+        "continuous-improvement"
+      ]
+    },
+    "order": 52,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta transition checklist. It supports design questions for moving into service operation but does not prescribe legal go-live criteria, staffing ratios or accreditation approval.",
+    "updatedAt": "2026-07-01"
   }
 ]

@@ -694,6 +694,99 @@ export const guidanceBlocks: GuidanceBlock[] = [
           "mgen-centre-specific-typing-ipc-2021",
         ],
       },
+      {
+        title: "When a project becomes a service",
+        summary:
+          "Use this checklist when moving from retrospective, research-led or pilot sequencing into prospective public-health operation.",
+        columns: ["Design question", "Project or retrospective mode", "Routine service mode", "What must change"],
+        rows: [
+          {
+            cells: [
+              "What triggers sequencing?",
+              "Samples may be selected after the event, for method development, research questions, unusual cases or a bounded retrospective review.",
+              "Samples enter through a defined service route: routine surveillance, outbreak response, AMR monitoring, repository submission, clinical support or another owned use case.",
+              "Define inclusion and exclusion rules, sampling frame, expected volume, and the owner who decides whether a sample belongs in the service.",
+            ],
+            sourceIds: ["who-national-genomic-surveillance-strategy-2023", "ecdc-wgs-surveillance-2016"],
+          },
+          {
+            cells: [
+              "How are failures handled?",
+              "Failed samples, low-quality data and ambiguous outputs can often be excluded, revisited later or handled by the investigator who knows the project.",
+              "Failures affect turnaround, surveillance coverage, user trust, repository status and possibly public-health action.",
+              "Create owned exception routes for failed samples, failed runs, missing metadata, ambiguous results, delayed reports and corrected records.",
+            ],
+            sourceIds: ["phe-case-study", "aphl-ngs-implementation-2016", "clinical-microbiology-implementation-2026"],
+          },
+          {
+            cells: [
+              "What is the output?",
+              "Outputs may be exploratory analyses, figures, retrospective clusters, research datasets, publications or internal learning.",
+              "Outputs become service products such as alerts, sample-level reports, cluster briefings, surveillance summaries, dashboards, repository submissions or quality reviews.",
+              "Name the recipient, decision, report route, quality limits, correction route and feedback mechanism for each product.",
+            ],
+            sourceIds: [
+              "who-national-genomic-surveillance-strategy-2023",
+              "who-sars-cov-2-sequencing-implementation-2021",
+              "ecdc-wgs-surveillance-2016",
+              "phe-case-study",
+            ],
+          },
+          {
+            cells: [
+              "What is validated?",
+              "A project may demonstrate technical feasibility or support a bounded analysis without proving every routine reportable output.",
+              "A service needs evidence for the intended use, workflow and database versions, QC rules, interpretation boundary, report wording and revalidation trigger.",
+              "Do not retire older methods or release public-health reports until the validation boundary matches the service output.",
+            ],
+            sourceIds: [
+              "phe-case-study",
+              "aphl-ngs-implementation-2016",
+              "clinical-microbiology-implementation-2026",
+              "mgen-stec-bioinformatics-validation-2021",
+            ],
+          },
+          {
+            cells: [
+              "Who carries responsibility?",
+              "Responsibility may sit with a project lead, analyst or small informal team.",
+              "A service needs named owners for laboratory operation, bioinformatics, metadata, validation, reporting, access, storage, user support, finance and programme oversight.",
+              "Map owners and backups before the service depends on one person, one unmanaged script or one informal support route.",
+            ],
+            sourceIds: [
+              "aphl-ngs-implementation-2016",
+              "phe-case-study",
+              "clinical-microbiology-implementation-2026",
+              "who-genomic-surveillance-progress-2023",
+            ],
+          },
+          {
+            cells: [
+              "How is improvement managed?",
+              "Learning may be captured in publications, project reports, code changes or informal team memory.",
+              "A service needs routine review of volume, failures, turnaround, corrected reports, repository status, user feedback, recurrent cost and open risks.",
+              "Feed review outputs into SOP updates, training, workflow release, metadata design, infrastructure planning and investment decisions.",
+            ],
+            sourceIds: [
+              "who-national-genomic-surveillance-strategy-2023",
+              "phe-case-study",
+              "who-genomics-costing-tool-manual-2024",
+              "clinical-microbiology-implementation-2026",
+            ],
+          },
+        ],
+        sourceIds: [
+          "who-national-genomic-surveillance-strategy-2023",
+          "ecdc-wgs-surveillance-2016",
+          "phe-case-study",
+          "aphl-ngs-implementation-2016",
+          "clinical-microbiology-implementation-2026",
+          "who-sars-cov-2-sequencing-implementation-2021",
+          "mgen-stec-bioinformatics-validation-2021",
+          "who-genomic-surveillance-progress-2023",
+          "who-genomics-costing-tool-manual-2024",
+        ],
+      },
     ],
     audiences: ["director", "policy", "lab-lead", "bioinformatician", "data-manager", "it-security", "funder", "all"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
