@@ -372,6 +372,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "Validation needs to cover the whole service chain: input material, extraction, sequencing, laboratory handling, data quality, analysis outputs, reporting, and troubleshooting. WHO's national strategy support tool also treats data quality, internal consistency, SOPs, and internal and external quality assessment for genomics and analytics as part of data-management design.",
       "The APHL implementation guide and the clinical microbiology implementation review both reinforce that validation is not a final bioinformatics step. Implementation planning has to cover laboratory preparation, information technology, workforce, validation, data quality assurance, analysis tools, reporting, storage, transfer, sharing, interpretation, and external quality assessment or proficiency testing where the setting requires it.",
       "This is not only a laboratory question. Bioinformatics pipelines, reference databases, result interpretation, report generation, and user-facing outputs can all change service behaviour. Where results are used for public-health action, the programme needs evidence that the new process performs as expected before older methods are retired.",
+      "For routine use, QC should be recorded as part of the result context. The clinical microbiology review notes that genomic QC applies across the sequencing and analysis workflow, and that validation requires wet-lab and bioinformatics process validation plus strict software and database version control. WHO's platform guidance adds a useful data-management principle: low-quality or incomplete data may sometimes be useful, but it should be annotated with QC methods and results so users can decide whether it is fit for their purpose.",
       "The Microbial Genomics collection strengthens this section. Ballard et al. explicitly connect public-health, treatment, and legal impacts to validation, quality systems, and accreditation. The European AMR proficiency-testing paper highlights standardization, QC, and data-sharing challenges across laboratories. Multi-laboratory and time-critical sequencing evaluations, harmonisation studies, STEC workflow validation, and AMR prediction discordance all point to the same conclusion: routine genomics needs validation evidence across laboratory and bioinformatics components before results are used for action.",
     ],
     bodySourceIds: {
@@ -379,7 +380,8 @@ export const guidanceBlocks: GuidanceBlock[] = [
       1: ["phe-case-study", "who-national-genomic-surveillance-strategy-2023"],
       2: ["aphl-ngs-implementation-2016", "clinical-microbiology-implementation-2026"],
       3: ["phe-case-study", "who-national-genomic-surveillance-strategy-2023", "clinical-microbiology-implementation-2026"],
-      4: [
+      4: ["clinical-microbiology-implementation-2026", "who-genomic-data-sharing-platforms-2025"],
+      5: [
         "mgen-accreditation-iso-pathogen-genomics-2023",
         "mgen-eurl-amr-proficiency-test-2023",
         "mgen-iseq-multilab-enteric-2022",
@@ -391,6 +393,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     },
     technicalDetail: [
       "In the PHE case study, phase I used 1,538 representative Salmonella samples and phase II compared 6,887 isolates against WGS-determined serotype. The case study reports 97% concordance between WGS and conventional methods.",
+      "Minimum validation record for beta: use case, intended reportable outputs, comparator or reference material, input-material requirements, sequencing-run acceptance criteria, analysis acceptance criteria, workflow and database versions, repeatability and reproducibility checks, known limitations, sign-off role, and trigger for revalidation.",
     ],
     audiences: ["lab-lead", "bioinformatician", "data-manager", "director"],
     implementationStages: ["pilot", "routine-service", "upgrading"],
@@ -403,6 +406,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "pha4ge-infrastructure",
       "aphl-ngs-implementation-2016",
       "clinical-microbiology-implementation-2026",
+      "who-genomic-data-sharing-platforms-2025",
       "mgen-accreditation-iso-pathogen-genomics-2023",
       "mgen-eurl-amr-proficiency-test-2023",
       "mgen-iseq-multilab-enteric-2022",
@@ -411,7 +415,10 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "mgen-stec-bioinformatics-validation-2021",
       "mgen-discordant-amr-predictions-2020",
     ],
-    gaps: ["A reusable pipeline release, rollback, emergency-fix and revalidation runbook still needs full-text extraction from laboratory-quality sources."],
+    gaps: [
+      "A reusable pipeline release, rollback, emergency-fix and revalidation runbook still needs full-text extraction from laboratory-quality sources.",
+      "Organism-specific QC thresholds and reportability rules still need extraction before the guide can prescribe detailed acceptance criteria.",
+    ],
   },
   {
     id: "failure-handling-continuous-improvement",
@@ -423,16 +430,18 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "The ideal sample-to-decision path is not enough for routine service design. Real services have failed samples, failed sequencing runs, insufficient DNA, contaminated or mixed data, missing metadata, delayed analysis, ambiguous clusters, repository submission errors, and reports that need correction or clarification.",
       "Failure handling should connect laboratory process, bioinformatics process, reporting, and quality review. A low-quality sequencing result is not only a technical event; it can affect whether a case is included in surveillance, whether an outbreak signal is investigated, whether a report is delayed, and whether a user needs an explanation.",
       "The PHE case study supports this service view because implementation covered workflow development from sample receipt to reporting, LIMS interaction, validation, quality parameters, accreditation, training, and user engagement. WHO's national strategy support tool also treats data quality, consistency, storage, backup, reporting, and interpretation as part of genomic surveillance data management.",
-      "A practical service should review its own performance over time. Candidate measures include turnaround time, sample and run failure rates, metadata completeness, workflow incidents, report corrections, repository submission success, unresolved access problems, and user feedback. The current source base supports these categories as service concerns, but detailed thresholds and review schedules still need stronger quality-management sources.",
+      "A practical service should review its own performance over time. Candidate measures include turnaround time, sample and run failure rates, metadata completeness, workflow incidents, report corrections, repository submission success, unresolved access problems, and user feedback. These measures should be connected to corrective actions, not only reported as dashboard numbers.",
+      "The guide can now state a beta-level principle: low-quality, incomplete, repeated, corrected, or overridden results should not disappear into the workflow. They should be labelled, reviewed, and linked to the decision taken. WHO's platform guidance supports QC annotation for low-quality or incomplete data; the clinical microbiology review supports local acceptance thresholds, wet-lab and dry-lab QC, version control, and EQA/PT where available.",
     ],
     bodySourceIds: {
       0: ["phe-case-study", "who-national-genomic-surveillance-strategy-2023"],
       1: ["phe-case-study", "clinical-microbiology-implementation-2026"],
       2: ["phe-case-study", "who-national-genomic-surveillance-strategy-2023"],
       3: ["phe-case-study", "aphl-ngs-implementation-2016", "clinical-microbiology-implementation-2026"],
+      4: ["who-genomic-data-sharing-platforms-2025", "clinical-microbiology-implementation-2026"],
     },
     technicalDetail: [
-      "Minimum exception log fields should eventually include sample or isolate identifier, failure point, QC signal, decision taken, person or role responsible, user notification, repeat or override decision, report impact, and closure status. This needs source-backed refinement before being treated as a recommended template.",
+      "Minimum exception log fields for beta: sample or isolate identifier, failure point, QC signal, acceptance threshold affected, workflow or database version, decision taken, person or role responsible, user notification, repeat or override decision, report impact, repository or sharing impact, corrective action, and closure status.",
     ],
     audiences: ["lab-lead", "bioinformatician", "data-manager", "it-security", "director"],
     implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
@@ -444,6 +453,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "who-national-genomic-surveillance-strategy-2023",
       "aphl-ngs-implementation-2016",
       "clinical-microbiology-implementation-2026",
+      "who-genomic-data-sharing-platforms-2025",
     ],
     gaps: [
       "Detailed failure thresholds, service metrics, and review schedules need extraction from laboratory quality-management and accreditation sources.",
@@ -460,6 +470,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "The PHA4GE source links public-health requirements for transparency and portability to containerised bioinformatics workflows expressed in workflow languages or workflow systems.",
       "For routine service, a workflow should be more than a folder of scripts. The programme should know which version is approved, which reference data are used, which parameters are routine defaults, which outputs are reviewed, and which result is released to users.",
       "Workflow-sharing ecosystems can reduce local development effort, but they do not remove local responsibility. A programme still needs to decide who can introduce a workflow, who validates changes, who approves use for reporting, and how older results can be interpreted if software or reference data change.",
+      "The same provenance requirement applies after a workflow is deployed. Routine results should preserve QC status, QC methods, acceptance thresholds, workflow version, software versions, database versions, reference data, and any exception or override. Without that record, reanalysis and change control become guesswork.",
       "The implementation collection gives practical examples of why this matters. Libuit et al. describe public-health bioinformatics as needing standardized analyses and reproducible, validated, auditable outputs, with scalable, portable, secure analysis that fits laboratory constraints. The STEC workflow-validation paper used a conventionally characterized reference collection to validate a bioinformatics WGS workflow, while the AMR discordance study shows that different pipelines can produce discordant resistance predictions from the same WGS data.",
     ],
     bodySourceIds: {
@@ -468,6 +479,11 @@ export const guidanceBlocks: GuidanceBlock[] = [
       2: ["pha4ge-infrastructure", "phe-case-study"],
       3: ["pha4ge-infrastructure", "mgen-accelerating-bioinformatics-implementation-2023"],
       4: [
+        "who-genomic-data-sharing-platforms-2025",
+        "clinical-microbiology-implementation-2026",
+        "who-national-genomic-surveillance-strategy-2023",
+      ],
+      5: [
         "mgen-accelerating-bioinformatics-implementation-2023",
         "mgen-stec-bioinformatics-validation-2021",
         "mgen-discordant-amr-predictions-2020",
@@ -475,6 +491,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     },
     technicalDetail: [
       "For each routine workflow, record workflow version, software or container versions, reference databases, parameters, input data, QC outputs, final outputs, and report linkage.",
+      "For each workflow change, record why the change was made, who approved it, what validation or verification evidence was reviewed, which outputs may change, whether old results need reinterpretation, and how the service can roll back if the new release fails.",
       "Candidate technologies named in the sources include WDL, CWL, Nextflow, Galaxy, Snakemake, Airflow, and Swift. These are examples, not endorsements.",
     ],
     audiences: ["bioinformatician", "lab-lead", "data-manager", "it-security"],
@@ -486,6 +503,8 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "pha4ge-infrastructure",
       "cdc-nejm-2019",
       "phe-case-study",
+      "who-genomic-data-sharing-platforms-2025",
+      "clinical-microbiology-implementation-2026",
       "mgen-accelerating-bioinformatics-implementation-2023",
       "mgen-stec-bioinformatics-validation-2021",
       "mgen-discordant-amr-predictions-2020",

@@ -185,6 +185,60 @@
     "reviewStatus": "reviewed"
   },
   {
+    "id": "claim-quality-validation-whole-chain",
+    "sourceId": "clinical-microbiology-implementation-2026",
+    "sourceLocator": "Gador-Whyte et al. 2026 quality management section; APHL 2016 Chapter 4; PHE case study section 3.4; WHO 2023 section 2.4",
+    "evidenceItemIds": [
+      "evidence-phe-implementation-scope",
+      "evidence-who-2023-sampling-turnaround",
+      "evidence-aphl-ngs-validation-all-steps",
+      "evidence-clinical-review-qc-validation-eqa"
+    ],
+    "claim": "A genomics service should validate and monitor the whole chain, including input material, library preparation, sequencing, QC, bioinformatics, interpretation, reporting, and external quality assessment where available.",
+    "extractedText": "PHE validated before switching off conventional testing, using parallel methods, gap analysis, protocol adjustment, quality parameters and input/output assessment. WHO calls for SOPs, data-quality control, internal and external quality assessment for genomics and analytics, metadata quality, and internal consistency. APHL and the clinical microbiology review both place validation across wet-lab and bioinformatics steps.",
+    "notes": "Use to replace narrow pipeline-only language in quality sections.",
+    "tags": ["quality", "validation", "qc", "eqa", "bioinformatics", "reporting"],
+    "candidateSectionIds": [
+      "quality-validation-before-switch",
+      "failure-handling-continuous-improvement",
+      "workflow-reproducibility",
+      "reporting-decision-use"
+    ],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "multiple",
+    "confidence": "high",
+    "limitations": "Detailed acceptance thresholds remain organism-specific and require separate extraction.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "claim-qc-annotation-version-control",
+    "sourceId": "who-genomic-data-sharing-platforms-2025",
+    "sourceLocator": "WHO 2025 platform guidance sections 2.6 and 2.11; Gador-Whyte et al. 2026 quality management section",
+    "evidenceItemIds": [
+      "evidence-who-2025-curation-qc-versioning",
+      "evidence-clinical-review-qc-validation-eqa",
+      "evidence-clinical-review-bioinformatics-quality-barriers"
+    ],
+    "claim": "QC status, QC methods, workflow versions, software versions, database versions, and acceptance thresholds should be recorded because low-quality data, changing workflows, and bioinformatics variation can affect interpretation and reuse.",
+    "extractedText": "WHO's platform guidance supports QC annotations and version-controlled analytical tools. The clinical microbiology review states that genomic workflows require software and database version control, wet-lab and dry-lab validation, and local acceptance thresholds where standardisation is limited.",
+    "notes": "Use for change-control, failure-handling, and provenance sections.",
+    "tags": ["quality", "version-control", "qc-annotation", "workflow", "provenance", "change-control"],
+    "candidateSectionIds": [
+      "quality-validation-before-switch",
+      "failure-handling-continuous-improvement",
+      "workflow-reproducibility",
+      "metadata-identifier-lineage",
+      "repository-data-sharing"
+    ],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "multiple",
+    "confidence": "high",
+    "limitations": "Does not yet specify a complete release-management procedure or emergency rollback process.",
+    "reviewStatus": "reviewed"
+  },
+  {
     "id": "claim-price-economic-review-heterogeneous",
     "sourceId": "wgs-economic-review",
     "sourceLocator": "Price et al. 2023, abstract and discussion of systematic review of WGS economic evaluations",

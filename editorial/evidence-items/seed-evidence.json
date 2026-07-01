@@ -185,6 +185,50 @@
     "reviewStatus": "reviewed"
   },
   {
+    "id": "evidence-aphl-ngs-validation-all-steps",
+    "sourceId": "aphl-ngs-implementation-2016",
+    "sourceLocator": "APHL 2016 Next Generation Sequencing Implementation Guide, Chapter 4 Validation",
+    "evidenceType": "short-excerpt",
+    "excerpt": "Consider all steps in the validation process",
+    "passageSummary": "APHL describes validation as part of NGS quality assurance and control. Its validation considerations include nucleic acid extraction, enrichment, library preparation, data analysis, alignment thresholds, accuracy metrics such as depth of coverage, number of reads and Q score, and robustness and reproducibility across operators and reagent lots.",
+    "tags": ["validation", "quality", "ngs", "bioinformatics", "reproducibility"],
+    "limitations": "Public-health laboratory implementation guide from 2016; examples are weighted toward PulseNet-style bacterial WGS implementation.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-clinical-review-qc-validation-eqa",
+    "sourceId": "clinical-microbiology-implementation-2026",
+    "sourceLocator": "Gador-Whyte et al. 2026, Clinical Microbiology Reviews, Quality management section",
+    "evidenceType": "short-excerpt",
+    "excerpt": "applies to every step of the sequencing and analysis workflow",
+    "passageSummary": "The clinical microbiology implementation review states that QC applies across the sequencing and analysis workflow, validation and verification are essential for new or introduced methods, genomic validation requires wet-lab and bioinformatics process validation, software and database version control, and PT/EQA should cover wet-lab and dry-lab components.",
+    "tags": ["quality", "validation", "verification", "eqa", "proficiency-testing", "version-control"],
+    "limitations": "Clinical microbiology review; public-health surveillance services should adapt its diagnostic-laboratory framing carefully.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-clinical-review-bioinformatics-quality-barriers",
+    "sourceId": "clinical-microbiology-implementation-2026",
+    "sourceLocator": "Gador-Whyte et al. 2026, Clinical Microbiology Reviews, bioinformatics implementation and regulatory challenges sections",
+    "evidenceType": "short-excerpt",
+    "excerpt": "each step requires QC",
+    "passageSummary": "The review identifies barriers around limited bioinformatics expertise, lack of workflow standardisation, inter-laboratory variation in SNP and resistance-gene prediction, data storage and transfer, LIS limitations, unfamiliar bioinformatics QC and validation, local acceptance thresholds, limited EQA availability, and the need for shared standards, SOPs, and validation datasets.",
+    "tags": ["bioinformatics", "quality", "standardisation", "workflow", "storage", "eqa", "validation"],
+    "limitations": "Best used to identify service risks and quality-system needs, not as a complete public-health runbook.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-who-2025-curation-qc-versioning",
+    "sourceId": "who-genomic-data-sharing-platforms-2025",
+    "sourceLocator": "WHO 2025 pathogen genomic data-sharing platform guidance, sections 2.6 data curation and 2.11 analytical/reporting capabilities",
+    "evidenceType": "short-excerpt",
+    "excerpt": "annotated with quality control methods and results",
+    "passageSummary": "WHO's platform guidance describes data curation as integrity, quality, and completeness checks. It states that low-quality or incomplete data may confound interpretation but may still be useful for validation or emergency sharing if annotated with QC methods and results. The analytical/reporting section states that integrated analytical tools should be documented and version-controlled.",
+    "tags": ["data-curation", "quality", "qc-annotation", "version-control", "platforms"],
+    "limitations": "Platform guidance; local services need to define which annotations affect public-health reporting, repository submission, and reuse.",
+    "reviewStatus": "reviewed"
+  },
+  {
     "id": "evidence-mgen-bioinformatics-implementation",
     "sourceId": "mgen-accelerating-bioinformatics-implementation-2023",
     "sourceLocator": "knowledge-base/source-cards/microbial-genomics-implementation-collection.md",

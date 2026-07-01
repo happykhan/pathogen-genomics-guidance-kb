@@ -344,5 +344,88 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "Use when expanding repository/platform selection and data-sharing sections.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-validation-whole-chain-core",
+    "sectionId": "quality-validation-before-switch",
+    "title": "Validate the whole chain",
+    "kind": "paragraph",
+    "text": "Validation should cover the whole service chain, not only the final bioinformatics command. Input material, library preparation, sequencing, QC, workflow execution, interpretation, reporting, user communication, and external quality assessment all affect whether a result can be used for public-health action.",
+    "claimIds": [
+      "claim-quality-validation-whole-chain"
+    ],
+    "sourceIds": [
+      "phe-case-study",
+      "who-national-genomic-surveillance-strategy-2023",
+      "aphl-ngs-implementation-2016",
+      "clinical-microbiology-implementation-2026"
+    ],
+    "conditions": {
+      "audiences": [
+        "lab-lead",
+        "bioinformatician",
+        "data-manager",
+        "director",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "quality",
+        "validation",
+        "reporting"
+      ]
+    },
+    "order": 10,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "Reviewed against PHE validation, WHO data-quality, APHL validation, and clinical microbiology quality-management passages.",
+    "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-qc-version-provenance-core",
+    "sectionId": "workflow-reproducibility",
+    "title": "QC and version provenance",
+    "kind": "paragraph",
+    "text": "Routine results should carry enough provenance to be interpreted later: QC status, QC methods, acceptance thresholds, workflow version, software versions, database versions, reference data, and any exception or override. This is what lets a service explain, repeat, correct, or retire a result when methods change.",
+    "claimIds": [
+      "claim-qc-annotation-version-control",
+      "claim-metadata-identifier-lineage-core"
+    ],
+    "sourceIds": [
+      "who-genomic-data-sharing-platforms-2025",
+      "clinical-microbiology-implementation-2026",
+      "who-national-genomic-surveillance-strategy-2023"
+    ],
+    "conditions": {
+      "audiences": [
+        "bioinformatician",
+        "lab-lead",
+        "data-manager",
+        "it-security",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "workflow",
+        "quality",
+        "provenance",
+        "change-control"
+      ]
+    },
+    "order": 20,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "Use for workflow provenance and change-control sections. A formal release/rollback runbook remains a gap.",
+    "updatedAt": "2026-07-01"
   }
 ]
