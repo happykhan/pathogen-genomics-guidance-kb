@@ -42,7 +42,7 @@
     "id": "claim-pha4ge-operating-questions",
     "sourceId": "pha4ge-infrastructure",
     "sourceLocator": "knowledge-base/source-cards/pha4ge-infrastructure.md",
-    "evidenceItemIds": ["evidence-pha4ge-five-infrastructure-questions"],
+    "evidenceItemIds": ["evidence-pha4ge-five-infrastructure-questions", "evidence-pha4ge-beyond-cpu-storage"],
     "claim": "Infrastructure planning should separate what the system solves, how analysis is run, where it is run, how data flow, and who has access.",
     "extractedText": "Source evidence note: PHA4GE source pack frames infrastructure around five questions: responsibility, analysis method, compute location, data flow, and access.",
     "notes": "Use as the backbone for Gnomey profile logic and infrastructure sections.",

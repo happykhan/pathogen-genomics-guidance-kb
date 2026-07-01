@@ -110,8 +110,12 @@ function renderPage() {
               const item = evidenceById.get(itemId);
               if (!item) return `<span class="evidence-item">Missing evidence item: ${escapeHtml(itemId)}</span>`;
               return `<span class="evidence-item">
-                <strong>Source evidence item:</strong> ${escapeHtml(item.passageSummary)}
-                ${item.excerpt ? `<em>Short excerpt: "${escapeHtml(item.excerpt)}"</em>` : ""}
+                ${
+                  item.excerpt
+                    ? `<em>Original short excerpt: "${escapeHtml(item.excerpt)}"</em>`
+                    : "<em>No short source excerpt captured yet; using locator and passage summary.</em>"
+                }
+                <span><strong>Passage summary:</strong> ${escapeHtml(item.passageSummary)}</span>
                 <small>${escapeHtml(item.evidenceType)}; ${escapeHtml(item.sourceLocator)}</small>
               </span>`;
             })

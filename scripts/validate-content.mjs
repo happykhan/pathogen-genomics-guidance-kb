@@ -206,6 +206,10 @@ evidenceItems.forEach((item) => {
   if (!validEditorialStatuses.has(item.reviewStatus)) {
     errors.push(`Evidence item ${item.id} has invalid reviewStatus: ${item.reviewStatus}`);
   }
+
+  if (item.evidenceType === "source-card-summary" && item.reviewStatus === "reviewed") {
+    errors.push(`Evidence item ${item.id} cannot be reviewed while it is only a source-card-summary.`);
+  }
 });
 
 claimCards.forEach((claim) => {

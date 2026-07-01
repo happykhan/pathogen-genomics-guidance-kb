@@ -219,11 +219,16 @@ export default function BackstagePage() {
                                     const item = evidenceById.get(itemId);
                                     return (
                                       <span className="evidence-item" key={itemId}>
-                                        <strong>Source evidence item:</strong>{" "}
                                         {item ? (
                                           <>
-                                            {item.passageSummary}
-                                            {item.excerpt ? <em> Short excerpt: "{item.excerpt}"</em> : null}
+                                            {item.excerpt ? (
+                                              <em>Original short excerpt: "{item.excerpt}"</em>
+                                            ) : (
+                                              <em>No short source excerpt captured yet; using locator and passage summary.</em>
+                                            )}
+                                            <span>
+                                              <strong>Passage summary:</strong> {item.passageSummary}
+                                            </span>
                                             <small>
                                               {item.evidenceType}; {item.sourceLocator}
                                             </small>
@@ -299,8 +304,12 @@ export default function BackstagePage() {
                       const item = evidenceById.get(itemId);
                       return (
                         <li key={itemId}>
-                          <span>{item?.passageSummary ?? `Missing evidence item: ${itemId}`}</span>
-                          {item?.excerpt ? <span>Short excerpt: "{item.excerpt}"</span> : null}
+                          {item?.excerpt ? (
+                            <span>Original short excerpt: "{item.excerpt}"</span>
+                          ) : (
+                            <span>No short source excerpt captured yet; using locator and passage summary.</span>
+                          )}
+                          <span>Passage summary: {item?.passageSummary ?? `Missing evidence item: ${itemId}`}</span>
                           {item ? (
                             <small>
                               {item.evidenceType}; {item.sourceLocator}
