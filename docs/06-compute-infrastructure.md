@@ -20,10 +20,16 @@ Central IT needs to be involved early. Pathogen genomics systems handle large da
 
 The main procurement risk is buying capacity without an operating model. Hardware, cloud credits, or a workflow platform will not by themselves produce a usable public-health service. The source material points to a more complete specification: sample flow, LIMS integration, workflow execution, storage and archive tiers, backup and recovery, access control, reporting, user support, validation, maintenance, and recurrent staffing.
 
+The dynamic guide now includes beta operating-model, dependency, constraint-response, responsibility, and workforce-capacity worksheets. These compare local, cloud, managed-platform, centralised, hybrid, collaborative, and externally supported models by responsibility, owner, dependency and failure mode rather than ranking one model as universally best.
+
 ## Source Basis
 
 - `knowledge-base/extracted-notes/pha4ge-compute-infrastructure.md`
 - `knowledge-base/source-cards/phe-implementing-pathogen-genomics-case-study.md`
+- `knowledge-base/source-cards/who-genomics-costing-tool-manual-2024.md`
+- `knowledge-base/source-cards/clinical-microbiology-implementation-2026.md`
+- `knowledge-base/source-cards/auspathogen-implementation-2025.md`
+- `knowledge-base/source-cards/east-africa-genomics-landscape-2024.md`
 - PHA4GE VeriXiv manuscript five-factor framing, SaaS/PaaS/IaaS section, exemplar systems, and discussion.
 - Grant et al. 2018, `Implementing pathogen genomics: a case study`, Public Health England.
 
@@ -34,10 +40,10 @@ The main procurement risk is buying capacity without an operating model. Hardwar
 
 ## Gaps
 
-- A generic operating-model checklist still needs to be extracted.
-- A service-level and support model is still missing.
-- WHO-specific procurement and country-readiness framing still needs source material.
+- The beta operating-model and dependency matrices need review against real programme examples and procurement constraints.
+- Service-level, support, and escalation expectations still need local owner assignment and user testing.
+- Country-readiness and procurement framing remain partial where local legal, finance, hosting, and support arrangements differ.
 
 ## Status
 
-`source-backed draft`
+`source-backed beta operating-model worksheets`

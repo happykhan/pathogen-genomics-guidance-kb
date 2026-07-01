@@ -16,15 +16,19 @@ Armstrong et al. describe the workflow problem from a public-health perspective.
 
 The PHE case study shows the service version of the same problem. PHE needed end-to-end bioinformatics processes for extracting sequence data from instruments, categorising samples, reporting data quality, configuring storage, giving users access to data, running analysis pipelines, integrating sequence data with sample context, and returning reports that users could understand. That is the level of operational detail a knowledge base should eventually support.
 
-For a guidance chapter, provenance should be treated as a chain rather than a single log file. A useful record links the sample or isolate, sequencing run, raw data, QC outputs, workflow version, container or software versions, reference databases, parameters, intermediate outputs, final results, report, and release or sharing action. The current source set supports this direction, but a minimum provenance field model still needs a formal source.
+For a guidance chapter, provenance should be treated as a chain rather than a single log file. A useful record links the sample or isolate, sequencing run, raw data, QC outputs, workflow version, container or software versions, reference databases, parameters, intermediate outputs, final results, report, and release or sharing action. The dynamic guide now includes beta workflow-provenance, release/change-control, and shared-workflow adoption checklists.
 
-Validation and change control are the remaining weak points. The PHE case study supports parallel running, comparison against conventional methods, gap analysis, protocol adjustment, and quality-parameter setting before switching off older methods. It does not yet provide a reusable runbook for workflow release, rollback, revalidation, or emergency updates. That should be filled from APHL, CDC/APHL quality resources, or similar laboratory-quality sources.
+Validation and change control remain partly source-backed but not final. PHE, APHL, WHO platform guidance, and clinical microbiology implementation sources support the beta checklists, but local services still need organism-specific validation boundaries, reportability thresholds, release approval routes, rollback criteria, and revalidation triggers.
 
 ## Source Basis
 
 - `knowledge-base/extracted-notes/pha4ge-workflows-portability.md`
 - `knowledge-base/source-cards/cdc-pathogen-genomics-public-health-2019.md`
 - `knowledge-base/source-cards/phe-implementing-pathogen-genomics-case-study.md`
+- `knowledge-base/source-cards/aphl-ngs-implementation-2016.md`
+- `knowledge-base/source-cards/clinical-microbiology-implementation-2026.md`
+- `knowledge-base/source-cards/who-genomic-data-sharing-platforms-2025.md`
+- Microbial Genomics workflow-validation and AMR-discordance source cards.
 - PHA4GE VeriXiv manuscript workflow section and discussion.
 - Armstrong et al. 2019, `Pathogen Genomics in Public Health`, doi:10.1056/NEJMsr1813907.
 - Grant et al. 2018, `Implementing pathogen genomics: a case study`, Public Health England.
@@ -36,10 +40,10 @@ Validation and change control are the remaining weak points. The PHE case study 
 
 ## Gaps
 
-- A source-backed minimum provenance field set is still needed.
-- Pipeline validation is partially supported by the PHE case study; release promotion, rollback, and update runbooks still need source material.
-- Decision criteria for choosing workflow systems still need to be extracted.
+- The beta provenance and shared-workflow checklists need local operational testing before being treated as SOPs.
+- Organism-specific validation, reportability, reanalysis and rollback triggers still need direct extraction.
+- Workflow-system choice still needs implementation-team review against staffing, governance, connectivity, security and procurement constraints.
 
 ## Status
 
-`source-backed draft`
+`source-backed beta checklists; local release rules still partial`

@@ -18,12 +18,16 @@ Accreditation is another source-backed point. PHE reported ISO 15189 accreditati
 
 The PHA4GE source adds the computational quality angle. Routine analysis should be transparent, portable, reproducible, and auditable. This supports use of workflow systems, containers, versioned pipelines, and provenance records, but it does not by itself define a full quality-management system.
 
-For now, the KB can safely say that implementation should include validation against existing methods where relevant, quality parameters across the WGS process, documented troubleshooting, controlled workflows, and accreditation or quality-system review where the service is used for public-health action. The next step is to extract APHL or CDC/APHL quality resources so this chapter can move from a case-study pattern to a reusable quality-management framework.
+The dynamic guide now goes further than this original module. It includes beta checklists for validation before switching methods, release and change control, SOP handoff from research to service, shared-workflow adoption, reporting limitations, report-template readiness, and service review. These are still beta implementation aids. They are not a substitute for local laboratory-quality, accreditation, regulatory, incident-management, or pathogen-specific threshold review.
 
 ## Source Basis
 
 - PHA4GE workflow and discussion sections support transparency, workflow versioning, portability, and reproducibility.
 - `knowledge-base/source-cards/phe-implementing-pathogen-genomics-case-study.md`
+- `knowledge-base/source-cards/aphl-ngs-implementation-2016.md`
+- `knowledge-base/source-cards/clinical-microbiology-implementation-2026.md`
+- `knowledge-base/source-cards/who-national-genomic-surveillance-strategy-2023.md`
+- Microbial Genomics implementation collection source cards covering accreditation, proficiency testing, workflow validation, harmonisation, and AMR-prediction discordance.
 - Grant et al. 2018, `Implementing pathogen genomics: a case study`, Public Health England.
 
 ## Figures
@@ -32,10 +36,10 @@ For now, the KB can safely say that implementation should include validation aga
 
 ## Gaps
 
-- Generic sample QC, run QC, analysis QC, reporting QC, nonconformance handling, and change-control source material still needed.
-- Pipeline validation is partially supported by the PHE case study; a reusable validation and update runbook still needs source material.
-- Accreditation requirements for bioinformatics pipelines need a more general source.
+- Organism-specific QC thresholds, reportability rules, confirmatory-testing policies, and uncertainty categories still need direct extraction.
+- The beta SOP, release, and shared-workflow checklists need local quality-system and accreditation review before adoption as SOPs.
+- A formal nonconformance, incident-management, and corrective-action runbook still needs local or agency source material.
 
 ## Status
 
-`source-backed draft`
+`source-backed beta checklists; local quality-system details still partial`

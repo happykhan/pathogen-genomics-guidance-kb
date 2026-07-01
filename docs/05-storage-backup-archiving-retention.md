@@ -16,12 +16,17 @@ The PHE case study provides an implementation example. Its informatics infrastru
 
 The power and cooling note adds the physical-infrastructure side for on-premises systems. Servers need secure access-controlled rooms, environmental monitoring, cooling, dust control, UPS capacity, maintenance, and potentially generator support. These are not secondary details for laboratories running local infrastructure. Power loss, overheating, or poor facilities planning can become data availability and service-continuity problems.
 
-This chapter still needs stronger source material for retention and archiving policy. The KB can currently support the distinctions between storage, backup, archive, and disaster recovery, but it cannot yet define how long to keep raw reads, intermediate files, reports, logs, or repository accessions. That will require public-health, legal, institutional, or WHO-aligned sources.
+The dynamic guide now has beta worksheets for classifying data by purpose, separating active analysis storage, raw-read archives, processed outputs, reports, workflow logs, repository records and backups, and setting local retention and recovery targets. These worksheets support the decision structure, not universal retention periods or restore objectives.
+
+This chapter still needs stronger policy material for numeric retention periods, deletion rules, restore-time targets, restore-point targets, legal holds, and formal business-continuity practice. Those values require public-health, legal, institutional, repository, or WHO-aligned sources and local review.
 
 ## Source Basis
 
 - `knowledge-base/extracted-notes/storage-backup-power-cooling.md`
 - `knowledge-base/source-cards/phe-implementing-pathogen-genomics-case-study.md`
+- `knowledge-base/source-cards/who-national-genomic-surveillance-strategy-2023.md`
+- `knowledge-base/source-cards/who-genomic-data-sharing-platforms-2025.md`
+- `knowledge-base/source-cards/aphl-ngs-implementation-2016.md`
 - `Best Practices and Vision/extracted_text/docx/Disaster_Recovery_best_practices.txt`
 - `Best Practices and Vision/extracted_text/docx/Power_and_Cooling.txt`
 - Grant et al. 2018, `Implementing pathogen genomics: a case study`, Public Health England.
@@ -32,10 +37,10 @@ This chapter still needs stronger source material for retention and archiving po
 
 ## Gaps
 
-- Retention schedules for raw reads, intermediate files, final results, reports, and logs are not source-backed yet.
-- A generic archive and cold-storage decision framework is still needed.
-- Recovery objective and restoration-test frequency source material is still needed.
+- Numeric retention schedules for raw reads, intermediate files, final results, reports, logs, and accession records are not source-backed yet.
+- Restore-time, restore-point, deletion, legal-hold, and restoration-test requirements still need local or agency source material.
+- The beta worksheets need review against local business-continuity and disaster-recovery practice.
 
 ## Status
 
-`source-backed rough draft`
+`source-backed beta worksheets; numeric policy values still partial`

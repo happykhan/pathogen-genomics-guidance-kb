@@ -14,9 +14,9 @@ Armstrong et al. make the public-health argument more directly. They state that 
 
 The PHE case study shows a service example. Sample information was collected in LIMS, sequence data were stored and analysed on IT and bioinformatics infrastructure, and sequence-analysis outputs were combined with LIMS data to produce the final report. That establishes a basic source-backed model: identifiers and metadata need to connect the sample, sequencing process, analysis output, and report.
 
-A future metadata chapter should turn this into a concrete model. At minimum, a programme needs to track sample or isolate identifier, sequencing run, raw data, workflow run, QC outputs, analysis result, report, and any repository accession or sharing event. The source material supports the need for that model, but not yet the exact fields, vocabularies, or standards.
+A future metadata chapter should turn this into a concrete model. At minimum, a programme needs to track sample or isolate identifier, sequencing run, raw data, workflow run, QC outputs, analysis result, report, and any repository accession or sharing event. The dynamic guide now has a beta lineage model and field-priority table that separates public minimum metadata, restricted contextual metadata, technical provenance, repository accessions, and service-management fields.
 
-The main missing source area is standards and interoperability. The KB still needs material on minimum metadata fields, controlled vocabularies, identifier conventions, repository accession linkage, LIMS integration, epidemiological data integration, and cross-system exchange. WHO, ECDC, APHL, UKHSA, Australian CDGN, and repository/platform sources are likely needed here.
+The main missing source area is now more specific: exact repository and organism schemas, controlled vocabularies, required/optional/public/restricted field status, and cross-system exchange rules. WHO, ECDC, APHL, UKHSA, Australian CDGN, INSDC/NCBI, ENA, GISAID, GA4GH, and national platform sources are likely needed here.
 
 ## Source Basis
 
@@ -24,6 +24,10 @@ The main missing source area is standards and interoperability. The KB still nee
 - `knowledge-base/extracted-notes/pha4ge-data-flow-iam.md`
 - `knowledge-base/source-cards/cdc-pathogen-genomics-public-health-2019.md`
 - `knowledge-base/source-cards/phe-implementing-pathogen-genomics-case-study.md`
+- `knowledge-base/source-cards/who-genomic-data-sharing-platforms-2025.md`
+- `knowledge-base/source-cards/who-sars-cov-2-sequencing-implementation-2021.md`
+- `knowledge-base/source-cards/ecdc-wgs-public-health-surveillance-2016.md`
+- `knowledge-base/source-cards/aphl-ngs-implementation-2016.md`
 - Armstrong et al. 2019, `Pathogen Genomics in Public Health`, doi:10.1056/NEJMsr1813907.
 - Grant et al. 2018, `Implementing pathogen genomics: a case study`, Public Health England.
 
@@ -33,10 +37,10 @@ The main missing source area is standards and interoperability. The KB still nee
 
 ## Gaps
 
-- Source-backed sample/run/readset/workflow/result/report identifier model needed.
-- Metadata requirements, vocabularies, and interoperability standards need source extraction.
-- Repository accession and cross-system linkage material remain only partially sourced.
+- The beta identifier-lineage model still needs conversion into a formal field dictionary with required, optional, public, restricted, and system-generated fields by organism and use case.
+- Current repository templates, controlled vocabularies, and API/interoperability rules still need direct extraction.
+- Sensitive-field handling requires local legal, ethical, public-health, and data-governance review.
 
 ## Status
 
-`source-backed partial draft`
+`source-backed beta lineage model; repository-specific details still partial`

@@ -18,13 +18,19 @@ Lifecycle planning should also distinguish routine operations from exceptional c
 
 Data sharing and archiving are part of the same lifecycle. PHA4GE includes archiving and sharing within data flow. The PHE case study gives one example, with Salmonella sequences uploaded to NCBI SRA. Armstrong et al. broaden this by describing public-health uploads to NCBI-hosted pathogen databases, ReSeqTB, and GISAID. The lifecycle therefore extends beyond the local laboratory when data are released, shared with collaborators, or used for international surveillance.
 
-The current KB still needs a general lifecycle model. The PHE example is centralised and UK-specific, and PHA4GE is infrastructure-centred. A WHO-oriented chapter should eventually cover sample collection, accessioning, sequencing, QC, analysis, interpretation, reporting, sharing, archiving, retention, deletion, and responsibility by role.
+The dynamic guide now includes a beta sample-to-decision route map and service-review tables. These cover sample entry, metadata linkage, sequencing and QC, workflow execution, interpretation and reporting, sharing, storage, correction, review, and exception routes. The model is still a beta service map, not a complete SOP or organism-specific field dictionary.
+
+The remaining work is more specific: repository and organism field requirements, local responsibility assignment, retention/deletion rules, and user testing with real pilot, routine-service, multi-pathogen, and national-network programmes.
 
 ## Source Basis
 
 - PHA4GE data-flow section.
 - `knowledge-base/extracted-notes/pha4ge-data-flow-iam.md`
 - `knowledge-base/source-cards/phe-implementing-pathogen-genomics-case-study.md`
+- `knowledge-base/source-cards/who-national-genomic-surveillance-strategy-2023.md`
+- `knowledge-base/source-cards/who-genomic-data-sharing-platforms-2025.md`
+- `knowledge-base/source-cards/aphl-ngs-implementation-2016.md`
+- `knowledge-base/source-cards/ecdc-wgs-public-health-surveillance-2016.md`
 - Grant et al. 2018, `Implementing pathogen genomics: a case study`, Public Health England.
 
 ## Figures
@@ -33,10 +39,10 @@ The current KB still needs a general lifecycle model. The PHE example is central
 
 ## Gaps
 
-- A general source-backed lifecycle model is still needed beyond the PHE centralised-WGS example.
-- Lifecycle responsibilities by role are still missing.
-- Retention and deletion lifecycle stages remain weakly sourced.
+- The beta service map needs review and user testing with real implementation teams.
+- Repository- and organism-specific field requirements still need direct extraction.
+- Retention, deletion, and local responsibility assignment still require jurisdiction-specific and institutional review.
 
 ## Status
 
-`source-backed partial draft`
+`source-backed beta service map; implementation-specific details still partial`

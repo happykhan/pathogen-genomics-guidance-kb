@@ -16,7 +16,9 @@ A practical maturity model for pathogen genomics should probably assess several 
 
 The risk is false precision. A laptop-based field workflow may be low maturity for national routine surveillance but appropriate for an offline outbreak setting. A cloud platform may score highly for scalability but poorly for data residency or external connectivity in some countries. A maturity model needs to make context explicit.
 
-For now, this chapter should remain a design note. The next step is to extract WHO, ECDC, APHL, UKHSA, and Australian framework sources to see whether they already define capability levels, implementation stages, or readiness dimensions that can be adapted with provenance.
+The dynamic guide now includes a beta maturity risk-reduction worksheet. It asks what the programme can reliably do today, which dependency is fragile, and what would fail if a key person, supplier, network connection, platform, storage system, workflow, report route, or support route became unavailable. It should be used to choose the next service risk to reduce, not to produce a certified score.
+
+For now, this chapter should remain a design note plus beta worksheet. The next step is to extract WHO, ECDC, APHL, UKHSA, and Australian framework sources to see whether they already define capability levels, implementation stages, evidence requirements, or readiness dimensions that can be adapted with provenance.
 
 ## Source Basis
 
@@ -24,6 +26,10 @@ For now, this chapter should remain a design note. The next step is to extract W
 - Public repository `source-material/local/pha4ge-infrastructure-resources/docs/tiers_table.md`.
 - `knowledge-base/extracted-notes/vignettes-and-survey-scoring.md`
 - `knowledge-base/source-cards/phe-implementing-pathogen-genomics-case-study.md`
+- `knowledge-base/source-cards/who-genomic-surveillance-progress-2023.md`
+- `knowledge-base/source-cards/east-africa-genomics-landscape-2024.md`
+- `knowledge-base/source-cards/auspathogen-implementation-2025.md`
+- `knowledge-base/source-cards/clinical-microbiology-implementation-2026.md`
 - Grant et al. 2018, `Implementing pathogen genomics: a case study`, Public Health England.
 
 ## Figures
@@ -33,10 +39,10 @@ For now, this chapter should remain a design note. The next step is to extract W
 
 ## Gaps
 
-- Formal source-backed maturity levels are still needed.
-- Scoring rubric, evidence requirements, and interpretation rules are still needed.
+- Formal source-backed maturity levels are still needed before any scoring tool is presented.
+- Scoring rubric, evidence requirements, interpretation rules, and validation against real programmes are still needed.
 - Country/laboratory readiness mapping is still needed.
 
 ## Status
 
-`draft/gap`
+`source-backed beta risk-reduction worksheet; formal score remains a gap`

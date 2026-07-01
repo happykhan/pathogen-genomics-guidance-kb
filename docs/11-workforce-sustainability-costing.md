@@ -18,7 +18,9 @@ Costing also has to cover more than sequencing consumables. The PHE case study d
 
 The same case study reports operational impacts after implementation: WGS replaced at least 10 validated conventional processes for different bacteria, reduced sample handling, reduced animal use, reduced staff costs in the reference laboratory, and shifted scientific effort from laboratory processing toward data analysis and interpretation. These figures are context-specific, but they show the kind of evidence a programme should collect when assessing value.
 
-Sustainability should therefore be assessed across recurrent costs, not only initial purchase. Programmes need to plan for storage growth, compute renewal, workflow maintenance, software updates, validation, user support, training, accreditation, data sharing, security, and staff retention. The current source set supports these categories, but not yet a generic costing model or staffing ratio.
+Sustainability should therefore be assessed across recurrent costs, not only initial purchase. Programmes need to plan for storage growth, compute renewal, workflow maintenance, software updates, validation, user support, training, accreditation, data sharing, security, and staff retention.
+
+The dynamic guide now includes beta responsibility templates, workforce-capacity worksheets, implementation-model variants, and costing-scenario tables. These make hidden labour, support ownership, external dependency, recurrent cost lines, and local capability building visible. They still do not provide staffing ratios, FTE calculators, salary assumptions, or universally valid return-on-investment estimates.
 
 ## Source Basis
 
@@ -27,6 +29,11 @@ Sustainability should therefore be assessed across recurrent costs, not only ini
 - `knowledge-base/extracted-notes/vignettes-and-survey-scoring.md`
 - `knowledge-base/source-cards/cdc-pathogen-genomics-public-health-2019.md`
 - `knowledge-base/source-cards/phe-implementing-pathogen-genomics-case-study.md`
+- `knowledge-base/source-cards/who-genomics-costing-tool-manual-2024.md`
+- `knowledge-base/source-cards/clinical-microbiology-implementation-2026.md`
+- `knowledge-base/source-cards/east-africa-genomics-landscape-2024.md`
+- `knowledge-base/source-cards/auspathogen-implementation-2025.md`
+- Economic evaluation and costing source cards.
 - Armstrong et al. 2019, `Pathogen Genomics in Public Health`, doi:10.1056/NEJMsr1813907.
 - Grant et al. 2018, `Implementing pathogen genomics: a case study`, Public Health England.
 
@@ -36,10 +43,10 @@ Sustainability should therefore be assessed across recurrent costs, not only ini
 
 ## Gaps
 
-- A generic costing model for people, compute, storage, networking, support, validation, training, and renewal is still needed.
-- A source-backed workforce role model is still missing.
-- Procurement and sustainability source material is needed beyond the PHE case study.
+- Source-backed staffing ratios or FTE examples by throughput, organism focus, service model and implementation stage are still needed.
+- Quantitative local costing examples and return-on-investment assumptions remain setting-specific and need direct extraction.
+- Procurement, support, and sustainability worksheets need review against local finance, HR, procurement, and partner-support arrangements.
 
 ## Status
 
-`source-backed partial draft`
+`source-backed beta worksheets; quantitative staffing and costing still partial`

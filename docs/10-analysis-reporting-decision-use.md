@@ -16,13 +16,19 @@ The same source shows why reporting is not just a file-delivery problem. PHE inv
 
 A useful pathogen genomics report should separate technical outputs from interpreted public-health conclusions. The current sources support the distinction but do not yet define a reporting standard. Technical outputs may include organism identity, sequence type, resistance markers, QC status, relatedness metrics, cluster assignment, or phylogenetic placement. Public-health conclusions may include whether cases are plausibly linked, whether further investigation is needed, whether a source is supported, or whether a control measure should be considered. Those conclusions require epidemiological context and domain review.
 
-This chapter needs more disease-programme sources before it can give detailed interpretation rules. The current evidence can support a general principle: analysis and reporting should be designed backwards from the public-health decision, with enough provenance and context for users to understand what the result can and cannot support.
+The dynamic guide now includes beta reporting decision checklists, limitation prompts, report-template readiness checks, and organism-focused reporting-field tables for enteric bacteria, respiratory viruses, TB/AMR, and healthcare-associated infection. These support practical structure and review questions, not final report wording or interpretation rules.
+
+This chapter still needs disease-programme sources before it can prescribe detailed interpretation rules. The current evidence supports the general principle: analysis and reporting should be designed backwards from the public-health decision, with enough provenance, uncertainty language, and context for users to understand what the result can and cannot support.
 
 ## Source Basis
 
 - PHA4GE background and data-flow sections.
 - `knowledge-base/source-cards/cdc-pathogen-genomics-public-health-2019.md`
 - `knowledge-base/source-cards/phe-implementing-pathogen-genomics-case-study.md`
+- `knowledge-base/source-cards/who-sars-cov-2-sequencing-implementation-2021.md`
+- `knowledge-base/source-cards/ecdc-wgs-public-health-surveillance-2016.md`
+- `knowledge-base/source-cards/clinical-microbiology-implementation-2026.md`
+- Microbial Genomics implementation collection source cards for organism-specific examples.
 - Armstrong et al. 2019, `Pathogen Genomics in Public Health`, doi:10.1056/NEJMsr1813907.
 - Grant et al. 2018, `Implementing pathogen genomics: a case study`, Public Health England.
 
@@ -32,11 +38,10 @@ This chapter needs more disease-programme sources before it can give detailed in
 
 ## Gaps
 
-- Generic reporting principles need formal source extraction.
-- Uncertainty and interpretation guidance is still needed.
-- Outbreak, AMR, phylogenetic, and decision-use examples are now partially supported, but need synthesis from disease-programme sources.
-- The distinction between technical outputs and public-health conclusions needs clearer source material.
+- Current report templates, uncertainty categories, cluster interpretation rules, nomenclature rules, and QC/reportability thresholds still need organism-specific source extraction.
+- Local clinical governance, infection-control, public-health reporting requirements, and verbal-discussion routes need programme review.
+- The beta field tables need testing with disease-programme users before being treated as final templates.
 
 ## Status
 
-`source-backed partial draft`
+`source-backed beta reporting framework; final templates still partial`
