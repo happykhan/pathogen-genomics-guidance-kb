@@ -466,6 +466,64 @@ export const guidanceBlocks: GuidanceBlock[] = [
           "clinical-microbiology-implementation-2026",
         ],
       },
+      {
+        title: "Using the service-review table by implementation stage",
+        summary:
+          "The same review rows have different emphasis in a pilot, routine service or national network.",
+        columns: ["Implementation stage", "What the review should test", "Signals to watch", "Source-backed caution"],
+        rows: [
+          {
+            cells: [
+              "Pilot or proof of service",
+              "Whether the sample-to-report route can be repeated with traceable identifiers, QC, workflow versions, reports and user feedback.",
+              "Unexpected sample issues, failed runs, missing metadata, manual handoffs, unclear report ownership and time needed for troubleshooting.",
+              "A pilot can demonstrate feasibility without proving routine throughput, cover, validation or sustainability.",
+            ],
+            sourceIds: ["aphl-ngs-implementation-2016", "clinical-microbiology-implementation-2026"],
+          },
+          {
+            cells: [
+              "Routine single-pathogen service",
+              "Whether the service is meeting expected turnaround, quality, reporting, repository and feedback routes at the actual sample volume.",
+              "Failed or repeated samples, delayed reports, corrected reports, repository-submission status, storage pressure and recurring support issues.",
+              "Do not generalise PHE throughput figures to other services; use local volume and service model.",
+            ],
+            sourceIds: ["phe-case-study", "who-national-genomic-surveillance-strategy-2023"],
+          },
+          {
+            cells: [
+              "Multi-pathogen or upgrading service",
+              "Whether shared infrastructure, data management, reporting, validation and support still work when organisms and use cases diverge.",
+              "Organism-specific QC failures, separate report routes, incompatible metadata needs, workflow drift and validation boundaries.",
+              "Shared infrastructure does not remove organism-specific interpretation and reportability decisions.",
+            ],
+            sourceIds: ["clinical-microbiology-implementation-2026", "ecdc-wgs-surveillance-2016"],
+          },
+          {
+            cells: [
+              "National or collaborative network",
+              "Whether laboratories, platforms and users can produce comparable outputs, share data appropriately, receive support and feed back into public-health action.",
+              "Site-to-site variation, training gaps, shared-method drift, delayed data flow, unresolved access issues and weak governance of corrections.",
+              "Network models require shared standards, training, data-sharing agreements, governance and support routes.",
+            ],
+            sourceIds: [
+              "auspathogen-implementation-2025",
+              "mgen-california-covidnet-2023",
+              "mgen-eurl-wgs-rollout-europe-2023",
+            ],
+          },
+        ],
+        sourceIds: [
+          "phe-case-study",
+          "aphl-ngs-implementation-2016",
+          "who-national-genomic-surveillance-strategy-2023",
+          "clinical-microbiology-implementation-2026",
+          "ecdc-wgs-surveillance-2016",
+          "auspathogen-implementation-2025",
+          "mgen-california-covidnet-2023",
+          "mgen-eurl-wgs-rollout-europe-2023",
+        ],
+      },
     ],
     audiences: ["lab-lead", "bioinformatician", "data-manager", "it-security"],
     implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
@@ -478,10 +536,15 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "pha4ge-infrastructure",
       "phe-case-study",
       "aphl-ngs-implementation-2016",
+      "clinical-microbiology-implementation-2026",
+      "ecdc-wgs-surveillance-2016",
+      "auspathogen-implementation-2025",
+      "mgen-california-covidnet-2023",
+      "mgen-eurl-wgs-rollout-europe-2023",
     ],
     gaps: [
       "The beta metadata buckets still need conversion into a formal field dictionary with required, optional, public, restricted, and system-generated fields by organism and use case.",
-      "The beta service-review table still needs testing with pilot, routine-service, and national-network scenarios.",
+      "The beta service-review tables still need review and user testing with real pilot, routine-service, multi-pathogen and national-network programmes.",
     ],
   },
   {

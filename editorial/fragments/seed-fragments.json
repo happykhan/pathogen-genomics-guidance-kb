@@ -1699,5 +1699,53 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is a report-component checklist, not final report wording or uncertainty categories.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-service-review-by-stage",
+    "sectionId": "data-lifecycle-sample-to-report",
+    "title": "Beta service-review use by implementation stage",
+    "kind": "table",
+    "text": "Use the same service-review rows differently as the programme matures. A pilot should test whether the sample-to-report route is repeatable; a routine service should monitor failures, turnaround, corrections and user impact; a national or network service should review comparability, shared methods, data flow, feedback and support across sites.",
+    "claimIds": [
+      "claim-lifecycle-service-loop",
+      "claim-service-model-choices",
+      "claim-beta-implementation-dependency-matrix"
+    ],
+    "sourceIds": [
+      "phe-case-study",
+      "aphl-ngs-implementation-2016",
+      "who-national-genomic-surveillance-strategy-2023",
+      "clinical-microbiology-implementation-2026",
+      "auspathogen-implementation-2025",
+      "mgen-california-covidnet-2023",
+      "mgen-eurl-wgs-rollout-europe-2023"
+    ],
+    "conditions": {
+      "audiences": [
+        "lab-lead",
+        "bioinformatician",
+        "data-manager",
+        "director",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "data-lifecycle",
+        "quality",
+        "failure-handling",
+        "continuous-improvement",
+        "implementation-model"
+      ]
+    },
+    "order": 41,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta stage-use guide. It still needs review with real pilot, routine and network programmes.",
+    "updatedAt": "2026-07-01"
   }
 ]
