@@ -1187,6 +1187,91 @@ export const guidanceBlocks: GuidanceBlock[] = [
           "clinical-microbiology-implementation-2026",
         ],
       },
+      {
+        title: "Setting local retention and recovery targets",
+        summary:
+          "Use this worksheet before assigning retention periods, restore-time targets or deletion rules. The beta guide supports the decision structure, not jurisdiction-specific values.",
+        columns: ["Decision field", "What to record", "Why it changes the target", "Beta caution"],
+        rows: [
+          {
+            cells: [
+              "Data category and service use",
+              "Whether the item is raw data, processed output, report, QC record, workflow log, repository record, dashboard extract, backup copy or archive record; and which public-health product depends on it.",
+              "A report used for public-health action, an accessioned raw-read record and a temporary intermediate file do not need the same retention or restore rule.",
+              "Do not set one retention rule for the whole genomics folder.",
+            ],
+            sourceIds: [
+              "who-national-genomic-surveillance-strategy-2023",
+              "pha4ge-infrastructure",
+              "who-genomic-data-sharing-platforms-2025",
+            ],
+          },
+          {
+            cells: [
+              "Regeneration and audit need",
+              "Whether the item can be regenerated from retained inputs, whether regeneration would reproduce the same result, and whether it is needed for audit, correction, validation, legal review or later reanalysis.",
+              "Files that are cheap to regenerate can have different rules from primary data, released reports, QC records or versioned interpretation outputs.",
+              "A reproducible workflow still needs the original inputs, versions, parameters and reference data if old results may be reinterpreted.",
+            ],
+            sourceIds: [
+              "pha4ge-infrastructure",
+              "clinical-microbiology-implementation-2026",
+              "who-genomic-data-sharing-platforms-2025",
+            ],
+          },
+          {
+            cells: [
+              "Criticality and restore priority",
+              "Which service stops if the data are unavailable, the maximum tolerable interruption, the maximum tolerable data loss, and who decides priority during recovery.",
+              "Backup policy should follow data criticality; a repository-submission log and an active outbreak workspace may need different recovery priority.",
+              "The current source base supports recording recovery questions, but not universal RTO or RPO values.",
+            ],
+            sourceIds: ["who-national-genomic-surveillance-strategy-2023", "pha4ge-infrastructure"],
+          },
+          {
+            cells: [
+              "Location, access and security",
+              "Where the primary copy, archive and backups are held; who can access them; whether data are local, cloud or platform-hosted; and which sensitive fields are restricted.",
+              "Storage, backup and archive choices also determine who can access data, who can restore it, and which data-residency or governance rules apply.",
+              "Public repository release does not remove local responsibility for sensitive metadata, accession linkage or correction history.",
+            ],
+            sourceIds: [
+              "who-national-genomic-surveillance-strategy-2023",
+              "who-genomic-data-sharing-platforms-2025",
+              "aphl-ngs-implementation-2016",
+            ],
+          },
+          {
+            cells: [
+              "Backup schedule and restore test",
+              "Backup frequency, version history, automation, alerting, failure review, restore-test schedule, restore-test result and recovery owner.",
+              "A backup that is not monitored or tested may not protect the service when storage fails, files are deleted, or data are corrupted.",
+              "This is a beta recovery checklist, not a formal disaster-recovery or business-continuity runbook.",
+            ],
+            sourceIds: ["pha4ge-infrastructure", "who-national-genomic-surveillance-strategy-2023"],
+          },
+          {
+            cells: [
+              "Deletion, expiry and exception route",
+              "Retention period selected locally, legal or policy basis, deletion authority, deletion log, exception or legal-hold route, and effect on reports, accessions and reanalysis.",
+              "Some data may need restricted retention or deletion; other records may need to remain linked to released reports and repository accessions.",
+              "Numeric retention periods and deletion rules need local legal, public-health, institutional and repository review.",
+            ],
+            sourceIds: [
+              "who-national-genomic-surveillance-strategy-2023",
+              "who-genomic-data-sharing-platforms-2025",
+            ],
+          },
+        ],
+        sourceIds: [
+          "who-national-genomic-surveillance-strategy-2023",
+          "pha4ge-infrastructure",
+          "phe-case-study",
+          "aphl-ngs-implementation-2016",
+          "who-genomic-data-sharing-platforms-2025",
+          "clinical-microbiology-implementation-2026",
+        ],
+      },
     ],
     audiences: ["it-security", "bioinformatician", "data-manager", "lab-lead"],
     implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
@@ -1203,7 +1288,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "clinical-microbiology-implementation-2026",
     ],
     gaps: [
-      "The guide still needs source-backed retention periods, restore-time targets, restore-point targets, and deletion rules for each data type and jurisdiction.",
+      "The beta retention and recovery worksheet still needs local legal, public-health, institutional, repository and business-continuity review before numeric retention periods, restore-time targets, restore-point targets or deletion rules can be prescribed.",
       "The PHA4GE disaster-recovery note and local business-continuity sources still need editorial review before the guide can support a formal recovery runbook.",
     ],
   },

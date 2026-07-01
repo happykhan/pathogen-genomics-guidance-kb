@@ -1795,5 +1795,50 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is a beta SOP handoff checklist, not an accredited SOP template or a substitute for local regulatory review.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-retention-recovery-target-worksheet",
+    "sectionId": "storage-backup-archive-retention",
+    "title": "Beta retention and recovery target worksheet",
+    "kind": "table",
+    "text": "Set retention, backup and recovery targets by data category and service use. The source base supports recording criticality, regeneration ability, archive location, access route, backup location, restore testing and deletion authority; it does not support universal retention periods or recovery-time objectives across jurisdictions.",
+    "claimIds": [
+      "claim-storage-backup-retention-policy"
+    ],
+    "sourceIds": [
+      "who-national-genomic-surveillance-strategy-2023",
+      "pha4ge-infrastructure",
+      "phe-case-study",
+      "aphl-ngs-implementation-2016",
+      "who-genomic-data-sharing-platforms-2025",
+      "clinical-microbiology-implementation-2026"
+    ],
+    "conditions": {
+      "audiences": [
+        "it-security",
+        "bioinformatician",
+        "data-manager",
+        "lab-lead",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "storage",
+        "backup",
+        "archive",
+        "retention",
+        "recovery"
+      ]
+    },
+    "order": 32,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This supports local target-setting but deliberately avoids unsupported retention periods, RTOs or RPOs.",
+    "updatedAt": "2026-07-01"
   }
 ]
