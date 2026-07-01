@@ -246,10 +246,13 @@
       "evidence-who-2022-sharing-principles-public-health",
       "evidence-who-2023-sharing-policy-national-database",
       "evidence-who-2025-governance-access-benefit-sharing",
-      "evidence-who-2025-metadata-provenance-interoperability"
+      "evidence-who-2025-metadata-provenance-interoperability",
+      "evidence-ecdc-public-sensitive-metadata-sharing",
+      "evidence-sarscov2-repository-data-types",
+      "evidence-aphl-multiday-workflow-lims-accessions"
     ],
     "claim": "A pathogen genomics programme should define governed sharing routes for operational sharing, national databases, and public or controlled repositories, including metadata, timing, access, licences, attribution, and benefit-sharing expectations.",
-    "extractedText": "WHO 2022 frames pathogen genome data sharing as a public-health activity that should be timely, ethical, equitable, efficient and effective. WHO 2023 calls for a national pathogen genome data-sharing policy and potential national databases linked to public sequence databases. WHO 2025 describes governance, access models, licences, user responsibilities, provenance, interoperability, and benefit-sharing as platform attributes.",
+    "extractedText": "WHO 2022 frames pathogen genome data sharing as a public-health activity that should be timely, ethical, equitable, efficient and effective. WHO 2023 calls for a national pathogen genome data-sharing policy and potential national databases linked to public sequence databases. WHO 2025 describes governance, access models, licences, user responsibilities, provenance, interoperability, and benefit-sharing as platform attributes. ECDC distinguishes non-confidential minimum metadata for public databases from sensitive data restricted to competent authorities. WHO SARS-CoV-2 guidance distinguishes consensus, partial consensus and raw-read sharing routes. APHL describes BioSample and SRA accession tracking after NCBI submission.",
     "notes": "Use to avoid presenting data sharing as a single upload step.",
     "tags": ["data-sharing", "governance", "repositories", "access", "licence", "metadata"],
     "candidateSectionIds": [

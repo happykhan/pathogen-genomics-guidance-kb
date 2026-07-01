@@ -852,5 +852,52 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "A full table with organism-specific examples remains future work.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-data-sharing-decision-pathway",
+    "sectionId": "repository-data-sharing",
+    "title": "Data-sharing decision pathway",
+    "kind": "paragraph",
+    "text": "The sharing decision should proceed in order: purpose, data type, minimum metadata, sensitive metadata, quality status, access model, platform or repository, timing, accession or persistent identifier, correction route, withdrawal route, and local owner. This separates operational sharing from national reporting, public repository submission, controlled access, and non-sharing.",
+    "claimIds": [
+      "claim-data-sharing-governed-route",
+      "claim-metadata-identifier-lineage-core"
+    ],
+    "sourceIds": [
+      "who-pathogen-genome-data-sharing-2022",
+      "who-national-genomic-surveillance-strategy-2023",
+      "who-genomic-data-sharing-platforms-2025",
+      "ecdc-wgs-surveillance-2016",
+      "who-sars-cov-2-sequencing-implementation-2021",
+      "aphl-ngs-implementation-2016"
+    ],
+    "conditions": {
+      "audiences": [
+        "policy",
+        "director",
+        "data-manager",
+        "it-security",
+        "lab-lead",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "data-sharing",
+        "repositories",
+        "governance",
+        "metadata"
+      ]
+    },
+    "order": 30,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "Jurisdiction-specific legal review remains out of scope.",
+    "updatedAt": "2026-07-01"
   }
 ]

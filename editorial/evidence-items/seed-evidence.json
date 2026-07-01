@@ -490,5 +490,27 @@
     "tags": ["service-model", "use-case", "centralised", "decentralised", "reactive", "prospective"],
     "limitations": "Supports comparison categories; does not define a complete decision tree or numeric thresholds.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-ecdc-public-sensitive-metadata-sharing",
+    "sourceId": "ecdc-wgs-surveillance-2016",
+    "sourceLocator": "ECDC 2016 expert opinion, integration of WGS data with epidemiological and clinical data",
+    "evidenceType": "short-excerpt",
+    "excerpt": "distinguish between non-confidential minimum data sets",
+    "passageSummary": "ECDC states that WGS records must be linked to source patient or environmental metadata using a common source identifier, that sensitive clinical and epidemiological data should be available only to competent authorities, and that contextual metadata sharing should distinguish non-confidential minimum datasets for public databases from sensitive data legally restricted to health authorities.",
+    "tags": ["data-sharing", "metadata", "sensitive-data", "governance", "identifier"],
+    "limitations": "EU/EEA legal framing; local legal requirements must be checked in each jurisdiction.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-sarscov2-repository-data-types",
+    "sourceId": "who-sars-cov-2-sequencing-implementation-2021",
+    "sourceLocator": "WHO 2021 SARS-CoV-2 sequencing implementation guide, sections 4.2 to 4.4",
+    "evidenceType": "short-excerpt",
+    "excerpt": "Public-domain databases for sharing consensus genomes include",
+    "passageSummary": "WHO's SARS-CoV-2 implementation guide distinguishes shared metadata, consensus genomes, partial genomes and raw reads. It says partial genomes can be valuable when quality is checked, raw reads support comparison and correction but may be hard to upload with limited connectivity and must be filtered to remove human reads, and platforms differ in data type, use conditions and metadata upload mechanisms. It names INSDC raw-read repositories, public-domain consensus repositories and GISAID as a public-access consensus database.",
+    "tags": ["repository", "data-sharing", "metadata", "raw-reads", "consensus", "respiratory-viruses"],
+    "limitations": "SARS-CoV-2 specific; use as a data-type and platform example, not a universal sharing rule.",
+    "reviewStatus": "reviewed"
   }
 ]
