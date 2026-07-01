@@ -103,7 +103,12 @@ function renderPage() {
           const claim = claimsById.get(claimId);
           if (!claim) return `<li><span>Missing claim: ${escapeHtml(claimId)}</span></li>`;
           return `<li>
-            <span>${escapeHtml(claim.claim)}</span>
+            ${
+              claim.extractedText
+                ? `<span><strong>Source evidence note / short excerpt:</strong> ${escapeHtml(claim.extractedText)}</span>`
+                : ""
+            }
+            <span><strong>Extracted claim, not verbatim source text:</strong> ${escapeHtml(claim.claim)}</span>
             <small>Source pointer: ${escapeHtml(claim.sourceLocator)}; source ID: ${escapeHtml(claim.sourceId)}</small>
           </li>`;
         })
@@ -120,7 +125,7 @@ function renderPage() {
           <p class="label">Draft whitepaper text</p>
           <p class="fragment-text">${escapeHtml(fragment.text)}</p>
           <div class="evidence">
-            <p><strong>Extracted claims used, not verbatim source text:</strong></p>
+            <p><strong>Evidence chain used for this fragment:</strong></p>
             <ul>${claimDetails}</ul>
           </div>
           <p class="meta"><strong>Sources:</strong> ${escapeHtml(fragment.sourceIds.join(", "))}</p>
@@ -220,7 +225,7 @@ function renderPage() {
       <section class="hero">
         <p class="kicker">Local only / writes to repo JSON</p>
         <h1>Editorial fragment review</h1>
-        <p>This tool binds to 127.0.0.1 and updates files under <code>editorial/fragments/</code>. The main paragraph is draft whitepaper text. The extracted claims underneath are our source-backed interpretation, not verbatim source text. Use the public <code>/backstage</code> page for read-only deployed debugging.</p>
+        <p>This tool binds to 127.0.0.1 and updates files under <code>editorial/fragments/</code>. The main paragraph is draft whitepaper text. Under it, source evidence notes point back to the original documents, and extracted claims show our source-backed interpretation. Use the public <code>/backstage</code> page for read-only deployed debugging.</p>
         <div class="metrics">
           <span class="pill">${fragments.length} fragments</span>
           <span class="pill">${counts.draft ?? 0} draft</span>

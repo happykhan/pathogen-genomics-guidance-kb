@@ -11,7 +11,8 @@ The beta authoring path is moving from direct chapter editing toward a compiled 
 ```text
 source document
   -> source card
-  -> claim cards
+  -> source evidence note / short excerpt
+  -> extracted claim card
   -> section synthesis brief
   -> draft fragments
   -> reviewed fragments
@@ -25,7 +26,8 @@ Example: validation before replacing established methods.
 | Step | Repo artifact | What it records |
 | --- | --- | --- |
 | Source card | `knowledge-base/source-cards/phe-implementing-pathogen-genomics-case-study.md` | Provenance, relevance, extracted validation facts, and remaining limits. |
-| Claim cards | `editorial/claim-cards/*.json` | Small extracted interpretations of what a source supports, with source IDs, source locator, tags, candidate sections, limitations, and review state. Claim cards are not verbatim source text. |
+| Source evidence note / short excerpt | `editorial/claim-cards/*.json` / `extractedText` | The relevant evidence pointer from the original source: page, section, table, figure, short allowed excerpt, or concise passage note. Avoid long copied passages. |
+| Claim cards | `editorial/claim-cards/*.json` / `claim` | Small extracted interpretations of what a source supports, with source IDs, source locator, tags, candidate sections, limitations, and review state. Claim cards are not verbatim source text. |
 | Section synthesis brief | `editorial/section-briefs/*.json` | Editorial instructions for a whitepaper section: purpose, must-cover points, do-not-claim rules, preferred claims, conditionals, figures, and gaps. |
 | Draft fragments | `editorial/fragments/*.json` | Paragraphs, boxes, tables, figures, or gap fragments generated from approved claim cards and section briefs. |
 | Reviewed fragments | `editorial/fragments/*.json` with `reviewStatus: "reviewed"` | Content approved for later public compilation into the dynamic whitepaper. |
@@ -72,12 +74,13 @@ Use this distinction:
 
 ```text
 original source text or page/table/figure pointer
+  -> source evidence note / short excerpt
   -> extracted claim card
   -> draft whitepaper fragment
   -> reviewed public whitepaper prose
 ```
 
-For copyright and clarity, public debug views should show source locators, page or section pointers, short passage notes, and extracted claims. They should not expose full-text excerpts from copyrighted PDFs.
+For copyright and clarity, public debug views should show source locators, page or section pointers, short passage notes, short allowed excerpts, and extracted claims. They should not expose full-text passages from copyrighted PDFs.
 
 ## Adding Guidance Prose
 

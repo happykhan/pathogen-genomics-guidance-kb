@@ -197,14 +197,22 @@ export default function BackstagePage() {
                         </p>
                         <div className="backstage-evidence">
                           <p>
-                            <strong>Extracted claims used, not verbatim source text:</strong>
+                            <strong>Evidence chain used for this fragment:</strong>
                           </p>
                           <ul>
                             {fragment.claimIds.map((claimId) => {
                               const claim = claimsById.get(claimId);
                               return (
                                 <li key={claimId}>
-                                  <span>{claim?.claim ?? `Missing claim: ${claimId}`}</span>
+                                  {claim?.extractedText ? (
+                                    <span>
+                                      <strong>Source evidence note / short excerpt:</strong> {claim.extractedText}
+                                    </span>
+                                  ) : null}
+                                  <span>
+                                    <strong>Extracted claim, not verbatim source text:</strong>{" "}
+                                    {claim?.claim ?? `Missing claim: ${claimId}`}
+                                  </span>
                                   {claim ? (
                                     <small>
                                       Source pointer: {claim.sourceLocator}; source ID: {claim.sourceId}
@@ -236,8 +244,9 @@ export default function BackstagePage() {
             <span className="badge">{evidenceClaimCards.length} cards</span>
           </div>
           <p className="muted" style={{ marginTop: 0 }}>
-            A claim card is our concise interpretation of what a source supports. The source locator points back to the
-            source card, page, section, table, or figure that should justify the claim.
+            A claim card links a source evidence note or short excerpt to our concise interpretation of what the source
+            supports. The source locator points back to the source card, page, section, table, or figure that should justify
+            the claim.
           </p>
           <div className="claim-card-grid">
             {evidenceClaimCards.map((claim) => (
@@ -251,17 +260,17 @@ export default function BackstagePage() {
                 <p>
                   <strong>Extracted claim:</strong> {claim.claim}
                 </p>
+                {claim.extractedText ? (
+                  <p className="muted">
+                    <strong>Source evidence note / short excerpt:</strong> {claim.extractedText}
+                  </p>
+                ) : null}
                 <p className="muted">
                   <strong>Source:</strong> {sourceLabel(claim.sourceId)}
                 </p>
                 <p className="muted">
                   <strong>Source pointer:</strong> {claim.sourceLocator}
                 </p>
-                {claim.extractedText ? (
-                  <p className="muted">
-                    <strong>Passage note:</strong> {claim.extractedText}
-                  </p>
-                ) : null}
                 <p className="muted">
                   <strong>Candidate sections:</strong> {claim.candidateSectionIds.join(", ")}
                 </p>

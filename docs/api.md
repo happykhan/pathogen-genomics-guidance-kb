@@ -81,6 +81,7 @@ Includes:
 
 - versioned default Gnomey profile
 - versioned whitepaper outline
+- source evidence notes or short excerpts, exposed through `extractedText` on claim cards
 - extracted claim cards, which are concise source-backed interpretations rather than verbatim source text
 - section synthesis briefs
 - draft/reviewed/gap/deprecated fragments
@@ -115,6 +116,7 @@ The deployed `/api/editorial` endpoint is read-only. Local fragment approval use
 - In `/api/guidance`, treat guidance block `sourceStatus: "reviewed"` as usable beta prose, `partial` as source-backed but incomplete, and `gap` as a placeholder or editorial work item.
 - In `/api/editorial`, treat `reviewStatus: "reviewed"` fragments as approved for future whitepaper compilation. Treat `draft` fragments as review candidates, not public guidance.
 - Do not treat claim cards as original quotations. Use `sourceLocator` and source cards to trace the claim back to the underlying source.
+- Treat `extractedText` as a source evidence note or short excerpt. It should help trace the claim, but it is not a substitute for reading the source card or source document.
 - Do not synthesize new public guidance directly from documents. Use the pipeline: source card, extracted claim cards, section brief, draft fragment, reviewed fragment.
 - Do not assume every source has a direct PDF. Some publishers provide HTML pages only, and some PDFs are behind publisher controls.
 - The API is read-only and currently unversioned beyond the `version` field in each response.
