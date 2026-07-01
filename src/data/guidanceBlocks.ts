@@ -1335,6 +1335,96 @@ export const guidanceBlocks: GuidanceBlock[] = [
       ],
       7: ["phe-case-study", "clinical-microbiology-implementation-2026", "mgen-uk-delphi-health-protection-2023"],
     },
+    tables: [
+      {
+        title: "Beta reporting decision checklist",
+        summary:
+          "Use this checklist to make reports usable for public-health decisions. It does not prescribe pathogen-specific wording.",
+        columns: ["Report component", "What to state", "Why it matters", "Source-backed caution"],
+        rows: [
+          {
+            cells: [
+              "User and decision",
+              "Who receives the result, what public-health or clinical question it addresses, and what decision or discussion it can support.",
+              "The useful product is an interpreted result for a defined user, not analysis completion alone.",
+              "WHO strategy guidance starts from users, intended outcomes and public-health action.",
+            ],
+            sourceIds: ["who-national-genomic-surveillance-strategy-2023", "who-sars-cov-2-sequencing-implementation-2021"],
+          },
+          {
+            cells: [
+              "Sample and comparison context",
+              "Sample or isolate ID, collection timeframe, sampling route, comparison set, missing samples and relevant metadata limits.",
+              "A cluster, lineage or resistance result can only answer the question supported by the samples and metadata.",
+              "Genomic interpretation still needs epidemiological, laboratory and sampling context.",
+            ],
+            sourceIds: ["ecdc-wgs-surveillance-2016", "cdc-nejm-2019", "phe-case-study"],
+          },
+          {
+            cells: [
+              "Method and version",
+              "Workflow, database, nomenclature, rule set, report-template version and date of interpretation.",
+              "Version records allow later review, correction, reanalysis and interpretation after methods change.",
+              "Workflow and database changes can affect reportable outputs.",
+            ],
+            sourceIds: ["clinical-microbiology-implementation-2026", "who-genomic-data-sharing-platforms-2025"],
+          },
+          {
+            cells: [
+              "Quality and uncertainty",
+              "QC status, completeness, limitations, uncertainty, whether a result is partial, and whether expert review or repeat testing is needed.",
+              "Users need to know whether the result is fit for the intended decision.",
+              "Low-quality or incomplete data may still be useful if QC methods and limits are visible.",
+            ],
+            sourceIds: [
+              "who-genomic-data-sharing-platforms-2025",
+              "who-sars-cov-2-sequencing-implementation-2021",
+              "clinical-microbiology-implementation-2026",
+            ],
+          },
+          {
+            cells: [
+              "Output type",
+              "Whether the report is about transmission linkage, lineage or variant surveillance, genotype-to-phenotype prediction, source attribution, infection-control support, or another use.",
+              "Different output types have different evidence needs and action boundaries.",
+              "ECDC separates transmission-linkage outputs from phenotype-prediction outputs.",
+            ],
+            sourceIds: ["ecdc-wgs-surveillance-2016", "cdc-nejm-2019"],
+          },
+          {
+            cells: [
+              "Action boundary",
+              "What the result can support, what it cannot prove, what follow-up is pending, and who owns the next action.",
+              "This prevents a sequence result from being interpreted as an automatic intervention instruction.",
+              "Hospital-facing or clinical reports may have tighter regulatory, quality and interpretive obligations.",
+            ],
+            sourceIds: ["clinical-microbiology-implementation-2026", "who-sars-cov-2-sequencing-implementation-2021"],
+          },
+          {
+            cells: [
+              "Sharing and feedback route",
+              "Who else should receive the result, whether repository or platform submission is needed, how corrections are handled, and how user feedback is captured.",
+              "Reporting should be connected to data sharing, correction history and service improvement.",
+              "WHO SARS-CoV-2 guidance explicitly links reporting to stakeholder discussion and feedback.",
+            ],
+            sourceIds: [
+              "who-sars-cov-2-sequencing-implementation-2021",
+              "who-national-genomic-surveillance-strategy-2023",
+              "who-genomic-data-sharing-platforms-2025",
+            ],
+          },
+        ],
+        sourceIds: [
+          "who-national-genomic-surveillance-strategy-2023",
+          "who-sars-cov-2-sequencing-implementation-2021",
+          "ecdc-wgs-surveillance-2016",
+          "phe-case-study",
+          "clinical-microbiology-implementation-2026",
+          "who-genomic-data-sharing-platforms-2025",
+          "cdc-nejm-2019",
+        ],
+      },
+    ],
     audiences: ["director", "policy", "lab-lead", "bioinformatician", "data-manager", "all"],
     implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
     organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
@@ -1356,8 +1446,12 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "mgen-gonorrhoea-wgs-amr-genogroups-2021",
       "mgen-shotgun-metagenomics-salmonella-food-2021",
       "mgen-rapid-nanopore-amr-outbreak-2021",
+      "who-genomic-data-sharing-platforms-2025",
     ],
-    gaps: ["Detailed reporting templates and uncertainty categories still need full-text extraction."],
+    gaps: [
+      "The beta checklist still needs review against laboratory-quality, national reporting and pathogen-specific template sources before it can become prescribed report wording.",
+      "Detailed uncertainty categories still need full-text extraction and review.",
+    ],
   },
   {
     id: "reporting-enteric-bacteria",

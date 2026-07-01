@@ -1652,5 +1652,52 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This maps beta wizard constraints to planning questions. It is not a validated scoring rule.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-reporting-decision-checklist",
+    "sectionId": "reporting-decision-use",
+    "title": "Beta reporting decision checklist",
+    "kind": "table",
+    "text": "A beta report checklist can name the user, public-health question, timeframe, method, quality limits, uncertainty, action boundary, sharing route and feedback route. This supports consistent decision-use reporting without prescribing pathogen-specific wording.",
+    "claimIds": [
+      "claim-reporting-products-fit-decision",
+      "claim-organism-reporting-differs-by-use-case",
+      "claim-release-change-control-validation"
+    ],
+    "sourceIds": [
+      "who-national-genomic-surveillance-strategy-2023",
+      "who-sars-cov-2-sequencing-implementation-2021",
+      "ecdc-wgs-surveillance-2016",
+      "phe-case-study",
+      "clinical-microbiology-implementation-2026",
+      "who-genomic-data-sharing-platforms-2025"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "policy",
+        "lab-lead",
+        "bioinformatician",
+        "data-manager",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "reporting",
+        "decision-use",
+        "quality",
+        "metadata"
+      ]
+    },
+    "order": 20,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a report-component checklist, not final report wording or uncertainty categories.",
+    "updatedAt": "2026-07-01"
   }
 ]
