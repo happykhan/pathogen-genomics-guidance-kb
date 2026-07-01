@@ -93,6 +93,12 @@ const outlineSectionIds = new Set(whitepaperOutline.map((section) => section.id)
 const validStatuses = new Set(["reviewed", "partial", "gap"]);
 const validResourceStatuses = new Set(["extracted", "candidate"]);
 const validEditorialStatuses = new Set(["draft", "reviewed", "gap", "deprecated"]);
+const publicGuidanceBannedPatterns = [
+  /\bbeta\b/i,
+  /\bcurrent guide\b/i,
+  /\bsource base\b/i,
+  /\bsource cards?\b/i,
+];
 const errors = [];
 const seenResourceIds = new Set();
 
@@ -108,6 +114,13 @@ Object.entries(sources).forEach(([sourceId, source]) => {
 });
 
 guidanceBlocks.forEach((block) => {
+  const serializedBlock = JSON.stringify(block);
+  publicGuidanceBannedPatterns.forEach((pattern) => {
+    if (pattern.test(serializedBlock)) {
+      errors.push(`Guidance block ${block.id} contains public-facing editorial scaffolding matching ${pattern}.`);
+    }
+  });
+
   if (!validStatuses.has(block.sourceStatus)) {
     errors.push(`Guidance block ${block.id} has invalid sourceStatus: ${block.sourceStatus}`);
   }

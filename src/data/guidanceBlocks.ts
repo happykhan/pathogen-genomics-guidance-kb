@@ -260,7 +260,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
         title: "Claims the value case can and cannot make",
         summary:
           "Use this as a reviewer-facing guardrail. It separates source-backed arguments from claims that still need local evidence or deeper economic extraction.",
-        columns: ["Claim area", "Supported beta claim", "Evidence needed locally", "Do not claim yet"],
+        columns: ["Claim area", "Supported current claim", "Evidence needed locally", "Do not claim yet"],
         rows: [
           {
             cells: [
@@ -299,7 +299,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "Economic value",
               "Published economic evaluations generally support bacterial WGS surveillance on economic grounds, but evidence is heterogeneous and concentrated in particular settings.",
               "Pathogen, use case, comparator, costs included, response capacity, health-system context, sampling strategy and confidence in transferability.",
-              "Do not make a universal return-on-investment, cost-effectiveness or cost-per-sample claim from the beta source base.",
+              "Do not make a universal return-on-investment, cost-effectiveness or cost-per-sample claim from the available economic evidence.",
             ],
             sourceIds: [
               "wgs-economic-review",
@@ -409,7 +409,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     tables: [
       {
-        title: "Beta investment-case scenario table",
+        title: "investment-case scenario table",
         summary:
           "Use this to compare service options before making a funding request. It keeps costs, benefits and evidence limits visible instead of presenting a generic return-on-investment claim.",
         columns: ["Scenario", "Assumptions to state", "Benefits that may be argued", "Evidence caution"],
@@ -494,7 +494,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
         title: "Evidence transferability check",
         summary:
           "Use this before importing a published economic conclusion into a local business case.",
-        columns: ["Check", "Question to answer", "Why it matters", "Beta caution"],
+        columns: ["Check", "Question to answer", "Why it matters", "Caution"],
         rows: [
           {
             cells: [
@@ -621,8 +621,8 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "WHO also makes the implementation choice explicit: centralised and decentralised approaches can be chosen differently at each step of the value chain, depending on resources, routine sample volume, sequencing and bioinformatics capacity, procurement, distance between sampling sites and sequencing facilities, transport, biobanking, and data-management protocols.",
       "ECDC adds the data-system implication: storage and sharing requirements depend on the surveillance objective and study design, including continuous, real-time or periodic sentinel surveys and centralised or decentralised analysis. A system designed for periodic sentinel reports does not have the same failure modes as one designed for real-time outbreak response.",
       "For hospital or clinical support, the clinical implementation review separates reactive sequencing from prospective surveillance. Reactive sequencing starts from suspicion of an outbreak and can confirm scope and transmission dynamics. Prospective surveillance can detect unrecognised transmission earlier, but it usually needs more finance, staffing and infrastructure. The same distinction is useful for public-health programmes deciding whether genomics is a routine service, a response tool, or both.",
-      "For beta, use an organism and use-case matrix before prescribing technical details. Enteric-bacterial surveillance, respiratory-virus variant monitoring, TB transmission investigation, AMR monitoring, healthcare-associated infection control, repository submission and research support can all use sequencing, but they place different pressure on sampling, metadata, QC, validation, reporting, sharing, access, storage and infrastructure.",
-      "Metagenomics should be named explicitly when it is in scope. Clinical metagenomics, environmental metagenomics, and food-sample shotgun metagenomics can answer different questions from isolate WGS, but they also change sample requirements, contamination and mixture interpretation, validation, QC, reporting, storage, and clinical-governance boundaries. The beta guide can flag those differences; it should not prescribe metagenomic diagnostic rules without deeper source extraction.",
+      "Use an organism and use-case matrix before prescribing technical details. Enteric-bacterial surveillance, respiratory-virus variant monitoring, TB transmission investigation, AMR monitoring, healthcare-associated infection control, repository submission and research support can all use sequencing, but they place different pressure on sampling, metadata, QC, validation, reporting, sharing, access, storage and infrastructure.",
+      "Metagenomics should be named explicitly when it is in scope. Clinical metagenomics, environmental metagenomics, and food-sample shotgun metagenomics can answer different questions from isolate WGS, but they also change sample requirements, contamination and mixture interpretation, validation, QC, reporting, storage, and clinical-governance boundaries. These sources flag those differences, but do not yet support prescribing metagenomic diagnostic rules without deeper source extraction.",
     ],
     bodySourceIds: {
       0: ["who-national-genomic-surveillance-strategy-2023", "cdc-nejm-2019"],
@@ -649,15 +649,15 @@ export const guidanceBlocks: GuidanceBlock[] = [
     technicalDetail: [
       "Minimum service-model fields: pathogen or programme, use case, data users, sampling route, expected output, turnaround target, validation boundary, reporting route, data-sharing route, owner of follow-up action, and fallback when the result is delayed or inconclusive.",
       "Service-model comparison fields: service type; sample trigger; expected output; turnaround pressure; validation boundary; metadata dependency; reporting route; repository or platform route; access-control needs; storage and retention needs; feedback mechanism; minimum staffing and support; failure mode if delayed.",
-      "Beta matrix rows: routine surveillance; outbreak response; AMR monitoring; repository submission; clinical or hospital support; research support.",
-      "Beta matrix columns: organism or programme, decision user, sampling route, expected output, turnaround pressure, metadata dependency, QC or validation boundary, reporting route, sharing route, infrastructure dependency, and fallback if the result is delayed or inconclusive.",
-      "Organism prompts for beta: enteric bacteria need outbreak/source/One Health routes; respiratory viruses need variant or lineage reporting with sampling context and repository choices; TB and AMR need separation of relatedness and resistance inference; healthcare-associated infection support needs a clear clinical or infection-control reporting route; research support needs a boundary between exploratory analysis and validated public-health reporting.",
+      "Matrix rows: routine surveillance; outbreak response; AMR monitoring; repository submission; clinical or hospital support; research support.",
+      "Matrix columns: organism or programme, decision user, sampling route, expected output, turnaround pressure, metadata dependency, QC or validation boundary, reporting route, sharing route, infrastructure dependency, and fallback if the result is delayed or inconclusive.",
+      "Organism prompts: enteric bacteria need outbreak/source/One Health routes; respiratory viruses need variant or lineage reporting with sampling context and repository choices; TB and AMR need separation of relatedness and resistance inference; healthcare-associated infection support needs a clear clinical or infection-control reporting route; research support needs a boundary between exploratory analysis and validated public-health reporting.",
     ],
     tables: [
       {
-        title: "Beta organism and use-case service-model matrix",
+        title: "organism and use-case service-model matrix",
         summary:
-          "Use this as a structuring table before choosing infrastructure or report detail. It is a beta planning matrix, not a set of organism-specific thresholds.",
+          "Use this as a structuring table before choosing infrastructure or report detail. It is a planning matrix, not a set of organism-specific thresholds.",
         columns: ["Use case", "Primary decision user", "What changes in the service model", "Main source-backed caution"],
         rows: [
           {
@@ -740,7 +740,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
         ],
       },
       {
-        title: "Beta profile checks for the dynamic guide",
+        title: "profile checks for the dynamic guide",
         summary:
           "Use these checks to test whether the wizard brings relevant organism and use-case sections forward. They are QA checks, not disease-programme approval.",
         columns: ["Wizard profile signal", "Sections that should become prominent", "Reason", "Remaining review need"],
@@ -909,7 +909,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "mgen-shotgun-metagenomics-salmonella-food-2021",
     ],
     gaps: [
-      "The beta organism and use-case matrix now has automated profile checks for key organism profiles, but still needs review by disease-programme users.",
+      "The organism and use-case matrix needs review by disease-programme users.",
       "Organism-specific thresholds, sampling fractions, report wording and repository field sets still need full source extraction before the guide can prescribe detailed rules.",
       "Metagenomic diagnostic workflows, validation thresholds, report wording and clinical decision rules remain out of scope until deeper source extraction is complete.",
     ],
@@ -924,7 +924,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "A pathogen genomics service should not be designed as if every available sample has the same public-health meaning. Routine surveillance, outbreak investigation, AMR monitoring, sentinel sampling, repository submission, clinical support, and research studies can all generate sequence data, but they support different interpretations.",
       "The sampling frame affects what the service can claim. A cluster detected from routine national surveillance has a different meaning from a cluster detected through targeted outbreak sampling or convenience sampling. A lineage trend is easier to interpret when the programme knows what was sampled, what was not sampled, and whether sampling changed over time.",
       "WHO's national strategy support tool treats sample and metadata collection as part of the genomic surveillance value chain and links strategy design to priority use cases, users, analysis, sharing, and return of results. That supports a practical design rule: define the sampling route at the same time as the reporting route, because the report can only answer questions that the sampling strategy supports.",
-      "For beta guidance, this section should make sampling bias visible rather than prescribe universal sampling fractions. Organism-specific programmes will need more precise material: foodborne and enteric surveillance, respiratory virus variant monitoring, tuberculosis, AMR, and healthcare-associated infection all have different sampling constraints and interpretation risks.",
+      "This section should make sampling bias visible rather than prescribe universal sampling fractions. Organism-specific programmes will need more precise material: foodborne and enteric surveillance, respiratory virus variant monitoring, tuberculosis, AMR, and healthcare-associated infection all have different sampling constraints and interpretation risks.",
     ],
     bodySourceIds: {
       0: ["who-national-genomic-surveillance-strategy-2023", "cdc-nejm-2019"],
@@ -935,14 +935,14 @@ export const guidanceBlocks: GuidanceBlock[] = [
     technicalDetail: [
       "Minimum sampling-design fields: pathogen or programme, public-health use case, sampling route, inclusion rule, exclusion rule, sampling frame, expected volume, turnaround target, minimum metadata, restricted metadata, reporting route, sharing route, known bias, and review owner.",
       "For each report or dashboard, state whether the data represent routine surveillance, targeted outbreak investigation, sentinel surveillance, convenience sampling, clinical support, repository submission, or research support.",
-      "Do not convert the beta sampling register into organism-specific sampling fractions until pathogen-specific source extraction and programme review are complete.",
+      "Do not convert the sampling register into organism-specific sampling fractions until pathogen-specific source extraction and programme review are complete.",
     ],
     tables: [
       {
-        title: "Beta sampling and programme-design register",
+        title: "sampling and programme-design register",
         summary:
           "Use this before interpreting trends, clusters or variant patterns. It records what entered the service, what did not, and which public-health question the data can support.",
-        columns: ["Register field", "What to record", "Why it matters", "Beta caution"],
+        columns: ["Register field", "What to record", "Why it matters", "Caution"],
         rows: [
           {
             cells: [
@@ -1153,10 +1153,10 @@ export const guidanceBlocks: GuidanceBlock[] = [
       7: ["who-national-genomic-surveillance-strategy-2023", "phe-case-study"],
     },
     technicalDetail: [
-      "Minimum lineage fields for beta: sample or isolate identifier; submitting organisation or service route; collection date, place and source where appropriate; sampling frame or reason for sequencing; sequencing run; raw data; QC status and QC outputs; workflow run, workflow version and reference data; interpreted result; released report; correction or repeat-analysis event; sharing event; repository accession or platform identifier; and retention or archive decision.",
+      "Minimum lineage fields: sample or isolate identifier; submitting organisation or service route; collection date, place and source where appropriate; sampling frame or reason for sequencing; sequencing run; raw data; QC status and QC outputs; workflow run, workflow version and reference data; interpreted result; released report; correction or repeat-analysis event; sharing event; repository accession or platform identifier; and retention or archive decision.",
       "Minimum service-review fields: sample volume, failed or repeated samples, failed or repeated runs, missing metadata fields, median turnaround by use case, delayed report reasons, corrected report count, repository-submission status, user-feedback items, and follow-up action owner.",
-      "Beta service-review rows: routine volume; failed or repeated samples; failed or repeated runs; missing metadata; delayed reports; corrected reports; repository-submission status; user feedback; corrective actions.",
-      "Beta service-review columns: event or measure, use case affected, sample or report count, owner, user impact, decision taken, corrective action, due date, closure status, and whether the issue changes validation, SOPs, training, metadata capture, infrastructure, or reporting.",
+      "service-review rows: routine volume; failed or repeated samples; failed or repeated runs; missing metadata; delayed reports; corrected reports; repository-submission status; user feedback; corrective actions.",
+      "service-review columns: event or measure, use case affected, sample or report count, owner, user impact, decision taken, corrective action, due date, closure status, and whether the issue changes validation, SOPs, training, metadata capture, infrastructure, or reporting.",
     ],
     tables: [
       {
@@ -1245,7 +1245,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
         ],
       },
       {
-        title: "Beta service-review table",
+        title: "service-review table",
         summary:
           "Use this table in routine review meetings to connect sample-to-report events with decisions, owners and corrective action.",
         columns: ["Review row", "Why it matters", "Minimum owner or decision", "Source-backed caution"],
@@ -1390,8 +1390,8 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "mgen-eurl-wgs-rollout-europe-2023",
     ],
     gaps: [
-      "The beta metadata buckets still need conversion into a formal field dictionary with required, optional, public, restricted, and system-generated fields by organism and use case.",
-      "The beta service-review tables still need review and user testing with real pilot, routine-service, multi-pathogen and national-network programmes.",
+      "The metadata buckets still need conversion into a formal field dictionary with required, optional, public, restricted, and system-generated fields by organism and use case.",
+      "The service-review tables still need review and user testing with real pilot, routine-service, multi-pathogen and national-network programmes.",
     ],
   },
   {
@@ -1405,9 +1405,9 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "The PHE case study shows this in practice: LIMS sample data and sequence-analysis outputs were combined to produce final sample reports.",
       "The minimum design issue is linkage. A programme needs stable ways to connect the sample or isolate, submitted metadata, sequencing run, raw data, QC outputs, workflow run, interpreted result, report, and any repository or sharing event. This should be treated as a service requirement, not a spreadsheet tidy-up task after analysis is finished.",
       "WHO's platform principles provide a practical starting point for metadata scope: sample information, sampling strategy, sequencing strategy, bioinformatics methods, attribution data, and optional fields for richer epidemic or One Health analysis. The same guidance links richer metadata to deeper inference, while noting that sensitive or privileged data may require stricter access policies.",
-      "For beta, the guide can use five linked metadata buckets. Public minimum metadata are the fields that can normally travel with shared sequence data, such as collection date, location at an appropriate resolution, host or source, sample type, sampling strategy, sequencing strategy, bioinformatics method and attribution. Restricted contextual metadata are fields that improve interpretation but may need tighter access, such as clinical details, exposure information, hospitalisation, outcome, travel history, food-chain details, animal-health links or environmental context.",
+      "Use five linked metadata buckets. Public minimum metadata are the fields that can normally travel with shared sequence data, such as collection date, location at an appropriate resolution, host or source, sample type, sampling strategy, sequencing strategy, bioinformatics method and attribution. Restricted contextual metadata are fields that improve interpretation but may need tighter access, such as clinical details, exposure information, hospitalisation, outcome, travel history, food-chain details, animal-health links or environmental context.",
       "The remaining three buckets keep the service auditable. Technical provenance records who collected the sample, who generated metadata, which laboratory processed and sequenced it, which bioinformatics unit analysed it, how the data entered a platform, and which identifiers link it to other resources. Repository accession fields record BioSample or equivalent sample accessions, raw-read accessions such as SRA or ENA records, consensus-genome accessions where used, upload dates, correction dates and platform status. Service-management fields record internal workflow dates and identifiers, including extraction date, sequencing run, QC status, analysis submission and retrieval dates, report date, repository-submission status, repeat-analysis events and follow-up owner.",
-      "Do not leave these buckets as a diagram or data dictionary that nobody owns. For beta, maintain a metadata governance register that records each identifier or field group, the system of record, allowed public or restricted use, correction route, accession or sharing status, and review owner. This turns metadata from a submission chore into a managed part of the service.",
+      "Do not leave these buckets as a diagram or data dictionary that nobody owns. Maintain a metadata governance register that records each identifier or field group, the system of record, allowed public or restricted use, correction route, accession or sharing status, and review owner. This turns metadata from a submission chore into a managed part of the service.",
       "Poor linkage reduces the value of analysis even when sequencing and bioinformatics are technically sound. It can make reports harder to interpret, weaken outbreak investigation, complicate reanalysis, break repository submission, and make it harder to audit who generated, saw, changed, or reused data.",
       "ECDC and AusPathoGen add the implementation point: WGS becomes more useful when genomic analysis is integrated into surveillance and epidemiological interpretation, not held as a separate laboratory artifact. That means the metadata model should be designed with the people who will investigate outbreaks, interpret surveillance signals, or act on AMR and healthcare-associated infection information.",
     ],
@@ -1460,16 +1460,16 @@ export const guidanceBlocks: GuidanceBlock[] = [
     technicalDetail: [
       "Minimum internal lineage: sample or isolate identifier, submitter or collection route, collection date/place/source where appropriate, sampling strategy or reason for sequencing, sequencing run, raw data location, QC status, workflow run and version, reference data version, interpreted result, released report, correction history, sharing event, repository accession or platform identifier, and retention/archive decision.",
       "Minimum platform questions: What metadata are required? What fields are optional but pre-set? Are provenance and attribution recorded? Are persistent identifiers or accessions issued? Can the platform exchange data through documented APIs or standards? How are restricted metadata handled?",
-      "Beta metadata buckets: public minimum metadata; restricted contextual metadata; technical provenance; repository accession fields; service-management fields. Do not require all buckets to live in one system, but require stable identifiers that join them.",
-      "Beta accession fields: local sample or isolate identifier, submitter identifier, repository sample accession, raw-read accession, consensus-genome accession if used, platform project or workspace identifier, upload date, correction or replacement date, and status of public, controlled or internal release.",
-      "Beta governance-register fields: field group, example fields, system of record, public/restricted/internal status, owner, permitted use, correction route, accession or sharing status, review frequency, and unresolved source gap.",
+      "metadata buckets: public minimum metadata; restricted contextual metadata; technical provenance; repository accession fields; service-management fields. Do not require all buckets to live in one system, but require stable identifiers that join them.",
+      "accession fields: local sample or isolate identifier, submitter identifier, repository sample accession, raw-read accession, consensus-genome accession if used, platform project or workspace identifier, upload date, correction or replacement date, and status of public, controlled or internal release.",
+      "governance-register fields: field group, example fields, system of record, public/restricted/internal status, owner, permitted use, correction route, accession or sharing status, review frequency, and unresolved source gap.",
     ],
     tables: [
       {
-        title: "Beta metadata field priorities by programme focus",
+        title: "metadata field priorities by programme focus",
         summary:
           "Use this as a design aid for metadata capture. It shows which fields to prioritise, not a final repository schema.",
-        columns: ["Programme focus", "Prioritise these fields", "Restricted or contextual fields", "Beta caution"],
+        columns: ["Programme focus", "Prioritise these fields", "Restricted or contextual fields", "Caution"],
         rows: [
           {
             cells: [
@@ -1552,7 +1552,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
         ],
       },
       {
-        title: "Beta metadata field dictionary starter",
+        title: "metadata field dictionary starter",
         summary:
           "Use this to start a local field dictionary. It classifies fields by purpose and access status; it is not a repository-specific schema.",
         columns: ["Field group", "Example fields", "Status category", "System of record and access caution"],
@@ -1614,7 +1614,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "Repository and platform status",
               "BioSample or equivalent accession, SRA or ENA raw-read accession, consensus accession if used, platform project ID, upload date, release state, correction or replacement date and withdrawal state.",
               "Required when data are shared, corrected, replaced, withdrawn or reused.",
-              "APHL gives an NCBI tracking example; the beta guide should not treat it as the only repository model.",
+              "APHL gives an NCBI tracking example; treat it as one repository model, not the only model.",
             ],
             sourceIds: [
               "aphl-ngs-implementation-2016",
@@ -1648,10 +1648,10 @@ export const guidanceBlocks: GuidanceBlock[] = [
         ],
       },
       {
-        title: "Beta metadata governance register",
+        title: "metadata governance register",
         summary:
           "Use this as a service-management register. It is not a repository schema; it records who owns each field group and how it can be used, corrected and shared.",
-        columns: ["Register item", "What to record", "Operational question", "Beta caution"],
+        columns: ["Register item", "What to record", "Operational question", "Caution"],
         rows: [
           {
             cells: [
@@ -1680,7 +1680,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "Public, restricted and internal use",
               "Which fields can be public, which require competent-authority or controlled access, and which should remain internal service-management data.",
               "Can the programme share useful non-sensitive metadata without exposing sensitive clinical, epidemiological or operational details?",
-              "The beta guide can separate access categories, but local law, ethics and data-governance review must decide permissions.",
+              "Access categories can be separated, but local law, ethics and data-governance review must decide permissions.",
             ],
             sourceIds: [
               "ecdc-wgs-surveillance-2016",
@@ -1706,7 +1706,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "Review owner and cadence",
               "Who reviews missing fields, accession failures, restricted-field use, delayed corrections, controlled-vocabulary problems and unresolved field-definition gaps.",
               "Is metadata quality being improved as part of routine service review?",
-              "The current guide does not yet define formal KPIs or organism-specific completeness thresholds.",
+              "Formal KPIs and organism-specific completeness thresholds still need definition.",
             ],
             sourceIds: [
               "who-national-genomic-surveillance-strategy-2023",
@@ -1762,7 +1762,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "Validation needs to cover the whole service chain: input material, extraction, sequencing, laboratory handling, data quality, analysis outputs, reporting, and troubleshooting. WHO's national strategy support tool also treats data quality, internal consistency, SOPs, and internal and external quality assessment for genomics and analytics as part of data-management design.",
       "The APHL implementation guide and the clinical microbiology implementation review both reinforce that validation is not a final bioinformatics step. Implementation planning has to cover laboratory preparation, information technology, workforce, validation, data quality assurance, analysis tools, reporting, storage, transfer, sharing, interpretation, and external quality assessment or proficiency testing where the setting requires it.",
       "This is not only a laboratory question. Bioinformatics pipelines, reference databases, result interpretation, report generation, and user-facing outputs can all change service behaviour. Where results are used for public-health action, the programme needs evidence that the new process performs as expected before older methods are retired.",
-      "For beta, treat that evidence as a package. The package should define the intended use and reportable outputs, the comparator or reference material used for validation, the wet-lab and sequencing acceptance criteria, the bioinformatics workflow and database versions, the interpretation and reporting boundary, and the plan for ongoing monitoring, EQA or proficiency testing. This keeps a pilot workflow from becoming a routine service by drift.",
+      "Treat that evidence as a package. The package should define the intended use and reportable outputs, the comparator or reference material used for validation, the wet-lab and sequencing acceptance criteria, the bioinformatics workflow and database versions, the interpretation and reporting boundary, and the plan for ongoing monitoring, EQA or proficiency testing. This keeps a pilot workflow from becoming a routine service by drift.",
       "For routine use, QC should be recorded as part of the result context. The clinical microbiology review notes that genomic QC applies across the sequencing and analysis workflow, and that validation requires wet-lab and bioinformatics process validation plus strict software and database version control. WHO's platform guidance adds a useful data-management principle: low-quality or incomplete data may sometimes be useful, but it should be annotated with QC methods and results so users can decide whether it is fit for their purpose.",
       "Change control should be part of the same quality system. A routine service should treat workflow updates, reference-database updates, QC-threshold changes, report-template changes and interpretation-rule changes as controlled releases. Each release needs a reason for change, validation evidence, version record, approval route, communication plan, rollback or emergency-fix criteria, and a trigger for revalidation if the change affects reportable outputs or public-health interpretation.",
       "The Microbial Genomics collection strengthens this section. Ballard et al. explicitly connect public-health, treatment, and legal impacts to validation, quality systems, and accreditation. The European AMR proficiency-testing paper highlights standardization, QC, and data-sharing challenges across laboratories. Multi-laboratory and time-critical sequencing evaluations, harmonisation studies, STEC workflow validation, and AMR prediction discordance all point to the same conclusion: routine genomics needs validation evidence across laboratory and bioinformatics components before results are used for action.",
@@ -1799,16 +1799,16 @@ export const guidanceBlocks: GuidanceBlock[] = [
     },
     technicalDetail: [
       "In the PHE case study, phase I used 1,538 representative Salmonella samples and phase II compared 6,887 isolates against WGS-determined serotype. The case study reports 97% concordance between WGS and conventional methods.",
-      "Minimum validation record for beta: use case, intended reportable outputs, comparator or reference material, input-material requirements, sequencing-run acceptance criteria, analysis acceptance criteria, workflow and database versions, repeatability and reproducibility checks, known limitations, sign-off role, and trigger for revalidation.",
+      "Minimum validation record: use case, intended reportable outputs, comparator or reference material, input-material requirements, sequencing-run acceptance criteria, analysis acceptance criteria, workflow and database versions, repeatability and reproducibility checks, known limitations, sign-off role, and trigger for revalidation.",
       "Minimum evidence-package contents: intended use; validation sample set or comparator; wet-lab acceptance criteria; sequencing and analysis QC; workflow, software and database versions; reportable-output boundary; interpretation and uncertainty wording; EQA or proficiency-testing plan where available; approval and review owner.",
-      "Minimum release record for beta: changed component, reason for change, affected outputs, test dataset or comparator, validation result, software and database versions, approver, release date, communication route, rollback option, emergency-fix criteria, and revalidation trigger.",
+      "Minimum release record: changed component, reason for change, affected outputs, test dataset or comparator, validation result, software and database versions, approver, release date, communication route, rollback option, emergency-fix criteria, and revalidation trigger.",
     ],
     tables: [
       {
-        title: "Beta validation evidence package",
+        title: "validation evidence package",
         summary:
           "Use this before a pilot or research workflow becomes a routine public-health service. It names the evidence to assemble; it is not an accredited validation protocol.",
-        columns: ["Package item", "Evidence to assemble", "Decision it supports", "Beta caution"],
+        columns: ["Package item", "Evidence to assemble", "Decision it supports", "Caution"],
         rows: [
           {
             cells: [
@@ -1872,7 +1872,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "Ongoing monitoring and external comparison",
               "Internal QC review, failed-run review, proficiency testing or EQA where available, inter-laboratory comparison, corrective action and revalidation trigger.",
               "Whether performance remains acceptable after routine use begins.",
-              "The beta guide can name the need for monitoring, but local quality systems define frequency, acceptance limits and escalation.",
+              "Monitoring should be named, but local quality systems define frequency, acceptance limits and escalation.",
             ],
             sourceIds: [
               "mgen-accreditation-iso-pathogen-genomics-2023",
@@ -1894,10 +1894,10 @@ export const guidanceBlocks: GuidanceBlock[] = [
         ],
       },
       {
-        title: "Beta release and change-control checklist",
+        title: "release and change-control checklist",
         summary:
           "Use this checklist when a routine workflow, database, QC threshold, interpretation rule or report template changes.",
-        columns: ["Checklist item", "Record in the release file", "Why it matters", "Beta caution"],
+        columns: ["Checklist item", "Record in the release file", "Why it matters", "Caution"],
         rows: [
           {
             cells: [
@@ -1926,7 +1926,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "QC and acceptance rules",
               "Run, sample, read, assembly or genome-quality criteria; low-quality annotation rules; threshold changes; and who can approve overrides.",
               "QC status and QC methods need to travel with results so users can decide whether data are fit for purpose.",
-              "Organism-specific QC thresholds still need separate extraction before this guide can prescribe cut-offs.",
+              "Organism-specific QC thresholds still need separate extraction before cut-offs can be prescribed.",
             ],
             sourceIds: [
               "who-genomic-data-sharing-platforms-2025",
@@ -1957,7 +1957,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "Rollback, correction and revalidation trigger",
               "Rollback option, emergency-fix criteria, correction route for released results, reanalysis decision, and trigger for full or partial revalidation.",
               "Routine services need a recorded way to deal with failed releases, corrected reports and method changes that alter previous interpretation.",
-              "This beta checklist is not a substitute for an accredited SOP or incident-management procedure.",
+              "This planning checklist is not a substitute for an accredited SOP or incident-management procedure.",
             ],
             sourceIds: [
               "phe-case-study",
@@ -1976,17 +1976,17 @@ export const guidanceBlocks: GuidanceBlock[] = [
         ],
       },
       {
-        title: "Turning the beta checklist into a local SOP package",
+        title: "Turning the planning checklist into a local SOP package",
         summary:
           "Use this as a handoff into the local quality system. It names the package to assemble; it does not replace local QA, accreditation or regulatory approval.",
-        columns: ["SOP package item", "What to include", "Owner to name", "Beta caution"],
+        columns: ["SOP package item", "What to include", "Owner to name", "Caution"],
         rows: [
           {
             cells: [
               "Scope and intended use",
               "Priority use case, organisms covered, reportable outputs, users, decision pathway, validation boundary and conditions where the workflow must not be used.",
               "Service lead with laboratory, bioinformatics and public-health user input.",
-              "Do not turn a beta pathway into a universal SOP; intended use should be narrower than the whole technology.",
+              "Do not turn a planning pathway into a universal SOP; intended use should be narrower than the whole technology.",
             ],
             sourceIds: [
               "phe-case-study",
@@ -1999,7 +1999,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "Inputs and acceptance criteria",
               "Input material, sample or isolate requirements, required metadata, run-level QC, sample-level QC, analysis QC, acceptance thresholds and override route.",
               "Laboratory quality lead with bioinformatics owner and data manager.",
-              "Thresholds and reportability rules remain organism-specific; the beta guide should not prescribe cut-offs where source coverage is incomplete.",
+              "Thresholds and reportability rules remain organism-specific; do not prescribe cut-offs where source coverage is incomplete.",
             ],
             sourceIds: [
               "aphl-ngs-implementation-2016",
@@ -2047,7 +2047,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "Reporting and user communication",
               "Report template, limitations text, uncertainty route, recipient route, feedback route, support contact and training or change notice for users.",
               "Reporting scientist or service-user lead with quality and technical owners.",
-              "This beta package can define report components, but final wording needs local reporting governance and pathogen-specific templates.",
+              "This planning package can define report components, but final wording needs local reporting governance and pathogen-specific templates.",
             ],
             sourceIds: ["aphl-ngs-implementation-2016", "clinical-microbiology-implementation-2026"],
           },
@@ -2056,7 +2056,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "EQA, proficiency testing and accreditation review",
               "EQA or PT plan where available, audit trail, deviation route, competency or training record, and accreditation or regulatory review requirements.",
               "Quality/accreditation owner with laboratory and bioinformatics leads.",
-              "The source base supports the need for quality-system review; it does not prove that this beta checklist satisfies any specific accreditation scheme.",
+              "Available sources support the need for quality-system review; they do not prove that this planning checklist satisfies any specific accreditation scheme.",
             ],
             sourceIds: [
               "clinical-microbiology-implementation-2026",
@@ -2078,7 +2078,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
         title: "Define the validation boundary by output type",
         summary:
           "Do not validate a pipeline as a single black box. State which outputs are reportable, which are exploratory, and which require separate evidence.",
-        columns: ["Output type", "Boundary to define", "Evidence to review", "Beta caution"],
+        columns: ["Output type", "Boundary to define", "Evidence to review", "Caution"],
         rows: [
           {
             cells: [
@@ -2188,7 +2188,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "mgen-discordant-amr-predictions-2020",
     ],
     gaps: [
-      "The beta SOP handoff checklist still needs local laboratory-quality, accreditation, regulatory and incident-management review before adoption as an SOP.",
+      "The SOP handoff checklist still needs local laboratory-quality, accreditation, regulatory and incident-management review before adoption as an SOP.",
       "Organism-specific QC thresholds and reportability rules still need extraction before the guide can prescribe detailed acceptance criteria.",
     ],
   },
@@ -2203,8 +2203,8 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "Failure handling should connect laboratory process, bioinformatics process, reporting, and quality review. A low-quality sequencing result is not only a technical event; it can affect whether a case is included in surveillance, whether an outbreak signal is investigated, whether a report is delayed, and whether a user needs an explanation.",
       "The PHE case study supports this service view because implementation covered workflow development from sample receipt to reporting, LIMS interaction, validation, quality parameters, accreditation, training, and user engagement. WHO's national strategy support tool also treats data quality, consistency, storage, backup, reporting, and interpretation as part of genomic surveillance data management.",
       "A practical service should review its own performance over time. Candidate measures include turnaround time, sample and run failure rates, metadata completeness, workflow incidents, report corrections, repository submission success, unresolved access problems, and user feedback. These measures should be connected to corrective actions, not only reported as dashboard numbers.",
-      "The guide can now state a beta-level principle: low-quality, incomplete, repeated, corrected, or overridden results should not disappear into the workflow. They should be labelled, reviewed, and linked to the decision taken. WHO's platform guidance supports QC annotation for low-quality or incomplete data; the clinical microbiology review supports local acceptance thresholds, wet-lab and dry-lab QC, version control, and EQA/PT where available.",
-      "For beta, the service-review table should connect each exception or performance measure to an owner and a decision. A useful row records the event, the use case affected, the number of samples or reports involved, user impact, corrective action, closure status, and whether the issue changes validation, SOPs, training, metadata capture, infrastructure, or reporting.",
+      "The guide can now state a source-backed planning principle: low-quality, incomplete, repeated, corrected, or overridden results should not disappear into the workflow. They should be labelled, reviewed, and linked to the decision taken. WHO's platform guidance supports QC annotation for low-quality or incomplete data; the clinical microbiology review supports local acceptance thresholds, wet-lab and dry-lab QC, version control, and EQA/PT where available.",
+      "For this guide, the service-review table should connect each exception or performance measure to an owner and a decision. A useful row records the event, the use case affected, the number of samples or reports involved, user impact, corrective action, closure status, and whether the issue changes validation, SOPs, training, metadata capture, infrastructure, or reporting.",
     ],
     bodySourceIds: {
       0: ["phe-case-study", "who-national-genomic-surveillance-strategy-2023"],
@@ -2220,13 +2220,13 @@ export const guidanceBlocks: GuidanceBlock[] = [
       ],
     },
     technicalDetail: [
-      "Minimum exception log fields for beta: sample or isolate identifier, failure point, QC signal, acceptance threshold affected, workflow or database version, decision taken, person or role responsible, user notification, repeat or override decision, report impact, repository or sharing impact, corrective action, and closure status.",
-      "Minimum service-review rows for beta: routine volume, failed or repeated samples, failed or repeated runs, missing metadata, delayed reports, corrected reports, repository-submission status, user feedback, and corrective actions.",
+      "Minimum exception log fields: sample or isolate identifier, failure point, QC signal, acceptance threshold affected, workflow or database version, decision taken, person or role responsible, user notification, repeat or override decision, report impact, repository or sharing impact, corrective action, and closure status.",
+      "Minimum service-review rows: routine volume, failed or repeated samples, failed or repeated runs, missing metadata, delayed reports, corrected reports, repository-submission status, user feedback, and corrective actions.",
       "Minimum review questions: did the issue affect a released result, a public-health decision, a repository record, a user's trust in the service, a validation boundary, or a recurring cost line?",
     ],
     tables: [
       {
-        title: "Beta exception and service-review register",
+        title: "exception and service-review register",
         summary:
           "Use this as a practical review register for routine service operation. It is not an accreditation template or organism-specific QC rule set.",
         columns: ["Event to track", "Minimum record", "Decision or action", "Source-backed caution"],
@@ -2311,10 +2311,10 @@ export const guidanceBlocks: GuidanceBlock[] = [
         ],
       },
       {
-        title: "Beta service-review cadence",
+        title: "service-review cadence",
         summary:
           "Use this to turn failure logs into routine improvement. The cadence should be fitted to the local quality system and service volume.",
-        columns: ["Review cadence", "What to review", "Decision to make", "Beta caution"],
+        columns: ["Review cadence", "What to review", "Decision to make", "Caution"],
         rows: [
           {
             cells: [
@@ -2361,7 +2361,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "Quarterly or service-planning review",
               "Failure patterns, turnaround against use case, user feedback, recurrent cost pressure, staffing cover, storage pressure, EQA or proficiency-testing outcomes and open risks.",
               "Decide which service risk should be reduced next and which investment, staffing, support or procurement action is needed.",
-              "This beta cadence is not a formal accreditation schedule or validated KPI framework.",
+              "This review cadence is not a formal accreditation schedule or validated KPI framework.",
             ],
             sourceIds: [
               "who-genomic-surveillance-progress-2023",
@@ -2442,7 +2442,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
         title: "Adopting a shared workflow for routine reporting",
         summary:
           "Use this checklist before moving a shared, platform-hosted or externally maintained workflow into public-health reporting.",
-        columns: ["Adoption decision", "What to record", "Why it matters", "Beta caution"],
+        columns: ["Adoption decision", "What to record", "Why it matters", "Caution"],
         rows: [
           {
             cells: [
@@ -2521,7 +2521,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
         title: "Routine workflow run record",
         summary:
           "Use this record for each run that may contribute to a report, repository submission, dashboard or later reanalysis.",
-        columns: ["Run-record item", "What to record", "Why it matters", "Beta caution"],
+        columns: ["Run-record item", "What to record", "Why it matters", "Caution"],
         rows: [
           {
             cells: [
@@ -2654,10 +2654,10 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     tables: [
       {
-        title: "Beta storage, backup, archive and recovery map",
+        title: "storage, backup, archive and recovery map",
         summary:
           "Use this map to classify genomics data by operational purpose before choosing storage classes, backup schedules or archive rules.",
-        columns: ["Data or storage category", "Operational purpose", "Minimum decision to record", "Beta caution"],
+        columns: ["Data or storage category", "Operational purpose", "Minimum decision to record", "Caution"],
         rows: [
           {
             cells: [
@@ -2747,8 +2747,8 @@ export const guidanceBlocks: GuidanceBlock[] = [
       {
         title: "Setting local retention and recovery targets",
         summary:
-          "Use this worksheet before assigning retention periods, restore-time targets or deletion rules. The beta guide supports the decision structure, not jurisdiction-specific values.",
-        columns: ["Decision field", "What to record", "Why it changes the target", "Beta caution"],
+          "Use this worksheet before assigning retention periods, restore-time targets or deletion rules. The sources support the decision structure, not jurisdiction-specific values.",
+        columns: ["Decision field", "What to record", "Why it changes the target", "Caution"],
         rows: [
           {
             cells: [
@@ -2781,7 +2781,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "Criticality and restore priority",
               "Which service stops if the data are unavailable, the maximum tolerable interruption, the maximum tolerable data loss, and who decides priority during recovery.",
               "Backup policy should follow data criticality; a repository-submission log and an active outbreak workspace may need different recovery priority.",
-              "The current source base supports recording recovery questions, but not universal RTO or RPO values.",
+              "Available sources support recording recovery questions, but not universal RTO or RPO values.",
             ],
             sourceIds: ["who-national-genomic-surveillance-strategy-2023", "pha4ge-infrastructure"],
           },
@@ -2803,7 +2803,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "Backup schedule and restore test",
               "Backup frequency, version history, automation, alerting, failure review, restore-test schedule, restore-test result and recovery owner.",
               "A backup that is not monitored or tested may not protect the service when storage fails, files are deleted, or data are corrupted.",
-              "This is a beta recovery checklist, not a formal disaster-recovery or business-continuity runbook.",
+              "This is a recovery checklist, not a formal disaster-recovery or business-continuity runbook.",
             ],
             sourceIds: ["pha4ge-infrastructure", "who-national-genomic-surveillance-strategy-2023"],
           },
@@ -2833,14 +2833,14 @@ export const guidanceBlocks: GuidanceBlock[] = [
         title: "Backup restore-drill record",
         summary:
           "Use this record to test whether the service can actually recover data needed for reporting, reanalysis, repository correction or service review.",
-        columns: ["Drill item", "What to record", "Decision it supports", "Beta caution"],
+        columns: ["Drill item", "What to record", "Decision it supports", "Caution"],
         rows: [
           {
             cells: [
               "Recovery scenario",
               "What failed or was simulated: accidental deletion, corrupted active storage, unavailable server room, failed cloud or platform access, repository-record loss, or local storage loss.",
               "Whether the drill tests a realistic service failure rather than a generic backup demonstration.",
-              "The beta guide structures the scenario; local business-continuity owners decide formal drill frequency and severity classes.",
+              "Use the scenario structure, but local business-continuity owners should decide formal drill frequency and severity classes.",
             ],
             sourceIds: ["pha4ge-infrastructure", "who-national-genomic-surveillance-strategy-2023"],
           },
@@ -2884,7 +2884,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "Service impact and unresolved risk",
               "What service work stopped during restore, whether reporting, repository submission, reanalysis or user support was affected, unresolved gaps, corrective action owner and review date.",
               "Restore drills should feed service improvement, storage planning, staffing cover, incident routes and recurrent cost decisions.",
-              "Do not turn this beta drill record into a formal RTO or RPO claim without local policy and business-continuity review.",
+              "Do not turn this recovery drill record into a formal RTO or RPO claim without local policy and business-continuity review.",
             ],
             sourceIds: [
               "phe-case-study",
@@ -2904,10 +2904,10 @@ export const guidanceBlocks: GuidanceBlock[] = [
         ],
       },
       {
-        title: "Beta local infrastructure resilience checklist",
+        title: "local infrastructure resilience checklist",
         summary:
           "Use this when storage, compute or backup depend on local servers, local storage rooms or institutional facilities. It is not a formal facilities or business-continuity standard.",
-        columns: ["Resilience area", "What to record", "Why it matters", "Beta caution"],
+        columns: ["Resilience area", "What to record", "Why it matters", "Caution"],
         rows: [
           {
             cells: [
@@ -2923,7 +2923,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "Environmental monitoring",
               "Temperature, humidity or other monitoring available locally, alert recipient, review route, and what service action follows an alert.",
               "Overheating, dust and poor environmental control can turn a storage or compute issue into a service-continuity problem.",
-              "The beta guide can name the need for monitoring; local facilities standards define thresholds.",
+              "Monitoring should be named, but local facilities standards define thresholds.",
             ],
             sourceIds: ["pha4ge-infrastructure"],
           },
@@ -2932,7 +2932,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "Power-failure protection",
               "UPS coverage, UPS maintenance owner, generator or longer-outage route, graceful shutdown plan, and systems that remain unavailable during outage.",
               "Local analysis, active storage and backups may fail differently during short and long outages.",
-              "The source base does not support universal UPS sizing, generator capacity or runtime targets.",
+              "Available sources do not support universal UPS sizing, generator capacity or runtime targets.",
             ],
             sourceIds: ["pha4ge-infrastructure"],
           },
@@ -2950,7 +2950,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "Incident escalation",
               "Who is contacted for power, cooling, storage failure, accidental deletion, corruption, cyber incident or unavailable institutional infrastructure.",
               "The reporting service may stop even when sequencing continues if storage, access or recovery routes fail.",
-              "This beta checklist does not replace local incident, cyber, disaster-recovery or business-continuity plans.",
+              "This planning checklist does not replace local incident, cyber, disaster-recovery or business-continuity plans.",
             ],
             sourceIds: ["pha4ge-infrastructure", "who-genomic-data-sharing-platforms-2025"],
           },
@@ -2978,7 +2978,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "clinical-microbiology-implementation-2026",
     ],
     gaps: [
-      "The beta retention and recovery worksheet still needs local legal, public-health, institutional, repository and business-continuity review before numeric retention periods, restore-time targets, restore-point targets or deletion rules can be prescribed.",
+      "The retention and recovery worksheet still needs local legal, public-health, institutional, repository and business-continuity review before numeric retention periods, restore-time targets, restore-point targets or deletion rules can be prescribed.",
       "The PHA4GE disaster-recovery and power/cooling notes and local business-continuity sources still need editorial review before the guide can support a formal recovery or facilities runbook.",
     ],
   },
@@ -3094,7 +3094,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     tables: [
       {
-        title: "Beta data-sharing decision table",
+        title: "data-sharing decision table",
         summary:
           "Use this route map before data leave the programme or move into a shared platform, national database or public repository.",
         columns: ["Decision point", "What to record", "Why it matters", "Source-backed caution"],
@@ -3191,7 +3191,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
         title: "Governance review before sharing",
         summary:
           "Use this checklist to prepare a sharing decision for local governance review. It does not replace legal, ethical, privacy, data-residency or repository-specific approval.",
-        columns: ["Review area", "What to record", "Why it matters", "Beta caution"],
+        columns: ["Review area", "What to record", "Why it matters", "Caution"],
         rows: [
           {
             cells: [
@@ -3238,7 +3238,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "Data residency, platform location and partner agreements",
               "Where data and backups are hosted, whether cloud or external platforms are allowed, partner responsibilities, data-transfer route and agreement owner.",
               "Platform or repository choice can change legal, security, procurement and trust obligations.",
-              "The beta guide cannot determine jurisdiction-specific residency, cross-border transfer or procurement rules.",
+              "Jurisdiction-specific residency, cross-border transfer and procurement rules must be determined locally.",
             ],
             sourceIds: [
               "who-genomic-data-sharing-platforms-2025",
@@ -3277,14 +3277,14 @@ export const guidanceBlocks: GuidanceBlock[] = [
         title: "Repository submission handoff record",
         summary:
           "Use this record when sequence data move from the local service into a public repository, national database, controlled platform or partner workspace.",
-        columns: ["Record element", "What to capture", "Why it matters", "Beta caution"],
+        columns: ["Record element", "What to capture", "Why it matters", "Caution"],
         rows: [
           {
             cells: [
               "Submission purpose and route",
               "Public-health purpose, repository or platform, submitter, submission date, intended users, and whether the route is public, controlled, national, operational or partner-only.",
               "A submission for public comparison, national surveillance, outbreak collaboration or internal operations has different metadata and access expectations.",
-              "The beta guide does not choose the legally or ethically appropriate route for a jurisdiction.",
+              "The legally or ethically appropriate route must be chosen through local governance review.",
             ],
             sourceIds: [
               "who-pathogen-genome-data-sharing-2022",
@@ -3372,7 +3372,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     gaps: [
       "Current INSDC/NCBI, GISAID and organism-specific repository templates still need direct extraction before the guide can prescribe repository-specific submission fields.",
-      "The beta governance review checklist still needs checking against jurisdiction-specific legal, ethical, privacy, data-residency, procurement, cross-border transfer and benefit-sharing requirements.",
+      "The governance review checklist still needs checking against jurisdiction-specific legal, ethical, privacy, data-residency, procurement, cross-border transfer and benefit-sharing requirements.",
     ],
   },
   {
@@ -3410,12 +3410,12 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "The end point of a public-health genomics workflow is not a tree, lineage call, resistance gene table, or FASTQ archive. The end point is an interpreted result that a laboratory, epidemiology team, incident manager, clinician, or policy lead can use appropriately.",
       "The WHO national strategy support tool asks countries to define data users, how those users will analyse or use genomic surveillance data, and the intended outcomes. The PHE case study shows this in service form: sequence-analysis outputs were combined with LIMS data to produce reports, and implementation required engagement with users of the service.",
       "Reporting therefore needs explicit boundaries. A report should make clear what was analysed, which method or workflow version was used, what quality limits apply, what the result can support, and what it cannot prove without epidemiological or clinical context.",
-      "The WHO SARS-CoV-2 implementation guide is useful because it treats reporting as part of stakeholder communication. It recommends clear written reports, discussion of analytical limitations in everyday language, opportunities for discussion, and structured feedback about what was useful, missing, or influential. That is the service rhythm this guide should preserve across pathogens.",
+      "The WHO SARS-CoV-2 implementation guide is useful because it treats reporting as part of stakeholder communication. It recommends clear written reports, discussion of analytical limitations in everyday language, opportunities for discussion, and structured feedback about what was useful, missing, or influential. That service rhythm should be preserved across pathogens.",
       "ECDC makes the same point from a surveillance perspective. It says visualisation and plain-language reporting should be agreed for each disease or pathogen according to surveillance objectives, and it separates two broad output types: inference about transmission linkage and prediction of clinically or epidemiologically relevant phenotypes.",
       "Clinical microbiology implementation adds a further caution: diagnostic or hospital-facing genomics can carry tighter reporting expectations, direct patient-care implications, regulatory obligations, and interpretive uncertainty. A public-health guide should therefore avoid a single universal report template; it should separate outbreak, surveillance, AMR, hospital infection-control, and clinical diagnostic reporting needs.",
       "The UK Delphi study directly supports this decision-use framing by developing expert consensus on how pathogen genomic information should be used in health-protection policy, planning, and practice. Other collection papers show why the receiving context matters: centre-specific typing can affect infection-control decisions, regional SARS-CoV-2 sequencing can support local outbreak management, genomic surveillance can guide intervention in MDR critical-care outbreaks, and organism-specific surveillance can support influenza, typhoidal Salmonella, gonorrhoea AMR, foodborne Salmonella source attribution, and rapid AMR outbreak investigation.",
       "A routine service also needs more than one reporting product. The same data asset may feed urgent alerts, sample-level reports, cluster or incident briefings, weekly or monthly surveillance summaries, AMR or variant trend updates, repository or platform submissions, and service-review dashboards. These products have different recipients, turnaround needs, quality annotations, and feedback routes.",
-      "For a beta guidance product, this section can safely set the reporting principle and give source-backed examples. A more detailed reporting template still needs extraction from laboratory-quality, pathogen-specific, or national reporting sources before the guide can prescribe report wording or uncertainty categories.",
+      "For this guide, this section can safely set the reporting principle and give source-backed examples. A more detailed reporting template still needs extraction from laboratory-quality, pathogen-specific, or national reporting sources before the guide can prescribe report wording or uncertainty categories.",
     ],
     bodySourceIds: {
       0: ["cdc-nejm-2019", "who-national-genomic-surveillance-strategy-2023"],
@@ -3446,10 +3446,10 @@ export const guidanceBlocks: GuidanceBlock[] = [
     },
     tables: [
       {
-        title: "Beta decision-product map",
+        title: "decision-product map",
         summary:
           "Use this to separate different reporting products that may be generated from the same genomic data asset. It does not define final report wording.",
-        columns: ["Product", "Primary user", "What it should make clear", "Beta caution"],
+        columns: ["Product", "Primary user", "What it should make clear", "Caution"],
         rows: [
           {
             cells: [
@@ -3540,7 +3540,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
         ],
       },
       {
-        title: "Beta reporting decision checklist",
+        title: "reporting decision checklist",
         summary:
           "Use this checklist to make reports usable for public-health decisions. It does not prescribe pathogen-specific wording.",
         columns: ["Report component", "What to state", "Why it matters", "Source-backed caution"],
@@ -3631,7 +3631,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
         title: "Reporting product release record",
         summary:
           "Use this record whenever a result leaves the analysis team as an alert, report, briefing, dashboard, repository update or service-review product.",
-        columns: ["Release field", "What to record", "Why it matters", "Beta caution"],
+        columns: ["Release field", "What to record", "Why it matters", "Caution"],
         rows: [
           {
             cells: [
@@ -3730,7 +3730,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
         title: "Making limitations and uncertainty visible",
         summary:
           "Use this checklist to make report limitations usable for non-specialist decision makers. It does not prescribe final wording or pathogen-specific uncertainty categories.",
-        columns: ["Limitation to surface", "What to state", "Why it matters", "Beta caution"],
+        columns: ["Limitation to surface", "What to state", "Why it matters", "Caution"],
         rows: [
           {
             cells: [
@@ -3746,7 +3746,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "Data quality and completeness",
               "QC status, genome completeness, partial or low-quality result status, contamination or mixture concerns, and whether repeat testing or expert review is pending.",
               "Low-quality or incomplete data can still be useful, but only if users can judge fitness for their decision.",
-              "The beta guide does not yet prescribe organism-specific QC cut-offs.",
+              "Organism-specific QC cut-offs still need local or programme-specific definition.",
             ],
             sourceIds: ["who-genomic-data-sharing-platforms-2025", "who-sars-cov-2-sequencing-implementation-2021"],
           },
@@ -3781,7 +3781,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "Communication and feedback",
               "Plain-language limitations, whether verbal discussion is needed, feedback route, correction route, and who can answer questions after release.",
               "WHO SARS-CoV-2 guidance links clear written reports, discussion of analytical limitations and structured feedback to useful public-health reporting.",
-              "The current beta checklist supports report components, not final report wording or legal sign-off.",
+              "The planning checklist supports report components, not final report wording or legal sign-off.",
             ],
             sourceIds: ["who-sars-cov-2-sequencing-implementation-2021", "phe-case-study"],
           },
@@ -3857,17 +3857,17 @@ export const guidanceBlocks: GuidanceBlock[] = [
         ],
       },
       {
-        title: "Before turning beta fields into pathogen-specific report templates",
+        title: "Before turning planning fields into pathogen-specific report templates",
         summary:
           "Use this review table before prescribing exact report wording, thresholds or uncertainty categories for a specific organism or programme.",
-        columns: ["Template area", "What source material is needed", "Why it matters", "Current beta position"],
+        columns: ["Template area", "What source material is needed", "Why it matters", "Planning position"],
         rows: [
           {
             cells: [
               "Enteric bacteria",
               "Current Salmonella, STEC, Listeria and other enteric report examples; cluster interpretation rules; source-attribution language; One Health recipient routes; AMR or virulence marker wording.",
               "Enteric reports often support multi-agency outbreak and source investigations, not only sample-level relatedness statements.",
-              "The beta guide can require sample, cluster, exposure/source, marker, recipient and action fields, but not final organism-specific wording or thresholds.",
+              "Planning should include sample, cluster, exposure/source, marker, recipient and action fields, but final organism-specific wording and thresholds still need source extraction.",
             ],
             sourceIds: [
               "phe-case-study",
@@ -3881,7 +3881,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "Respiratory viruses",
               "Current lineage or clade nomenclature rules; genome-completeness thresholds; repository or platform field requirements; variant-risk or vaccine-assessment reporting examples.",
               "A lineage or variant call is only useful when connected to sampling frame, collection time, data quality, repository status and any phenotyping or expert review still needed.",
-              "The beta guide can require sampling, quality, lineage, sharing and correction fields, but not current influenza, RSV or SARS-CoV-2 nomenclature rules.",
+              "Planning should include sampling, quality, lineage, sharing and correction fields; current influenza, RSV and SARS-CoV-2 nomenclature rules still need source extraction.",
             ],
             sourceIds: [
               "who-sars-cov-2-sequencing-implementation-2021",
@@ -3895,7 +3895,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "TB and AMR",
               "Current resistance database guidance, genotype-phenotype validation sources, drug or organism-specific confidence rules, confirmatory-testing policy and report examples.",
               "Transmission inference and resistance inference have different evidence bases, and genotype-to-phenotype confidence varies by organism, drug, mechanism and workflow.",
-              "The beta guide can require separate relatedness, resistance, validation, follow-up and action-boundary fields, but not treatment guidance or resistance-calling thresholds.",
+              "Planning should separate relatedness, resistance, validation, follow-up and action-boundary fields; treatment guidance and resistance-calling thresholds are out of scope.",
             ],
             sourceIds: [
               "cdc-nejm-2019",
@@ -3909,7 +3909,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "Healthcare-associated infection",
               "Local infection-control report examples, organism-specific relatedness interpretation, ward or exposure-context requirements, clinical governance routes and verbal-discussion expectations.",
               "Hospital-facing results may affect infection-control decisions and can carry tighter reporting, regulatory and interpretive obligations.",
-              "The beta guide can require recipient, setting, comparison set, relatedness, uncertainty, action boundary and feedback fields, but not local clinical governance wording.",
+              "Planning should include recipient, setting, comparison set, relatedness, uncertainty, action boundary and feedback fields; local clinical governance wording remains local.",
             ],
             sourceIds: [
               "clinical-microbiology-implementation-2026",
@@ -3922,7 +3922,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "Cross-cutting report governance",
               "Laboratory-quality sign-off, national reporting requirements, correction policy, uncertainty language, data-sharing route, repository requirements and legal or privacy review.",
               "Report wording becomes part of a governed service once results support public-health, clinical, regulatory or cross-agency action.",
-              "The beta guide can structure the review, but final wording and approval remain local or programme-specific.",
+              "Use this review structure, but final wording and approval remain local or programme-specific.",
             ],
             sourceIds: [
               "who-national-genomic-surveillance-strategy-2023",
@@ -3979,7 +3979,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "mgen-california-covidnet-2023",
     ],
     gaps: [
-      "The beta report-template readiness review still needs current laboratory-quality, national reporting and pathogen-specific template sources before any section can prescribe final report wording.",
+      "The planning report-template readiness review still needs current laboratory-quality, national reporting and pathogen-specific template sources before any section can prescribe final report wording.",
       "Detailed uncertainty categories and final wording still need full-text extraction and review from pathogen-specific, national reporting and laboratory-quality sources.",
     ],
   },
@@ -3993,7 +3993,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "For enteric bacteria, the report often needs to travel beyond the sequencing laboratory. The PHE case study names health-protection teams, local authorities and environmental health officers, hospital and public-health microbiologists, food-safety agencies, animal-health agencies, and international public-health agencies as users of the WGS service.",
       "The practical reporting question is therefore not only whether isolates are genetically close. The service should decide which users need to know about a cluster, what epidemiological or food-chain information is needed to interpret it, whether AMR or virulence markers change the response, and whether an alert, case-level report, weekly summary, or cross-agency discussion is the right output.",
       "The PHE raw-milk STEC example shows why this matters. WGS linked cattle specimens and geographically dispersed human cases, prompted further questioning about exposure, and supported stopping distribution of the implicated product and issuing public-health messages.",
-      "For beta, enteric reporting should separate the genomic finding from the investigation route. A cluster, source-attribution signal, AMR or virulence finding, food or environmental link, and public-health action should be recorded as connected but distinct fields, because each one depends on different supporting evidence.",
+      "For this guide, enteric reporting should separate the genomic finding from the investigation route. A cluster, source-attribution signal, AMR or virulence finding, food or environmental link, and public-health action should be recorded as connected but distinct fields, because each one depends on different supporting evidence.",
     ],
     bodySourceIds: {
       0: ["phe-case-study"],
@@ -4012,7 +4012,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     tables: [
       {
-        title: "Beta enteric-bacteria reporting fields",
+        title: "enteric-bacteria reporting fields",
         summary:
           "Use separate fields to connect genomic relatedness to exposure, food-chain, environmental and public-health action routes.",
         columns: ["Report field", "What to record", "Why it matters", "Main caution"],
@@ -4093,7 +4093,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "A virus report should therefore avoid giving a lineage or variant call without context. It should state the sampling frame, whether the sequence is complete or partial, which quality limits apply, what the result may imply for surveillance or risk assessment, and what cannot be inferred from the available samples.",
       "Armstrong et al. describe influenza as a useful model for a sequence-first service. Sequencing can support selection of specimens for phenotypic characterisation, vaccine-strain decisions, forecasting and risk assessment, but it does not remove the need for selected phenotyping.",
       "The WHO SARS-CoV-2 guide also warns that raw-read sharing may be hard where upload speeds are limited or connections are intermittent. That constraint should affect the reporting and sharing plan: a programme may still share consensus or partial genomes quickly while using a separate plan for raw reads, quality notes and later correction.",
-      "For beta, respiratory-virus reporting should keep variant or lineage calls connected to collection time, place, sampling frame, sequence completeness, quality status, sharing route, and whether selected phenotyping or later correction is needed. This prevents a lineage label being interpreted as more precise than the sampling and data quality allow.",
+      "For this guide, respiratory-virus reporting should keep variant or lineage calls connected to collection time, place, sampling frame, sequence completeness, quality status, sharing route, and whether selected phenotyping or later correction is needed. This prevents a lineage label being interpreted as more precise than the sampling and data quality allow.",
     ],
     bodySourceIds: {
       0: ["who-sars-cov-2-sequencing-implementation-2021"],
@@ -4113,7 +4113,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     tables: [
       {
-        title: "Beta respiratory-virus reporting fields",
+        title: "respiratory-virus reporting fields",
         summary:
           "Use separate fields so lineage or variant labels remain tied to sampling, data quality and sharing constraints.",
         columns: ["Report field", "What to record", "Why it matters", "Main caution"],
@@ -4180,7 +4180,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "mgen-local-sarscov2-large-scale-2020",
     ],
     gaps: [
-      "Needs current organism-specific reporting templates, lineage nomenclature rules, QC thresholds and repository field requirements for influenza, RSV and SARS-CoV-2 beyond the beta source set.",
+      "Needs current organism-specific reporting templates, lineage nomenclature rules, QC thresholds and repository field requirements for influenza, RSV and SARS-CoV-2 beyond the extracted source set.",
     ],
   },
   {
@@ -4193,7 +4193,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "TB and AMR use cases often combine two different reporting products: relatedness or transmission inference, and genotype-based prediction of resistance or other phenotypes. ECDC separates these output types, and Armstrong et al. caution that phenotype inference depends on the organism, drug, mechanism and quality of genotype-phenotype evidence.",
       "For TB, WGS can help define or refute suspected outbreaks, infer transmission dynamics, suggest missed cases, distinguish reactivation from reinfection, and support drug-susceptibility inference where the method is feasible. The report should be clear about whether it is supporting public-health investigation, clinical treatment, programme evaluation, or more than one of these.",
       "For AMR, a useful report should name the organism, antimicrobial or drug class, resistance determinant or rule set, database or tool version, validation basis, and whether confirmatory phenotypic testing is required. The clinical microbiology implementation review reinforces this caution because hospital-facing reports can carry direct patient-care implications and regulatory obligations.",
-      "For beta, the safe reporting rule is separation. Keep relatedness, genotype-to-phenotype inference, clinical or infection-control action, validation basis, uncertainty and follow-up testing as separate fields. A single combined conclusion can hide which part is well supported and which part depends on local epidemiology, phenotypic confirmation, database quality or clinical judgement.",
+      "The safe reporting rule is separation. Keep relatedness, genotype-to-phenotype inference, clinical or infection-control action, validation basis, uncertainty and follow-up testing as separate fields. A single combined conclusion can hide which part is well supported and which part depends on local epidemiology, phenotypic confirmation, database quality or clinical judgement.",
     ],
     bodySourceIds: {
       0: ["ecdc-wgs-surveillance-2016", "cdc-nejm-2019"],
@@ -4212,7 +4212,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     tables: [
       {
-        title: "Beta TB and AMR reporting fields",
+        title: "TB and AMR reporting fields",
         summary:
           "Use separate fields so relatedness, resistance prediction, interpretation and action are not collapsed into one unsupported conclusion.",
         columns: ["Report field", "What to record", "Why it matters", "Main caution"],
@@ -4282,7 +4282,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "Healthcare-associated infection and hospital outbreak support place genomics close to operational infection-control decisions. The clinical microbiology implementation review distinguishes clinical laboratories from public-health laboratories because hospital-facing results may have direct patient-care responsibilities, tighter reporting expectations, regulatory obligations and interpretive uncertainty.",
       "The reporting route should therefore name the infection-control or clinical user, the setting being investigated, the organism or resistance concern, the comparison set, and the action boundary. A report may support whether cases are plausibly linked, whether more sampling is needed, whether an environmental or ward investigation should continue, or whether genomic evidence is insufficient without epidemiological context.",
       "The Microbial Genomics implementation examples show why context matters. Centre-specific bacterial pathogen typing can affect infection-control decision making, and an integrated WGS response to a persistent polymicrobial multidrug-resistant outbreak in critical care connected sequencing to intervention, reporting turnaround and environmental metagenomic investigation.",
-      "For beta, do not turn a hospital-facing genomic result into an automatic action instruction. Report the relatedness evidence, what was sampled, what was not sampled, the workflow or method used, uncertainty, who received the result, what follow-up is pending, and how feedback from the infection-control team will be captured.",
+      "Do not turn a hospital-facing genomic result into an automatic action instruction. Report the relatedness evidence, what was sampled, what was not sampled, the workflow or method used, uncertainty, who received the result, what follow-up is pending, and how feedback from the infection-control team will be captured.",
     ],
     bodySourceIds: {
       0: ["clinical-microbiology-implementation-2026"],
@@ -4296,7 +4296,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     },
     tables: [
       {
-        title: "Beta healthcare-associated infection reporting fields",
+        title: "healthcare-associated infection reporting fields",
         summary:
           "Use this table to keep infection-control interpretation explicit and separate from genomic relatedness alone.",
         columns: ["Report field", "What to record", "Why it matters", "Main caution"],
@@ -4349,7 +4349,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
         title: "Infection-control handoff checklist",
         summary:
           "Use this before releasing or discussing a hospital-facing genomic result. It supports an infection-control conversation; it does not prescribe the action.",
-        columns: ["Handoff item", "What to communicate", "What to ask back", "Beta caution"],
+        columns: ["Handoff item", "What to communicate", "What to ask back", "Caution"],
         rows: [
           {
             cells: [
@@ -4456,7 +4456,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "The clinical microbiology implementation review makes the competency issue more concrete. It describes wet-lab, library-preparation, data-QC, data-analysis, interpretation, validation, accreditation, reporting and communication competencies across the genomic workflow. A public-health surveillance service will add further responsibilities around outbreak context, surveillance interpretation, governance, data sharing and programme management.",
       "The newer implementation sources make this more explicit. UKHSA names workforce, laboratories, data and analytics, and collaboration as implementation requirements. The clinical microbiology review identifies staff competencies, training, bioinformatics implementation, quality systems, reporting, and interpretive uncertainty as implementation concerns. The East African Community assessment adds a useful realism check: limited bioinformatics expertise, compute capacity, local sequencing facilities, and data-sharing mechanisms can make programmes dependent on external sequencing or analysis unless capacity building is planned as part of the service.",
       "The implementation collection gives practical training models. The Kenya AMR paper describes a 2-week laboratory and bioinformatics training programme using isolates from a national AMR repository and harmonized reporting. The European reference-laboratory rollout paper describes guidance and support for national laboratories, and California COVIDNet links operational success to ongoing training across a large sequencing network.",
-      "For beta, use a responsibility template rather than a fixed staffing ratio. Every service model should name owners for wet-lab processing, sequencing operation, bioinformatics workflow operation, QC review, validation and change control, data management, storage and backup, access review, reporting, interpretation, user training, incident support, procurement or costing, and programme oversight. The same person may cover more than one function in a small service, but no function should be invisible.",
+      "Use a responsibility template rather than a fixed staffing ratio. Every service model should name owners for wet-lab processing, sequencing operation, bioinformatics workflow operation, QC review, validation and change control, data management, storage and backup, access review, reporting, interpretation, user training, incident support, procurement or costing, and programme oversight. The same person may cover more than one function in a small service, but no function should be invisible.",
     ],
     bodySourceIds: {
       0: ["cdc-nejm-2019"],
@@ -4486,12 +4486,12 @@ export const guidanceBlocks: GuidanceBlock[] = [
     technicalDetail: [
       "Minimum responsibility map: wet-lab processing, sequencing operation, bioinformatics workflow operation, QC review, workflow validation, data management, storage and backup, access review, report interpretation, user training, incident support, and programme oversight.",
       "Minimum succession question: which service functions stop if one named person is unavailable for two weeks?",
-      "Beta responsibility-template columns: service function, accountable owner, backup owner, supporting role or partner, documentation location, training requirement, review frequency, cost line, and failure mode if unavailable.",
+      "responsibility-template columns: service function, accountable owner, backup owner, supporting role or partner, documentation location, training requirement, review frequency, cost line, and failure mode if unavailable.",
       "Functions that should not be unnamed: sample receipt, wet-lab processing, sequencing operation, bioinformatics workflow operation, QC review, validation and change control, data management, storage and backup, access review, reporting, interpretation, user training, incident support, procurement or costing, and programme oversight.",
     ],
     tables: [
       {
-        title: "Beta workforce responsibility template",
+        title: "workforce responsibility template",
         summary:
           "Use this as a role map. It does not imply that every function needs a separate person in a small service.",
         columns: ["Service function", "What must be owned", "Failure mode if unnamed", "Typical owner to identify"],
@@ -4564,7 +4564,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
         ],
       },
       {
-        title: "Beta responsibility variants by implementation model",
+        title: "responsibility variants by implementation model",
         summary:
           "Use this table to adapt the responsibility template to the service model. The rows identify likely ownership patterns, not staffing ratios.",
         columns: ["Implementation model", "Responsibilities to make explicit", "Roles or partners commonly involved", "Main risk if unnamed"],
@@ -4646,14 +4646,14 @@ export const guidanceBlocks: GuidanceBlock[] = [
         title: "Estimating workforce capacity without inventing FTE ratios",
         summary:
           "Use this worksheet to turn the responsibility map into a local staffing and cover discussion. It is a planning structure, not a universal staffing calculator.",
-        columns: ["Capacity question", "What to estimate locally", "Why it changes workforce need", "Beta caution"],
+        columns: ["Capacity question", "What to estimate locally", "Why it changes workforce need", "Caution"],
         rows: [
           {
             cells: [
               "Service volume and turnaround",
               "Expected samples or isolates per week or month, batching pattern, urgent-response route, routine reporting cycle, and seasonal or outbreak surge.",
               "The same role map needs different cover when the service is occasional, batched, daily, urgent, or expected to absorb outbreaks.",
-              "Use local throughput and turnaround assumptions; the beta guide does not provide FTE per sample.",
+              "Use local throughput and turnaround assumptions; the extracted sources do not provide FTE per sample.",
             ],
             sourceIds: [
               "phe-case-study",
@@ -4741,7 +4741,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
         title: "Workforce competency and cover log",
         summary:
           "Use this log to make training evidence, backup ownership, and support routes visible before the service depends on undocumented local knowledge.",
-        columns: ["Service function", "Competency evidence to record", "Cover and support route", "Beta caution"],
+        columns: ["Service function", "Competency evidence to record", "Cover and support route", "Caution"],
         rows: [
           {
             cells: [
@@ -4866,8 +4866,8 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "australia-microbial-genomics-framework-2025",
     ],
     gaps: [
-      "The beta responsibility variants still need review against real programme examples and local organisational structures.",
-      "The beta workforce capacity worksheet still needs source-backed staffing ratios or FTE examples by service scale, throughput, organism focus, and implementation model before it can become a staffing calculator.",
+      "The responsibility variants still need review against real programme examples and local organisational structures.",
+      "The workforce capacity worksheet still needs source-backed staffing ratios or FTE examples by service scale, throughput, organism focus, and implementation model before it can become a staffing calculator.",
       "Detailed training curricula and competency-assessment templates need extraction from APHL, PulseNet, WHO, ECDC and national programme sources.",
     ],
   },
@@ -4881,11 +4881,11 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "The PHE case study describes capital planning for sequencing equipment, robotics, IT, data management, and project management. It also considered laboratory-space remodelling, health and safety, workforce, training, sample requirements, turnaround times, and result format.",
       "Programmes should collect evidence on value as well as cost. PHE reported replacement of multiple conventional processes, reduced sample handling, reduced animal use, reduced staff costs in the reference laboratory, and a shift of scientific effort toward data analysis and interpretation. Price et al. found that included bacterial WGS surveillance economic studies supported WGS on economic grounds, but the evidence base was heterogeneous.",
       "Initial purchase cost is only one part of sustainability. WHO's costing manual provides a stronger category model for recurrent planning: throughput, platform, reagents and consumables, equipment, personnel and training, facilities and transport, bioinformatics, and quality management. For bioinformatics, it explicitly accommodates cloud, in-house server, and hybrid costs, including software licensing, storage, hardware, and maintenance.",
-      "Use costing as a scenario exercise rather than a one-off budget line. Compare throughput assumptions, platform choices, procurement costs, staffing patterns, training needs, quality-management activities, storage and compute options, and whether costs are shared with other pathogen programmes. The current sources support a category model; they still do not justify a universal cost-per-sample or return-on-investment claim across pathogens and countries.",
+      "Use costing as a scenario exercise rather than a one-off budget line. Compare throughput assumptions, platform choices, procurement costs, staffing patterns, training needs, quality-management activities, storage and compute options, and whether costs are shared with other pathogen programmes. The extracted sources support a category model; they still do not justify a universal cost-per-sample or return-on-investment claim across pathogens and countries.",
       "For infrastructure, the costing model should include the recurrent work that keeps the service alive: storage growth, redundancy if used, cloud processing and storage, software licences, in-house hardware renewal, maintenance fees, system administration, systems engineering, quality-management activities, and staff time for support and troubleshooting.",
       "Personnel should be costed as named workflow and support roles, not as an overhead after equipment is chosen. WHO's costing manual includes personnel and training across workflow steps, administrative and management personnel, quality and biosafety managers, laboratory directors, human resources, and quality-management activities such as accreditation, proficiency testing and certification.",
       "Procurement and supply chains should be treated as service-continuity risks. Stona et al. identify high equipment and consumable costs, long equipment purchasing lead times, long reagent resupply times, customs clearance, variable import procedures, taxes and duties as barriers for pathogen genomic surveillance in South and Southeast Asia. These risks affect turnaround, validation, response readiness, and whether a service can run when demand rises.",
-      "A budget becomes more useful when it is tied to implementation ownership. WHO's national strategy support tool supports costed implementation planning with responsible entities, implementation level, timeline, monitoring indicators and cost. For beta, convert costing categories into an action register so each funded or unfunded item has an owner, dependency, review point and evidence assumption.",
+      "A budget becomes more useful when it is tied to implementation ownership. WHO's national strategy support tool supports costed implementation planning with responsible entities, implementation level, timeline, monitoring indicators and cost. For this guide, convert costing categories into an action register so each funded or unfunded item has an owner, dependency, review point and evidence assumption.",
     ],
     bodySourceIds: {
       0: ["phe-case-study"],
@@ -4913,10 +4913,10 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     tables: [
       {
-        title: "Beta costed implementation action register",
+        title: "costed implementation action register",
         summary:
           "Use this to turn costing categories into owned implementation actions. It is a register structure, not a cost estimate.",
-        columns: ["Register field", "What to record", "Why it matters", "Beta caution"],
+        columns: ["Register field", "What to record", "Why it matters", "Caution"],
         rows: [
           {
             cells: [
@@ -4945,7 +4945,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "Cost category and recurrent status",
               "Equipment, reagents, personnel, training, facilities, transport, bioinformatics, storage, maintenance, quality management, support or evaluation; capital, recurrent or time-limited funding.",
               "The WHO costing manual separates practical categories and helps avoid treating equipment purchase as the whole service budget.",
-              "The beta guide does not provide local prices, salary assumptions or cost-per-sample values.",
+              "The extracted sources do not provide local prices, salary assumptions or cost-per-sample values.",
             ],
             sourceIds: ["who-genomics-costing-tool-manual-2024", "wgs-costing-tool-2024"],
           },
@@ -5007,7 +5007,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
         ],
       },
       {
-        title: "Beta costing and implementation scenario templates",
+        title: "costing and implementation scenario templates",
         summary:
           "Use these templates to compare plausible service models before procurement. Replace all placeholders with local throughput, staff, infrastructure and quality-management assumptions.",
         columns: ["Scenario", "Define before costing", "Cost and support lines to test", "Evidence caution"],
@@ -5096,7 +5096,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
         ],
       },
       {
-        title: "Beta procurement and supply-chain resilience checklist",
+        title: "procurement and supply-chain resilience checklist",
         summary:
           "Use this checklist to test whether the planned service can keep running when purchasing, import, resupply, maintenance or vendor support is slow.",
         columns: ["Risk area", "What to record", "Service decision to make", "Source-backed caution"],
@@ -5115,7 +5115,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "Reagent and consumable resupply",
               "Critical consumables, supplier or distributor, usual resupply time, shelf-life, cold-chain needs, minimum stock rule and substitution options.",
               "Decide what level of routine and surge stock is needed to meet the service use case and turnaround expectation.",
-              "The beta guide cannot prescribe universal stock levels; resupply time and demand volatility are local assumptions.",
+              "Universal stock levels cannot be prescribed from these sources; resupply time and demand volatility are local assumptions.",
             ],
             sourceIds: [
               "asia-supply-chains-genomic-surveillance-2026",
@@ -5224,10 +5224,10 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "PHA4GE frames this as a responsibility question: where analysis is run, how data move, and who has access. The clinical microbiology implementation review describes centralised reference laboratory, decentralised in-house sequencing, and hybrid or collaborative models. AusPathoGen shows a national collaborative model built around public-health laboratories, agencies, academic partners, standard bioinformatics, governance committees, and a shared data platform.",
       "The right model depends on constraints. A centralised reference model can concentrate expertise, validation, infrastructure, and quality systems, but it creates sample-transfer, turnaround-time, and service-dependency questions. A local model can improve local control and responsiveness, but it requires staff, validation, storage, IT support, and continuity. A hybrid or collaborative model can spread capability while preserving shared standards, but it needs explicit governance, data-sharing agreements, and support routes.",
       "PHA4GE's implementation comparison gives the practical trade-off. A laptop model can be useful when internet or power is unreliable, but it shifts management to the operator and limits scalability and access-control structures. On-premises systems can meet local needs, but job-processing infrastructure requires expertise. Cloud platforms can reduce local hardware barriers, but they depend on internet connectivity for upload and may shift cost, data-residency and vendor-dependency questions elsewhere.",
-      "The East African Community assessment shows why this matters. External sequencing and analysis can be useful during capability building, but long-term reliance on third parties may delay real-time surveillance decisions and limit local interpretation if local sequencing, compute, bioinformatics, and data-sharing capacity are not developed. The guide should therefore treat external support as a dependency to manage, not as a failure or a complete solution.",
+      "The East African Community assessment shows why this matters. External sequencing and analysis can be useful during capability building, but long-term reliance on third parties may delay real-time surveillance decisions and limit local interpretation if local sequencing, compute, bioinformatics, and data-sharing capacity are not developed. External support should therefore be treated as a dependency to manage, not as a failure or a complete solution.",
       "The implementation collection adds concrete network examples: Kenya's AMR paper describes training public-health scientists to generate genomic data and harmonized reports; the European reference-laboratory rollout paper describes guidance and support for national food, feed, and veterinary laboratories; California COVIDNet shows a large collaborative model linking many sequencing laboratories, cloud-based analysis, training, and visualization workflows.",
       "National strategies and frameworks add another layer: they treat pathogen genomics as a capability across laboratories, workforce, data and analytics, governance, collaboration, data sharing, quality, sustainability and evaluation. A national programme should therefore compare models by capability domains as well as by where sequencing and analysis happen.",
-      "For beta, compare implementation models in a dependency matrix. The purpose is not to rank laptop, local server, HPC, cloud, managed platform, centralised reference, hybrid, collaborative, or external-support models as universally better or worse. The purpose is to make the dependencies explicit: who owns each layer, which public-health use case is supported, what happens when internet, power, staff, storage, provider access, or partner support fails, and what local capability is being built.",
+      "For this guide, compare implementation models in a dependency matrix. The purpose is not to rank laptop, local server, HPC, cloud, managed platform, centralised reference, hybrid, collaborative, or external-support models as universally better or worse. The purpose is to make the dependencies explicit: who owns each layer, which public-health use case is supported, what happens when internet, power, staff, storage, provider access, or partner support fails, and what local capability is being built.",
     ],
     bodySourceIds: {
       0: ["pha4ge-infrastructure", "clinical-microbiology-implementation-2026"],
@@ -5259,15 +5259,15 @@ export const guidanceBlocks: GuidanceBlock[] = [
     },
     technicalDetail: [
       "For each proposed model, record the service owner, laboratory operator, sequencing location, analysis location, workflow owner, data host, access manager, support route, validation owner, and fallback if the primary provider or network route is unavailable.",
-      "Beta matrix rows: laptop or field workflow; local workstation; institutional server or HPC; cloud workflow platform; managed SaaS-style platform; centralised reference service; hybrid local and central model; national collaborative network; externally supported sequencing or analysis.",
-      "Beta matrix columns: supported use case, sample route, sequencing location, analysis location, data host, workflow owner, validation owner, access manager, support route, internet or power dependency, data-residency issue, recurring cost line, local capability built, failure mode, and fallback route.",
+      "matrix rows: laptop or field workflow; local workstation; institutional server or HPC; cloud workflow platform; managed SaaS-style platform; centralised reference service; hybrid local and central model; national collaborative network; externally supported sequencing or analysis.",
+      "matrix columns: supported use case, sample route, sequencing location, analysis location, data host, workflow owner, validation owner, access manager, support route, internet or power dependency, data-residency issue, recurring cost line, local capability built, failure mode, and fallback route.",
     ],
     tables: [
       {
-        title: "Beta national capability-domain checklist",
+        title: "national capability-domain checklist",
         summary:
           "Use this table for national-scale planning before choosing a centralised, distributed, collaborative or managed implementation model.",
-        columns: ["Capability domain", "What to define", "Why it matters", "Beta caution"],
+        columns: ["Capability domain", "What to define", "Why it matters", "Caution"],
         rows: [
           {
             cells: [
@@ -5314,7 +5314,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "Governance and data sharing",
               "Governance committees, pathogen working groups, ethics and data-sharing agreements, access model, contributor recognition and legal or policy route.",
               "National collaborations need trust, transparency and controlled sharing before data move across organisations.",
-              "The beta guide can name governance functions, but not jurisdiction-specific legal terms.",
+              "Governance functions can be named, but jurisdiction-specific legal terms require local review.",
             ],
             sourceIds: [
               "auspathogen-implementation-2025",
@@ -5342,7 +5342,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "Sustainability and evaluation",
               "Financing, procurement, support, value-for-money or cost-effectiveness evaluation, service metrics and review of public-health usefulness.",
               "National programmes need evidence that capability is sustainable and useful, not only technically impressive.",
-              "The current guide does not provide a universal national cost model or certified maturity score.",
+              "The extracted sources do not provide a universal national cost model or certified maturity score.",
             ],
             sourceIds: [
               "ukhsa-pathogen-genomics-strategy-2024",
@@ -5366,7 +5366,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
         ],
       },
       {
-        title: "Beta implementation dependency matrix",
+        title: "implementation dependency matrix",
         summary:
           "Use this to compare implementation models by dependencies and fallback routes, not as a universal ranking.",
         columns: ["Model", "Works best when", "Key dependencies to manage", "Fallback or maturity question"],
@@ -5434,7 +5434,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
         ],
       },
       {
-        title: "Beta constraint-response matrix",
+        title: "constraint-response matrix",
         summary:
           "Use this table with the wizard profile. A constraint should raise ownership and fallback questions; it should not automatically select one platform.",
         columns: ["Constraint signal", "Guidance to raise", "Implementation question", "Source-backed caution"],
@@ -5550,7 +5550,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "aphl-ngs-implementation-2016",
       "phe-case-study",
     ],
-    gaps: ["The beta dependency and constraint matrices still need review against real implementation examples and user testing with programme teams."],
+    gaps: ["The dependency and constraint matrices still need review against real implementation examples and user testing with programme teams."],
   },
   {
     id: "maturity-next-steps",
@@ -5566,7 +5566,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "The East African Community assessment is a reminder that maturity is not only a local laboratory question. Sequencing access, bioinformatics expertise, compute infrastructure, regional collaboration, standards, and data-sharing mechanisms can all determine whether a programme can act independently or must rely on external partners. A maturity discussion should therefore separate internal capability, external dependency, and the support arrangements that make a chosen model reliable.",
       "The implementation collection helps define practical maturity signals: participation in proficiency testing, harmonised inter-laboratory methods, validated bioinformatics workflows, reproducible AMR prediction, trained users, and routine links between genomic outputs and health-protection decisions.",
       "The dependency matrix is the practical bridge between implementation model and maturity. A programme can be immature if it owns too much without support, or fragile if it outsources too much without fallback, local interpretation, access governance, or cost control. The useful question is which dependency is unmanaged for the service being promised.",
-      "For beta, maturity should be framed as risk reduction. Ask which dependency would stop the service from being used: one person leaving, internet failing, storage filling, access not being reviewed, a workflow changing without validation, a report not being understood, or a partner service becoming unavailable.",
+      "For this guide, maturity should be framed as risk reduction. Ask which dependency would stop the service from being used: one person leaving, internet failing, storage filling, access not being reviewed, a workflow changing without validation, a report not being understood, or a partner service becoming unavailable.",
     ],
     bodySourceIds: {
       0: ["pha4ge-infrastructure", "who-genomic-surveillance-progress-2023"],
@@ -5591,16 +5591,16 @@ export const guidanceBlocks: GuidanceBlock[] = [
       7: ["pha4ge-infrastructure", "phe-case-study", "who-genomic-surveillance-progress-2023"],
     },
     technicalDetail: [
-      "Beta maturity dimensions: use case clarity, sampling route, metadata lineage, QC and validation, workflow provenance, storage and backup, access control, reporting route, data-sharing route, workforce cover, recurrent cost, and service review.",
+      "maturity dimensions: use case clarity, sampling route, metadata lineage, QC and validation, workflow provenance, storage and backup, access control, reporting route, data-sharing route, workforce cover, recurrent cost, and service review.",
       "Dependency questions: Which functions are internal, external, shared, or unmanaged? Which dependency would stop reporting? Which dependency would stop interpretation? Which dependency would create unacceptable delay? Which dependency has no documented fallback?",
-      "Do not use the current maturity language as a certified score. Use it to choose the next risk to reduce and record the evidence gap.",
+      "Do not use maturity language as a certified score. Use it to choose the next risk to reduce and record the evidence gap.",
     ],
     tables: [
       {
-        title: "Beta maturity risk-reduction worksheet",
+        title: "maturity risk-reduction worksheet",
         summary:
           "Use this as a planning worksheet. It helps identify the next fragile part of the service; it is not a validated score.",
-        columns: ["Dimension", "Evidence to check", "Next risk to reduce", "Beta caution"],
+        columns: ["Dimension", "Evidence to check", "Next risk to reduce", "Caution"],
         rows: [
           {
             cells: [
@@ -5697,10 +5697,10 @@ export const guidanceBlocks: GuidanceBlock[] = [
         ],
       },
       {
-        title: "Beta readiness-to-next-action table",
+        title: "readiness-to-next-action table",
         summary:
           "Use this to turn a maturity discussion into the next practical action. It is not a maturity score or certification scheme.",
-        columns: ["Current state", "Likely service risk", "Next action to prioritise", "Beta caution"],
+        columns: ["Current state", "Likely service risk", "Next action to prioritise", "Caution"],
         rows: [
           {
             cells: [
@@ -5728,7 +5728,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
             cells: [
               "A pilot workflow is being used for routine decisions",
               "Validation boundary, change control, QC thresholds, report wording and user expectations may be unclear.",
-              "Assemble a beta validation evidence package and release record before retiring older methods or expanding reportable outputs.",
+              "Assemble a current validation evidence package and release record before retiring older methods or expanding reportable outputs.",
               "A pilot can demonstrate feasibility without proving routine reportability, comparability or sustainability.",
             ],
             sourceIds: [
@@ -5815,7 +5815,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "aphl-ngs-implementation-2016",
     ],
     gaps: [
-      "The beta worksheet supports risk-reduction planning, but a formal maturity rubric and scoring method still need source-backed review.",
+      "The worksheet supports risk-reduction planning, but a formal maturity rubric and scoring method still need source-backed review.",
       "The PHA4GE tier table is useful for discussion but needs editorial review before it becomes an assessment tool.",
     ],
   }
