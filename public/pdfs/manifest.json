@@ -2,84 +2,72 @@
   {
     "resourceId": "phe-case-study",
     "title": "Implementing pathogen genomics: a case study",
-    "sourcePath": "/Users/nfareed/Downloads/implementing_pathogen_genomics_a_case_study.pdf",
     "publicPath": "/pdfs/phe-implementing-pathogen-genomics-case-study-2018.pdf",
     "redistributionNote": "Public UK government publication."
   },
   {
     "resourceId": "who-global-strategy",
     "title": "Global genomic surveillance strategy for pathogens with pandemic and epidemic potential, 2022-2032",
-    "sourcePath": "/Users/nfareed/Downloads/9789240046979-eng.pdf",
     "publicPath": "/pdfs/who-global-genomic-surveillance-strategy-2022.pdf",
     "redistributionNote": "Public WHO publication."
   },
   {
     "resourceId": "who-sarscov2-implementation",
     "title": "Genomic sequencing of SARS-CoV-2: a guide to implementation for maximum impact on public health",
-    "sourcePath": "/Users/nfareed/Downloads/9789240018440-eng.pdf",
     "publicPath": "/pdfs/who-sars-cov-2-sequencing-implementation-2021.pdf",
     "redistributionNote": "Public WHO publication."
   },
   {
     "resourceId": "who-data-sharing-principles",
     "title": "WHO guiding principles for pathogen genome data sharing",
-    "sourcePath": "/Users/nfareed/Downloads/9789240061743-eng.pdf",
     "publicPath": "/pdfs/who-pathogen-genome-data-sharing-principles-2022.pdf",
     "redistributionNote": "Public WHO publication."
   },
   {
     "resourceId": "who-national-genomic-surveillance-strategy-2023",
     "title": "Considerations for developing a national genomic surveillance strategy or action plan",
-    "sourcePath": "source-material/local/who-ipsn/9789240076563-eng.pdf",
     "publicPath": "/pdfs/who-national-genomic-surveillance-strategy-2023.pdf",
     "redistributionNote": "Public WHO publication."
   },
   {
     "resourceId": "who-genomic-data-sharing-platforms-2025",
     "title": "Attributes and principles of genomic data-sharing platforms",
-    "sourcePath": "source-material/local/who-ipsn/9789240113831-eng.pdf",
     "publicPath": "/pdfs/who-genomic-data-sharing-platforms-2025.pdf",
     "redistributionNote": "Public WHO publication."
   },
   {
     "resourceId": "who-genomics-costing-tool-manual-2024",
     "title": "Genomics costing tool: user manual",
-    "sourcePath": "source-material/local/who-ipsn/9789240090866-eng.pdf",
     "publicPath": "/pdfs/who-genomics-costing-tool-user-manual-2024.pdf",
     "redistributionNote": "Public WHO publication."
   },
   {
     "resourceId": "ipsn-source-pack",
     "title": "International Pathogen Surveillance Network one-slide overview",
-    "sourcePath": "source-material/local/who-ipsn/ipsn-one-slide-overview.pdf",
     "publicPath": "/pdfs/ipsn-one-slide-overview.pdf",
     "redistributionNote": "Public WHO/IPSN publication."
   },
   {
     "resourceId": "ecdc-wgs-surveillance",
     "title": "Expert opinion on whole genome sequencing for public health surveillance",
-    "sourcePath": "/Users/nfareed/Downloads/whole-genome-sequencing-for-public-health-surveillance.pdf",
     "publicPath": "/pdfs/ecdc-wgs-public-health-surveillance-2016.pdf",
     "redistributionNote": "Public ECDC publication."
   },
   {
     "resourceId": "aphl-ngs-implementation",
     "title": "Next Generation Sequencing Implementation Guide",
-    "sourcePath": "/Users/nfareed/Downloads/id-ngs-implementation-guide102016.pdf",
     "publicPath": "/pdfs/aphl-ngs-implementation-guide-2016.pdf",
     "redistributionNote": "Public APHL guidance publication."
   },
   {
     "resourceId": "ukhsa-pathogen-genomics-strategy",
     "title": "UKHSA Pathogen Genomics Strategy",
-    "sourcePath": "/Users/nfareed/Downloads/Pathogen_Genomics_Strategy_2024.pdf",
     "publicPath": "/pdfs/ukhsa-pathogen-genomics-strategy-2024.pdf",
     "redistributionNote": "Public UK government publication."
   },
   {
     "resourceId": "australia-microbial-genomics-framework",
     "title": "National Microbial Genomics Framework for Public Health 2025-2027",
-    "sourcePath": "/Users/nfareed/Downloads/national-microbial-genomics-framework-for-public-health-2025-to-2027.pdf",
     "publicPath": "/pdfs/australia-national-microbial-genomics-framework-2025.pdf",
     "redistributionNote": "Public Australian government publication."
   }

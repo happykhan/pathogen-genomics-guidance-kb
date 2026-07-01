@@ -3,7 +3,7 @@
 ## Source Basis
 
 - Gador-Whyte AP, Sherry NL, Brischetto A, Andersson P, Bond KA, van Hal SJ, Harris PNA, Howden BP, on behalf of the Australian Pathogen Genomics Program partners. Implementation of pathogen genomics in clinical microbiology laboratories. *Clinical Microbiology Reviews*. 2026;39:e00177-25. doi:10.1128/cmr.00177-25.
-- Full-text PDF supplied locally: `/Users/nfareed/Downloads/gador-whyte-et-al-2026-implementation-of-pathogen-genomics-in-clinical-microbiology-laboratories.pdf`.
+- Public beta PDF copy: `public/pdfs/clinical-microbiology-implementation-gador-whyte-2026.pdf`.
 
 ## Status
 

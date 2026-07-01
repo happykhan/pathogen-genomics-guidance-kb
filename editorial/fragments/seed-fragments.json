@@ -685,5 +685,82 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "Formal maturity score remains a gap.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-reporting-decision-products-core",
+    "sectionId": "reporting-decision-use",
+    "title": "Reports as decision products",
+    "kind": "paragraph",
+    "text": "A report is a service product, not a file emitted by the pipeline. It should name the user, the public-health question, the timeframe, the method or workflow version, the quality limits, the uncertainty, and the decision it can support.",
+    "claimIds": [
+      "claim-reporting-products-fit-decision"
+    ],
+    "sourceIds": [
+      "who-national-genomic-surveillance-strategy-2023",
+      "who-sars-cov-2-sequencing-implementation-2021",
+      "ecdc-wgs-surveillance-2016",
+      "phe-case-study"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "policy",
+        "lab-lead",
+        "bioinformatician",
+        "data-manager",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "reporting",
+        "decision-use",
+        "quality"
+      ]
+    },
+    "order": 10,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "Report wording and uncertainty categories remain a gap.",
+    "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-reporting-organism-specific-core",
+    "sectionId": "reporting-decision-use",
+    "title": "Organism-specific reporting",
+    "kind": "exampleBox",
+    "text": "Keep the opening reporting principle common, then vary the practical content by organism and use case. Enteric-bacterial services may report cluster membership, source links, food or animal-health context and AMR. TB services may report transmission hypotheses, outbreak refutation or confirmation, reinfection/reactivation questions and resistance inference. Respiratory-virus services may report variants, lineage dynamics, sampling context, vaccine or risk-assessment relevance and limitations of partial genomes. AMR reporting should state the organism, drug, resistance mechanism, database or rule set, and the limits of genotype-phenotype inference.",
+    "claimIds": [
+      "claim-organism-reporting-differs-by-use-case"
+    ],
+    "sourceIds": [
+      "ecdc-wgs-surveillance-2016",
+      "phe-case-study",
+      "cdc-nejm-2019",
+      "who-sars-cov-2-sequencing-implementation-2021"
+    ],
+    "conditions": {
+      "organisms": [
+        "enteric-bacteria",
+        "tb",
+        "respiratory-viruses",
+        "amr",
+        "nosocomial"
+      ],
+      "topics": [
+        "reporting",
+        "organism-specific",
+        "decision-use"
+      ]
+    },
+    "order": 20,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "Specific reporting templates remain unapproved until more pathogen-specific guidance is extracted.",
+    "updatedAt": "2026-07-01"
   }
 ]

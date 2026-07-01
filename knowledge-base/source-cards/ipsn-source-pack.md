@@ -4,12 +4,8 @@
 
 - Organization: International Pathogen Surveillance Network (IPSN), hosted by WHO.
 - Main page: <https://www.who.int/initiatives/international-pathogen-surveillance-network>.
-- Local PDFs downloaded under `source-material/local/who-ipsn/` (ignored by git):
-  - `ipsn-one-slide-overview.pdf`
-  - `ipsn-overall-tors-apr-2023.pdf`
-  - `ipsn-catalytic-grant-fund-rfp-2024.pdf`
-  - `ipsn-catalytic-grant-fund-rfp-2026-2027.pdf`
-  - `ipsn-platform-principles-public-consultation.pdf`
+- Public beta PDF copy: `public/pdfs/ipsn-one-slide-overview.pdf`.
+- Additional IPSN PDFs were reviewed in the local editorial workspace during source discovery.
 
 ## Status
 

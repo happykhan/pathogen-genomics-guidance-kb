@@ -3,7 +3,7 @@
 ## Source Basis
 
 - UK Health Security Agency. *UKHSA Pathogen Genomics Strategy*. January 2024.
-- Full-text PDF supplied locally: `/Users/nfareed/Downloads/Pathogen_Genomics_Strategy_2024.pdf`.
+- Public beta PDF copy: `public/pdfs/ukhsa-pathogen-genomics-strategy-2024.pdf`.
 
 ## Status
 

@@ -10,4 +10,4 @@ Run:
 npm run pdfs:sync
 ```
 
-The script reads `public/pdfs/manifest.json`, copies approved local files into this directory, and verifies that every manifest entry exists.
+The script reads `public/pdfs/manifest.json`, verifies that every public entry exists, and copies from a local `sourcePath` only when that optional field is present in a private working copy. Do not commit local workstation paths to the public manifest.

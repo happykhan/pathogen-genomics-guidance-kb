@@ -3,7 +3,7 @@
 ## Source Basis
 
 - Egli A, Howden BP. A global economic perspective on whole-genome sequencing strategies for pathogens: continuous surveillance versus outbreak-triggered investigations. *The Lancet Microbe*. 2026. doi:10.1016/j.lanmic.2026.101416.
-- Full-text PDF supplied locally: `/Users/nfareed/Downloads/PIIS2666524726000716.pdf`.
+- Full text available during source review; no public beta PDF copy is checked in.
 
 ## Status
 

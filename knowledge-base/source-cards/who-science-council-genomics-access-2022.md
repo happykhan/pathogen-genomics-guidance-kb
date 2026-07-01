@@ -7,8 +7,8 @@
 - Year: 2022.
 - ISBN: 9789240052857.
 - Public page: <https://iris.who.int/handle/10665/359560>.
-- Local full-text PDF: `source-material/local/who-ipsn/9789240052857-eng.pdf` (ignored by git).
-- Extracted text: `tmp/pdfs/who-ipsn-text/9789240052857-eng.txt` (not committed).
+- Full text available during source review; no public beta PDF copy is checked in.
+- Extracted text available in the local editorial workspace during source review.
 
 ## Status
 

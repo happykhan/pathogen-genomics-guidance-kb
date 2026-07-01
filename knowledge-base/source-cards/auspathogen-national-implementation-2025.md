@@ -3,7 +3,7 @@
 ## Source Basis
 
 - Webb JR, Andersson P, Sim E, Zahedi A, Donald A, Hoang T, et al. Implementing a national programme of pathogen genomics for public health: the Australian Pathogen Genomics Program (AusPathoGen). *The Lancet Microbe*. 2025;6:100969. doi:10.1016/j.lanmic.2024.100969.
-- Full-text PDF supplied locally: `/Users/nfareed/Downloads/PIIS2666524724002301.pdf`.
+- Full text available during source review; no public beta PDF copy is checked in.
 
 ## Status
 

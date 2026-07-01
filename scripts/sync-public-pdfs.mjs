@@ -21,10 +21,9 @@ function formatBytes(bytes) {
 }
 
 manifest.forEach((entry) => {
-  const source = resolveSource(entry.sourcePath);
   const destination = path.join(repoRoot, "public", entry.publicPath.replace(/^\//, ""));
 
-  if (!entry.resourceId || !entry.sourcePath || !entry.publicPath || !entry.redistributionNote) {
+  if (!entry.resourceId || !entry.publicPath || !entry.redistributionNote) {
     errors.push(`Manifest entry is incomplete: ${JSON.stringify(entry)}`);
     return;
   }
@@ -33,6 +32,17 @@ manifest.forEach((entry) => {
     errors.push(`Manifest entry ${entry.resourceId} has invalid publicPath: ${entry.publicPath}`);
     return;
   }
+
+  if (!entry.sourcePath) {
+    if (!existsSync(destination)) {
+      errors.push(`Manifest entry ${entry.resourceId} missing public file: ${entry.publicPath}`);
+      return;
+    }
+    console.log(`${entry.resourceId}: ${entry.publicPath} (${formatBytes(statSync(destination).size)})`);
+    return;
+  }
+
+  const source = resolveSource(entry.sourcePath);
 
   if (!existsSync(source)) {
     errors.push(`Manifest entry ${entry.resourceId} missing source file: ${entry.sourcePath}`);

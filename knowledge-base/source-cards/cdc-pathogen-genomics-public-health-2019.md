@@ -2,8 +2,8 @@
 
 ## Source Basis
 
-- Local PDF: `/Users/nfareed/Downloads/nihms-1068367.pdf`
-- Extracted temporary text: `tmp/pdfs/source-extracts/nihms-1068367.txt` (not committed)
+- Full text available during source review; no public beta PDF copy is checked in.
+- Extracted text available in the local editorial workspace during source review.
 - Citation: Armstrong GL, MacCannell DR, Carleton HA, Neuhaus EB, Bradbury RS, Posey JE, Taylor J, Gwinn M. Pathogen Genomics in Public Health. N Engl J Med. 2019;381(26):2569-2580. doi:10.1056/NEJMsr1813907.
 
 ## Status

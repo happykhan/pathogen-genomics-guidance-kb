@@ -2,8 +2,8 @@
 
 ## Source Basis
 
-- Local PDF: `/Users/nfareed/Downloads/implementing_pathogen_genomics_a_case_study.pdf`
-- Extracted temporary text: `tmp/pdfs/source-extracts/implementing_pathogen_genomics_a_case_study.txt` (not committed)
+- Public beta PDF copy: `public/pdfs/phe-implementing-pathogen-genomics-case-study-2018.pdf`.
+- Extracted text available in the local editorial workspace during source review.
 - Citation: Grant K, Jenkins C, Arnold C, Green J, Zambon M. Implementing pathogen genomics: a case study. Public Health England; 2018. Report developed, drafted, and designed by PHG Foundation for Public Health England.
 - Public landing page: `https://www.gov.uk/government/publications/implementing-pathogen-genomics-a-case-study`
 

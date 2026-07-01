@@ -428,5 +428,52 @@
     "confidence": "high",
     "limitations": "Needs conversion into concrete checklists and examples.",
     "reviewStatus": "draft"
+  },
+  {
+    "id": "claim-reporting-products-fit-decision",
+    "sourceId": "who-national-genomic-surveillance-strategy-2023",
+    "sourceLocator": "WHO 2023 national strategy support tool; WHO 2021 SARS-CoV-2 guide; ECDC 2016 expert opinion; PHE case study",
+    "evidenceItemIds": [
+      "evidence-who-2023-use-case-definition",
+      "evidence-who-2023-sampling-turnaround",
+      "evidence-who-sarscov2-stakeholder-reporting",
+      "evidence-ecdc-reporting-objectives",
+      "evidence-phe-enteric-users-actions"
+    ],
+    "claim": "Genomic reports should be designed around the user, public-health question, timeframe, uncertainty and next decision rather than around analysis completion alone.",
+    "extractedText": "WHO asks programmes to define objectives, users, action routes, turnaround and outcomes. The SARS-CoV-2 implementation guide calls for rapid, clear written reports, discussion of limitations, and stakeholder feedback. ECDC says reporting outputs should be agreed for each disease or pathogen according to surveillance objectives. PHE shows that enteric WGS reports serve health-protection, laboratory, food-safety, animal-health and international users.",
+    "notes": "Use for the main reporting section and Gnomey profile-specific sharing.",
+    "tags": ["reporting", "decision-use", "stakeholders", "turnaround", "uncertainty"],
+    "candidateSectionIds": ["reporting-decision-use"],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "multiple",
+    "confidence": "high",
+    "limitations": "Does not prescribe report wording or legal sign-off requirements.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "claim-organism-reporting-differs-by-use-case",
+    "sourceId": "ecdc-wgs-surveillance-2016",
+    "sourceLocator": "ECDC 2016 expert opinion; Armstrong et al. 2019; PHE case study; WHO 2021 SARS-CoV-2 guide",
+    "evidenceItemIds": [
+      "evidence-ecdc-reporting-objectives",
+      "evidence-ecdc-epidemiology-linkage-interpretation",
+      "evidence-phe-enteric-users-actions",
+      "evidence-armstrong-tb-influenza-amr-reporting",
+      "evidence-who-sarscov2-stakeholder-reporting",
+      "evidence-who-sarscov2-metadata-sharing"
+    ],
+    "claim": "The common reporting principle is stable across pathogens, but the practical content differs by organism and use case: enteric bacteria emphasise outbreak/source/One Health routes, TB emphasises transmission and drug resistance, respiratory viruses emphasise variants and vaccine or risk assessment, and AMR reporting depends on genotype-phenotype evidence.",
+    "extractedText": "ECDC separates transmission-linkage and phenotype-prediction outputs. PHE describes enteric surveillance, outbreak, AMR and food or animal-health users. Armstrong et al. describe TB, influenza and AMR use cases and caveats. WHO's SARS-CoV-2 guide adds virus-specific stakeholder reporting, metadata, partial-genome and raw-read sharing considerations.",
+    "notes": "Use for conditional organism-specific blocks after the main reporting section.",
+    "tags": ["organism-specific", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "reporting"],
+    "candidateSectionIds": ["reporting-decision-use"],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "multiple",
+    "confidence": "high",
+    "limitations": "Specific organism thresholds and report templates still need current pathogen-specific sources.",
+    "reviewStatus": "reviewed"
   }
 ]

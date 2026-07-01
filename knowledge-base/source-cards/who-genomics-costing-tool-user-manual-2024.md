@@ -7,8 +7,8 @@
 - Year: 2024.
 - ISBN: 9789240090866.
 - Public page: <https://iris.who.int/handle/10665/376324>.
-- Local full-text PDF: `source-material/local/who-ipsn/9789240090866-eng.pdf` (ignored by git).
-- Extracted text: `tmp/pdfs/who-ipsn-text/9789240090866-eng.txt` (not committed).
+- Public beta PDF copy: `public/pdfs/who-genomics-costing-tool-user-manual-2024.pdf`.
+- Extracted text available in the local editorial workspace during source review.
 
 ## Status
 

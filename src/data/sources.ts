@@ -80,6 +80,10 @@ export const sources = {
     label: "ECDC 2016, Expert opinion on whole genome sequencing for public health surveillance",
     path: "knowledge-base/source-cards/ecdc-wgs-public-health-surveillance-2016.md",
   },
+  "who-sars-cov-2-sequencing-implementation-2021": {
+    label: "WHO 2021, Genomic sequencing of SARS-CoV-2 implementation guide",
+    path: "knowledge-base/source-cards/who-sars-cov-2-sequencing-implementation-2021.md",
+  },
   "ukhsa-pathogen-genomics-strategy-2024": {
     label: "UKHSA 2024, Pathogen Genomics Strategy",
     path: "knowledge-base/source-cards/ukhsa-pathogen-genomics-strategy-2024.md",

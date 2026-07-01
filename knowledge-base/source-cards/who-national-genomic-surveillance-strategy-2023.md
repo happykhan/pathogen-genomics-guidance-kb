@@ -7,8 +7,8 @@
 - Year: 2023.
 - ISBN: 9789240076563.
 - Public page: <https://iris.who.int/handle/10665/372390>.
-- Local full-text PDF: `source-material/local/who-ipsn/9789240076563-eng.pdf` (ignored by git).
-- Extracted text: `tmp/pdfs/who-ipsn-text/9789240076563-eng.txt` (not committed).
+- Public beta PDF copy: `public/pdfs/who-national-genomic-surveillance-strategy-2023.pdf`.
+- Extracted text available in the local editorial workspace during source review.
 
 ## Status
 

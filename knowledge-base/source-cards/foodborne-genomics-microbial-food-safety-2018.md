@@ -3,7 +3,7 @@
 ## Source Basis
 
 - Allard MW, Bell R, Ferreira CM, Gonzalez-Escalona N, Hoffmann M, Muruvanda T, Ottesen A, Ramachandran P, Reed E, Sharma S, Stevens E, Timme R, Zheng J, Brown EW. *Genomics of foodborne pathogens for microbial food safety*. Current Opinion in Biotechnology. 2018;49:224-229. doi:10.1016/j.copbio.2017.11.002.
-- Full-text PDF supplied locally: `/Users/nfareed/Downloads/1-s2.0-S0958166917301398-main.pdf`.
+- Full text available during source review; no public beta PDF copy is checked in.
 
 ## Status
 

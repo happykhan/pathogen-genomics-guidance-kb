@@ -380,5 +380,71 @@
     "tags": ["bioinformatics", "workflow", "validation", "audit", "security", "portability"],
     "limitations": "Needs conversion into concrete implementation checklists before being used as operational instructions.",
     "reviewStatus": "draft"
+  },
+  {
+    "id": "evidence-who-sarscov2-stakeholder-reporting",
+    "sourceId": "who-sars-cov-2-sequencing-implementation-2021",
+    "sourceLocator": "WHO 2021 SARS-CoV-2 sequencing implementation guide, sections 3.4 and 3.6",
+    "evidenceType": "short-excerpt",
+    "excerpt": "rapidly communicated to stakeholders in a standardized and easily interpretable written report",
+    "passageSummary": "WHO states that SARS-CoV-2 sequencing programmes should identify stakeholders early, agree aims and communication channels, keep genomic analysts close to public-health investigation and response teams, rapidly communicate results in clear written reports, discuss analytical limitations in everyday language, and seek structured stakeholder feedback.",
+    "tags": ["reporting", "decision-use", "stakeholders", "respiratory-viruses", "evaluation"],
+    "limitations": "SARS-CoV-2 specific source; general reporting principles need adaptation for other pathogens.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-who-sarscov2-metadata-sharing",
+    "sourceId": "who-sars-cov-2-sequencing-implementation-2021",
+    "sourceLocator": "WHO 2021 SARS-CoV-2 sequencing implementation guide, sections 4.2 to 4.4",
+    "evidenceType": "short-excerpt",
+    "excerpt": "date and location of sample collection",
+    "passageSummary": "WHO states that anonymised SARS-CoV-2 metadata should be shared with genomic data, with collection date and location as minimum fields and additional sample, travel, demographic and clinical context where possible. It distinguishes consensus, partial consensus and raw read sharing, notes that partial genomes can still be useful when quality is checked, and warns that raw read sharing can be difficult where internet upload is limited.",
+    "tags": ["metadata", "data-sharing", "respiratory-viruses", "quality", "internet-constraints"],
+    "limitations": "SARS-CoV-2 platform and metadata details do not define a universal repository policy.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-ecdc-reporting-objectives",
+    "sourceId": "ecdc-wgs-surveillance-2016",
+    "sourceLocator": "ECDC 2016 expert opinion, technical requirements for multi-centre genomic information sharing",
+    "evidenceType": "short-excerpt",
+    "excerpt": "distinct data analysis and reporting outputs",
+    "passageSummary": "ECDC states that WGS visualisation and plain-language reporting for epidemiological inference and risk assessment should be agreed for each disease or pathogen according to surveillance objectives. It distinguishes comparative genome analysis for transmission linkage from phenotype prediction for antigenic profile, drug resistance, virulence and mobile elements.",
+    "tags": ["reporting", "surveillance-objectives", "phenotype-prediction", "risk-assessment"],
+    "limitations": "EU/EEA expert opinion from 2016; technical methods have changed, but the principle that outputs depend on surveillance objectives remains useful.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-ecdc-epidemiology-linkage-interpretation",
+    "sourceId": "ecdc-wgs-surveillance-2016",
+    "sourceLocator": "ECDC 2016 expert opinion, integration and epidemiological concordance validation sections",
+    "evidenceType": "short-excerpt",
+    "excerpt": "linked with the source patient or environment metadata record using a common source identifier",
+    "passageSummary": "ECDC states that genomic records must be linked to patient or environmental metadata records using a common source identifier, that sensitive clinical and epidemiological data should be restricted to competent authorities, and that pathogen-specific interpretation criteria for relatedness need validation against epidemiological concordance and surveillance objectives.",
+    "tags": ["metadata", "identifier", "interpretation", "governance", "validation"],
+    "limitations": "Supports linkage and validation principles, not current pathogen-specific cut-offs.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-phe-enteric-users-actions",
+    "sourceId": "phe-case-study",
+    "sourceLocator": "PHE case study, section 2.2 and Genomics in action 1",
+    "evidenceType": "short-excerpt",
+    "excerpt": "Pathogen genomic data can inform and expedite the delivery of appropriate public health protection interventions",
+    "passageSummary": "The PHE case study lists enteric-bacterial WGS uses including surveillance, pathogen evolution, disease control, transmission and outbreak analysis, AMR cataloguing and emerging threat tracking. It identifies health-protection teams, local authorities, hospital and public-health microbiologists, food and animal-health agencies, and international public-health agencies as service users. Its raw-milk STEC example shows WGS linking cattle and human cases, identifying additional cases, and supporting control action and public messaging.",
+    "tags": ["enteric-bacteria", "reporting", "decision-use", "outbreak", "amr", "one-health"],
+    "limitations": "UK enteric reference-laboratory example; not all programmes will have the same users or reporting route.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-armstrong-tb-influenza-amr-reporting",
+    "sourceId": "cdc-nejm-2019",
+    "sourceLocator": "Armstrong et al. 2019, tuberculosis, influenza and phenotype-inference sections",
+    "evidenceType": "short-excerpt",
+    "excerpt": "Sequencing cannot completely replace traditional phenotyping",
+    "passageSummary": "Armstrong et al. describe TB WGS as helping refute or define suspected outbreaks, infer transmission, identify possible missed cases, distinguish reactivation from reinfection, and support drug-susceptibility inference where feasible. They describe influenza sequencing as a sequence-first approach that supports vaccine decision-making and risk assessment while still requiring selected phenotyping. Their phenotype-inference caveats state that reliability varies by organism, antimicrobial, resistance mechanism and available genotype-phenotype evidence.",
+    "tags": ["tb", "respiratory-viruses", "amr", "reporting", "phenotype-prediction", "decision-use"],
+    "limitations": "Review source; organism-specific public-health services still need current national or pathogen-specific guidance.",
+    "reviewStatus": "reviewed"
   }
 ]

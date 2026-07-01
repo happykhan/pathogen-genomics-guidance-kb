@@ -3,7 +3,7 @@
 ## Source Basis
 
 - World Health Organization. `Global genomic surveillance strategy for pathogens with pandemic and epidemic potential, 2022-2032`.
-- Full-text PDF supplied locally: `/Users/nfareed/Downloads/9789240046979-eng.pdf`.
+- Public beta PDF copy: `public/pdfs/who-global-genomic-surveillance-strategy-2022.pdf`.
 
 ## Status
 

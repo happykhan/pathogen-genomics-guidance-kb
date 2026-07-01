@@ -3,7 +3,7 @@
 ## Source Basis
 
 - Nguinkal JA, Zoclanclounon YAB, Molina A, et al. Assessment of the pathogen genomics landscape highlights disparities and challenges for effective AMR surveillance and outbreak response in the East African community. *BMC Public Health*. 2024;24:1500. doi:10.1186/s12889-024-18990-0.
-- Full-text PDF supplied locally: `/Users/nfareed/Downloads/12889_2024_Article_18990.pdf`.
+- Full text available during source review; no public beta PDF copy is checked in.
 
 ## Status
 

@@ -3,7 +3,7 @@
 ## Source Basis
 
 - de Jong SPJ, Nichols BE, de Ruijter A, Parker E, Mitesser V, Happi C, et al. Global solidarity in genomic surveillance improves early detection of acute respiratory virus threats. *Nature Communications*. 2026;17:765. doi:10.1038/s41467-025-67442-9.
-- Full-text PDF supplied locally: `/Users/nfareed/Downloads/s41467-025-67442-9.pdf`.
+- Full text available during source review; no public beta PDF copy is checked in.
 
 ## Status
 
@@ -34,4 +34,3 @@ This modelling study supports the equity and distributed-capability argument for
 ## Gaps
 
 - Needs extraction before using numeric thresholds in the guide.
-

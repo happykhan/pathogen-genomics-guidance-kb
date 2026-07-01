@@ -3,11 +3,11 @@
 ## Source Basis
 
 - World Health Organization. *Genomic sequencing of SARS-CoV-2: a guide to implementation for maximum impact on public health*. 2021.
-- Full-text PDF supplied locally: `/Users/nfareed/Downloads/9789240018440-eng.pdf`.
+- Public beta PDF copy: `public/pdfs/who-sars-cov-2-sequencing-implementation-2021.pdf`.
 
 ## Status
 
-`candidate source; full text available locally; high-level extraction`
+`source-backed; full text available; partial extraction`
 
 ## Relevance
 
@@ -29,9 +29,8 @@ This WHO guide gives practical implementation material for designing a virus gen
 ## Current Use In App
 
 - Resource finder candidate source.
-- Not yet cited in guidance prose.
+- Cited in respiratory-virus reporting and decision-use guidance prose.
 
 ## Gaps
 
 - Needs detailed extraction into the data-lifecycle, decision-use, sampling, and sharing sections.
-

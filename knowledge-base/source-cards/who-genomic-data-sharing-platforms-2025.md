@@ -7,8 +7,8 @@
 - Year: 2025.
 - ISBN: 9789240113831.
 - Public page: <https://iris.who.int/handle/10665/383193>.
-- Local full-text PDF: `source-material/local/who-ipsn/9789240113831-eng.pdf` (ignored by git).
-- Extracted text: `tmp/pdfs/who-ipsn-text/9789240113831-eng.txt` (not committed).
+- Public beta PDF copy: `public/pdfs/who-genomic-data-sharing-platforms-2025.pdf`.
+- Extracted text available in the local editorial workspace during source review.
 
 ## Status
 

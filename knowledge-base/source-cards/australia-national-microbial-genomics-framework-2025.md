@@ -3,7 +3,7 @@
 ## Source Basis
 
 - Interim Australian Centre for Disease Control. *National Microbial Genomics Framework for Public Health 2025-2027*.
-- Full-text PDF supplied locally: `/Users/nfareed/Downloads/national-microbial-genomics-framework-for-public-health-2025-to-2027.pdf`.
+- Public beta PDF copy: `public/pdfs/australia-national-microbial-genomics-framework-2025.pdf`.
 
 ## Status
 

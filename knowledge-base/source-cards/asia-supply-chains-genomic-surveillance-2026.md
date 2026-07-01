@@ -3,7 +3,7 @@
 ## Source Basis
 
 - Stona A-C, Khoo YK, Moe L, et al. Strengthening supply chains for pathogen genomic surveillance in Asia. *BMJ Global Health*. 2026;11:e019241. doi:10.1136/bmjgh-2025-019241.
-- Full-text PDF supplied locally: `/Users/nfareed/Downloads/e019241.full.pdf`.
+- Full text available during source review; no public beta PDF copy is checked in.
 
 ## Status
 
@@ -35,4 +35,3 @@ This source directly supports the guide's emphasis that genomic infrastructure i
 ## Gaps
 
 - Needs extraction into procurement, costing, and sustainability modules.
-

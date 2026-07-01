@@ -2,13 +2,12 @@
 
 ## Source Basis
 
-- Local source pack: `Best Practices and Vision/` (ignored by git because it contains DOCX, PDF, XLSX, TIFF, EPS, and image files).
-- Local extracted text: `Best Practices and Vision/extracted_text/`.
-- Public repository clone: `source-material/local/pha4ge-infrastructure-resources/` (ignored by git).
+- PHA4GE source pack supplied for local editorial review, including manuscript text, supplementary material, figures, survey tables, and notebook-derived material.
+- Extracted text and source-pack binaries are kept outside the committed beta site.
 - Public repository: <https://github.com/pha4ge/infrastructure-resources>.
 - Public repository commit checked locally: `c64814b Uploaded survey data and notebook`.
-- Likely authoritative manuscript text in local pack: `Best Practices and Vision/extracted_text/docx/MANUSCRIPT_Framework_for_Compute_Infrastructure_for_Pathogen_Genomics_Labs_VerixivSubmitted_PHA4GE_InfrastructureRecommendations.txt`.
-- Public repository draft: `source-material/local/pha4ge-infrastructure-resources/docs/recommendations.md`.
+- Likely authoritative manuscript text: VeriXiv-submitted infrastructure recommendations manuscript from the supplied source pack.
+- Public repository draft: `docs/recommendations.md` in `pha4ge/infrastructure-resources`.
 - Public repository data/notebooks: `docs/survey_data_anon.tsv`, `docs/infra_recs_analyses.ipynb`, `docs/figures/datainfra_impactoffeaturechoices.ipynb`.
 
 ## Status
@@ -29,20 +28,20 @@ The data-flow and IAM sections support notes on ingestion, storage, processing, 
 
 The vignettes and survey material support comparative implementation analysis across laptop/field bioinformatics, on-prem HPC, cloud/PaaS workflow systems, Galaxy, Terra, and IRIDA-like SaaS models.
 
-## Indexed Local Files
+## Indexed Source Materials
 
-| Material | Local path | Use |
+| Material | Source material | Use |
 | --- | --- | --- |
-| Local readout | `Best Practices and Vision/CONTENT_READOUT.md` | Existing assessment of source-pack contents and manuscript status |
-| VeriXiv manuscript extract | `Best Practices and Vision/extracted_text/docx/MANUSCRIPT_Framework_for_Compute_Infrastructure_for_Pathogen_Genomics_Labs_VerixivSubmitted_PHA4GE_InfrastructureRecommendations.txt` | Primary source for compute, workflow, data flow, IAM, vignettes, figure captions |
-| Supplement extract | `Best Practices and Vision/extracted_text/docx/MANUSCRIPT_Framework_for_Compute_Infrastructure_for_Pathogen_Genomics_Labs_01_Supplementary_materials_for_Framework_for_Compute_Infrastructure_for_Pathogen_Genomics_Labs.txt` | Vignette details |
-| Disaster recovery extract | `Best Practices and Vision/extracted_text/docx/Disaster_Recovery_best_practices.txt` | Backup and DR source notes, rough draft |
-| Power and cooling extract | `Best Practices and Vision/extracted_text/docx/Power_and_Cooling.txt` | Physical server, room, cooling, UPS, generator source notes |
-| Survey scoring CSV | `Best Practices and Vision/extracted_text/xlsx/MANUSCRIPT_Framework_for_Compute_Infrastructure_for_Pathogen_Genomics_Labs_Table_S1_-_Vignette_assesment_scores__Sheet1.csv` | Figure 3 / implementation comparison source data |
-| Metric definitions CSV | `Best Practices and Vision/extracted_text/xlsx/Metrics__Sheet1.csv` | Survey dimension definitions |
-| Public repo recommendations | `source-material/local/pha4ge-infrastructure-resources/docs/recommendations.md` | Draft Markdown comparison and linked figure/table structure |
-| Public repo survey data | `source-material/local/pha4ge-infrastructure-resources/docs/survey_data_anon.tsv` | Survey data provenance |
-| Public repo tier table | `source-material/local/pha4ge-infrastructure-resources/docs/tiers_table.md` | Draft maturity/capability material; not yet validated as formal guidance |
+| Source-pack readout | Local editorial readout | Existing assessment of source-pack contents and manuscript status |
+| VeriXiv manuscript extract | Supplied manuscript text | Primary source for compute, workflow, data flow, IAM, vignettes, figure captions |
+| Supplement extract | Supplied supplementary text | Vignette details |
+| Disaster recovery extract | Supplied rough source note | Backup and DR source notes, rough draft |
+| Power and cooling extract | Supplied rough source note | Physical server, room, cooling, UPS, generator source notes |
+| Survey scoring CSV | Supplied survey extract | Figure 3 / implementation comparison source data |
+| Metric definitions CSV | Supplied metric extract | Survey dimension definitions |
+| Public repo recommendations | `pha4ge/infrastructure-resources` `docs/recommendations.md` | Draft Markdown comparison and linked figure/table structure |
+| Public repo survey data | `pha4ge/infrastructure-resources` `docs/survey_data_anon.tsv` | Survey data provenance |
+| Public repo tier table | `pha4ge/infrastructure-resources` `docs/tiers_table.md` | Draft maturity/capability material; not yet validated as formal guidance |
 
 ## Figure Inventory
 
