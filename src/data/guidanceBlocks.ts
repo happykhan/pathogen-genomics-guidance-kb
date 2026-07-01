@@ -933,6 +933,99 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "Minimum storage map: active analysis storage, raw data archive, processed data archive, report storage, workflow-log storage, QC-output storage, repository-submission records, backup copies, and deleted or expired records.",
       "Minimum recovery questions: what data cannot be regenerated, how long each copy is retained, where backups are held, how backup versions are managed, how backup jobs are scheduled, who receives failure alerts, how restoration is tested, and what service work stops during recovery.",
     ],
+    tables: [
+      {
+        title: "Beta storage, backup, archive and recovery map",
+        summary:
+          "Use this map to classify genomics data by operational purpose before choosing storage classes, backup schedules or archive rules.",
+        columns: ["Data or storage category", "Operational purpose", "Minimum decision to record", "Beta caution"],
+        rows: [
+          {
+            cells: [
+              "Active analysis storage",
+              "Holds data needed for current workflow execution, QC review, re-runs and short-term troubleshooting.",
+              "Owner, access rules, expected working capacity, workflow location, cleanup rule, and what happens when storage fills.",
+              "Active storage is not a backup or a long-term archive.",
+            ],
+            sourceIds: ["who-national-genomic-surveillance-strategy-2023", "pha4ge-infrastructure", "phe-case-study"],
+          },
+          {
+            cells: [
+              "Raw-read archive",
+              "Preserves primary sequence data that may support reanalysis, repository submission, correction, validation or future questions.",
+              "Retention strategy, archive location, access route, accession linkage, integrity check, and whether data can be regenerated.",
+              "The sources support keeping a retention strategy, but not a universal retention period.",
+            ],
+            sourceIds: [
+              "who-national-genomic-surveillance-strategy-2023",
+              "aphl-ngs-implementation-2016",
+              "who-genomic-data-sharing-platforms-2025",
+            ],
+          },
+          {
+            cells: [
+              "Processed outputs and intermediate files",
+              "Includes assemblies, consensus genomes, alignments, variant calls, trees, tables and other workflow outputs.",
+              "Which outputs are reportable, which are reproducible from raw data, which are shared, and which are discarded after review.",
+              "Do not keep every intermediate file by default unless there is a defined audit, validation or reanalysis reason.",
+            ],
+            sourceIds: ["pha4ge-infrastructure", "who-genomic-data-sharing-platforms-2025"],
+          },
+          {
+            cells: [
+              "Reports, QC records and workflow logs",
+              "Supports audit, correction, user communication, quality review, method change review and interpretation of previous results.",
+              "Report identifier, workflow and database versions, QC status, correction history, access owner, and retention or archive decision.",
+              "Reports and QC records may be more important for audit than large temporary analysis files.",
+            ],
+            sourceIds: [
+              "who-genomic-data-sharing-platforms-2025",
+              "clinical-microbiology-implementation-2026",
+              "pha4ge-infrastructure",
+            ],
+          },
+          {
+            cells: [
+              "Repository and sharing records",
+              "Links local records to public, controlled-access or partner-platform submissions.",
+              "Accession or platform ID, upload date, release state, correction or replacement date, withdrawal route, and responsible local owner.",
+              "Repository release does not remove the need for local accession tracking and correction history.",
+            ],
+            sourceIds: ["aphl-ngs-implementation-2016", "who-genomic-data-sharing-platforms-2025"],
+          },
+          {
+            cells: [
+              "Backup copies",
+              "Provides recovery after failure, corruption, misconfiguration, accidental deletion or compromise.",
+              "What is backed up, where copies are held, version history, schedule, automation, alerts, restore test, and who owns recovery.",
+              "Backup is a recovery process, not simply another copy or a substitute for archive policy.",
+            ],
+            sourceIds: ["pha4ge-infrastructure", "who-national-genomic-surveillance-strategy-2023"],
+          },
+          {
+            cells: [
+              "Deletion, expiry or restricted retention",
+              "Controls data that should not be kept indefinitely or should be held under special access rules.",
+              "Legal or policy basis, data type, owner, deletion approval, deletion log, exception route and effect on reports or accessions.",
+              "Deletion rules, retention periods, RTO and RPO need local legal, public-health and institutional review.",
+            ],
+            sourceIds: [
+              "who-national-genomic-surveillance-strategy-2023",
+              "who-genomic-data-sharing-platforms-2025",
+            ],
+          },
+        ],
+        sourceIds: [
+          "who-national-genomic-surveillance-strategy-2023",
+          "pha4ge-infrastructure",
+          "phe-case-study",
+          "aphl-ngs-implementation-2016",
+          "who-genomics-costing-tool-manual-2024",
+          "who-genomic-data-sharing-platforms-2025",
+          "clinical-microbiology-implementation-2026",
+        ],
+      },
+    ],
     audiences: ["it-security", "bioinformatician", "data-manager", "lab-lead"],
     implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
     organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
@@ -943,10 +1036,13 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "phe-case-study",
       "who-national-genomic-surveillance-strategy-2023",
       "who-genomic-data-sharing-platforms-2025",
+      "aphl-ngs-implementation-2016",
+      "who-genomics-costing-tool-manual-2024",
+      "clinical-microbiology-implementation-2026",
     ],
     gaps: [
       "The guide still needs source-backed retention periods, restore-time targets, restore-point targets, and deletion rules for each data type and jurisdiction.",
-      "The PHA4GE disaster-recovery note needs editorial review before it can support a formal recovery checklist.",
+      "The PHA4GE disaster-recovery note and local business-continuity sources still need editorial review before the guide can support a formal recovery runbook.",
     ],
   },
   {
