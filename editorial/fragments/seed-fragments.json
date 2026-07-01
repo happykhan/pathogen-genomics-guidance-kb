@@ -1889,5 +1889,57 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is a beta capacity-planning worksheet. It deliberately avoids unsupported FTE ratios.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-data-sharing-governance-review",
+    "sectionId": "repository-data-sharing",
+    "title": "Beta data-sharing governance review",
+    "kind": "table",
+    "text": "Before data leave the programme or move into a shared platform, record the governance review needed for the chosen route. The beta guide can structure questions about public-health purpose, sensitivity, access, terms, attribution, benefit sharing, data residency, correction and withdrawal, but local legal, ethical, privacy and repository-specific requirements still need review.",
+    "claimIds": [
+      "claim-data-sharing-governed-route",
+      "claim-platform-metadata-provenance-interoperability",
+      "claim-beta-data-sharing-decision-table"
+    ],
+    "sourceIds": [
+      "who-pathogen-genome-data-sharing-2022",
+      "who-national-genomic-surveillance-strategy-2023",
+      "who-genomic-data-sharing-platforms-2025",
+      "ecdc-wgs-surveillance-2016",
+      "who-sars-cov-2-sequencing-implementation-2021",
+      "aphl-ngs-implementation-2016",
+      "cdc-nejm-2019",
+      "auspathogen-implementation-2025",
+      "australia-microbial-genomics-framework-2025"
+    ],
+    "conditions": {
+      "audiences": [
+        "policy",
+        "director",
+        "data-manager",
+        "it-security",
+        "lab-lead",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "data-sharing",
+        "governance",
+        "repositories",
+        "privacy",
+        "access"
+      ]
+    },
+    "order": 34,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a governance-review scaffold, not legal advice or repository-specific submission policy.",
+    "updatedAt": "2026-07-01"
   }
 ]

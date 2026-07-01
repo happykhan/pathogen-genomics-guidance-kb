@@ -1497,6 +1497,92 @@ export const guidanceBlocks: GuidanceBlock[] = [
           "pha4ge-infrastructure",
         ],
       },
+      {
+        title: "Governance review before sharing",
+        summary:
+          "Use this checklist to prepare a sharing decision for local governance review. It does not replace legal, ethical, privacy, data-residency or repository-specific approval.",
+        columns: ["Review area", "What to record", "Why it matters", "Beta caution"],
+        rows: [
+          {
+            cells: [
+              "Public-health purpose and route",
+              "Why the data are being shared, who needs them, whether the route is operational, national, public repository, controlled-access platform, partner workspace, or retained locally.",
+              "WHO sources frame sharing as a public-health activity; the route should match the purpose and user group.",
+              "A useful public-health purpose does not automatically justify every data type or metadata field being released.",
+            ],
+            sourceIds: [
+              "who-pathogen-genome-data-sharing-2022",
+              "who-national-genomic-surveillance-strategy-2023",
+              "who-genomic-data-sharing-platforms-2025",
+            ],
+          },
+          {
+            cells: [
+              "Sensitive data and minimum metadata",
+              "Which fields are public minimum metadata, which are restricted contextual metadata, and which should be withheld or shared only with competent authorities or approved users.",
+              "Richer metadata can improve interpretation, but may require stricter access policies.",
+              "ECDC supports separating non-confidential public metadata from sensitive clinical or epidemiological data; local law still decides the boundary.",
+            ],
+            sourceIds: ["ecdc-wgs-surveillance-2016", "who-genomic-data-sharing-platforms-2025"],
+          },
+          {
+            cells: [
+              "Access, accounts and user responsibilities",
+              "Access model, user vetting, account requirements, project workspace rules, role restrictions, permitted uses, support contact and audit or review route.",
+              "WHO platform guidance treats access, governance, transparency and user responsibilities as platform attributes.",
+              "Anonymous, registered, vetted, restricted and closed access are different governance choices, not just technical settings.",
+            ],
+            sourceIds: ["who-genomic-data-sharing-platforms-2025", "pha4ge-infrastructure"],
+          },
+          {
+            cells: [
+              "Terms, attribution and benefit sharing",
+              "Licence or terms of use, attribution or acknowledgement, contributor recognition, benefit-sharing expectations, publication expectations and downstream-use limits.",
+              "WHO's data-sharing principles link timely sharing to equity, trust, capacity development and equitable access to benefits.",
+              "Benefit-sharing and attribution expectations need to be visible before data are reused by others.",
+            ],
+            sourceIds: ["who-pathogen-genome-data-sharing-2022", "who-genomic-data-sharing-platforms-2025"],
+          },
+          {
+            cells: [
+              "Data residency, platform location and partner agreements",
+              "Where data and backups are hosted, whether cloud or external platforms are allowed, partner responsibilities, data-transfer route and agreement owner.",
+              "Platform or repository choice can change legal, security, procurement and trust obligations.",
+              "The beta guide cannot determine jurisdiction-specific residency, cross-border transfer or procurement rules.",
+            ],
+            sourceIds: [
+              "who-genomic-data-sharing-platforms-2025",
+              "auspathogen-implementation-2025",
+              "australia-microbial-genomics-framework-2025",
+            ],
+          },
+          {
+            cells: [
+              "Correction, replacement and withdrawal",
+              "Who can correct a record, replace a sequence, update metadata, withdraw or restrict data, notify users, and maintain links to reports and accessions.",
+              "Shared records remain part of the service after release, especially when QC status, metadata or interpretation changes.",
+              "Repository submission is not the end of stewardship; correction and withdrawal routes need named owners.",
+            ],
+            sourceIds: [
+              "who-genomic-data-sharing-platforms-2025",
+              "aphl-ngs-implementation-2016",
+              "who-sars-cov-2-sequencing-implementation-2021",
+            ],
+          },
+        ],
+        sourceIds: [
+          "who-pathogen-genome-data-sharing-2022",
+          "who-national-genomic-surveillance-strategy-2023",
+          "who-genomic-data-sharing-platforms-2025",
+          "ecdc-wgs-surveillance-2016",
+          "who-sars-cov-2-sequencing-implementation-2021",
+          "aphl-ngs-implementation-2016",
+          "cdc-nejm-2019",
+          "pha4ge-infrastructure",
+          "auspathogen-implementation-2025",
+          "australia-microbial-genomics-framework-2025",
+        ],
+      },
     ],
     audiences: ["policy", "director", "data-manager", "it-security", "lab-lead"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
@@ -1518,7 +1604,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     gaps: [
       "Current INSDC/NCBI, GISAID and organism-specific repository templates still need direct extraction before the guide can prescribe repository-specific submission fields.",
-      "The beta decision pathway still needs checking against jurisdiction-specific legal, ethical, privacy, data-residency and benefit-sharing requirements.",
+      "The beta governance review checklist still needs checking against jurisdiction-specific legal, ethical, privacy, data-residency, procurement, cross-border transfer and benefit-sharing requirements.",
     ],
   },
   {
