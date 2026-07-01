@@ -4192,6 +4192,111 @@ export const guidanceBlocks: GuidanceBlock[] = [
           "mgen-kenya-amr-genomics-capacity-2023",
         ],
       },
+      {
+        title: "Workforce competency and cover log",
+        summary:
+          "Use this log to make training evidence, backup ownership, and support routes visible before the service depends on undocumented local knowledge.",
+        columns: ["Service function", "Competency evidence to record", "Cover and support route", "Beta caution"],
+        rows: [
+          {
+            cells: [
+              "Laboratory processing and sequencing",
+              "Training and competency evidence for sample handling, extraction, library preparation, sequencing operation, run records, run QC, repeat rules and wet-lab incident escalation.",
+              "Name the primary operator, backup operator, quality owner, and route for platform or reagent problems.",
+              "Detailed competency sign-off and acceptance thresholds should come from the local quality system and organism-specific SOPs.",
+            ],
+            sourceIds: ["aphl-ngs-implementation-2016", "phe-case-study", "clinical-microbiology-implementation-2026"],
+          },
+          {
+            cells: [
+              "Bioinformatics workflow operation",
+              "Evidence that staff can run the workflow, record versions, review QC, troubleshoot failures, rerun samples, document provenance and understand the validation boundary.",
+              "Name the workflow owner, backup analyst, managed-platform or provider support route, and escalation route when analysis fails.",
+              "Avoid making a routine service depend on one person's scripts, local environment, or memory of reference-data changes.",
+            ],
+            sourceIds: ["pha4ge-infrastructure", "phe-case-study", "clinical-microbiology-implementation-2026"],
+          },
+          {
+            cells: [
+              "Data management and metadata",
+              "Evidence that staff can maintain identifiers, correct metadata, track accessions, distinguish restricted from public fields, and resolve broken sample-to-report links.",
+              "Name the data steward, backup owner, LIMS or sample-system contact, repository submitter and access-review owner.",
+              "Metadata work is part of service delivery; it should not be treated as a clerical task after sequencing is complete.",
+            ],
+            sourceIds: [
+              "who-genomic-data-sharing-platforms-2025",
+              "aphl-ngs-implementation-2016",
+              "who-national-genomic-surveillance-strategy-2023",
+            ],
+          },
+          {
+            cells: [
+              "Interpretation, reporting and user support",
+              "Evidence that staff can explain method limits, uncertainty, report routing, feedback routes, follow-up testing status and what the result can or cannot support.",
+              "Name the reporting scientist, public-health or clinical liaison, backup interpreter, and recipient-support route.",
+              "Training should cover users of the report as well as people who generate the sequence data.",
+            ],
+            sourceIds: [
+              "cdc-nejm-2019",
+              "phe-case-study",
+              "who-sars-cov-2-sequencing-implementation-2021",
+              "clinical-microbiology-implementation-2026",
+            ],
+          },
+          {
+            cells: [
+              "IT, security, storage and continuity",
+              "Evidence that access review, storage monitoring, backup testing, restore routes, incident escalation and data-residency decisions have named owners.",
+              "Name central IT or provider contacts, local service owner, security owner, backup owner and recovery-test reviewer.",
+              "A service with no stable IT or provider support should treat continuity as an implementation risk, not as a future operational detail.",
+            ],
+            sourceIds: [
+              "pha4ge-infrastructure",
+              "who-genomic-data-sharing-platforms-2025",
+              "who-genomics-costing-tool-manual-2024",
+            ],
+          },
+          {
+            cells: [
+              "Quality, change control and service review",
+              "Evidence of validation, verification, EQA or proficiency-testing participation where available, change-control records, corrected reports, review actions and CAPA or improvement tracking.",
+              "Name the quality owner, workflow-release owner, report-release owner, service-review chair and backup decision-maker.",
+              "This guide can structure the record, but local accreditation, regulatory and quality-system requirements still govern the formal SOP.",
+            ],
+            sourceIds: [
+              "aphl-ngs-implementation-2016",
+              "clinical-microbiology-implementation-2026",
+              "who-genomic-surveillance-progress-2023",
+              "phe-case-study",
+            ],
+          },
+          {
+            cells: [
+              "Programme ownership and sustainability",
+              "Evidence that recurrent costs, training time, procurement, external dependencies, partner agreements, user feedback and succession risks are reviewed.",
+              "Name the programme owner, finance or procurement contact, partner contact, training owner and governance or escalation route.",
+              "External sequencing, external analysis or platform support can be appropriate, but the dependency should be visible and governed.",
+            ],
+            sourceIds: [
+              "who-genomics-costing-tool-manual-2024",
+              "who-genomic-surveillance-progress-2023",
+              "east-africa-genomics-landscape-2024",
+              "clinical-microbiology-implementation-2026",
+            ],
+          },
+        ],
+        sourceIds: [
+          "aphl-ngs-implementation-2016",
+          "phe-case-study",
+          "pha4ge-infrastructure",
+          "clinical-microbiology-implementation-2026",
+          "who-genomic-surveillance-progress-2023",
+          "who-genomics-costing-tool-manual-2024",
+          "who-genomic-data-sharing-platforms-2025",
+          "who-sars-cov-2-sequencing-implementation-2021",
+          "east-africa-genomics-landscape-2024",
+        ],
+      },
     ],
     audiences: ["director", "policy", "funder", "lab-lead", "bioinformatician"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],

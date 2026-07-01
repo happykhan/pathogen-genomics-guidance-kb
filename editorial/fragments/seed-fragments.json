@@ -3309,5 +3309,62 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is a beta handoff checklist. It does not prescribe infection-control action, clinical treatment, organism-specific thresholds or local governance wording.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-workforce-competency-cover-log",
+    "sectionId": "workforce-sustainability-costing",
+    "title": "Workforce competency and cover log",
+    "kind": "table",
+    "text": "A beta workforce log should record competency evidence, backup ownership and support routes for laboratory processing, bioinformatics workflow operation, data management, interpretation, IT/security, quality review and programme ownership. This makes service dependency visible without converting the guide into an unsupported staffing-ratio calculator.",
+    "claimIds": [
+      "claim-workforce-support-service-core",
+      "claim-beta-workforce-responsibility-template",
+      "claim-costing-recurrent-service-categories",
+      "claim-maturity-risk-reduction"
+    ],
+    "sourceIds": [
+      "aphl-ngs-implementation-2016",
+      "phe-case-study",
+      "pha4ge-infrastructure",
+      "clinical-microbiology-implementation-2026",
+      "who-genomic-surveillance-progress-2023",
+      "who-genomics-costing-tool-manual-2024",
+      "who-genomic-data-sharing-platforms-2025",
+      "who-sars-cov-2-sequencing-implementation-2021",
+      "east-africa-genomics-landscape-2024"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "policy",
+        "funder",
+        "lab-lead",
+        "bioinformatician",
+        "data-manager",
+        "it-security",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "workforce",
+        "training",
+        "competency",
+        "support",
+        "quality",
+        "sustainability",
+        "responsibility-model"
+      ]
+    },
+    "order": 49,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta competency and cover log. It supports named ownership, training evidence and support routes, but does not define FTE ratios, grades, credentialing rules, salaries or formal accreditation requirements.",
+    "updatedAt": "2026-07-01"
   }
 ]
