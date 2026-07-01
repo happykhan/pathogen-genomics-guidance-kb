@@ -45,10 +45,13 @@ Local development runs at <http://127.0.0.1:4321/> by default. The app currently
 - Shareable profile URLs and browser print/PDF export.
 - Resource finder backed by a structured catalogue of extracted and candidate sources.
 - Bioinformatics infrastructure tier quiz.
+- Read-only API endpoints for guidance, sources, resources, and the editorial model.
+- Backstage editorial view showing source cards, evidence items, claim cards, briefs, fragments, statuses, and gaps.
+- Automated scenario QA for constraint profiles, representative readers, and key organism profiles.
 
-## Current Source Pack
+## Current Source Base
 
-The first source pack is PHA4GE infrastructure material:
+The initial source pack was PHA4GE infrastructure material:
 
 - Local ignored archive/extracts: `Best Practices and Vision/`
 - Local readout: `Best Practices and Vision/CONTENT_READOUT.md`
@@ -56,19 +59,34 @@ The first source pack is PHA4GE infrastructure material:
 - Public repository: <https://github.com/pha4ge/infrastructure-resources>
 - Committed source card: `knowledge-base/source-cards/pha4ge-infrastructure.md`
 
-The strongest current coverage is compute infrastructure, responsibility models, workflow systems, portability, data flow, IAM, backup/power/cooling notes, vignettes, and survey dimensions. Metadata, repositories, broader governance, analysis-to-decision use, costing, and formal maturity assessment remain gaps.
+The PHA4GE source remains strongest for compute infrastructure, responsibility models, workflow systems, portability, data flow, IAM, backup/power/cooling notes, vignettes, and survey dimensions.
 
-Additional local PDF sources have been indexed as source cards:
+Additional source cards now cover:
 
 - `knowledge-base/source-cards/cdc-pathogen-genomics-public-health-2019.md`
 - `knowledge-base/source-cards/phe-implementing-pathogen-genomics-case-study.md`
+- WHO global genomic surveillance strategy, national strategy support, SARS-CoV-2 implementation, pathogen genome data-sharing principles, genomic data-sharing platform attributes, and genomics costing tool material.
+- ECDC WGS public-health surveillance guidance.
+- APHL NGS implementation guidance.
+- UKHSA, Australian national framework, and AusPathoGen implementation sources.
+- Economic evaluation and costing papers.
+- Microbial Genomics implementation collection papers covering validation, AMR, enteric bacteria, respiratory viruses, infection control, proficiency testing, and public-health implementation examples.
 
-These strengthen public-health framing, data integration, workflow implementation, validation, reporting, data sharing, workforce, and implementation planning, but do not replace the need for WHO/ECDC/APHL/UKHSA/Australian framework sources.
+These strengthen public-health framing, data integration, workflow implementation, validation/change control, reporting and decision use, data sharing, governance review, workforce, costing scenarios, and implementation planning.
+
+The main remaining gaps are now narrower:
+
+- organism-specific report templates, cluster interpretation rules, nomenclature rules, repository fields, and QC thresholds;
+- jurisdiction-specific legal, ethical, privacy, data-residency, procurement, cross-border transfer, benefit-sharing, accreditation, and incident-management review;
+- source-backed staffing ratios or FTE examples by throughput, organism focus, and implementation model;
+- quantitative local costing examples and return-on-investment assumptions by setting;
+- disease-programme and implementation-team user testing of the beta wizard/profile matrices;
+- a validated formal maturity scoring instrument.
 
 ## Working Flow
 
 1. Add or clone source material under ignored local paths.
 2. Commit only source cards, indexes, extracted notes, CSV extracts when appropriate, and lightweight editable figures.
-3. Promote extracted notes into readable `docs/` prose when each module records `Source Basis`, `Status`, and `Gaps`.
+3. Prepare public guidance through the editorial layer: source card, evidence item, claim card, section brief, reviewed fragment, then structured dynamic whitepaper content.
 4. Use figure briefs before redrawing figures.
 5. Keep missing topics visible as gaps instead of filling them with generic prose.
