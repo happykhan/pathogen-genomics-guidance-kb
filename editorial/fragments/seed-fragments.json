@@ -2103,6 +2103,66 @@
     "updatedAt": "2026-07-01"
   },
   {
+    "id": "fragment-beta-organism-interpretation-guardrails",
+    "sectionId": "reporting-decision-use",
+    "title": "Organism-specific interpretation guardrails",
+    "kind": "table",
+    "text": "Use organism-specific guardrails to separate what a genomic signal can support from what it cannot prove alone. Enteric, respiratory-virus, TB/AMR and healthcare-associated-infection reports all need sampling context, metadata, method/version records, uncertainty, and a defined action boundary before results are used for public-health decisions.",
+    "claimIds": [
+      "claim-reporting-products-fit-decision",
+      "claim-organism-reporting-differs-by-use-case",
+      "claim-beta-enteric-respiratory-reporting-fields",
+      "claim-beta-tb-amr-hai-reporting-fields"
+    ],
+    "sourceIds": [
+      "ecdc-wgs-surveillance-2016",
+      "cdc-nejm-2019",
+      "phe-case-study",
+      "foodborne-genomics-allard-2018",
+      "who-sars-cov-2-sequencing-implementation-2021",
+      "clinical-microbiology-implementation-2026",
+      "mgen-belgian-influenza-phylogenomics-2021",
+      "mgen-centre-specific-typing-ipc-2021",
+      "mgen-polymicrobial-mdr-critical-care-2021"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "policy",
+        "lab-lead",
+        "bioinformatician",
+        "data-manager",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "organisms": [
+        "enteric-bacteria",
+        "respiratory-viruses",
+        "tb",
+        "amr",
+        "nosocomial",
+        "general"
+      ],
+      "topics": [
+        "reporting",
+        "decision-use",
+        "uncertainty",
+        "organism-specific",
+        "quality"
+      ]
+    },
+    "order": 37,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is an interpretation guardrail table. It does not prescribe thresholds, clinical action rules or final report wording.",
+    "updatedAt": "2026-07-01"
+  },
+  {
     "id": "fragment-beta-shared-workflow-adoption-checklist",
     "sectionId": "workflow-reproducibility",
     "title": "Beta shared workflow adoption checklist",

@@ -2117,6 +2117,66 @@ export const guidanceBlocks: GuidanceBlock[] = [
         ],
       },
       {
+        title: "Organism-specific interpretation guardrails",
+        summary:
+          "Use this table to keep genomic signals tied to the evidence needed for action. It does not set thresholds or prescribe report wording.",
+        columns: ["Use case", "Genomic result may support", "Do not claim from genomics alone", "Extra evidence or review needed"],
+        rows: [
+          {
+            cells: [
+              "Enteric bacteria and foodborne investigations",
+              "Cluster inclusion or exclusion, geographically dispersed outbreak detection, source-investigation focus, AMR or virulence surveillance where validated.",
+              "A common source, exposure route, food-chain attribution, or control action without epidemiological, food, animal, environmental, and sampling context.",
+              "Exposure or traceback data, sampling frame, comparison set, investigation identifier, AMR or virulence validation basis, recipient and action route.",
+            ],
+            sourceIds: ["phe-case-study", "foodborne-genomics-allard-2018", "ecdc-wgs-surveillance-2016"],
+          },
+          {
+            cells: [
+              "Respiratory-virus surveillance",
+              "Lineage or variant monitoring, local outbreak support, selection of specimens for phenotyping, vaccine or risk-assessment discussions.",
+              "Population prevalence, transmission source, vaccine impact, immune escape, or severity change without representative sampling, metadata, phenotyping, epidemiology, or expert review.",
+              "Collection date and place, sampling frame, genome quality, nomenclature/tool version, repository status, phenotyping or risk-assessment route, and correction history.",
+            ],
+            sourceIds: [
+              "who-sars-cov-2-sequencing-implementation-2021",
+              "cdc-nejm-2019",
+              "mgen-belgian-influenza-phylogenomics-2021",
+            ],
+          },
+          {
+            cells: [
+              "TB and AMR",
+              "Transmission investigation, outbreak refutation or support, resistance-marker surveillance, genotype-to-phenotype inference where the evidence base is adequate.",
+              "Direct transmission, clinical treatment choice, or final susceptibility status without sampling context, validation evidence, database quality, and follow-up testing policy.",
+              "Comparison set, distance or cluster rule, resistance database and version, validation basis, phenotype confirmation status, and clinical or public-health action boundary.",
+            ],
+            sourceIds: ["cdc-nejm-2019", "ecdc-wgs-surveillance-2016", "clinical-microbiology-implementation-2026"],
+          },
+          {
+            cells: [
+              "Healthcare-associated infection and infection control",
+              "Whether cases are plausibly linked, whether an investigation should continue, where extra sampling may be useful, or whether genomic evidence weakens a suspected link.",
+              "Ward transmission, environmental source, or intervention requirement without patient-movement, ward, exposure, environmental, and infection-control context.",
+              "Recipient route, comparison set, relatedness statement, uncertainty, verbal discussion route, action boundary, follow-up sampling, and feedback from infection-control users.",
+            ],
+            sourceIds: [
+              "clinical-microbiology-implementation-2026",
+              "mgen-centre-specific-typing-ipc-2021",
+              "mgen-polymicrobial-mdr-critical-care-2021",
+            ],
+          },
+        ],
+        sourceIds: [
+          "ecdc-wgs-surveillance-2016",
+          "cdc-nejm-2019",
+          "phe-case-study",
+          "foodborne-genomics-allard-2018",
+          "who-sars-cov-2-sequencing-implementation-2021",
+          "clinical-microbiology-implementation-2026",
+        ],
+      },
+      {
         title: "Before turning beta fields into pathogen-specific report templates",
         summary:
           "Use this review table before prescribing exact report wording, thresholds or uncertainty categories for a specific organism or programme.",
