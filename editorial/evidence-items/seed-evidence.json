@@ -633,5 +633,16 @@
     "tags": ["procurement", "supply-chain", "sustainability", "reagents", "maintenance", "costing", "implementation"],
     "limitations": "Supports beta procurement-resilience questions. It does not provide universal stock levels, procurement lead times, supplier choices, customs rules or national purchasing procedures.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-beta-distributed-capability-early-detection",
+    "sourceId": "global-solidarity-genomic-surveillance-2026",
+    "sourceLocator": "de Jong et al. 2026 Nature Communications modelling study; WHO 2022 global genomic surveillance strategy; WHO 2023 progress report",
+    "evidenceType": "passage-note",
+    "excerpt": "minimum sequencing capacity",
+    "passageSummary": "de Jong et al. model global respiratory-virus genomic surveillance and argue that geographically distributed minimum sequencing capacity with regular reporting can improve early detection of novel acute respiratory-virus threats. The source card notes that the study contrasts distributed minimum capacity with siloed expansion in countries already possessing strong capacity. WHO's global strategy and progress report also frame access, geographic representation, workforce, data sharing, connectivity and readiness as linked genomic-surveillance capacities.",
+    "tags": ["equity", "distributed-capability", "respiratory-viruses", "early-detection", "global-health-security", "surveillance"],
+    "limitations": "Supports a beta equity and distributed-capability argument. Do not use the model's numeric capacity threshold until the assumptions, pathogen scope, reporting regularity and transferability limits are extracted in detail.",
+    "reviewStatus": "reviewed"
   }
 ]

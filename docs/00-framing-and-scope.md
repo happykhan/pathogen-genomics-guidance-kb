@@ -16,6 +16,8 @@ The PHE case study adds a concrete implementation pattern. It shows that routine
 
 The CDC/NEJM review adds the public-health rationale. It shows that the value of pathogen genomics comes from better outbreak detection, better pathogen characterisation, data integration, data sharing, and faster movement from laboratory result to public-health action. It also makes clear that genomics programmes need bioinformatics, data science, and epidemiological interpretation capacity.
 
+The source base now also supports an equity and distributed-capability argument. WHO strategy sources frame access, workforce, data sharing, connectivity, and readiness as linked surveillance capacities. de Jong et al. add a respiratory-virus modelling example showing why early detection can depend on geographically distributed sequencing and regular reporting, not only total sequencing volume in already high-capacity settings.
+
 The repo should therefore read as a guidance knowledge base, not as a library catalogue. Source cards and extracted notes preserve provenance. The `docs/` chapters should turn source-backed material into readable prose. Gaps should remain visible, but they should not be the main product.
 
 ## Source Basis
@@ -23,6 +25,7 @@ The repo should therefore read as a guidance knowledge base, not as a library ca
 - `knowledge-base/source-cards/pha4ge-infrastructure.md`
 - `knowledge-base/source-cards/cdc-pathogen-genomics-public-health-2019.md`
 - `knowledge-base/source-cards/phe-implementing-pathogen-genomics-case-study.md`
+- `knowledge-base/source-cards/global-solidarity-respiratory-genomic-surveillance-2026.md`
 - PHA4GE VeriXiv manuscript abstract, background, five-factor framing, and discussion.
 - Armstrong et al. 2019, `Pathogen Genomics in Public Health`, doi:10.1056/NEJMsr1813907.
 - Grant et al. 2018, `Implementing pathogen genomics: a case study`, Public Health England.
@@ -35,6 +38,7 @@ The repo should therefore read as a guidance knowledge base, not as a library ca
 
 - WHO-specific mandate, audience, and publication pathway source material has not been added.
 - AMR-specific and disease-programme implementation sources are not yet indexed beyond examples in Armstrong et al. and the PHE case study.
+- Numeric distributed-capacity thresholds from modelling studies need direct extraction and transferability review before use as programme targets.
 
 ## Status
 

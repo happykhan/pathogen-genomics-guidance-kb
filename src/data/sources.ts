@@ -104,6 +104,10 @@ export const sources = {
     label: "Stona et al. 2026, Strengthening supply chains for pathogen genomic surveillance in Asia",
     path: "knowledge-base/source-cards/asia-supply-chains-genomic-surveillance-2026.md",
   },
+  "global-solidarity-genomic-surveillance-2026": {
+    label: "de Jong et al. 2026, Global solidarity in genomic surveillance and early detection",
+    path: "knowledge-base/source-cards/global-solidarity-respiratory-genomic-surveillance-2026.md",
+  },
   "mgen-kenya-amr-genomics-capacity-2023": {
     label: "Kigen et al. 2023, Genomics surveillance capacity for AMR in Kenya",
     path: "knowledge-base/source-cards/microbial-genomics-implementation-collection.md",

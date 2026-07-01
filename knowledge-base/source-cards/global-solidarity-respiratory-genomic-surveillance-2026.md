@@ -7,7 +7,7 @@
 
 ## Status
 
-`candidate source; full text available locally; high-level extraction`
+`source-backed at high level; full text available locally; high-level extraction`
 
 ## Relevance
 
@@ -29,8 +29,9 @@ This modelling study supports the equity and distributed-capability argument for
 ## Current Use In App
 
 - Resource finder candidate source.
-- Not yet cited in guidance prose.
+- Cited in `Why pathogen genomics?`
+- Supports the beta distributed-capability and equity framing.
 
 ## Gaps
 
-- Needs extraction before using numeric thresholds in the guide.
+- Needs structured extraction of model assumptions, pathogen scope, reporting regularity, and transferability limits before using numeric thresholds in the guide.

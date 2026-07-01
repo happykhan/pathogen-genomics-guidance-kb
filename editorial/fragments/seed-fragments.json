@@ -76,6 +76,53 @@
     "updatedAt": "2026-07-01"
   },
   {
+    "id": "fragment-why-genomics-distributed-capability",
+    "sectionId": "why-pathogen-genomics",
+    "title": "Distributed capability and equity",
+    "kind": "paragraph",
+    "text": "For surveillance, value depends on where capability exists and whether data flow regularly. Distributed sequencing and reporting capacity can improve early detection and preparedness compared with expanding capacity only in already high-capacity settings, but the current beta guide should not turn respiratory-virus modelling thresholds into universal targets for all pathogens.",
+    "claimIds": [
+      "claim-beta-distributed-capability-early-detection",
+      "claim-who-strategy-integrated-surveillance"
+    ],
+    "sourceIds": [
+      "global-solidarity-genomic-surveillance-2026",
+      "who-genomic-surveillance-2022",
+      "who-genomic-surveillance-progress-2023"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "policy",
+        "funder",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "organisms": [
+        "general",
+        "respiratory-viruses"
+      ],
+      "topics": [
+        "value",
+        "equity",
+        "distributed-capability",
+        "public-health",
+        "investment-case"
+      ]
+    },
+    "order": 25,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "Do not include the model's numeric capacity threshold until model assumptions and transferability limits are extracted.",
+    "updatedAt": "2026-07-01"
+  },
+  {
     "id": "fragment-beta-value-case-evidence-table",
     "sectionId": "why-pathogen-genomics",
     "title": "Value-case evidence to collect",

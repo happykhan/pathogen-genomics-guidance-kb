@@ -50,6 +50,21 @@ export const guidanceBlocks: GuidanceBlock[] = [
         },
       },
       {
+        title: "Why distributed capability matters",
+        body: [
+          "For surveillance, value also depends on where capability exists and whether data flow regularly. A system with very high sequencing capacity in a few places can still detect threats late if other regions have little access, weak reporting routes, or no way to connect genomic results to public-health response.",
+          "The global-solidarity respiratory-virus modelling study supports this point for acute respiratory-virus threats: geographically distributed minimum sequencing capacity with regular reporting can improve early detection compared with siloed expansion in settings that already have strong capacity. This should be treated as an equity and preparedness argument, not as a universal numeric target for every pathogen.",
+        ],
+        bodySourceIds: {
+          0: ["who-genomic-surveillance-2022", "who-genomic-surveillance-progress-2023"],
+          1: [
+            "global-solidarity-genomic-surveillance-2026",
+            "who-genomic-surveillance-2022",
+            "who-genomic-surveillance-progress-2023",
+          ],
+        },
+      },
+      {
         title: "What genomics cannot do by itself",
         body: [
           "Genomics does not remove the need for epidemiology, sampling strategy, laboratory quality, metadata quality, governance, or public-health judgement. A highly resolved tree can still mislead if sampling is biased, identifiers are broken, metadata are missing, or the result is interpreted without exposure information and local context.",
@@ -245,12 +260,13 @@ export const guidanceBlocks: GuidanceBlock[] = [
     audiences: ["director", "policy", "funder", "lab-lead", "all"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
     organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
-    topics: ["framing", "decision-use", "public-health", "costing", "value"],
+    topics: ["framing", "decision-use", "public-health", "costing", "value", "equity"],
     detailLevel: "summary",
     sourceIds: [
       "who-genomic-surveillance-2022",
       "who-national-genomic-surveillance-strategy-2023",
       "who-genomic-surveillance-progress-2023",
+      "global-solidarity-genomic-surveillance-2026",
       "cdc-nejm-2019",
       "phe-case-study",
       "foodborne-genomics-allard-2018",

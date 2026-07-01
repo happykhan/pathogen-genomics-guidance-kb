@@ -827,5 +827,29 @@
     "confidence": "medium",
     "limitations": "Does not provide universal stock levels, lead times, supplier choices, customs procedures or procurement rules.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "claim-beta-distributed-capability-early-detection",
+    "sourceId": "global-solidarity-genomic-surveillance-2026",
+    "sourceLocator": "de Jong et al. 2026; WHO 2022 global genomic surveillance strategy; WHO 2023 progress report",
+    "evidenceItemIds": [
+      "evidence-beta-distributed-capability-early-detection",
+      "evidence-who-2022-strategy-public-health-integration",
+      "evidence-who-progress-workforce-capacity"
+    ],
+    "claim": "The value case for genomic surveillance should include distributed capability and regular data flow, because early detection and global health security are weakened when capacity expands only in already high-capacity settings.",
+    "extractedText": "de Jong et al. model respiratory-virus genomic surveillance and argue that geographically distributed minimum capacity with regular reporting improves early detection compared with siloed expansion in countries already possessing strong capacity. WHO strategy and progress sources frame access, geographic representation, workforce, data sharing, connectivity and readiness as linked genomic-surveillance capacities.",
+    "notes": "Use in the why-genomics and investment-case sections. Avoid quoting the numeric threshold until the model assumptions are extracted.",
+    "tags": ["equity", "distributed-capability", "respiratory-viruses", "early-detection", "global-health-security"],
+    "candidateSectionIds": [
+      "why-pathogen-genomics",
+      "workforce-sustainability-costing"
+    ],
+    "organism": "respiratory-viruses",
+    "audience": "multiple",
+    "implementationStage": "national-scale",
+    "confidence": "medium",
+    "limitations": "Respiratory-virus modelling source; does not by itself define minimum capacity targets for all pathogens or countries.",
+    "reviewStatus": "reviewed"
   }
 ]
