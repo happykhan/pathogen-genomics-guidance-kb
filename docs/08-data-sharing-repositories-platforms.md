@@ -16,7 +16,9 @@ The PHE case study provides a concrete repository example. It reports that Salmo
 
 A useful guidance chapter should therefore avoid a simplistic "share everything" position. Programmes need to decide what data should be shared, with whom, at what stage, through which repository or platform, under what access model, and with what metadata. They also need to decide which data are public, which are shared through trusted collaborations, and which remain restricted because of confidentiality, legal, ethical, or operational risks.
 
-The current KB does not yet have enough source material to recommend repository choice. It can cite NCBI, ReSeqTB, GISAID, SRA, Galaxy histories, IRIDA projects, and cloud workspaces as examples, but repository selection criteria need extraction from WHO data-sharing principles, WHO Pandemic Hub platform principles, UKHSA data-sharing policy, and related sources.
+The dynamic guide now has a beta decision pathway for data-sharing and repository routing. It separates purpose, route, data type, minimum metadata, sensitive metadata, quality status, access model, identifiers and accessions, terms of use, attribution, benefit-sharing expectations, correction, withdrawal, and accountable ownership. It also has a governance-review checklist for local review before data leave the programme or move into a shared platform.
+
+This is still not a repository-specific submission manual. The current sources support the decision structure, the need for governed sharing, access models, provenance, identifier tracking, and public versus restricted metadata. Exact INSDC/NCBI, GISAID, national-platform, or organism-specific submission fields still need direct extraction from current platform documentation and local policy sources before they can be prescribed.
 
 ## Source Basis
 
@@ -24,19 +26,24 @@ The current KB does not yet have enough source material to recommend repository 
 - `knowledge-base/extracted-notes/vignettes-and-survey-scoring.md`
 - `knowledge-base/source-cards/cdc-pathogen-genomics-public-health-2019.md`
 - `knowledge-base/source-cards/phe-implementing-pathogen-genomics-case-study.md`
+- `knowledge-base/source-cards/who-pathogen-genome-data-sharing-2022.md`
+- `knowledge-base/source-cards/who-genomic-data-sharing-platforms-2025.md`
+- `knowledge-base/source-cards/who-national-genomic-surveillance-strategy-2023.md`
+- `knowledge-base/source-cards/ecdc-wgs-public-health-surveillance-2016.md`
+- `knowledge-base/source-cards/aphl-ngs-implementation-2016.md`
 - Armstrong et al. 2019, `Pathogen Genomics in Public Health`, doi:10.1056/NEJMsr1813907.
 - Grant et al. 2018, `Implementing pathogen genomics: a case study`, Public Health England.
 
 ## Figures
 
-- Gap placeholder: `knowledge-base/figures/briefs/data-sharing-decision-pathway.md`
+- Gap placeholder retained for an eventual visual decision pathway: `knowledge-base/figures/briefs/data-sharing-decision-pathway.md`
 
 ## Gaps
 
-- Repository selection criteria need source extraction.
-- A public, controlled, and restricted data-sharing decision pathway is still missing.
-- Access agreements, embargoes, data sensitivity, consent or permissions, and international sharing need formal source material.
+- Current INSDC/NCBI, GISAID, and organism-specific repository templates still need direct extraction before exact submission fields can be prescribed.
+- Local legal, ethical, privacy, data-residency, consent or permission, embargo, access-agreement, and international-sharing requirements still need jurisdiction-specific review.
+- The beta route-map and governance-review tables need review by public-health data-governance, repository, and programme users.
 
 ## Status
 
-`source-backed partial draft`
+`source-backed beta route-map; repository-specific details still partial`
