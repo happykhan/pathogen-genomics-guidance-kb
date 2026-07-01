@@ -2048,5 +2048,53 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is a readiness review for future templates. It should not be read as current pathogen-specific report wording.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-shared-workflow-adoption-checklist",
+    "sectionId": "workflow-reproducibility",
+    "title": "Beta shared workflow adoption checklist",
+    "kind": "table",
+    "text": "Shared workflows can reduce local development effort, but a programme still needs to record the workflow source, maintainer, version, execution environment, inputs, outputs, validation boundary, reportable changes, approval route, rollback plan and reanalysis impact before using the workflow for public-health reporting.",
+    "claimIds": [
+      "claim-armstrong-data-integration-workflows",
+      "claim-qc-annotation-version-control",
+      "claim-release-change-control-validation"
+    ],
+    "sourceIds": [
+      "pha4ge-infrastructure",
+      "mgen-accelerating-bioinformatics-implementation-2023",
+      "mgen-stec-bioinformatics-validation-2021",
+      "mgen-discordant-amr-predictions-2020",
+      "clinical-microbiology-implementation-2026",
+      "who-genomic-data-sharing-platforms-2025",
+      "phe-case-study"
+    ],
+    "conditions": {
+      "audiences": [
+        "bioinformatician",
+        "lab-lead",
+        "data-manager",
+        "it-security",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "workflow",
+        "provenance",
+        "reproducibility",
+        "validation",
+        "change-control"
+      ]
+    },
+    "order": 37,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is an adoption checklist for shared workflows. It is not an endorsement of any specific workflow ecosystem.",
+    "updatedAt": "2026-07-01"
   }
 ]

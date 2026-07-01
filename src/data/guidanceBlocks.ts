@@ -1055,6 +1055,87 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "For each workflow change, record why the change was made, who approved it, what validation or verification evidence was reviewed, which outputs may change, whether old results need reinterpretation, and how the service can roll back if the new release fails.",
       "Candidate technologies named in the sources include WDL, CWL, Nextflow, Galaxy, Snakemake, Airflow, and Swift. These are examples, not endorsements.",
     ],
+    tables: [
+      {
+        title: "Adopting a shared workflow for routine reporting",
+        summary:
+          "Use this checklist before moving a shared, platform-hosted or externally maintained workflow into public-health reporting.",
+        columns: ["Adoption decision", "What to record", "Why it matters", "Beta caution"],
+        rows: [
+          {
+            cells: [
+              "Workflow source and maintainer",
+              "Workflow name, source repository or platform, maintainer, release channel, licence or terms, support route and whether the workflow is actively maintained.",
+              "A shared workflow is also a dependency. The service needs to know who maintains it and what happens when it changes or is abandoned.",
+              "Named workflow ecosystems are examples, not endorsements or guarantees of fitness for reporting.",
+            ],
+            sourceIds: ["pha4ge-infrastructure", "mgen-accelerating-bioinformatics-implementation-2023"],
+          },
+          {
+            cells: [
+              "Execution environment",
+              "Workflow language or system, container or environment, local server, HPC, cloud, managed platform, Galaxy history or other execution route.",
+              "Portability and reproducibility depend on more than code; the execution environment can change results, access, cost and support needs.",
+              "A workflow that is portable in principle still needs local operational testing.",
+            ],
+            sourceIds: ["pha4ge-infrastructure", "mgen-accelerating-bioinformatics-implementation-2023"],
+          },
+          {
+            cells: [
+              "Approved version and reference data",
+              "Workflow version, software versions, container hashes where available, parameters, reference database versions, report-template version and release date.",
+              "Version capture lets the service explain old results, compare reanalysis and decide whether a change affects reportable outputs.",
+              "Reference databases and interpretation rules need versioning, not only the workflow code.",
+            ],
+            sourceIds: ["who-genomic-data-sharing-platforms-2025", "clinical-microbiology-implementation-2026"],
+          },
+          {
+            cells: [
+              "Inputs, outputs and report boundary",
+              "Accepted inputs, QC outputs, intermediate products retained, final outputs reviewed, outputs released to users, and outputs excluded from reporting.",
+              "A workflow can emit many files; the service needs to define which output is the public-health product.",
+              "Do not let an exploratory output become a reportable result without validation and sign-off.",
+            ],
+            sourceIds: ["pha4ge-infrastructure", "phe-case-study", "clinical-microbiology-implementation-2026"],
+          },
+          {
+            cells: [
+              "Validation or verification evidence",
+              "Comparator dataset, expected outputs, observed differences, reproducibility checks, discordance review, limits and whether validation matches the intended reportable output.",
+              "The STEC workflow-validation example and AMR discordance study show why workflow output needs evidence before reporting.",
+              "A successful workflow run is not the same as validation for public-health interpretation.",
+            ],
+            sourceIds: [
+              "mgen-stec-bioinformatics-validation-2021",
+              "mgen-discordant-amr-predictions-2020",
+              "clinical-microbiology-implementation-2026",
+            ],
+          },
+          {
+            cells: [
+              "Change, rollback and reanalysis plan",
+              "Who approves updates, what triggers revalidation, how users are notified, rollback option, emergency-fix route, and whether older results need reinterpretation.",
+              "Shared workflows can change outside the local programme; public-health services need a controlled release route.",
+              "Do not auto-update a reportable workflow without a release and change-control decision.",
+            ],
+            sourceIds: [
+              "clinical-microbiology-implementation-2026",
+              "who-genomic-data-sharing-platforms-2025",
+              "phe-case-study",
+            ],
+          },
+        ],
+        sourceIds: [
+          "pha4ge-infrastructure",
+          "mgen-accelerating-bioinformatics-implementation-2023",
+          "mgen-stec-bioinformatics-validation-2021",
+          "mgen-discordant-amr-predictions-2020",
+          "clinical-microbiology-implementation-2026",
+          "who-genomic-data-sharing-platforms-2025",
+          "phe-case-study",
+        ],
+      },
+    ],
     audiences: ["bioinformatician", "lab-lead", "data-manager", "it-security"],
     implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
     organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
