@@ -328,7 +328,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "mgen-gonorrhoea-wgs-amr-genogroups-2021",
     ],
     gaps: [
-      "The beta organism and use-case matrix still needs rendering as an editable table and testing against organism-specific wizard profiles.",
+      "The beta organism and use-case matrix still needs testing against organism-specific wizard profiles and review by disease-programme users.",
       "Organism-specific thresholds, sampling fractions, report wording and repository field sets still need full source extraction before the guide can prescribe detailed rules.",
     ],
   },
@@ -481,7 +481,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     gaps: [
       "The beta metadata buckets still need conversion into a formal field dictionary with required, optional, public, restricted, and system-generated fields by organism and use case.",
-      "The beta service-review rows still need rendering as an editable table and testing with pilot, routine-service, and national-network scenarios.",
+      "The beta service-review table still needs testing with pilot, routine-service, and national-network scenarios.",
     ],
   },
   {
@@ -1379,7 +1379,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "mgen-california-covidnet-2023",
     ],
     gaps: [
-      "The beta responsibility template still needs conversion into editable tables for pilot, routine single-pathogen service, national network, managed-platform, and hybrid models.",
+      "The beta responsibility template still needs model-specific variants for pilot, routine single-pathogen service, national network, managed-platform, and hybrid models.",
       "The guide still needs source-backed staffing ratios or FTE examples by service scale, throughput, organism focus, and implementation model.",
       "Detailed training curricula and competency-assessment templates need extraction from APHL, PulseNet, WHO, ECDC and national programme sources.",
     ],
@@ -1565,7 +1565,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "mgen-eurl-wgs-rollout-europe-2023",
       "mgen-california-covidnet-2023",
     ],
-    gaps: ["The beta dependency matrix still needs rendering as an editable table and testing against the wizard constraint scenarios."],
+    gaps: ["The beta dependency matrix still needs testing against the wizard constraint scenarios and review against real implementation examples."],
   },
   {
     id: "maturity-next-steps",
