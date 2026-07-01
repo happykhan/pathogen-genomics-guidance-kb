@@ -13,6 +13,7 @@ source document
   -> source card
   -> evidence item
   -> extracted claim card
+  -> whitepaper target check
   -> section synthesis brief
   -> draft fragments
   -> reviewed fragments
@@ -21,6 +22,8 @@ source document
 
 The current public guide still uses `src/data/guidanceBlocks.ts`, but new content should be prepared in the editorial layer first so the source basis and review status are visible.
 
+The whitepaper target in `src/data/whitepaperOutline.ts` is the editorial control point. Before adding a section, claim card, figure, table, or fragment, check whether it helps a mixed public-health team build or improve a routine pathogen genomics data and bioinformatics service. Material that is useful but outside that target should go to the resource finder, source cards, or Needs more work, not into the main guidance body.
+
 Example: validation before replacing established methods.
 
 | Step | Repo artifact | What it records |
@@ -28,6 +31,7 @@ Example: validation before replacing established methods.
 | Source card | `knowledge-base/source-cards/phe-implementing-pathogen-genomics-case-study.md` | Provenance, relevance, extracted validation facts, and remaining limits. |
 | Evidence item | `editorial/evidence-items/*.json` | The relevant evidence pointer from the original source: page, section, table, figure, short allowed excerpt, or concise passage note. Avoid long copied passages. |
 | Claim cards | `editorial/claim-cards/*.json` / `claim` | Small extracted interpretations of what one or more evidence items support, with source IDs, tags, candidate sections, limitations, and review state. Claim cards are not verbatim source text. |
+| Whitepaper target | `src/data/whitepaperOutline.ts` / `whitepaperTarget` | The primary audience, practical use, core question, success criteria, and out-of-scope boundaries for the dynamic whitepaper. |
 | Section synthesis brief | `editorial/section-briefs/*.json` | Editorial instructions for a whitepaper section: purpose, must-cover points, do-not-claim rules, preferred claims, conditionals, figures, and gaps. |
 | Draft fragments | `editorial/fragments/*.json` | Paragraphs, boxes, tables, figures, or gap fragments generated from approved claim cards and section briefs. |
 | Reviewed fragments | `editorial/fragments/*.json` with `reviewStatus: "reviewed"` | Content approved for later public compilation into the dynamic whitepaper. |

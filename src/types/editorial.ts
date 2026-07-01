@@ -37,6 +37,15 @@ export type WhitepaperOutlineSection = {
   publicByDefault: boolean;
 };
 
+export type WhitepaperTarget = {
+  title: string;
+  primaryAudience: string;
+  practicalUse: string;
+  coreQuestion: string;
+  successCriteria: string[];
+  outOfScope: string[];
+};
+
 export type EvidenceItem = {
   id: string;
   sourceId: string;

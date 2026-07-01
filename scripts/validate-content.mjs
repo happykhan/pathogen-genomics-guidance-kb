@@ -41,8 +41,9 @@ function loadResources() {
 
 function loadWhitepaperOutline() {
   const source = read("src/data/whitepaperOutline.ts")
-    .replace(/import type \{ WhitepaperOutlineSection \} from "\.\.\/types\/editorial";\n\n/, "")
+    .replace(/^import[\s\S]*?;\n\n?/gm, "")
     .replace(/export const whitepaperOutlineVersion = .*;\n\n/, "")
+    .replace(/export const whitepaperTarget: WhitepaperTarget =/, "const whitepaperTarget =")
     .replace(/export const whitepaperOutline: WhitepaperOutlineSection\[] =/, "const whitepaperOutline =")
     .replace(/;\s*$/, ";\nreturn whitepaperOutline;");
   return Function(source)();

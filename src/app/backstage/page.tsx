@@ -9,7 +9,7 @@ import {
 } from "../../data/editorialContent";
 import { defaultProfile, defaultProfileVersion } from "../../data/defaultProfile";
 import { sources } from "../../data/sources";
-import { whitepaperOutline, whitepaperOutlineVersion } from "../../data/whitepaperOutline";
+import { whitepaperOutline, whitepaperOutlineVersion, whitepaperTarget } from "../../data/whitepaperOutline";
 import type { EditorialReviewStatus } from "../../types/editorial";
 
 export const metadata = {
@@ -82,6 +82,42 @@ export default function BackstagePage() {
             <div>
               <strong>{defaultProfile.stage}</strong>
               <span>Default stage</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="panel">
+        <div className="panel-body">
+          <p className="eyebrow">Editorial Target</p>
+          <h2 style={{ margin: "4px 0 0" }}>{whitepaperTarget.title}</h2>
+          <div className="backstage-brief" style={{ marginTop: 16 }}>
+            <p>
+              <strong>Primary audience:</strong> {whitepaperTarget.primaryAudience}
+            </p>
+            <p>
+              <strong>Practical use:</strong> {whitepaperTarget.practicalUse}
+            </p>
+            <p>
+              <strong>Core question:</strong> {whitepaperTarget.coreQuestion}
+            </p>
+          </div>
+          <div className="grid-two" style={{ marginTop: 16 }}>
+            <div className="backstage-brief">
+              <h3>Success criteria</h3>
+              <ul>
+                {whitepaperTarget.successCriteria.map((criterion) => (
+                  <li key={criterion}>{criterion}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="backstage-brief">
+              <h3>Out of scope</h3>
+              <ul>
+                {whitepaperTarget.outOfScope.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>

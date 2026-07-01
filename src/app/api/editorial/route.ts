@@ -7,7 +7,7 @@ import {
   sectionSynthesisBriefs,
   whitepaperFragments,
 } from "../../../data/editorialContent";
-import { whitepaperOutline, whitepaperOutlineVersion } from "../../../data/whitepaperOutline";
+import { whitepaperOutline, whitepaperOutlineVersion, whitepaperTarget } from "../../../data/whitepaperOutline";
 
 export const dynamic = "force-static";
 
@@ -19,6 +19,7 @@ export function GET() {
     defaultProfileVersion,
     defaultProfile,
     whitepaperOutlineVersion,
+    whitepaperTarget,
     whitepaperOutline,
     evidenceItems,
     evidenceClaimCards,

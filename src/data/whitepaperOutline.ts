@@ -1,6 +1,30 @@
-import type { WhitepaperOutlineSection } from "../types/editorial";
+import type { WhitepaperOutlineSection, WhitepaperTarget } from "../types/editorial";
 
 export const whitepaperOutlineVersion = "2026-07-01-beta-0.2";
+
+export const whitepaperTarget: WhitepaperTarget = {
+  title: "Practical guidance for building and improving pathogen genomics data and bioinformatics services",
+  primaryAudience:
+    "Mixed public-health teams that include laboratory leads, bioinformaticians, data managers, IT or security staff, programme managers, policy staff, funders, and directors.",
+  practicalUse:
+    "Help teams move from project-based or retrospective genomics toward a routine, prospective genomic surveillance service with reliable data flow, quality control, workflow provenance, reporting, sharing, storage, support, and continuous improvement.",
+  coreQuestion:
+    "Given our public-health use case, organisms, staffing, infrastructure, connectivity, governance constraints, and maturity, what service model and data/infrastructure practices should we put in place next?",
+  successCriteria: [
+    "Readers can explain why genomics is useful for their public-health decision, and where it cannot substitute for epidemiology, sampling, laboratory quality, metadata, governance, or judgement.",
+    "Readers can define the service model they are building: research support, outbreak response, routine surveillance, AMR monitoring, repository submission, clinical support, or a hybrid model.",
+    "Readers can map a sample-to-decision data service, including sample receipt, metadata, QC, sequencing, workflow execution, interpretation, reporting, sharing, storage, retention, failures, and feedback loops.",
+    "Readers can identify which responsibilities must be owned locally, delegated to partners, or handled through a managed service.",
+    "Readers can use the tailored profile to hide irrelevant detail while preserving source-backed recommendations, citations, and visible evidence gaps.",
+  ],
+  outOfScope: [
+    "A wet-lab sequencing protocol manual.",
+    "A pathogen-specific QC threshold catalogue unless source-backed conditional material has been extracted.",
+    "A universal cloud-first or platform-first recommendation.",
+    "A formal accreditation standard or legal compliance manual.",
+    "A generic literature review without practical implementation decisions.",
+  ],
+};
 
 export const whitepaperOutline: WhitepaperOutlineSection[] = [
   {

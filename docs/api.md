@@ -80,6 +80,7 @@ Returns the public-safe editorial debug model used to develop the dynamic whitep
 Includes:
 
 - versioned default Gnomey profile
+- explicit whitepaper target: primary audience, practical use, core question, success criteria, and out-of-scope boundaries
 - versioned whitepaper outline
 - evidence items, which provide source locators, evidence type, passage summaries, and short excerpts where appropriate
 - extracted claim cards, which are concise source-backed interpretations rather than verbatim source text
@@ -105,6 +106,13 @@ Inspect the stable whitepaper outline:
 ```bash
 curl -s http://127.0.0.1:4321/api/editorial \
   | jq '.whitepaperOutline[] | {order, id, title, purpose, expectedFragments}'
+```
+
+Inspect the editorial target:
+
+```bash
+curl -s http://127.0.0.1:4321/api/editorial \
+  | jq '.whitepaperTarget'
 ```
 
 The deployed `/api/editorial` endpoint is read-only. Local fragment approval uses `npm run editorial:review`, which starts a localhost-only server that writes review decisions into `editorial/fragments/*.json`.
