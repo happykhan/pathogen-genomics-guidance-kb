@@ -32,13 +32,14 @@ export default function AboutPage() {
           <h2>What is implemented</h2>
           <p>
             The first app slice includes a profile-aware guidance document, the Gnomey wizard, shareable profile URLs,
-            browser print export, a resource finder, and a bioinformatics tier quiz.
+            browser print export, a resource finder, a bioinformatics tier quiz, profile-specific scenario QA, source-backed
+            worksheets, and a read-only backstage view of the editorial pipeline.
           </p>
           <h2>What still needs source work</h2>
           <p>
-            Priority gaps remain around a formal metadata and identifier model, repository decision pathways, validation
-            and change-control runbooks, costing models, and organism-specific guidance beyond the currently extracted
-            sources.
+            Priority gaps now sit mostly around organism-specific report templates and QC thresholds, repository-specific
+            field rules, local legal/accreditation review, staffing ratios, quantitative costing examples, and disease-programme
+            user testing.
           </p>
         </div>
       </section>

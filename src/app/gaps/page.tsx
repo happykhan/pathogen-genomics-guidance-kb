@@ -15,31 +15,38 @@ const chapterGaps = [
   {
     title: "Metadata and identifier model",
     detail:
-      "A draft source-backed lineage table now links samples or isolates, metadata, sequencing runs, raw data, QC, workflow runs, results, reports, sharing events, and retention. The remaining work is repository- and organism-specific field mapping.",
+      "The guide now has a source-backed lineage model and organism/use-case field-priority table linking samples or isolates, metadata, sequencing runs, raw data, QC, workflow runs, results, reports, sharing events, accessions, and retention. The remaining work is repository- and organism-specific field mapping.",
     sourceNeed: "INSDC/NCBI, ENA, GISAID, GA4GH, APHL, UKHSA, or public-health metadata field implementation guidance.",
   },
   {
     title: "Repository and data-sharing decision pathway",
     detail:
-      "WHO platform principles now provide selection dimensions. The KB still needs to turn those dimensions into a practical decision pathway for public, controlled, operational, and internal sharing.",
-    sourceNeed: "WHO platform guidance, INSDC/NCBI, GISAID, ECDC, UKHSA, CDC, APHL, and national public-health data-sharing guidance.",
+      "The guide now has beta route-map and governance-review tables for public, controlled, operational, partner-workspace, and retained-local sharing. The remaining work is direct extraction of repository-specific field templates, current platform rules, and local legal or ethics requirements.",
+    sourceNeed: "INSDC/NCBI, GISAID, ECDC, UKHSA, CDC, APHL, national public-health data-sharing guidance, and jurisdiction-specific legal or ethics sources.",
   },
   {
     title: "Governance beyond identity and access management",
     detail:
-      "WHO platform guidance now covers governance, access, benefit sharing, security, and sustainability. The remaining work is to translate that into country/laboratory governance roles, legal review points, and cross-border sharing options.",
+      "The guide now has beta governance-review prompts for sensitivity, access, attribution, benefit sharing, data residency, platform location, correction, replacement, and withdrawal. The remaining work is jurisdiction-specific review and local role assignment.",
     sourceNeed: "WHO platform guidance plus national public-health ethics, data protection, and pathogen data-sharing sources.",
   },
   {
     title: "Pipeline validation and change control",
     detail:
-      "The PHE case study supports parallel running, comparison, troubleshooting, and accreditation review. A generic release, rollback, emergency-update, and revalidation runbook is still missing.",
-    sourceNeed: "APHL, CDC/APHL, ISO 15189 bioinformatics, UKHSA, or laboratory-quality guidance.",
+      "The guide now has beta release/change-control, SOP handoff, shared-workflow adoption, and report-template readiness checklists. The remaining work is local QA/accreditation review and organism-specific QC/reportability thresholds.",
+    sourceNeed: "APHL, CDC/APHL, ISO 15189 bioinformatics, UKHSA, laboratory-quality guidance, and pathogen-specific validation sources.",
+  },
+  {
+    title: "Organism-specific report templates and QC thresholds",
+    detail:
+      "The guide now has beta reporting fields, limitations prompts, and automated organism-profile QA for enteric bacteria, respiratory viruses, TB/AMR, and healthcare-associated infection. The remaining work is current report examples, nomenclature rules, cluster interpretation criteria, repository fields, and QC thresholds by organism.",
+    sourceNeed:
+      "Salmonella, STEC, Listeria, influenza, RSV, SARS-CoV-2, TB, AMR and healthcare-associated infection reporting templates from national public-health or laboratory-quality sources.",
   },
   {
     title: "Costing and recurrent service model",
     detail:
-      "WHO's costing tool and the new economic synthesis provide category and scenario framing. The remaining gap is a setting-specific quantitative model that links costs to service models, staffing patterns, pathogen programmes, and measured value evidence.",
+      "WHO's costing tool and the economic synthesis provide category and scenario framing. The guide now has beta scenario and workforce-capacity worksheets. The remaining gap is a setting-specific quantitative model that links costs to throughput, service model, staffing, pathogen programme, and measured value evidence.",
     sourceNeed: "WHO costing tool, national implementation reports, procurement evidence, and economic evaluations.",
   },
   {
