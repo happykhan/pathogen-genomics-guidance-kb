@@ -806,5 +806,51 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "Dashboard and field dictionary remain gaps.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-service-model-comparison-core",
+    "sectionId": "use-case-service-model",
+    "title": "Service model comparison",
+    "kind": "paragraph",
+    "text": "The service model should be named before infrastructure is selected. Routine surveillance, outbreak response, reactive sequencing, prospective surveillance, repository submission, clinical support and research support place different pressure on sampling, turnaround, validation, reporting, storage, access, feedback and staffing.",
+    "claimIds": [
+      "claim-service-model-choices",
+      "claim-lifecycle-service-loop"
+    ],
+    "sourceIds": [
+      "who-national-genomic-surveillance-strategy-2023",
+      "ecdc-wgs-surveillance-2016",
+      "clinical-microbiology-implementation-2026",
+      "phe-case-study"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "policy",
+        "lab-lead",
+        "bioinformatician",
+        "data-manager",
+        "it-security",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "service-model",
+        "use-case",
+        "infrastructure",
+        "reporting"
+      ]
+    },
+    "order": 20,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "A full table with organism-specific examples remains future work.",
+    "updatedAt": "2026-07-01"
   }
 ]

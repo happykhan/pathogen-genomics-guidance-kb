@@ -505,5 +505,33 @@
     "confidence": "high",
     "limitations": "Does not define a complete field dictionary, dashboard specification, or service-level agreement.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "claim-service-model-choices",
+    "sourceId": "who-national-genomic-surveillance-strategy-2023",
+    "sourceLocator": "WHO 2023 national strategy support tool; ECDC 2016 expert opinion; Gador-Whyte et al. 2026",
+    "evidenceItemIds": [
+      "evidence-who-2023-use-case-definition",
+      "evidence-who-2023-sampling-turnaround",
+      "evidence-service-model-choices",
+      "evidence-phe-routine-throughput-failure-feedback",
+      "evidence-clinical-review-qc-validation-eqa"
+    ],
+    "claim": "A programme should choose and document the service model before choosing infrastructure, because routine surveillance, outbreak response, reactive sequencing, prospective surveillance, repository submission, clinical support and research support have different requirements.",
+    "extractedText": "WHO asks countries to define priority use cases, data users, sampling strategy, analysis, result sharing and outcomes, and says centralised or decentralised implementation depends on sample volume, capacity, transport, procurement and data-management protocols. ECDC states that storage and sharing requirements depend on surveillance objective and study design. The clinical review distinguishes reactive and prospective sequencing. PHE shows routine service planning around sample numbers, turnaround, user interaction, failure and reporting.",
+    "notes": "Use for the practical service-model comparison in the whitepaper.",
+    "tags": ["service-model", "use-case", "infrastructure", "sampling", "reporting", "validation"],
+    "candidateSectionIds": [
+      "use-case-service-model",
+      "data-lifecycle-sample-to-report",
+      "reporting-decision-use",
+      "implementation-patterns-case-studies"
+    ],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "multiple",
+    "confidence": "high",
+    "limitations": "Does not by itself prescribe a single best service model.",
+    "reviewStatus": "reviewed"
   }
 ]

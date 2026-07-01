@@ -479,5 +479,16 @@
     "tags": ["feedback", "data-management", "public-health-action", "turnaround", "quality", "sharing"],
     "limitations": "Strategy-level guidance; does not define a local service dashboard or feedback-template format.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-service-model-choices",
+    "sourceId": "who-national-genomic-surveillance-strategy-2023",
+    "sourceLocator": "WHO 2023 national strategy support tool, ECDC 2016 expert opinion, and Gador-Whyte et al. 2026 preanalytical scope section",
+    "evidenceType": "passage-note",
+    "excerpt": "continuous, real-time or periodic sentinel surveys",
+    "passageSummary": "WHO states that priority pathogen use cases should be defined in context and that each step of the value chain may be centralised or decentralised depending on resources, routine sample volume, sequencing and bioinformatics capacity, procurement, distances, transport, biobanking and data-management protocols. ECDC states that storage and sharing requirements depend on surveillance objectives and study design, including continuous, real-time or periodic sentinel surveys and centralised or decentralised analysis. The clinical implementation review distinguishes reactive sequencing for suspected outbreaks from prospective surveillance that can detect unrecognised transmission earlier but requires more finance, staffing and infrastructure.",
+    "tags": ["service-model", "use-case", "centralised", "decentralised", "reactive", "prospective"],
+    "limitations": "Supports comparison categories; does not define a complete decision tree or numeric thresholds.",
+    "reviewStatus": "reviewed"
   }
 ]
