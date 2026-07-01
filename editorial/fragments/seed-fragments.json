@@ -3646,5 +3646,58 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is a beta operational release-record table. It does not define pathogen-specific report wording, legal sign-off, incident classification, clinical action rules or mandatory dashboard metrics.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-backup-restore-drill-record",
+    "sectionId": "storage-backup-archive-retention",
+    "title": "Backup restore-drill record",
+    "kind": "table",
+    "text": "A storage and backup plan should include restore drills that test whether records needed for reporting, reanalysis, repository correction or service review can actually be recovered. The drill record should name the scenario, data selected, restore route and owner, integrity and interpretability check, service impact, unresolved risk and corrective action.",
+    "claimIds": [
+      "claim-storage-backup-retention-policy",
+      "claim-beta-local-infrastructure-resilience",
+      "claim-platform-metadata-provenance-interoperability",
+      "claim-release-change-control-validation",
+      "claim-costing-recurrent-service-categories"
+    ],
+    "sourceIds": [
+      "pha4ge-infrastructure",
+      "who-national-genomic-surveillance-strategy-2023",
+      "who-genomic-data-sharing-platforms-2025",
+      "aphl-ngs-implementation-2016",
+      "clinical-microbiology-implementation-2026",
+      "phe-case-study",
+      "who-genomics-costing-tool-manual-2024"
+    ],
+    "conditions": {
+      "audiences": [
+        "it-security",
+        "bioinformatician",
+        "data-manager",
+        "lab-lead",
+        "director",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "storage",
+        "backup",
+        "restore",
+        "archive",
+        "recovery",
+        "business-continuity",
+        "quality"
+      ]
+    },
+    "order": 55,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta restore-drill record. It does not define restore-time objectives, restore-point objectives, retention periods, formal incident classes, cyber response or business-continuity policy.",
+    "updatedAt": "2026-07-01"
   }
 ]

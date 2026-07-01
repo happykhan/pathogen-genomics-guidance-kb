@@ -2820,6 +2820,80 @@ export const guidanceBlocks: GuidanceBlock[] = [
         ],
       },
       {
+        title: "Backup restore-drill record",
+        summary:
+          "Use this record to test whether the service can actually recover data needed for reporting, reanalysis, repository correction or service review.",
+        columns: ["Drill item", "What to record", "Decision it supports", "Beta caution"],
+        rows: [
+          {
+            cells: [
+              "Recovery scenario",
+              "What failed or was simulated: accidental deletion, corrupted active storage, unavailable server room, failed cloud or platform access, repository-record loss, or local storage loss.",
+              "Whether the drill tests a realistic service failure rather than a generic backup demonstration.",
+              "The beta guide structures the scenario; local business-continuity owners decide formal drill frequency and severity classes.",
+            ],
+            sourceIds: ["pha4ge-infrastructure", "who-national-genomic-surveillance-strategy-2023"],
+          },
+          {
+            cells: [
+              "Data selected for restore",
+              "Data category, sample or run identifiers, report or accession links, QC records, workflow logs, metadata records and whether the item is active, archived, backed up or repository-linked.",
+              "Restoring raw reads alone is not enough if reports, QC, workflow versions, metadata or accession links are needed to interpret the result.",
+              "Choose examples that represent real service products, not only easy-to-restore test files.",
+            ],
+            sourceIds: [
+              "who-genomic-data-sharing-platforms-2025",
+              "aphl-ngs-implementation-2016",
+              "clinical-microbiology-implementation-2026",
+            ],
+          },
+          {
+            cells: [
+              "Restore route and owner",
+              "Who initiated the restore, who approved it, which backup or archive copy was used, where data were restored, and who verified access after restore.",
+              "A backup copy only protects the service if an accountable owner can restore from it and confirm the restored data are usable.",
+              "Do not treat replication, object storage versioning or repository submission as proof that local recovery is solved.",
+            ],
+            sourceIds: ["pha4ge-infrastructure", "who-national-genomic-surveillance-strategy-2023"],
+          },
+          {
+            cells: [
+              "Integrity and interpretability check",
+              "File integrity, metadata linkage, workflow and database version linkage, report linkage, accession linkage, access permissions, and whether the restored record can support audit or reanalysis.",
+              "The restore is only useful if the recovered record can still be interpreted, audited, corrected or reused.",
+              "A technically restored file may still be operationally unusable if identifiers, permissions or version records are broken.",
+            ],
+            sourceIds: [
+              "who-genomic-data-sharing-platforms-2025",
+              "clinical-microbiology-implementation-2026",
+              "pha4ge-infrastructure",
+            ],
+          },
+          {
+            cells: [
+              "Service impact and unresolved risk",
+              "What service work stopped during restore, whether reporting, repository submission, reanalysis or user support was affected, unresolved gaps, corrective action owner and review date.",
+              "Restore drills should feed service improvement, storage planning, staffing cover, incident routes and recurrent cost decisions.",
+              "Do not turn this beta drill record into a formal RTO or RPO claim without local policy and business-continuity review.",
+            ],
+            sourceIds: [
+              "phe-case-study",
+              "who-genomics-costing-tool-manual-2024",
+              "who-national-genomic-surveillance-strategy-2023",
+            ],
+          },
+        ],
+        sourceIds: [
+          "pha4ge-infrastructure",
+          "who-national-genomic-surveillance-strategy-2023",
+          "who-genomic-data-sharing-platforms-2025",
+          "aphl-ngs-implementation-2016",
+          "clinical-microbiology-implementation-2026",
+          "phe-case-study",
+          "who-genomics-costing-tool-manual-2024",
+        ],
+      },
+      {
         title: "Beta local infrastructure resilience checklist",
         summary:
           "Use this when storage, compute or backup depend on local servers, local storage rooms or institutional facilities. It is not a formal facilities or business-continuity standard.",
