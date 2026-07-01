@@ -512,5 +512,16 @@
     "tags": ["repository", "data-sharing", "metadata", "raw-reads", "consensus", "respiratory-viruses"],
     "limitations": "SARS-CoV-2 specific; use as a data-type and platform example, not a universal sharing rule.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-release-change-control-validation",
+    "sourceId": "clinical-microbiology-implementation-2026",
+    "sourceLocator": "PHE case study section 3.4; APHL 2016 validation and QA sections; Gador-Whyte et al. 2026 reporting and quality sections",
+    "evidenceType": "passage-note",
+    "excerpt": "strict software and database version control",
+    "passageSummary": "PHE validated WGS before switching off conventional testing through parallel running, dataset comparison, gap analysis, protocol adjustment and quality parameters for the whole typing process. APHL describes validation runs by two scientists, external partner review, final reports, SOP preparation, QA and senior approval, and run/sample/read quality metrics. The clinical implementation review states that workflows reporting inferred phenotypes need database quality assessment, reproducible genotype-phenotype validation, reporting-language evaluation, strict software and database version control, workflow auditing, validation or verification, EQA planning and local thresholds where formal standards are absent.",
+    "tags": ["change-control", "validation", "qc", "version-control", "workflow-audit", "revalidation"],
+    "limitations": "Supports a beta release-control checklist; a formal accredited SOP still needs local quality-system review.",
+    "reviewStatus": "reviewed"
   }
 ]

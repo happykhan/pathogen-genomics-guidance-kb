@@ -536,5 +536,32 @@
     "confidence": "high",
     "limitations": "Does not by itself prescribe a single best service model.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "claim-release-change-control-validation",
+    "sourceId": "clinical-microbiology-implementation-2026",
+    "sourceLocator": "PHE case study, APHL 2016 implementation guide, and Gador-Whyte et al. 2026",
+    "evidenceItemIds": [
+      "evidence-release-change-control-validation",
+      "evidence-phe-routine-throughput-failure-feedback",
+      "evidence-aphl-ngs-validation-all-steps",
+      "evidence-who-2025-curation-qc-versioning",
+      "evidence-clinical-review-qc-validation-eqa"
+    ],
+    "claim": "A routine genomics service needs a release and change-control route for workflows, databases, QC thresholds and reports, including validation evidence, version records, approval, rollback or emergency-fix criteria, and revalidation triggers.",
+    "extractedText": "PHE validated before switching off conventional testing through parallel running, gap analysis and quality parameters. APHL describes validation runs, external review, final reports, SOP preparation, QA approval and sequencing quality metrics. The clinical implementation review requires database quality assessment, reproducible genotype-phenotype validation, strict software and database version control and workflow audit for reportable inferred phenotypes. WHO's platform guidance says integrated analytical tools should be documented and version-controlled.",
+    "notes": "Use for beta-level change-control guidance without claiming to be an accreditation SOP.",
+    "tags": ["change-control", "validation", "version-control", "rollback", "revalidation", "quality"],
+    "candidateSectionIds": [
+      "quality-validation-before-switch",
+      "workflow-reproducibility",
+      "reporting-decision-use"
+    ],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "routine-service",
+    "confidence": "high",
+    "limitations": "Does not define jurisdiction-specific accreditation wording or organism-specific acceptance thresholds.",
+    "reviewStatus": "reviewed"
   }
 ]

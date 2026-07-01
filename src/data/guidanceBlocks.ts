@@ -393,6 +393,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "The APHL implementation guide and the clinical microbiology implementation review both reinforce that validation is not a final bioinformatics step. Implementation planning has to cover laboratory preparation, information technology, workforce, validation, data quality assurance, analysis tools, reporting, storage, transfer, sharing, interpretation, and external quality assessment or proficiency testing where the setting requires it.",
       "This is not only a laboratory question. Bioinformatics pipelines, reference databases, result interpretation, report generation, and user-facing outputs can all change service behaviour. Where results are used for public-health action, the programme needs evidence that the new process performs as expected before older methods are retired.",
       "For routine use, QC should be recorded as part of the result context. The clinical microbiology review notes that genomic QC applies across the sequencing and analysis workflow, and that validation requires wet-lab and bioinformatics process validation plus strict software and database version control. WHO's platform guidance adds a useful data-management principle: low-quality or incomplete data may sometimes be useful, but it should be annotated with QC methods and results so users can decide whether it is fit for their purpose.",
+      "Change control should be part of the same quality system. A routine service should treat workflow updates, reference-database updates, QC-threshold changes, report-template changes and interpretation-rule changes as controlled releases. Each release needs a reason for change, validation evidence, version record, approval route, communication plan, rollback or emergency-fix criteria, and a trigger for revalidation if the change affects reportable outputs or public-health interpretation.",
       "The Microbial Genomics collection strengthens this section. Ballard et al. explicitly connect public-health, treatment, and legal impacts to validation, quality systems, and accreditation. The European AMR proficiency-testing paper highlights standardization, QC, and data-sharing challenges across laboratories. Multi-laboratory and time-critical sequencing evaluations, harmonisation studies, STEC workflow validation, and AMR prediction discordance all point to the same conclusion: routine genomics needs validation evidence across laboratory and bioinformatics components before results are used for action.",
     ],
     bodySourceIds: {
@@ -402,6 +403,12 @@ export const guidanceBlocks: GuidanceBlock[] = [
       3: ["phe-case-study", "who-national-genomic-surveillance-strategy-2023", "clinical-microbiology-implementation-2026"],
       4: ["clinical-microbiology-implementation-2026", "who-genomic-data-sharing-platforms-2025"],
       5: [
+        "phe-case-study",
+        "aphl-ngs-implementation-2016",
+        "clinical-microbiology-implementation-2026",
+        "who-genomic-data-sharing-platforms-2025",
+      ],
+      6: [
         "mgen-accreditation-iso-pathogen-genomics-2023",
         "mgen-eurl-amr-proficiency-test-2023",
         "mgen-iseq-multilab-enteric-2022",
@@ -414,6 +421,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     technicalDetail: [
       "In the PHE case study, phase I used 1,538 representative Salmonella samples and phase II compared 6,887 isolates against WGS-determined serotype. The case study reports 97% concordance between WGS and conventional methods.",
       "Minimum validation record for beta: use case, intended reportable outputs, comparator or reference material, input-material requirements, sequencing-run acceptance criteria, analysis acceptance criteria, workflow and database versions, repeatability and reproducibility checks, known limitations, sign-off role, and trigger for revalidation.",
+      "Minimum release record for beta: changed component, reason for change, affected outputs, test dataset or comparator, validation result, software and database versions, approver, release date, communication route, rollback option, emergency-fix criteria, and revalidation trigger.",
     ],
     audiences: ["lab-lead", "bioinformatician", "data-manager", "director"],
     implementationStages: ["pilot", "routine-service", "upgrading"],
@@ -436,7 +444,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "mgen-discordant-amr-predictions-2020",
     ],
     gaps: [
-      "A reusable pipeline release, rollback, emergency-fix and revalidation runbook still needs full-text extraction from laboratory-quality sources.",
+      "The beta release/change-control checklist still needs conversion into a local SOP template and review against laboratory-quality and accreditation requirements.",
       "Organism-specific QC thresholds and reportability rules still need extraction before the guide can prescribe detailed acceptance criteria.",
     ],
   },

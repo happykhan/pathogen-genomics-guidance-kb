@@ -899,5 +899,48 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "Jurisdiction-specific legal review remains out of scope.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-release-change-control-core",
+    "sectionId": "quality-validation-before-switch",
+    "title": "Release and change control",
+    "kind": "paragraph",
+    "text": "A routine service should treat workflow, database, QC-threshold and report changes as controlled releases. Each release needs a reason for change, validation evidence, version record, approval route, communication plan, rollback or emergency-fix criteria, and a trigger for revalidation when the service or public-health interpretation changes.",
+    "claimIds": [
+      "claim-release-change-control-validation",
+      "claim-quality-validation-whole-chain"
+    ],
+    "sourceIds": [
+      "phe-case-study",
+      "aphl-ngs-implementation-2016",
+      "clinical-microbiology-implementation-2026",
+      "who-genomic-data-sharing-platforms-2025"
+    ],
+    "conditions": {
+      "audiences": [
+        "lab-lead",
+        "bioinformatician",
+        "data-manager",
+        "director",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "quality",
+        "validation",
+        "change-control",
+        "workflow"
+      ]
+    },
+    "order": 30,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is beta guidance, not a full accreditation SOP.",
+    "updatedAt": "2026-07-01"
   }
 ]
