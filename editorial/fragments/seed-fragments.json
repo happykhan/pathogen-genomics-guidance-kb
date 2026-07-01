@@ -3255,5 +3255,59 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is an interpretation guardrail table. It does not define organism-specific sampling fractions, representativeness thresholds, or report wording.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-hai-infection-control-handoff",
+    "sectionId": "reporting-decision-use",
+    "title": "Healthcare-associated infection handoff checklist",
+    "kind": "table",
+    "text": "For healthcare-associated infection support, the genomic result should be handed off as an infection-control conversation: question and recipient, samples and comparison set, genomic finding and uncertainty, action boundary, and feedback route. This keeps genomics connected to ward or exposure context without turning the sequence result into an automatic intervention instruction.",
+    "claimIds": [
+      "claim-beta-tb-amr-hai-reporting-fields",
+      "claim-reporting-products-fit-decision",
+      "claim-release-change-control-validation",
+      "claim-lifecycle-service-loop"
+    ],
+    "sourceIds": [
+      "clinical-microbiology-implementation-2026",
+      "mgen-centre-specific-typing-ipc-2021",
+      "mgen-polymicrobial-mdr-critical-care-2021",
+      "ecdc-wgs-surveillance-2016",
+      "mgen-discordant-amr-predictions-2020",
+      "who-sars-cov-2-sequencing-implementation-2021",
+      "who-national-genomic-surveillance-strategy-2023"
+    ],
+    "conditions": {
+      "audiences": [
+        "lab-lead",
+        "bioinformatician",
+        "data-manager",
+        "director",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "organisms": [
+        "nosocomial",
+        "amr"
+      ],
+      "topics": [
+        "reporting",
+        "decision-use",
+        "healthcare-associated-infection",
+        "infection-control",
+        "quality",
+        "feedback"
+      ]
+    },
+    "order": 48,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta handoff checklist. It does not prescribe infection-control action, clinical treatment, organism-specific thresholds or local governance wording.",
+    "updatedAt": "2026-07-01"
   }
 ]

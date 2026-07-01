@@ -3800,6 +3800,80 @@ export const guidanceBlocks: GuidanceBlock[] = [
           "mgen-polymicrobial-mdr-critical-care-2021",
         ],
       },
+      {
+        title: "Infection-control handoff checklist",
+        summary:
+          "Use this before releasing or discussing a hospital-facing genomic result. It supports an infection-control conversation; it does not prescribe the action.",
+        columns: ["Handoff item", "What to communicate", "What to ask back", "Beta caution"],
+        rows: [
+          {
+            cells: [
+              "Question and recipient",
+              "The infection-control or clinical question, recipient team, setting, organism or resistance concern, urgency and whether verbal discussion is needed.",
+              "Who owns the next decision, and what timeframe matters for action?",
+              "The sequencing or bioinformatics team should not be the silent owner of the infection-control decision.",
+            ],
+            sourceIds: ["clinical-microbiology-implementation-2026", "mgen-centre-specific-typing-ipc-2021"],
+          },
+          {
+            cells: [
+              "Samples and comparison set",
+              "Which patient, isolate, environmental or mixed samples were included; date range; comparison set; and important missing samples.",
+              "Are there unsampled patients, locations, devices, staff routes, environmental sites or time periods that change interpretation?",
+              "Relatedness can only be interpreted against what was sampled and compared.",
+            ],
+            sourceIds: ["ecdc-wgs-surveillance-2016", "mgen-polymicrobial-mdr-critical-care-2021"],
+          },
+          {
+            cells: [
+              "Genomic finding and uncertainty",
+              "Method, workflow version, relatedness statement, resistance or phenotype inference if reported, validation boundary, uncertainty and follow-up testing status.",
+              "Does the infection-control team need repeat sampling, phenotypic confirmation, expert review or additional epidemiology before action?",
+              "Do not combine relatedness, resistance inference and clinical action into one unsupported conclusion.",
+            ],
+            sourceIds: [
+              "clinical-microbiology-implementation-2026",
+              "ecdc-wgs-surveillance-2016",
+              "mgen-discordant-amr-predictions-2020",
+            ],
+          },
+          {
+            cells: [
+              "Action boundary",
+              "What the result can support, what it cannot prove, and which epidemiological, ward, exposure, environmental or clinical information is still needed.",
+              "Which action was taken or deferred, and what evidence was decisive?",
+              "Genomics should inform infection-control judgement rather than replace local context.",
+            ],
+            sourceIds: [
+              "clinical-microbiology-implementation-2026",
+              "mgen-centre-specific-typing-ipc-2021",
+              "mgen-polymicrobial-mdr-critical-care-2021",
+            ],
+          },
+          {
+            cells: [
+              "Feedback and service learning",
+              "How the team should send feedback, whether the result changed action, whether further samples are expected, and how corrections will be communicated.",
+              "Was the report clear enough, timely enough, and useful for the decision?",
+              "User feedback should feed reporting, sampling, validation, training and service-review improvements.",
+            ],
+            sourceIds: [
+              "who-sars-cov-2-sequencing-implementation-2021",
+              "clinical-microbiology-implementation-2026",
+              "who-national-genomic-surveillance-strategy-2023",
+            ],
+          },
+        ],
+        sourceIds: [
+          "clinical-microbiology-implementation-2026",
+          "mgen-centre-specific-typing-ipc-2021",
+          "mgen-polymicrobial-mdr-critical-care-2021",
+          "ecdc-wgs-surveillance-2016",
+          "mgen-discordant-amr-predictions-2020",
+          "who-sars-cov-2-sequencing-implementation-2021",
+          "who-national-genomic-surveillance-strategy-2023",
+        ],
+      },
     ],
     technicalDetail: [
       "Minimum implementation check: record recipient team, setting, sample set, comparison set, workflow version, relatedness statement, uncertainty, report time, verbal discussion route, action boundary, feedback route and correction history.",
@@ -3816,6 +3890,8 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "mgen-centre-specific-typing-ipc-2021",
       "mgen-polymicrobial-mdr-critical-care-2021",
       "who-sars-cov-2-sequencing-implementation-2021",
+      "mgen-discordant-amr-predictions-2020",
+      "who-national-genomic-surveillance-strategy-2023",
     ],
     gaps: [
       "Needs healthcare-associated infection report examples, organism-specific cluster interpretation sources, clinical governance requirements, and local infection-control workflow examples.",
