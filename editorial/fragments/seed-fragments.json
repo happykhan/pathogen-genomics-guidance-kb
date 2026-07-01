@@ -1707,6 +1707,56 @@
     "updatedAt": "2026-07-01"
   },
   {
+    "id": "fragment-beta-validation-evidence-package",
+    "sectionId": "quality-validation-before-switch",
+    "title": "Beta validation evidence package",
+    "kind": "table",
+    "text": "Before a pilot or research workflow becomes a routine public-health service, the beta guide should assemble a validation evidence package covering intended use, comparator or reference material, wet-lab and sequencing acceptance, bioinformatics workflow and reference data, interpretation and reporting boundary, and ongoing monitoring or external comparison.",
+    "claimIds": [
+      "claim-quality-validation-whole-chain",
+      "claim-release-change-control-validation",
+      "claim-qc-annotation-version-control"
+    ],
+    "sourceIds": [
+      "phe-case-study",
+      "aphl-ngs-implementation-2016",
+      "clinical-microbiology-implementation-2026",
+      "who-national-genomic-surveillance-strategy-2023",
+      "who-genomic-data-sharing-platforms-2025",
+      "mgen-accreditation-iso-pathogen-genomics-2023",
+      "mgen-eurl-amr-proficiency-test-2023",
+      "mgen-stec-bioinformatics-validation-2021",
+      "mgen-discordant-amr-predictions-2020"
+    ],
+    "conditions": {
+      "audiences": [
+        "lab-lead",
+        "bioinformatician",
+        "data-manager",
+        "director",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "upgrading",
+        "national-scale"
+      ],
+      "topics": [
+        "quality",
+        "validation",
+        "change-control",
+        "workflow",
+        "reporting"
+      ]
+    },
+    "order": 36,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta evidence-package checklist, not an accredited validation protocol, organism-specific threshold set or local SOP.",
+    "updatedAt": "2026-07-01"
+  },
+  {
     "id": "fragment-beta-release-change-control-checklist",
     "sectionId": "quality-validation-before-switch",
     "title": "Beta release and change-control checklist",

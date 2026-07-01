@@ -1140,6 +1140,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "Validation needs to cover the whole service chain: input material, extraction, sequencing, laboratory handling, data quality, analysis outputs, reporting, and troubleshooting. WHO's national strategy support tool also treats data quality, internal consistency, SOPs, and internal and external quality assessment for genomics and analytics as part of data-management design.",
       "The APHL implementation guide and the clinical microbiology implementation review both reinforce that validation is not a final bioinformatics step. Implementation planning has to cover laboratory preparation, information technology, workforce, validation, data quality assurance, analysis tools, reporting, storage, transfer, sharing, interpretation, and external quality assessment or proficiency testing where the setting requires it.",
       "This is not only a laboratory question. Bioinformatics pipelines, reference databases, result interpretation, report generation, and user-facing outputs can all change service behaviour. Where results are used for public-health action, the programme needs evidence that the new process performs as expected before older methods are retired.",
+      "For beta, treat that evidence as a package. The package should define the intended use and reportable outputs, the comparator or reference material used for validation, the wet-lab and sequencing acceptance criteria, the bioinformatics workflow and database versions, the interpretation and reporting boundary, and the plan for ongoing monitoring, EQA or proficiency testing. This keeps a pilot workflow from becoming a routine service by drift.",
       "For routine use, QC should be recorded as part of the result context. The clinical microbiology review notes that genomic QC applies across the sequencing and analysis workflow, and that validation requires wet-lab and bioinformatics process validation plus strict software and database version control. WHO's platform guidance adds a useful data-management principle: low-quality or incomplete data may sometimes be useful, but it should be annotated with QC methods and results so users can decide whether it is fit for their purpose.",
       "Change control should be part of the same quality system. A routine service should treat workflow updates, reference-database updates, QC-threshold changes, report-template changes and interpretation-rule changes as controlled releases. Each release needs a reason for change, validation evidence, version record, approval route, communication plan, rollback or emergency-fix criteria, and a trigger for revalidation if the change affects reportable outputs or public-health interpretation.",
       "The Microbial Genomics collection strengthens this section. Ballard et al. explicitly connect public-health, treatment, and legal impacts to validation, quality systems, and accreditation. The European AMR proficiency-testing paper highlights standardization, QC, and data-sharing challenges across laboratories. Multi-laboratory and time-critical sequencing evaluations, harmonisation studies, STEC workflow validation, and AMR prediction discordance all point to the same conclusion: routine genomics needs validation evidence across laboratory and bioinformatics components before results are used for action.",
@@ -1149,14 +1150,22 @@ export const guidanceBlocks: GuidanceBlock[] = [
       1: ["phe-case-study", "who-national-genomic-surveillance-strategy-2023"],
       2: ["aphl-ngs-implementation-2016", "clinical-microbiology-implementation-2026"],
       3: ["phe-case-study", "who-national-genomic-surveillance-strategy-2023", "clinical-microbiology-implementation-2026"],
-      4: ["clinical-microbiology-implementation-2026", "who-genomic-data-sharing-platforms-2025"],
-      5: [
+      4: [
+        "phe-case-study",
+        "aphl-ngs-implementation-2016",
+        "clinical-microbiology-implementation-2026",
+        "mgen-accreditation-iso-pathogen-genomics-2023",
+        "mgen-eurl-amr-proficiency-test-2023",
+        "mgen-stec-bioinformatics-validation-2021",
+      ],
+      5: ["clinical-microbiology-implementation-2026", "who-genomic-data-sharing-platforms-2025"],
+      6: [
         "phe-case-study",
         "aphl-ngs-implementation-2016",
         "clinical-microbiology-implementation-2026",
         "who-genomic-data-sharing-platforms-2025",
       ],
-      6: [
+      7: [
         "mgen-accreditation-iso-pathogen-genomics-2023",
         "mgen-eurl-amr-proficiency-test-2023",
         "mgen-iseq-multilab-enteric-2022",
@@ -1169,9 +1178,99 @@ export const guidanceBlocks: GuidanceBlock[] = [
     technicalDetail: [
       "In the PHE case study, phase I used 1,538 representative Salmonella samples and phase II compared 6,887 isolates against WGS-determined serotype. The case study reports 97% concordance between WGS and conventional methods.",
       "Minimum validation record for beta: use case, intended reportable outputs, comparator or reference material, input-material requirements, sequencing-run acceptance criteria, analysis acceptance criteria, workflow and database versions, repeatability and reproducibility checks, known limitations, sign-off role, and trigger for revalidation.",
+      "Minimum evidence-package contents: intended use; validation sample set or comparator; wet-lab acceptance criteria; sequencing and analysis QC; workflow, software and database versions; reportable-output boundary; interpretation and uncertainty wording; EQA or proficiency-testing plan where available; approval and review owner.",
       "Minimum release record for beta: changed component, reason for change, affected outputs, test dataset or comparator, validation result, software and database versions, approver, release date, communication route, rollback option, emergency-fix criteria, and revalidation trigger.",
     ],
     tables: [
+      {
+        title: "Beta validation evidence package",
+        summary:
+          "Use this before a pilot or research workflow becomes a routine public-health service. It names the evidence to assemble; it is not an accredited validation protocol.",
+        columns: ["Package item", "Evidence to assemble", "Decision it supports", "Beta caution"],
+        rows: [
+          {
+            cells: [
+              "Intended use and reportable outputs",
+              "Organism or programme, use case, users, reportable outputs, excluded uses, decision pathway and action boundary.",
+              "Whether the workflow is being validated for the actual public-health question it will support.",
+              "A workflow can be technically successful without being validated for every organism, output or decision route.",
+            ],
+            sourceIds: ["who-national-genomic-surveillance-strategy-2023", "clinical-microbiology-implementation-2026"],
+          },
+          {
+            cells: [
+              "Comparator or reference material",
+              "Parallel method, reference collection, characterised isolates, expected outputs, discordance-review route and gap-analysis record.",
+              "Whether the new method performs acceptably against the current method, reference set or intended output.",
+              "PHE's Salmonella validation is a source-backed pattern, not a universal sample-size rule.",
+            ],
+            sourceIds: [
+              "phe-case-study",
+              "aphl-ngs-implementation-2016",
+              "mgen-stec-bioinformatics-validation-2021",
+            ],
+          },
+          {
+            cells: [
+              "Wet-lab and sequencing acceptance",
+              "Input-material requirements, extraction or library criteria, instrument/run metrics, read quality, repeat rules and sample-failure handling.",
+              "Whether data should be accepted, repeated, held, excluded or released with a quality note.",
+              "Acceptance thresholds remain organism, platform and use-case specific.",
+            ],
+            sourceIds: ["aphl-ngs-implementation-2016", "clinical-microbiology-implementation-2026"],
+          },
+          {
+            cells: [
+              "Bioinformatics workflow and reference data",
+              "Workflow version, software/container versions, parameters, database or reference-data versions, provenance record, repeatability checks and known failure modes.",
+              "Whether an output can be reproduced, audited and compared after the workflow or database changes.",
+              "Version records should include databases and interpretation rules, not only pipeline code.",
+            ],
+            sourceIds: [
+              "clinical-microbiology-implementation-2026",
+              "who-genomic-data-sharing-platforms-2025",
+              "mgen-discordant-amr-predictions-2020",
+            ],
+          },
+          {
+            cells: [
+              "Interpretation and reporting boundary",
+              "What the report can say, required limitations, uncertainty wording, follow-up testing, user communication route and corrected-report route.",
+              "Whether users understand what action the genomic result can and cannot support.",
+              "Phenotype prediction, transmission inference and outbreak attribution may need separate validation boundaries.",
+            ],
+            sourceIds: [
+              "clinical-microbiology-implementation-2026",
+              "ecdc-wgs-surveillance-2016",
+              "mgen-discordant-amr-predictions-2020",
+            ],
+          },
+          {
+            cells: [
+              "Ongoing monitoring and external comparison",
+              "Internal QC review, failed-run review, proficiency testing or EQA where available, inter-laboratory comparison, corrective action and revalidation trigger.",
+              "Whether performance remains acceptable after routine use begins.",
+              "The beta guide can name the need for monitoring, but local quality systems define frequency, acceptance limits and escalation.",
+            ],
+            sourceIds: [
+              "mgen-accreditation-iso-pathogen-genomics-2023",
+              "mgen-eurl-amr-proficiency-test-2023",
+              "clinical-microbiology-implementation-2026",
+            ],
+          },
+        ],
+        sourceIds: [
+          "phe-case-study",
+          "aphl-ngs-implementation-2016",
+          "clinical-microbiology-implementation-2026",
+          "who-national-genomic-surveillance-strategy-2023",
+          "who-genomic-data-sharing-platforms-2025",
+          "mgen-accreditation-iso-pathogen-genomics-2023",
+          "mgen-eurl-amr-proficiency-test-2023",
+          "mgen-stec-bioinformatics-validation-2021",
+          "mgen-discordant-amr-predictions-2020",
+        ],
+      },
       {
         title: "Beta release and change-control checklist",
         summary:

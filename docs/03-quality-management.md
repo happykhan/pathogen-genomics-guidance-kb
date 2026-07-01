@@ -20,6 +20,8 @@ The PHA4GE source adds the computational quality angle. Routine analysis should 
 
 The dynamic guide now goes further than this original module. It includes beta checklists for validation before switching methods, release and change control, SOP handoff from research to service, shared-workflow adoption, reporting limitations, report-template readiness, and service review. It also includes an exception and service-review register for failed or repeated samples, low-quality runs, missing metadata, ambiguous results, delayed reports, corrected or withdrawn records, and recurring service problems.
 
+The dynamic guide now also includes a beta validation evidence package. This is meant to stop a pilot or research workflow drifting into routine service without a clear evidence file. The package covers intended use and reportable outputs, comparator or reference material, wet-lab and sequencing acceptance, bioinformatics workflow and reference-data versions, interpretation and reporting boundaries, and ongoing monitoring or external comparison.
+
 The register is meant to make the routine service visible. Each exception should be tied to a persistent record, owner, decision, user or report impact, and corrective action. The current source base supports that beta operating pattern from PHE, APHL, WHO platform and strategy guidance, ECDC, and the clinical implementation review. It does not yet provide organism-specific QC thresholds, accreditation-ready incident wording, or local corrective-action schedules.
 
 ## Source Basis
@@ -39,6 +41,7 @@ The register is meant to make the routine service visible. Each exception should
 ## Gaps
 
 - Organism-specific QC thresholds, reportability rules, confirmatory-testing policies, and uncertainty categories still need direct extraction.
+- The validation evidence package needs organism-specific examples and local quality-system review before it can become an SOP or accreditation protocol.
 - The beta SOP, release, and shared-workflow checklists need local quality-system and accreditation review before adoption as SOPs.
 - A formal nonconformance, incident-management, and corrective-action runbook still needs local or agency source material.
 
