@@ -1212,6 +1212,93 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "Minimum service-review rows for beta: routine volume, failed or repeated samples, failed or repeated runs, missing metadata, delayed reports, corrected reports, repository-submission status, user feedback, and corrective actions.",
       "Minimum review questions: did the issue affect a released result, a public-health decision, a repository record, a user's trust in the service, a validation boundary, or a recurring cost line?",
     ],
+    tables: [
+      {
+        title: "Beta exception and service-review register",
+        summary:
+          "Use this as a practical review register for routine service operation. It is not an accreditation template or organism-specific QC rule set.",
+        columns: ["Event to track", "Minimum record", "Decision or action", "Source-backed caution"],
+        rows: [
+          {
+            cells: [
+              "Failed or repeated sample",
+              "Sample or isolate ID, input material issue, collection or extraction context, repeat decision, user notification and final inclusion or exclusion status.",
+              "Decide whether to repeat, reject, request a new specimen, report as failed, or include with limitations.",
+              "PHE's implementation work treated sample quality, quantity, troubleshooting and protocol adjustment as service issues, not only bench-level problems.",
+            ],
+            sourceIds: ["phe-case-study", "clinical-microbiology-implementation-2026"],
+          },
+          {
+            cells: [
+              "Failed or low-quality run",
+              "Run ID, QC signal, affected samples, acceptance threshold, sequencing or library issue, repeat decision, report impact and closure status.",
+              "Decide whether to repeat the run, accept partial data, hold reports, or open a corrective action.",
+              "WHO platform guidance supports QC annotation; local thresholds and organism-specific reportability rules still need local validation.",
+            ],
+            sourceIds: ["who-genomic-data-sharing-platforms-2025", "clinical-microbiology-implementation-2026"],
+          },
+          {
+            cells: [
+              "Missing or inconsistent metadata",
+              "Missing field, conflicting identifier, responsible system, person or team asked to correct it, correction date and impact on interpretation or sharing.",
+              "Decide whether analysis can proceed, whether a report needs a limitation statement, and whether repository or platform submission should wait.",
+              "WHO national strategy guidance treats data quality, metadata quality and internal consistency as data-management requirements.",
+            ],
+            sourceIds: ["who-national-genomic-surveillance-strategy-2023", "who-genomic-data-sharing-platforms-2025"],
+          },
+          {
+            cells: [
+              "Ambiguous or unexpected result",
+              "Result type, comparison set, QC status, workflow/database version, reviewer, interpretation uncertainty and follow-up route.",
+              "Decide whether expert review, repeat analysis, additional epidemiology, phenotypic testing, or amended reporting is needed.",
+              "Clinical and public-health interpretation can require organism-specific review, especially for inferred phenotypes and infection-control decisions.",
+            ],
+            sourceIds: ["clinical-microbiology-implementation-2026", "ecdc-wgs-surveillance-2016"],
+          },
+          {
+            cells: [
+              "Delayed report or delayed sharing",
+              "Expected date, actual date, delay reason, affected users, public-health impact, repository or platform status and escalation owner.",
+              "Decide whether the delay changes outbreak response, routine surveillance, stakeholder communication, or service capacity planning.",
+              "WHO links genomic surveillance to timely feedback and public-health action; delay is therefore a service issue, not only a throughput metric.",
+            ],
+            sourceIds: ["who-national-genomic-surveillance-strategy-2023", "who-sars-cov-2-sequencing-implementation-2021"],
+          },
+          {
+            cells: [
+              "Corrected, superseded or withdrawn record",
+              "Original report or accession, reason for change, replacement record, notification route, owner, date and link to corrected repository/platform status.",
+              "Decide who must be notified, whether downstream users need a correction, and whether validation, SOPs or training need updating.",
+              "APHL accession tracking and WHO platform provenance support keeping shared records connected to local corrections and later reuse.",
+            ],
+            sourceIds: ["aphl-ngs-implementation-2016", "who-genomic-data-sharing-platforms-2025"],
+          },
+          {
+            cells: [
+              "Recurring service problem",
+              "Frequency, affected use case, affected workflow step, user impact, cost or capacity effect, corrective action, owner and review date.",
+              "Decide whether to change SOPs, training, validation boundaries, metadata capture, infrastructure, support arrangements, or user communication.",
+              "Service metrics should lead to corrective action; dashboard counts alone do not improve the service.",
+            ],
+            sourceIds: [
+              "phe-case-study",
+              "aphl-ngs-implementation-2016",
+              "clinical-microbiology-implementation-2026",
+              "who-national-genomic-surveillance-strategy-2023",
+            ],
+          },
+        ],
+        sourceIds: [
+          "phe-case-study",
+          "aphl-ngs-implementation-2016",
+          "who-national-genomic-surveillance-strategy-2023",
+          "who-genomic-data-sharing-platforms-2025",
+          "who-sars-cov-2-sequencing-implementation-2021",
+          "clinical-microbiology-implementation-2026",
+          "ecdc-wgs-surveillance-2016",
+        ],
+      },
+    ],
     audiences: ["lab-lead", "bioinformatician", "data-manager", "it-security", "director"],
     implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
     organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],

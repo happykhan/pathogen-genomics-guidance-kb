@@ -18,7 +18,9 @@ Accreditation is another source-backed point. PHE reported ISO 15189 accreditati
 
 The PHA4GE source adds the computational quality angle. Routine analysis should be transparent, portable, reproducible, and auditable. This supports use of workflow systems, containers, versioned pipelines, and provenance records, but it does not by itself define a full quality-management system.
 
-The dynamic guide now goes further than this original module. It includes beta checklists for validation before switching methods, release and change control, SOP handoff from research to service, shared-workflow adoption, reporting limitations, report-template readiness, and service review. These are still beta implementation aids. They are not a substitute for local laboratory-quality, accreditation, regulatory, incident-management, or pathogen-specific threshold review.
+The dynamic guide now goes further than this original module. It includes beta checklists for validation before switching methods, release and change control, SOP handoff from research to service, shared-workflow adoption, reporting limitations, report-template readiness, and service review. It also includes an exception and service-review register for failed or repeated samples, low-quality runs, missing metadata, ambiguous results, delayed reports, corrected or withdrawn records, and recurring service problems.
+
+The register is meant to make the routine service visible. Each exception should be tied to a persistent record, owner, decision, user or report impact, and corrective action. The current source base supports that beta operating pattern from PHE, APHL, WHO platform and strategy guidance, ECDC, and the clinical implementation review. It does not yet provide organism-specific QC thresholds, accreditation-ready incident wording, or local corrective-action schedules.
 
 ## Source Basis
 

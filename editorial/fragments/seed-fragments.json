@@ -861,6 +861,55 @@
     "updatedAt": "2026-07-01"
   },
   {
+    "id": "fragment-beta-exception-service-review-register",
+    "sectionId": "failure-handling-continuous-improvement",
+    "title": "Exception and service-review register",
+    "kind": "table",
+    "text": "A routine genomics service needs a review register for failed or repeated samples, low-quality runs, missing metadata, ambiguous results, delayed reports, corrected records and recurring service problems. Each row should connect the event to a minimum record, an owner, a decision, a user or report impact, and any corrective action.",
+    "claimIds": [
+      "claim-lifecycle-service-loop",
+      "claim-quality-validation-whole-chain",
+      "claim-qc-annotation-version-control",
+      "claim-release-change-control-validation"
+    ],
+    "sourceIds": [
+      "phe-case-study",
+      "aphl-ngs-implementation-2016",
+      "who-national-genomic-surveillance-strategy-2023",
+      "who-genomic-data-sharing-platforms-2025",
+      "who-sars-cov-2-sequencing-implementation-2021",
+      "clinical-microbiology-implementation-2026",
+      "ecdc-wgs-surveillance-2016"
+    ],
+    "conditions": {
+      "audiences": [
+        "lab-lead",
+        "bioinformatician",
+        "data-manager",
+        "it-security",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "failure-handling",
+        "continuous-improvement",
+        "quality",
+        "reporting",
+        "metadata"
+      ]
+    },
+    "order": 35,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta review-register pattern, not an organism-specific QC threshold set or accreditation template.",
+    "updatedAt": "2026-07-01"
+  },
+  {
     "id": "fragment-service-model-comparison-core",
     "sectionId": "use-case-service-model",
     "title": "Service model comparison",
