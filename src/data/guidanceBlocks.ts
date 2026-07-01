@@ -2283,6 +2283,101 @@ export const guidanceBlocks: GuidanceBlock[] = [
           "who-genomics-costing-tool-manual-2024",
         ],
       },
+      {
+        title: "Estimating workforce capacity without inventing FTE ratios",
+        summary:
+          "Use this worksheet to turn the responsibility map into a local staffing and cover discussion. It is a planning structure, not a universal staffing calculator.",
+        columns: ["Capacity question", "What to estimate locally", "Why it changes workforce need", "Beta caution"],
+        rows: [
+          {
+            cells: [
+              "Service volume and turnaround",
+              "Expected samples or isolates per week or month, batching pattern, urgent-response route, routine reporting cycle, and seasonal or outbreak surge.",
+              "The same role map needs different cover when the service is occasional, batched, daily, urgent, or expected to absorb outbreaks.",
+              "Use local throughput and turnaround assumptions; the beta guide does not provide FTE per sample.",
+            ],
+            sourceIds: [
+              "phe-case-study",
+              "aphl-ngs-implementation-2016",
+              "who-genomics-costing-tool-manual-2024",
+            ],
+          },
+          {
+            cells: [
+              "Workflow complexity and support model",
+              "Number of organisms, workflows, databases, report types, rerun routes, managed-platform dependencies and local troubleshooting responsibilities.",
+              "A narrow managed workflow can require less local engineering than multiple local pipelines, but local validation, interpretation and user support still need owners.",
+              "Delegating analysis does not remove responsibility for report boundaries, access, correction and service continuity.",
+            ],
+            sourceIds: [
+              "pha4ge-infrastructure",
+              "clinical-microbiology-implementation-2026",
+              "who-genomics-costing-tool-manual-2024",
+            ],
+          },
+          {
+            cells: [
+              "Quality and validation workload",
+              "Validation runs, QC review, EQA or proficiency testing, change-control reviews, audit preparation, report corrections and SOP updates.",
+              "Quality work increases around implementation, workflow changes, accreditation review and service incidents; it is not only routine bench time.",
+              "Do not hide quality-management time inside an unspecified laboratory or bioinformatics role.",
+            ],
+            sourceIds: [
+              "aphl-ngs-implementation-2016",
+              "clinical-microbiology-implementation-2026",
+              "who-genomics-costing-tool-manual-2024",
+            ],
+          },
+          {
+            cells: [
+              "Data management and user support",
+              "Metadata follow-up, LIMS or sample-system work, accession tracking, access reviews, dashboard or report support, user feedback and training sessions.",
+              "Public-health value depends on users receiving interpretable results with enough context to act; this creates recurrent support work.",
+              "A technically functional pipeline can still fail if data stewardship and user support are unfunded.",
+            ],
+            sourceIds: ["cdc-nejm-2019", "phe-case-study", "who-genomic-surveillance-progress-2023"],
+          },
+          {
+            cells: [
+              "Cover, succession and partner dependency",
+              "Backup owner for each function, leave cover, onboarding time, documentation location, external partner role, escalation route and what stops if a named person is absent.",
+              "Single-person dependency is a service risk even when current throughput is low.",
+              "External sequencing, analysis or platform support should be budgeted and governed as a dependency, not treated as invisible capacity.",
+            ],
+            sourceIds: [
+              "pha4ge-infrastructure",
+              "east-africa-genomics-landscape-2024",
+              "clinical-microbiology-implementation-2026",
+            ],
+          },
+          {
+            cells: [
+              "Training and competency evidence",
+              "Initial training, refresher training, competency assessment, cross-training, user training, community-of-practice participation and documentation updates.",
+              "Workforce capacity includes whether people can perform, explain, review and improve the service, not only whether a role is nominally assigned.",
+              "Detailed curricula and competency-assessment templates still need extraction from programme-specific training sources.",
+            ],
+            sourceIds: [
+              "cdc-nejm-2019",
+              "phe-case-study",
+              "clinical-microbiology-implementation-2026",
+              "who-genomic-surveillance-progress-2023",
+              "mgen-kenya-amr-genomics-capacity-2023",
+            ],
+          },
+        ],
+        sourceIds: [
+          "cdc-nejm-2019",
+          "phe-case-study",
+          "aphl-ngs-implementation-2016",
+          "pha4ge-infrastructure",
+          "clinical-microbiology-implementation-2026",
+          "who-genomic-surveillance-progress-2023",
+          "who-genomics-costing-tool-manual-2024",
+          "east-africa-genomics-landscape-2024",
+          "mgen-kenya-amr-genomics-capacity-2023",
+        ],
+      },
     ],
     audiences: ["director", "policy", "funder", "lab-lead", "bioinformatician"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
@@ -2308,7 +2403,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     gaps: [
       "The beta responsibility variants still need review against real programme examples and local organisational structures.",
-      "The guide still needs source-backed staffing ratios or FTE examples by service scale, throughput, organism focus, and implementation model.",
+      "The beta workforce capacity worksheet still needs source-backed staffing ratios or FTE examples by service scale, throughput, organism focus, and implementation model before it can become a staffing calculator.",
       "Detailed training curricula and competency-assessment templates need extraction from APHL, PulseNet, WHO, ECDC and national programme sources.",
     ],
   },

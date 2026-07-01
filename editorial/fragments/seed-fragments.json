@@ -1840,5 +1840,54 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This supports local target-setting but deliberately avoids unsupported retention periods, RTOs or RPOs.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-workforce-capacity-worksheet",
+    "sectionId": "workforce-sustainability-costing",
+    "title": "Beta workforce capacity worksheet",
+    "kind": "table",
+    "text": "Estimate workforce capacity by service function, throughput, turnaround pressure, support model, quality scope and cover requirement. The source base supports costing people, training, quality management, bioinformatics support and user engagement, but it does not yet support universal FTE ratios by pathogen, throughput or implementation model.",
+    "claimIds": [
+      "claim-workforce-support-service-core",
+      "claim-costing-recurrent-service-categories"
+    ],
+    "sourceIds": [
+      "cdc-nejm-2019",
+      "phe-case-study",
+      "aphl-ngs-implementation-2016",
+      "clinical-microbiology-implementation-2026",
+      "who-genomic-surveillance-progress-2023",
+      "who-genomics-costing-tool-manual-2024",
+      "east-africa-genomics-landscape-2024"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "policy",
+        "funder",
+        "lab-lead",
+        "bioinformatician",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "workforce",
+        "training",
+        "costing",
+        "sustainability",
+        "support"
+      ]
+    },
+    "order": 33,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta capacity-planning worksheet. It deliberately avoids unsupported FTE ratios.",
+    "updatedAt": "2026-07-01"
   }
 ]
