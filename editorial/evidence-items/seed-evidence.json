@@ -644,5 +644,16 @@
     "tags": ["equity", "distributed-capability", "respiratory-viruses", "early-detection", "global-health-security", "surveillance"],
     "limitations": "Supports a beta equity and distributed-capability argument. Do not use the model's numeric capacity threshold until the assumptions, pathogen scope, reporting regularity and transferability limits are extracted in detail.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-beta-metagenomics-scope-boundary",
+    "sourceId": "clinical-microbiology-implementation-2026",
+    "sourceLocator": "Gador-Whyte et al. 2026 clinical microbiology implementation review; Microbial Genomics implementation collection metagenomics examples",
+    "evidenceType": "passage-note",
+    "excerpt": "WGS and clinical metagenomics",
+    "passageSummary": "The clinical microbiology implementation review frames pathogen genomics as including WGS and clinical metagenomics, while distinguishing clinical laboratories from public-health laboratories because clinical laboratories carry more direct patient-care responsibilities, tighter diagnostic reporting expectations, regulatory obligations and interpretive uncertainty. The Microbial Genomics implementation collection includes metagenomics examples, including strain-level shotgun metagenomics for Salmonella food-source investigation and a rapid metagenomic sequencing edge case for diagnosis and AMR prediction. Together these sources support including metagenomics as a scope consideration while keeping diagnostic recommendations, thresholds and clinical-action rules outside the beta guide unless specifically sourced.",
+    "tags": ["metagenomics", "scope", "clinical-microbiology", "reporting", "validation", "public-health"],
+    "limitations": "Supports a scope boundary and service-model prompt. It does not provide a metagenomic diagnostic workflow, validation standard, sensitivity threshold, report template or clinical decision rule.",
+    "reviewStatus": "reviewed"
   }
 ]

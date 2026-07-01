@@ -21,7 +21,7 @@ This review is a strong source for implementation detail at the clinical microbi
 - Staffing and training requirements.
 - Quality management, validation, verification, EQA/PT, and reporting considerations.
 - Bioinformatics implementation barriers and enablers.
-- Future content on metagenomics and clinical decision support.
+- Scope boundary for metagenomics and clinical decision support.
 
 ## Extracted Notes
 
@@ -37,7 +37,8 @@ This review is a strong source for implementation detail at the clinical microbi
 
 - Resource finder candidate source.
 - Cited in validation, reporting, workforce, and implementation-realism guidance prose.
+- Cited in the use-case/service-model matrix for metagenomics scope boundaries.
 
 ## Gaps
 
-- Needs deeper extraction before being used for clinical-laboratory-specific recommendations.
+- Needs deeper extraction before being used for clinical-laboratory-specific recommendations, metagenomic diagnostic workflows, or clinical decision rules.

@@ -851,5 +851,31 @@
     "confidence": "medium",
     "limitations": "Respiratory-virus modelling source; does not by itself define minimum capacity targets for all pathogens or countries.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "claim-beta-metagenomics-scope-boundary",
+    "sourceId": "clinical-microbiology-implementation-2026",
+    "sourceLocator": "Gador-Whyte et al. 2026 clinical microbiology implementation review; Microbial Genomics implementation collection metagenomics examples",
+    "evidenceItemIds": [
+      "evidence-beta-metagenomics-scope-boundary",
+      "evidence-clinical-review-qc-validation-eqa",
+      "evidence-beta-enteric-respiratory-reporting-fields",
+      "evidence-beta-tb-amr-hai-reporting-fields"
+    ],
+    "claim": "The beta guide should make metagenomics a scope and service-model decision rather than silently treating metagenomic samples like isolate WGS, because metagenomics changes validation, QC, interpretation, reporting and clinical-governance requirements.",
+    "extractedText": "The clinical microbiology review includes WGS and clinical metagenomics and highlights direct patient-care responsibilities, diagnostic reporting expectations, regulatory obligations, validation and uncertainty. Microbial Genomics examples show metagenomics can support food-source investigation and diagnostic or AMR-prediction edge cases, but the current source base does not support universal diagnostic rules.",
+    "notes": "Use to add a scope-boundary row to the service-model matrix and keep metagenomic diagnostic guidance in gaps until source extraction is deeper.",
+    "tags": ["metagenomics", "scope", "service-model", "validation", "reporting", "clinical-governance"],
+    "candidateSectionIds": [
+      "use-case-service-model",
+      "reporting-decision-use",
+      "quality-validation-before-switch"
+    ],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "multiple",
+    "confidence": "medium",
+    "limitations": "Does not define metagenomic diagnostic workflows, thresholds, clinical decision rules or report wording.",
+    "reviewStatus": "reviewed"
   }
 ]

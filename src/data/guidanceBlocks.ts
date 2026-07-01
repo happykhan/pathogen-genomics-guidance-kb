@@ -369,6 +369,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "ECDC adds the data-system implication: storage and sharing requirements depend on the surveillance objective and study design, including continuous, real-time or periodic sentinel surveys and centralised or decentralised analysis. A system designed for periodic sentinel reports does not have the same failure modes as one designed for real-time outbreak response.",
       "For hospital or clinical support, the clinical implementation review separates reactive sequencing from prospective surveillance. Reactive sequencing starts from suspicion of an outbreak and can confirm scope and transmission dynamics. Prospective surveillance can detect unrecognised transmission earlier, but it usually needs more finance, staffing and infrastructure. The same distinction is useful for public-health programmes deciding whether genomics is a routine service, a response tool, or both.",
       "For beta, use an organism and use-case matrix before prescribing technical details. Enteric-bacterial surveillance, respiratory-virus variant monitoring, TB transmission investigation, AMR monitoring, healthcare-associated infection control, repository submission and research support can all use sequencing, but they place different pressure on sampling, metadata, QC, validation, reporting, sharing, access, storage and infrastructure.",
+      "Metagenomics should be named explicitly when it is in scope. Clinical metagenomics, environmental metagenomics, and food-sample shotgun metagenomics can answer different questions from isolate WGS, but they also change sample requirements, contamination and mixture interpretation, validation, QC, reporting, storage, and clinical-governance boundaries. The beta guide can flag those differences; it should not prescribe metagenomic diagnostic rules without deeper source extraction.",
     ],
     bodySourceIds: {
       0: ["who-national-genomic-surveillance-strategy-2023", "cdc-nejm-2019"],
@@ -386,6 +387,10 @@ export const guidanceBlocks: GuidanceBlock[] = [
         "who-sars-cov-2-sequencing-implementation-2021",
         "clinical-microbiology-implementation-2026",
         "mgen-uk-delphi-health-protection-2023",
+      ],
+      8: [
+        "clinical-microbiology-implementation-2026",
+        "mgen-shotgun-metagenomics-salmonella-food-2021",
       ],
     },
     technicalDetail: [
@@ -450,6 +455,18 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "Clinical-facing services may have tighter reporting, validation and regulatory expectations than public-health surveillance alone.",
             ],
             sourceIds: ["clinical-microbiology-implementation-2026", "mgen-centre-specific-typing-ipc-2021"],
+          },
+          {
+            cells: [
+              "Metagenomic or mixed-sample use",
+              "Clinical, food-safety, environmental, One Health or infection-control users depending on sample source",
+              "Requires a clear distinction between isolate WGS, direct-from-sample sequencing, environmental or food-sample metagenomics, and any diagnostic or AMR-prediction use.",
+              "Do not transfer isolate-WGS QC, reporting, validation or clinical-action rules to metagenomic data without specific validation and governance.",
+            ],
+            sourceIds: [
+              "clinical-microbiology-implementation-2026",
+              "mgen-shotgun-metagenomics-salmonella-food-2021",
+            ],
           },
           {
             cells: [
@@ -543,10 +560,12 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "mgen-belgian-influenza-phylogenomics-2021",
       "mgen-salmonella-typhi-paratyphi-england-2021",
       "mgen-gonorrhoea-wgs-amr-genogroups-2021",
+      "mgen-shotgun-metagenomics-salmonella-food-2021",
     ],
     gaps: [
       "The beta organism and use-case matrix now has automated profile checks for key organism profiles, but still needs review by disease-programme users.",
       "Organism-specific thresholds, sampling fractions, report wording and repository field sets still need full source extraction before the guide can prescribe detailed rules.",
+      "Metagenomic diagnostic workflows, validation thresholds, report wording and clinical decision rules remain out of scope until deeper source extraction is complete.",
     ],
   },
   {

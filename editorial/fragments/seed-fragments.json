@@ -1336,11 +1336,12 @@
     "sectionId": "use-case-service-model",
     "title": "Beta organism and use-case service-model matrix",
     "kind": "table",
-    "text": "Use an organism and use-case service-model matrix before prescribing technical details. Rows should include routine surveillance, outbreak response, AMR monitoring, repository submission, clinical or hospital support, and research support. Columns should include organism or programme, decision user, sampling route, expected output, turnaround pressure, metadata dependency, QC or validation boundary, reporting route, sharing route, infrastructure dependency, and fallback if the result is delayed or inconclusive.",
+    "text": "Use an organism and use-case service-model matrix before prescribing technical details. Rows should include routine surveillance, outbreak response, AMR monitoring, repository submission, clinical or hospital support, metagenomic or mixed-sample use, and research support. Columns should include organism or programme, decision user, sampling route, expected output, turnaround pressure, metadata dependency, QC or validation boundary, reporting route, sharing route, infrastructure dependency, and fallback if the result is delayed or inconclusive.",
     "claimIds": [
       "claim-beta-organism-service-model-matrix",
       "claim-service-model-choices",
-      "claim-reporting-products-fit-decision"
+      "claim-reporting-products-fit-decision",
+      "claim-beta-metagenomics-scope-boundary"
     ],
     "sourceIds": [
       "who-national-genomic-surveillance-strategy-2023",
@@ -1355,7 +1356,8 @@
       "mgen-polymicrobial-mdr-critical-care-2021",
       "mgen-belgian-influenza-phylogenomics-2021",
       "mgen-salmonella-typhi-paratyphi-england-2021",
-      "mgen-gonorrhoea-wgs-amr-genogroups-2021"
+      "mgen-gonorrhoea-wgs-amr-genogroups-2021",
+      "mgen-shotgun-metagenomics-salmonella-food-2021"
     ],
     "conditions": {
       "audiences": [
@@ -1381,12 +1383,13 @@
         "sampling",
         "metadata",
         "reporting",
-        "validation"
+        "validation",
+        "metagenomics"
       ]
     },
     "order": 25,
     "reviewStatus": "reviewed",
-    "reviewerNotes": "This is a beta matrix to structure thinking. It does not provide organism-specific thresholds, report templates or sampling fractions.",
+    "reviewerNotes": "This is a beta matrix to structure thinking. It does not provide organism-specific thresholds, report templates, sampling fractions or metagenomic diagnostic rules.",
     "updatedAt": "2026-07-01"
   },
   {

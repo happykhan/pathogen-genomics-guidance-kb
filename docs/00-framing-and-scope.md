@@ -10,6 +10,8 @@ Pathogen genomics has moved from specialist research into routine public-health 
 
 This knowledge base is intended to support guidance for programmes that need to build or improve that kind of capability. The focus is not wet-lab sequencing protocols alone. It is the whole system around pathogen genomics data: data lifecycle, QC, metadata, storage, compute infrastructure, workflows, provenance, sharing, governance, reporting, workforce, costing, and maturity.
 
+Most current beta guidance is framed around isolate WGS and public-health surveillance services. Metagenomic or mixed-sample use should be declared explicitly because it changes validation, QC, interpretation, reporting, storage, and clinical-governance boundaries. The beta guide can flag that scope decision, but it should not be read as metagenomic diagnostic guidance.
+
 The PHA4GE infrastructure work gives the first organising frame. It treats pathogen genomics infrastructure as a set of decisions about responsibility model, workflow execution, physical or cloud location, data flow, and access. That frame is useful because many implementation failures happen when a programme buys technology without deciding who will operate it, validate it, support users, manage data, and maintain the system.
 
 The PHE case study adds a concrete implementation pattern. It shows that routine WGS implementation required business planning, capital planning, laboratory redesign, robotics, sequencing capacity, IT infrastructure, LIMS, bioinformatics pipelines, validation, accreditation, workforce development, and service-user engagement. This is the kind of operational detail that a WHO-oriented guide will need.
@@ -39,6 +41,7 @@ The repo should therefore read as a guidance knowledge base, not as a library ca
 - WHO-specific mandate, audience, and publication pathway source material has not been added.
 - AMR-specific and disease-programme implementation sources are not yet indexed beyond examples in Armstrong et al. and the PHE case study.
 - Numeric distributed-capacity thresholds from modelling studies need direct extraction and transferability review before use as programme targets.
+- Metagenomic diagnostic workflows, validation thresholds, reporting language, and clinical decision rules remain outside the beta scope until deeper source extraction is complete.
 
 ## Status
 
