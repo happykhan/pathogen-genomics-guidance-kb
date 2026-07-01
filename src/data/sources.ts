@@ -96,6 +96,98 @@ export const sources = {
     label: "Nguinkal et al. 2024, Pathogen genomics landscape in the East African Community",
     path: "knowledge-base/source-cards/east-africa-pathogen-genomics-landscape-2024.md",
   },
+  "mgen-kenya-amr-genomics-capacity-2023": {
+    label: "Kigen et al. 2023, Genomics surveillance capacity for AMR in Kenya",
+    path: "knowledge-base/source-cards/microbial-genomics-implementation-collection.md",
+  },
+  "mgen-accreditation-iso-pathogen-genomics-2023": {
+    label: "Ballard et al. 2023, Accreditation and ISO standards for pathogen genomics",
+    path: "knowledge-base/source-cards/microbial-genomics-implementation-collection.md",
+  },
+  "mgen-eurl-amr-proficiency-test-2023": {
+    label: "Kristensen et al. 2023, Genomic proficiency testing for AMR reference laboratories",
+    path: "knowledge-base/source-cards/microbial-genomics-implementation-collection.md",
+  },
+  "mgen-accelerating-bioinformatics-implementation-2023": {
+    label: "Libuit et al. 2023, Accelerating bioinformatics implementation in public health",
+    path: "knowledge-base/source-cards/microbial-genomics-implementation-collection.md",
+  },
+  "mgen-eurl-wgs-rollout-europe-2023": {
+    label: "Michelacci et al. 2023, EURL support for WGS rollout in Europe",
+    path: "knowledge-base/source-cards/microbial-genomics-implementation-collection.md",
+  },
+  "mgen-canine-metagenomic-amr-2023": {
+    label: "Ring et al. 2023, Rapid metagenomic sequencing for canine bacterial infections",
+    path: "knowledge-base/source-cards/microbial-genomics-implementation-collection.md",
+  },
+  "mgen-california-covidnet-2023": {
+    label: "Smith et al. 2023, California COVIDNet SARS-CoV-2 genomics implementation",
+    path: "knowledge-base/source-cards/microbial-genomics-implementation-collection.md",
+  },
+  "mgen-uk-delphi-health-protection-2023": {
+    label: "Killough et al. 2023, UK Delphi study on pathogen genomics in health protection",
+    path: "knowledge-base/source-cards/microbial-genomics-implementation-collection.md",
+  },
+  "mgen-enteric-adenovirus-f41-minion-2023": {
+    label: "Multiplex MinION sequencing for enteric adenovirus F41, 2023",
+    path: "knowledge-base/source-cards/microbial-genomics-implementation-collection.md",
+  },
+  "mgen-making-microbial-genomics-work-2022": {
+    label: "Making microbial genomics work for clinical and public health microbiology, 2022",
+    path: "knowledge-base/source-cards/microbial-genomics-implementation-collection.md",
+  },
+  "mgen-iseq-multilab-enteric-2022": {
+    label: "Multi-laboratory iSeq evaluation for Salmonella, E. coli and Listeria, 2022",
+    path: "knowledge-base/source-cards/microbial-genomics-implementation-collection.md",
+  },
+  "mgen-time-critical-illumina-wgs-2021": {
+    label: "Time-critical Illumina WGS performance for bacterial characterization, 2021",
+    path: "knowledge-base/source-cards/microbial-genomics-implementation-collection.md",
+  },
+  "mgen-belgian-influenza-phylogenomics-2021": {
+    label: "Belgian influenza A(H3N2) phylogenomics surveillance, 2021",
+    path: "knowledge-base/source-cards/microbial-genomics-implementation-collection.md",
+  },
+  "mgen-centre-specific-typing-ipc-2021": {
+    label: "Centre-specific bacterial pathogen typing and infection-control decisions, 2021",
+    path: "knowledge-base/source-cards/microbial-genomics-implementation-collection.md",
+  },
+  "mgen-salmonella-typhi-paratyphi-england-2021": {
+    label: "Salmonella Typhi and Paratyphi phylogenomics and AMR in England, 2021",
+    path: "knowledge-base/source-cards/microbial-genomics-implementation-collection.md",
+  },
+  "mgen-harmonization-enterobacteriaceae-enterococci-2021": {
+    label: "Harmonization of WGS for Enterobacteriaceae and Enterococci outbreak surveillance, 2021",
+    path: "knowledge-base/source-cards/microbial-genomics-implementation-collection.md",
+  },
+  "mgen-shotgun-metagenomics-salmonella-food-2021": {
+    label: "Strain-level shotgun metagenomics for Salmonella foodborne outbreak source attribution, 2021",
+    path: "knowledge-base/source-cards/microbial-genomics-implementation-collection.md",
+  },
+  "mgen-rapid-nanopore-amr-outbreak-2021": {
+    label: "Rapid nanopore sequencing protocol for AMR surveillance and outbreak investigation, 2021",
+    path: "knowledge-base/source-cards/microbial-genomics-implementation-collection.md",
+  },
+  "mgen-local-sarscov2-large-scale-2020": {
+    label: "Large-scale regional SARS-CoV-2 sequencing for local outbreak management, 2020",
+    path: "knowledge-base/source-cards/microbial-genomics-implementation-collection.md",
+  },
+  "mgen-polymicrobial-mdr-critical-care-2021": {
+    label: "Genomic surveillance of polymicrobial MDR critical-care outbreak, 2021",
+    path: "knowledge-base/source-cards/microbial-genomics-implementation-collection.md",
+  },
+  "mgen-stec-bioinformatics-validation-2021": {
+    label: "Bogaerts et al. 2021, Bioinformatics WGS workflow validation for STEC",
+    path: "knowledge-base/source-cards/microbial-genomics-implementation-collection.md",
+  },
+  "mgen-gonorrhoea-wgs-amr-genogroups-2021": {
+    label: "Neisseria gonorrhoeae WGS genogroups and AMR in Europe, 2021",
+    path: "knowledge-base/source-cards/microbial-genomics-implementation-collection.md",
+  },
+  "mgen-discordant-amr-predictions-2020": {
+    label: "Doyle et al. 2020, Discordant bioinformatic AMR predictions from WGS data",
+    path: "knowledge-base/source-cards/microbial-genomics-implementation-collection.md",
+  },
 } as const;
 
 export type SourceId = keyof typeof sources;

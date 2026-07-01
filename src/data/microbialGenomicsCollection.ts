@@ -20,7 +20,7 @@ export const microbialGenomicsCollectionResources: ResourceRecord[] = [
     summary: "Paper on building national genomic surveillance capacity for AMR in Kenyan public-health laboratories.",
     whyUseful: "Candidate source for LMIC capacity building, AMR surveillance implementation, workforce, and public-health laboratory readiness.",
     keywords: ["Kenya", "AMR", "capacity building", "public health laboratories", "genomic surveillance"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "mgen-accreditation-iso-pathogen-genomics-2023",
@@ -38,7 +38,7 @@ export const microbialGenomicsCollectionResources: ResourceRecord[] = [
     summary: "Implementation paper focused on accreditation and ISO-standard application for pathogen genomics in public health.",
     whyUseful: "Priority candidate for strengthening the quality-management, validation, and accreditation sections.",
     keywords: ["accreditation", "ISO", "quality management", "pathogen genomics", "public health"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "mgen-eurl-amr-proficiency-test-2023",
@@ -57,7 +57,7 @@ export const microbialGenomicsCollectionResources: ResourceRecord[] = [
     summary: "European AMR reference-laboratory proficiency-testing paper assessing WGS capacities.",
     whyUseful: "Candidate source for proficiency testing, quality assurance, and network-level capability assessment.",
     keywords: ["EURL", "AMR", "proficiency test", "WGS capacity", "quality assurance"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "mgen-accelerating-bioinformatics-implementation-2023",
@@ -75,7 +75,7 @@ export const microbialGenomicsCollectionResources: ResourceRecord[] = [
     summary: "Implementation-focused paper on accelerating bioinformatics adoption in public-health settings.",
     whyUseful: "Priority candidate for the guide's bioinformatics service model, workforce, workflow, and infrastructure sections.",
     keywords: ["bioinformatics", "implementation", "public health", "workflows", "infrastructure"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "mgen-eurl-wgs-rollout-europe-2023",
@@ -94,7 +94,7 @@ export const microbialGenomicsCollectionResources: ResourceRecord[] = [
     summary: "European reference-laboratory support paper on rolling out WGS across food, feed, and veterinary laboratories.",
     whyUseful: "Candidate source for network implementation, reference-laboratory support, and One Health food-safety rollout.",
     keywords: ["EURL", "Europe", "food", "feed", "veterinary", "WGS rollout"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "mgen-canine-metagenomic-amr-2023",
@@ -112,7 +112,7 @@ export const microbialGenomicsCollectionResources: ResourceRecord[] = [
     summary: "Candidate paper on rapid metagenomic sequencing and antimicrobial sensitivity prediction for canine bacterial infections.",
     whyUseful: "Possible One Health and metagenomics edge-case source; publisher DOI needs verification before guidance use.",
     keywords: ["metagenomics", "canine", "AMR", "diagnostics", "One Health"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "mgen-california-covidnet-2023",
@@ -131,7 +131,7 @@ export const microbialGenomicsCollectionResources: ResourceRecord[] = [
     summary: "Lessons from California COVIDNet's SARS-CoV-2 sequencing initiative in public-health laboratories.",
     whyUseful: "Candidate source for scale-up lessons, operational barriers, data/reporting workflows, and public-health laboratory coordination.",
     keywords: ["California COVIDNet", "SARS-CoV-2", "public health laboratories", "implementation", "lessons learned"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "mgen-uk-delphi-health-protection-2023",
@@ -150,7 +150,7 @@ export const microbialGenomicsCollectionResources: ResourceRecord[] = [
     summary: "UK Delphi consensus study on how public-health authorities can use pathogen genomics in health-protection practice.",
     whyUseful: "Priority candidate for reporting, analysis-to-action, and decision-use guidance.",
     keywords: ["Delphi", "United Kingdom", "health protection", "decision use", "pathogen genomics"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "mgen-enteric-adenovirus-f41-minion-2023",
@@ -168,7 +168,7 @@ export const microbialGenomicsCollectionResources: ResourceRecord[] = [
     summary: "Multiplex MinION sequencing paper for enteric adenovirus F41 genomic diversity and surveillance.",
     whyUseful: "Candidate organism-specific source for nanopore/amplicon surveillance workflows.",
     keywords: ["MinION", "adenovirus F41", "multiplex sequencing", "viral surveillance"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "mgen-making-microbial-genomics-work-2022",
@@ -186,7 +186,7 @@ export const microbialGenomicsCollectionResources: ResourceRecord[] = [
     summary: "Editorial or framing paper on making microbial genomics work in clinical and public-health microbiology.",
     whyUseful: "Candidate framing source for bridging clinical microbiology, public health, and implementation realities.",
     keywords: ["clinical microbiology", "public health microbiology", "implementation", "microbial genomics"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "mgen-iseq-multilab-enteric-2022",
@@ -204,7 +204,7 @@ export const microbialGenomicsCollectionResources: ResourceRecord[] = [
     summary: "Multi-laboratory evaluation of Illumina iSeq for WGS of Salmonella, E. coli, and Listeria.",
     whyUseful: "Candidate source for platform evaluation, inter-laboratory validation, and enteric-bacteria sequencing rollout.",
     keywords: ["Illumina iSeq", "Salmonella", "E. coli", "Listeria", "multi-laboratory evaluation"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "mgen-time-critical-illumina-wgs-2021",
@@ -222,7 +222,7 @@ export const microbialGenomicsCollectionResources: ResourceRecord[] = [
     summary: "Evaluation of bacterial WGS performance with Illumina technology optimized for time-critical public-health use.",
     whyUseful: "Candidate source for turnaround-time, validation, and outbreak-response workflow considerations.",
     keywords: ["Illumina", "time-critical", "WGS performance", "bacterial pathogen characterization"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "mgen-belgian-influenza-phylogenomics-2021",
@@ -240,7 +240,7 @@ export const microbialGenomicsCollectionResources: ResourceRecord[] = [
     summary: "Belgian influenza A(H3N2) phylogenomics paper showing improved surveillance through whole-genome analysis.",
     whyUseful: "Candidate organism-specific example for respiratory-virus surveillance value and analysis-to-decision framing.",
     keywords: ["influenza", "A(H3N2)", "Belgium", "phylogenomics", "surveillance"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "mgen-centre-specific-typing-ipc-2021",
@@ -258,7 +258,7 @@ export const microbialGenomicsCollectionResources: ResourceRecord[] = [
     summary: "Paper showing that centre-specific bacterial pathogen typing can affect infection-control decisions.",
     whyUseful: "Candidate source for decision-use, local context, and avoiding over-generalized interpretation.",
     keywords: ["infection control", "typing", "decision making", "hospital", "bacterial pathogens"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "mgen-salmonella-typhi-paratyphi-england-2021",
@@ -276,7 +276,7 @@ export const microbialGenomicsCollectionResources: ResourceRecord[] = [
     summary: "England public-health genomics paper on Salmonella Typhi and Paratyphi phylogenomics and AMR.",
     whyUseful: "Candidate organism-specific source for enteric and AMR surveillance examples.",
     keywords: ["Salmonella Typhi", "Paratyphi", "England", "AMR", "phylogenomics"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "mgen-harmonization-enterobacteriaceae-enterococci-2021",
@@ -294,7 +294,7 @@ export const microbialGenomicsCollectionResources: ResourceRecord[] = [
     summary: "Harmonisation paper for WGS outbreak surveillance of Enterobacteriaceae and Enterococci.",
     whyUseful: "Candidate source for comparability, network harmonisation, and outbreak-surveillance standards.",
     keywords: ["harmonization", "Enterobacteriaceae", "Enterococci", "outbreak surveillance", "WGS"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "mgen-shotgun-metagenomics-salmonella-food-2021",
@@ -312,7 +312,7 @@ export const microbialGenomicsCollectionResources: ResourceRecord[] = [
     summary: "Shotgun metagenomics paper resolving the source of a Salmonella foodborne outbreak from food samples.",
     whyUseful: "Candidate example for foodborne outbreak source attribution and metagenomic workflows.",
     keywords: ["Salmonella", "foodborne outbreak", "shotgun metagenomics", "source attribution"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "mgen-rapid-nanopore-amr-outbreak-2021",
@@ -330,7 +330,7 @@ export const microbialGenomicsCollectionResources: ResourceRecord[] = [
     summary: "Rapid nanopore protocol paper for antibiotic-resistant bacteria in surveillance and outbreak investigation.",
     whyUseful: "Candidate source for rapid local sequencing workflows and AMR outbreak response.",
     keywords: ["nanopore", "AMR", "outbreak investigation", "rapid sequencing", "surveillance"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "mgen-local-sarscov2-large-scale-2020",
@@ -348,7 +348,7 @@ export const microbialGenomicsCollectionResources: ResourceRecord[] = [
     summary: "Candidate SARS-CoV-2 sequencing paper on local outbreak management and detailed regional epidemiology.",
     whyUseful: "Candidate source for local genomic epidemiology and outbreak-management examples; publisher DOI needs verification.",
     keywords: ["SARS-CoV-2", "local outbreak management", "genomic epidemiology", "large-scale sequencing"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "mgen-polymicrobial-mdr-critical-care-2021",
@@ -366,7 +366,7 @@ export const microbialGenomicsCollectionResources: ResourceRecord[] = [
     summary: "Critical-care outbreak paper using genomic surveillance to characterize and intervene in a polymicrobial MDR outbreak.",
     whyUseful: "Candidate source for healthcare-associated infection response and decision-use examples.",
     keywords: ["critical care", "MDR", "polymicrobial outbreak", "genomic surveillance", "infection control"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "mgen-stec-bioinformatics-validation-2021",
@@ -385,7 +385,7 @@ export const microbialGenomicsCollectionResources: ResourceRecord[] = [
     summary: "Bioinformatics WGS workflow validation strategy for Shiga toxin-producing E. coli using a conventionally characterized reference collection.",
     whyUseful: "Priority candidate for pipeline validation, reference collections, and change-control guidance.",
     keywords: ["STEC", "bioinformatics validation", "WGS workflow", "reference collection", "E. coli"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "mgen-gonorrhoea-wgs-amr-genogroups-2021",
@@ -404,7 +404,7 @@ export const microbialGenomicsCollectionResources: ResourceRecord[] = [
     summary: "European Neisseria gonorrhoeae WGS clustering paper linking genogroups and antimicrobial resistance.",
     whyUseful: "Candidate organism-specific source for AMR genomic clustering and surveillance.",
     keywords: ["Neisseria gonorrhoeae", "AMR", "WGS clustering", "Europe", "genogroups"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
   {
     id: "mgen-discordant-amr-predictions-2020",
@@ -422,6 +422,6 @@ export const microbialGenomicsCollectionResources: ResourceRecord[] = [
     summary: "Inter-laboratory study of discordant AMR predictions from bacterial WGS data.",
     whyUseful: "Priority candidate for AMR pipeline validation, harmonisation, and quality-risk guidance.",
     keywords: ["AMR prediction", "bioinformatics", "inter-laboratory", "discordance", "validation"],
-    sourceStatus: "candidate",
+    sourceStatus: "extracted",
   },
 ];

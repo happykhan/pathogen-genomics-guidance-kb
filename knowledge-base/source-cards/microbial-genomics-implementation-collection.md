@@ -8,7 +8,7 @@
 
 ## Status
 
-`candidate source pack; metadata indexed; extraction pending`
+`abstract-level extracted source pack; full-text extraction pending`
 
 ## Relevance
 
@@ -46,9 +46,11 @@ This collection is highly relevant to the guide because it contains applied pape
 
 - `src/data/microbialGenomicsCollection.ts`: resource-finder records for the implementation collection.
 - `src/data/resources.ts`: imports the collection records.
+- `knowledge-base/extracted-notes/microbial-genomics-implementation-collection.md`: abstract-level extracted notes.
+- `src/data/guidanceBlocks.ts`: collection papers support implementation, validation, workflow, workforce, decision-use, and maturity sections.
 
 ## Gaps
 
-- Individual articles still need full extraction before they are cited in guidance prose.
+- Individual articles still need full-text extraction before the guide uses detailed protocol steps, metrics, or numeric performance claims.
 - Two items have only preprint DOI metadata from Crossref in this pass and need publisher DOI verification.
 - No PDFs are committed. Add public `pdfUrl` values only where stable public PDF URLs are verified.
