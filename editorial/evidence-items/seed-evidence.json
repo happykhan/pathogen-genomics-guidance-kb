@@ -677,5 +677,16 @@
     "tags": ["storage", "backup", "disaster-recovery", "power", "cooling", "on-premises", "business-continuity"],
     "limitations": "The PHA4GE disaster-recovery and power/cooling notes are rough source material. This supports beta checklist questions for local infrastructure resilience, not formal facilities standards, UPS sizing rules, generator specifications, RTO/RPO targets or business-continuity policy.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-beta-costed-implementation-action-register",
+    "sourceId": "who-national-genomic-surveillance-strategy-2023",
+    "sourceLocator": "WHO 2023 national genomic surveillance strategy support tool; WHO 2024 genomics costing tool user manual; national investment case source card; economic value and costing synthesis note",
+    "evidenceType": "passage-note",
+    "excerpt": "responsible entities, implementation level, timeline, monitoring indicators and cost",
+    "passageSummary": "WHO's national strategy support tool supports developing a costed implementation plan that assigns prioritized activities to responsible entities, implementation level, timeline, monitoring indicators and cost. WHO's costing manual supplies practical cost categories including throughput, platform, personnel and training, facilities and transport, bioinformatics, storage, cloud or in-house server arrangements, maintenance and quality management. The national investment case and economic synthesis notes support making explicit assumptions about public-health benefits, system requirements, financing and transferability rather than relying on generic return-on-investment claims.",
+    "tags": ["costing", "implementation-plan", "ownership", "monitoring", "investment-case", "sustainability"],
+    "limitations": "Supports a beta action-register structure. It does not provide local salary assumptions, stock policies, procurement rules, cost-per-sample values, funding mechanisms or universal return-on-investment estimates.",
+    "reviewStatus": "reviewed"
   }
 ]

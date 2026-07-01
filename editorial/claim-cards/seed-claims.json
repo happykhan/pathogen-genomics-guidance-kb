@@ -928,5 +928,31 @@
     "confidence": "medium",
     "limitations": "Does not define formal business-continuity policy, facilities standards, UPS sizing, generator capacity, RTO/RPO targets, retention periods or legal requirements.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "claim-beta-costed-implementation-action-register",
+    "sourceId": "who-national-genomic-surveillance-strategy-2023",
+    "sourceLocator": "WHO 2023 national genomic surveillance strategy support tool; WHO 2024 genomics costing tool manual; economic value and costing synthesis note",
+    "evidenceItemIds": [
+      "evidence-beta-costed-implementation-action-register",
+      "evidence-who-costing-bioinformatics-storage-maintenance",
+      "evidence-who-costing-personnel-quality-management",
+      "evidence-beta-economic-strategy-choice"
+    ],
+    "claim": "A pathogen genomics programme should turn costing categories into a costed implementation action register that names the activity, owner, implementation level, timeline, monitoring indicator, cost category, dependency and review status.",
+    "extractedText": "WHO's national strategy support tool supports assigning prioritized activities to responsible entities, implementation level, timeline, monitoring indicators and cost. WHO's costing manual provides cost categories for throughput, platform, personnel, training, facilities, transport, bioinformatics, cloud or in-house server arrangements, storage, maintenance and quality management. Economic sources support explicit assumptions and transferability cautions rather than generic ROI claims.",
+    "notes": "Use for a director/funder-facing action register that links cost categories to ownership and monitoring.",
+    "tags": ["costing", "implementation-plan", "ownership", "monitoring", "investment-case", "sustainability"],
+    "candidateSectionIds": [
+      "workforce-sustainability-costing",
+      "implementation-patterns-case-studies",
+      "maturity-next-steps"
+    ],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "multiple",
+    "confidence": "high",
+    "limitations": "Does not provide local salary assumptions, procurement policies, numerical costs, cost-per-sample values, funding mechanisms or universal return-on-investment estimates.",
+    "reviewStatus": "reviewed"
   }
 ]

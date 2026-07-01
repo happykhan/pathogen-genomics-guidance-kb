@@ -1804,6 +1804,61 @@
     "updatedAt": "2026-07-01"
   },
   {
+    "id": "fragment-beta-costed-implementation-action-register",
+    "sectionId": "workforce-sustainability-costing",
+    "title": "Beta costed implementation action register",
+    "kind": "table",
+    "text": "Costing categories should be turned into owned implementation actions. For beta, each activity should record the public-health use case, responsible entity, implementation level, timeline, monitoring indicator, cost category, recurrent or capital status, dependency, evidence assumption, funding status and review date.",
+    "claimIds": [
+      "claim-beta-costed-implementation-action-register",
+      "claim-costing-recurrent-service-categories",
+      "claim-beta-economic-strategy-choice"
+    ],
+    "sourceIds": [
+      "who-national-genomic-surveillance-strategy-2023",
+      "who-genomics-costing-tool-manual-2024",
+      "wgs-costing-tool-2024",
+      "wgs-economic-review",
+      "genometrakr-economic-2021",
+      "national-investment-case-2025",
+      "lancet-wgs-economic-strategies-2026",
+      "pha4ge-infrastructure",
+      "east-africa-genomics-landscape-2024",
+      "asia-supply-chains-genomic-surveillance-2026",
+      "auspathogen-implementation-2025",
+      "australia-microbial-genomics-framework-2025",
+      "ukhsa-pathogen-genomics-strategy-2024"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "policy",
+        "funder",
+        "lab-lead",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "costing",
+        "sustainability",
+        "implementation-plan",
+        "monitoring",
+        "investment-case"
+      ]
+    },
+    "order": 34,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta action-register structure. It does not provide local prices, salaries, funding mechanisms, cost-per-sample values or ROI estimates.",
+    "updatedAt": "2026-07-01"
+  },
+  {
     "id": "fragment-beta-costing-scenario-templates",
     "sectionId": "workforce-sustainability-costing",
     "title": "Beta costing scenario templates",

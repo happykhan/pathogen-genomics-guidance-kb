@@ -24,7 +24,7 @@ The economic strategy also needs to be named before costing. A pilot, an outbrea
 
 Procurement and supply chains should be handled in the same sustainability frame. Stona et al. identify equipment and consumable costs, purchasing lead times, reagent resupply times, customs clearance, variable import procedures, taxes, and duties as barriers for pathogen genomic surveillance in South and Southeast Asia. These are operational risks because they affect whether a service can meet routine turnaround or surge-response needs.
 
-The dynamic guide now includes beta responsibility templates, workforce-capacity worksheets, implementation-model variants, costing-scenario tables, an economic-strategy table, and a procurement-resilience checklist. These make hidden labour, support ownership, external dependency, recurrent cost lines, local capability building, supply-chain risk, and transferability assumptions visible. They still do not provide staffing ratios, FTE calculators, salary assumptions, pathogen-specific sampling fractions, stock policies, or universally valid return-on-investment estimates.
+The dynamic guide now includes beta responsibility templates, workforce-capacity worksheets, implementation-model variants, a costed implementation action register, costing-scenario tables, an economic-strategy table, and a procurement-resilience checklist. These make hidden labour, support ownership, external dependency, recurrent cost lines, local capability building, supply-chain risk, monitoring indicators, review dates, and transferability assumptions visible. They still do not provide staffing ratios, FTE calculators, salary assumptions, pathogen-specific sampling fractions, stock policies, local funding mechanisms, or universally valid return-on-investment estimates.
 
 ## Source Basis
 
@@ -49,6 +49,7 @@ The dynamic guide now includes beta responsibility templates, workforce-capacity
 
 - Source-backed staffing ratios or FTE examples by throughput, organism focus, service model and implementation stage are still needed.
 - Quantitative local costing examples and return-on-investment assumptions remain setting-specific and need direct extraction.
+- The costed implementation action register needs local finance, HR, procurement, monitoring and governance review before it becomes an implementation plan.
 - Procurement, support, and sustainability worksheets need review against local finance, HR, procurement, and partner-support arrangements.
 - Procurement lead times, stock policies, supplier support and emergency purchasing pathways remain country- and institution-specific.
 

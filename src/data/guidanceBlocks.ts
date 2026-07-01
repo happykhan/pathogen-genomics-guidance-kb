@@ -3573,6 +3573,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "For infrastructure, the costing model should include the recurrent work that keeps the service alive: storage growth, redundancy if used, cloud processing and storage, software licences, in-house hardware renewal, maintenance fees, system administration, systems engineering, quality-management activities, and staff time for support and troubleshooting.",
       "Personnel should be costed as named workflow and support roles, not as an overhead after equipment is chosen. WHO's costing manual includes personnel and training across workflow steps, administrative and management personnel, quality and biosafety managers, laboratory directors, human resources, and quality-management activities such as accreditation, proficiency testing and certification.",
       "Procurement and supply chains should be treated as service-continuity risks. Stona et al. identify high equipment and consumable costs, long equipment purchasing lead times, long reagent resupply times, customs clearance, variable import procedures, taxes and duties as barriers for pathogen genomic surveillance in South and Southeast Asia. These risks affect turnaround, validation, response readiness, and whether a service can run when demand rises.",
+      "A budget becomes more useful when it is tied to implementation ownership. WHO's national strategy support tool supports costed implementation planning with responsible entities, implementation level, timeline, monitoring indicators and cost. For beta, convert costing categories into an action register so each funded or unfunded item has an owner, dependency, review point and evidence assumption.",
     ],
     bodySourceIds: {
       0: ["phe-case-study"],
@@ -3586,12 +3587,113 @@ export const guidanceBlocks: GuidanceBlock[] = [
         "who-genomic-surveillance-progress-2023",
         "who-genomics-costing-tool-manual-2024",
       ],
+      7: [
+        "who-national-genomic-surveillance-strategy-2023",
+        "who-genomics-costing-tool-manual-2024",
+        "national-investment-case-2025",
+        "wgs-economic-review",
+      ],
     },
     technicalDetail: [
       "Minimum recurrent infrastructure cost lines: cloud compute, cloud storage, data egress if relevant, in-house server hardware, high-performance storage, archive storage, backup storage, redundancy, software licences, maintenance fees, systems administration, systems engineering, user support, validation or revalidation time, and quality-management activities.",
       "Minimum workforce cost lines: wet-lab staff, sequencing operation, bioinformatics operation, data management, quality management, IT or security support, system administration, reporting or interpretation, user training, programme management, and cover for leave or turnover.",
+      "Minimum costed action-register fields: activity, public-health use case, owner, implementation level, timeline, monitoring indicator, cost category, recurrent or capital status, dependency, evidence assumption, funding status and review date.",
     ],
     tables: [
+      {
+        title: "Beta costed implementation action register",
+        summary:
+          "Use this to turn costing categories into owned implementation actions. It is a register structure, not a cost estimate.",
+        columns: ["Register field", "What to record", "Why it matters", "Beta caution"],
+        rows: [
+          {
+            cells: [
+              "Activity and public-health use case",
+              "The activity being costed and the use case it supports: pilot, outbreak response, routine surveillance, repository submission, national network or another defined service.",
+              "Costs are only interpretable when tied to the service the programme is trying to operate.",
+              "Do not use generic genomics cost lines without naming the use case and expected output.",
+            ],
+            sourceIds: ["who-national-genomic-surveillance-strategy-2023", "who-genomics-costing-tool-manual-2024"],
+          },
+          {
+            cells: [
+              "Responsible entity and implementation level",
+              "Owner, supporting partners, implementation level, whether the activity is local, regional, national, external or shared across programmes.",
+              "A costed plan still fails if no organisation owns delivery, monitoring and escalation.",
+              "Shared costs should not become ownerless costs.",
+            ],
+            sourceIds: [
+              "who-national-genomic-surveillance-strategy-2023",
+              "auspathogen-implementation-2025",
+              "australia-microbial-genomics-framework-2025",
+            ],
+          },
+          {
+            cells: [
+              "Cost category and recurrent status",
+              "Equipment, reagents, personnel, training, facilities, transport, bioinformatics, storage, maintenance, quality management, support or evaluation; capital, recurrent or time-limited funding.",
+              "The WHO costing manual separates practical categories and helps avoid treating equipment purchase as the whole service budget.",
+              "The beta guide does not provide local prices, salary assumptions or cost-per-sample values.",
+            ],
+            sourceIds: ["who-genomics-costing-tool-manual-2024", "wgs-costing-tool-2024"],
+          },
+          {
+            cells: [
+              "Timeline, monitoring indicator and review point",
+              "Start date, decision date, implementation milestone, monitoring indicator, review date and who decides whether the activity remains useful.",
+              "Costed activities should be monitored against service delivery and public-health usefulness, not only spending.",
+              "Indicator choice should match the local strategy; this guide does not define a universal performance dashboard.",
+            ],
+            sourceIds: [
+              "who-national-genomic-surveillance-strategy-2023",
+              "ukhsa-pathogen-genomics-strategy-2024",
+              "auspathogen-implementation-2025",
+            ],
+          },
+          {
+            cells: [
+              "Dependency and failure mode",
+              "Dependencies such as staff cover, supplier lead time, cloud permission, internet, storage growth, external sequencing, partner support or governance approval; likely failure mode if unfunded.",
+              "Budget decisions should show which service risk is being reduced and what remains fragile.",
+              "A funded line item does not remove operational risk if the dependency is unmanaged.",
+            ],
+            sourceIds: [
+              "pha4ge-infrastructure",
+              "east-africa-genomics-landscape-2024",
+              "asia-supply-chains-genomic-surveillance-2026",
+            ],
+          },
+          {
+            cells: [
+              "Evidence assumption and transferability",
+              "Which source or local data supports the value claim, whether evidence is pathogen- or setting-specific, and what should not be generalized.",
+              "Economic sources are supportive but heterogeneous; the investment case needs explicit assumptions.",
+              "Do not turn one setting's benefit estimate into a universal return-on-investment claim.",
+            ],
+            sourceIds: [
+              "wgs-economic-review",
+              "genometrakr-economic-2021",
+              "national-investment-case-2025",
+              "lancet-wgs-economic-strategies-2026",
+            ],
+          },
+        ],
+        sourceIds: [
+          "who-national-genomic-surveillance-strategy-2023",
+          "who-genomics-costing-tool-manual-2024",
+          "wgs-costing-tool-2024",
+          "wgs-economic-review",
+          "genometrakr-economic-2021",
+          "national-investment-case-2025",
+          "lancet-wgs-economic-strategies-2026",
+          "pha4ge-infrastructure",
+          "east-africa-genomics-landscape-2024",
+          "asia-supply-chains-genomic-surveillance-2026",
+          "auspathogen-implementation-2025",
+          "australia-microbial-genomics-framework-2025",
+          "ukhsa-pathogen-genomics-strategy-2024",
+        ],
+      },
       {
         title: "Beta costing and implementation scenario templates",
         summary:
@@ -3789,10 +3891,13 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "asia-supply-chains-genomic-surveillance-2026",
       "aphl-ngs-implementation-2016",
       "mgen-california-covidnet-2023",
+      "national-investment-case-2025",
+      "ukhsa-pathogen-genomics-strategy-2024",
     ],
     gaps: [
       "A setting-specific quantitative extraction is still needed before making general return-on-investment claims across pathogens and countries.",
       "The scenario templates still need local quantitative examples with throughput, staffing, procurement and recurrent-cost assumptions by service model.",
+      "The costed action register still needs local finance, HR, procurement, monitoring and governance review before it can become an implementation plan.",
       "The procurement-resilience checklist still needs country-specific procurement rules, stock policies, lead-time assumptions, vendor-support arrangements and emergency purchasing pathways.",
     ],
   },
