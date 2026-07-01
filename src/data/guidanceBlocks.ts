@@ -120,21 +120,23 @@ export const guidanceBlocks: GuidanceBlock[] = [
   },
   {
     id: "framing-public-health-use",
-    title: "Start from the public-health decision",
+    title: "Move from research projects to routine service",
     summary:
-      "Pathogen genomics infrastructure should be planned around the decisions it supports, not around sequencing output alone.",
+      "Pathogen genomics infrastructure should be planned as a prospective service that supports decisions repeatedly, not as a one-off analysis project.",
     sourceStatus: "reviewed",
     body: [
       "A sequencing programme is useful when it helps public-health teams detect outbreaks, rule cases in or out of clusters, monitor resistance, track pathogen evolution, or report results faster. The analysis pipeline is part of a larger decision system.",
+      "Much pathogen genomics capability starts through academic, retrospective, or outbreak-specific project work. That model is valuable for method development and investigation, but it is not the same as a routine public-health service. A service has to receive work continuously, handle failed or delayed samples, release results through agreed routes, preserve records, and support repeated reanalysis over weeks, months, and years.",
       "Before selecting infrastructure, define the services the programme must support: routine surveillance, outbreak response, AMR monitoring, national reporting, international sharing, or research support. Each use case implies different needs for speed, quality, data integration, governance, and sustainability.",
       "The first design question is therefore not which sequencing platform, cloud provider, or workflow engine to buy. The first question is what decision will change because genomic information is available, who will act on that decision, and how quickly they need a result they can trust.",
       "For an early programme, a narrow and well-defined use case is often more useful than a broad infrastructure ambition. WHO recommends describing the role of genomic surveillance for each public-health priority, including objectives, data users, how those users will analyse or act on the data, and the intended outcome. A service designed for weekly surveillance has different failure modes from one designed for urgent outbreak investigation, and both differ from a research-facing platform that prioritises flexibility.",
     ],
     bodySourceIds: {
       0: ["who-national-genomic-surveillance-strategy-2023", "cdc-nejm-2019"],
-      1: ["who-national-genomic-surveillance-strategy-2023", "phe-case-study"],
-      2: ["who-national-genomic-surveillance-strategy-2023", "pha4ge-infrastructure"],
+      1: ["phe-case-study", "who-national-genomic-surveillance-strategy-2023"],
+      2: ["who-national-genomic-surveillance-strategy-2023", "phe-case-study"],
       3: ["who-national-genomic-surveillance-strategy-2023", "pha4ge-infrastructure"],
+      4: ["who-national-genomic-surveillance-strategy-2023", "pha4ge-infrastructure"],
     },
     audiences: ["director", "policy", "lab-lead", "bioinformatician", "data-manager", "all"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
@@ -191,16 +193,16 @@ export const guidanceBlocks: GuidanceBlock[] = [
   },
   {
     id: "infrastructure-operating-model",
-    title: "Treat infrastructure as an operating model",
+    title: "Define the service operating model",
     summary:
-      "Compute infrastructure is not only CPUs and storage. It includes workflows, data movement, access, monitoring, support, and responsibility.",
+      "Infrastructure choices define who is responsible for workflows, data movement, access, monitoring, support, and recovery when the service fails.",
     sourceStatus: "reviewed",
     body: [
       "The PHA4GE infrastructure framing asks five questions: what the infrastructure solves, how analysis is run, where analysis is run, how data flow, and who has access. These questions separate responsibility from technology.",
       "A programme can use local servers, institutional HPC, cloud platforms, laptops, or a managed service. The central implementation question is who operates each layer, who validates analysis, who supports users, and who carries the risk when service delivery fails.",
       "The PHE case study shows why this matters in practice. Implementing WGS required capital planning, laboratory-space changes, sequencing and robotics capacity, IT infrastructure, LIMS integration, bioinformatics pipelines, validation, accreditation, training, and service-user engagement. None of those requirements is captured by a server specification alone.",
       "The Microbial Genomics implementation papers reinforce the same point from public-health practice: California COVIDNet paired cloud-based bioinformatics with more than 40 sequencing laboratories, open-source workflows, training, and automated data transfer; the bioinformatics implementation paper argues for standardized, reproducible, validated, auditable, scalable, portable, and secure analysis within laboratory operating constraints.",
-      "A useful operating model names the service owner, laboratory owner, bioinformatics owner, IT owner, data-governance owner, and user-support route. It should also make clear which responsibilities are delegated to institutional IT, external providers, national platforms, or managed services.",
+      "A useful operating model names the service owner, laboratory owner, bioinformatics owner, IT owner, data-governance owner, and user-support route. It should also make clear which responsibilities are delegated to institutional IT, external providers, national platforms, or managed services, and what happens when a sample, run, workflow, network connection, repository submission, or report fails.",
     ],
     bodySourceIds: {
       0: ["pha4ge-infrastructure"],
@@ -246,21 +248,23 @@ export const guidanceBlocks: GuidanceBlock[] = [
   },
   {
     id: "data-lifecycle-sample-to-report",
-    title: "Design the sample-to-report data lifecycle",
+    title: "Build a sample-to-decision data service",
     summary:
-      "A genomics service must connect samples, metadata, sequence data, analysis, reports, sharing, and archives.",
+      "A genomics service must maintain a reliable data asset that connects samples, metadata, QC, sequence data, analysis, reports, sharing, storage, and later reuse.",
     sourceStatus: "partial",
     body: [
-      "A sequencing programme is not only producing FASTQ files. It receives samples or isolates, links them to metadata, generates sequence data, checks quality, runs analysis, interprets outputs, produces reports, shares selected data, stores records, and decides what should be archived or deleted.",
+      "A sequencing programme is not only producing FASTQ files or a final report. It receives samples or isolates, links them to metadata, generates sequence data, checks quality, runs analysis, interprets outputs, produces reports, shares selected data, stores records, and decides what should be archived or deleted.",
       "The WHO national strategy support tool provides a general value-chain frame: establish priority use cases, collect samples and metadata, extract genetic material, sequence, run bioinformatics analysis, interpret with multisource data, publish or share data, and return results for public-health analysis. The PHE case study gives a concrete service example: extracted DNA entered a central sequencing service, robotic processes checked quality and prepared libraries, sample information was captured through LIMS, sequence data were stored and analysed on IT and bioinformatics infrastructure, and outputs were combined with LIMS data to produce reports.",
-      "That lifecycle is partly technical and partly organisational. The programme needs a route for sample receipt, metadata capture, sequencing, raw-data storage, workflow execution, interpretation, reporting, data sharing, and long-term record keeping. It also needs named routes for failed samples, failed sequencing runs, low-quality data, unexpected organisms, and ambiguous outputs.",
-      "The lifecycle should be designed around use cases, not files. A national surveillance use case may need sampling representativeness, routine reporting and public repository submission. An outbreak use case may need faster analysis, tighter operational sharing and stronger incident review. A research support use case may need more flexible workflows but clearer boundaries around what is not yet validated for public-health action.",
+      "That lifecycle is partly technical and partly organisational. The programme needs a route for sample receipt, metadata capture, sequencing, raw-data storage, workflow execution, interpretation, reporting, data sharing, and long-term record keeping. It also needs named routes for failed samples, failed sequencing runs, low-quality data, unexpected organisms, ambiguous outputs, repository-submission errors, and corrected reports.",
+      "The lifecycle should be designed around use cases, not files. A national surveillance use case may need sampling representativeness, routine reporting, repository submission, and trend analysis over months or years. An outbreak use case may need faster analysis, tighter operational sharing, and incident review. A research support use case may need more flexible workflows but clearer boundaries around what is not yet validated for public-health action.",
+      "The practical design target is a data asset that can safely feed different products: urgent alerts, sample-level reports, weekly service summaries, monthly or quarterly trend reports, annual reviews, public repository submissions, quality dashboards, and reanalysis when methods or public-health questions change.",
     ],
     bodySourceIds: {
       0: ["who-national-genomic-surveillance-strategy-2023", "phe-case-study"],
       1: ["who-national-genomic-surveillance-strategy-2023", "phe-case-study"],
       2: ["who-national-genomic-surveillance-strategy-2023", "pha4ge-infrastructure"],
       3: ["who-national-genomic-surveillance-strategy-2023", "phe-case-study"],
+      4: ["who-national-genomic-surveillance-strategy-2023", "phe-case-study", "pha4ge-infrastructure"],
     },
     technicalDetail: [
       "At minimum, track the sample or isolate identifier, sequencing run, raw data, QC outputs, workflow run, final result, report, and sharing or repository event. A formal field model still needs source extraction.",

@@ -15,19 +15,19 @@ export const whitepaperOutline: WhitepaperOutlineSection[] = [
   {
     id: "framing-public-health-use",
     order: 20,
-    title: "Start from the public-health decision",
+    title: "Move from research projects to routine service",
     purpose:
-      "Anchor infrastructure decisions in the surveillance, outbreak, reporting, or response decisions the service must support.",
-    expectedFragments: ["decision-first-framing", "use-case-selection", "decision-latency"],
+      "Explain the difference between retrospective project analysis and a prospective public-health service that must run continuously, handle failure, and support decisions on time.",
+    expectedFragments: ["research-to-service-framing", "decision-first-framing", "decision-latency"],
     publicByDefault: true,
   },
   {
     id: "data-lifecycle-sample-to-report",
     order: 30,
-    title: "Design the sample-to-report data lifecycle",
+    title: "Build a sample-to-decision data service",
     purpose:
-      "Describe the operational chain from sample or isolate receipt through metadata, sequence data, analysis, reporting, sharing, and retention.",
-    expectedFragments: ["core-lifecycle", "identifier-lineage", "organism-variants"],
+      "Describe the operational data asset created by a genomic surveillance service: sample records, metadata, sequence data, QC, workflow runs, reports, sharing events, stored records, and feedback loops.",
+    expectedFragments: ["core-data-service-lifecycle", "identifier-lineage", "failure-and-feedback-routes", "organism-variants"],
     publicByDefault: true,
   },
   {
@@ -51,9 +51,9 @@ export const whitepaperOutline: WhitepaperOutlineSection[] = [
   {
     id: "infrastructure-operating-model",
     order: 60,
-    title: "Treat infrastructure as an operating model",
+    title: "Define the service operating model",
     purpose:
-      "Show that compute infrastructure includes responsibilities, access, support, validation, monitoring, and failure ownership.",
+      "Show that infrastructure choices define responsibilities: who operates compute, workflows, storage, access, validation, monitoring, support, and recovery when the service fails.",
     expectedFragments: ["responsibility-model", "cloud-local-hybrid", "support-model"],
     publicByDefault: true,
   },

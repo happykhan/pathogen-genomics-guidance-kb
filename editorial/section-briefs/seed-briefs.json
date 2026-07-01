@@ -35,10 +35,11 @@
   {
     "id": "brief-infrastructure-operating-model",
     "sectionId": "infrastructure-operating-model",
-    "purpose": "Make readers treat infrastructure as a set of responsibilities and service dependencies, not a purchase list.",
+    "purpose": "Make readers define how the genomic surveillance service will be operated, supported, monitored, and recovered, rather than treating infrastructure as a purchase list.",
     "readerActionAfterReading": "Name who owns workflows, compute, storage, identity, validation, monitoring, support, and failure recovery.",
     "mustCover": [
       "Cloud/local/HPC/managed platform choices are responsibility models.",
+      "A routine service needs routes for failed samples, failed runs, ambiguous analysis, delayed reporting, and service interruption.",
       "Service implementation includes LIMS, validation, accreditation, reporting, staff, and user engagement.",
       "Constraints such as internet reliability, staff availability, IT support, and data residency should change recommendations."
     ],
@@ -70,11 +71,13 @@
   {
     "id": "brief-data-lifecycle",
     "sectionId": "data-lifecycle-sample-to-report",
-    "purpose": "Explain the complete operational lifecycle so teams do not optimize only sequencing or analysis.",
-    "readerActionAfterReading": "Map sample receipt, metadata capture, sequence generation, QC, workflow execution, interpretation, reporting, sharing, storage, and retention.",
+    "purpose": "Explain the complete operational data service so teams do not optimize only sequencing, one pipeline run, or one final report.",
+    "readerActionAfterReading": "Map sample receipt, metadata capture, sequence generation, QC, workflow execution, interpretation, reporting products, sharing routes, storage, retention, and feedback loops.",
     "mustCover": [
-      "A service handles records and decisions, not just FASTQ files.",
+      "A routine service maintains a reliable data asset, not just FASTQ files or a single report.",
       "Sample and metadata linkage must survive handoffs.",
+      "The service must handle failed samples, failed runs, low-quality data, unexpected organisms, and ambiguous outputs in real time.",
+      "Different users may need different outputs from the same data pool: urgent alerts, weekly reports, monthly summaries, annual trend analysis, repository submissions, and quality dashboards.",
       "Use cases change turnaround time, sharing, QC, and retention needs."
     ],
     "doNotClaim": [

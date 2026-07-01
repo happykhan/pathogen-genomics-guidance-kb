@@ -36,7 +36,7 @@
     },
     "order": 10,
     "reviewStatus": "draft",
-    "reviewerNotes": "Good candidate for public opening, but check whether this duplicates current public prose too closely.",
+    "reviewerNotes": "Good candidate for public opening, but keep draft until claim-who-strategy-integrated-surveillance is backed by reviewed source-text evidence.",
     "updatedAt": "2026-07-01"
   },
   {
@@ -70,7 +70,7 @@
     },
     "order": 20,
     "reviewStatus": "draft",
-    "reviewerNotes": "Keep as a director-facing paragraph after source review.",
+    "reviewerNotes": "Keep as a director-facing paragraph after source review. Needs reviewed economic-review claim before approval.",
     "updatedAt": "2026-07-01"
   },
   {
@@ -130,7 +130,7 @@
     },
     "order": 20,
     "reviewStatus": "draft",
-    "reviewerNotes": "Needs review for strength of recommendation and source coverage.",
+    "reviewerNotes": "Needs review for strength of recommendation and source coverage. Do not approve until the bioinformatics implementation claim is source-text backed.",
     "updatedAt": "2026-07-01"
   },
   {
