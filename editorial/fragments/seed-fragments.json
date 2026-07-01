@@ -1599,5 +1599,58 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is a responsibility variant table, not a staffing ratio or procurement recommendation.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-constraint-response-matrix",
+    "sectionId": "implementation-patterns-case-studies",
+    "title": "Beta constraint-response matrix",
+    "kind": "table",
+    "text": "Use wizard constraints as prompts for implementation risk, not as an automatic platform choice. Unreliable internet, limited bioinformatics staffing, weak central IT, missing LIMS, cloud restrictions and external-support dependence should raise specific fallback, ownership, metadata and sustainability questions.",
+    "claimIds": [
+      "claim-beta-implementation-dependency-matrix",
+      "claim-maturity-risk-reduction",
+      "claim-beta-workforce-responsibility-template",
+      "claim-storage-backup-retention-policy"
+    ],
+    "sourceIds": [
+      "pha4ge-infrastructure",
+      "clinical-microbiology-implementation-2026",
+      "east-africa-genomics-landscape-2024",
+      "who-genomics-costing-tool-manual-2024",
+      "who-genomic-data-sharing-platforms-2025",
+      "who-national-genomic-surveillance-strategy-2023",
+      "auspathogen-implementation-2025"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "policy",
+        "funder",
+        "lab-lead",
+        "bioinformatician",
+        "it-security",
+        "data-manager",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "implementation",
+        "infrastructure",
+        "constraints",
+        "maturity",
+        "sustainability"
+      ]
+    },
+    "order": 51,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This maps beta wizard constraints to planning questions. It is not a validated scoring rule.",
+    "updatedAt": "2026-07-01"
   }
 ]

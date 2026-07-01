@@ -2225,6 +2225,92 @@ export const guidanceBlocks: GuidanceBlock[] = [
           "east-africa-genomics-landscape-2024",
         ],
       },
+      {
+        title: "Beta constraint-response matrix",
+        summary:
+          "Use this table with the wizard profile. A constraint should raise ownership and fallback questions; it should not automatically select one platform.",
+        columns: ["Constraint signal", "Guidance to raise", "Implementation question", "Source-backed caution"],
+        rows: [
+          {
+            cells: [
+              "Reliable internet is absent or uncertain",
+              "Prioritise local, offline-capable, hybrid, or staged-upload designs and make data-transfer routes explicit.",
+              "What can be run, reviewed, stored and reported when external connectivity is unavailable?",
+              "Cloud or platform models depend on upload capacity and provider access even when they reduce local hardware burden.",
+            ],
+            sourceIds: ["pha4ge-infrastructure", "east-africa-genomics-landscape-2024"],
+          },
+          {
+            cells: [
+              "Bioinformatics staffing is limited",
+              "Raise managed-platform, central service, external support, training, documentation, and narrowed validated-workflow options.",
+              "Which responsibilities remain local, and how will local interpretation and troubleshooting capacity be built?",
+              "External analysis can help capacity building, but long-term dependence can delay decisions and limit local interpretation.",
+            ],
+            sourceIds: [
+              "clinical-microbiology-implementation-2026",
+              "east-africa-genomics-landscape-2024",
+              "who-genomic-surveillance-progress-2023",
+            ],
+          },
+          {
+            cells: [
+              "Central IT support is weak",
+              "Raise sustainability, security, backup, access-review, maintenance, and support-route questions before selecting local servers or HPC.",
+              "Who maintains systems, reviews access, restores data, patches software, and responds when infrastructure fails?",
+              "Infrastructure is an operating model, not only CPU cores and storage.",
+            ],
+            sourceIds: ["pha4ge-infrastructure", "who-genomics-costing-tool-manual-2024"],
+          },
+          {
+            cells: [
+              "LIMS or sample system is absent",
+              "Raise metadata lineage, accession tracking, correction history, and manual handoff controls.",
+              "How will sample, metadata, sequencing run, QC, workflow, report and repository records stay linked?",
+              "Useful genomic data depend on stable linkage to metadata and provenance.",
+            ],
+            sourceIds: [
+              "who-genomic-data-sharing-platforms-2025",
+              "aphl-ngs-implementation-2016",
+              "phe-case-study",
+            ],
+          },
+          {
+            cells: [
+              "Cloud is not allowed or data residency is a concern",
+              "Raise local, institutional, national-platform, controlled-access, or hybrid patterns and require explicit data-hosting decisions.",
+              "Which data types may leave the organisation or jurisdiction, and which must remain local or controlled?",
+              "Platform choice must account for governance, access, security, data use and benefit-sharing.",
+            ],
+            sourceIds: ["who-genomic-data-sharing-platforms-2025", "who-pathogen-genome-data-sharing-2022"],
+          },
+          {
+            cells: [
+              "External support is central to delivery",
+              "Raise transition planning, local capability building, data access, interpretation ownership, turnaround and sustainability.",
+              "Which external dependency is temporary support, and which dependency is a permanent service risk?",
+              "External support should be managed as a dependency rather than hidden inside the service model.",
+            ],
+            sourceIds: [
+              "east-africa-genomics-landscape-2024",
+              "auspathogen-implementation-2025",
+              "who-genomic-surveillance-progress-2023",
+            ],
+          },
+        ],
+        sourceIds: [
+          "pha4ge-infrastructure",
+          "clinical-microbiology-implementation-2026",
+          "east-africa-genomics-landscape-2024",
+          "who-genomics-costing-tool-manual-2024",
+          "who-genomic-data-sharing-platforms-2025",
+          "who-pathogen-genome-data-sharing-2022",
+          "who-genomic-surveillance-progress-2023",
+          "aphl-ngs-implementation-2016",
+          "phe-case-study",
+          "auspathogen-implementation-2025",
+        ],
+      },
     ],
     audiences: ["director", "policy", "lab-lead", "bioinformatician", "it-security", "funder", "data-manager"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
@@ -2249,8 +2335,14 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "mgen-kenya-amr-genomics-capacity-2023",
       "mgen-eurl-wgs-rollout-europe-2023",
       "mgen-california-covidnet-2023",
+      "who-genomics-costing-tool-manual-2024",
+      "who-genomic-data-sharing-platforms-2025",
+      "who-pathogen-genome-data-sharing-2022",
+      "who-genomic-surveillance-progress-2023",
+      "aphl-ngs-implementation-2016",
+      "phe-case-study",
     ],
-    gaps: ["The beta dependency matrix still needs testing against the wizard constraint scenarios and review against real implementation examples."],
+    gaps: ["The beta dependency and constraint matrices still need review against real implementation examples and user testing with programme teams."],
   },
   {
     id: "maturity-next-steps",
