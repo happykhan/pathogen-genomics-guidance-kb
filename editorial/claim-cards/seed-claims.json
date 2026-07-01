@@ -475,5 +475,35 @@
     "confidence": "high",
     "limitations": "Specific organism thresholds and report templates still need current pathogen-specific sources.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "claim-lifecycle-service-loop",
+    "sourceId": "phe-case-study",
+    "sourceLocator": "PHE case study; APHL 2016 implementation guide; WHO 2023 national strategy support tool",
+    "evidenceItemIds": [
+      "evidence-phe-end-to-end-service",
+      "evidence-phe-routine-throughput-failure-feedback",
+      "evidence-aphl-multiday-workflow-lims-accessions",
+      "evidence-who-2023-feedback-data-management-action",
+      "evidence-who-2023-data-management",
+      "evidence-who-2025-metadata-provenance-interoperability"
+    ],
+    "claim": "A sample-to-report lifecycle should be operated as a monitored service loop with planned routes for routine throughput, failures, repeated analysis, reporting, sharing, feedback and later reuse.",
+    "extractedText": "PHE describes routine scheduled throughput, LIMS-linked sequencing, storage, analysis, final reports, costs of sample issues or sequencing failure, troubleshooting, unexpected samples, validation and quality parameters. APHL describes NGS as multi-step and multi-day, recommends LIMS tracking across parallel conventional and NGS workflows, and links repository submissions to BioSample and SRA accession tracking. WHO adds timely feedback mechanisms linked to public-health action and national data-management protocols across storage, analysis, reporting and sharing.",
+    "notes": "Use to make the lifecycle section more like a service model with exceptions and feedback, not a linear diagram.",
+    "tags": ["data-lifecycle", "service-loop", "lims", "feedback", "failure-handling", "repository"],
+    "candidateSectionIds": [
+      "framing-public-health-use",
+      "use-case-service-model",
+      "data-lifecycle-sample-to-report",
+      "metadata-identifier-lineage",
+      "quality-validation-before-switch"
+    ],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "multiple",
+    "confidence": "high",
+    "limitations": "Does not define a complete field dictionary, dashboard specification, or service-level agreement.",
+    "reviewStatus": "reviewed"
   }
 ]

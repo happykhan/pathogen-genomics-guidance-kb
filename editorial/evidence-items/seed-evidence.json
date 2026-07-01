@@ -446,5 +446,38 @@
     "tags": ["tb", "respiratory-viruses", "amr", "reporting", "phenotype-prediction", "decision-use"],
     "limitations": "Review source; organism-specific public-health services still need current national or pathogen-specific guidance.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-phe-routine-throughput-failure-feedback",
+    "sourceId": "phe-case-study",
+    "sourceLocator": "PHE case study, sections 2.3, 3.1, 3.3 and 3.4",
+    "evidenceType": "short-excerpt",
+    "excerpt": "600-700 bacterial samples per week, on a routine basis, to a specified schedule",
+    "passageSummary": "The PHE case study describes a routine scheduled WGS service processing 600 to 700 bacterial samples per week, with DNA samples moving through robotics, sequencing, LIMS, IT storage, bioinformatics analysis and final reporting. Planning included costs associated with sample issues or sequencing failure, user sample-quality processes, anticipated sample numbers, turnaround requirements, report format, troubleshooting guides, unexpected or unusual samples, validation, and quality parameters across the whole WGS-based typing process.",
+    "tags": ["routine-service", "throughput", "lims", "failure-handling", "turnaround", "validation"],
+    "limitations": "Centralised UK enteric service example; throughput and schedule should not be generalised.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-aphl-multiday-workflow-lims-accessions",
+    "sourceId": "aphl-ngs-implementation-2016",
+    "sourceLocator": "APHL 2016 Next Generation Sequencing Implementation Guide, workflow and NCBI submission chapters",
+    "evidenceType": "short-excerpt",
+    "excerpt": "NGS is a multi-step and multi-day process",
+    "passageSummary": "APHL describes NGS as a multi-step, multi-day process with opportunities for error across nucleic-acid isolation, library preparation, sequencing and analysis. It recommends allowing time for troubleshooting and staff training, keeping conventional and NGS methods trackable in LIMS during parallel workflows, submitting raw reads and limited metadata to NCBI after initial quality checks, and tracking BioSample and SRA accession numbers.",
+    "tags": ["workflow", "lims", "parallel-running", "repository", "accessions", "troubleshooting"],
+    "limitations": "2016 public-health laboratory guide with PulseNet emphasis; implementation details should be checked against current repository workflows.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-who-2023-feedback-data-management-action",
+    "sourceId": "who-national-genomic-surveillance-strategy-2023",
+    "sourceLocator": "WHO 2023 national genomic surveillance strategy support tool, sections 3.3, 3.4 and 2.4",
+    "evidenceType": "short-excerpt",
+    "excerpt": "timely feedback mechanisms to ensure links to public health action",
+    "passageSummary": "WHO's national strategy support tool says genomic surveillance strategy should include sustainable laboratory sample and data management, quality and biosafety assessment, agreements for data sharing, timely feedback mechanisms linked to public-health action, expected turnaround times, and national data-management protocols for data quality and sharing across storage, analysis, reporting and sharing.",
+    "tags": ["feedback", "data-management", "public-health-action", "turnaround", "quality", "sharing"],
+    "limitations": "Strategy-level guidance; does not define a local service dashboard or feedback-template format.",
+    "reviewStatus": "reviewed"
   }
 ]

@@ -762,5 +762,49 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "Specific reporting templates remain unapproved until more pathogen-specific guidance is extracted.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-lifecycle-service-loop",
+    "sectionId": "data-lifecycle-sample-to-report",
+    "title": "Lifecycle as service loop",
+    "kind": "paragraph",
+    "text": "The sample-to-report lifecycle should be run as a service loop, not drawn as a straight line. Routine throughput, failed samples, low-quality runs, delayed reports, corrected results, repository submissions, accession updates, user feedback, and later reanalysis all need a recorded route through the same data asset.",
+    "claimIds": [
+      "claim-lifecycle-service-loop",
+      "claim-metadata-identifier-lineage-core"
+    ],
+    "sourceIds": [
+      "phe-case-study",
+      "aphl-ngs-implementation-2016",
+      "who-national-genomic-surveillance-strategy-2023",
+      "who-genomic-data-sharing-platforms-2025"
+    ],
+    "conditions": {
+      "audiences": [
+        "lab-lead",
+        "bioinformatician",
+        "data-manager",
+        "it-security",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "data-lifecycle",
+        "lims",
+        "feedback",
+        "quality",
+        "repository"
+      ]
+    },
+    "order": 30,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "Dashboard and field dictionary remain gaps.",
+    "updatedAt": "2026-07-01"
   }
 ]
