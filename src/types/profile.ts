@@ -57,21 +57,7 @@ export type Profile = {
   };
 };
 
-export const defaultProfile: Profile = {
-  role: "mixed",
-  stage: "exploring",
-  organisms: ["general"],
-  infrastructure: "unknown",
-  goals: ["design-infrastructure"],
-  constraints: {
-    internetReliable: null,
-    bioinformaticsStaff: null,
-    centralIT: null,
-    lims: null,
-    cloudAllowed: null,
-    dataResidencyConcern: null,
-  },
-};
+export { defaultProfile, defaultProfileVersion } from "../data/defaultProfile";
 
 export type Audience = UserRole | "all";
 export type DetailLevel = "summary" | "operational" | "technical" | "governance";

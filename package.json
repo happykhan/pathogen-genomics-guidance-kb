@@ -9,7 +9,8 @@
     "preview": "next start",
     "content:check": "node scripts/validate-content.mjs",
     "qa:scenarios": "node scripts/qa-scenarios.mjs",
-    "pubmed:discover": "node scripts/pubmed-discover.mjs"
+    "pubmed:discover": "node scripts/pubmed-discover.mjs",
+    "editorial:review": "node scripts/editorial-review-server.mjs"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.19",

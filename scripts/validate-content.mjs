@@ -1,4 +1,5 @@
 import { existsSync, readFileSync } from "node:fs";
+import { readdirSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -38,6 +39,32 @@ function loadResources() {
   return Function("microbialGenomicsCollectionResources", source)(microbialGenomicsCollectionResources);
 }
 
+function loadWhitepaperOutline() {
+  const source = read("src/data/whitepaperOutline.ts")
+    .replace(/import type \{ WhitepaperOutlineSection \} from "\.\.\/types\/editorial";\n\n/, "")
+    .replace(/export const whitepaperOutlineVersion = .*;\n\n/, "")
+    .replace(/export const whitepaperOutline: WhitepaperOutlineSection\[] =/, "const whitepaperOutline =")
+    .replace(/;\s*$/, ";\nreturn whitepaperOutline;");
+  return Function(source)();
+}
+
+function readJsonRecords(relativeDir) {
+  const directory = path.join(repoRoot, relativeDir);
+  if (!existsSync(directory)) return [];
+  return readdirSync(directory)
+    .filter((file) => file.endsWith(".json"))
+    .sort()
+    .flatMap((file) => {
+      const relativePath = path.join(relativeDir, file);
+      const parsed = JSON.parse(read(relativePath));
+      if (!Array.isArray(parsed)) {
+        errors.push(`Editorial JSON file ${relativePath} must contain an array.`);
+        return [];
+      }
+      return parsed.map((record) => ({ ...record, __path: relativePath }));
+    });
+}
+
 function collectSourceIds(value, activeKey = "", output = new Set()) {
   if (Array.isArray(value)) {
     if (activeKey.endsWith("SourceIds") || activeKey === "sourceIds") {
@@ -59,9 +86,12 @@ function collectSourceIds(value, activeKey = "", output = new Set()) {
 const sources = loadSources();
 const guidanceBlocks = loadGuidanceBlocks();
 const resources = loadResources();
+const whitepaperOutline = loadWhitepaperOutline();
 const sourceIds = new Set(Object.keys(sources));
+const outlineSectionIds = new Set(whitepaperOutline.map((section) => section.id));
 const validStatuses = new Set(["reviewed", "partial", "gap"]);
 const validResourceStatuses = new Set(["extracted", "candidate"]);
+const validEditorialStatuses = new Set(["draft", "reviewed", "gap", "deprecated"]);
 const errors = [];
 const seenResourceIds = new Set();
 
@@ -133,6 +163,118 @@ resources.forEach((resource) => {
   }
 });
 
+const claimCards = readJsonRecords("editorial/claim-cards");
+const sectionBriefs = readJsonRecords("editorial/section-briefs");
+const fragments = readJsonRecords("editorial/fragments");
+const claimIds = new Set();
+const fragmentIds = new Set();
+
+function assertNoLocalPaths(record, label) {
+  const serialized = JSON.stringify(record);
+  if (serialized.includes("/Users/")) {
+    errors.push(`${label} exposes a local /Users/ path.`);
+  }
+}
+
+whitepaperOutline.forEach((section) => {
+  if (!section.id || !section.title || typeof section.order !== "number") {
+    errors.push(`Whitepaper outline section ${section.id ?? "(missing id)"} must include id, title, and numeric order.`);
+  }
+});
+
+claimCards.forEach((claim) => {
+  assertNoLocalPaths(claim, `Claim card ${claim.id ?? "(missing id)"}`);
+
+  if (!claim.id || !claim.sourceId || !claim.claim || !Array.isArray(claim.candidateSectionIds)) {
+    errors.push(`Claim card ${claim.id ?? "(missing id)"} must include id, sourceId, claim, and candidateSectionIds.`);
+    return;
+  }
+
+  if (claimIds.has(claim.id)) {
+    errors.push(`Claim card ID is duplicated: ${claim.id}`);
+  }
+  claimIds.add(claim.id);
+
+  if (!sourceIds.has(claim.sourceId)) {
+    errors.push(`Claim card ${claim.id} references unknown source ID: ${claim.sourceId}`);
+  }
+
+  if (!validEditorialStatuses.has(claim.reviewStatus)) {
+    errors.push(`Claim card ${claim.id} has invalid reviewStatus: ${claim.reviewStatus}`);
+  }
+
+  claim.candidateSectionIds.forEach((sectionId) => {
+    if (!outlineSectionIds.has(sectionId)) {
+      errors.push(`Claim card ${claim.id} references unknown outline section: ${sectionId}`);
+    }
+  });
+});
+
+sectionBriefs.forEach((brief) => {
+  assertNoLocalPaths(brief, `Section brief ${brief.id ?? "(missing id)"}`);
+
+  if (!brief.id || !brief.sectionId || !brief.purpose) {
+    errors.push(`Section brief ${brief.id ?? "(missing id)"} must include id, sectionId, and purpose.`);
+    return;
+  }
+
+  if (!outlineSectionIds.has(brief.sectionId)) {
+    errors.push(`Section brief ${brief.id} references unknown outline section: ${brief.sectionId}`);
+  }
+
+  if (!validEditorialStatuses.has(brief.reviewStatus)) {
+    errors.push(`Section brief ${brief.id} has invalid reviewStatus: ${brief.reviewStatus}`);
+  }
+
+  (brief.preferredClaimIds ?? []).forEach((claimId) => {
+    if (!claimIds.has(claimId)) {
+      errors.push(`Section brief ${brief.id} references unknown claim ID: ${claimId}`);
+    }
+  });
+});
+
+fragments.forEach((fragment) => {
+  assertNoLocalPaths(fragment, `Whitepaper fragment ${fragment.id ?? "(missing id)"}`);
+
+  if (!fragment.id || !fragment.sectionId || !fragment.kind || !fragment.text) {
+    errors.push(`Whitepaper fragment ${fragment.id ?? "(missing id)"} must include id, sectionId, kind, and text.`);
+    return;
+  }
+
+  if (fragmentIds.has(fragment.id)) {
+    errors.push(`Whitepaper fragment ID is duplicated: ${fragment.id}`);
+  }
+  fragmentIds.add(fragment.id);
+
+  if (!outlineSectionIds.has(fragment.sectionId)) {
+    errors.push(`Whitepaper fragment ${fragment.id} references unknown outline section: ${fragment.sectionId}`);
+  }
+
+  if (!validEditorialStatuses.has(fragment.reviewStatus)) {
+    errors.push(`Whitepaper fragment ${fragment.id} has invalid reviewStatus: ${fragment.reviewStatus}`);
+  }
+
+  if (!Array.isArray(fragment.claimIds) || !fragment.claimIds.length) {
+    errors.push(`Whitepaper fragment ${fragment.id} must include at least one claimId.`);
+  } else {
+    fragment.claimIds.forEach((claimId) => {
+      if (!claimIds.has(claimId)) {
+        errors.push(`Whitepaper fragment ${fragment.id} references unknown claim ID: ${claimId}`);
+      }
+    });
+  }
+
+  if (!Array.isArray(fragment.sourceIds) || !fragment.sourceIds.length) {
+    errors.push(`Whitepaper fragment ${fragment.id} must include at least one sourceId.`);
+  } else {
+    fragment.sourceIds.forEach((sourceId) => {
+      if (!sourceIds.has(sourceId)) {
+        errors.push(`Whitepaper fragment ${fragment.id} references unknown source ID: ${sourceId}`);
+      }
+    });
+  }
+});
+
 if (errors.length) {
   console.error("Content validation failed:");
   errors.forEach((error) => console.error(`- ${error}`));
@@ -140,5 +282,5 @@ if (errors.length) {
 }
 
 console.log(
-  `Content validation passed: ${guidanceBlocks.length} guidance blocks, ${resources.length} resources, and ${sourceIds.size} source records checked.`,
+  `Content validation passed: ${guidanceBlocks.length} guidance blocks, ${resources.length} resources, ${sourceIds.size} source records, ${claimCards.length} claim cards, ${sectionBriefs.length} briefs, and ${fragments.length} fragments checked.`,
 );

@@ -1,0 +1,103 @@
+[
+  {
+    "id": "brief-why-pathogen-genomics",
+    "sectionId": "why-pathogen-genomics",
+    "purpose": "Convince a mixed public-health team that pathogen genomics is worth considering, while avoiding technology hype.",
+    "readerActionAfterReading": "Define the public-health decisions that genomic information could improve before choosing tools or infrastructure.",
+    "mustCover": [
+      "Value comes from changed public-health action, not data production alone.",
+      "Genomics depends on sampling, epidemiology, metadata, laboratory quality, reporting routes, and response capacity.",
+      "Economic claims must be setting-specific and should not imply universal savings."
+    ],
+    "doNotClaim": [
+      "Do not say genomics is always cost-saving.",
+      "Do not imply sequencing alone detects all outbreaks or replaces epidemiology.",
+      "Do not generalize high-income implementation results without context."
+    ],
+    "preferredClaimIds": [
+      "claim-who-strategy-integrated-surveillance",
+      "claim-phe-service-transition",
+      "claim-price-economic-review-heterogeneous"
+    ],
+    "conditionalVariantsNeeded": [
+      "Director/funder version should emphasize decision value, scenarios, and economic uncertainty.",
+      "Technical readers can see more detail on workflow and data dependencies."
+    ],
+    "figuresTablesWanted": [
+      "One simple value-chain figure linking sequence data to interpreted public-health action."
+    ],
+    "knownGaps": [
+      "Need structured extraction of economic evaluation comparators and numeric estimates."
+    ],
+    "reviewNotes": "Keep this section publication-like. Avoid noisy inline caveats; put weaker evidence needs in Needs more work.",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "brief-infrastructure-operating-model",
+    "sectionId": "infrastructure-operating-model",
+    "purpose": "Make readers treat infrastructure as a set of responsibilities and service dependencies, not a purchase list.",
+    "readerActionAfterReading": "Name who owns workflows, compute, storage, identity, validation, monitoring, support, and failure recovery.",
+    "mustCover": [
+      "Cloud/local/HPC/managed platform choices are responsibility models.",
+      "Service implementation includes LIMS, validation, accreditation, reporting, staff, and user engagement.",
+      "Constraints such as internet reliability, staff availability, IT support, and data residency should change recommendations."
+    ],
+    "doNotClaim": [
+      "Do not say cloud is the default best answer.",
+      "Do not present laptop workflows as equivalent to validated routine service.",
+      "Do not hide support and maintenance responsibilities."
+    ],
+    "preferredClaimIds": [
+      "claim-pha4ge-operating-questions",
+      "claim-phe-service-transition",
+      "claim-mgen-bioinformatics-implementation"
+    ],
+    "conditionalVariantsNeeded": [
+      "Unreliable internet: raise local/offline/hybrid trade-offs.",
+      "No bioinformatics staff: raise managed platform, shared service, or external support text.",
+      "Data residency concern or cloud not allowed: lower cloud-first wording and raise governance review."
+    ],
+    "figuresTablesWanted": [
+      "Responsibility model table for SaaS/PaaS/IaaS/local/managed service.",
+      "Implementation dependency matrix."
+    ],
+    "knownGaps": [
+      "Need stronger source-backed procurement and support-model examples from public-health agencies."
+    ],
+    "reviewNotes": "This is central to Gnomey. Keep practical and implementation-oriented.",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "brief-data-lifecycle",
+    "sectionId": "data-lifecycle-sample-to-report",
+    "purpose": "Explain the complete operational lifecycle so teams do not optimize only sequencing or analysis.",
+    "readerActionAfterReading": "Map sample receipt, metadata capture, sequence generation, QC, workflow execution, interpretation, reporting, sharing, storage, and retention.",
+    "mustCover": [
+      "A service handles records and decisions, not just FASTQ files.",
+      "Sample and metadata linkage must survive handoffs.",
+      "Use cases change turnaround time, sharing, QC, and retention needs."
+    ],
+    "doNotClaim": [
+      "Do not provide organism-specific QC thresholds until source-backed.",
+      "Do not imply one universal lifecycle for every pathogen programme."
+    ],
+    "preferredClaimIds": [
+      "claim-who-national-strategy-value-chain",
+      "claim-phe-service-transition"
+    ],
+    "conditionalVariantsNeeded": [
+      "Enteric bacteria and foodborne programmes need repository/submission detail.",
+      "Respiratory virus programmes need variant/lineage monitoring and rapid sharing detail.",
+      "No LIMS should trigger extra identifier-lineage guidance."
+    ],
+    "figuresTablesWanted": [
+      "End-to-end lifecycle figure.",
+      "Metadata and identifier lineage table."
+    ],
+    "knownGaps": [
+      "Need formal extraction from repository metadata guidance and organism-specific QC sources."
+    ],
+    "reviewNotes": "Use this as the main place to integrate figures and tables seamlessly.",
+    "reviewStatus": "draft"
+  }
+]

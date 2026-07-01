@@ -73,11 +73,48 @@ Example:
 curl http://127.0.0.1:4321/api/sources
 ```
 
+### `GET /api/editorial`
+
+Returns the public-safe editorial debug model used to develop the dynamic whitepaper.
+
+Includes:
+
+- versioned default Gnomey profile
+- versioned whitepaper outline
+- claim cards extracted from source material
+- section synthesis briefs
+- draft/reviewed/gap/deprecated fragments
+- coverage counts and missing-reference checks
+
+Example:
+
+```bash
+curl http://127.0.0.1:4321/api/editorial
+```
+
+Inspect draft fragments and their source basis:
+
+```bash
+curl -s http://127.0.0.1:4321/api/editorial \
+  | jq '.whitepaperFragments[] | select(.reviewStatus == "draft") | {id, sectionId, title, claimIds, sourceIds, reviewerNotes}'
+```
+
+Inspect the stable whitepaper outline:
+
+```bash
+curl -s http://127.0.0.1:4321/api/editorial \
+  | jq '.whitepaperOutline[] | {order, id, title, purpose, expectedFragments}'
+```
+
+The deployed `/api/editorial` endpoint is read-only. Local fragment approval uses `npm run editorial:review`, which starts a localhost-only server that writes review decisions into `editorial/fragments/*.json`.
+
 ## Notes For AI/Agent Use
 
 - Treat `sourceStatus: "extracted"` as already reviewed for the knowledge base.
 - Treat `sourceStatus: "candidate"` as useful but still requiring careful extraction before making strong claims.
 - In `/api/guidance`, treat guidance block `sourceStatus: "reviewed"` as usable beta prose, `partial` as source-backed but incomplete, and `gap` as a placeholder or editorial work item.
+- In `/api/editorial`, treat `reviewStatus: "reviewed"` fragments as approved for future whitepaper compilation. Treat `draft` fragments as review candidates, not public guidance.
+- Do not synthesize new public guidance directly from documents. Use the pipeline: source card, claim cards, section brief, draft fragment, reviewed fragment.
 - Do not assume every source has a direct PDF. Some publishers provide HTML pages only, and some PDFs are behind publisher controls.
 - The API is read-only and currently unversioned beyond the `version` field in each response.
 - Public API records must not expose local file paths under `/Users/...`; local full-text inventory remains repository documentation only.

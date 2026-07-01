@@ -1,0 +1,104 @@
+[
+  {
+    "id": "claim-who-strategy-integrated-surveillance",
+    "sourceId": "who-genomic-surveillance-2022",
+    "sourceLocator": "knowledge-base/source-cards/who-global-genomic-surveillance-strategy-2022.md",
+    "claim": "Genomic surveillance has public-health value when it is integrated into preparedness, surveillance, and response systems rather than treated as a stand-alone sequencing activity.",
+    "extractedText": "Do not expose long copyrighted passages here; use page/section pointers or short excerpts only.",
+    "notes": "Use for the opening value-case framing and decision-use sections.",
+    "tags": ["value-case", "surveillance", "preparedness", "decision-use"],
+    "candidateSectionIds": ["why-pathogen-genomics", "framing-public-health-use", "reporting-decision-use"],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "multiple",
+    "confidence": "high",
+    "limitations": "Broad strategic source; does not provide local implementation detail or cost estimates.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "claim-phe-service-transition",
+    "sourceId": "phe-case-study",
+    "sourceLocator": "knowledge-base/source-cards/phe-implementing-pathogen-genomics-case-study.md",
+    "claim": "Implementing pathogen genomics as a public-health service changes laboratory workflows, reporting, accreditation, staffing, IT infrastructure, LIMS integration, validation, and user engagement.",
+    "notes": "Strong implementation example for explaining that infrastructure is an operating model, not just servers.",
+    "tags": ["implementation", "service-transition", "lims", "validation", "workforce", "infrastructure"],
+    "candidateSectionIds": [
+      "why-pathogen-genomics",
+      "infrastructure-operating-model",
+      "quality-validation-before-switch",
+      "workforce-sustainability-costing"
+    ],
+    "organism": "enteric-bacteria",
+    "audience": "multiple",
+    "implementationStage": "routine-service",
+    "confidence": "high",
+    "limitations": "UK high-income public-health implementation context; adapt carefully for other settings.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "claim-pha4ge-operating-questions",
+    "sourceId": "pha4ge-infrastructure",
+    "sourceLocator": "knowledge-base/source-cards/pha4ge-infrastructure.md",
+    "claim": "Infrastructure planning should separate what the system solves, how analysis is run, where it is run, how data flow, and who has access.",
+    "notes": "Use as the backbone for Gnomey profile logic and infrastructure sections.",
+    "tags": ["infrastructure", "data-flow", "iam", "workflow", "responsibility-model"],
+    "candidateSectionIds": ["infrastructure-operating-model", "workflow-reproducibility", "repository-data-sharing"],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "multiple",
+    "confidence": "high",
+    "limitations": "Source pack is infrastructure-heavy and does not cover every governance or organism-specific question.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "claim-who-national-strategy-value-chain",
+    "sourceId": "who-national-genomic-surveillance-strategy-2023",
+    "sourceLocator": "knowledge-base/source-cards/who-national-genomic-surveillance-strategy-2023.md",
+    "claim": "A national genomic surveillance strategy should define priority use cases, data users, sample and metadata flows, analysis, interpretation, sharing, and return of results.",
+    "tags": ["strategy", "data-lifecycle", "metadata", "reporting", "sharing"],
+    "candidateSectionIds": [
+      "framing-public-health-use",
+      "data-lifecycle-sample-to-report",
+      "metadata-identifier-lineage",
+      "reporting-decision-use"
+    ],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "multiple",
+    "confidence": "high",
+    "limitations": "Strategic tool; needs operational detail from implementation sources.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "claim-price-economic-review-heterogeneous",
+    "sourceId": "wgs-economic-review",
+    "sourceLocator": "knowledge-base/source-cards/wgs-economic-evaluation-review.md",
+    "claim": "Published economic evaluations generally support bacterial WGS surveillance on economic grounds, but the evidence is heterogeneous and stronger in high-income hospital and foodborne-surveillance settings than in low- and middle-income implementation contexts.",
+    "tags": ["economics", "cost-effectiveness", "evidence-gap", "value-case"],
+    "candidateSectionIds": ["why-pathogen-genomics", "workforce-sustainability-costing"],
+    "organism": "enteric-bacteria",
+    "audience": "director",
+    "implementationStage": "multiple",
+    "confidence": "medium",
+    "limitations": "Does not justify a universal return-on-investment claim.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "claim-mgen-bioinformatics-implementation",
+    "sourceId": "mgen-accelerating-bioinformatics-implementation-2023",
+    "sourceLocator": "knowledge-base/source-cards/microbial-genomics-implementation-collection.md",
+    "claim": "Public-health bioinformatics implementation needs standardized, reproducible, validated, auditable, scalable, portable, and secure analysis within laboratory operating constraints.",
+    "tags": ["bioinformatics", "workflow", "validation", "audit", "security", "portability"],
+    "candidateSectionIds": [
+      "infrastructure-operating-model",
+      "workflow-reproducibility",
+      "quality-validation-before-switch"
+    ],
+    "organism": "multiple",
+    "audience": "bioinformatician",
+    "implementationStage": "multiple",
+    "confidence": "high",
+    "limitations": "Needs conversion into concrete checklists and examples.",
+    "reviewStatus": "reviewed"
+  }
+]

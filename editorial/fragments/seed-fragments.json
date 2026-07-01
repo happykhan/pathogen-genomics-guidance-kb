@@ -1,0 +1,99 @@
+[
+  {
+    "id": "fragment-why-genomics-core-value",
+    "sectionId": "why-pathogen-genomics",
+    "title": "Core value case",
+    "kind": "paragraph",
+    "text": "Pathogen genomics is useful when higher-resolution evidence changes public-health action: detecting linked cases, ruling clusters in or out, monitoring pathogen evolution, supporting antimicrobial-resistance surveillance, and helping teams decide where to investigate or intervene.",
+    "claimIds": ["claim-who-strategy-integrated-surveillance"],
+    "sourceIds": [
+      "who-genomic-surveillance-2022",
+      "who-national-genomic-surveillance-strategy-2023",
+      "cdc-nejm-2019"
+    ],
+    "conditions": {
+      "audiences": ["all"],
+      "implementationStages": ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
+      "organisms": ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"]
+    },
+    "order": 10,
+    "reviewStatus": "draft",
+    "reviewerNotes": "Good candidate for public opening, but check whether this duplicates current public prose too closely.",
+    "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-why-genomics-economic-caution",
+    "sectionId": "why-pathogen-genomics",
+    "title": "Economic caution",
+    "kind": "paragraph",
+    "text": "The economic case should be made with setting-specific evidence. Some services may save time, reduce duplicated testing, shorten reporting, or focus outbreak investigation more efficiently, but others face higher near-term costs for infrastructure, validation, training, quality systems, data management, and support.",
+    "claimIds": ["claim-phe-service-transition", "claim-price-economic-review-heterogeneous"],
+    "sourceIds": [
+      "phe-case-study",
+      "wgs-economic-review",
+      "wgs-costing-tool-2024",
+      "who-genomics-costing-tool-manual-2024"
+    ],
+    "conditions": {
+      "audiences": ["director", "policy", "funder", "mixed", "all"],
+      "topics": ["costing", "value"]
+    },
+    "order": 20,
+    "reviewStatus": "draft",
+    "reviewerNotes": "Keep as a director-facing paragraph after source review.",
+    "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-infra-operating-model-core",
+    "sectionId": "infrastructure-operating-model",
+    "title": "Operating model core",
+    "kind": "paragraph",
+    "text": "A genomics infrastructure choice is also a responsibility choice. The service must decide who operates each layer, who validates workflows, who supports users, who manages access and storage, and who carries the risk when service delivery fails.",
+    "claimIds": ["claim-pha4ge-operating-questions", "claim-phe-service-transition"],
+    "sourceIds": ["pha4ge-infrastructure", "phe-case-study"],
+    "conditions": {
+      "audiences": ["all"],
+      "implementationStages": ["exploring", "pilot", "routine-service", "national-scale", "upgrading"]
+    },
+    "order": 10,
+    "reviewStatus": "draft",
+    "reviewerNotes": "Likely belongs in the public guide after review.",
+    "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-infra-no-staff-managed-support",
+    "sectionId": "infrastructure-operating-model",
+    "title": "If bioinformatics staff are not available",
+    "kind": "exampleBox",
+    "text": "If there is no stable bioinformatics staffing, the implementation plan should not depend on one person maintaining scripts, environments, reference data, and troubleshooting. Consider managed platforms, shared national or regional services, external support agreements, or a narrower validated workflow while local capability is built.",
+    "claimIds": ["claim-pha4ge-operating-questions", "claim-mgen-bioinformatics-implementation"],
+    "sourceIds": ["pha4ge-infrastructure", "mgen-accelerating-bioinformatics-implementation-2023"],
+    "conditions": {
+      "constraints": {
+        "bioinformaticsStaff": false
+      },
+      "topics": ["support", "managed-platform", "workforce"]
+    },
+    "order": 20,
+    "reviewStatus": "draft",
+    "reviewerNotes": "Needs review for strength of recommendation and source coverage.",
+    "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-lifecycle-core",
+    "sectionId": "data-lifecycle-sample-to-report",
+    "title": "Sample-to-report lifecycle",
+    "kind": "paragraph",
+    "text": "A sequencing programme receives samples or isolates, links them to metadata, generates sequence data, checks quality, runs analysis, interprets outputs, produces reports, shares selected data, stores records, and decides what should be archived or deleted.",
+    "claimIds": ["claim-who-national-strategy-value-chain", "claim-phe-service-transition"],
+    "sourceIds": ["who-national-genomic-surveillance-strategy-2023", "phe-case-study"],
+    "conditions": {
+      "audiences": ["all"],
+      "organisms": ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"]
+    },
+    "order": 10,
+    "reviewStatus": "draft",
+    "reviewerNotes": "Candidate for core lifecycle prose.",
+    "updatedAt": "2026-07-01"
+  }
+]
