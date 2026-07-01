@@ -4721,6 +4721,103 @@ export const guidanceBlocks: GuidanceBlock[] = [
           "auspathogen-implementation-2025",
         ],
       },
+      {
+        title: "Beta readiness-to-next-action table",
+        summary:
+          "Use this to turn a maturity discussion into the next practical action. It is not a maturity score or certification scheme.",
+        columns: ["Current state", "Likely service risk", "Next action to prioritise", "Beta caution"],
+        rows: [
+          {
+            cells: [
+              "One person can run the analysis, but the route is informal",
+              "Single-person dependency, undocumented parameters, weak reanalysis route and limited cover when the person leaves or is unavailable.",
+              "Document the approved workflow, run record, reference data, routine parameters, report boundary and second-person cover before expanding the service.",
+              "A technically working analysis is not yet a sustainable public-health service.",
+            ],
+            sourceIds: ["pha4ge-infrastructure", "phe-case-study", "clinical-microbiology-implementation-2026"],
+          },
+          {
+            cells: [
+              "Sequencing is available, but metadata and sample linkage are fragile",
+              "Results may be hard to interpret, correct, share, audit or reuse because sample, run, report and accession records are not reliably linked.",
+              "Create a minimum lineage register linking sample or isolate ID, metadata, sequencing run, QC, workflow run, report, sharing event and retention decision.",
+              "Metadata repair after analysis is not a substitute for a managed service record.",
+            ],
+            sourceIds: [
+              "who-genomic-data-sharing-platforms-2025",
+              "aphl-ngs-implementation-2016",
+              "phe-case-study",
+            ],
+          },
+          {
+            cells: [
+              "A pilot workflow is being used for routine decisions",
+              "Validation boundary, change control, QC thresholds, report wording and user expectations may be unclear.",
+              "Assemble a beta validation evidence package and release record before retiring older methods or expanding reportable outputs.",
+              "A pilot can demonstrate feasibility without proving routine reportability, comparability or sustainability.",
+            ],
+            sourceIds: [
+              "phe-case-study",
+              "aphl-ngs-implementation-2016",
+              "clinical-microbiology-implementation-2026",
+              "mgen-stec-bioinformatics-validation-2021",
+            ],
+          },
+          {
+            cells: [
+              "Infrastructure exists, but backup, recovery or access review is not tested",
+              "A storage, access-control, power, provider or account failure could stop reporting or make records unrecoverable.",
+              "Run a restore test, assign access-review ownership, record retention categories and name the recovery owner for the data needed to defend or reissue reports.",
+              "Owning infrastructure without tested recovery is a service risk; outsourcing infrastructure without access governance is also a risk.",
+            ],
+            sourceIds: [
+              "pha4ge-infrastructure",
+              "who-genomic-data-sharing-platforms-2025",
+              "who-genomics-costing-tool-manual-2024",
+            ],
+          },
+          {
+            cells: [
+              "External or central support is essential to delivery",
+              "Turnaround, interpretation, data access, cost control or local capability building may depend on a partner route that is not explicitly managed.",
+              "Name which functions are external, what the fallback is, what data and reports remain locally accessible, and how local interpretation capacity will be built.",
+              "External support can be appropriate, but it should be managed as a dependency rather than hidden as if the service were fully local.",
+            ],
+            sourceIds: [
+              "east-africa-genomics-landscape-2024",
+              "auspathogen-implementation-2025",
+              "who-genomic-surveillance-progress-2023",
+            ],
+          },
+          {
+            cells: [
+              "The service is routine, but review loops are weak",
+              "Failures, delayed reports, missing metadata, corrected reports, user feedback and recurrent costs may not lead to improvement or renewed investment.",
+              "Create a service-review cadence that links routine metrics to corrective actions, responsible owners, funding decisions and review dates.",
+              "Maturity should mean managed learning and risk reduction, not architectural complexity.",
+            ],
+            sourceIds: [
+              "who-national-genomic-surveillance-strategy-2023",
+              "phe-case-study",
+              "who-genomics-costing-tool-manual-2024",
+              "clinical-microbiology-implementation-2026",
+            ],
+          },
+        ],
+        sourceIds: [
+          "pha4ge-infrastructure",
+          "phe-case-study",
+          "clinical-microbiology-implementation-2026",
+          "who-genomic-data-sharing-platforms-2025",
+          "aphl-ngs-implementation-2016",
+          "mgen-stec-bioinformatics-validation-2021",
+          "who-genomics-costing-tool-manual-2024",
+          "east-africa-genomics-landscape-2024",
+          "auspathogen-implementation-2025",
+          "who-genomic-surveillance-progress-2023",
+          "who-national-genomic-surveillance-strategy-2023",
+        ],
+      },
     ],
     audiences: ["director", "policy", "funder", "lab-lead", "bioinformatician", "it-security", "data-manager", "all"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
@@ -4740,6 +4837,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "mgen-discordant-amr-predictions-2020",
       "mgen-kenya-amr-genomics-capacity-2023",
       "mgen-uk-delphi-health-protection-2023",
+      "aphl-ngs-implementation-2016",
     ],
     gaps: [
       "The beta worksheet supports risk-reduction planning, but a formal maturity rubric and scoring method still need source-backed review.",
