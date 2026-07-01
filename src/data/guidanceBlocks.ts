@@ -256,6 +256,105 @@ export const guidanceBlocks: GuidanceBlock[] = [
           "phe-case-study",
         ],
       },
+      {
+        title: "Claims the value case can and cannot make",
+        summary:
+          "Use this as a reviewer-facing guardrail. It separates source-backed arguments from claims that still need local evidence or deeper economic extraction.",
+        columns: ["Claim area", "Supported beta claim", "Evidence needed locally", "Do not claim yet"],
+        rows: [
+          {
+            cells: [
+              "Public-health action",
+              "Genomics can add value when higher-resolution results change surveillance, outbreak response, AMR monitoring, variant or lineage monitoring, source investigation or another defined decision.",
+              "Named decision user, reporting route, action available, turnaround need and feedback route.",
+              "Do not claim value from sequencing output alone if the result is not connected to a decision and response route.",
+            ],
+            sourceIds: [
+              "who-genomic-surveillance-2022",
+              "who-national-genomic-surveillance-strategy-2023",
+              "cdc-nejm-2019",
+              "phe-case-study",
+            ],
+          },
+          {
+            cells: [
+              "Resolution and interpretation",
+              "WGS can provide higher-resolution information about relatedness, evolution, resistance determinants, virulence markers and strain or lineage patterns.",
+              "Sampling frame, metadata, comparator set, method version, validation boundary and epidemiological context.",
+              "Do not claim transmission, source attribution, incidence or absence of risk from genomic relatedness alone.",
+            ],
+            sourceIds: ["cdc-nejm-2019", "foodborne-genomics-allard-2018", "ecdc-wgs-surveillance-2016"],
+          },
+          {
+            cells: [
+              "Service improvement",
+              "A service may consolidate older methods, reduce duplicated processing, shorten some reporting routes, improve outbreak resolution or shift staff time toward interpretation.",
+              "Current comparator process, validation evidence, report turnaround, user feedback, displaced work, added work and quality-system requirements.",
+              "Do not generalise PHE's service-transition benefits to every pathogen, country or operating model.",
+            ],
+            sourceIds: ["phe-case-study", "wgs-economic-review", "clinical-microbiology-implementation-2026"],
+          },
+          {
+            cells: [
+              "Economic value",
+              "Published economic evaluations generally support bacterial WGS surveillance on economic grounds, but evidence is heterogeneous and concentrated in particular settings.",
+              "Pathogen, use case, comparator, costs included, response capacity, health-system context, sampling strategy and confidence in transferability.",
+              "Do not make a universal return-on-investment, cost-effectiveness or cost-per-sample claim from the beta source base.",
+            ],
+            sourceIds: [
+              "wgs-economic-review",
+              "genometrakr-economic-2021",
+              "lancet-wgs-economic-strategies-2026",
+              "national-investment-case-2025",
+            ],
+          },
+          {
+            cells: [
+              "Preparedness and equity",
+              "Distributed capability, workforce, data flow and readiness matter because surveillance value depends on access to sequencing and regular reporting, not only total global capacity.",
+              "Local geographic coverage, laboratory network model, data-flow route, workforce and support capacity, and response dependencies.",
+              "Do not turn a respiratory-virus modelling result into a universal sequencing threshold for every pathogen.",
+            ],
+            sourceIds: [
+              "global-solidarity-genomic-surveillance-2026",
+              "who-genomic-surveillance-2022",
+              "who-genomic-surveillance-progress-2023",
+            ],
+          },
+          {
+            cells: [
+              "Implementation burden",
+              "Genomics creates recurring service needs for workforce, validation, quality management, storage, compute, software, maintenance, data management, sharing and user support.",
+              "Recurrent cost categories, owner map, training plan, quality-management scope, infrastructure model and sustainability plan.",
+              "Do not frame genomics as automatically cheaper, easier or self-running after the sequencer is purchased.",
+            ],
+            sourceIds: [
+              "who-genomics-costing-tool-manual-2024",
+              "wgs-costing-tool-2024",
+              "phe-case-study",
+              "pha4ge-infrastructure",
+            ],
+          },
+        ],
+        sourceIds: [
+          "who-genomic-surveillance-2022",
+          "who-national-genomic-surveillance-strategy-2023",
+          "cdc-nejm-2019",
+          "phe-case-study",
+          "foodborne-genomics-allard-2018",
+          "ecdc-wgs-surveillance-2016",
+          "wgs-economic-review",
+          "genometrakr-economic-2021",
+          "lancet-wgs-economic-strategies-2026",
+          "national-investment-case-2025",
+          "global-solidarity-genomic-surveillance-2026",
+          "who-genomic-surveillance-progress-2023",
+          "who-genomics-costing-tool-manual-2024",
+          "wgs-costing-tool-2024",
+          "pha4ge-infrastructure",
+          "clinical-microbiology-implementation-2026",
+        ],
+      },
     ],
     audiences: ["director", "policy", "funder", "lab-lead", "all"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],

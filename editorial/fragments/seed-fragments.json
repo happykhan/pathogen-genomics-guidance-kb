@@ -3528,5 +3528,67 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is a beta transition checklist. It supports design questions for moving into service operation but does not prescribe legal go-live criteria, staffing ratios or accreditation approval.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-value-case-claim-guardrails",
+    "sectionId": "why-pathogen-genomics",
+    "title": "Value-case claim guardrails",
+    "kind": "table",
+    "text": "The value case should distinguish claims the current source base supports from claims that require local evidence or deeper economic extraction. The beta guide can support public-health action, higher resolution, service improvement, economic caution, preparedness and implementation-burden arguments, but it should not make universal ROI, cost-effectiveness, transmission, source-attribution or self-running-technology claims.",
+    "claimIds": [
+      "claim-who-strategy-integrated-surveillance",
+      "claim-armstrong-data-integration-workflows",
+      "claim-price-economic-review-heterogeneous",
+      "claim-beta-economic-strategy-choice",
+      "claim-beta-distributed-capability-early-detection",
+      "claim-costing-recurrent-service-categories"
+    ],
+    "sourceIds": [
+      "who-genomic-surveillance-2022",
+      "who-national-genomic-surveillance-strategy-2023",
+      "cdc-nejm-2019",
+      "phe-case-study",
+      "foodborne-genomics-allard-2018",
+      "ecdc-wgs-surveillance-2016",
+      "wgs-economic-review",
+      "genometrakr-economic-2021",
+      "lancet-wgs-economic-strategies-2026",
+      "national-investment-case-2025",
+      "global-solidarity-genomic-surveillance-2026",
+      "who-genomic-surveillance-progress-2023",
+      "who-genomics-costing-tool-manual-2024",
+      "wgs-costing-tool-2024",
+      "pha4ge-infrastructure",
+      "clinical-microbiology-implementation-2026"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "policy",
+        "funder",
+        "lab-lead",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "value-case",
+        "investment-case",
+        "economics",
+        "decision-use",
+        "preparedness",
+        "sustainability"
+      ]
+    },
+    "order": 53,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta claim-discipline table. It deliberately avoids numeric ROI, universal cost-effectiveness, organism-specific sampling thresholds and transmission or source-attribution rules.",
+    "updatedAt": "2026-07-01"
   }
 ]
