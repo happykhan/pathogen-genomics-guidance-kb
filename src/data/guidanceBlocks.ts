@@ -1063,23 +1063,178 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "TB and AMR use cases often combine two different reporting products: relatedness or transmission inference, and genotype-based prediction of resistance or other phenotypes. ECDC separates these output types, and Armstrong et al. caution that phenotype inference depends on the organism, drug, mechanism and quality of genotype-phenotype evidence.",
       "For TB, WGS can help define or refute suspected outbreaks, infer transmission dynamics, suggest missed cases, distinguish reactivation from reinfection, and support drug-susceptibility inference where the method is feasible. The report should be clear about whether it is supporting public-health investigation, clinical treatment, programme evaluation, or more than one of these.",
       "For AMR, a useful report should name the organism, antimicrobial or drug class, resistance determinant or rule set, database or tool version, validation basis, and whether confirmatory phenotypic testing is required. The clinical microbiology implementation review reinforces this caution because hospital-facing reports can carry direct patient-care implications and regulatory obligations.",
+      "For beta, the safe reporting rule is separation. Keep relatedness, genotype-to-phenotype inference, clinical or infection-control action, validation basis, uncertainty and follow-up testing as separate fields. A single combined conclusion can hide which part is well supported and which part depends on local epidemiology, phenotypic confirmation, database quality or clinical judgement.",
     ],
     bodySourceIds: {
       0: ["ecdc-wgs-surveillance-2016", "cdc-nejm-2019"],
       1: ["cdc-nejm-2019"],
       2: ["cdc-nejm-2019", "clinical-microbiology-implementation-2026"],
+      3: [
+        "cdc-nejm-2019",
+        "ecdc-wgs-surveillance-2016",
+        "clinical-microbiology-implementation-2026",
+        "mgen-discordant-amr-predictions-2020",
+      ],
     },
     technicalDetail: [
       "Minimum implementation check: record the distance method or nomenclature scheme, cluster threshold or interpretation rule, resistance database and version, workflow version, specimen or isolate source, report recipient, and whether phenotypic confirmation is pending or complete.",
       "Do not merge relatedness, resistance and clinical-action statements into one unchecked conclusion. Each conclusion needs its own evidence basis and uncertainty statement.",
+    ],
+    tables: [
+      {
+        title: "Beta TB and AMR reporting fields",
+        summary:
+          "Use separate fields so relatedness, resistance prediction, interpretation and action are not collapsed into one unsupported conclusion.",
+        columns: ["Report field", "What to record", "Why it matters", "Main caution"],
+        rows: [
+          {
+            cells: [
+              "Relatedness or transmission inference",
+              "Distance method, nomenclature or cluster rule; comparison set; sampling frame; workflow version; interpretation date.",
+              "Supports suspected-outbreak assessment, transmission investigation and programme evaluation.",
+              "A relatedness result does not prove direct transmission without sampling and epidemiological context.",
+            ],
+            sourceIds: ["cdc-nejm-2019", "ecdc-wgs-surveillance-2016"],
+          },
+          {
+            cells: [
+              "Resistance or phenotype inference",
+              "Organism, antimicrobial or drug class, determinant or rule set, database and version, validation basis and confidence statement.",
+              "Helps distinguish surveillance signal, public-health action and possible clinical relevance.",
+              "Genotype-to-phenotype reliability varies by organism, drug, resistance mechanism, database and workflow.",
+            ],
+            sourceIds: ["cdc-nejm-2019", "clinical-microbiology-implementation-2026", "mgen-discordant-amr-predictions-2020"],
+          },
+          {
+            cells: [
+              "Follow-up testing status",
+              "Whether phenotypic confirmation, repeat sequencing, additional sampling or expert review is pending, complete or not required.",
+              "Prevents an inferred result being read as final when confirmation or review is still needed.",
+              "The guide cannot prescribe confirmatory testing rules without organism-specific and national sources.",
+            ],
+            sourceIds: ["cdc-nejm-2019", "clinical-microbiology-implementation-2026"],
+          },
+          {
+            cells: [
+              "Action boundary",
+              "Whether the report supports public-health investigation, surveillance monitoring, clinical treatment discussion, infection-control action or research only.",
+              "Clarifies who should act and what kind of decision the result can support.",
+              "Clinical-facing action may carry regulatory, quality and interpretive obligations beyond public-health surveillance.",
+            ],
+            sourceIds: ["clinical-microbiology-implementation-2026", "ecdc-wgs-surveillance-2016"],
+          },
+        ],
+        sourceIds: ["cdc-nejm-2019", "ecdc-wgs-surveillance-2016", "clinical-microbiology-implementation-2026"],
+      },
     ],
     audiences: ["director", "policy", "lab-lead", "bioinformatician", "data-manager", "mixed"],
     implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
     organisms: ["tb", "amr", "nosocomial"],
     topics: ["reporting", "decision-use", "tb", "amr", "quality", "validation"],
     detailLevel: "operational",
-    sourceIds: ["ecdc-wgs-surveillance-2016", "cdc-nejm-2019", "clinical-microbiology-implementation-2026"],
-    gaps: ["Needs current TB and AMR report examples, genotype-phenotype validation sources, and national policy requirements."],
+    sourceIds: [
+      "ecdc-wgs-surveillance-2016",
+      "cdc-nejm-2019",
+      "clinical-microbiology-implementation-2026",
+      "mgen-discordant-amr-predictions-2020",
+    ],
+    gaps: [
+      "Needs current TB and AMR report examples, genotype-phenotype validation sources, resistance database guidance, thresholds, and national policy requirements.",
+    ],
+  },
+  {
+    id: "reporting-healthcare-associated-infection",
+    title: "For healthcare-associated infection, connect genomics to infection-control action",
+    summary:
+      "Hospital-facing genomic reports need clear links between relatedness, ward or exposure context, intervention decisions, uncertainty, and feedback.",
+    sourceStatus: "partial",
+    body: [
+      "Healthcare-associated infection and hospital outbreak support place genomics close to operational infection-control decisions. The clinical microbiology implementation review distinguishes clinical laboratories from public-health laboratories because hospital-facing results may have direct patient-care responsibilities, tighter reporting expectations, regulatory obligations and interpretive uncertainty.",
+      "The reporting route should therefore name the infection-control or clinical user, the setting being investigated, the organism or resistance concern, the comparison set, and the action boundary. A report may support whether cases are plausibly linked, whether more sampling is needed, whether an environmental or ward investigation should continue, or whether genomic evidence is insufficient without epidemiological context.",
+      "The Microbial Genomics implementation examples show why context matters. Centre-specific bacterial pathogen typing can affect infection-control decision making, and an integrated WGS response to a persistent polymicrobial multidrug-resistant outbreak in critical care connected sequencing to intervention, reporting turnaround and environmental metagenomic investigation.",
+      "For beta, do not turn a hospital-facing genomic result into an automatic action instruction. Report the relatedness evidence, what was sampled, what was not sampled, the workflow or method used, uncertainty, who received the result, what follow-up is pending, and how feedback from the infection-control team will be captured.",
+    ],
+    bodySourceIds: {
+      0: ["clinical-microbiology-implementation-2026"],
+      1: ["clinical-microbiology-implementation-2026", "ecdc-wgs-surveillance-2016"],
+      2: ["mgen-centre-specific-typing-ipc-2021", "mgen-polymicrobial-mdr-critical-care-2021"],
+      3: [
+        "clinical-microbiology-implementation-2026",
+        "mgen-centre-specific-typing-ipc-2021",
+        "mgen-polymicrobial-mdr-critical-care-2021",
+      ],
+    },
+    tables: [
+      {
+        title: "Beta healthcare-associated infection reporting fields",
+        summary:
+          "Use this table to keep infection-control interpretation explicit and separate from genomic relatedness alone.",
+        columns: ["Report field", "What to record", "Why it matters", "Main caution"],
+        rows: [
+          {
+            cells: [
+              "Clinical or infection-control route",
+              "Recipient team, ward or unit context, report urgency, verbal discussion route and escalation owner.",
+              "Hospital-facing results often need rapid interpretation by people who can act.",
+              "Do not assume the sequencing laboratory is the owner of the infection-control decision.",
+            ],
+            sourceIds: ["clinical-microbiology-implementation-2026"],
+          },
+          {
+            cells: [
+              "Sampling and comparison context",
+              "Patient, isolate, environmental or metagenomic samples included; samples missing; date range; comparison set.",
+              "A relatedness result can only be interpreted against what was sampled and when.",
+              "Unsampled patients, environments or time periods can change the interpretation.",
+            ],
+            sourceIds: ["ecdc-wgs-surveillance-2016", "mgen-polymicrobial-mdr-critical-care-2021"],
+          },
+          {
+            cells: [
+              "Relatedness and uncertainty",
+              "Method, workflow version, cluster or relatedness statement, uncertainty and whether repeat or expert review is needed.",
+              "Supports plausible linkage, exclusion or need for further investigation.",
+              "Centre-specific typing and local interpretive practice can affect infection-control decisions.",
+            ],
+            sourceIds: ["mgen-centre-specific-typing-ipc-2021", "clinical-microbiology-implementation-2026"],
+          },
+          {
+            cells: [
+              "Action and feedback",
+              "What action the report can support, who records the action, feedback from users, and whether the case changes SOPs, sampling or validation.",
+              "Keeps genomics connected to service improvement and public-health or hospital action.",
+              "Genomics should inform, not replace, infection-control judgement and local context.",
+            ],
+            sourceIds: ["who-sars-cov-2-sequencing-implementation-2021", "clinical-microbiology-implementation-2026"],
+          },
+        ],
+        sourceIds: [
+          "clinical-microbiology-implementation-2026",
+          "ecdc-wgs-surveillance-2016",
+          "mgen-centre-specific-typing-ipc-2021",
+          "mgen-polymicrobial-mdr-critical-care-2021",
+        ],
+      },
+    ],
+    technicalDetail: [
+      "Minimum implementation check: record recipient team, setting, sample set, comparison set, workflow version, relatedness statement, uncertainty, report time, verbal discussion route, action boundary, feedback route and correction history.",
+      "Treat infection-control action as a governed interpretation step. The genomic report should support that step, not silently substitute for it.",
+    ],
+    audiences: ["director", "policy", "lab-lead", "bioinformatician", "data-manager", "mixed"],
+    implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
+    organisms: ["nosocomial", "amr"],
+    topics: ["reporting", "decision-use", "healthcare-associated-infection", "infection-control", "quality", "validation"],
+    detailLevel: "operational",
+    sourceIds: [
+      "clinical-microbiology-implementation-2026",
+      "ecdc-wgs-surveillance-2016",
+      "mgen-centre-specific-typing-ipc-2021",
+      "mgen-polymicrobial-mdr-critical-care-2021",
+      "who-sars-cov-2-sequencing-implementation-2021",
+    ],
+    gaps: [
+      "Needs healthcare-associated infection report examples, organism-specific cluster interpretation sources, clinical governance requirements, and local infection-control workflow examples.",
+    ],
   },
   {
     id: "workforce-is-part-of-system",

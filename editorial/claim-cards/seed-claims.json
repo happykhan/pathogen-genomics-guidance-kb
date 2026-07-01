@@ -672,5 +672,31 @@
     "confidence": "high",
     "limitations": "Does not define organism-specific thresholds, exact report wording, repository fields or sampling fractions.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "claim-beta-tb-amr-hai-reporting-fields",
+    "sourceId": "clinical-microbiology-implementation-2026",
+    "sourceLocator": "Armstrong et al. 2019, ECDC 2016, Gador-Whyte et al. 2026, and Microbial Genomics implementation collection",
+    "evidenceItemIds": [
+      "evidence-beta-tb-amr-hai-reporting-fields",
+      "evidence-armstrong-tb-influenza-amr-reporting",
+      "evidence-ecdc-reporting-objectives",
+      "evidence-clinical-review-staff-competencies"
+    ],
+    "claim": "For TB, AMR and healthcare-associated infection support, beta reporting should separate relatedness or transmission inference, genotype-to-phenotype inference, clinical or infection-control action, validation basis, uncertainty and follow-up testing rather than merging them into one conclusion.",
+    "extractedText": "Armstrong et al. and ECDC separate transmission inference from phenotype prediction and caution that genotype-phenotype inference depends on organism, drug, mechanism and evidence base. The clinical implementation review highlights reporting, interpretation, validation, EQA, regulatory obligations and uncertainty. Implementation examples show that AMR prediction, centre-specific typing and MDR outbreak genomics can influence public-health or infection-control decisions but require context and validation.",
+    "notes": "Use for TB/AMR and healthcare-associated infection conditional reporting blocks.",
+    "tags": ["reporting", "tb", "amr", "healthcare-associated-infection", "infection-control", "uncertainty"],
+    "candidateSectionIds": [
+      "reporting-decision-use",
+      "quality-validation-before-switch",
+      "use-case-service-model"
+    ],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "multiple",
+    "confidence": "high",
+    "limitations": "Does not provide SNP thresholds, resistance-calling rules, clinical treatment recommendations, or jurisdiction-specific report wording.",
+    "reviewStatus": "reviewed"
   }
 ]

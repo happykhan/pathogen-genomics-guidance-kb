@@ -567,5 +567,16 @@
     "tags": ["service-model", "organism-specific", "use-case", "reporting", "sampling", "validation"],
     "limitations": "Supports a beta service-model matrix. It does not provide pathogen-specific thresholds, report templates, sampling fractions or clinical rules.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-beta-tb-amr-hai-reporting-fields",
+    "sourceId": "clinical-microbiology-implementation-2026",
+    "sourceLocator": "Armstrong et al. 2019 TB, influenza and phenotype-inference sections; ECDC 2016 reporting-output sections; Gador-Whyte et al. 2026 clinical reporting and implementation sections; Microbial Genomics implementation collection decision-use, AMR, IPC and MDR outbreak examples",
+    "evidenceType": "passage-note",
+    "excerpt": "interpretation, quality control, validation, verification",
+    "passageSummary": "Armstrong et al. describe TB WGS as supporting outbreak investigation, transmission inference, missed-case detection, reactivation versus reinfection distinctions and drug-susceptibility inference where feasible, while cautioning that phenotype inference varies by organism, drug, mechanism and evidence base. ECDC distinguishes transmission-linkage outputs from phenotype-prediction outputs and says reporting should match pathogen-specific surveillance objectives. The clinical implementation review emphasises clinical reporting, interpretive commentary, verbal discussion, validation, verification, EQA, regulatory obligations and uncertainty. The Microbial Genomics collection includes examples where centre-specific typing affects infection-control decisions, polymicrobial MDR critical-care outbreak genomics supports intervention, AMR proficiency testing highlights QC and data-sharing challenges, and AMR prediction can vary between pipelines.",
+    "tags": ["reporting", "tb", "amr", "healthcare-associated-infection", "infection-control", "uncertainty"],
+    "limitations": "Supports beta reporting fields and cautions. It does not define clinical treatment rules, SNP thresholds, genotype-phenotype databases, or national report wording.",
+    "reviewStatus": "reviewed"
   }
 ]

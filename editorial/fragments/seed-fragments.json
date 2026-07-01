@@ -1188,5 +1188,59 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is a beta matrix to structure thinking. It does not provide organism-specific thresholds, report templates or sampling fractions.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-tb-amr-hai-reporting-fields",
+    "sectionId": "reporting-decision-use",
+    "title": "Beta TB, AMR and infection-control reporting fields",
+    "kind": "table",
+    "text": "For TB, AMR and healthcare-associated infection support, keep relatedness, resistance prediction, clinical or infection-control action and uncertainty as separate report fields. The report should state the method or rule set, validation basis, database or workflow version, follow-up testing status, recipient route and what the result cannot prove without epidemiological or clinical context.",
+    "claimIds": [
+      "claim-beta-tb-amr-hai-reporting-fields",
+      "claim-reporting-products-fit-decision",
+      "claim-release-change-control-validation"
+    ],
+    "sourceIds": [
+      "cdc-nejm-2019",
+      "ecdc-wgs-surveillance-2016",
+      "clinical-microbiology-implementation-2026",
+      "mgen-centre-specific-typing-ipc-2021",
+      "mgen-polymicrobial-mdr-critical-care-2021",
+      "mgen-eurl-amr-proficiency-test-2023",
+      "mgen-discordant-amr-predictions-2020",
+      "mgen-rapid-nanopore-amr-outbreak-2021"
+    ],
+    "conditions": {
+      "audiences": [
+        "lab-lead",
+        "bioinformatician",
+        "data-manager",
+        "director",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "organisms": [
+        "tb",
+        "amr",
+        "nosocomial"
+      ],
+      "topics": [
+        "reporting",
+        "decision-use",
+        "validation",
+        "quality",
+        "infection-control"
+      ]
+    },
+    "order": 45,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta reporting field model. It deliberately avoids pathogen-specific thresholds or treatment advice.",
+    "updatedAt": "2026-07-01"
   }
 ]
