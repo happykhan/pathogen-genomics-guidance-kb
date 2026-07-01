@@ -47,9 +47,9 @@ export default function BackstagePage() {
         <p className="eyebrow">Backstage</p>
         <h1>Editorial debug view</h1>
         <p>
-          This unlinked page exposes the source-to-whitepaper pipeline for review: outline sections, claim cards, synthesis
-          briefs, draft fragments, source IDs, conditions, and gaps. It is public-safe and does not expose local files or full
-          copyrighted source text.
+          This unlinked page exposes the source-to-whitepaper pipeline for review: outline sections, extracted claim cards,
+          synthesis briefs, draft fragments, source IDs, conditions, and gaps. Claim cards are source-backed interpretations,
+          not verbatim source text. This view is public-safe and does not expose local files or full copyrighted source text.
         </p>
       </section>
 
@@ -185,19 +185,36 @@ export default function BackstagePage() {
                             <StatusBadge status={fragment.reviewStatus} />
                           </div>
                         </div>
-                        <p>{fragment.text}</p>
+                        <div className="backstage-prose-block">
+                          <p className="eyebrow">Draft whitepaper text</p>
+                          <p>{fragment.text}</p>
+                        </div>
                         {fragment.conditions ? (
                           <pre className="backstage-json">{JSON.stringify(fragment.conditions, null, 2)}</pre>
                         ) : null}
                         <p className="muted">
                           <strong>Sources:</strong> {fragment.sourceIds.map(sourceLabel).join("; ")}
                         </p>
-                        <p className="muted">
-                          <strong>Claims:</strong>{" "}
-                          {fragment.claimIds
-                            .map((claimId) => claimsById.get(claimId)?.claim ?? `Missing claim: ${claimId}`)
-                            .join(" ")}
-                        </p>
+                        <div className="backstage-evidence">
+                          <p>
+                            <strong>Extracted claims used, not verbatim source text:</strong>
+                          </p>
+                          <ul>
+                            {fragment.claimIds.map((claimId) => {
+                              const claim = claimsById.get(claimId);
+                              return (
+                                <li key={claimId}>
+                                  <span>{claim?.claim ?? `Missing claim: ${claimId}`}</span>
+                                  {claim ? (
+                                    <small>
+                                      Source pointer: {claim.sourceLocator}; source ID: {claim.sourceId}
+                                    </small>
+                                  ) : null}
+                                </li>
+                              );
+                            })}
+                          </ul>
+                        </div>
                         {fragment.reviewerNotes ? <p className="muted">Review note: {fragment.reviewerNotes}</p> : null}
                       </article>
                     ))}
@@ -213,11 +230,15 @@ export default function BackstagePage() {
         <div className="panel-body">
           <div className="toolbar">
             <div>
-              <p className="eyebrow">Claim Cards</p>
-              <h2 style={{ margin: "4px 0 0" }}>Extracted source material</h2>
+              <p className="eyebrow">Extracted Claim Cards</p>
+              <h2 style={{ margin: "4px 0 0" }}>Extracted claims, not source text</h2>
             </div>
             <span className="badge">{evidenceClaimCards.length} cards</span>
           </div>
+          <p className="muted" style={{ marginTop: 0 }}>
+            A claim card is our concise interpretation of what a source supports. The source locator points back to the
+            source card, page, section, table, or figure that should justify the claim.
+          </p>
           <div className="claim-card-grid">
             {evidenceClaimCards.map((claim) => (
               <article className="claim-card" key={claim.id}>
@@ -227,10 +248,20 @@ export default function BackstagePage() {
                   </h3>
                   <StatusBadge status={claim.reviewStatus} />
                 </div>
-                <p>{claim.claim}</p>
+                <p>
+                  <strong>Extracted claim:</strong> {claim.claim}
+                </p>
                 <p className="muted">
                   <strong>Source:</strong> {sourceLabel(claim.sourceId)}
                 </p>
+                <p className="muted">
+                  <strong>Source pointer:</strong> {claim.sourceLocator}
+                </p>
+                {claim.extractedText ? (
+                  <p className="muted">
+                    <strong>Passage note:</strong> {claim.extractedText}
+                  </p>
+                ) : null}
                 <p className="muted">
                   <strong>Candidate sections:</strong> {claim.candidateSectionIds.join(", ")}
                 </p>

@@ -25,7 +25,7 @@ Example: validation before replacing established methods.
 | Step | Repo artifact | What it records |
 | --- | --- | --- |
 | Source card | `knowledge-base/source-cards/phe-implementing-pathogen-genomics-case-study.md` | Provenance, relevance, extracted validation facts, and remaining limits. |
-| Claim cards | `editorial/claim-cards/*.json` | Small extracted claims with source IDs, source locator, tags, candidate sections, limitations, and review state. |
+| Claim cards | `editorial/claim-cards/*.json` | Small extracted interpretations of what a source supports, with source IDs, source locator, tags, candidate sections, limitations, and review state. Claim cards are not verbatim source text. |
 | Section synthesis brief | `editorial/section-briefs/*.json` | Editorial instructions for a whitepaper section: purpose, must-cover points, do-not-claim rules, preferred claims, conditionals, figures, and gaps. |
 | Draft fragments | `editorial/fragments/*.json` | Paragraphs, boxes, tables, figures, or gap fragments generated from approved claim cards and section briefs. |
 | Reviewed fragments | `editorial/fragments/*.json` with `reviewStatus: "reviewed"` | Content approved for later public compilation into the dynamic whitepaper. |
@@ -63,6 +63,21 @@ Editorial object statuses:
 8. Review fragments locally with `npm run editorial:review`.
 9. Use source IDs in public guidance only where the prose is directly supported.
 10. Run `npm run content:check`.
+
+## Claim Cards Versus Source Text
+
+A claim card is not the original text from a paper, report, or guidance document. It is the editor's concise extraction of what the source supports.
+
+Use this distinction:
+
+```text
+original source text or page/table/figure pointer
+  -> extracted claim card
+  -> draft whitepaper fragment
+  -> reviewed public whitepaper prose
+```
+
+For copyright and clarity, public debug views should show source locators, page or section pointers, short passage notes, and extracted claims. They should not expose full-text excerpts from copyrighted PDFs.
 
 ## Adding Guidance Prose
 

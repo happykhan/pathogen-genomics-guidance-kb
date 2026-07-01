@@ -98,9 +98,16 @@ function renderPage() {
 
   const rows = fragments
     .map((fragment) => {
-      const claimText = fragment.claimIds
-        .map((claimId) => claimsById.get(claimId)?.claim ?? `Missing claim: ${claimId}`)
-        .join(" ");
+      const claimDetails = fragment.claimIds
+        .map((claimId) => {
+          const claim = claimsById.get(claimId);
+          if (!claim) return `<li><span>Missing claim: ${escapeHtml(claimId)}</span></li>`;
+          return `<li>
+            <span>${escapeHtml(claim.claim)}</span>
+            <small>Source pointer: ${escapeHtml(claim.sourceLocator)}; source ID: ${escapeHtml(claim.sourceId)}</small>
+          </li>`;
+        })
+        .join("");
       return `
         <article class="fragment" data-fragment-id="${escapeHtml(fragment.id)}">
           <header>
@@ -110,8 +117,12 @@ function renderPage() {
             </div>
             <span class="status ${escapeHtml(fragment.reviewStatus)}">${escapeHtml(fragment.reviewStatus)}</span>
           </header>
+          <p class="label">Draft whitepaper text</p>
           <p class="fragment-text">${escapeHtml(fragment.text)}</p>
-          <p class="meta"><strong>Claims:</strong> ${escapeHtml(claimText)}</p>
+          <div class="evidence">
+            <p><strong>Extracted claims used, not verbatim source text:</strong></p>
+            <ul>${claimDetails}</ul>
+          </div>
           <p class="meta"><strong>Sources:</strong> ${escapeHtml(fragment.sourceIds.join(", "))}</p>
           <p class="meta"><strong>File:</strong> ${escapeHtml(fragment._file)}</p>
           <label>
@@ -172,7 +183,19 @@ function renderPage() {
       .kicker { margin: 0; color: var(--accent); text-transform: uppercase; font-size: 0.75rem; font-weight: 800; }
       h2 { margin: 4px 0 0; font-size: 1.16rem; }
       .fragment-text { max-width: 820px; font-size: 1rem; }
+      .label { margin: 12px 0 4px; color: var(--accent); text-transform: uppercase; font-size: 0.75rem; font-weight: 800; }
       .meta { color: var(--muted); margin: 7px 0; }
+      .evidence {
+        margin-top: 12px; border: 1px solid var(--line); border-radius: 8px;
+        background: #f8fafc; padding: 12px;
+      }
+      .evidence p { margin: 0 0 8px; color: var(--muted); }
+      .evidence ul { display: grid; gap: 8px; margin: 0; padding-left: 1.15rem; }
+      .evidence li span, .evidence li small { display: block; }
+      .evidence li small {
+        margin-top: 3px; color: var(--muted); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 0.78rem; overflow-wrap: anywhere;
+      }
       label { display: grid; gap: 6px; margin-top: 12px; color: var(--muted); font-weight: 700; }
       textarea {
         width: 100%; min-height: 80px; resize: vertical; border: 1px solid var(--line);
@@ -197,7 +220,7 @@ function renderPage() {
       <section class="hero">
         <p class="kicker">Local only / writes to repo JSON</p>
         <h1>Editorial fragment review</h1>
-        <p>This tool binds to 127.0.0.1 and updates files under <code>editorial/fragments/</code>. Use the public <code>/backstage</code> page for read-only deployed debugging.</p>
+        <p>This tool binds to 127.0.0.1 and updates files under <code>editorial/fragments/</code>. The main paragraph is draft whitepaper text. The extracted claims underneath are our source-backed interpretation, not verbatim source text. Use the public <code>/backstage</code> page for read-only deployed debugging.</p>
         <div class="metrics">
           <span class="pill">${fragments.length} fragments</span>
           <span class="pill">${counts.draft ?? 0} draft</span>
