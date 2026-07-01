@@ -1882,6 +1882,98 @@ export const guidanceBlocks: GuidanceBlock[] = [
           "mgen-discordant-amr-predictions-2020",
         ],
       },
+      {
+        title: "Define the validation boundary by output type",
+        summary:
+          "Do not validate a pipeline as a single black box. State which outputs are reportable, which are exploratory, and which require separate evidence.",
+        columns: ["Output type", "Boundary to define", "Evidence to review", "Beta caution"],
+        rows: [
+          {
+            cells: [
+              "Cluster, relatedness or transmission-support output",
+              "Whether the workflow supports ruling cases in or out of a cluster, detecting related cases, or informing transmission investigation.",
+              "Sampling frame, comparison set, distance or relatedness method, epidemiological context, turnaround requirement and discordance-review route.",
+              "A genomic link does not by itself prove transmission, source or exposure route.",
+            ],
+            sourceIds: ["ecdc-wgs-surveillance-2016", "phe-case-study", "clinical-microbiology-implementation-2026"],
+          },
+          {
+            cells: [
+              "Lineage, variant or strain-monitoring output",
+              "Which nomenclature, reference data, genome-completeness rule, update cadence and reporting route are approved for surveillance use.",
+              "Reference database version, lineage or variant caller, quality limits, partial-genome handling, phenotyping link if relevant, and correction route.",
+              "Respiratory-virus and other lineage systems can change; users need method and version context with the result.",
+            ],
+            sourceIds: [
+              "who-sars-cov-2-sequencing-implementation-2021",
+              "cdc-nejm-2019",
+              "clinical-microbiology-implementation-2026",
+            ],
+          },
+          {
+            cells: [
+              "AMR or phenotype-inference output",
+              "Whether genotype-to-phenotype inference is approved for screening, surveillance, clinical support, public-health reporting, or not reportable.",
+              "Organism, drug, resistance mechanism, database version, validation set, discordance review, follow-up phenotypic testing and uncertainty wording.",
+              "Predictive reliability varies by organism, antimicrobial, mechanism and evidence base; do not generalise one validated inference to all phenotypes.",
+            ],
+            sourceIds: [
+              "cdc-nejm-2019",
+              "clinical-microbiology-implementation-2026",
+              "mgen-discordant-amr-predictions-2020",
+              "mgen-eurl-amr-proficiency-test-2023",
+            ],
+          },
+          {
+            cells: [
+              "Virulence, source or exposure-support output",
+              "Whether markers, source-attribution analyses or exposure links are approved for investigation support, routine surveillance or public communication.",
+              "Marker definition, source database, comparator set, food, animal, environmental or epidemiological evidence, and wording for uncertainty.",
+              "Genomic evidence should support source investigation; it should not replace exposure evidence or environmental context.",
+            ],
+            sourceIds: ["foodborne-genomics-allard-2018", "phe-case-study", "ecdc-wgs-surveillance-2016"],
+          },
+          {
+            cells: [
+              "Repository or platform submission output",
+              "Whether the service is validating a reportable public-health result, a repository-ready sequence record, a partial record, or an internal operational record.",
+              "QC annotation, data type, minimum metadata, public versus restricted fields, accession linkage, replacement route and withdrawal route.",
+              "Repository readiness is not the same as report readiness, and vice versa.",
+            ],
+            sourceIds: [
+              "who-genomic-data-sharing-platforms-2025",
+              "who-sars-cov-2-sequencing-implementation-2021",
+              "aphl-ngs-implementation-2016",
+            ],
+          },
+          {
+            cells: [
+              "User-facing report or dashboard output",
+              "Whether the product is an urgent alert, sample-level report, cluster briefing, surveillance summary, dashboard or service-review output.",
+              "Recipient, decision pathway, timing, report-template version, quality limits, uncertainty wording, correction route and user-feedback route.",
+              "A technically valid output can still be unsafe for use if the report boundary and recipient route are unclear.",
+            ],
+            sourceIds: [
+              "who-national-genomic-surveillance-strategy-2023",
+              "clinical-microbiology-implementation-2026",
+              "who-genomic-data-sharing-platforms-2025",
+            ],
+          },
+        ],
+        sourceIds: [
+          "ecdc-wgs-surveillance-2016",
+          "phe-case-study",
+          "clinical-microbiology-implementation-2026",
+          "who-sars-cov-2-sequencing-implementation-2021",
+          "cdc-nejm-2019",
+          "mgen-discordant-amr-predictions-2020",
+          "mgen-eurl-amr-proficiency-test-2023",
+          "foodborne-genomics-allard-2018",
+          "who-genomic-data-sharing-platforms-2025",
+          "aphl-ngs-implementation-2016",
+          "who-national-genomic-surveillance-strategy-2023",
+        ],
+      },
     ],
     audiences: ["lab-lead", "bioinformatician", "data-manager", "director"],
     implementationStages: ["pilot", "routine-service", "upgrading"],

@@ -3416,5 +3416,61 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is a beta operational handoff record. It deliberately avoids exact INSDC, NCBI, ENA, GISAID or organism-specific field requirements until those templates are extracted directly.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-validation-boundary-by-output",
+    "sectionId": "quality-validation-before-switch",
+    "title": "Validation boundary by output type",
+    "kind": "table",
+    "text": "Validation should be defined by output type rather than by treating the pipeline as a single black box. Cluster relatedness, lineage or variant calls, AMR or phenotype inference, virulence or source-support outputs, repository records and user-facing reports each need a named reportability boundary, evidence basis, version context and uncertainty route.",
+    "claimIds": [
+      "claim-quality-validation-whole-chain",
+      "claim-release-change-control-validation",
+      "claim-beta-organism-service-model-matrix",
+      "claim-reporting-products-fit-decision",
+      "claim-beta-tb-amr-hai-reporting-fields"
+    ],
+    "sourceIds": [
+      "ecdc-wgs-surveillance-2016",
+      "phe-case-study",
+      "clinical-microbiology-implementation-2026",
+      "who-sars-cov-2-sequencing-implementation-2021",
+      "cdc-nejm-2019",
+      "mgen-discordant-amr-predictions-2020",
+      "mgen-eurl-amr-proficiency-test-2023",
+      "foodborne-genomics-allard-2018",
+      "who-genomic-data-sharing-platforms-2025",
+      "aphl-ngs-implementation-2016",
+      "who-national-genomic-surveillance-strategy-2023"
+    ],
+    "conditions": {
+      "audiences": [
+        "lab-lead",
+        "bioinformatician",
+        "data-manager",
+        "director",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "quality",
+        "validation",
+        "change-control",
+        "reporting",
+        "amr",
+        "repositories",
+        "decision-use"
+      ]
+    },
+    "order": 51,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta boundary table. It does not prescribe organism-specific thresholds, validation sample sizes, exact nomenclature rules, legal reportability, or clinical decision rules.",
+    "updatedAt": "2026-07-01"
   }
 ]
