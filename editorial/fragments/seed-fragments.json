@@ -1654,6 +1654,56 @@
     "updatedAt": "2026-07-01"
   },
   {
+    "id": "fragment-beta-procurement-supply-chain-resilience",
+    "sectionId": "workforce-sustainability-costing",
+    "title": "Procurement and supply-chain resilience",
+    "kind": "table",
+    "text": "A service can fail because purchasing, import, resupply, maintenance or vendor support is slow. The beta guide should make procurement and supply-chain risks visible alongside staffing, storage, compute and quality-management costs.",
+    "claimIds": [
+      "claim-beta-procurement-supply-chain-resilience",
+      "claim-costing-recurrent-service-categories",
+      "claim-beta-implementation-dependency-matrix"
+    ],
+    "sourceIds": [
+      "asia-supply-chains-genomic-surveillance-2026",
+      "who-genomics-costing-tool-manual-2024",
+      "who-genomic-surveillance-progress-2023",
+      "who-national-genomic-surveillance-strategy-2023",
+      "clinical-microbiology-implementation-2026",
+      "aphl-ngs-implementation-2016",
+      "phe-case-study",
+      "pha4ge-infrastructure"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "policy",
+        "funder",
+        "lab-lead",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "procurement",
+        "supply-chain",
+        "costing",
+        "sustainability",
+        "implementation-model"
+      ]
+    },
+    "order": 45,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta resilience checklist. It does not prescribe stock levels, supplier choices, customs procedures or national procurement rules.",
+    "updatedAt": "2026-07-01"
+  },
+  {
     "id": "fragment-beta-storage-recovery-map",
     "sectionId": "storage-backup-archive-retention",
     "title": "Beta storage, backup, archive and recovery map",

@@ -622,5 +622,16 @@
     "tags": ["economics", "costing", "investment-case", "continuous-surveillance", "outbreak-response", "scenario-planning"],
     "limitations": "Supports a beta strategy-choice table. It does not provide universal cost-effectiveness thresholds, ROI estimates, pathogen-specific sampling fractions or country-specific budget assumptions.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-beta-procurement-supply-chain-risks",
+    "sourceId": "asia-supply-chains-genomic-surveillance-2026",
+    "sourceLocator": "Stona et al. 2026 BMJ Global Health supply-chain assessment; WHO 2023 genomic surveillance progress report; WHO 2024 genomics costing tool manual",
+    "evidenceType": "passage-note",
+    "excerpt": "high equipment and consumable costs",
+    "passageSummary": "Stona et al. report procurement and supply-chain challenges for pathogen genomic surveillance in South and Southeast Asia, including high equipment and consumable costs, long equipment purchasing lead times, long reagent resupply times, customs clearance, variable import procedures, taxes and duties. The paper argues for coordinated national and regional efforts to strengthen supply-chain systems for timely disease detection and response. WHO's genomic surveillance progress report treats supply chains, equipment, supplies, workforce, EQA and information-system integration as linked implementation capacities, and WHO's costing manual includes reagents, consumables, equipment, maintenance, facilities, transport, bioinformatics and quality-management cost categories.",
+    "tags": ["procurement", "supply-chain", "sustainability", "reagents", "maintenance", "costing", "implementation"],
+    "limitations": "Supports beta procurement-resilience questions. It does not provide universal stock levels, procurement lead times, supplier choices, customs rules or national purchasing procedures.",
+    "reviewStatus": "reviewed"
   }
 ]

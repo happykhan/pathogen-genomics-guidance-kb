@@ -3184,6 +3184,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "Use costing as a scenario exercise rather than a one-off budget line. Compare throughput assumptions, platform choices, procurement costs, staffing patterns, training needs, quality-management activities, storage and compute options, and whether costs are shared with other pathogen programmes. The current sources support a category model; they still do not justify a universal cost-per-sample or return-on-investment claim across pathogens and countries.",
       "For infrastructure, the costing model should include the recurrent work that keeps the service alive: storage growth, redundancy if used, cloud processing and storage, software licences, in-house hardware renewal, maintenance fees, system administration, systems engineering, quality-management activities, and staff time for support and troubleshooting.",
       "Personnel should be costed as named workflow and support roles, not as an overhead after equipment is chosen. WHO's costing manual includes personnel and training across workflow steps, administrative and management personnel, quality and biosafety managers, laboratory directors, human resources, and quality-management activities such as accreditation, proficiency testing and certification.",
+      "Procurement and supply chains should be treated as service-continuity risks. Stona et al. identify high equipment and consumable costs, long equipment purchasing lead times, long reagent resupply times, customs clearance, variable import procedures, taxes and duties as barriers for pathogen genomic surveillance in South and Southeast Asia. These risks affect turnaround, validation, response readiness, and whether a service can run when demand rises.",
     ],
     bodySourceIds: {
       0: ["phe-case-study"],
@@ -3192,6 +3193,11 @@ export const guidanceBlocks: GuidanceBlock[] = [
       3: ["who-genomics-costing-tool-manual-2024", "who-national-genomic-surveillance-strategy-2023"],
       4: ["who-genomics-costing-tool-manual-2024", "pha4ge-infrastructure"],
       5: ["who-genomics-costing-tool-manual-2024"],
+      6: [
+        "asia-supply-chains-genomic-surveillance-2026",
+        "who-genomic-surveillance-progress-2023",
+        "who-genomics-costing-tool-manual-2024",
+      ],
     },
     technicalDetail: [
       "Minimum recurrent infrastructure cost lines: cloud compute, cloud storage, data egress if relevant, in-house server hardware, high-performance storage, archive storage, backup storage, redundancy, software licences, maintenance fees, systems administration, systems engineering, user support, validation or revalidation time, and quality-management activities.",
@@ -3287,6 +3293,92 @@ export const guidanceBlocks: GuidanceBlock[] = [
           "who-genomic-surveillance-progress-2023",
         ],
       },
+      {
+        title: "Beta procurement and supply-chain resilience checklist",
+        summary:
+          "Use this checklist to test whether the planned service can keep running when purchasing, import, resupply, maintenance or vendor support is slow.",
+        columns: ["Risk area", "What to record", "Service decision to make", "Source-backed caution"],
+        rows: [
+          {
+            cells: [
+              "Sequencing platform and equipment purchase",
+              "Procurement route, expected lead time, customs or import requirements, warranty, service contract, installation needs and local engineering support.",
+              "Decide whether the platform choice is supportable in the setting, not only whether the instrument specification is attractive.",
+              "Long equipment purchasing lead times and variable import procedures can delay capacity building.",
+            ],
+            sourceIds: ["asia-supply-chains-genomic-surveillance-2026", "aphl-ngs-implementation-2016"],
+          },
+          {
+            cells: [
+              "Reagent and consumable resupply",
+              "Critical consumables, supplier or distributor, usual resupply time, shelf-life, cold-chain needs, minimum stock rule and substitution options.",
+              "Decide what level of routine and surge stock is needed to meet the service use case and turnaround expectation.",
+              "The beta guide cannot prescribe universal stock levels; resupply time and demand volatility are local assumptions.",
+            ],
+            sourceIds: [
+              "asia-supply-chains-genomic-surveillance-2026",
+              "who-genomics-costing-tool-manual-2024",
+            ],
+          },
+          {
+            cells: [
+              "Customs, taxes, duties and import procedures",
+              "Importer, clearance route, tax or duty assumptions, documentation owner, expected delays and escalation route.",
+              "Decide whether procurement timelines are realistic for routine service and emergency response.",
+              "Import and customs barriers are operational risks, not only finance-office details.",
+            ],
+            sourceIds: ["asia-supply-chains-genomic-surveillance-2026"],
+          },
+          {
+            cells: [
+              "Maintenance, repair and vendor support",
+              "Service contract, preventive maintenance schedule, response time, local engineer availability, spare-parts route and downtime fallback.",
+              "Decide what happens to sequencing, analysis and reporting when a platform or support route is unavailable.",
+              "Costing should include maintenance and support; otherwise service continuity is under-budgeted.",
+            ],
+            sourceIds: [
+              "asia-supply-chains-genomic-surveillance-2026",
+              "who-genomics-costing-tool-manual-2024",
+              "pha4ge-infrastructure",
+            ],
+          },
+          {
+            cells: [
+              "Transport and sample logistics",
+              "Sample transfer route, cold-chain or biosafety needs, expected transport time, failed-delivery route and responsibility for tracking.",
+              "Decide whether the service model can meet the public-health turnaround target when samples move between sites.",
+              "Centralised and collaborative models create sample-transfer dependencies that must be managed explicitly.",
+            ],
+            sourceIds: [
+              "who-national-genomic-surveillance-strategy-2023",
+              "clinical-microbiology-implementation-2026",
+              "phe-case-study",
+            ],
+          },
+          {
+            cells: [
+              "Shared or regional procurement",
+              "Which items could be coordinated nationally or regionally, which partners are involved, and who owns forecasting, contracts and emergency allocation.",
+              "Decide whether coordination can reduce delays, support surge response, or stabilize access to critical consumables.",
+              "Regional coordination can help, but it still needs local responsibility, governance and funding.",
+            ],
+            sourceIds: [
+              "asia-supply-chains-genomic-surveillance-2026",
+              "who-genomic-surveillance-progress-2023",
+            ],
+          },
+        ],
+        sourceIds: [
+          "asia-supply-chains-genomic-surveillance-2026",
+          "who-genomics-costing-tool-manual-2024",
+          "who-genomic-surveillance-progress-2023",
+          "who-national-genomic-surveillance-strategy-2023",
+          "clinical-microbiology-implementation-2026",
+          "aphl-ngs-implementation-2016",
+          "phe-case-study",
+          "pha4ge-infrastructure",
+        ],
+      },
     ],
     audiences: ["director", "policy", "funder", "lab-lead"],
     implementationStages: ["exploring", "pilot", "upgrading", "national-scale"],
@@ -3306,12 +3398,14 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "australia-microbial-genomics-framework-2025",
       "east-africa-genomics-landscape-2024",
       "who-genomic-surveillance-progress-2023",
+      "asia-supply-chains-genomic-surveillance-2026",
       "aphl-ngs-implementation-2016",
       "mgen-california-covidnet-2023",
     ],
     gaps: [
       "A setting-specific quantitative extraction is still needed before making general return-on-investment claims across pathogens and countries.",
       "The scenario templates still need local quantitative examples with throughput, staffing, procurement and recurrent-cost assumptions by service model.",
+      "The procurement-resilience checklist still needs country-specific procurement rules, stock policies, lead-time assumptions, vendor-support arrangements and emergency purchasing pathways.",
     ],
   },
   {

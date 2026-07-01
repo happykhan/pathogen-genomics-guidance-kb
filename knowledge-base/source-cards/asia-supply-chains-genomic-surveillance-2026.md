@@ -7,7 +7,7 @@
 
 ## Status
 
-`candidate source; full text available locally; high-level extraction`
+`source-backed at high level; full text available locally; high-level extraction`
 
 ## Relevance
 
@@ -30,8 +30,9 @@ This source directly supports the guide's emphasis that genomic infrastructure i
 ## Current Use In App
 
 - Resource finder candidate source.
-- Not yet cited in guidance prose.
+- Cited in `Cost the recurrent service, not only the initial purchase`.
+- Supports the beta procurement and supply-chain resilience checklist.
 
 ## Gaps
 
-- Needs extraction into procurement, costing, and sustainability modules.
+- Needs structured extraction of country-specific examples, lead-time ranges, procurement models, and recommended supply-chain interventions before the guide can prescribe detailed procurement practice.

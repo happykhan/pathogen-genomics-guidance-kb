@@ -22,7 +22,9 @@ Sustainability should therefore be assessed across recurrent costs, not only ini
 
 The economic strategy also needs to be named before costing. A pilot, an outbreak-triggered service, selective routine surveillance, continuous surveillance, and a national investment case do not have the same cost structure or evidence requirements. Egli and Howden frame continuous surveillance versus outbreak-triggered sequencing as an investment trade-off; Price et al. show that published bacterial WGS economic evaluations are supportive but heterogeneous; WHO's costing tool gives scenario categories rather than universal cost estimates.
 
-The dynamic guide now includes beta responsibility templates, workforce-capacity worksheets, implementation-model variants, costing-scenario tables, and an economic-strategy table. These make hidden labour, support ownership, external dependency, recurrent cost lines, local capability building, and transferability assumptions visible. They still do not provide staffing ratios, FTE calculators, salary assumptions, pathogen-specific sampling fractions, or universally valid return-on-investment estimates.
+Procurement and supply chains should be handled in the same sustainability frame. Stona et al. identify equipment and consumable costs, purchasing lead times, reagent resupply times, customs clearance, variable import procedures, taxes, and duties as barriers for pathogen genomic surveillance in South and Southeast Asia. These are operational risks because they affect whether a service can meet routine turnaround or surge-response needs.
+
+The dynamic guide now includes beta responsibility templates, workforce-capacity worksheets, implementation-model variants, costing-scenario tables, an economic-strategy table, and a procurement-resilience checklist. These make hidden labour, support ownership, external dependency, recurrent cost lines, local capability building, supply-chain risk, and transferability assumptions visible. They still do not provide staffing ratios, FTE calculators, salary assumptions, pathogen-specific sampling fractions, stock policies, or universally valid return-on-investment estimates.
 
 ## Source Basis
 
@@ -48,6 +50,7 @@ The dynamic guide now includes beta responsibility templates, workforce-capacity
 - Source-backed staffing ratios or FTE examples by throughput, organism focus, service model and implementation stage are still needed.
 - Quantitative local costing examples and return-on-investment assumptions remain setting-specific and need direct extraction.
 - Procurement, support, and sustainability worksheets need review against local finance, HR, procurement, and partner-support arrangements.
+- Procurement lead times, stock policies, supplier support and emergency purchasing pathways remain country- and institution-specific.
 
 ## Status
 

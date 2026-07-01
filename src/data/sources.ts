@@ -100,6 +100,10 @@ export const sources = {
     label: "Nguinkal et al. 2024, Pathogen genomics landscape in the East African Community",
     path: "knowledge-base/source-cards/east-africa-pathogen-genomics-landscape-2024.md",
   },
+  "asia-supply-chains-genomic-surveillance-2026": {
+    label: "Stona et al. 2026, Strengthening supply chains for pathogen genomic surveillance in Asia",
+    path: "knowledge-base/source-cards/asia-supply-chains-genomic-surveillance-2026.md",
+  },
   "mgen-kenya-amr-genomics-capacity-2023": {
     label: "Kigen et al. 2023, Genomics surveillance capacity for AMR in Kenya",
     path: "knowledge-base/source-cards/microbial-genomics-implementation-collection.md",

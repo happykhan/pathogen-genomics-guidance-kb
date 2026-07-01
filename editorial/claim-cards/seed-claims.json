@@ -802,5 +802,30 @@
     "confidence": "medium",
     "limitations": "Does not justify a universal cost-per-sample, sampling fraction, return-on-investment estimate or recommended economic strategy.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "claim-beta-procurement-supply-chain-resilience",
+    "sourceId": "asia-supply-chains-genomic-surveillance-2026",
+    "sourceLocator": "Stona et al. 2026; WHO 2023 progress report; WHO 2024 costing tool manual",
+    "evidenceItemIds": [
+      "evidence-beta-procurement-supply-chain-risks",
+      "evidence-who-progress-workforce-capacity",
+      "evidence-who-costing-bioinformatics-storage-maintenance",
+      "evidence-who-costing-personnel-quality-management"
+    ],
+    "claim": "A sustainable pathogen genomics service should treat procurement, reagent resupply, equipment lead time, import procedures, maintenance, vendor support and transport as service-continuity risks, not only finance or purchasing details.",
+    "extractedText": "Stona et al. identify high equipment and consumable costs, long equipment purchasing lead times, long reagent resupply times, customs clearance, variable import procedures, taxes and duties as supply-chain challenges for pathogen genomic surveillance. WHO progress reporting links supply chains to surveillance capacity, and WHO costing guidance includes reagents, consumables, equipment, maintenance, facilities, transport and bioinformatics categories.",
+    "notes": "Use for a procurement-resilience checklist in workforce/sustainability/costing and implementation-model sections. Avoid prescribing stock levels or supplier choices.",
+    "tags": ["procurement", "supply-chain", "sustainability", "maintenance", "reagents", "service-continuity"],
+    "candidateSectionIds": [
+      "workforce-sustainability-costing",
+      "implementation-patterns-case-studies"
+    ],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "multiple",
+    "confidence": "medium",
+    "limitations": "Does not provide universal stock levels, lead times, supplier choices, customs procedures or procurement rules.",
+    "reviewStatus": "reviewed"
   }
 ]
