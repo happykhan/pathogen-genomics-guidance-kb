@@ -121,6 +121,15 @@ function expectTopGuidance(label, profile, expectedIds, limit = 5) {
   }
 }
 
+function expectVisibleGuidance(label, profile, expectedIds, minimumScore = 7) {
+  expectedIds.forEach((id) => {
+    const score = scoreBlock(id, profile);
+    if (score < minimumScore) {
+      errors.push(`${label}: expected ${id} to score at least ${minimumScore}; got ${score}`);
+    }
+  });
+}
+
 const constraintScenarios = [
   {
     label: "unreliable internet",
@@ -225,9 +234,79 @@ const representativeProfiles = [
   },
 ];
 
+const organismProfiles = [
+  {
+    label: "enteric bacteria service profile",
+    profile: withProfile({
+      role: "lab-lead",
+      stage: "pilot",
+      organisms: ["enteric-bacteria"],
+      goals: ["design-infrastructure", "share-data"],
+    }),
+    expectedVisibleGuidance: [
+      "use-case-service-model",
+      "reporting-decision-use",
+      "reporting-enteric-bacteria",
+      "metadata-and-epidemiology-integration",
+      "sharing-is-not-unconditional",
+    ],
+  },
+  {
+    label: "respiratory virus sharing profile",
+    profile: withProfile({
+      role: "data-manager",
+      stage: "routine-service",
+      organisms: ["respiratory-viruses"],
+      goals: ["share-data"],
+    }),
+    expectedVisibleGuidance: [
+      "use-case-service-model",
+      "reporting-decision-use",
+      "reporting-respiratory-viruses",
+      "metadata-and-epidemiology-integration",
+      "sharing-is-not-unconditional",
+    ],
+  },
+  {
+    label: "TB and AMR validation profile",
+    profile: withProfile({
+      role: "bioinformatician",
+      stage: "routine-service",
+      organisms: ["tb", "amr"],
+      goals: ["validate-workflows"],
+    }),
+    expectedVisibleGuidance: [
+      "use-case-service-model",
+      "quality-validation-before-switch",
+      "workflow-reproducibility",
+      "reporting-tb-amr",
+      "reporting-decision-use",
+    ],
+  },
+  {
+    label: "healthcare-associated infection profile",
+    profile: withProfile({
+      role: "lab-lead",
+      stage: "routine-service",
+      organisms: ["nosocomial", "amr"],
+      goals: ["validate-workflows"],
+    }),
+    expectedVisibleGuidance: [
+      "use-case-service-model",
+      "quality-validation-before-switch",
+      "reporting-healthcare-associated-infection",
+      "reporting-tb-amr",
+      "reporting-decision-use",
+    ],
+  },
+];
+
 constraintScenarios.forEach((scenario) => scenario.checks.forEach((check) => check()));
 representativeProfiles.forEach((scenario) =>
   expectTopGuidance(scenario.label, scenario.profile, scenario.expectedTopGuidance, 7),
+);
+organismProfiles.forEach((scenario) =>
+  expectVisibleGuidance(scenario.label, scenario.profile, scenario.expectedVisibleGuidance),
 );
 
 if (errors.length) {
@@ -237,5 +316,5 @@ if (errors.length) {
 }
 
 console.log(
-  `Scenario QA passed: ${constraintScenarios.length} constraint scenarios and ${representativeProfiles.length} representative profiles.`,
+  `Scenario QA passed: ${constraintScenarios.length} constraint scenarios, ${representativeProfiles.length} representative profiles, and ${organismProfiles.length} organism profiles.`,
 );

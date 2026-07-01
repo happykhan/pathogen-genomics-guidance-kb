@@ -2096,5 +2096,56 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is an adoption checklist for shared workflows. It is not an endorsement of any specific workflow ecosystem.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-organism-profile-qa-checks",
+    "sectionId": "use-case-service-model",
+    "title": "Beta organism profile QA checks",
+    "kind": "table",
+    "text": "Use profile checks to confirm that the dynamic guide brings the relevant organism and use-case sections forward for enteric bacteria, respiratory viruses, TB/AMR and healthcare-associated infection. These checks support beta tailoring, but they do not replace review by disease-programme users.",
+    "claimIds": [
+      "claim-beta-organism-service-model-matrix",
+      "claim-beta-enteric-respiratory-reporting-fields",
+      "claim-beta-tb-amr-hai-reporting-fields"
+    ],
+    "sourceIds": [
+      "who-national-genomic-surveillance-strategy-2023",
+      "ecdc-wgs-surveillance-2016",
+      "phe-case-study",
+      "foodborne-genomics-allard-2018",
+      "who-sars-cov-2-sequencing-implementation-2021",
+      "cdc-nejm-2019",
+      "clinical-microbiology-implementation-2026",
+      "mgen-centre-specific-typing-ipc-2021"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "policy",
+        "lab-lead",
+        "bioinformatician",
+        "data-manager",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "use-case",
+        "service-model",
+        "organism-specific",
+        "reporting",
+        "qa"
+      ]
+    },
+    "order": 38,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta profile QA scaffold. Disease-programme user review remains required.",
+    "updatedAt": "2026-07-01"
   }
 ]

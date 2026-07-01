@@ -306,6 +306,60 @@ export const guidanceBlocks: GuidanceBlock[] = [
           "clinical-microbiology-implementation-2026",
         ],
       },
+      {
+        title: "Beta profile checks for the dynamic guide",
+        summary:
+          "Use these checks to test whether the wizard brings relevant organism and use-case sections forward. They are QA checks, not disease-programme approval.",
+        columns: ["Wizard profile signal", "Sections that should become prominent", "Reason", "Remaining review need"],
+        rows: [
+          {
+            cells: [
+              "Enteric bacteria with sharing or infrastructure goals",
+              "Use-case service model, reporting decision use, enteric-bacteria reporting, metadata lineage and data-sharing governance.",
+              "Enteric services often connect outbreak detection, source investigation, AMR or virulence findings, One Health users and repository or platform routes.",
+              "Needs review against Salmonella, STEC, Listeria and local foodborne-reporting practice.",
+            ],
+            sourceIds: ["phe-case-study", "foodborne-genomics-allard-2018", "ecdc-wgs-surveillance-2016"],
+          },
+          {
+            cells: [
+              "Respiratory viruses with sharing or surveillance goals",
+              "Use-case service model, respiratory-virus reporting, reporting limitations, repository/data-sharing and metadata lineage.",
+              "Variant or lineage reporting needs sampling context, collection date and place, genome quality, sharing route and correction history.",
+              "Needs review against current influenza, RSV and SARS-CoV-2 nomenclature, QC and repository guidance.",
+            ],
+            sourceIds: ["who-sars-cov-2-sequencing-implementation-2021", "cdc-nejm-2019"],
+          },
+          {
+            cells: [
+              "TB or AMR with validation goals",
+              "Use-case service model, TB/AMR reporting, quality validation, workflow provenance and reporting limitations.",
+              "Transmission inference and resistance inference need separate evidence, validation basis, versioning, and follow-up testing status.",
+              "Needs review against current resistance database guidance, thresholds and national TB or AMR reporting policy.",
+            ],
+            sourceIds: ["cdc-nejm-2019", "ecdc-wgs-surveillance-2016", "clinical-microbiology-implementation-2026"],
+          },
+          {
+            cells: [
+              "Healthcare-associated infection or nosocomial focus",
+              "Use-case service model, healthcare-associated infection reporting, TB/AMR reporting where relevant, quality validation and feedback loops.",
+              "Hospital-facing reports need recipient route, comparison set, relatedness statement, uncertainty, infection-control action boundary and feedback.",
+              "Needs review against local clinical governance, organism-specific cluster interpretation and infection-control workflow examples.",
+            ],
+            sourceIds: ["clinical-microbiology-implementation-2026", "mgen-centre-specific-typing-ipc-2021"],
+          },
+        ],
+        sourceIds: [
+          "who-national-genomic-surveillance-strategy-2023",
+          "ecdc-wgs-surveillance-2016",
+          "phe-case-study",
+          "foodborne-genomics-allard-2018",
+          "who-sars-cov-2-sequencing-implementation-2021",
+          "cdc-nejm-2019",
+          "clinical-microbiology-implementation-2026",
+          "mgen-centre-specific-typing-ipc-2021",
+        ],
+      },
     ],
     audiences: ["director", "policy", "lab-lead", "bioinformatician", "data-manager", "it-security", "funder", "all"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
@@ -328,7 +382,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "mgen-gonorrhoea-wgs-amr-genogroups-2021",
     ],
     gaps: [
-      "The beta organism and use-case matrix still needs testing against organism-specific wizard profiles and review by disease-programme users.",
+      "The beta organism and use-case matrix now has automated profile checks for key organism profiles, but still needs review by disease-programme users.",
       "Organism-specific thresholds, sampling fractions, report wording and repository field sets still need full source extraction before the guide can prescribe detailed rules.",
     ],
   },
