@@ -20,7 +20,9 @@ The same case study reports operational impacts after implementation: WGS replac
 
 Sustainability should therefore be assessed across recurrent costs, not only initial purchase. Programmes need to plan for storage growth, compute renewal, workflow maintenance, software updates, validation, user support, training, accreditation, data sharing, security, and staff retention.
 
-The dynamic guide now includes beta responsibility templates, workforce-capacity worksheets, implementation-model variants, and costing-scenario tables. These make hidden labour, support ownership, external dependency, recurrent cost lines, and local capability building visible. They still do not provide staffing ratios, FTE calculators, salary assumptions, or universally valid return-on-investment estimates.
+The economic strategy also needs to be named before costing. A pilot, an outbreak-triggered service, selective routine surveillance, continuous surveillance, and a national investment case do not have the same cost structure or evidence requirements. Egli and Howden frame continuous surveillance versus outbreak-triggered sequencing as an investment trade-off; Price et al. show that published bacterial WGS economic evaluations are supportive but heterogeneous; WHO's costing tool gives scenario categories rather than universal cost estimates.
+
+The dynamic guide now includes beta responsibility templates, workforce-capacity worksheets, implementation-model variants, costing-scenario tables, and an economic-strategy table. These make hidden labour, support ownership, external dependency, recurrent cost lines, local capability building, and transferability assumptions visible. They still do not provide staffing ratios, FTE calculators, salary assumptions, pathogen-specific sampling fractions, or universally valid return-on-investment estimates.
 
 ## Source Basis
 

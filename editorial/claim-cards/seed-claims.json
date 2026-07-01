@@ -782,5 +782,25 @@
     "confidence": "high",
     "limitations": "Does not define exact field names, mandatory status, controlled vocabularies, repository-required fields or jurisdictional permissions for sensitive fields.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "claim-beta-economic-strategy-choice",
+    "sourceId": "lancet-wgs-economic-strategies-2026",
+    "sourceLocator": "Egli and Howden 2026; Price et al. 2023; WHO 2024 costing tool manual; Khoo et al. 2025 national investment case framework",
+    "evidenceItemIds": ["evidence-beta-economic-strategy-choice", "evidence-price-economic-review-context"],
+    "claim": "Costing should distinguish continuous surveillance, selective surveillance, outbreak-triggered sequencing and pilot services because they create different recurring costs, detection benefits, workforce needs, response dependencies and evidence requirements.",
+    "extractedText": "Egli and Howden contrast continuous or selective WGS surveillance with outbreak-triggered sequencing and frame the choice as a trade-off between steady surveillance costs and delayed detection risk. Price et al. show supportive but heterogeneous economic evidence. WHO's costing manual supports scenario-based costing categories, and Khoo et al. support explicit investment-case assumptions.",
+    "notes": "Use for a strategy-choice table in the costing and investment sections. Keep numeric ROI claims out until full quantitative extraction is complete.",
+    "tags": ["economics", "costing", "investment-case", "continuous-surveillance", "outbreak-response", "scenario-planning"],
+    "candidateSectionIds": [
+      "why-pathogen-genomics",
+      "workforce-sustainability-costing"
+    ],
+    "organism": "multiple",
+    "audience": "director",
+    "implementationStage": "multiple",
+    "confidence": "medium",
+    "limitations": "Does not justify a universal cost-per-sample, sampling fraction, return-on-investment estimate or recommended economic strategy.",
+    "reviewStatus": "reviewed"
   }
 ]

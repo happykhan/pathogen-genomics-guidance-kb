@@ -611,5 +611,16 @@
     "tags": ["metadata", "organism-specific", "field-priorities", "epidemiology", "reporting", "repositories"],
     "limitations": "Supports beta field priorities by organism/use case. It does not define exact repository schemas, controlled vocabularies, pathogen-specific thresholds or legal permissions for sensitive fields.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-beta-economic-strategy-choice",
+    "sourceId": "lancet-wgs-economic-strategies-2026",
+    "sourceLocator": "Egli and Howden 2026 Personal View; Price et al. 2023 economic-evaluation review; WHO 2024 genomics costing tool manual; Khoo et al. 2025 national investment case framework",
+    "evidenceType": "passage-note",
+    "excerpt": "continuous surveillance versus outbreak-triggered investigations",
+    "passageSummary": "Egli and Howden contrast continuous or selective WGS surveillance with sequencing triggered after an outbreak is suspected, framing the choice as an investment trade-off between steady recurring surveillance costs and the risk of delayed detection or larger outbreaks. The paper notes that returns depend on setting, pathogen, health-system resources, sequencing approach, sampling strategy and response capacity. Price et al. show that bacterial WGS economic evaluations generally support WGS surveillance on economic grounds but remain heterogeneous and concentrated in high-income hospital infection-prevention and foodborne-surveillance settings. WHO's costing tool manual supports scenario-based costing across throughput, platform, personnel, training, facilities, transport, bioinformatics and quality management. Khoo et al. support making national investment cases through explicit value, capacity and implementation assumptions.",
+    "tags": ["economics", "costing", "investment-case", "continuous-surveillance", "outbreak-response", "scenario-planning"],
+    "limitations": "Supports a beta strategy-choice table. It does not provide universal cost-effectiveness thresholds, ROI estimates, pathogen-specific sampling fractions or country-specific budget assumptions.",
+    "reviewStatus": "reviewed"
   }
 ]

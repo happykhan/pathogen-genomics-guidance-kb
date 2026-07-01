@@ -163,6 +163,84 @@ export const guidanceBlocks: GuidanceBlock[] = [
           "national-investment-case-2025",
         ],
       },
+      {
+        title: "Choose the economic strategy before costing",
+        summary:
+          "Different sequencing strategies answer different public-health questions and create different recurrent costs. Use this table before making return-on-investment or procurement claims.",
+        columns: ["Strategy", "When it may fit", "Cost and capacity implications", "Evidence caution"],
+        rows: [
+          {
+            cells: [
+              "Pilot or proof-of-service sequencing",
+              "A programme is testing feasibility, validating a use case, comparing WGS with an existing method, or building a business case.",
+              "Short-term sequencing, validation, staff training, data handling, user feedback and limited storage may dominate the budget.",
+              "A pilot can support a stop/go decision, but it does not prove routine surveillance value or long-term sustainability.",
+            ],
+            sourceIds: ["who-genomics-costing-tool-manual-2024", "aphl-ngs-implementation-2016", "phe-case-study"],
+          },
+          {
+            cells: [
+              "Outbreak-triggered sequencing",
+              "Sequencing begins when an outbreak, cluster, unusual resistance signal or incident is already suspected.",
+              "Routine costs may be lower, but response capacity, surge sequencing, rapid analysis, interpretation and sample logistics must be ready when needed.",
+              "Egli and Howden caution that triggered sequencing can miss cryptic transmission or detect problems after they have grown.",
+            ],
+            sourceIds: ["lancet-wgs-economic-strategies-2026", "wgs-economic-review"],
+          },
+          {
+            cells: [
+              "Selective routine surveillance",
+              "The programme sequences a defined subset of isolates or specimens using explicit criteria, such as priority pathogens, sentinel sites, AMR profiles, severe disease, geography or time windows.",
+              "Costs sit between ad hoc outbreak sequencing and broad continuous surveillance, but the sampling rule must be maintained and reviewed.",
+              "Selective surveillance is only interpretable if the selection criteria and sampling gaps are visible to analysts and decision-makers.",
+            ],
+            sourceIds: [
+              "lancet-wgs-economic-strategies-2026",
+              "who-national-genomic-surveillance-strategy-2023",
+              "ecdc-wgs-surveillance-2016",
+            ],
+          },
+          {
+            cells: [
+              "Continuous or comprehensive surveillance",
+              "The service aims to detect clusters earlier, monitor evolution continuously, support national reporting, or maintain a reusable data asset for multiple users.",
+              "Recurring sequencing, data management, storage growth, workflow support, quality management, reporting, sharing and workforce cover become core cost lines.",
+              "Potential value depends on response capacity: earlier detection only helps if the system can investigate and act.",
+            ],
+            sourceIds: [
+              "lancet-wgs-economic-strategies-2026",
+              "who-genomics-costing-tool-manual-2024",
+              "wgs-economic-review",
+              "national-investment-case-2025",
+            ],
+          },
+          {
+            cells: [
+              "National investment case",
+              "A funder, ministry or national programme is deciding whether to build or sustain genomic surveillance capacity across pathogens, agencies or regions.",
+              "The case should state use cases, expected decisions, infrastructure, workforce, quality systems, data sharing, recurrent costs, benefits and excluded claims.",
+              "Published economic evaluations are supportive but heterogeneous; transferability to a new country, pathogen or health-system setting should be argued explicitly.",
+            ],
+            sourceIds: [
+              "national-investment-case-2025",
+              "wgs-economic-review",
+              "who-genomics-costing-tool-manual-2024",
+              "genometrakr-economic-2021",
+            ],
+          },
+        ],
+        sourceIds: [
+          "lancet-wgs-economic-strategies-2026",
+          "wgs-economic-review",
+          "who-genomics-costing-tool-manual-2024",
+          "national-investment-case-2025",
+          "genometrakr-economic-2021",
+          "who-national-genomic-surveillance-strategy-2023",
+          "ecdc-wgs-surveillance-2016",
+          "aphl-ngs-implementation-2016",
+          "phe-case-study",
+        ],
+      },
     ],
     audiences: ["director", "policy", "funder", "lab-lead", "all"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],

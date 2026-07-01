@@ -129,6 +129,57 @@
     "updatedAt": "2026-07-01"
   },
   {
+    "id": "fragment-beta-economic-strategy-choice",
+    "sectionId": "why-pathogen-genomics",
+    "title": "Choose the economic strategy before costing",
+    "kind": "table",
+    "text": "Before making a cost or investment argument, distinguish pilot sequencing, outbreak-triggered sequencing, selective routine surveillance, continuous surveillance and national investment-case planning. These strategies create different recurring costs, detection benefits, response dependencies, workforce needs and evidence requirements.",
+    "claimIds": [
+      "claim-beta-economic-strategy-choice",
+      "claim-price-economic-review-heterogeneous",
+      "claim-costing-recurrent-service-categories"
+    ],
+    "sourceIds": [
+      "lancet-wgs-economic-strategies-2026",
+      "wgs-economic-review",
+      "who-genomics-costing-tool-manual-2024",
+      "national-investment-case-2025",
+      "genometrakr-economic-2021",
+      "who-national-genomic-surveillance-strategy-2023",
+      "ecdc-wgs-surveillance-2016",
+      "aphl-ngs-implementation-2016",
+      "phe-case-study"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "policy",
+        "funder",
+        "lab-lead",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "value",
+        "costing",
+        "investment-case",
+        "surveillance-strategy",
+        "public-health"
+      ]
+    },
+    "order": 35,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta strategy-choice table. It does not support universal ROI, cost-per-sample or sampling-fraction claims.",
+    "updatedAt": "2026-07-01"
+  },
+  {
     "id": "fragment-infra-operating-model-core",
     "sectionId": "infrastructure-operating-model",
     "title": "Operating model core",
