@@ -1346,5 +1346,63 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This table is a beta route map. It must not be read as legal, ethical or repository-specific submission advice.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-organism-metadata-field-priorities",
+    "sectionId": "metadata-identifier-lineage",
+    "title": "Beta organism metadata field priorities",
+    "kind": "table",
+    "text": "The beta metadata model can separate common lineage fields from organism and use-case priorities. This supports practical design without presenting a repository-specific schema as universal.",
+    "claimIds": [
+      "claim-beta-organism-metadata-field-priorities",
+      "claim-beta-metadata-accession-field-model",
+      "claim-beta-organism-service-model-matrix"
+    ],
+    "sourceIds": [
+      "who-genomic-data-sharing-platforms-2025",
+      "who-sars-cov-2-sequencing-implementation-2021",
+      "ecdc-wgs-surveillance-2016",
+      "phe-case-study",
+      "foodborne-genomics-allard-2018",
+      "cdc-nejm-2019",
+      "clinical-microbiology-implementation-2026",
+      "mgen-centre-specific-typing-ipc-2021",
+      "mgen-polymicrobial-mdr-critical-care-2021"
+    ],
+    "conditions": {
+      "audiences": [
+        "data-manager",
+        "bioinformatician",
+        "lab-lead",
+        "it-security",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "organisms": [
+        "general",
+        "enteric-bacteria",
+        "tb",
+        "respiratory-viruses",
+        "amr",
+        "nosocomial",
+        "other"
+      ],
+      "topics": [
+        "metadata",
+        "identifier-lineage",
+        "epidemiology",
+        "reporting"
+      ]
+    },
+    "order": 21,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta priority table, not a final repository schema or controlled vocabulary.",
+    "updatedAt": "2026-07-01"
   }
 ]

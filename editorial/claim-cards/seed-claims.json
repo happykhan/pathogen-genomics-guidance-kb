@@ -755,5 +755,32 @@
     "confidence": "high",
     "limitations": "Does not prescribe repository-specific fields or legal/ethical decisions for a jurisdiction.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "claim-beta-organism-metadata-field-priorities",
+    "sourceId": "who-genomic-data-sharing-platforms-2025",
+    "sourceLocator": "WHO 2025, WHO 2021 SARS-CoV-2 guide, ECDC 2016, PHE case study, Armstrong et al. 2019, Gador-Whyte et al. 2026, and Microbial Genomics implementation collection",
+    "evidenceItemIds": [
+      "evidence-beta-organism-metadata-field-priorities",
+      "evidence-beta-metadata-accession-field-model",
+      "evidence-beta-organism-service-model-matrix",
+      "evidence-beta-enteric-respiratory-reporting-fields",
+      "evidence-beta-tb-amr-hai-reporting-fields"
+    ],
+    "claim": "The beta guide can give organism and use-case metadata priorities if it distinguishes them from exact repository schemas: enteric bacteria need exposure and source-context fields, respiratory viruses need sampling-frame and variant-context fields, TB and AMR need transmission and phenotype-inference context, and healthcare-associated infection needs ward, time, patient-care and infection-control context.",
+    "extractedText": "WHO supports common metadata buckets and provenance. WHO SARS-CoV-2 guidance gives respiratory-virus minimum metadata and optional context. ECDC supports linkage to source metadata and public versus restricted metadata handling. PHE, Armstrong et al., the clinical review and implementation examples show organism-specific public-health uses that change which contextual fields matter most.",
+    "notes": "Use for beta metadata table. Keep exact field names, controlled vocabularies and repository templates as a gap.",
+    "tags": ["metadata", "organism-specific", "field-priorities", "epidemiology", "reporting"],
+    "candidateSectionIds": [
+      "metadata-identifier-lineage",
+      "use-case-service-model",
+      "reporting-decision-use"
+    ],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "multiple",
+    "confidence": "high",
+    "limitations": "Does not define exact field names, mandatory status, controlled vocabularies, repository-required fields or jurisdictional permissions for sensitive fields.",
+    "reviewStatus": "reviewed"
   }
 ]

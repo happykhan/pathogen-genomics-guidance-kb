@@ -546,6 +546,94 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "Beta metadata buckets: public minimum metadata; restricted contextual metadata; technical provenance; repository accession fields; service-management fields. Do not require all buckets to live in one system, but require stable identifiers that join them.",
       "Beta accession fields: local sample or isolate identifier, submitter identifier, repository sample accession, raw-read accession, consensus-genome accession if used, platform project or workspace identifier, upload date, correction or replacement date, and status of public, controlled or internal release.",
     ],
+    tables: [
+      {
+        title: "Beta metadata field priorities by programme focus",
+        summary:
+          "Use this as a design aid for metadata capture. It shows which fields to prioritise, not a final repository schema.",
+        columns: ["Programme focus", "Prioritise these fields", "Restricted or contextual fields", "Beta caution"],
+        rows: [
+          {
+            cells: [
+              "All routine services",
+              "Sample or isolate ID, collection date, collection place at appropriate resolution, host or source, sample type, sampling strategy, sequencing strategy, bioinformatics method, attribution, QC status, workflow version, report ID and sharing or accession status.",
+              "Submitter details, operational incident notes, exact location, patient or facility identifiers, and correction history where these are sensitive.",
+              "Keep a stable identifier lineage even if fields live in LIMS, analysis systems, repositories and reporting tools rather than one database.",
+            ],
+            sourceIds: [
+              "who-genomic-data-sharing-platforms-2025",
+              "ecdc-wgs-surveillance-2016",
+              "aphl-ngs-implementation-2016",
+            ],
+          },
+          {
+            cells: [
+              "Enteric bacteria and foodborne surveillance",
+              "Food, animal, environmental or clinical source; exposure or investigation ID; collection route; cluster or outbreak ID; AMR or virulence markers where validated; repository or national-platform accession status.",
+              "Food-chain, business, environmental, traceback, patient exposure or multi-agency investigation details that may need restricted sharing.",
+              "Do not infer source attribution from sequence relatedness alone; link genomic findings to epidemiology and investigation context.",
+            ],
+            sourceIds: ["phe-case-study", "foodborne-genomics-allard-2018", "ecdc-wgs-surveillance-2016"],
+          },
+          {
+            cells: [
+              "Respiratory-virus surveillance",
+              "Collection date, collection place, sampling frame, specimen type, sequencing method, completeness or coverage, lineage or clade call, variant or risk-assessment status, upload or sharing route and correction status.",
+              "Demographic, clinical, travel, vaccination, hospitalization or outbreak-setting data where confidentiality permits and the use case requires them.",
+              "Minimum metadata may be enough for broad sharing, but variant interpretation needs sampling context and QC limits.",
+            ],
+            sourceIds: ["who-sars-cov-2-sequencing-implementation-2021", "cdc-nejm-2019"],
+          },
+          {
+            cells: [
+              "Tuberculosis",
+              "Case or isolate lineage, relatedness or cluster context, collection time and place, treatment or recurrence context where allowed, drug-resistance inference, method and database version, and report route.",
+              "Patient identifiers, treatment history, transmission-network context and clinical data usually require restricted handling.",
+              "Transmission and resistance inference depend on organism, drug, mechanism, sampling coverage and local validation.",
+            ],
+            sourceIds: ["cdc-nejm-2019", "clinical-microbiology-implementation-2026", "ecdc-wgs-surveillance-2016"],
+          },
+          {
+            cells: [
+              "AMR monitoring",
+              "Organism, sample source, phenotype if available, genotype or resistance-marker call, database and version, method limits, validation status, surveillance route and reporting route.",
+              "Clinical context, treatment information, facility or ward context, and patient-level details where they affect interpretation but cannot be public.",
+              "Genotype-to-phenotype inference can vary by organism, drug and pipeline; the metadata should preserve the validation basis.",
+            ],
+            sourceIds: [
+              "cdc-nejm-2019",
+              "clinical-microbiology-implementation-2026",
+              "mgen-discordant-amr-predictions-2020",
+            ],
+          },
+          {
+            cells: [
+              "Healthcare-associated infection and infection control",
+              "Facility or service context, ward or unit at appropriate resolution, collection date, specimen type, suspected outbreak or incident ID, relatedness result, infection-control action route and report recipient.",
+              "Patient location, movement, admission, procedure, device, contact-tracing and staff or ward information usually need tightly controlled access.",
+              "The same genomic signal can have different implications depending on ward movement, sampling density and infection-control context.",
+            ],
+            sourceIds: [
+              "clinical-microbiology-implementation-2026",
+              "mgen-centre-specific-typing-ipc-2021",
+              "mgen-polymicrobial-mdr-critical-care-2021",
+            ],
+          },
+        ],
+        sourceIds: [
+          "who-genomic-data-sharing-platforms-2025",
+          "who-sars-cov-2-sequencing-implementation-2021",
+          "ecdc-wgs-surveillance-2016",
+          "phe-case-study",
+          "foodborne-genomics-allard-2018",
+          "cdc-nejm-2019",
+          "clinical-microbiology-implementation-2026",
+          "mgen-discordant-amr-predictions-2020",
+          "mgen-centre-specific-typing-ipc-2021",
+          "mgen-polymicrobial-mdr-critical-care-2021",
+        ],
+      },
+    ],
     audiences: ["data-manager", "bioinformatician", "lab-lead", "it-security"],
     implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
     organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
@@ -561,10 +649,14 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "ecdc-wgs-surveillance-2016",
       "aphl-ngs-implementation-2016",
       "auspathogen-implementation-2025",
+      "foodborne-genomics-allard-2018",
+      "clinical-microbiology-implementation-2026",
+      "mgen-discordant-amr-predictions-2020",
+      "mgen-centre-specific-typing-ipc-2021",
+      "mgen-polymicrobial-mdr-critical-care-2021",
     ],
     gaps: [
-      "The beta field model still needs organism-specific field sets for enteric bacteria, tuberculosis, respiratory viruses, AMR, and healthcare-associated infection.",
-      "Current INSDC/NCBI, GISAID, and organism-specific repository templates still need direct extraction before the guide can prescribe repository-specific submission fields.",
+      "Current INSDC/NCBI, GISAID, pathogen-specific repository templates, controlled vocabularies, and jurisdiction-specific sensitive-field rules still need direct extraction before the guide can prescribe exact field names or required/optional status.",
     ],
   },
   {

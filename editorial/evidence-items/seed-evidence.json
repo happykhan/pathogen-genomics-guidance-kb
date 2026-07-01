@@ -600,5 +600,16 @@
     "tags": ["data-sharing", "decision-table", "governance", "repositories", "metadata", "accessions"],
     "limitations": "Supports a beta decision pathway. It does not replace local legal, ethical, privacy, data-protection, data-residency or benefit-sharing review.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-beta-organism-metadata-field-priorities",
+    "sourceId": "who-genomic-data-sharing-platforms-2025",
+    "sourceLocator": "WHO 2025 platform metadata and provenance sections; WHO 2021 SARS-CoV-2 metadata section; ECDC 2016 metadata linkage guidance; PHE enteric WGS service example; Armstrong et al. 2019 TB, influenza and AMR use cases; clinical microbiology implementation review; Microbial Genomics implementation collection",
+    "evidenceType": "passage-note",
+    "excerpt": "sample information, high-level sampling strategy, sequencing strategy",
+    "passageSummary": "WHO platform guidance supports core metadata buckets covering sample information, sampling strategy, sequencing strategy, bioinformatics methods, attribution, optional epidemic or One Health metadata, provenance and identifiers. WHO SARS-CoV-2 guidance identifies collection date and location as absolute minimum metadata and encourages specimen type, sequencing method, duplicate flags, demographics and clinical data where confidentiality permits. ECDC requires genomic records to link to source metadata and separates public and restricted data. PHE, Armstrong et al., the clinical review and implementation examples show that enteric bacteria, respiratory viruses, TB, AMR and healthcare-associated infection use cases place different weight on exposure/source context, sampling frame, transmission inference, phenotype inference, patient-care or infection-control context, validation and reporting route.",
+    "tags": ["metadata", "organism-specific", "field-priorities", "epidemiology", "reporting", "repositories"],
+    "limitations": "Supports beta field priorities by organism/use case. It does not define exact repository schemas, controlled vocabularies, pathogen-specific thresholds or legal permissions for sensitive fields.",
+    "reviewStatus": "reviewed"
   }
 ]
