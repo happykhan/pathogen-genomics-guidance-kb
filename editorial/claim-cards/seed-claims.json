@@ -319,6 +319,81 @@
     "reviewStatus": "reviewed"
   },
   {
+    "id": "claim-workforce-support-service-core",
+    "sourceId": "phe-case-study",
+    "sourceLocator": "Armstrong et al. 2019 workforce section; PHE case study section 3.5; Gador-Whyte et al. 2026 competencies section; WHO progress report",
+    "evidenceItemIds": [
+      "evidence-armstrong-workforce-development",
+      "evidence-phe-staff-training-engagement",
+      "evidence-clinical-review-staff-competencies",
+      "evidence-who-progress-workforce-capacity"
+    ],
+    "claim": "A routine pathogen genomics service needs planned workforce capacity across laboratory work, bioinformatics, data management, quality, reporting, epidemiological interpretation, user support and training.",
+    "extractedText": "Armstrong et al. frame public-health genomics as requiring workforce development across microbiology, epidemiology and bioinformatics vocabulary. PHE describes laboratory training, specialist bioinformatics, computing/software development, skill transfer to epidemiologists and service-user engagement. The clinical review identifies competencies across wet lab, bioinformatics, QC, validation, accreditation, reporting and communication. WHO progress reporting treats workforce, EQA, knowledge exchange and data-management resources as core genomic surveillance capacity.",
+    "notes": "Use to strengthen workforce and implementation sections.",
+    "tags": ["workforce", "training", "support", "bioinformatics", "quality", "reporting"],
+    "candidateSectionIds": [
+      "workforce-sustainability-costing",
+      "implementation-patterns-case-studies",
+      "maturity-next-steps",
+      "reporting-decision-use"
+    ],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "multiple",
+    "confidence": "high",
+    "limitations": "Does not provide staffing ratios by throughput or service model.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "claim-costing-recurrent-service-categories",
+    "sourceId": "who-genomics-costing-tool-manual-2024",
+    "sourceLocator": "WHO 2024 genomics costing tool manual; PHE case study; PHA4GE infrastructure manuscript",
+    "evidenceItemIds": [
+      "evidence-who-costing-bioinformatics-storage-maintenance",
+      "evidence-who-costing-personnel-quality-management",
+      "evidence-phe-it-storage-scalability",
+      "evidence-pha4ge-beyond-cpu-storage"
+    ],
+    "claim": "Costing should include recurrent people, training, quality-management, storage, compute, software, maintenance and support costs, not only sequencers and reagents.",
+    "extractedText": "WHO's costing manual includes personnel, training, quality-management, bioinformatics, storage, cloud, in-house server, hybrid, maintenance and human-resource categories. PHE describes IT infrastructure, high-performance compute, storage and maintenance as service requirements. PHA4GE states that compute infrastructure requires workflow engines, data-management systems, system configuration and people, not CPU and storage alone.",
+    "notes": "Use for investment-case and recurrent-cost sections.",
+    "tags": ["costing", "workforce", "quality-management", "storage", "maintenance", "support"],
+    "candidateSectionIds": [
+      "workforce-sustainability-costing",
+      "infrastructure-operating-model",
+      "maturity-next-steps"
+    ],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "multiple",
+    "confidence": "high",
+    "limitations": "Does not support universal cost-per-sample or return-on-investment claims.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "claim-maturity-risk-reduction",
+    "sourceId": "pha4ge-infrastructure",
+    "sourceLocator": "PHA4GE implementation comparison; WHO progress report; PHE implementation case study",
+    "evidenceItemIds": [
+      "evidence-pha4ge-implementation-dependencies",
+      "evidence-who-progress-workforce-capacity",
+      "evidence-phe-staff-training-engagement",
+      "evidence-phe-it-storage-scalability"
+    ],
+    "claim": "Maturity assessment should identify the next service risk to reduce, such as single-person dependency, weak access control, missing storage and backup policy, limited workflow provenance, or lack of user support, rather than produce a false universal score.",
+    "extractedText": "PHA4GE compares implementation models with different constraints and dependencies, including laptop, on-premises and cloud-based approaches. WHO progress reporting treats workforce, EQA, costing, supply chain, data management and information-system integration as linked capacities. PHE shows that service implementation spans staffing, training, infrastructure, user engagement and reporting.",
+    "notes": "Use for maturity section and Gnomey next-step logic.",
+    "tags": ["maturity", "risk", "implementation", "workforce", "infrastructure"],
+    "candidateSectionIds": ["maturity-next-steps", "implementation-patterns-case-studies"],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "multiple",
+    "confidence": "medium",
+    "limitations": "The current KB still lacks a validated maturity scoring instrument.",
+    "reviewStatus": "reviewed"
+  },
+  {
     "id": "claim-price-economic-review-heterogeneous",
     "sourceId": "wgs-economic-review",
     "sourceLocator": "Price et al. 2023, abstract and discussion of systematic review of WGS economic evaluations",

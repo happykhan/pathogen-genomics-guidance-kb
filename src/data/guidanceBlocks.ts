@@ -768,12 +768,13 @@ export const guidanceBlocks: GuidanceBlock[] = [
     title: "Plan workforce and training as core infrastructure",
     summary:
       "A genomics service needs trained laboratory, bioinformatics, data, software, IT, epidemiology, and user-facing capacity.",
-    sourceStatus: "reviewed",
+    sourceStatus: "partial",
     body: [
       "Armstrong et al. describe workforce development as central to public-health genomics. Microbiologists need microbial genomics knowledge, epidemiologists need tools to translate genomic data into action, and both groups need basic bioinformatics vocabulary.",
       "The PHE case study shows implementation needs in practice: laboratory training, specialist bioinformatics staff, computing and software-development expertise, cross-training for epidemiologists and clinical scientists, and user engagement.",
       "WHO's progress report treats workforce as one of the global strategy objectives and describes regional implementation work that included sequencing and bioinformatics training, procurement support, quality-assured data, and national strategy development. A sustainable service should not depend on one person who knows where the scripts are, how the server is configured, or how reports are interpreted. Documentation, role cover, onboarding, and routine support are part of the infrastructure.",
       "Training also has to include users of the results. If epidemiologists, health-protection teams, or laboratory users do not understand what the report can and cannot support, the technical pipeline may still fail as a public-health service.",
+      "The clinical microbiology implementation review makes the competency issue more concrete. It describes wet-lab, library-preparation, data-QC, data-analysis, interpretation, validation, accreditation, reporting and communication competencies across the genomic workflow. A public-health surveillance service will add further responsibilities around outbreak context, surveillance interpretation, governance, data sharing and programme management.",
       "The newer implementation sources make this more explicit. UKHSA names workforce, laboratories, data and analytics, and collaboration as implementation requirements. The clinical microbiology review identifies staff competencies, training, bioinformatics implementation, quality systems, reporting, and interpretive uncertainty as implementation concerns. The East African Community landscape adds a useful realism check: limited bioinformatics expertise, compute capacity, local sequencing facilities, and data-sharing mechanisms can make programmes dependent on external sequencing or analysis unless capacity building is planned as part of the service.",
       "The implementation collection gives practical training models. The Kenya AMR paper describes a 2-week laboratory and bioinformatics training programme using isolates from a national AMR repository and harmonized reporting. The European reference-laboratory rollout paper describes guidance and support for national laboratories, and California COVIDNet links operational success to ongoing training across a large sequencing network.",
     ],
@@ -782,17 +783,22 @@ export const guidanceBlocks: GuidanceBlock[] = [
       1: ["phe-case-study"],
       2: ["who-genomic-surveillance-progress-2023", "pha4ge-infrastructure"],
       3: ["cdc-nejm-2019", "phe-case-study", "who-genomic-surveillance-progress-2023"],
-      4: [
+      4: ["clinical-microbiology-implementation-2026"],
+      5: [
         "ukhsa-pathogen-genomics-strategy-2024",
         "clinical-microbiology-implementation-2026",
         "east-africa-genomics-landscape-2024",
       ],
-      5: [
+      6: [
         "mgen-kenya-amr-genomics-capacity-2023",
         "mgen-eurl-wgs-rollout-europe-2023",
         "mgen-california-covidnet-2023",
       ],
     },
+    technicalDetail: [
+      "Minimum responsibility map: wet-lab processing, sequencing operation, bioinformatics workflow operation, QC review, workflow validation, data management, storage and backup, access review, report interpretation, user training, incident support, and programme oversight.",
+      "Minimum succession question: which service functions stop if one named person is unavailable for two weeks?",
+    ],
     audiences: ["director", "policy", "funder", "lab-lead", "bioinformatician"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
     organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
@@ -811,6 +817,10 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "mgen-eurl-wgs-rollout-europe-2023",
       "mgen-california-covidnet-2023",
     ],
+    gaps: [
+      "The guide still needs staffing models or role templates by service scale, throughput, organism focus, and implementation model.",
+      "Detailed training curricula and competency-assessment templates need extraction from APHL, PulseNet, WHO, ECDC and national programme sources.",
+    ],
   },
   {
     id: "costing-recurrent",
@@ -824,6 +834,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "Initial purchase cost is only one part of sustainability. WHO's costing manual provides a stronger category model for recurrent planning: throughput, platform, reagents and consumables, equipment, personnel and training, facilities and transport, bioinformatics, and quality management. For bioinformatics, it explicitly accommodates cloud, in-house server, and hybrid costs, including software licensing, storage, hardware, and maintenance.",
       "Use costing as a scenario exercise rather than a one-off budget line. Compare throughput assumptions, platform choices, procurement costs, staffing patterns, training needs, quality-management activities, storage and compute options, and whether costs are shared with other pathogen programmes. The current sources support a category model; they still do not justify a universal cost-per-sample or return-on-investment claim across pathogens and countries.",
       "For infrastructure, the costing model should include the recurrent work that keeps the service alive: storage growth, redundancy if used, cloud processing and storage, software licences, in-house hardware renewal, maintenance fees, system administration, systems engineering, quality-management activities, and staff time for support and troubleshooting.",
+      "Personnel should be costed as named workflow and support roles, not as an overhead after equipment is chosen. WHO's costing manual includes personnel and training across workflow steps, administrative and management personnel, quality and biosafety managers, laboratory directors, human resources, and quality-management activities such as accreditation, proficiency testing and certification.",
     ],
     bodySourceIds: {
       0: ["phe-case-study"],
@@ -831,9 +842,11 @@ export const guidanceBlocks: GuidanceBlock[] = [
       2: ["who-genomics-costing-tool-manual-2024", "wgs-costing-tool-2024"],
       3: ["who-genomics-costing-tool-manual-2024", "who-national-genomic-surveillance-strategy-2023"],
       4: ["who-genomics-costing-tool-manual-2024", "pha4ge-infrastructure"],
+      5: ["who-genomics-costing-tool-manual-2024"],
     },
     technicalDetail: [
       "Minimum recurrent infrastructure cost lines: cloud compute, cloud storage, data egress if relevant, in-house server hardware, high-performance storage, archive storage, backup storage, redundancy, software licences, maintenance fees, systems administration, systems engineering, user support, validation or revalidation time, and quality-management activities.",
+      "Minimum workforce cost lines: wet-lab staff, sequencing operation, bioinformatics operation, data management, quality management, IT or security support, system administration, reporting or interpretation, user training, programme management, and cover for leave or turnover.",
     ],
     audiences: ["director", "policy", "funder", "lab-lead"],
     implementationStages: ["exploring", "pilot", "upgrading", "national-scale"],
@@ -851,6 +864,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     gaps: [
       "A setting-specific quantitative extraction is still needed before making general return-on-investment claims across pathogens and countries.",
+      "The guide still needs scenario templates for pilot, single-pathogen routine service, multi-pathogen service, national network, and managed-platform models.",
     ],
   },
   {
@@ -863,6 +877,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "A genomics programme does not have to own every layer of the service to be credible. It does need to know which layers it operates, which layers are delegated, and which dependencies would stop public-health use if they failed.",
       "PHA4GE frames this as a responsibility question: where analysis is run, how data move, and who has access. The clinical microbiology implementation review describes centralised reference laboratory, decentralised in-house sequencing, and hybrid or collaborative models. AusPathoGen shows a national collaborative model built around public-health laboratories, agencies, academic partners, standard bioinformatics, governance committees, and a shared data platform.",
       "The right model depends on constraints. A centralised reference model can concentrate expertise, validation, infrastructure, and quality systems, but it creates sample-transfer, turnaround-time, and service-dependency questions. A local model can improve local control and responsiveness, but it requires staff, validation, storage, IT support, and continuity. A hybrid or collaborative model can spread capability while preserving shared standards, but it needs explicit governance, data-sharing agreements, and support routes.",
+      "PHA4GE's implementation comparison gives the practical trade-off. A laptop model can be useful when internet or power is unreliable, but it shifts management to the operator and limits scalability and access-control structures. On-premises systems can meet local needs, but job-processing infrastructure requires expertise. Cloud platforms can reduce local hardware barriers, but they depend on internet connectivity for upload and may shift cost, data-residency and vendor-dependency questions elsewhere.",
       "The East African Community landscape shows why this matters. External sequencing and analysis can be useful during capability building, but long-term reliance on third parties may delay real-time surveillance decisions and limit local interpretation if local sequencing, compute, bioinformatics, and data-sharing capacity are not developed. The guide should therefore treat external support as a dependency to manage, not as a failure or a complete solution.",
       "The implementation collection adds concrete network examples: Kenya's AMR paper describes training public-health scientists to generate genomic data and harmonized reports; the European reference-laboratory rollout paper describes guidance and support for national food, feed, and veterinary laboratories; California COVIDNet shows a large collaborative model linking many sequencing laboratories, cloud-based analysis, training, and visualization workflows.",
     ],
@@ -874,8 +889,9 @@ export const guidanceBlocks: GuidanceBlock[] = [
         "auspathogen-implementation-2025",
         "australia-microbial-genomics-framework-2025",
       ],
-      3: ["east-africa-genomics-landscape-2024"],
-      4: [
+      3: ["pha4ge-infrastructure"],
+      4: ["east-africa-genomics-landscape-2024"],
+      5: [
         "mgen-kenya-amr-genomics-capacity-2023",
         "mgen-eurl-wgs-rollout-europe-2023",
         "mgen-california-covidnet-2023",
@@ -923,6 +939,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "The current KB should not pretend to have a validated maturity scoring instrument. It can use maturity language to structure planning, while keeping a formal assessment rubric as a separate source-backed gap.",
       "The East African Community landscape is a reminder that maturity is not only a local laboratory question. Sequencing access, bioinformatics expertise, compute infrastructure, regional collaboration, standards, and data-sharing mechanisms can all determine whether a programme can act independently or must rely on external partners. A maturity discussion should therefore separate internal capability, external dependency, and the support arrangements that make a chosen model reliable.",
       "The implementation collection helps define practical maturity signals: participation in proficiency testing, harmonised inter-laboratory methods, validated bioinformatics workflows, reproducible AMR prediction, trained users, and routine links between genomic outputs and health-protection decisions.",
+      "For beta, maturity should be framed as risk reduction. Ask which dependency would stop the service from being used: one person leaving, internet failing, storage filling, access not being reviewed, a workflow changing without validation, a report not being understood, or a partner service becoming unavailable.",
     ],
     bodySourceIds: {
       0: ["pha4ge-infrastructure", "who-genomic-surveillance-progress-2023"],
@@ -938,7 +955,12 @@ export const guidanceBlocks: GuidanceBlock[] = [
         "mgen-kenya-amr-genomics-capacity-2023",
         "mgen-uk-delphi-health-protection-2023",
       ],
+      6: ["pha4ge-infrastructure", "phe-case-study", "who-genomic-surveillance-progress-2023"],
     },
+    technicalDetail: [
+      "Beta maturity dimensions: use case clarity, sampling route, metadata lineage, QC and validation, workflow provenance, storage and backup, access control, reporting route, data-sharing route, workforce cover, recurrent cost, and service review.",
+      "Do not use the current maturity language as a certified score. Use it to choose the next risk to reduce and record the evidence gap.",
+    ],
     audiences: ["director", "policy", "funder", "lab-lead", "bioinformatician", "it-security", "data-manager", "all"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
     organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
@@ -958,6 +980,9 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "mgen-kenya-amr-genomics-capacity-2023",
       "mgen-uk-delphi-health-protection-2023",
     ],
-    gaps: ["A formal maturity rubric and scoring method still need source-backed review."],
+    gaps: [
+      "A formal maturity rubric and scoring method still need source-backed review.",
+      "The PHA4GE tier table is useful for discussion but needs editorial review before it becomes an assessment tool.",
+    ],
   }
 ];

@@ -557,5 +557,133 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "Use to connect infrastructure and costing sections.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-workforce-service-core",
+    "sectionId": "workforce-sustainability-costing",
+    "title": "Workforce as service capacity",
+    "kind": "paragraph",
+    "text": "Workforce planning should cover the service, not only the sequencing bench. A routine programme needs laboratory staff, bioinformaticians, data managers, quality leads, IT or security support, reporting scientists, epidemiological interpreters, trainers, and user-support routes. The exact staffing model can vary, but the responsibilities cannot be left unnamed.",
+    "claimIds": [
+      "claim-workforce-support-service-core"
+    ],
+    "sourceIds": [
+      "cdc-nejm-2019",
+      "phe-case-study",
+      "clinical-microbiology-implementation-2026",
+      "who-genomic-surveillance-progress-2023"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "policy",
+        "funder",
+        "lab-lead",
+        "bioinformatician",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "workforce",
+        "training",
+        "support"
+      ]
+    },
+    "order": 10,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "Staffing ratios remain a gap.",
+    "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-costing-recurrent-service-core",
+    "sectionId": "workforce-sustainability-costing",
+    "title": "Recurrent cost categories",
+    "kind": "paragraph",
+    "text": "A credible budget should count recurrent service categories: people, training, quality management, storage growth, cloud or in-house compute, software licences, maintenance, redundancy, system administration, support, validation, and revalidation. A one-off equipment budget is not a service plan.",
+    "claimIds": [
+      "claim-costing-recurrent-service-categories"
+    ],
+    "sourceIds": [
+      "who-genomics-costing-tool-manual-2024",
+      "phe-case-study",
+      "pha4ge-infrastructure"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "policy",
+        "funder",
+        "lab-lead",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "costing",
+        "sustainability",
+        "procurement"
+      ]
+    },
+    "order": 20,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "Numeric cost estimates remain setting-specific gaps.",
+    "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-maturity-risk-reduction-core",
+    "sectionId": "maturity-next-steps",
+    "title": "Maturity as risk reduction",
+    "kind": "paragraph",
+    "text": "Use maturity as a way to choose the next service risk to reduce. The useful question is not whether a programme has reached an abstract tier, but which dependency would stop public-health use: one person leaving, internet failing, storage filling, access not being reviewed, a workflow changing without validation, or users not understanding the report.",
+    "claimIds": [
+      "claim-maturity-risk-reduction"
+    ],
+    "sourceIds": [
+      "pha4ge-infrastructure",
+      "who-genomic-surveillance-progress-2023",
+      "phe-case-study"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "policy",
+        "funder",
+        "lab-lead",
+        "bioinformatician",
+        "it-security",
+        "data-manager",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "maturity",
+        "implementation",
+        "sustainability"
+      ]
+    },
+    "order": 10,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "Formal maturity score remains a gap.",
+    "updatedAt": "2026-07-01"
   }
 ]
