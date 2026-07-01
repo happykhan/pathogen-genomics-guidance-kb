@@ -97,6 +97,17 @@
     "reviewStatus": "reviewed"
   },
   {
+    "id": "evidence-who-2023-storage-backup-retention",
+    "sourceId": "who-national-genomic-surveillance-strategy-2023",
+    "sourceLocator": "WHO 2023 national genomic surveillance strategy support tool, section 2.4 data management",
+    "evidenceType": "short-excerpt",
+    "excerpt": "storage requirements should be sized according to the retention strategy chosen",
+    "passageSummary": "WHO states that genomic surveillance data-storage policy should support short- and long-term analysis and archiving, be defined from available hardware, software, infrastructure and connectivity, include one or two backup locations depending on criticality, and size storage according to retention strategy for raw, filtered and processed data. The same section says data security must apply to local and cloud storage.",
+    "tags": ["storage", "backup", "archive", "retention", "security"],
+    "limitations": "Strategy-level guidance; does not define local retention periods or storage sizing formulae.",
+    "reviewStatus": "reviewed"
+  },
+  {
     "id": "evidence-who-2023-metadata-quality-interoperability",
     "sourceId": "who-national-genomic-surveillance-strategy-2023",
     "sourceLocator": "WHO 2023 national genomic surveillance strategy support tool, section 2.4 data management",
@@ -138,6 +149,17 @@
     "passageSummary": "The PHE case study describes operationalising WGS at scale by considering infrastructure and workflow stages together, including sample management, LIMS interaction, bioinformatics pipelines, quality reporting, storage configuration, user access, and results returned to users.",
     "tags": ["service-chain", "lims", "bioinformatics", "reporting", "storage", "user-access"],
     "limitations": "Specific to a centralised PHE service model, but useful as a concrete service-design example.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-phe-it-storage-scalability",
+    "sourceId": "phe-case-study",
+    "sourceLocator": "PHE case study, section 3.2 infrastructure and section 3.3 bioinformatics",
+    "evidenceType": "short-excerpt",
+    "excerpt": "A sequencing service requires extensive IT infrastructure",
+    "passageSummary": "The PHE case study states that a sequencing service requires IT infrastructure to manage and store sequence data and run analysis software, including expertise for a high-performance computing cluster, maintenance and migration of infrastructure, enough storage and processing speed to avoid service impact, high-performance storage, archive storage, and data-lifecycle management software.",
+    "tags": ["storage", "compute", "archive", "maintenance", "scalability", "service-delivery"],
+    "limitations": "Centralised UK service implementation; its specific infrastructure choices should not be generalised as universal requirements.",
     "reviewStatus": "reviewed"
   },
   {
@@ -226,6 +248,28 @@
     "passageSummary": "WHO's platform guidance describes data curation as integrity, quality, and completeness checks. It states that low-quality or incomplete data may confound interpretation but may still be useful for validation or emergency sharing if annotated with QC methods and results. The analytical/reporting section states that integrated analytical tools should be documented and version-controlled.",
     "tags": ["data-curation", "quality", "qc-annotation", "version-control", "platforms"],
     "limitations": "Platform guidance; local services need to define which annotations affect public-health reporting, repository submission, and reuse.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-pha4ge-data-flow-iam-responsibility",
+    "sourceId": "pha4ge-infrastructure",
+    "sourceLocator": "PHA4GE infrastructure manuscript, sections on data flow, IAM, and scope of responsibility",
+    "evidenceType": "short-excerpt",
+    "excerpt": "ingestion, storage processing and delivery",
+    "passageSummary": "The PHA4GE manuscript describes data flow through ingestion, storage, processing and delivery, while satisfying confidentiality, integrity and accessibility. It links data management to storage, access control, versioning, archiving, sharing, provenance, data-management plans, retention policy and role-based access. Its responsibility model separates SaaS, PaaS and IaaS by how much responsibility is handled by users, administrators or external parties.",
+    "tags": ["data-flow", "storage", "archive", "retention", "iam", "responsibility-model"],
+    "limitations": "Infrastructure-focused source; not a legal retention policy or detailed disaster-recovery standard.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-who-costing-bioinformatics-storage-maintenance",
+    "sourceId": "who-genomics-costing-tool-manual-2024",
+    "sourceLocator": "WHO 2024 genomics costing tool user manual, Bioinformatics worksheet section",
+    "evidenceType": "short-excerpt",
+    "excerpt": "cloud computing costs, in-house server costs or a hybrid",
+    "passageSummary": "WHO's costing manual states that bioinformatics costing can accommodate cloud, in-house server or hybrid models, including software licensing, storage, cloud costs, in-house hardware, maintenance fees, redundancy if selected for storage, and human resources such as system administrators and systems engineers.",
+    "tags": ["costing", "bioinformatics", "storage", "cloud", "maintenance", "workforce"],
+    "limitations": "The manual is SARS-CoV-2 focused in its current version, but the cost categories are useful for recurrent planning.",
     "reviewStatus": "reviewed"
   },
   {

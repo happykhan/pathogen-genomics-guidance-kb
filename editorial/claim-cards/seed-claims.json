@@ -266,6 +266,59 @@
     "reviewStatus": "reviewed"
   },
   {
+    "id": "claim-storage-backup-retention-policy",
+    "sourceId": "who-national-genomic-surveillance-strategy-2023",
+    "sourceLocator": "WHO 2023 national strategy support tool section 2.4; PHE case study sections 3.2 and 3.3; PHA4GE data-flow section",
+    "evidenceItemIds": [
+      "evidence-who-2023-storage-backup-retention",
+      "evidence-phe-it-storage-scalability",
+      "evidence-pha4ge-data-flow-iam-responsibility"
+    ],
+    "claim": "A pathogen genomics service should separate active analysis storage, long-term archive, backup, retention policy, access control and recovery planning, because each category serves a different operational purpose.",
+    "extractedText": "WHO links storage policy to short- and long-term analysis, archiving, backup locations, connectivity, retention strategy for raw, filtered and processed data, and local/cloud security. PHE describes high-performance storage, archive storage and data-lifecycle software as part of an operational WGS service. PHA4GE separates ingestion, storage, processing, delivery, archiving, retention policy and role-based access.",
+    "notes": "Use for storage, backup, archive and retention sections.",
+    "tags": ["storage", "backup", "archive", "retention", "access", "data-flow"],
+    "candidateSectionIds": [
+      "storage-backup-archive-retention",
+      "data-lifecycle-sample-to-report",
+      "metadata-identifier-lineage",
+      "infrastructure-operating-model"
+    ],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "multiple",
+    "confidence": "high",
+    "limitations": "Does not specify retention periods, restore-time objectives, or organism-specific retention rules.",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "claim-infrastructure-recurrent-responsibility",
+    "sourceId": "pha4ge-infrastructure",
+    "sourceLocator": "PHA4GE infrastructure manuscript, PHE case study, and WHO 2024 costing manual",
+    "evidenceItemIds": [
+      "evidence-pha4ge-five-infrastructure-questions",
+      "evidence-pha4ge-beyond-cpu-storage",
+      "evidence-phe-it-storage-scalability",
+      "evidence-who-costing-bioinformatics-storage-maintenance"
+    ],
+    "claim": "Infrastructure planning should assign responsibility for workflows, storage, data movement, access, maintenance, recovery and recurrent costs, rather than treating compute as a one-time hardware purchase.",
+    "extractedText": "PHA4GE separates responsibility, workflow execution, compute location, data flow and access, and states that compute infrastructure requires workflow engines, data-management systems, system configuration and people. PHE describes IT infrastructure, high-performance compute, storage, archive and maintenance as service requirements. WHO's costing manual includes cloud, in-house, hybrid, storage, maintenance, redundancy and system-administration costs.",
+    "notes": "Use for operating model, procurement, costing and maturity sections.",
+    "tags": ["infrastructure", "responsibility-model", "maintenance", "storage", "costing", "workforce"],
+    "candidateSectionIds": [
+      "infrastructure-operating-model",
+      "workforce-sustainability-costing",
+      "implementation-patterns-case-studies",
+      "maturity-next-steps"
+    ],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "multiple",
+    "confidence": "high",
+    "limitations": "Does not choose a specific compute platform or vendor.",
+    "reviewStatus": "reviewed"
+  },
+  {
     "id": "claim-price-economic-review-heterogeneous",
     "sourceId": "wgs-economic-review",
     "sourceLocator": "Price et al. 2023, abstract and discussion of systematic review of WGS economic evaluations",

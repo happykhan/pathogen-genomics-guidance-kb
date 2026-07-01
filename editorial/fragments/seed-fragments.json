@@ -472,5 +472,90 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "Reviewed against WHO 2022 principles, WHO 2023 national strategy support tool, and WHO 2025 platform attributes.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-storage-categories-core",
+    "sectionId": "storage-backup-archive-retention",
+    "title": "Storage categories",
+    "kind": "paragraph",
+    "text": "A genomics service should separate active analysis storage, long-term archive, backup copies, retention policy, access control, and recovery planning. Raw data, filtered data, processed data, reports, workflow logs, QC outputs, repository submissions, and dashboards do not all need the same storage class, access rule, backup schedule, or retention period.",
+    "claimIds": [
+      "claim-storage-backup-retention-policy"
+    ],
+    "sourceIds": [
+      "who-national-genomic-surveillance-strategy-2023",
+      "phe-case-study",
+      "pha4ge-infrastructure"
+    ],
+    "conditions": {
+      "audiences": [
+        "it-security",
+        "bioinformatician",
+        "data-manager",
+        "lab-lead",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "storage",
+        "backup",
+        "archive",
+        "retention"
+      ]
+    },
+    "order": 10,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "Reviewed against WHO 2023 storage policy, PHE infrastructure, and PHA4GE data-flow text. Detailed retention periods remain a gap.",
+    "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-infrastructure-recurrent-responsibility-core",
+    "sectionId": "infrastructure-operating-model",
+    "title": "Recurrent responsibility",
+    "kind": "paragraph",
+    "text": "The operating model should name who owns workflow execution, storage growth, data movement, access management, software updates, infrastructure maintenance, recovery testing, user support, and recurrent cost. Without those owners, a sequencing service can appear technically functional while depending on unbudgeted labour or undocumented local knowledge.",
+    "claimIds": [
+      "claim-infrastructure-recurrent-responsibility"
+    ],
+    "sourceIds": [
+      "pha4ge-infrastructure",
+      "phe-case-study",
+      "who-genomics-costing-tool-manual-2024"
+    ],
+    "conditions": {
+      "audiences": [
+        "director",
+        "lab-lead",
+        "bioinformatician",
+        "it-security",
+        "data-manager",
+        "funder",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "exploring",
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "topics": [
+        "infrastructure",
+        "responsibility-model",
+        "costing",
+        "sustainability"
+      ]
+    },
+    "order": 30,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "Use to connect infrastructure and costing sections.",
+    "updatedAt": "2026-07-01"
   }
 ]
