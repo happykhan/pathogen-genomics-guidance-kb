@@ -109,11 +109,12 @@ function renderPage() {
             .map((itemId) => {
               const item = evidenceById.get(itemId);
               if (!item) return `<span class="evidence-item">Missing evidence item: ${escapeHtml(itemId)}</span>`;
+              const directQuote = item.directQuote ?? item.excerpt;
               return `<span class="evidence-item">
                 ${
-                  item.excerpt
-                    ? `<em>Layer 1 / Original short excerpt: "${escapeHtml(item.excerpt)}"</em>`
-                    : "<em>Layer 1 / No short source excerpt captured yet; use the locator and passage note to check the original source.</em>"
+                  directQuote
+                    ? `<em>Layer 1 / Direct quote from source: "${escapeHtml(directQuote)}"</em>`
+                    : "<em>Layer 1 / No direct source quote captured yet; use the locator and passage note to check the original source.</em>"
                 }
                 <span><strong>Public-safe passage note:</strong> ${escapeHtml(item.passageSummary)}</span>
                 <small>${escapeHtml(item.evidenceType)}; ${escapeHtml(item.sourceLocator)}</small>

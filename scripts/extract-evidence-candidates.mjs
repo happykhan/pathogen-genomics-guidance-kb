@@ -107,6 +107,7 @@ manifest.forEach((record) => {
         matchedTerm: match.term,
         sourceLocator: `${record.title}; local extracted text line ${match.lineNumber}`,
         evidenceType: "short-excerpt-candidate",
+        directQuote: match.shortExcerpt,
         shortExcerpt: match.shortExcerpt,
         passageSummaryDraft: "",
         contextForLocalReview: match.contextSummarySource,

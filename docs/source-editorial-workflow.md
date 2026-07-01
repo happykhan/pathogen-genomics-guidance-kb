@@ -6,7 +6,7 @@ Do not add substantive guidance unless the source basis is recorded. If the sour
 
 ## Source-To-Guidance Trace
 
-The beta authoring path is moving from direct chapter editing toward a compiled model:
+The authoring path is moving from direct chapter editing toward a compiled model:
 
 ```text
 source document
@@ -29,7 +29,7 @@ Example: validation before replacing established methods.
 | Step | Repo artifact | What it records |
 | --- | --- | --- |
 | Source card | `knowledge-base/source-cards/phe-implementing-pathogen-genomics-case-study.md` | Provenance, relevance, extracted validation facts, and remaining limits. |
-| Evidence item | `editorial/evidence-items/*.json` | The relevant evidence pointer from the original source: page, section, table, figure, short allowed excerpt, or concise passage note. Avoid long copied passages. |
+| Evidence item | `editorial/evidence-items/*.json` | The relevant evidence pointer from the original source: page, section, table, figure, short direct quote, and concise passage note. Avoid long copied passages. |
 | Claim cards | `editorial/claim-cards/*.json` / `claim` | Small extracted interpretations of what one or more evidence items support, with source IDs, tags, candidate sections, limitations, and review state. Claim cards are not verbatim source text. |
 | Whitepaper target | `src/data/whitepaperOutline.ts` / `whitepaperTarget` | The primary audience, practical use, core question, success criteria, and out-of-scope boundaries for the dynamic whitepaper. |
 | Section synthesis brief | `editorial/section-briefs/*.json` | Editorial instructions for a whitepaper section: purpose, must-cover points, do-not-claim rules, preferred claims, conditionals, figures, and gaps. |
@@ -46,7 +46,7 @@ Example: validation before replacing established methods.
 
 Public guidance block statuses:
 
-- `reviewed`: source-backed beta prose with no known unresolved source-ID problems.
+- `reviewed`: source-backed public prose with no known unresolved source-ID problems.
 - `partial`: source-backed but incomplete; the block must include gaps or limits.
 - `gap`: placeholder or missing evidence area; do not present as guidance.
 
@@ -71,21 +71,23 @@ Editorial object statuses:
 10. Use source IDs in public guidance only where the prose is directly supported.
 11. Run `npm run content:check`.
 
-## Claim Cards Versus Source Text
+## Evidence Items, Direct Quotes, And Claim Cards
 
-A claim card is not the original text from a paper, report, or guidance document. It is the editor's concise extraction of what the source supports.
+An evidence item is the only layer that should contain verbatim source wording. Use `directQuote` for a short quote from the source and `passageSummary` for the editor's paraphrased note about what the passage supports. A quote should be short enough to verify the extraction, not long enough to reproduce the source.
+
+A claim card is not the original text from a paper, report, or guidance document. It is the editor's concise extraction of what the evidence supports.
 
 Use this distinction:
 
 ```text
 original source text or page/table/figure pointer
-  -> evidence item
+  -> evidence item with source locator, short direct quote, passage summary, limitation
   -> extracted claim card
   -> draft whitepaper fragment
   -> reviewed public whitepaper prose
 ```
 
-For copyright and clarity, public debug views should show source locators, page or section pointers, short passage notes, short allowed excerpts, and extracted claims. They should not expose full-text passages from copyrighted PDFs.
+For copyright and clarity, debug views may show source locators, page or section pointers, short direct quotes, short passage notes, and extracted claims. They should not expose full-text passages from copyrighted PDFs. Public whitepaper text should not reproduce direct quotes unless there is a specific editorial reason and the quote is short.
 
 ## Three-Layer Review Model
 
@@ -93,7 +95,7 @@ Use the same review model in `/backstage`, `npm run editorial:review`, and manua
 
 | Layer | Object | Review question |
 | --- | --- | --- |
-| 1 | Evidence item | Does the source locator, short excerpt if present, passage note, limitation, and source ID point to a real, relevant source passage, figure, table, or source-card record? |
+| 1 | Evidence item | Does the source locator, direct quote if present, passage note, limitation, and source ID point to a real, relevant source passage, figure, table, or source-card record? |
 | 2 | Claim card | Does the extracted claim follow from the evidence item without overstating the source, and are its candidate sections, confidence, limitations, audience, organism, and stage tags correct? |
 | 3 | Whitepaper fragment | Does the synthesized paragraph, table, checklist, box, figure brief, or gap note use the claim cards faithfully, cite the right sources, and fit the section synthesis brief and profile conditions? |
 
@@ -142,6 +144,8 @@ Evidence status rules:
 
 - `reviewed` evidence should come from a source-text excerpt, figure, table, or precise passage note.
 - `source-card-summary` evidence can be useful during triage, but it must remain `draft`.
+- `short-excerpt` evidence should include a `directQuote`.
+- Direct quotes should normally stay below 35 words unless `quoteWordLimit` is set for a specific reviewed reason.
 - A `reviewed` claim cannot depend on draft evidence.
 - A `reviewed` fragment cannot depend on draft claims.
 

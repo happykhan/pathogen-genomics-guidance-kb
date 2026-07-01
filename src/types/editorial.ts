@@ -51,6 +51,9 @@ export type EvidenceItem = {
   sourceId: string;
   sourceLocator: string;
   evidenceType: "short-excerpt" | "passage-note" | "figure" | "table" | "source-card-summary";
+  directQuote?: string;
+  quoteNote?: string;
+  quoteWordLimit?: number;
   excerpt?: string;
   passageSummary: string;
   tags: string[];

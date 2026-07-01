@@ -6,9 +6,15 @@
     "evidenceType": "passage-note",
     "excerpt": "quality, timely and appropriate public health actions",
     "passageSummary": "WHO frames genomic surveillance as part of broader surveillance and laboratory systems, with a goal of quality, timely and appropriate public-health action. Its objectives cover geographic access, workforce, data sharing, utility for decision-making, connectivity across surveillance architecture, and emergency readiness.",
-    "tags": ["value-case", "preparedness", "surveillance", "decision-use"],
+    "tags": [
+      "value-case",
+      "preparedness",
+      "surveillance",
+      "decision-use"
+    ],
     "limitations": "High-level strategy source; not an operational implementation runbook.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "quality, timely and appropriate public health actions"
   },
   {
     "id": "evidence-phe-colindale-service-chain",
@@ -17,9 +23,15 @@
     "evidenceType": "short-excerpt",
     "excerpt": "extracted bacterial DNA is received, sequencing is performed and short read sequences delivered",
     "passageSummary": "The PHE case study describes a centralised high-throughput WGS service where extracted bacterial DNA is received, sequencing is performed, and sequence data are delivered to the requesting reference laboratory for further analysis.",
-    "tags": ["service-chain", "sequencing", "data-lifecycle", "implementation"],
+    "tags": [
+      "service-chain",
+      "sequencing",
+      "data-lifecycle",
+      "implementation"
+    ],
     "limitations": "Specific to PHE's centralized bacterial WGS service model.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "extracted bacterial DNA is received, sequencing is performed and short read sequences delivered"
   },
   {
     "id": "evidence-phe-implementation-scope",
@@ -28,9 +40,17 @@
     "evidenceType": "short-excerpt",
     "excerpt": "A sequencing service requires extensive IT infrastructure",
     "passageSummary": "The PHE case study describes business/capital planning, IT infrastructure, storage and processing requirements, workflow development from sample receipt to reporting, LIMS interaction with bioinformatics infrastructure, and staff training needs.",
-    "tags": ["implementation", "lims", "validation", "workforce", "reporting", "infrastructure"],
+    "tags": [
+      "implementation",
+      "lims",
+      "validation",
+      "workforce",
+      "reporting",
+      "infrastructure"
+    ],
     "limitations": "UK/PHE-specific implementation context; should be adapted carefully.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "A sequencing service requires extensive IT infrastructure"
   },
   {
     "id": "evidence-pha4ge-five-infrastructure-questions",
@@ -39,9 +59,16 @@
     "evidenceType": "short-excerpt",
     "excerpt": "which parts of the pathogen bioinformatics analysis solution do you want to be responsible for?",
     "passageSummary": "The PHA4GE manuscript introduces five infrastructure questions covering responsibility, workflow management, compute location, data flow, and access.",
-    "tags": ["infrastructure", "workflow", "data-flow", "access", "responsibility-model"],
+    "tags": [
+      "infrastructure",
+      "workflow",
+      "data-flow",
+      "access",
+      "responsibility-model"
+    ],
     "limitations": "Infrastructure-heavy source; limited coverage of broader governance, repository policy, and economics.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "which parts of the pathogen bioinformatics analysis solution do you want to be responsible for?"
   },
   {
     "id": "evidence-pha4ge-beyond-cpu-storage",
@@ -50,9 +77,16 @@
     "evidenceType": "short-excerpt",
     "excerpt": "not achieved by CPU cores and terabytes of storage alone",
     "passageSummary": "The PHA4GE manuscript states that compute infrastructure must include workflow execution engines, data management systems, system configuration, and people to maintain the infrastructure.",
-    "tags": ["infrastructure", "workflow", "data-management", "maintenance", "operating-model"],
+    "tags": [
+      "infrastructure",
+      "workflow",
+      "data-management",
+      "maintenance",
+      "operating-model"
+    ],
     "limitations": "Supports a general operating-model point, not a complete responsibility matrix.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "not achieved by CPU cores and terabytes of storage alone"
   },
   {
     "id": "evidence-who-2023-value-chain",
@@ -60,7 +94,14 @@
     "sourceLocator": "knowledge-base/source-cards/who-national-genomic-surveillance-strategy-2023.md; extracted text value-chain figure around lines 300-326",
     "evidenceType": "figure",
     "passageSummary": "WHO's value-chain figure links priority genomic surveillance use cases to sample and data collection, genetic material extraction, sequencing, bioinformatics analyses, public-health analyses, interpretation with multisource data, data publication, result sharing, and public-health use.",
-    "tags": ["strategy", "value-chain", "data-lifecycle", "metadata", "analysis", "sharing"],
+    "tags": [
+      "strategy",
+      "value-chain",
+      "data-lifecycle",
+      "metadata",
+      "analysis",
+      "sharing"
+    ],
     "limitations": "Strategic value-chain figure; does not specify detailed operational thresholds or repository fields.",
     "reviewStatus": "reviewed"
   },
@@ -71,9 +112,16 @@
     "evidenceType": "short-excerpt",
     "excerpt": "objectives, users, sampling strategy, outcomes",
     "passageSummary": "WHO places priority genomic surveillance use cases at the start of the value chain and says each identified disease or public-health priority should articulate objectives, data users, analysis and action routes, and expected outcomes.",
-    "tags": ["use-case", "strategy", "sampling", "users", "outcomes"],
+    "tags": [
+      "use-case",
+      "strategy",
+      "sampling",
+      "users",
+      "outcomes"
+    ],
     "limitations": "Strategy-level framing; does not prescribe local operational templates.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "objectives, users, sampling strategy, outcomes"
   },
   {
     "id": "evidence-who-2023-sampling-turnaround",
@@ -82,9 +130,17 @@
     "evidenceType": "passage-note",
     "excerpt": "Data quality and internal consistency must be given priority",
     "passageSummary": "WHO identifies multisource data integration, representative sampling, quick turnaround time, data quality, metadata completeness, and public-health reporting as principles for genomic surveillance strategy and data management.",
-    "tags": ["sampling", "representativeness", "turnaround", "data-quality", "metadata", "reporting"],
+    "tags": [
+      "sampling",
+      "representativeness",
+      "turnaround",
+      "data-quality",
+      "metadata",
+      "reporting"
+    ],
     "limitations": "Does not provide organism-specific sampling fractions, turnaround targets, or QC thresholds.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "Data quality and internal consistency must be given priority"
   },
   {
     "id": "evidence-who-2023-data-management",
@@ -92,7 +148,14 @@
     "sourceLocator": "knowledge-base/source-cards/who-national-genomic-surveillance-strategy-2023.md; extracted text data management section around lines 515-566",
     "evidenceType": "passage-note",
     "passageSummary": "WHO describes data management as a key element for genomic surveillance and includes storage, backup, retention, data quality, metadata completeness, analysis and interpretation, privacy/security, and reporting for public-health action.",
-    "tags": ["data-management", "metadata", "storage", "quality", "privacy", "reporting"],
+    "tags": [
+      "data-management",
+      "metadata",
+      "storage",
+      "quality",
+      "privacy",
+      "reporting"
+    ],
     "limitations": "Supports planning categories, not a full local data architecture.",
     "reviewStatus": "reviewed"
   },
@@ -103,9 +166,16 @@
     "evidenceType": "short-excerpt",
     "excerpt": "storage requirements should be sized according to the retention strategy chosen",
     "passageSummary": "WHO states that genomic surveillance data-storage policy should support short- and long-term analysis and archiving, be defined from available hardware, software, infrastructure and connectivity, include one or two backup locations depending on criticality, and size storage according to retention strategy for raw, filtered and processed data. The same section says data security must apply to local and cloud storage.",
-    "tags": ["storage", "backup", "archive", "retention", "security"],
+    "tags": [
+      "storage",
+      "backup",
+      "archive",
+      "retention",
+      "security"
+    ],
     "limitations": "Strategy-level guidance; does not define local retention periods or storage sizing formulae.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "storage requirements should be sized according to the retention strategy chosen"
   },
   {
     "id": "evidence-who-2023-metadata-quality-interoperability",
@@ -114,9 +184,16 @@
     "evidenceType": "short-excerpt",
     "excerpt": "should consider all data relevant to surveillance systems",
     "passageSummary": "WHO states that genomic surveillance data-management policy should not focus only on genetic sequence data, but should consider all data relevant to surveillance systems to support interoperability. The same section links data quality, internal consistency, metadata completeness, metadata quality, storage, privacy/security, and reporting for public-health action.",
-    "tags": ["data-management", "metadata", "interoperability", "quality", "reporting"],
+    "tags": [
+      "data-management",
+      "metadata",
+      "interoperability",
+      "quality",
+      "reporting"
+    ],
     "limitations": "Strategy-level guidance; it does not define a complete local identifier schema.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "should consider all data relevant to surveillance systems"
   },
   {
     "id": "evidence-armstrong-resolution-integration-workflows",
@@ -125,9 +202,16 @@
     "evidenceType": "short-excerpt",
     "excerpt": "Complex workflows are required",
     "passageSummary": "Armstrong et al. describe WGS as higher-resolution than PFGE, useful for understanding transmission and links between cases, but also requiring integration of laboratory, epidemiological, workflow, storage, and secure-sharing functions.",
-    "tags": ["value-case", "resolution", "data-integration", "workflow", "public-health"],
+    "tags": [
+      "value-case",
+      "resolution",
+      "data-integration",
+      "workflow",
+      "public-health"
+    ],
     "limitations": "Review article, not an implementation runbook; examples are weighted toward established public-health programmes.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "Complex workflows are required"
   },
   {
     "id": "evidence-armstrong-workforce-development",
@@ -136,9 +220,16 @@
     "evidenceType": "short-excerpt",
     "excerpt": "Public health workforce development is central",
     "passageSummary": "Armstrong et al. state that public-health genomics requires workforce development. They describe microbiologists needing microbial genomics knowledge, epidemiologists needing skills and tools to translate genomic data into public-health action, and both groups needing basic bioinformatics vocabulary.",
-    "tags": ["workforce", "training", "bioinformatics", "epidemiology", "public-health"],
+    "tags": [
+      "workforce",
+      "training",
+      "bioinformatics",
+      "epidemiology",
+      "public-health"
+    ],
     "limitations": "Review-level source; does not define a staffing model or training curriculum.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "Public health workforce development is central"
   },
   {
     "id": "evidence-armstrong-lab-epi-integration",
@@ -147,9 +238,15 @@
     "evidenceType": "short-excerpt",
     "excerpt": "these data need to be integrated",
     "passageSummary": "Armstrong et al. state that laboratory and epidemiological data are often stored and managed separately, and that pathogen genomic data need to be integrated with epidemiological data to realise the value of both.",
-    "tags": ["metadata", "epidemiology", "data-integration", "decision-use"],
+    "tags": [
+      "metadata",
+      "epidemiology",
+      "data-integration",
+      "decision-use"
+    ],
     "limitations": "Supports the integration principle; does not prescribe a field-level metadata model.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "these data need to be integrated"
   },
   {
     "id": "evidence-phe-end-to-end-service",
@@ -158,9 +255,17 @@
     "evidenceType": "short-excerpt",
     "excerpt": "from sample receipt to the reporting of results",
     "passageSummary": "The PHE case study describes operationalising WGS at scale by considering infrastructure and workflow stages together, including sample management, LIMS interaction, bioinformatics pipelines, quality reporting, storage configuration, user access, and results returned to users.",
-    "tags": ["service-chain", "lims", "bioinformatics", "reporting", "storage", "user-access"],
+    "tags": [
+      "service-chain",
+      "lims",
+      "bioinformatics",
+      "reporting",
+      "storage",
+      "user-access"
+    ],
     "limitations": "Specific to a centralised PHE service model, but useful as a concrete service-design example.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "from sample receipt to the reporting of results"
   },
   {
     "id": "evidence-phe-it-storage-scalability",
@@ -169,9 +274,17 @@
     "evidenceType": "short-excerpt",
     "excerpt": "A sequencing service requires extensive IT infrastructure",
     "passageSummary": "The PHE case study states that a sequencing service requires IT infrastructure to manage and store sequence data and run analysis software, including expertise for a high-performance computing cluster, maintenance and migration of infrastructure, enough storage and processing speed to avoid service impact, high-performance storage, archive storage, and data-lifecycle management software.",
-    "tags": ["storage", "compute", "archive", "maintenance", "scalability", "service-delivery"],
+    "tags": [
+      "storage",
+      "compute",
+      "archive",
+      "maintenance",
+      "scalability",
+      "service-delivery"
+    ],
     "limitations": "Centralised UK service implementation; its specific infrastructure choices should not be generalised as universal requirements.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "A sequencing service requires extensive IT infrastructure"
   },
   {
     "id": "evidence-phe-lims-report-linkage",
@@ -180,9 +293,16 @@
     "evidenceType": "short-excerpt",
     "excerpt": "The interaction between LIMS and the bioinformatics infrastructure",
     "passageSummary": "The PHE case study describes workflow development from sample receipt to reporting and identifies sample tracking, service-user tracking, LIMS interaction with bioinformatics infrastructure, data quality reporting, storage configuration, data access, sample-context integration, and report design as part of the end-to-end service.",
-    "tags": ["lims", "reporting", "metadata", "data-lifecycle", "bioinformatics"],
+    "tags": [
+      "lims",
+      "reporting",
+      "metadata",
+      "data-lifecycle",
+      "bioinformatics"
+    ],
     "limitations": "Centralised UK service example; implementation details may differ in other systems.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "The interaction between LIMS and the bioinformatics infrastructure"
   },
   {
     "id": "evidence-phe-public-health-value",
@@ -191,9 +311,15 @@
     "evidenceType": "short-excerpt",
     "excerpt": "Resolution of outbreaks that were not being solved",
     "passageSummary": "The PHE case study reports public-health value from WGS through resolving outbreaks not solved by conventional methods, faster outbreak resolution, detection of cryptic outbreaks, stronger links between cases and sources, and improved understanding of transmission pathways.",
-    "tags": ["value-case", "outbreak", "decision-use", "enteric-bacteria"],
+    "tags": [
+      "value-case",
+      "outbreak",
+      "decision-use",
+      "enteric-bacteria"
+    ],
     "limitations": "Enteric bacterial reference-laboratory example from the UK; not a universal estimate of benefit.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "Resolution of outbreaks that were not being solved"
   },
   {
     "id": "evidence-phe-staff-training-engagement",
@@ -202,9 +328,16 @@
     "evidenceType": "short-excerpt",
     "excerpt": "Specialised bioinformatics staff were needed",
     "passageSummary": "The PHE case study reports that switching to WGS required multidisciplinary working and training for laboratory staff, specialist bioinformatics staff, computing and software-development expertise, skill transfer to epidemiologists and clinical scientists, Galaxy access for laboratory staff, online learning resources, user letters and surveys, regional roadshows, and collaborations with other agencies.",
-    "tags": ["workforce", "training", "bioinformatics", "user-engagement", "implementation"],
+    "tags": [
+      "workforce",
+      "training",
+      "bioinformatics",
+      "user-engagement",
+      "implementation"
+    ],
     "limitations": "Centralised UK service example; staffing pattern should be adapted to local service design.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "Specialised bioinformatics staff were needed"
   },
   {
     "id": "evidence-price-economic-review-context",
@@ -213,9 +346,15 @@
     "evidenceType": "passage-note",
     "excerpt": "limited by marked heterogeneity",
     "passageSummary": "Price et al. identified 681 articles, assessed 49 full texts, and included 9 studies. All included studies supported WGS surveillance on economic grounds, but evidence was heterogeneous, concentrated in hospital infection prevention/control and foodborne surveillance, and limited for low- and middle-income country implementation and real-world effectiveness.",
-    "tags": ["economics", "cost-effectiveness", "evidence-gap", "value-case"],
+    "tags": [
+      "economics",
+      "cost-effectiveness",
+      "evidence-gap",
+      "value-case"
+    ],
     "limitations": "Does not support a universal return-on-investment claim.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "limited by marked heterogeneity"
   },
   {
     "id": "evidence-who-2025-metadata-provenance-interoperability",
@@ -224,9 +363,17 @@
     "evidenceType": "short-excerpt",
     "excerpt": "auditable trail all along the sequence and metadata generation continuum",
     "passageSummary": "WHO's platform guidance defines minimum metadata as including sample information, high-level sampling strategy, sequencing strategy, bioinformatics methods, and attribution data. It also describes provenance as an auditable trail across sample collection, metadata collection, laboratories, sequencing, bioinformatics, submission, publications, entry route, and identifiers linking records across resources. Its interoperability section supports documented APIs and standards for exchange with other systems.",
-    "tags": ["metadata", "provenance", "interoperability", "repositories", "api", "platforms"],
+    "tags": [
+      "metadata",
+      "provenance",
+      "interoperability",
+      "repositories",
+      "api",
+      "platforms"
+    ],
     "limitations": "Written for data-sharing platforms; local service databases may need a smaller but compatible internal model.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "auditable trail all along the sequence and metadata generation continuum"
   },
   {
     "id": "evidence-aphl-ngs-validation-all-steps",
@@ -235,9 +382,16 @@
     "evidenceType": "short-excerpt",
     "excerpt": "Consider all steps in the validation process",
     "passageSummary": "APHL describes validation as part of NGS quality assurance and control. Its validation considerations include nucleic acid extraction, enrichment, library preparation, data analysis, alignment thresholds, accuracy metrics such as depth of coverage, number of reads and Q score, and robustness and reproducibility across operators and reagent lots.",
-    "tags": ["validation", "quality", "ngs", "bioinformatics", "reproducibility"],
+    "tags": [
+      "validation",
+      "quality",
+      "ngs",
+      "bioinformatics",
+      "reproducibility"
+    ],
     "limitations": "Public-health laboratory implementation guide from 2016; examples are weighted toward PulseNet-style bacterial WGS implementation.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "Consider all steps in the validation process"
   },
   {
     "id": "evidence-clinical-review-qc-validation-eqa",
@@ -246,9 +400,17 @@
     "evidenceType": "short-excerpt",
     "excerpt": "applies to every step of the sequencing and analysis workflow",
     "passageSummary": "The clinical microbiology implementation review states that QC applies across the sequencing and analysis workflow, validation and verification are essential for new or introduced methods, genomic validation requires wet-lab and bioinformatics process validation, software and database version control, and PT/EQA should cover wet-lab and dry-lab components.",
-    "tags": ["quality", "validation", "verification", "eqa", "proficiency-testing", "version-control"],
+    "tags": [
+      "quality",
+      "validation",
+      "verification",
+      "eqa",
+      "proficiency-testing",
+      "version-control"
+    ],
     "limitations": "Clinical microbiology review; public-health surveillance services should adapt its diagnostic-laboratory framing carefully.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "applies to every step of the sequencing and analysis workflow"
   },
   {
     "id": "evidence-clinical-review-bioinformatics-quality-barriers",
@@ -257,9 +419,18 @@
     "evidenceType": "short-excerpt",
     "excerpt": "each step requires QC",
     "passageSummary": "The review identifies barriers around limited bioinformatics expertise, lack of workflow standardisation, inter-laboratory variation in SNP and resistance-gene prediction, data storage and transfer, LIS limitations, unfamiliar bioinformatics QC and validation, local acceptance thresholds, limited EQA availability, and the need for shared standards, SOPs, and validation datasets.",
-    "tags": ["bioinformatics", "quality", "standardisation", "workflow", "storage", "eqa", "validation"],
+    "tags": [
+      "bioinformatics",
+      "quality",
+      "standardisation",
+      "workflow",
+      "storage",
+      "eqa",
+      "validation"
+    ],
     "limitations": "Best used to identify service risks and quality-system needs, not as a complete public-health runbook.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "each step requires QC"
   },
   {
     "id": "evidence-clinical-review-staff-competencies",
@@ -268,9 +439,16 @@
     "evidenceType": "short-excerpt",
     "excerpt": "competencies relating to the genomic workflow",
     "passageSummary": "The clinical microbiology implementation review states that genomic wet-lab scientists and bioinformaticians need competencies across genomic workflow, QC and communication. It lists wet-lab, library-preparation, data-QC, data-analysis, interpretation, validation, accreditation, reporting and communication competencies across the workflow.",
-    "tags": ["workforce", "competencies", "training", "quality", "reporting"],
+    "tags": [
+      "workforce",
+      "competencies",
+      "training",
+      "quality",
+      "reporting"
+    ],
     "limitations": "Clinical microbiology focus; public-health surveillance roles may need additional epidemiology, policy and programme-management competencies.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "competencies relating to the genomic workflow"
   },
   {
     "id": "evidence-who-2025-curation-qc-versioning",
@@ -279,9 +457,16 @@
     "evidenceType": "short-excerpt",
     "excerpt": "annotated with quality control methods and results",
     "passageSummary": "WHO's platform guidance describes data curation as integrity, quality, and completeness checks. It states that low-quality or incomplete data may confound interpretation but may still be useful for validation or emergency sharing if annotated with QC methods and results. The analytical/reporting section states that integrated analytical tools should be documented and version-controlled.",
-    "tags": ["data-curation", "quality", "qc-annotation", "version-control", "platforms"],
+    "tags": [
+      "data-curation",
+      "quality",
+      "qc-annotation",
+      "version-control",
+      "platforms"
+    ],
     "limitations": "Platform guidance; local services need to define which annotations affect public-health reporting, repository submission, and reuse.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "annotated with quality control methods and results"
   },
   {
     "id": "evidence-pha4ge-data-flow-iam-responsibility",
@@ -290,9 +475,17 @@
     "evidenceType": "short-excerpt",
     "excerpt": "ingestion, storage processing and delivery",
     "passageSummary": "The PHA4GE manuscript describes data flow through ingestion, storage, processing and delivery, while satisfying confidentiality, integrity and accessibility. It links data management to storage, access control, versioning, archiving, sharing, provenance, data-management plans, retention policy and role-based access. Its responsibility model separates SaaS, PaaS and IaaS by how much responsibility is handled by users, administrators or external parties.",
-    "tags": ["data-flow", "storage", "archive", "retention", "iam", "responsibility-model"],
+    "tags": [
+      "data-flow",
+      "storage",
+      "archive",
+      "retention",
+      "iam",
+      "responsibility-model"
+    ],
     "limitations": "Infrastructure-focused source; not a legal retention policy or detailed disaster-recovery standard.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "ingestion, storage processing and delivery"
   },
   {
     "id": "evidence-who-costing-bioinformatics-storage-maintenance",
@@ -301,9 +494,17 @@
     "evidenceType": "short-excerpt",
     "excerpt": "cloud computing costs, in-house server costs or a hybrid",
     "passageSummary": "WHO's costing manual states that bioinformatics costing can accommodate cloud, in-house server or hybrid models, including software licensing, storage, cloud costs, in-house hardware, maintenance fees, redundancy if selected for storage, and human resources such as system administrators and systems engineers.",
-    "tags": ["costing", "bioinformatics", "storage", "cloud", "maintenance", "workforce"],
+    "tags": [
+      "costing",
+      "bioinformatics",
+      "storage",
+      "cloud",
+      "maintenance",
+      "workforce"
+    ],
     "limitations": "The manual is SARS-CoV-2 focused in its current version, but the cost categories are useful for recurrent planning.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "cloud computing costs, in-house server costs or a hybrid"
   },
   {
     "id": "evidence-who-costing-personnel-quality-management",
@@ -312,9 +513,16 @@
     "evidenceType": "short-excerpt",
     "excerpt": "personnel involved in each workflow step",
     "passageSummary": "WHO's costing manual includes personnel and training costs across sequencing workflow steps, administrative and management personnel, quality and biosafety managers, laboratory directors, human resources, and adjustable percentage time. It also includes quality-management costs such as accreditation, proficiency testing, certification and other quality activities.",
-    "tags": ["costing", "workforce", "training", "quality-management", "sustainability"],
+    "tags": [
+      "costing",
+      "workforce",
+      "training",
+      "quality-management",
+      "sustainability"
+    ],
     "limitations": "Current manual is SARS-CoV-2 focused and designed for costing, not workforce planning by itself.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "personnel involved in each workflow step"
   },
   {
     "id": "evidence-who-progress-workforce-capacity",
@@ -323,9 +531,16 @@
     "evidenceType": "short-excerpt",
     "excerpt": "Strengthen the workforce to deliver at speed, scale and quality",
     "passageSummary": "WHO's progress report identifies workforce strengthening as a global genomic surveillance objective, including genomics and bioinformatics training packages, communities of practice, external quality assurance, knowledge exchange, costing and forecasting tools, data analysis and management resources, supply chains, and integration with surveillance and laboratory information systems.",
-    "tags": ["workforce", "capacity", "training", "quality", "sustainability"],
+    "tags": [
+      "workforce",
+      "capacity",
+      "training",
+      "quality",
+      "sustainability"
+    ],
     "limitations": "Progress-report source; supports capability categories rather than a detailed staffing template.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "Strengthen the workforce to deliver at speed, scale and quality"
   },
   {
     "id": "evidence-pha4ge-implementation-dependencies",
@@ -334,9 +549,16 @@
     "evidenceType": "passage-note",
     "excerpt": "limited scalability, flexibility and structures",
     "passageSummary": "The PHA4GE manuscript compares several implementation models. It reports that the laptop example was useful where internet and power were unreliable but shifted management to the operator and had limited scalability and access-control structure. On-premises models met local needs but required expertise for job-processing systems. Cloud models reduced hardware barriers but required sufficient internet for data upload. The discussion cautions that infrastructure choices have long-lasting effects.",
-    "tags": ["maturity", "implementation", "dependencies", "infrastructure", "constraints"],
+    "tags": [
+      "maturity",
+      "implementation",
+      "dependencies",
+      "infrastructure",
+      "constraints"
+    ],
     "limitations": "Useful for dependency and maturity discussion, but not a validated scoring rubric.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "limited scalability, flexibility and structures"
   },
   {
     "id": "evidence-who-2022-sharing-principles-public-health",
@@ -345,9 +567,16 @@
     "evidenceType": "short-excerpt",
     "excerpt": "ethical, equitable, efficient, and effective",
     "passageSummary": "WHO's guiding principles state that pathogen genome data sharing protects global public health, supports epidemic and pandemic prevention, detection and response, endemic disease monitoring, and AMR tracking. The principles apply to rapid public sharing of pathogen genome data with appropriate non-sensitive metadata and support timely sharing, capacity development, equitable access to benefits, and an 'as open as possible and as closed as necessary' access approach.",
-    "tags": ["data-sharing", "public-health", "equity", "metadata", "access"],
+    "tags": [
+      "data-sharing",
+      "public-health",
+      "equity",
+      "metadata",
+      "access"
+    ],
     "limitations": "Principles source; local implementation still requires jurisdiction-specific policy and platform decisions.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "ethical, equitable, efficient, and effective"
   },
   {
     "id": "evidence-who-2023-sharing-policy-national-database",
@@ -356,9 +585,16 @@
     "evidenceType": "short-excerpt",
     "excerpt": "Data sharing is essential to inform risk assessment",
     "passageSummary": "WHO's national strategy support tool states that data sharing supports risk assessment and public-health decisions at local, national, regional and global levels, should be governed by a national pathogen genome data-sharing policy, and may include a national database that centralizes sequencing data and metadata while integrating with public genomic sequence databases.",
-    "tags": ["data-sharing", "policy", "national-database", "risk-assessment", "metadata"],
+    "tags": [
+      "data-sharing",
+      "policy",
+      "national-database",
+      "risk-assessment",
+      "metadata"
+    ],
     "limitations": "National strategy source; does not prescribe a local platform architecture or legal template.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "Data sharing is essential to inform risk assessment"
   },
   {
     "id": "evidence-who-2025-governance-access-benefit-sharing",
@@ -367,9 +603,16 @@
     "evidenceType": "short-excerpt",
     "excerpt": "code of practice or terms of use, access policies",
     "passageSummary": "WHO's platform guidance states that governance should cover legal, ethical, privacy, access, licensing and accountability arrangements. Its access section distinguishes anonymous, account-linked, verified/vetted, restricted and closed access, with documented policies. Its data-use section covers licences, user responsibilities, acknowledgement, onward sharing, withdrawal or deletion, and benefit-sharing expectations.",
-    "tags": ["governance", "access", "data-sharing", "licence", "benefit-sharing"],
+    "tags": [
+      "governance",
+      "access",
+      "data-sharing",
+      "licence",
+      "benefit-sharing"
+    ],
     "limitations": "Platform-level framework; national legal and ethical requirements still need local review.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "code of practice or terms of use, access policies"
   },
   {
     "id": "evidence-mgen-bioinformatics-implementation",
@@ -377,7 +620,14 @@
     "sourceLocator": "knowledge-base/source-cards/microbial-genomics-implementation-collection.md",
     "evidenceType": "source-card-summary",
     "passageSummary": "The Microbial Genomics implementation collection includes a bioinformatics implementation paper emphasizing standardized, reproducible, validated, auditable, scalable, portable, and secure analysis in public-health laboratory contexts.",
-    "tags": ["bioinformatics", "workflow", "validation", "audit", "security", "portability"],
+    "tags": [
+      "bioinformatics",
+      "workflow",
+      "validation",
+      "audit",
+      "security",
+      "portability"
+    ],
     "limitations": "Needs conversion into concrete implementation checklists before being used as operational instructions.",
     "reviewStatus": "draft"
   },
@@ -388,9 +638,16 @@
     "evidenceType": "short-excerpt",
     "excerpt": "rapidly communicated to stakeholders in a standardized and easily interpretable written report",
     "passageSummary": "WHO states that SARS-CoV-2 sequencing programmes should identify stakeholders early, agree aims and communication channels, keep genomic analysts close to public-health investigation and response teams, rapidly communicate results in clear written reports, discuss analytical limitations in everyday language, and seek structured stakeholder feedback.",
-    "tags": ["reporting", "decision-use", "stakeholders", "respiratory-viruses", "evaluation"],
+    "tags": [
+      "reporting",
+      "decision-use",
+      "stakeholders",
+      "respiratory-viruses",
+      "evaluation"
+    ],
     "limitations": "SARS-CoV-2 specific source; general reporting principles need adaptation for other pathogens.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "rapidly communicated to stakeholders in a standardized and easily interpretable written report"
   },
   {
     "id": "evidence-who-sarscov2-metadata-sharing",
@@ -399,9 +656,16 @@
     "evidenceType": "short-excerpt",
     "excerpt": "date and location of sample collection",
     "passageSummary": "WHO states that anonymised SARS-CoV-2 metadata should be shared with genomic data, with collection date and location as minimum fields and additional sample, travel, demographic and clinical context where possible. It distinguishes consensus, partial consensus and raw read sharing, notes that partial genomes can still be useful when quality is checked, and warns that raw read sharing can be difficult where internet upload is limited.",
-    "tags": ["metadata", "data-sharing", "respiratory-viruses", "quality", "internet-constraints"],
+    "tags": [
+      "metadata",
+      "data-sharing",
+      "respiratory-viruses",
+      "quality",
+      "internet-constraints"
+    ],
     "limitations": "SARS-CoV-2 platform and metadata details do not define a universal repository policy.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "date and location of sample collection"
   },
   {
     "id": "evidence-ecdc-reporting-objectives",
@@ -410,9 +674,15 @@
     "evidenceType": "short-excerpt",
     "excerpt": "distinct data analysis and reporting outputs",
     "passageSummary": "ECDC states that WGS visualisation and plain-language reporting for epidemiological inference and risk assessment should be agreed for each disease or pathogen according to surveillance objectives. It distinguishes comparative genome analysis for transmission linkage from phenotype prediction for antigenic profile, drug resistance, virulence and mobile elements.",
-    "tags": ["reporting", "surveillance-objectives", "phenotype-prediction", "risk-assessment"],
+    "tags": [
+      "reporting",
+      "surveillance-objectives",
+      "phenotype-prediction",
+      "risk-assessment"
+    ],
     "limitations": "EU/EEA expert opinion from 2016; technical methods have changed, but the principle that outputs depend on surveillance objectives remains useful.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "distinct data analysis and reporting outputs"
   },
   {
     "id": "evidence-ecdc-epidemiology-linkage-interpretation",
@@ -421,9 +691,16 @@
     "evidenceType": "short-excerpt",
     "excerpt": "linked with the source patient or environment metadata record using a common source identifier",
     "passageSummary": "ECDC states that genomic records must be linked to patient or environmental metadata records using a common source identifier, that sensitive clinical and epidemiological data should be restricted to competent authorities, and that pathogen-specific interpretation criteria for relatedness need validation against epidemiological concordance and surveillance objectives.",
-    "tags": ["metadata", "identifier", "interpretation", "governance", "validation"],
+    "tags": [
+      "metadata",
+      "identifier",
+      "interpretation",
+      "governance",
+      "validation"
+    ],
     "limitations": "Supports linkage and validation principles, not current pathogen-specific cut-offs.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "linked with the source patient or environment metadata record using a common source identifier"
   },
   {
     "id": "evidence-phe-enteric-users-actions",
@@ -432,9 +709,17 @@
     "evidenceType": "short-excerpt",
     "excerpt": "Pathogen genomic data can inform and expedite the delivery of appropriate public health protection interventions",
     "passageSummary": "The PHE case study lists enteric-bacterial WGS uses including surveillance, pathogen evolution, disease control, transmission and outbreak analysis, AMR cataloguing and emerging threat tracking. It identifies health-protection teams, local authorities, hospital and public-health microbiologists, food and animal-health agencies, and international public-health agencies as service users. Its raw-milk STEC example shows WGS linking cattle and human cases, identifying additional cases, and supporting control action and public messaging.",
-    "tags": ["enteric-bacteria", "reporting", "decision-use", "outbreak", "amr", "one-health"],
+    "tags": [
+      "enteric-bacteria",
+      "reporting",
+      "decision-use",
+      "outbreak",
+      "amr",
+      "one-health"
+    ],
     "limitations": "UK enteric reference-laboratory example; not all programmes will have the same users or reporting route.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "Pathogen genomic data can inform and expedite the delivery of appropriate public health protection interventions"
   },
   {
     "id": "evidence-armstrong-tb-influenza-amr-reporting",
@@ -443,9 +728,17 @@
     "evidenceType": "short-excerpt",
     "excerpt": "Sequencing cannot completely replace traditional phenotyping",
     "passageSummary": "Armstrong et al. describe TB WGS as helping refute or define suspected outbreaks, infer transmission, identify possible missed cases, distinguish reactivation from reinfection, and support drug-susceptibility inference where feasible. They describe influenza sequencing as a sequence-first approach that supports vaccine decision-making and risk assessment while still requiring selected phenotyping. Their phenotype-inference caveats state that reliability varies by organism, antimicrobial, resistance mechanism and available genotype-phenotype evidence.",
-    "tags": ["tb", "respiratory-viruses", "amr", "reporting", "phenotype-prediction", "decision-use"],
+    "tags": [
+      "tb",
+      "respiratory-viruses",
+      "amr",
+      "reporting",
+      "phenotype-prediction",
+      "decision-use"
+    ],
     "limitations": "Review source; organism-specific public-health services still need current national or pathogen-specific guidance.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "Sequencing cannot completely replace traditional phenotyping"
   },
   {
     "id": "evidence-phe-routine-throughput-failure-feedback",
@@ -454,9 +747,17 @@
     "evidenceType": "short-excerpt",
     "excerpt": "600-700 bacterial samples per week, on a routine basis, to a specified schedule",
     "passageSummary": "The PHE case study describes a routine scheduled WGS service processing 600 to 700 bacterial samples per week, with DNA samples moving through robotics, sequencing, LIMS, IT storage, bioinformatics analysis and final reporting. Planning included costs associated with sample issues or sequencing failure, user sample-quality processes, anticipated sample numbers, turnaround requirements, report format, troubleshooting guides, unexpected or unusual samples, validation, and quality parameters across the whole WGS-based typing process.",
-    "tags": ["routine-service", "throughput", "lims", "failure-handling", "turnaround", "validation"],
+    "tags": [
+      "routine-service",
+      "throughput",
+      "lims",
+      "failure-handling",
+      "turnaround",
+      "validation"
+    ],
     "limitations": "Centralised UK enteric service example; throughput and schedule should not be generalised.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "600-700 bacterial samples per week, on a routine basis, to a specified schedule"
   },
   {
     "id": "evidence-aphl-multiday-workflow-lims-accessions",
@@ -465,9 +766,17 @@
     "evidenceType": "short-excerpt",
     "excerpt": "NGS is a multi-step and multi-day process",
     "passageSummary": "APHL describes NGS as a multi-step, multi-day process with opportunities for error across nucleic-acid isolation, library preparation, sequencing and analysis. It recommends allowing time for troubleshooting and staff training, keeping conventional and NGS methods trackable in LIMS during parallel workflows, submitting raw reads and limited metadata to NCBI after initial quality checks, and tracking BioSample and SRA accession numbers.",
-    "tags": ["workflow", "lims", "parallel-running", "repository", "accessions", "troubleshooting"],
+    "tags": [
+      "workflow",
+      "lims",
+      "parallel-running",
+      "repository",
+      "accessions",
+      "troubleshooting"
+    ],
     "limitations": "2016 public-health laboratory guide with PulseNet emphasis; implementation details should be checked against current repository workflows.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "NGS is a multi-step and multi-day process"
   },
   {
     "id": "evidence-who-2023-feedback-data-management-action",
@@ -476,9 +785,17 @@
     "evidenceType": "short-excerpt",
     "excerpt": "timely feedback mechanisms to ensure links to public health action",
     "passageSummary": "WHO's national strategy support tool says genomic surveillance strategy should include sustainable laboratory sample and data management, quality and biosafety assessment, agreements for data sharing, timely feedback mechanisms linked to public-health action, expected turnaround times, and national data-management protocols for data quality and sharing across storage, analysis, reporting and sharing.",
-    "tags": ["feedback", "data-management", "public-health-action", "turnaround", "quality", "sharing"],
+    "tags": [
+      "feedback",
+      "data-management",
+      "public-health-action",
+      "turnaround",
+      "quality",
+      "sharing"
+    ],
     "limitations": "Strategy-level guidance; does not define a local service dashboard or feedback-template format.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "timely feedback mechanisms to ensure links to public health action"
   },
   {
     "id": "evidence-service-model-choices",
@@ -487,9 +804,17 @@
     "evidenceType": "passage-note",
     "excerpt": "continuous, real-time or periodic sentinel surveys",
     "passageSummary": "WHO states that priority pathogen use cases should be defined in context and that each step of the value chain may be centralised or decentralised depending on resources, routine sample volume, sequencing and bioinformatics capacity, procurement, distances, transport, biobanking and data-management protocols. ECDC states that storage and sharing requirements depend on surveillance objectives and study design, including continuous, real-time or periodic sentinel surveys and centralised or decentralised analysis. The clinical implementation review distinguishes reactive sequencing for suspected outbreaks from prospective surveillance that can detect unrecognised transmission earlier but requires more finance, staffing and infrastructure.",
-    "tags": ["service-model", "use-case", "centralised", "decentralised", "reactive", "prospective"],
+    "tags": [
+      "service-model",
+      "use-case",
+      "centralised",
+      "decentralised",
+      "reactive",
+      "prospective"
+    ],
     "limitations": "Supports comparison categories; does not define a complete decision tree or numeric thresholds.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "continuous, real-time or periodic sentinel surveys"
   },
   {
     "id": "evidence-ecdc-public-sensitive-metadata-sharing",
@@ -498,9 +823,16 @@
     "evidenceType": "short-excerpt",
     "excerpt": "distinguish between non-confidential minimum data sets",
     "passageSummary": "ECDC states that WGS records must be linked to source patient or environmental metadata using a common source identifier, that sensitive clinical and epidemiological data should be available only to competent authorities, and that contextual metadata sharing should distinguish non-confidential minimum datasets for public databases from sensitive data legally restricted to health authorities.",
-    "tags": ["data-sharing", "metadata", "sensitive-data", "governance", "identifier"],
+    "tags": [
+      "data-sharing",
+      "metadata",
+      "sensitive-data",
+      "governance",
+      "identifier"
+    ],
     "limitations": "EU/EEA legal framing; local legal requirements must be checked in each jurisdiction.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "distinguish between non-confidential minimum data sets"
   },
   {
     "id": "evidence-sarscov2-repository-data-types",
@@ -509,9 +841,17 @@
     "evidenceType": "short-excerpt",
     "excerpt": "Public-domain databases for sharing consensus genomes include",
     "passageSummary": "WHO's SARS-CoV-2 implementation guide distinguishes shared metadata, consensus genomes, partial genomes and raw reads. It says partial genomes can be valuable when quality is checked, raw reads support comparison and correction but may be hard to upload with limited connectivity and must be filtered to remove human reads, and platforms differ in data type, use conditions and metadata upload mechanisms. It names INSDC raw-read repositories, public-domain consensus repositories and GISAID as a public-access consensus database.",
-    "tags": ["repository", "data-sharing", "metadata", "raw-reads", "consensus", "respiratory-viruses"],
+    "tags": [
+      "repository",
+      "data-sharing",
+      "metadata",
+      "raw-reads",
+      "consensus",
+      "respiratory-viruses"
+    ],
     "limitations": "SARS-CoV-2 specific; use as a data-type and platform example, not a universal sharing rule.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "Public-domain databases for sharing consensus genomes include"
   },
   {
     "id": "evidence-release-change-control-validation",
@@ -520,9 +860,17 @@
     "evidenceType": "passage-note",
     "excerpt": "strict software and database version control",
     "passageSummary": "PHE validated WGS before switching off conventional testing through parallel running, dataset comparison, gap analysis, protocol adjustment and quality parameters for the whole typing process. APHL describes validation runs by two scientists, external partner review, final reports, SOP preparation, QA and senior approval, and run/sample/read quality metrics. The clinical implementation review states that workflows reporting inferred phenotypes need database quality assessment, reproducible genotype-phenotype validation, reporting-language evaluation, strict software and database version control, workflow auditing, validation or verification, EQA planning and local thresholds where formal standards are absent.",
-    "tags": ["change-control", "validation", "qc", "version-control", "workflow-audit", "revalidation"],
+    "tags": [
+      "change-control",
+      "validation",
+      "qc",
+      "version-control",
+      "workflow-audit",
+      "revalidation"
+    ],
     "limitations": "Supports a beta release-control checklist; a formal accredited SOP still needs local quality-system review.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "strict software and database version control"
   },
   {
     "id": "evidence-beta-metadata-accession-field-model",
@@ -531,9 +879,17 @@
     "evidenceType": "passage-note",
     "excerpt": "Minimum metadata are defined and include sample information",
     "passageSummary": "WHO platform guidance defines a platform data scope including pathogen scope, data type, laboratory and bioinformatics methods, linked metadata, minimum metadata such as time, place, host, source, sampling strategy, sequencing strategy and attribution, optional pre-set metadata for epidemic and One Health analysis, and provenance across the sequence and metadata generation continuum. WHO's SARS-CoV-2 guide sets date and location of sample collection as absolute minimum metadata and encourages specimen type, sequencing method, duplicate-sample flags, demographic or clinical data when confidentiality permits, and consistent formats. ECDC requires genomic records to link to source patient or environmental metadata through a common source identifier and separates public non-confidential metadata from restricted sensitive data. APHL recommends tracking multiple isolate identifiers and repository fields, including state ID, WGS_ID, SAMN ID, SRA ID, DNA extraction date, NCBI upload date, BioSample export date, analysis-engine submission and retrieval dates, and national database upload dates.",
-    "tags": ["metadata", "field-model", "accessions", "provenance", "repository", "sensitive-data"],
+    "tags": [
+      "metadata",
+      "field-model",
+      "accessions",
+      "provenance",
+      "repository",
+      "sensitive-data"
+    ],
     "limitations": "This supports a beta field model, not a complete organism-specific repository schema.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "Minimum metadata are defined and include sample information"
   },
   {
     "id": "evidence-beta-workforce-responsibility-template",
@@ -542,9 +898,17 @@
     "evidenceType": "passage-note",
     "excerpt": "staffing, competencies, sequencing platform selection",
     "passageSummary": "APHL treats personnel time, training, cross-training and bioinformatics support as explicit implementation needs. PHE describes laboratory training, specialist bioinformatics, computing and software-development expertise, epidemiology and clinical-scientist cross-training, user engagement and multidisciplinary collaboration. WHO's progress report frames workforce strengthening, training packages, communities of practice, EQA, costing and data-management resources as surveillance capacity. The clinical implementation review lists staffing, competencies, laboratory setup, SOPs, bioinformatics, storage, transfer, sharing, reporting, interpretation, QC, validation, EQA and implementation model as linked implementation considerations. The East African Community assessment shows that limited sequencing facilities, bioinformatics expertise, compute and data-sharing mechanisms can create dependence on external sequencing or analysis.",
-    "tags": ["workforce", "responsibility-template", "training", "support", "implementation-model", "capacity"],
+    "tags": [
+      "workforce",
+      "responsibility-template",
+      "training",
+      "support",
+      "implementation-model",
+      "capacity"
+    ],
     "limitations": "Supports a responsibility template and capability questions, not staffing ratios or grade structures by throughput.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "staffing, competencies, sequencing platform selection"
   },
   {
     "id": "evidence-beta-implementation-dependency-matrix",
@@ -553,9 +917,18 @@
     "evidenceType": "passage-note",
     "excerpt": "where internet and power were unreliable",
     "passageSummary": "PHA4GE compares laptop, on-premises, workflow-platform, Galaxy, Terra and IRIDA-like implementations across scalability, access control, provenance, user control, external access requirements and administrative burden. The clinical implementation review describes centralised reference laboratory, decentralised in-house, hybrid and collaborative models. AusPathoGen describes a national collaborative model with public-health laboratories, agencies, academic partners, standard bioinformatics methods, governance committees and a shared data platform. The East African Community assessment shows that external sequencing or analysis can help during capability building but may delay real-time surveillance decisions and limit local interpretation if local sequencing, compute, bioinformatics and data-sharing capacity are not developed.",
-    "tags": ["implementation-model", "dependency-matrix", "local-compute", "cloud", "managed-platform", "hybrid", "external-support"],
+    "tags": [
+      "implementation-model",
+      "dependency-matrix",
+      "local-compute",
+      "cloud",
+      "managed-platform",
+      "hybrid",
+      "external-support"
+    ],
     "limitations": "Supports dependency comparison, not a universal ranked recommendation or validated scoring rubric.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "where internet and power were unreliable"
   },
   {
     "id": "evidence-beta-organism-service-model-matrix",
@@ -564,9 +937,17 @@
     "evidenceType": "passage-note",
     "excerpt": "For each disease or public health priority",
     "passageSummary": "WHO asks programmes to define priority use cases, data users, sampling strategy, analysis, result sharing and intended outcomes for each public-health priority. ECDC states that reporting and visualization outputs should be agreed for each pathogen according to surveillance objectives and distinguishes transmission linkage from phenotype prediction. PHE gives an enteric-bacterial service example covering surveillance, outbreak investigation, AMR and One Health users. Armstrong et al. describe tuberculosis, influenza and AMR use cases and caveats. WHO's SARS-CoV-2 guide links sequencing to stakeholders, metadata, consensus or partial genomes, raw reads and feedback. The clinical implementation review distinguishes reactive and prospective sequencing for hospital-facing services. The Microbial Genomics collection adds organism-specific examples for AMR capacity, foodborne pathogens, influenza, SARS-CoV-2, healthcare-associated outbreaks and validation.",
-    "tags": ["service-model", "organism-specific", "use-case", "reporting", "sampling", "validation"],
+    "tags": [
+      "service-model",
+      "organism-specific",
+      "use-case",
+      "reporting",
+      "sampling",
+      "validation"
+    ],
     "limitations": "Supports a beta service-model matrix. It does not provide pathogen-specific thresholds, report templates, sampling fractions or clinical rules.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "For each disease or public health priority"
   },
   {
     "id": "evidence-beta-tb-amr-hai-reporting-fields",
@@ -575,9 +956,17 @@
     "evidenceType": "passage-note",
     "excerpt": "interpretation, quality control, validation, verification",
     "passageSummary": "Armstrong et al. describe TB WGS as supporting outbreak investigation, transmission inference, missed-case detection, reactivation versus reinfection distinctions and drug-susceptibility inference where feasible, while cautioning that phenotype inference varies by organism, drug, mechanism and evidence base. ECDC distinguishes transmission-linkage outputs from phenotype-prediction outputs and says reporting should match pathogen-specific surveillance objectives. The clinical implementation review emphasises clinical reporting, interpretive commentary, verbal discussion, validation, verification, EQA, regulatory obligations and uncertainty. The Microbial Genomics collection includes examples where centre-specific typing affects infection-control decisions, polymicrobial MDR critical-care outbreak genomics supports intervention, AMR proficiency testing highlights QC and data-sharing challenges, and AMR prediction can vary between pipelines.",
-    "tags": ["reporting", "tb", "amr", "healthcare-associated-infection", "infection-control", "uncertainty"],
+    "tags": [
+      "reporting",
+      "tb",
+      "amr",
+      "healthcare-associated-infection",
+      "infection-control",
+      "uncertainty"
+    ],
     "limitations": "Supports beta reporting fields and cautions. It does not define clinical treatment rules, SNP thresholds, genotype-phenotype databases, or national report wording.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "interpretation, quality control, validation, verification"
   },
   {
     "id": "evidence-beta-enteric-respiratory-reporting-fields",
@@ -586,9 +975,17 @@
     "evidenceType": "passage-note",
     "excerpt": "final sample reports for service users",
     "passageSummary": "The PHE case study describes enteric-bacterial WGS as serving surveillance, outbreak investigation, AMR cataloguing, emerging threat tracking and multi-agency users, and its raw-milk STEC example links genomic findings to exposure investigation and public-health action. Allard et al. describe WGS uses across foodborne pathogens including outbreak detection, source tracking, root-cause investigation, virulence profiling, AMR monitoring and quality assurance. WHO's SARS-CoV-2 guide says sequencing outputs and metadata should be defined before sequencing, minimum metadata include date and location, partial genomes can be useful when quality checked, raw-read sharing may be difficult with limited internet, and results should be communicated to stakeholders with limitations and feedback. Armstrong et al. describe influenza sequencing as supporting sequence-first surveillance, specimen selection for phenotyping, vaccine-strain decisions, forecasting and risk assessment while retaining selected phenotyping.",
-    "tags": ["reporting", "enteric-bacteria", "respiratory-viruses", "metadata", "source-attribution", "variant-monitoring"],
+    "tags": [
+      "reporting",
+      "enteric-bacteria",
+      "respiratory-viruses",
+      "metadata",
+      "source-attribution",
+      "variant-monitoring"
+    ],
     "limitations": "Supports beta reporting fields and cautions for enteric and respiratory-virus services. It does not define pathogen-specific report templates, cluster thresholds, lineage nomenclature rules or repository-required fields.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "final sample reports for service users"
   },
   {
     "id": "evidence-beta-data-sharing-decision-table",
@@ -597,9 +994,17 @@
     "evidenceType": "passage-note",
     "excerpt": "timely, ethical, equitable, efficient and effective",
     "passageSummary": "WHO's data-sharing principles frame pathogen genome data sharing as a public-health activity that should be timely, ethical, equitable, efficient and effective. WHO's national strategy support tool asks countries to define a data-sharing policy and possible national database linked to public sequence databases. WHO's 2025 platform guidance lists governance, infrastructure and security, data scope, submission, curation, access, provenance, interoperability, data use, benefit sharing, analytical/reporting capabilities and sustainability as platform attributes. ECDC separates non-confidential minimum metadata for public databases from sensitive data restricted to competent authorities. WHO SARS-CoV-2 guidance distinguishes consensus genomes, partial genomes and raw reads. APHL describes NCBI BioSample and SRA accession tracking after quality-checked submission.",
-    "tags": ["data-sharing", "decision-table", "governance", "repositories", "metadata", "accessions"],
+    "tags": [
+      "data-sharing",
+      "decision-table",
+      "governance",
+      "repositories",
+      "metadata",
+      "accessions"
+    ],
     "limitations": "Supports a beta decision pathway. It does not replace local legal, ethical, privacy, data-protection, data-residency or benefit-sharing review.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "timely, ethical, equitable, efficient and effective"
   },
   {
     "id": "evidence-beta-organism-metadata-field-priorities",
@@ -608,9 +1013,17 @@
     "evidenceType": "passage-note",
     "excerpt": "sample information, high-level sampling strategy, sequencing strategy",
     "passageSummary": "WHO platform guidance supports core metadata buckets covering sample information, sampling strategy, sequencing strategy, bioinformatics methods, attribution, optional epidemic or One Health metadata, provenance and identifiers. WHO SARS-CoV-2 guidance identifies collection date and location as absolute minimum metadata and encourages specimen type, sequencing method, duplicate flags, demographics and clinical data where confidentiality permits. ECDC requires genomic records to link to source metadata and separates public and restricted data. PHE, Armstrong et al., the clinical review and implementation examples show that enteric bacteria, respiratory viruses, TB, AMR and healthcare-associated infection use cases place different weight on exposure/source context, sampling frame, transmission inference, phenotype inference, patient-care or infection-control context, validation and reporting route.",
-    "tags": ["metadata", "organism-specific", "field-priorities", "epidemiology", "reporting", "repositories"],
+    "tags": [
+      "metadata",
+      "organism-specific",
+      "field-priorities",
+      "epidemiology",
+      "reporting",
+      "repositories"
+    ],
     "limitations": "Supports beta field priorities by organism/use case. It does not define exact repository schemas, controlled vocabularies, pathogen-specific thresholds or legal permissions for sensitive fields.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "sample information, high-level sampling strategy, sequencing strategy"
   },
   {
     "id": "evidence-beta-economic-strategy-choice",
@@ -619,9 +1032,17 @@
     "evidenceType": "passage-note",
     "excerpt": "continuous surveillance versus outbreak-triggered investigations",
     "passageSummary": "Egli and Howden contrast continuous or selective WGS surveillance with sequencing triggered after an outbreak is suspected, framing the choice as an investment trade-off between steady recurring surveillance costs and the risk of delayed detection or larger outbreaks. The paper notes that returns depend on setting, pathogen, health-system resources, sequencing approach, sampling strategy and response capacity. Price et al. show that bacterial WGS economic evaluations generally support WGS surveillance on economic grounds but remain heterogeneous and concentrated in high-income hospital infection-prevention and foodborne-surveillance settings. WHO's costing tool manual supports scenario-based costing across throughput, platform, personnel, training, facilities, transport, bioinformatics and quality management. Khoo et al. support making national investment cases through explicit value, capacity and implementation assumptions.",
-    "tags": ["economics", "costing", "investment-case", "continuous-surveillance", "outbreak-response", "scenario-planning"],
+    "tags": [
+      "economics",
+      "costing",
+      "investment-case",
+      "continuous-surveillance",
+      "outbreak-response",
+      "scenario-planning"
+    ],
     "limitations": "Supports a beta strategy-choice table. It does not provide universal cost-effectiveness thresholds, ROI estimates, pathogen-specific sampling fractions or country-specific budget assumptions.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "continuous surveillance versus outbreak-triggered investigations"
   },
   {
     "id": "evidence-beta-procurement-supply-chain-risks",
@@ -630,9 +1051,18 @@
     "evidenceType": "passage-note",
     "excerpt": "high equipment and consumable costs",
     "passageSummary": "Stona et al. report procurement and supply-chain challenges for pathogen genomic surveillance in South and Southeast Asia, including high equipment and consumable costs, long equipment purchasing lead times, long reagent resupply times, customs clearance, variable import procedures, taxes and duties. The paper argues for coordinated national and regional efforts to strengthen supply-chain systems for timely disease detection and response. WHO's genomic surveillance progress report treats supply chains, equipment, supplies, workforce, EQA and information-system integration as linked implementation capacities, and WHO's costing manual includes reagents, consumables, equipment, maintenance, facilities, transport, bioinformatics and quality-management cost categories.",
-    "tags": ["procurement", "supply-chain", "sustainability", "reagents", "maintenance", "costing", "implementation"],
+    "tags": [
+      "procurement",
+      "supply-chain",
+      "sustainability",
+      "reagents",
+      "maintenance",
+      "costing",
+      "implementation"
+    ],
     "limitations": "Supports beta procurement-resilience questions. It does not provide universal stock levels, procurement lead times, supplier choices, customs rules or national purchasing procedures.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "high equipment and consumable costs"
   },
   {
     "id": "evidence-beta-distributed-capability-early-detection",
@@ -641,9 +1071,17 @@
     "evidenceType": "passage-note",
     "excerpt": "minimum sequencing capacity",
     "passageSummary": "de Jong et al. model global respiratory-virus genomic surveillance and argue that geographically distributed minimum sequencing capacity with regular reporting can improve early detection of novel acute respiratory-virus threats. The source card notes that the study contrasts distributed minimum capacity with siloed expansion in countries already possessing strong capacity. WHO's global strategy and progress report also frame access, geographic representation, workforce, data sharing, connectivity and readiness as linked genomic-surveillance capacities.",
-    "tags": ["equity", "distributed-capability", "respiratory-viruses", "early-detection", "global-health-security", "surveillance"],
+    "tags": [
+      "equity",
+      "distributed-capability",
+      "respiratory-viruses",
+      "early-detection",
+      "global-health-security",
+      "surveillance"
+    ],
     "limitations": "Supports a beta equity and distributed-capability argument. Do not use the model's numeric capacity threshold until the assumptions, pathogen scope, reporting regularity and transferability limits are extracted in detail.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "minimum sequencing capacity"
   },
   {
     "id": "evidence-beta-metagenomics-scope-boundary",
@@ -652,9 +1090,17 @@
     "evidenceType": "passage-note",
     "excerpt": "WGS and clinical metagenomics",
     "passageSummary": "The clinical microbiology implementation review frames pathogen genomics as including WGS and clinical metagenomics, while distinguishing clinical laboratories from public-health laboratories because clinical laboratories carry more direct patient-care responsibilities, tighter diagnostic reporting expectations, regulatory obligations and interpretive uncertainty. The Microbial Genomics implementation collection includes metagenomics examples, including strain-level shotgun metagenomics for Salmonella food-source investigation and a rapid metagenomic sequencing edge case for diagnosis and AMR prediction. Together these sources support including metagenomics as a scope consideration while keeping diagnostic recommendations, thresholds and clinical-action rules outside the beta guide unless specifically sourced.",
-    "tags": ["metagenomics", "scope", "clinical-microbiology", "reporting", "validation", "public-health"],
+    "tags": [
+      "metagenomics",
+      "scope",
+      "clinical-microbiology",
+      "reporting",
+      "validation",
+      "public-health"
+    ],
     "limitations": "Supports a scope boundary and service-model prompt. It does not provide a metagenomic diagnostic workflow, validation standard, sensitivity threshold, report template or clinical decision rule.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "WGS and clinical metagenomics"
   },
   {
     "id": "evidence-beta-national-capability-domains",
@@ -663,9 +1109,18 @@
     "evidenceType": "passage-note",
     "excerpt": "workforce, laboratories, data and analytics capabilities",
     "passageSummary": "UKHSA frames pathogen genomics as part of infectious-disease control and public-health decision-making, naming workforce, laboratories, data and analytics, collaboration, standardised laboratory services, bioinformatic pipelines, translational services, data sharing, sustainability and value-for-money evaluation. The Australian framework is aimed at decision-makers, funders and policymakers and identifies governance, leadership, financing, laboratory capability, human resources, information systems, access to technologies, service delivery, data governance, interoperability, quality assurance, proficiency testing and HPC infrastructure. AusPathoGen describes a national partnership across academia, public-health laboratories and public-health agencies with governance committees, pathogen-specific working groups, bioinformatics sub-working groups, a secure data-analysis platform, ethics and data-sharing arrangements, training and evaluation.",
-    "tags": ["national-capability", "governance", "workforce", "data-analytics", "laboratories", "collaboration", "evaluation"],
+    "tags": [
+      "national-capability",
+      "governance",
+      "workforce",
+      "data-analytics",
+      "laboratories",
+      "collaboration",
+      "evaluation"
+    ],
     "limitations": "Supports a beta national capability-domain checklist. It does not define a universal national operating model, governance template, staffing structure or maturity score.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "workforce, laboratories, data and analytics capabilities"
   },
   {
     "id": "evidence-beta-local-infrastructure-resilience",
@@ -674,9 +1129,18 @@
     "evidenceType": "passage-note",
     "excerpt": "secure access-controlled server rooms",
     "passageSummary": "The PHA4GE source pack distinguishes active storage, long-term storage, backup strategy and disaster-recovery planning, and asks whether an organisation could recover if its main data store were destroyed. Its power and cooling notes identify secure access-controlled server rooms, environmental monitoring, dust and temperature control, hot-aisle/cold-aisle layouts, UPS sizing and maintenance, and generator support for longer outages. PHE describes high-performance storage, archive storage, data-lifecycle management software and IT infrastructure as part of operational WGS delivery. WHO's national strategy support tool treats storage, backup, retention, infrastructure, connectivity, local/cloud security and data criticality as part of data-management planning.",
-    "tags": ["storage", "backup", "disaster-recovery", "power", "cooling", "on-premises", "business-continuity"],
+    "tags": [
+      "storage",
+      "backup",
+      "disaster-recovery",
+      "power",
+      "cooling",
+      "on-premises",
+      "business-continuity"
+    ],
     "limitations": "The PHA4GE disaster-recovery and power/cooling notes are rough source material. This supports beta checklist questions for local infrastructure resilience, not formal facilities standards, UPS sizing rules, generator specifications, RTO/RPO targets or business-continuity policy.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "secure access-controlled server rooms"
   },
   {
     "id": "evidence-beta-costed-implementation-action-register",
@@ -685,8 +1149,16 @@
     "evidenceType": "passage-note",
     "excerpt": "responsible entities, implementation level, timeline, monitoring indicators and cost",
     "passageSummary": "WHO's national strategy support tool supports developing a costed implementation plan that assigns prioritized activities to responsible entities, implementation level, timeline, monitoring indicators and cost. WHO's costing manual supplies practical cost categories including throughput, platform, personnel and training, facilities and transport, bioinformatics, storage, cloud or in-house server arrangements, maintenance and quality management. The national investment case and economic synthesis notes support making explicit assumptions about public-health benefits, system requirements, financing and transferability rather than relying on generic return-on-investment claims.",
-    "tags": ["costing", "implementation-plan", "ownership", "monitoring", "investment-case", "sustainability"],
+    "tags": [
+      "costing",
+      "implementation-plan",
+      "ownership",
+      "monitoring",
+      "investment-case",
+      "sustainability"
+    ],
     "limitations": "Supports a beta action-register structure. It does not provide local salary assumptions, stock policies, procurement rules, cost-per-sample values, funding mechanisms or universal return-on-investment estimates.",
-    "reviewStatus": "reviewed"
+    "reviewStatus": "reviewed",
+    "directQuote": "responsible entities, implementation level, timeline, monitoring indicators and cost"
   }
 ]

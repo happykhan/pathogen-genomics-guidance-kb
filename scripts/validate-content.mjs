@@ -84,6 +84,13 @@ function collectSourceIds(value, activeKey = "", output = new Set()) {
   return output;
 }
 
+function countWords(text) {
+  return String(text)
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean).length;
+}
+
 const sources = loadSources();
 const guidanceBlocks = loadGuidanceBlocks();
 const resources = loadResources();
@@ -257,6 +264,22 @@ evidenceItems.forEach((item) => {
 
   if (item.evidenceType === "source-card-summary" && item.reviewStatus === "reviewed") {
     errors.push(`Evidence item ${item.id} cannot be reviewed while it is only a source-card-summary.`);
+  }
+
+  if (item.evidenceType === "short-excerpt" && !item.directQuote && !item.excerpt) {
+    errors.push(`Evidence item ${item.id} is a short-excerpt but has no directQuote.`);
+  }
+
+  if (item.directQuote && item.excerpt && item.directQuote !== item.excerpt) {
+    errors.push(`Evidence item ${item.id} has different directQuote and legacy excerpt values.`);
+  }
+
+  if (item.directQuote) {
+    const quoteWordLimit = item.quoteWordLimit ?? 35;
+    const quoteWords = countWords(item.directQuote);
+    if (quoteWords > quoteWordLimit) {
+      errors.push(`Evidence item ${item.id} directQuote has ${quoteWords} words; limit is ${quoteWordLimit}.`);
+    }
   }
 });
 

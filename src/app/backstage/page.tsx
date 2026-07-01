@@ -255,15 +255,16 @@ export default function BackstagePage() {
                                 <li key={claimId}>
                                   {claim?.evidenceItemIds?.map((itemId) => {
                                     const item = evidenceById.get(itemId);
+                                    const directQuote = item?.directQuote ?? item?.excerpt;
                                     return (
                                       <span className="evidence-item" key={itemId}>
                                         {item ? (
                                           <>
-                                            {item.excerpt ? (
-                                              <em>Layer 1 / Original short excerpt: "{item.excerpt}"</em>
+                                            {directQuote ? (
+                                              <em>Layer 1 / Direct quote from source: "{directQuote}"</em>
                                             ) : (
                                               <em>
-                                                Layer 1 / No short source excerpt captured yet; use the locator and passage
+                                                Layer 1 / No direct source quote captured yet; use the locator and passage
                                                 summary to check the original source.
                                               </em>
                                             )}
@@ -344,12 +345,13 @@ export default function BackstagePage() {
                   <ul>
                     {claim.evidenceItemIds.map((itemId) => {
                       const item = evidenceById.get(itemId);
+                      const directQuote = item?.directQuote ?? item?.excerpt;
                       return (
                         <li key={itemId}>
-                          {item?.excerpt ? (
-                            <span>Original short excerpt: "{item.excerpt}"</span>
+                          {directQuote ? (
+                            <span>Direct quote from source: "{directQuote}"</span>
                           ) : (
-                            <span>No short source excerpt captured yet; use the locator and passage note.</span>
+                            <span>No direct source quote captured yet; use the locator and passage note.</span>
                           )}
                           <span>Public-safe passage note: {item?.passageSummary ?? `Missing evidence item: ${itemId}`}</span>
                           {item ? (

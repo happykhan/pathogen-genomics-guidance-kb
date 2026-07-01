@@ -128,10 +128,10 @@ The deployed `/api/editorial` endpoint is read-only. Local fragment approval use
 
 - Treat `sourceStatus: "extracted"` as already reviewed for the knowledge base.
 - Treat `sourceStatus: "candidate"` as useful but still requiring careful extraction before making strong claims.
-- In `/api/guidance`, treat guidance block `sourceStatus: "reviewed"` as usable beta prose, `partial` as source-backed but incomplete, and `gap` as a placeholder or editorial work item.
+- In `/api/guidance`, treat guidance block `sourceStatus: "reviewed"` as reviewed public prose, `partial` as source-backed but incomplete, and `gap` as a placeholder or editorial work item.
 - In `/api/editorial`, treat `reviewStatus: "reviewed"` fragments as approved for future whitepaper compilation. Treat `draft` fragments as review candidates, not public guidance.
-- Do not treat claim cards as original quotations. Use `evidenceItemIds`, `evidenceItems`, `sourceLocator`, and source cards to trace the claim back to the underlying source.
-- Treat evidence item `passageSummary` and `excerpt` as review aids. They are not a substitute for reading the source card or source document.
+- Do not treat claim cards as original quotations. Use `evidenceItemIds`, `evidenceItems`, `sourceLocator`, `directQuote`, and source cards to trace the claim back to the underlying source.
+- Treat evidence item `directQuote` and `passageSummary` as review aids. `directQuote` is a short verbatim quote for verification; `passageSummary` is the editor's paraphrase of what the passage supports. Neither is a substitute for reading the source card or source document.
 - Do not synthesize new public guidance directly from documents. Use the pipeline: source card, evidence item, extracted claim card, section brief, draft fragment, reviewed fragment.
 - Do not assume every source has a direct PDF. Some publishers provide HTML pages only, and some PDFs are behind publisher controls.
 - The API is read-only and currently unversioned beyond the `version` field in each response.
