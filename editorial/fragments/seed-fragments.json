@@ -1242,5 +1242,59 @@
     "reviewStatus": "reviewed",
     "reviewerNotes": "This is a beta reporting field model. It deliberately avoids pathogen-specific thresholds or treatment advice.",
     "updatedAt": "2026-07-01"
+  },
+  {
+    "id": "fragment-beta-enteric-respiratory-reporting-fields",
+    "sectionId": "reporting-decision-use",
+    "title": "Beta enteric and respiratory-virus reporting fields",
+    "kind": "table",
+    "text": "For enteric bacteria and respiratory viruses, reports should make the public-health route visible. Enteric reports should connect sample, cluster, exposure or food/environmental links, AMR or virulence findings, recipients and action route. Respiratory-virus reports should connect sampling frame, collection date and place, genome completeness, lineage or variant call, quality limits, repository or sharing route, and whether further phenotyping or correction is needed.",
+    "claimIds": [
+      "claim-beta-enteric-respiratory-reporting-fields",
+      "claim-reporting-products-fit-decision",
+      "claim-beta-organism-service-model-matrix"
+    ],
+    "sourceIds": [
+      "phe-case-study",
+      "foodborne-genomics-allard-2018",
+      "who-sars-cov-2-sequencing-implementation-2021",
+      "cdc-nejm-2019",
+      "ecdc-wgs-surveillance-2016",
+      "mgen-belgian-influenza-phylogenomics-2021",
+      "mgen-local-sarscov2-large-scale-2020",
+      "mgen-salmonella-typhi-paratyphi-england-2021",
+      "mgen-shotgun-metagenomics-salmonella-food-2021"
+    ],
+    "conditions": {
+      "audiences": [
+        "lab-lead",
+        "bioinformatician",
+        "data-manager",
+        "director",
+        "mixed",
+        "all"
+      ],
+      "implementationStages": [
+        "pilot",
+        "routine-service",
+        "national-scale",
+        "upgrading"
+      ],
+      "organisms": [
+        "enteric-bacteria",
+        "respiratory-viruses"
+      ],
+      "topics": [
+        "reporting",
+        "decision-use",
+        "metadata",
+        "data-sharing",
+        "quality"
+      ]
+    },
+    "order": 42,
+    "reviewStatus": "reviewed",
+    "reviewerNotes": "This is a beta field model, not pathogen-specific report wording or thresholds.",
+    "updatedAt": "2026-07-01"
   }
 ]

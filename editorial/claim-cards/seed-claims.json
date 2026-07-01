@@ -698,5 +698,33 @@
     "confidence": "high",
     "limitations": "Does not provide SNP thresholds, resistance-calling rules, clinical treatment recommendations, or jurisdiction-specific report wording.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "claim-beta-enteric-respiratory-reporting-fields",
+    "sourceId": "phe-case-study",
+    "sourceLocator": "PHE case study, Allard et al. 2018, WHO 2021 SARS-CoV-2 guide, Armstrong et al. 2019, and Microbial Genomics implementation collection",
+    "evidenceItemIds": [
+      "evidence-beta-enteric-respiratory-reporting-fields",
+      "evidence-phe-enteric-users-actions",
+      "evidence-who-sarscov2-metadata-sharing",
+      "evidence-who-sarscov2-stakeholder-reporting",
+      "evidence-armstrong-tb-influenza-amr-reporting",
+      "evidence-ecdc-reporting-objectives"
+    ],
+    "claim": "For enteric bacteria and respiratory viruses, beta reporting should make the public-health route explicit by separating sample and metadata context, genomic finding, quality limits, intended recipient, action boundary, sharing route and feedback or correction pathway.",
+    "extractedText": "PHE and Allard et al. support enteric-bacterial reporting that connects clusters, source investigation, AMR or virulence findings, food/environmental links and multi-agency users. WHO SARS-CoV-2 guidance supports reporting respiratory-virus findings with sampling context, metadata, complete or partial genome status, sharing route, limitations, stakeholder communication and feedback. Armstrong et al. add that influenza sequence-first surveillance still needs selected phenotyping for some decisions.",
+    "notes": "Use for enteric and respiratory-virus conditional reporting tables.",
+    "tags": ["reporting", "enteric-bacteria", "respiratory-viruses", "metadata", "decision-use", "quality"],
+    "candidateSectionIds": [
+      "reporting-decision-use",
+      "sampling-programme-design",
+      "metadata-identifier-lineage"
+    ],
+    "organism": "multiple",
+    "audience": "multiple",
+    "implementationStage": "multiple",
+    "confidence": "high",
+    "limitations": "Does not provide detailed Salmonella, STEC, Listeria, influenza, RSV or SARS-CoV-2 report wording or thresholds.",
+    "reviewStatus": "reviewed"
   }
 ]

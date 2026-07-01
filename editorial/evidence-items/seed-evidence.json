@@ -578,5 +578,16 @@
     "tags": ["reporting", "tb", "amr", "healthcare-associated-infection", "infection-control", "uncertainty"],
     "limitations": "Supports beta reporting fields and cautions. It does not define clinical treatment rules, SNP thresholds, genotype-phenotype databases, or national report wording.",
     "reviewStatus": "reviewed"
+  },
+  {
+    "id": "evidence-beta-enteric-respiratory-reporting-fields",
+    "sourceId": "phe-case-study",
+    "sourceLocator": "PHE case study enteric WGS service and raw-milk STEC example; Allard et al. 2018 foodborne pathogen genomics review; WHO 2021 SARS-CoV-2 sequencing implementation guide; Armstrong et al. 2019 influenza and public-health use cases; Microbial Genomics implementation collection enteric, influenza and SARS-CoV-2 examples",
+    "evidenceType": "passage-note",
+    "excerpt": "final sample reports for service users",
+    "passageSummary": "The PHE case study describes enteric-bacterial WGS as serving surveillance, outbreak investigation, AMR cataloguing, emerging threat tracking and multi-agency users, and its raw-milk STEC example links genomic findings to exposure investigation and public-health action. Allard et al. describe WGS uses across foodborne pathogens including outbreak detection, source tracking, root-cause investigation, virulence profiling, AMR monitoring and quality assurance. WHO's SARS-CoV-2 guide says sequencing outputs and metadata should be defined before sequencing, minimum metadata include date and location, partial genomes can be useful when quality checked, raw-read sharing may be difficult with limited internet, and results should be communicated to stakeholders with limitations and feedback. Armstrong et al. describe influenza sequencing as supporting sequence-first surveillance, specimen selection for phenotyping, vaccine-strain decisions, forecasting and risk assessment while retaining selected phenotyping.",
+    "tags": ["reporting", "enteric-bacteria", "respiratory-viruses", "metadata", "source-attribution", "variant-monitoring"],
+    "limitations": "Supports beta reporting fields and cautions for enteric and respiratory-virus services. It does not define pathogen-specific report templates, cluster thresholds, lineage nomenclature rules or repository-required fields.",
+    "reviewStatus": "reviewed"
   }
 ]

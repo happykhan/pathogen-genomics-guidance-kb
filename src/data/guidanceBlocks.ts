@@ -1001,23 +1001,94 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "For enteric bacteria, the report often needs to travel beyond the sequencing laboratory. The PHE case study names health-protection teams, local authorities and environmental health officers, hospital and public-health microbiologists, food-safety agencies, animal-health agencies, and international public-health agencies as users of the WGS service.",
       "The practical reporting question is therefore not only whether isolates are genetically close. The service should decide which users need to know about a cluster, what epidemiological or food-chain information is needed to interpret it, whether AMR or virulence markers change the response, and whether an alert, case-level report, weekly summary, or cross-agency discussion is the right output.",
       "The PHE raw-milk STEC example shows why this matters. WGS linked cattle specimens and geographically dispersed human cases, prompted further questioning about exposure, and supported stopping distribution of the implicated product and issuing public-health messages.",
+      "For beta, enteric reporting should separate the genomic finding from the investigation route. A cluster, source-attribution signal, AMR or virulence finding, food or environmental link, and public-health action should be recorded as connected but distinct fields, because each one depends on different supporting evidence.",
     ],
     bodySourceIds: {
       0: ["phe-case-study"],
       1: ["phe-case-study", "ecdc-wgs-surveillance-2016", "foodborne-genomics-allard-2018"],
       2: ["phe-case-study"],
+      3: [
+        "phe-case-study",
+        "foodborne-genomics-allard-2018",
+        "mgen-salmonella-typhi-paratyphi-england-2021",
+        "mgen-shotgun-metagenomics-salmonella-food-2021",
+      ],
     },
     technicalDetail: [
       "Minimum implementation check: keep a route from the sample identifier to the investigation identifier, exposure data, food or environmental sample links, cluster identifier, AMR or virulence results, report date, recipient list, and action log.",
       "Avoid presenting a genetic cluster as proof of a common source unless sampling context and epidemiological evidence support that interpretation.",
+    ],
+    tables: [
+      {
+        title: "Beta enteric-bacteria reporting fields",
+        summary:
+          "Use separate fields to connect genomic relatedness to exposure, food-chain, environmental and public-health action routes.",
+        columns: ["Report field", "What to record", "Why it matters", "Main caution"],
+        rows: [
+          {
+            cells: [
+              "Sample and investigation identifiers",
+              "Sample or isolate ID, submitting route, investigation or incident ID, organism, collection date and source.",
+              "Connects the genomic result to the investigation, metadata and later corrective action.",
+              "Broken identifiers weaken outbreak interpretation and source tracking.",
+            ],
+            sourceIds: ["phe-case-study", "ecdc-wgs-surveillance-2016"],
+          },
+          {
+            cells: [
+              "Cluster or relatedness statement",
+              "Method, comparison set, cluster identifier, interpretation date, workflow version and uncertainty.",
+              "Supports case inclusion or exclusion, geographically dispersed outbreak detection and investigation focus.",
+              "A cluster is not proof of common source without sampling and epidemiological context.",
+            ],
+            sourceIds: ["phe-case-study", "foodborne-genomics-allard-2018"],
+          },
+          {
+            cells: [
+              "Exposure, food-chain or environmental links",
+              "Food, animal, environmental or exposure data linked to the sample or investigation where available.",
+              "Turns a genomic signal into an actionable source-investigation question.",
+              "Absence of exposure data should be visible rather than hidden behind a genomic result.",
+            ],
+            sourceIds: ["phe-case-study", "foodborne-genomics-allard-2018", "mgen-shotgun-metagenomics-salmonella-food-2021"],
+          },
+          {
+            cells: [
+              "AMR, virulence or threat markers",
+              "Marker or rule set, tool/database version, validation basis, and whether confirmatory testing is needed.",
+              "May change public-health follow-up, surveillance priority or communication route.",
+              "Marker interpretation should not be merged with relatedness or source attribution without its own evidence basis.",
+            ],
+            sourceIds: ["foodborne-genomics-allard-2018", "mgen-salmonella-typhi-paratyphi-england-2021"],
+          },
+          {
+            cells: [
+              "Recipient and action log",
+              "Health-protection, laboratory, food-safety, animal-health or international recipients; report date; action or feedback recorded.",
+              "Keeps multi-agency reporting tied to the decisions it is meant to support.",
+              "If no owner records the action, service value is difficult to evaluate.",
+            ],
+            sourceIds: ["phe-case-study"],
+          },
+        ],
+        sourceIds: ["phe-case-study", "foodborne-genomics-allard-2018", "ecdc-wgs-surveillance-2016"],
+      },
     ],
     audiences: ["director", "policy", "lab-lead", "bioinformatician", "data-manager", "mixed"],
     implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
     organisms: ["enteric-bacteria"],
     topics: ["reporting", "decision-use", "enteric-bacteria", "amr", "one-health"],
     detailLevel: "operational",
-    sourceIds: ["phe-case-study", "ecdc-wgs-surveillance-2016", "foodborne-genomics-allard-2018"],
-    gaps: ["Needs current pathogen-specific reporting templates for Salmonella, STEC, Listeria and other enteric organisms."],
+    sourceIds: [
+      "phe-case-study",
+      "ecdc-wgs-surveillance-2016",
+      "foodborne-genomics-allard-2018",
+      "mgen-salmonella-typhi-paratyphi-england-2021",
+      "mgen-shotgun-metagenomics-salmonella-food-2021",
+    ],
+    gaps: [
+      "Needs current pathogen-specific reporting templates, cluster interpretation rules and report wording for Salmonella, STEC, Listeria and other enteric organisms.",
+    ],
   },
   {
     id: "reporting-respiratory-viruses",
@@ -1030,16 +1101,79 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "A virus report should therefore avoid giving a lineage or variant call without context. It should state the sampling frame, whether the sequence is complete or partial, which quality limits apply, what the result may imply for surveillance or risk assessment, and what cannot be inferred from the available samples.",
       "Armstrong et al. describe influenza as a useful model for a sequence-first service. Sequencing can support selection of specimens for phenotypic characterisation, vaccine-strain decisions, forecasting and risk assessment, but it does not remove the need for selected phenotyping.",
       "The WHO SARS-CoV-2 guide also warns that raw-read sharing may be hard where upload speeds are limited or connections are intermittent. That constraint should affect the reporting and sharing plan: a programme may still share consensus or partial genomes quickly while using a separate plan for raw reads, quality notes and later correction.",
+      "For beta, respiratory-virus reporting should keep variant or lineage calls connected to collection time, place, sampling frame, sequence completeness, quality status, sharing route, and whether selected phenotyping or later correction is needed. This prevents a lineage label being interpreted as more precise than the sampling and data quality allow.",
     ],
     bodySourceIds: {
       0: ["who-sars-cov-2-sequencing-implementation-2021"],
       1: ["who-sars-cov-2-sequencing-implementation-2021", "who-national-genomic-surveillance-strategy-2023"],
       2: ["cdc-nejm-2019"],
       3: ["who-sars-cov-2-sequencing-implementation-2021"],
+      4: [
+        "who-sars-cov-2-sequencing-implementation-2021",
+        "cdc-nejm-2019",
+        "mgen-belgian-influenza-phylogenomics-2021",
+        "mgen-local-sarscov2-large-scale-2020",
+      ],
     },
     technicalDetail: [
       "Minimum implementation check: track collection date, location, sample type, sequencing protocol, genome coverage, ambiguous-base proportion, lineage or clade tool and version, report date, repository accession status, and correction history.",
       "When a genome is partial, report whether it is suitable for the intended use rather than applying one universal pass/fail statement.",
+    ],
+    tables: [
+      {
+        title: "Beta respiratory-virus reporting fields",
+        summary:
+          "Use separate fields so lineage or variant labels remain tied to sampling, data quality and sharing constraints.",
+        columns: ["Report field", "What to record", "Why it matters", "Main caution"],
+        rows: [
+          {
+            cells: [
+              "Sampling and metadata context",
+              "Collection date, location at appropriate resolution, sample type, sampling route, travel or clinical context where permitted.",
+              "Defines what the sequence can support for surveillance, variant monitoring or local outbreak interpretation.",
+              "Date and place are minimum metadata; richer context may require confidentiality controls.",
+            ],
+            sourceIds: ["who-sars-cov-2-sequencing-implementation-2021"],
+          },
+          {
+            cells: [
+              "Genome completeness and quality",
+              "Complete, partial or raw-read status; coverage or ambiguity measure; QC method; whether partial data are fit for the intended use.",
+              "Prevents low-coverage or partial genomes being interpreted as equivalent to complete high-quality genomes.",
+              "Partial genomes can still be useful when quality and intended use are made explicit.",
+            ],
+            sourceIds: ["who-sars-cov-2-sequencing-implementation-2021"],
+          },
+          {
+            cells: [
+              "Lineage, clade or variant call",
+              "Tool or nomenclature version, call date, sequence used, uncertainty or failure to assign.",
+              "Supports surveillance, risk assessment, outbreak management and selection of specimens for further work.",
+              "Lineage labels should not be reported without sampling and quality context.",
+            ],
+            sourceIds: ["who-sars-cov-2-sequencing-implementation-2021", "cdc-nejm-2019"],
+          },
+          {
+            cells: [
+              "Phenotyping or risk-assessment follow-up",
+              "Whether selected phenotyping, antigenic characterisation, vaccine-strain assessment or expert review is pending or needed.",
+              "Keeps sequence-first surveillance connected to decisions that still need biological or epidemiological assessment.",
+              "Sequencing does not remove the need for selected phenotyping in influenza-like surveillance decisions.",
+            ],
+            sourceIds: ["cdc-nejm-2019", "mgen-belgian-influenza-phylogenomics-2021"],
+          },
+          {
+            cells: [
+              "Sharing route and correction history",
+              "Consensus, partial consensus or raw-read sharing route; repository accession; upload constraints; correction or replacement date.",
+              "Connects reporting to public or controlled data sharing and later correction.",
+              "Raw-read sharing may be difficult with limited internet and may need human-read filtering.",
+            ],
+            sourceIds: ["who-sars-cov-2-sequencing-implementation-2021", "mgen-local-sarscov2-large-scale-2020"],
+          },
+        ],
+        sourceIds: ["who-sars-cov-2-sequencing-implementation-2021", "cdc-nejm-2019"],
+      },
     ],
     audiences: ["director", "policy", "lab-lead", "bioinformatician", "data-manager", "mixed"],
     implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
@@ -1050,8 +1184,12 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "who-sars-cov-2-sequencing-implementation-2021",
       "who-national-genomic-surveillance-strategy-2023",
       "cdc-nejm-2019",
+      "mgen-belgian-influenza-phylogenomics-2021",
+      "mgen-local-sarscov2-large-scale-2020",
     ],
-    gaps: ["Needs current organism-specific reporting guidance for influenza, RSV and SARS-CoV-2 beyond the beta source set."],
+    gaps: [
+      "Needs current organism-specific reporting templates, lineage nomenclature rules, QC thresholds and repository field requirements for influenza, RSV and SARS-CoV-2 beyond the beta source set.",
+    ],
   },
   {
     id: "reporting-tb-amr",
