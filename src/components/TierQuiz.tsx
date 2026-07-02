@@ -152,12 +152,6 @@ export function TierQuiz() {
       ...defaultProfile,
       stage: result.stage,
       infrastructure: result.infrastructure,
-      constraints: {
-        ...defaultProfile.constraints,
-        bioinformaticsStaff: answers.staffing >= 2,
-        lims: answers.integration >= 2 || answers.reporting >= 2,
-        centralIT: answers.compute >= 2,
-      },
     };
     return `/?${profileToSearch(nextProfile)}`;
   }, [answers, result.infrastructure, result.stage]);

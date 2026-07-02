@@ -37,14 +37,6 @@ export type Profile = {
   stage: ImplementationStage;
   organisms: OrganismFocus[];
   infrastructure: InfrastructureContext;
-  constraints: {
-    internetReliable: boolean | null;
-    bioinformaticsStaff: boolean | null;
-    centralIT: boolean | null;
-    lims: boolean | null;
-    cloudAllowed: boolean | null;
-    dataResidencyConcern: boolean | null;
-  };
 };
 
 export { defaultProfile, defaultProfileVersion } from "../data/defaultProfile";

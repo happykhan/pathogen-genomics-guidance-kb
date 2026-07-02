@@ -60,24 +60,20 @@ Use the browser `Export PDF` control and verify:
 
 Run the wizard for these profiles and verify that section ranking and resources are plausible:
 
-- Director, exploring, make the case.
-- Laboratory lead, pilot, validate workflows.
-- Bioinformatician, routine service, validate workflows and share data.
-- IT/security, national scale, data residency concern and cloud not allowed.
-- Programme lead, exploring, design infrastructure.
+- Director, exploring.
+- Laboratory lead, pilot.
+- Bioinformatician, routine service, HPC.
+- IT/security, national scale, cloud.
+- Programme lead, exploring, compute not decided.
 - Enteric-bacteria service profile.
 - Respiratory-virus sharing profile.
 - TB validation profile.
 - AMR validation profile.
 - Healthcare-associated infection profile.
 
-`npm run qa:scenarios` covers the constraint-specific checks that can be automated:
+`npm run qa:scenarios` covers the profile checks that can be automated:
 
-- unreliable internet raises local storage/backup guidance and lowers data-sharing-platform ranking;
-- no bioinformatics staff raises workforce and support-relevant guidance;
-- no central IT raises operating-model and backup/sustainability guidance;
-- no LIMS raises metadata and data-lifecycle guidance;
-- cloud restrictions or data-residency concern raise governance/sharing caution and lower cloud-heavy recommendations.
+- representative reader profiles surface the expected leadership, laboratory, bioinformatics, IT/security, and programme-lead sections above the dynamic-guide visibility threshold;
 - organism-specific profiles surface the expected enteric, respiratory-virus, tuberculosis, AMR, and healthcare-associated infection sections above the dynamic-guide visibility threshold.
 
 ## Editorial Checks

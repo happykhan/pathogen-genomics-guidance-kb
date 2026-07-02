@@ -27,37 +27,6 @@ function scoreRoleNeeds(profile: Profile, topics: string[]): number {
   return 0;
 }
 
-function scoreConstraints(profile: Profile, topics: string[]): number {
-  let score = 0;
-  const constraints = profile.constraints;
-
-  if (constraints.internetReliable === false) {
-    if (hasAny(topics, ["local-compute", "storage", "backup", "archive", "retention", "operating-model"])) score += 3;
-    if (hasAny(topics, ["cloud", "data-sharing", "repositories"])) score -= 2;
-  }
-
-  if (constraints.bioinformaticsStaff === false) {
-    if (hasAny(topics, ["workforce", "training", "sustainability", "operating-model", "managed-platform"])) score += 3;
-    if (hasAny(topics, ["workflow", "provenance", "validation"])) score += 1;
-  }
-
-  if (constraints.centralIT === false) {
-    if (hasAny(topics, ["sustainability", "procurement", "security", "iam", "operating-model", "backup"])) score += 2;
-    if (hasAny(topics, ["hpc", "local-compute"])) score -= 1;
-  }
-
-  if (constraints.lims === false) {
-    if (hasAny(topics, ["metadata", "lims", "data-lifecycle", "reporting", "interoperability"])) score += 3;
-  }
-
-  if (constraints.cloudAllowed === false || constraints.dataResidencyConcern === true) {
-    if (hasAny(topics, ["governance", "security", "storage", "backup", "data-sharing", "repositories", "local-compute"])) score += 2;
-    if (hasAny(topics, ["cloud"])) score -= 3;
-  }
-
-  return score;
-}
-
 export function scoreGuidanceBlock(block: GuidanceBlock, profile: Profile): number {
   let score = 0;
   if (block.audiences.includes("all") || block.audiences.includes(profile.role)) score += 5;
@@ -66,7 +35,6 @@ export function scoreGuidanceBlock(block: GuidanceBlock, profile: Profile): numb
   if (block.organisms.includes("general")) score += 1;
   if (profile.organisms.some((organism) => block.organisms.includes(organism))) score += 2;
   if (!block.infrastructure || block.infrastructure.includes(profile.infrastructure)) score += 1;
-  score += scoreConstraints(profile, block.topics);
   score += scoreRoleNeeds(profile, block.topics);
   return score;
 }
@@ -84,6 +52,5 @@ export function scoreResource(resource: ResourceRecord, profile: Profile): numbe
   if (resource.organisms.includes("general")) score += 1;
   if (profile.organisms.some((organism) => resource.organisms.includes(organism))) score += 3;
   if (resource.sourceStatus === "extracted") score += 2;
-  score += scoreConstraints(profile, resource.topics);
   return score;
 }

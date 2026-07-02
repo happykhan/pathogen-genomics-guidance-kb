@@ -69,15 +69,7 @@ Generated with headless Chrome:
 
 ## Scenario QA
 
-Automated scenario checks passed for:
-
-- unreliable internet;
-- no bioinformatics staff;
-- no central IT;
-- absent LIMS;
-- cloud restricted / data residency concern.
-
-These checks verify that the constraints change guidance and resource ranking in the intended direction.
+Automated scenario checks now focus on reader role, programme stage, organism/programme, and compute context. Constraint-specific wizard questions were removed from the public prototype because they were not useful enough as first-pass tailoring controls.
 
 Representative profile checks also passed for:
 

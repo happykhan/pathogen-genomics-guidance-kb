@@ -31,7 +31,7 @@ Recruit at least one reviewer from each group:
 4. Use the quiz to identify the current bioinformatics tier or maturity position.
 5. Export or print a tailored guidance summary.
 6. Share a profile-specific link with a colleague in another role.
-7. Identify at least three red flags in a planned setup, such as unreliable internet, no central IT support, no LIMS, no bioinformatics staff, cloud restrictions, or data residency concerns.
+7. Identify at least three red flags in the tailored guide, such as weak storage planning, unclear ownership, no validation route, poor metadata linkage, or unresolved data-sharing governance.
 
 ## Success Metrics
 

@@ -84,8 +84,8 @@ export function GuidanceApp() {
                 }
               >
                 <p>
-                  Tell me who is reading, what you are building, and where the constraints are. I will tailor the document by
-                  role, programme stage, organism focus, and compute context, then bring the relevant sections forward. The
+                  Tell me who is reading, what you are building, which programme it supports, and what compute setup you are
+                  considering. I will tailor the document by role, programme stage, organism focus, and compute context. The
                   visible guidance can be printed or shared as a profile-specific link.
                 </p>
               </GnomeyCard>

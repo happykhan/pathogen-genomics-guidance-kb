@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Check, RotateCcw, X } from "lucide-react";
 import {
   cloneProfile,
-  constraintLabels,
   infrastructureLabels,
   organismLabels,
   roleLabels,
@@ -22,31 +21,12 @@ const roles = Object.keys(roleLabels) as UserRole[];
 const stages = Object.keys(stageLabels) as ImplementationStage[];
 const organisms = Object.keys(organismLabels) as OrganismFocus[];
 const infrastructures = Object.keys(infrastructureLabels) as InfrastructureContext[];
-const constraintKeys = Object.keys(constraintLabels) as Array<keyof Profile["constraints"]>;
-const constraintHelp: Record<keyof Profile["constraints"], string> = {
-  internetReliable: "Affects whether cloud upload, remote platforms, and external collaboration are realistic for routine work.",
-  bioinformaticsStaff: "Affects how much local pipeline maintenance, troubleshooting, validation, and user support the programme can own.",
-  centralIT: "Affects servers, identity management, backups, cybersecurity, procurement, and long-term support.",
-  lims: "Affects sample tracking, metadata linkage, report generation, auditability, and reanalysis.",
-  cloudAllowed: "Affects whether cloud compute, object storage, managed platforms, or external SaaS tools can be considered.",
-  dataResidencyConcern: "Affects where data can be stored, processed, shared, backed up, and archived.",
-};
 
 export function GnomeyWizard({ profile, onApply, onClose }: Props) {
   const [draft, setDraft] = useState<Profile>(() => cloneProfile(profile));
 
   function update(patch: Partial<Profile>) {
     setDraft((current) => ({ ...current, ...patch }));
-  }
-
-  function updateConstraint(key: keyof Profile["constraints"], value: boolean | null) {
-    setDraft((current) => ({
-      ...current,
-      constraints: {
-        ...current.constraints,
-        [key]: value,
-      },
-    }));
   }
 
   function toggleOrganism(organism: OrganismFocus) {
@@ -155,43 +135,6 @@ export function GnomeyWizard({ profile, onApply, onClose }: Props) {
                 <span className="choice-indicator" aria-hidden="true" />
                 {infrastructureLabels[infrastructure]}
               </button>
-            ))}
-          </div>
-        </div>
-
-        <div className="wizard-section">
-          <div className="wizard-section-heading">
-            <h3>What constraints should Gnomey consider?</h3>
-            <p>
-              These do not judge the programme. They help Gnomey avoid recommending options that depend on capacity,
-              connectivity, or governance arrangements you do not currently have.
-            </p>
-          </div>
-          <div className="constraint-grid">
-            {constraintKeys.map((key) => (
-              <div className="constraint-row" key={key}>
-                <div>
-                  <span>{constraintLabels[key]}</span>
-                  <p>{constraintHelp[key]}</p>
-                </div>
-                <div className="segmented-control" aria-label={constraintLabels[key]}>
-                  {[
-                    ["yes", true, "Yes"],
-                    ["no", false, "No"],
-                    ["unknown", null, "Not sure"],
-                  ].map(([id, value, label]) => (
-                    <button
-                      key={id as string}
-                      className="segment"
-                      type="button"
-                      aria-pressed={draft.constraints[key] === value}
-                      onClick={() => updateConstraint(key, value as boolean | null)}
-                    >
-                      {label as string}
-                    </button>
-                  ))}
-                </div>
-              </div>
             ))}
           </div>
         </div>

@@ -45,46 +45,11 @@ export const infrastructureLabels: Record<InfrastructureContext, string> = {
   hybrid: "Hybrid",
 };
 
-export const constraintLabels: Record<keyof Profile["constraints"], string> = {
-  internetReliable: "Reliable internet",
-  bioinformaticsStaff: "Bioinformatics staff",
-  centralIT: "Central IT support",
-  lims: "LIMS or sample system",
-  cloudAllowed: "Cloud use allowed",
-  dataResidencyConcern: "Data residency concern",
-};
-
-export const constraintParamKeys: Record<keyof Profile["constraints"], string> = {
-  internetReliable: "net",
-  bioinformaticsStaff: "staff",
-  centralIT: "it",
-  lims: "lims",
-  cloudAllowed: "cloud",
-  dataResidencyConcern: "residency",
-};
-
-const constraintParamToKey = Object.fromEntries(
-  Object.entries(constraintParamKeys).map(([key, value]) => [value, key]),
-) as Record<string, keyof Profile["constraints"]>;
-
 export function cloneProfile(profile: Profile = defaultProfile): Profile {
   return {
     ...profile,
     organisms: [...profile.organisms],
-    constraints: { ...profile.constraints },
   };
-}
-
-function parseBooleanParam(value: string | null): boolean | null {
-  if (value === "yes") return true;
-  if (value === "no") return false;
-  return null;
-}
-
-function formatBooleanParam(value: boolean | null): string {
-  if (value === true) return "yes";
-  if (value === false) return "no";
-  return "unknown";
 }
 
 export function parseProfileFromUrl(search: string): Profile {
@@ -108,11 +73,6 @@ export function parseProfileFromUrl(search: string): Profile {
     .filter((value): value is OrganismFocus => value in organismLabels);
   if (organisms?.length) profile.organisms = organisms;
 
-  for (const [paramKey, constraintKey] of Object.entries(constraintParamToKey)) {
-    const value = params.get(paramKey);
-    if (value) profile.constraints[constraintKey] = parseBooleanParam(value);
-  }
-
   return profile;
 }
 
@@ -122,10 +82,6 @@ export function profileToSearch(profile: Profile): string {
   params.set("stage", profile.stage);
   params.set("organisms", profile.organisms.join(","));
   params.set("infra", profile.infrastructure);
-  for (const [constraintKey, paramKey] of Object.entries(constraintParamKeys)) {
-    const value = profile.constraints[constraintKey as keyof Profile["constraints"]];
-    if (value !== null) params.set(paramKey, formatBooleanParam(value));
-  }
   return params.toString();
 }
 

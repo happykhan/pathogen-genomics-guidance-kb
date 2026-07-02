@@ -36,7 +36,6 @@ function loadRecommendationFunctions() {
     .replace(/export function /g, "function ")
     .replace(/function hasAny\(topics: string\[], candidates: string\[]\)/, "function hasAny(topics, candidates)")
     .replace(/function scoreRoleNeeds\(profile: Profile, topics: string\[\]\): number/, "function scoreRoleNeeds(profile, topics)")
-    .replace(/function scoreConstraints\(profile: Profile, topics: string\[\]\): number/, "function scoreConstraints(profile, topics)")
     .replace(/function scoreGuidanceBlock\(block: GuidanceBlock, profile: Profile\): number/, "function scoreGuidanceBlock(block, profile)")
     .replace(/function scoreResource\(resource: ResourceRecord, profile: Profile\): number/, "function scoreResource(resource, profile)")
     .concat("\nreturn { scoreGuidanceBlock, scoreResource };\n");
@@ -48,24 +47,12 @@ const defaultProfile = {
   stage: "exploring",
   organisms: ["general"],
   infrastructure: "unknown",
-  constraints: {
-    internetReliable: null,
-    bioinformaticsStaff: null,
-    centralIT: null,
-    lims: null,
-    cloudAllowed: null,
-    dataResidencyConcern: null,
-  },
 };
 
 function withProfile(overrides) {
   return {
     ...defaultProfile,
     ...overrides,
-    constraints: {
-      ...defaultProfile.constraints,
-      ...(overrides.constraints ?? {}),
-    },
   };
 }
 
@@ -82,28 +69,6 @@ function scoreBlock(id, profile) {
   return scoreGuidanceBlock(block, profile);
 }
 
-function scoreNamedResource(id, profile) {
-  const resource = resourceById.get(id);
-  if (!resource) throw new Error(`Missing resource ${id}`);
-  return scoreResource(resource, profile);
-}
-
-function expectBoost(label, scorer, targetId, profile, minimumDelta = 1) {
-  const base = scorer(targetId, defaultProfile);
-  const next = scorer(targetId, profile);
-  if (next - base < minimumDelta) {
-    errors.push(`${label}: expected ${targetId} to gain at least ${minimumDelta}; base=${base}, scenario=${next}`);
-  }
-}
-
-function expectPenalty(label, scorer, targetId, profile, minimumDelta = 1) {
-  const base = scorer(targetId, defaultProfile);
-  const next = scorer(targetId, profile);
-  if (base - next < minimumDelta) {
-    errors.push(`${label}: expected ${targetId} to lose at least ${minimumDelta}; base=${base}, scenario=${next}`);
-  }
-}
-
 function expectVisibleGuidance(label, profile, expectedIds, minimumScore = 7) {
   expectedIds.forEach((id) => {
     const score = scoreBlock(id, profile);
@@ -112,63 +77,6 @@ function expectVisibleGuidance(label, profile, expectedIds, minimumScore = 7) {
     }
   });
 }
-
-const constraintScenarios = [
-  {
-    label: "unreliable internet",
-    profile: withProfile({ constraints: { internetReliable: false } }),
-    checks: [
-      () => expectBoost("unreliable internet", scoreBlock, "storage-backup-archive-distinction", constraintScenarios[0].profile, 3),
-      () =>
-        expectPenalty(
-          "unreliable internet",
-          scoreNamedResource,
-          "who-genomic-data-sharing-platforms-2025",
-          constraintScenarios[0].profile,
-          2,
-        ),
-    ],
-  },
-  {
-    label: "no bioinformatics staff",
-    profile: withProfile({ constraints: { bioinformaticsStaff: false } }),
-    checks: [
-      () => expectBoost("no bioinformatics staff", scoreBlock, "workforce-is-part-of-system", constraintScenarios[1].profile, 3),
-      () =>
-        expectBoost(
-          "no bioinformatics staff",
-          scoreNamedResource,
-          "clinical-microbiology-implementation-2026",
-          constraintScenarios[1].profile,
-          1,
-        ),
-    ],
-  },
-  {
-    label: "no central IT",
-    profile: withProfile({ constraints: { centralIT: false } }),
-    checks: [
-      () => expectBoost("no central IT", scoreBlock, "infrastructure-operating-model", constraintScenarios[2].profile, 2),
-      () => expectBoost("no central IT", scoreBlock, "storage-backup-archive-distinction", constraintScenarios[2].profile, 2),
-    ],
-  },
-  {
-    label: "no LIMS",
-    profile: withProfile({ constraints: { lims: false } }),
-    checks: [
-      () => expectBoost("no LIMS", scoreBlock, "metadata-and-epidemiology-integration", constraintScenarios[3].profile, 3),
-      () => expectBoost("no LIMS", scoreBlock, "data-lifecycle-sample-to-report", constraintScenarios[3].profile, 3),
-    ],
-  },
-  {
-    label: "cloud restricted",
-    profile: withProfile({ constraints: { cloudAllowed: false, dataResidencyConcern: true } }),
-    checks: [
-      () => expectBoost("cloud restricted", scoreBlock, "sharing-is-not-unconditional", constraintScenarios[4].profile, 2),
-      () => expectPenalty("cloud restricted", scoreBlock, "avoid-one-size-fits-all-cloud", constraintScenarios[4].profile, 1),
-    ],
-  },
-];
 
 const representativeProfiles = [
   {
@@ -202,7 +110,6 @@ const representativeProfiles = [
       role: "it-security",
       stage: "national-scale",
       infrastructure: "cloud",
-      constraints: { cloudAllowed: false, dataResidencyConcern: true },
     }),
     expectedVisibleGuidance: ["sharing-is-not-unconditional", "iam-is-continuous"],
   },
@@ -298,7 +205,6 @@ const organismProfiles = [
   },
 ];
 
-constraintScenarios.forEach((scenario) => scenario.checks.forEach((check) => check()));
 representativeProfiles.forEach((scenario) => {
   if (scenario.expectedVisibleGuidance) {
     expectVisibleGuidance(scenario.label, scenario.profile, scenario.expectedVisibleGuidance);
@@ -315,5 +221,5 @@ if (errors.length) {
 }
 
 console.log(
-  `Scenario QA passed: ${constraintScenarios.length} constraint scenarios, ${representativeProfiles.length} representative profiles, and ${organismProfiles.length} organism profiles.`,
+  `Scenario QA passed: ${representativeProfiles.length} representative profiles and ${organismProfiles.length} organism profiles.`,
 );

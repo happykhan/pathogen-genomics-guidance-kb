@@ -7,12 +7,4 @@ export const defaultProfile: Profile = {
   stage: "exploring",
   organisms: ["general"],
   infrastructure: "unknown",
-  constraints: {
-    internetReliable: null,
-    bioinformaticsStaff: null,
-    centralIT: null,
-    lims: null,
-    cloudAllowed: null,
-    dataResidencyConcern: null,
-  },
 };

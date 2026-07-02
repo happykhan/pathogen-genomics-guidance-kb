@@ -1,5 +1,4 @@
 import {
-  constraintLabels,
   infrastructureLabels,
   organismLabels,
   roleLabels,
@@ -12,10 +11,6 @@ type Props = {
 };
 
 export function ProfileSummary({ profile }: Props) {
-  const setConstraints = Object.entries(profile.constraints)
-    .filter(([, value]) => value !== null)
-    .map(([key, value]) => `${constraintLabels[key as keyof Profile["constraints"]]}: ${value ? "yes" : "no"}`);
-
   return (
     <dl className="profile-list">
       <div>
@@ -34,12 +29,6 @@ export function ProfileSummary({ profile }: Props) {
         <dt>Compute</dt>
         <dd>{infrastructureLabels[profile.infrastructure]}</dd>
       </div>
-      {setConstraints.length ? (
-        <div>
-          <dt>Constraints</dt>
-          <dd>{setConstraints.join("; ")}</dd>
-        </div>
-      ) : null}
     </dl>
   );
 }
