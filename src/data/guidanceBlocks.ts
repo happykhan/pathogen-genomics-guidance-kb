@@ -501,7 +501,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "Pathogen and use case",
               "Is the published evidence about the same pathogen, surveillance objective, report user and response route?",
               "Economic value depends on what decision changes and what action follows the result.",
-              "Do not transfer foodborne, hospital IPC, respiratory-virus or TB/AMR conclusions without checking the use case.",
+              "Do not transfer foodborne, hospital IPC, respiratory-virus, TB, or AMR conclusions without checking the use case.",
             ],
             sourceIds: ["wgs-economic-review", "lancet-wgs-economic-strategies-2026", "national-investment-case-2025"],
           },
@@ -651,7 +651,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "Service-model comparison fields: service type; sample trigger; expected output; turnaround pressure; validation boundary; metadata dependency; reporting route; repository or platform route; access-control needs; storage and retention needs; feedback mechanism; minimum staffing and support; failure mode if delayed.",
       "Matrix rows: routine surveillance; outbreak response; AMR monitoring; repository submission; clinical or hospital support; research support.",
       "Matrix columns: organism or programme, decision user, sampling route, expected output, turnaround pressure, metadata dependency, QC or validation boundary, reporting route, sharing route, infrastructure dependency, and fallback if the result is delayed or inconclusive.",
-      "Organism prompts: enteric bacteria need outbreak/source/One Health routes; respiratory viruses need variant or lineage reporting with sampling context and repository choices; TB and AMR need separation of relatedness and resistance inference; healthcare-associated infection support needs a clear clinical or infection-control reporting route; research support needs a boundary between exploratory analysis and validated public-health reporting.",
+      "Organism prompts: enteric bacteria need outbreak/source/One Health routes; respiratory viruses need variant or lineage reporting with sampling context and repository choices; tuberculosis needs separate transmission-investigation and drug-resistance fields; AMR needs separate resistant-organism relatedness and resistance-prediction fields; healthcare-associated infection support needs a clear clinical or infection-control reporting route; research support needs a boundary between exploratory analysis and validated public-health reporting.",
     ],
     tables: [
       {
@@ -765,17 +765,31 @@ export const guidanceBlocks: GuidanceBlock[] = [
           },
           {
             cells: [
-              "TB or AMR with validation goals",
-              "Use-case service model, TB/AMR reporting, quality validation, workflow provenance and reporting limitations.",
-              "Transmission inference and resistance inference need separate evidence, validation basis, versioning, and follow-up testing status.",
-              "Needs review against current resistance database guidance, thresholds and national TB or AMR reporting policy.",
+              "Tuberculosis with validation goals",
+              "Use-case service model, tuberculosis reporting, quality validation, workflow provenance and reporting limitations.",
+              "Transmission investigation and drug-resistance inference need separate evidence, validation basis, versioning, and follow-up testing status.",
+              "Needs review against current TB cluster interpretation, resistance catalogue, thresholds and national reporting policy.",
             ],
             sourceIds: ["cdc-nejm-2019", "ecdc-wgs-surveillance-2016", "clinical-microbiology-implementation-2026"],
           },
           {
             cells: [
+              "AMR with validation goals",
+              "Use-case service model, AMR reporting, quality validation, workflow provenance and reporting limitations.",
+              "Resistant-organism relatedness and resistance prediction need separate evidence, validation basis, database versioning, and follow-up testing status.",
+              "Needs review against current organism-drug validation sources, resistance database guidance, thresholds and national AMR reporting policy.",
+            ],
+            sourceIds: [
+              "cdc-nejm-2019",
+              "ecdc-wgs-surveillance-2016",
+              "clinical-microbiology-implementation-2026",
+              "mgen-discordant-amr-predictions-2020",
+            ],
+          },
+          {
+            cells: [
               "Healthcare-associated infection or nosocomial focus",
-              "Use-case service model, healthcare-associated infection reporting, TB/AMR reporting where relevant, quality validation and feedback loops.",
+              "Use-case service model, healthcare-associated infection reporting, AMR reporting where relevant, quality validation and feedback loops.",
               "Hospital-facing reports need recipient route, comparison set, relatedness statement, uncertainty, infection-control action boundary and feedback.",
               "Needs review against local clinical governance, organism-specific cluster interpretation and infection-control workflow examples.",
             ],
@@ -3816,12 +3830,26 @@ export const guidanceBlocks: GuidanceBlock[] = [
           },
           {
             cells: [
-              "TB and AMR",
-              "Transmission investigation, outbreak refutation or support, resistance-marker surveillance, genotype-to-phenotype inference where the evidence base is adequate.",
+              "Tuberculosis",
+              "Transmission investigation, outbreak refutation or support, programme evaluation, and drug-resistance inference where the evidence base is adequate.",
               "Direct transmission, clinical treatment choice, or final susceptibility status without sampling context, validation evidence, database quality, and follow-up testing policy.",
-              "Comparison set, distance or cluster rule, resistance database and version, validation basis, phenotype confirmation status, and clinical or public-health action boundary.",
+              "Comparison set, distance or cluster rule, TB resistance catalogue or database and version, validation basis, phenotype confirmation status, and clinical or public-health action boundary.",
             ],
             sourceIds: ["cdc-nejm-2019", "ecdc-wgs-surveillance-2016", "clinical-microbiology-implementation-2026"],
+          },
+          {
+            cells: [
+              "Antimicrobial resistance",
+              "Resistant-organism relatedness, outbreak support, resistance-marker surveillance, and genotype-to-phenotype inference where the evidence base is adequate.",
+              "Direct transmission, clinical treatment choice, or final susceptibility status without sampling context, validation evidence, database quality, and follow-up testing policy.",
+              "Comparison set, relatedness method, organism-drug rule set, resistance database and version, validation basis, phenotype confirmation status, and clinical or public-health action boundary.",
+            ],
+            sourceIds: [
+              "cdc-nejm-2019",
+              "ecdc-wgs-surveillance-2016",
+              "clinical-microbiology-implementation-2026",
+              "mgen-discordant-amr-predictions-2020",
+            ],
           },
           {
             cells: [
@@ -3882,10 +3910,19 @@ export const guidanceBlocks: GuidanceBlock[] = [
           },
           {
             cells: [
-              "TB and AMR",
-              "Current resistance database guidance, genotype-phenotype validation sources, drug or organism-specific confidence rules, confirmatory-testing policy and report examples.",
-              "Transmission inference and resistance inference have different evidence bases, and genotype-to-phenotype confidence varies by organism, drug, mechanism and workflow.",
-              "Planning should separate relatedness, resistance, validation, follow-up and action-boundary fields; treatment guidance and resistance-calling thresholds are out of scope.",
+              "Tuberculosis",
+              "Current TB reporting examples, cluster or transmission-investigation rules, drug-resistance prediction sources, confirmatory-testing policy and programme-reporting routes.",
+              "TB genomics can support relatedness or transmission investigation and drug-resistance inference, but those outputs answer different questions.",
+              "Planning should separate outbreak or transmission-support wording from drug-resistance inference, follow-up testing and clinical action boundaries.",
+            ],
+            sourceIds: ["cdc-nejm-2019", "ecdc-wgs-surveillance-2016", "clinical-microbiology-implementation-2026"],
+          },
+          {
+            cells: [
+              "Antimicrobial resistance",
+              "Current organism-drug validation sources, resistance database guidance, rule-set versions, phenotype-confirmation policy and AMR surveillance or reporting examples.",
+              "AMR reporting may include both relatedness of resistant organisms and genotype-to-phenotype inference, but confidence varies by organism, drug, mechanism and workflow.",
+              "Planning should keep organism relatedness, resistance determinants, phenotype prediction, validation status and action boundaries as separate fields.",
             ],
             sourceIds: [
               "cdc-nejm-2019",
@@ -4174,74 +4211,61 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
   },
   {
-    id: "reporting-tb-amr",
-    title: "For TB and AMR, separate transmission inference from resistance inference",
+    id: "reporting-tb",
+    title: "For tuberculosis, separate transmission investigation from drug-resistance inference",
     summary:
-      "TB and AMR reports need clear limits around relatedness, genotype-phenotype prediction, clinical interpretation, and follow-up testing.",
+      "TB genomics can support outbreak or transmission investigation and drug-resistance inference, but those outputs need different evidence, wording, validation and follow-up routes.",
     sourceStatus: "partial",
     body: [
-      "TB and AMR use cases often combine two different reporting products: relatedness or transmission inference, and genotype-based prediction of resistance or other phenotypes. ECDC separates these output types, and Armstrong et al. caution that phenotype inference depends on the organism, drug, mechanism and quality of genotype-phenotype evidence.",
-      "For TB, WGS can help define or refute suspected outbreaks, infer transmission dynamics, suggest missed cases, distinguish reactivation from reinfection, and support drug-susceptibility inference where the method is feasible. The report should be clear about whether it is supporting public-health investigation, clinical treatment, programme evaluation, or more than one of these.",
-      "For AMR, a useful report should name the organism, antimicrobial or drug class, resistance determinant or rule set, database or tool version, validation basis, and whether confirmatory phenotypic testing is required. The clinical microbiology implementation review reinforces this caution because hospital-facing reports can carry direct patient-care implications and regulatory obligations.",
-      "The safe reporting rule is separation. Keep relatedness, genotype-to-phenotype inference, clinical or infection-control action, validation basis, uncertainty and follow-up testing as separate fields. A single combined conclusion can hide which part is well supported and which part depends on local epidemiology, phenotypic confirmation, database quality or clinical judgement.",
+      "A TB genomics service should not collapse all interpretation into one result. WGS can support public-health questions about whether cases are related, whether a suspected outbreak is plausible, whether transmission investigation should continue, and whether cases may represent reactivation, reinfection or missed links. It can also support drug-susceptibility inference where the method, targets and evidence base are suitable.",
+      "Those two outputs have different evidence bases. Transmission or relatedness inference depends on comparison set, sampling frame, distance or nomenclature method, epidemiological context and the completeness of local case finding. Drug-resistance inference depends on organism-specific resistance catalogues, drug or mutation evidence, workflow and database versions, and local policy for phenotypic confirmation or clinical use.",
+      "The report should therefore state which question it answers: public-health investigation, programme surveillance, drug-resistance screening, clinical treatment discussion, or research only. A close genomic relationship does not by itself prove direct transmission, and a resistance marker should not be presented as final susceptibility status unless the validation and follow-up policy support that use.",
+      "For this guide, the practical rule is to keep TB relatedness fields, resistance-inference fields, follow-up testing status and action boundaries separate. That makes uncertainty visible and stops a strong statement in one part of the report from making a weaker statement look equally certain.",
     ],
     bodySourceIds: {
-      0: ["ecdc-wgs-surveillance-2016", "cdc-nejm-2019"],
-      1: ["cdc-nejm-2019"],
+      0: ["cdc-nejm-2019", "ecdc-wgs-surveillance-2016"],
+      1: ["cdc-nejm-2019", "ecdc-wgs-surveillance-2016", "clinical-microbiology-implementation-2026"],
       2: ["cdc-nejm-2019", "clinical-microbiology-implementation-2026"],
-      3: [
-        "cdc-nejm-2019",
-        "ecdc-wgs-surveillance-2016",
-        "clinical-microbiology-implementation-2026",
-        "mgen-discordant-amr-predictions-2020",
-      ],
+      3: ["cdc-nejm-2019", "ecdc-wgs-surveillance-2016", "clinical-microbiology-implementation-2026"],
     },
     technicalDetail: [
-      "Minimum implementation check: record the distance method or nomenclature scheme, cluster threshold or interpretation rule, resistance database and version, workflow version, specimen or isolate source, report recipient, and whether phenotypic confirmation is pending or complete.",
-      "Do not merge relatedness, resistance and clinical-action statements into one unchecked conclusion. Each conclusion needs its own evidence basis and uncertainty statement.",
+      "Minimum TB relatedness record: distance method or nomenclature scheme, cluster rule, comparison set, sampling frame, interpretation date, workflow version, report recipient and epidemiological context available at interpretation.",
+      "Minimum TB resistance-inference record: drug or drug class, resistance determinant or rule set, catalogue/database and version, workflow version, validation basis, confidence or uncertainty statement, and phenotypic confirmation status.",
+      "Do not merge TB relatedness, drug-resistance inference and clinical action into one conclusion. Each conclusion needs its own evidence basis and uncertainty statement.",
     ],
     tables: [
       {
-        title: "TB and AMR reporting fields",
+        title: "TB reporting fields",
         summary:
-          "Use separate fields so relatedness, resistance prediction, interpretation and action are not collapsed into one unsupported conclusion.",
+          "Use separate fields so relatedness, drug-resistance inference, interpretation and action are not collapsed into one unsupported conclusion.",
         columns: ["Report field", "What to record", "Why it matters", "Main caution"],
         rows: [
           {
             cells: [
-              "Relatedness or transmission inference",
-              "Distance method, nomenclature or cluster rule; comparison set; sampling frame; workflow version; interpretation date.",
-              "Supports suspected-outbreak assessment, transmission investigation and programme evaluation.",
+              "Relatedness or transmission support",
+              "Distance method, nomenclature or cluster rule; comparison set; sampling frame; workflow version; interpretation date; epidemiological context available.",
+              "Supports suspected-outbreak assessment, transmission investigation, programme evaluation and decisions about follow-up case finding.",
               "A relatedness result does not prove direct transmission without sampling and epidemiological context.",
             ],
             sourceIds: ["cdc-nejm-2019", "ecdc-wgs-surveillance-2016"],
           },
           {
             cells: [
-              "Resistance or phenotype inference",
-              "Organism, antimicrobial or drug class, determinant or rule set, database and version, validation basis and confidence statement.",
-              "Helps distinguish surveillance signal, public-health action and possible clinical relevance.",
-              "Genotype-to-phenotype reliability varies by organism, drug, resistance mechanism, database and workflow.",
-            ],
-            sourceIds: ["cdc-nejm-2019", "clinical-microbiology-implementation-2026", "mgen-discordant-amr-predictions-2020"],
-          },
-          {
-            cells: [
-              "Follow-up testing status",
-              "Whether phenotypic confirmation, repeat sequencing, additional sampling or expert review is pending, complete or not required.",
-              "Prevents an inferred result being read as final when confirmation or review is still needed.",
-              "The guide cannot prescribe confirmatory testing rules without organism-specific and national sources.",
+              "Drug-resistance inference",
+              "Drug or drug class, determinant or rule set, resistance catalogue or database version, workflow version, validation basis and confidence statement.",
+              "Keeps drug-resistance interpretation separate from outbreak or transmission wording.",
+              "Genotype-to-phenotype reliability varies by drug, mechanism, catalogue, database and workflow.",
             ],
             sourceIds: ["cdc-nejm-2019", "clinical-microbiology-implementation-2026"],
           },
           {
             cells: [
-              "Action boundary",
-              "Whether the report supports public-health investigation, surveillance monitoring, clinical treatment discussion, infection-control action or research only.",
-              "Clarifies who should act and what kind of decision the result can support.",
-              "Clinical-facing action may carry regulatory, quality and interpretive obligations beyond public-health surveillance.",
+              "Follow-up and action boundary",
+              "Whether phenotypic confirmation, repeat sequencing, additional sampling, expert review or clinical discussion is pending, complete or not required.",
+              "Prevents an inferred result being read as final when confirmation or review is still needed.",
+              "The guide cannot prescribe TB treatment or confirmatory-testing rules without current national and organism-specific sources.",
             ],
-            sourceIds: ["clinical-microbiology-implementation-2026", "ecdc-wgs-surveillance-2016"],
+            sourceIds: ["cdc-nejm-2019", "clinical-microbiology-implementation-2026"],
           },
         ],
         sourceIds: ["cdc-nejm-2019", "ecdc-wgs-surveillance-2016", "clinical-microbiology-implementation-2026"],
@@ -4249,8 +4273,98 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     audiences: ["director", "policy", "lab-lead", "bioinformatician", "data-manager", "programme-lead"],
     implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
-    organisms: ["tb", "amr", "nosocomial"],
-    topics: ["reporting", "decision-use", "tb", "amr", "quality", "validation"],
+    organisms: ["tb"],
+    topics: ["reporting", "decision-use", "tb", "quality", "validation"],
+    detailLevel: "operational",
+    sourceIds: ["ecdc-wgs-surveillance-2016", "cdc-nejm-2019", "clinical-microbiology-implementation-2026"],
+    gaps: [
+      "Needs current TB report examples, TB resistance-catalogue guidance, genotype-phenotype validation sources, cluster-threshold policy, confirmatory-testing policy and national reporting requirements.",
+    ],
+  },
+  {
+    id: "reporting-amr",
+    title: "For AMR, separate resistant-organism relatedness from resistance prediction",
+    summary:
+      "AMR genomics can support surveillance of resistant organisms, outbreak investigation and genotype-to-phenotype inference, but those outputs should be reported as separate conclusions.",
+    sourceStatus: "partial",
+    body: [
+      "An AMR genomics service may answer more than one question. It may ask whether resistant organisms are related, whether an outbreak or transmission network is plausible, whether a resistance determinant or mobile element is present, whether a genotype predicts a phenotype, or whether a surveillance signal should trigger further investigation.",
+      "Relatedness and resistance inference are different outputs. Relatedness depends on sampling, comparison set, workflow, nomenclature or distance method, and epidemiological context. Resistance inference depends on organism, antimicrobial or drug class, gene or mutation evidence, database or rule-set version, validation basis and the programme's policy for phenotypic confirmation.",
+      "A useful AMR report should therefore avoid a single combined conclusion such as 'linked resistant outbreak' unless each part is supported. The report should make clear whether the evidence supports relatedness, resistance prediction, both, or neither; whether phenotypic confirmation is pending or required; and whether the output is for surveillance, infection-control support, clinical discussion or research.",
+      "The clinical implementation literature reinforces the need for caution because hospital-facing or clinical-facing AMR results can carry direct patient-care implications, regulatory obligations and interpretive uncertainty. Genotype-to-phenotype confidence varies by organism, drug, mechanism, database and workflow, so validation and versioning must be visible.",
+    ],
+    bodySourceIds: {
+      0: ["cdc-nejm-2019", "ecdc-wgs-surveillance-2016", "clinical-microbiology-implementation-2026"],
+      1: [
+        "cdc-nejm-2019",
+        "ecdc-wgs-surveillance-2016",
+        "clinical-microbiology-implementation-2026",
+        "mgen-discordant-amr-predictions-2020",
+      ],
+      2: ["clinical-microbiology-implementation-2026", "mgen-discordant-amr-predictions-2020"],
+      3: ["clinical-microbiology-implementation-2026", "mgen-discordant-amr-predictions-2020"],
+    },
+    technicalDetail: [
+      "Minimum AMR relatedness record: organism, isolate or specimen source, comparison set, sampling route, method or nomenclature, workflow version, interpretation date, and epidemiological or infection-control context.",
+      "Minimum AMR resistance record: antimicrobial or drug class, determinant or mutation, rule set, database and version, workflow version, validation basis, confidence statement, phenotype-confirmation status and report recipient.",
+      "Do not merge organism relatedness, resistance determinants, predicted phenotype and clinical action into one unchecked conclusion. Each conclusion needs its own evidence basis and uncertainty statement.",
+    ],
+    tables: [
+      {
+        title: "AMR reporting fields",
+        summary:
+          "Use separate fields so resistant-organism relatedness, resistance prediction, follow-up and action boundaries remain visible.",
+        columns: ["Report field", "What to record", "Why it matters", "Main caution"],
+        rows: [
+          {
+            cells: [
+              "Resistant-organism relatedness",
+              "Organism, specimen or isolate source, comparison set, sampling frame, distance or nomenclature method, workflow version and interpretation date.",
+              "Supports outbreak investigation, infection-control review, surveillance cluster review or programme monitoring.",
+              "Relatedness does not prove direct transmission without sampling, patient movement, exposure or epidemiological context.",
+            ],
+            sourceIds: ["ecdc-wgs-surveillance-2016", "clinical-microbiology-implementation-2026"],
+          },
+          {
+            cells: [
+              "Resistance determinant or predicted phenotype",
+              "Antimicrobial or drug class, gene or mutation, rule set, database and version, validation basis and confidence statement.",
+              "Separates resistance evidence from relatedness or transmission evidence.",
+              "Genotype-to-phenotype reliability varies by organism, drug, mechanism, database and workflow.",
+            ],
+            sourceIds: ["cdc-nejm-2019", "clinical-microbiology-implementation-2026", "mgen-discordant-amr-predictions-2020"],
+          },
+          {
+            cells: [
+              "Phenotype confirmation or expert review",
+              "Whether phenotypic susceptibility testing, repeat sequencing, expert review, outbreak review or additional sampling is pending, complete or not required.",
+              "Prevents inferred resistance from being read as final when confirmation or review is still needed.",
+              "Confirmatory-testing policy is organism-, drug-, setting- and jurisdiction-specific.",
+            ],
+            sourceIds: ["clinical-microbiology-implementation-2026", "mgen-discordant-amr-predictions-2020"],
+          },
+          {
+            cells: [
+              "Action boundary",
+              "Whether the report supports AMR surveillance, public-health investigation, infection-control action, clinical treatment discussion, repository sharing or research only.",
+              "Clarifies who should act and what kind of decision the result can support.",
+              "Clinical-facing action may carry quality, regulatory and interpretive obligations beyond public-health surveillance.",
+            ],
+            sourceIds: ["clinical-microbiology-implementation-2026", "ecdc-wgs-surveillance-2016"],
+          },
+        ],
+        sourceIds: [
+          "cdc-nejm-2019",
+          "ecdc-wgs-surveillance-2016",
+          "clinical-microbiology-implementation-2026",
+          "mgen-discordant-amr-predictions-2020",
+        ],
+      },
+    ],
+    audiences: ["director", "policy", "lab-lead", "bioinformatician", "data-manager", "programme-lead"],
+    implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
+    organisms: ["amr", "nosocomial"],
+    topics: ["reporting", "decision-use", "amr", "quality", "validation"],
     detailLevel: "operational",
     sourceIds: [
       "ecdc-wgs-surveillance-2016",
@@ -4259,7 +4373,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "mgen-discordant-amr-predictions-2020",
     ],
     gaps: [
-      "Needs current TB and AMR report examples, genotype-phenotype validation sources, resistance database guidance, thresholds, and national policy requirements.",
+      "Needs current AMR report examples, organism-drug validation sources, resistance database guidance, thresholds, confirmatory-testing policy and national reporting requirements.",
     ],
   },
   {

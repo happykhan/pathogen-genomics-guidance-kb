@@ -67,7 +67,8 @@ Run the wizard for these profiles and verify that section ranking and resources 
 - Programme lead, exploring, design infrastructure.
 - Enteric-bacteria service profile.
 - Respiratory-virus sharing profile.
-- TB and AMR validation profile.
+- TB validation profile.
+- AMR validation profile.
 - Healthcare-associated infection profile.
 
 `npm run qa:scenarios` covers the constraint-specific checks that can be automated:
@@ -77,7 +78,7 @@ Run the wizard for these profiles and verify that section ranking and resources 
 - no central IT raises operating-model and backup/sustainability guidance;
 - no LIMS raises metadata and data-lifecycle guidance;
 - cloud restrictions or data-residency concern raise governance/sharing caution and lower cloud-heavy recommendations.
-- organism-specific profiles surface the expected enteric, respiratory-virus, TB/AMR, and healthcare-associated infection sections above the dynamic-guide visibility threshold.
+- organism-specific profiles surface the expected enteric, respiratory-virus, tuberculosis, AMR, and healthcare-associated infection sections above the dynamic-guide visibility threshold.
 
 ## Editorial Checks
 

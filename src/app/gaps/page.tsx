@@ -39,7 +39,7 @@ const chapterGaps = [
   {
     title: "Organism-specific report templates and QC thresholds",
     detail:
-      "The guide now has beta reporting fields, limitations prompts, and automated organism-profile QA for enteric bacteria, respiratory viruses, TB/AMR, and healthcare-associated infection. The remaining work is current report examples, nomenclature rules, cluster interpretation criteria, repository fields, and QC thresholds by organism.",
+      "The guide now has beta reporting fields, limitations prompts, and automated organism-profile QA for enteric bacteria, respiratory viruses, tuberculosis, AMR, and healthcare-associated infection. The remaining work is current report examples, nomenclature rules, cluster interpretation criteria, repository fields, and QC thresholds by organism.",
     sourceNeed:
       "Salmonella, STEC, Listeria, influenza, RSV, SARS-CoV-2, TB, AMR and healthcare-associated infection reporting templates from national public-health or laboratory-quality sources.",
   },
