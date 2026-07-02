@@ -1,3 +1,5 @@
+import { RotateCcw } from "lucide-react";
+import { ProfileSummary } from "./ProfileSummary";
 import { getScoredGuidanceBlocks, relevanceThreshold, type ScoredGuidanceBlock } from "../lib/guidanceSelection";
 import { infrastructureLabels, organismLabels, roleLabels, stageLabels } from "../lib/profile";
 import type { Profile } from "../types/profile";
@@ -114,7 +116,14 @@ function stateLabel(item: ScoredGuidanceBlock, showAllSections: boolean) {
   return showAllSections ? "Expanded view" : "Hidden";
 }
 
-export function DocumentMap({ profile, showAllSections }: { profile: Profile; showAllSections: boolean }) {
+type DocumentMapProps = {
+  profile: Profile;
+  showAllSections: boolean;
+  onEditProfile?: () => void;
+  onResetProfile?: () => void;
+};
+
+export function DocumentMap({ profile, showAllSections, onEditProfile, onResetProfile }: DocumentMapProps) {
   const scored = getScoredGuidanceBlocks(profile);
   const grouped = groupBlocks(scored);
   const includedCount = scored.filter((item) => item.included).length;
@@ -134,22 +143,40 @@ export function DocumentMap({ profile, showAllSections }: { profile: Profile; sh
               {infrastructureLabels[profile.infrastructure].toLowerCase()}.
             </p>
           </div>
-          <dl className="document-map-stats" aria-label="Document map summary">
-            <div>
-              <dt>Included</dt>
-              <dd>
-                {includedCount}/{scored.length}
-              </dd>
+          <aside className="document-map-profile" aria-label="Current profile for document map">
+            <div className="toolbar">
+              <h3>Current profile</h3>
+              <div className="control-row">
+                {onEditProfile ? (
+                  <button className="button" type="button" onClick={onEditProfile}>
+                    Edit
+                  </button>
+                ) : null}
+                {onResetProfile ? (
+                  <button className="button icon-button" type="button" onClick={onResetProfile} aria-label="Reset profile">
+                    <RotateCcw size={17} />
+                  </button>
+                ) : null}
+              </div>
             </div>
-            <div>
-              <dt>Threshold</dt>
-              <dd>{relevanceThreshold}+</dd>
-            </div>
-            <div>
-              <dt>Role-specific</dt>
-              <dd>{profileSpecificCount}</dd>
-            </div>
-          </dl>
+            <ProfileSummary profile={profile} />
+            <dl className="document-map-stats" aria-label="Document map summary">
+              <div>
+                <dt>Included</dt>
+                <dd>
+                  {includedCount}/{scored.length}
+                </dd>
+              </div>
+              <div>
+                <dt>Threshold</dt>
+                <dd>{relevanceThreshold}+</dd>
+              </div>
+              <div>
+                <dt>Role-specific</dt>
+                <dd>{profileSpecificCount}</dd>
+              </div>
+            </dl>
+          </aside>
         </div>
 
         <div className="document-map-legend" aria-label="Map legend">

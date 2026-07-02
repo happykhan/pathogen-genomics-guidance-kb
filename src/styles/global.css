@@ -966,7 +966,7 @@ select {
 
 .guidance-control-band {
   display: grid;
-  grid-template-columns: minmax(360px, 1.25fr) minmax(280px, 0.75fr);
+  grid-template-columns: minmax(280px, 520px);
   gap: 14px;
   align-items: stretch;
   margin: 0 0 20px;
@@ -999,7 +999,7 @@ select {
 
 .document-map-head {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 480px);
   gap: 20px;
   align-items: start;
 }
@@ -1016,6 +1016,37 @@ select {
   max-width: 820px;
   margin: 0;
   color: var(--muted);
+}
+
+.document-map-profile {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfdfc;
+  padding: 16px;
+}
+
+.document-map-profile .toolbar {
+  margin-bottom: 14px;
+}
+
+.document-map-profile h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 650;
+}
+
+.document-map-profile .profile-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 18px;
+}
+
+.document-map-profile .profile-list div {
+  grid-template-columns: 82px minmax(0, 1fr);
+}
+
+.document-map-profile .document-map-stats {
+  margin-top: 16px;
 }
 
 .document-map-stats {
@@ -1980,6 +2011,10 @@ select {
 
   .document-map-stats,
   .document-map-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .document-map-profile .profile-list {
     grid-template-columns: 1fr;
   }
 

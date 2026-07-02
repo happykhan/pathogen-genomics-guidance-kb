@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { FileText, RotateCcw, Share2, Wand2 } from "lucide-react";
+import { FileText, Share2, Wand2 } from "lucide-react";
 import { DocumentMap } from "./DocumentMap";
 import { GnomeyCard } from "./GnomeyCard";
 import { GnomeyWizard } from "./GnomeyWizard";
@@ -95,22 +95,6 @@ export function GuidanceApp() {
         <section className="guidance-control-band no-print" aria-label="Guidance controls">
           <section className="panel">
             <div className="panel-body">
-              <div className="toolbar">
-                <h2 style={{ margin: 0, fontSize: "1.1rem" }}>Current profile</h2>
-                <div className="control-row">
-                  <button className="button" type="button" onClick={() => setWizardOpen(true)}>
-                    Edit
-                  </button>
-                  <button className="button icon-button" type="button" onClick={() => setProfile(defaultProfile)} aria-label="Reset profile">
-                    <RotateCcw size={17} />
-                  </button>
-                </div>
-              </div>
-              <ProfileSummary profile={profile} />
-            </div>
-          </section>
-          <section className="panel">
-            <div className="panel-body">
               <h2 style={{ marginTop: 0, fontSize: "1.1rem" }}>Share with</h2>
               <div className="handoff-grid">
                 {(["director", "lab-lead", "bioinformatician", "it-security"] as UserRole[]).map((role) => (
@@ -124,7 +108,12 @@ export function GuidanceApp() {
           </section>
         </section>
 
-        <DocumentMap profile={profile} showAllSections={false} />
+        <DocumentMap
+          profile={profile}
+          showAllSections={false}
+          onEditProfile={() => setWizardOpen(true)}
+          onResetProfile={() => setProfile(defaultProfile)}
+        />
 
         <div className="document-wrap">
           <section className="panel print-only" aria-label="Printed profile summary">
