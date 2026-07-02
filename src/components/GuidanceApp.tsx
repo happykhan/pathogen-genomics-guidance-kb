@@ -48,6 +48,8 @@ export function GuidanceApp() {
 
   function applyProfile(nextProfile: Profile) {
     setProfile(nextProfile);
+    setWizardOpen(false);
+    setGnomeyDismissed(true);
     window.requestAnimationFrame(() => {
       document.querySelector(".whitepaper")?.scrollIntoView({ behavior: "smooth", block: "start" });
     });
