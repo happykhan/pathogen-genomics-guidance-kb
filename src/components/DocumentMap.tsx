@@ -113,7 +113,7 @@ function nodeState(item: ScoredGuidanceBlock, showAllSections: boolean) {
 
 function stateLabel(item: ScoredGuidanceBlock, showAllSections: boolean) {
   if (item.included) return "Included";
-  return showAllSections ? "Expanded view" : "Hidden";
+  return showAllSections ? "Expanded view" : "Not included";
 }
 
 type DocumentMapProps = {
@@ -184,7 +184,7 @@ export function DocumentMap({ profile, showAllSections, onEditProfile, onResetPr
             <i className="legend-dot included" aria-hidden="true" /> Included in this profile
           </span>
           <span>
-            <i className="legend-dot hidden" aria-hidden="true" /> Hidden unless expanded
+            <i className="legend-dot hidden" aria-hidden="true" /> Not included in this profile
           </span>
           <span>
             <i className="legend-dot variant" aria-hidden="true" /> Has role-specific wording
@@ -213,7 +213,7 @@ export function DocumentMap({ profile, showAllSections, onEditProfile, onResetPr
                   return (
                     <li key={item.block.id} className={className}>
                       {state === "hidden" ? (
-                        <span aria-label={`${item.block.title}. Hidden for this profile. Match score ${item.score}.`}>
+                        <span aria-label={`${item.block.title}. Not included for this profile. Match score ${item.score}.`}>
                           {nodeContent}
                         </span>
                       ) : (

@@ -29,11 +29,15 @@ function scoreRoleNeeds(profile: Profile, topics: string[]): number {
 
 export function scoreGuidanceBlock(block: GuidanceBlock, profile: Profile): number {
   let score = 0;
+  const organismMatch = profile.organisms.some((organism) => block.organisms.includes(organism));
+  const organismSpecific = !block.organisms.includes("general");
+
   if (block.audiences.includes("all") || block.audiences.includes(profile.role)) score += 5;
   else if (profile.role === "programme-lead") score += 2;
   if (block.implementationStages.includes(profile.stage)) score += 3;
   if (block.organisms.includes("general")) score += 1;
-  if (profile.organisms.some((organism) => block.organisms.includes(organism))) score += 2;
+  if (organismMatch) score += 2;
+  if (organismSpecific && !organismMatch) score -= 5;
   if (!block.infrastructure || block.infrastructure.includes(profile.infrastructure)) score += 1;
   score += scoreRoleNeeds(profile, block.topics);
   return score;
