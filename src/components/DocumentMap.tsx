@@ -136,12 +136,13 @@ export function DocumentMap({ profile, showAllSections, onEditProfile, onResetPr
         <div className="document-map-head">
           <div>
             <p className="eyebrow">Document map</p>
-            <h2>The outline stays fixed. Gnomey changes what is brought forward.</h2>
+            <h2>Sections selected for this profile</h2>
             <p>
-              This map shows the full whitepaper structure and how the current profile affects it:{" "}
+              The guide is tailored to{" "}
               {roleLabels[profile.role].toLowerCase()}, {stageLabels[profile.stage].toLowerCase()},{" "}
               {profile.organisms.map((organism) => organismLabels[organism].toLowerCase()).join(", ")}, and{" "}
-              {infrastructureLabels[profile.infrastructure].toLowerCase()}.
+              {infrastructureLabels[profile.infrastructure].toLowerCase()}. These are the sections shown in the current
+              whitepaper.
             </p>
           </div>
           <aside className="document-map-profile" aria-label="Current profile for document map">
