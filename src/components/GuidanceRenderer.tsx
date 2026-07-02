@@ -20,6 +20,7 @@ type Props = {
   profile: Profile;
   showTechnical: boolean;
   showAllSections: boolean;
+  documentActions?: ReactNode;
 };
 
 const sourceLookup: Record<string, { label: string; path: string }> = sources;
@@ -242,7 +243,7 @@ function collectBlockReferenceIds(block: GuidanceBlock) {
   return Array.from(ids);
 }
 
-export function GuidanceRenderer({ profile, showTechnical, showAllSections }: Props) {
+export function GuidanceRenderer({ profile, showTechnical, showAllSections, documentActions }: Props) {
   const scored = getScoredGuidanceBlocks(profile);
   const visible = getVisibleGuidanceBlocks(profile, showAllSections);
   const hiddenCount = scored.filter((item) => !item.included).length;
@@ -261,6 +262,11 @@ export function GuidanceRenderer({ profile, showTechnical, showAllSections }: Pr
           {stageLabels[profile.stage].toLowerCase()} stage, focused on{" "}
           {profile.organisms.map((organism) => organismLabels[organism].toLowerCase()).join(", ")}.
         </p>
+        {documentActions ? (
+          <div className="whitepaper-actions no-print" aria-label="Document actions">
+            {documentActions}
+          </div>
+        ) : null}
         <dl className="document-profile">
           <div>
             <dt>Reader</dt>

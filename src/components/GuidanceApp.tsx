@@ -60,16 +60,6 @@ export function GuidanceApp() {
           <div>
             <p className="eyebrow">Dynamic guidance document</p>
             <h1 className="workspace-title">Pathogen genomics data and bioinformatics guidance.</h1>
-            <div className="control-row no-print hero-utility-actions" aria-label="Document actions">
-              <a className="button" href={`/print?${profileToSearch(profile)}`}>
-                <FileText size={18} />
-                Print-friendly version
-              </a>
-              <button className="button" type="button" onClick={() => copyShareUrl()}>
-                <Share2 size={18} />
-                {copied ? "Link copied" : "Share profile"}
-              </button>
-            </div>
           </div>
         </section>
 
@@ -133,7 +123,23 @@ export function GuidanceApp() {
               <p className="muted">Generated {generatedDate}. Source identifiers are shown under each guidance block.</p>
             </div>
           </section>
-          <GuidanceRenderer profile={profile} showTechnical={false} showAllSections={false} />
+          <GuidanceRenderer
+            profile={profile}
+            showTechnical={false}
+            showAllSections={false}
+            documentActions={
+              <>
+                <a className="button" href={`/print?${profileToSearch(profile)}`}>
+                  <FileText size={18} />
+                  Print-friendly version
+                </a>
+                <button className="button" type="button" onClick={() => copyShareUrl()}>
+                  <Share2 size={18} />
+                  {copied ? "Link copied" : "Share profile"}
+                </button>
+              </>
+            }
+          />
         </div>
       </div>
 

@@ -417,6 +417,14 @@ select {
   line-height: 1.55;
 }
 
+.whitepaper-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 760px;
+  margin: 18px 0 0;
+}
+
 .document-profile {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
@@ -1237,10 +1245,6 @@ select {
   max-width: 860px;
   font-size: clamp(2.15rem, 3.8vw, 4rem);
   line-height: 1.08;
-}
-
-.hero-utility-actions {
-  margin-top: 14px;
 }
 
 .gnomey-floating {
