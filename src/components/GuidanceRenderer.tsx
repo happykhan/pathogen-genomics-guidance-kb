@@ -8,7 +8,7 @@ import {
   roleLabels,
   stageLabels,
 } from "../lib/profile";
-import { getScoredGuidanceBlocks, getVisibleGuidanceBlocks, relevanceThreshold } from "../lib/guidanceSelection";
+import { getGuidanceSelection, getVisibleGuidanceBlocks } from "../lib/guidanceSelection";
 import type { GuidanceBlock } from "../types/content";
 import type { Profile } from "../types/profile";
 
@@ -244,9 +244,9 @@ function collectBlockReferenceIds(block: GuidanceBlock) {
 }
 
 export function GuidanceRenderer({ profile, showTechnical, showAllSections, documentActions }: Props) {
-  const scored = getScoredGuidanceBlocks(profile);
+  const selection = getGuidanceSelection(profile);
   const visible = getVisibleGuidanceBlocks(profile, showAllSections);
-  const hiddenCount = scored.filter((item) => !item.included).length;
+  const hiddenCount = selection.filter((item) => !item.included).length;
   const revealTechnical = showTechnical || isTechnicalProfile(profile);
   const referenceIds = Array.from(new Set(visible.flatMap(({ block }) => collectBlockReferenceIds(block))));
   const referenceNumber = new Map(referenceIds.map((sourceId, index) => [sourceId, index + 1]));
@@ -294,7 +294,7 @@ export function GuidanceRenderer({ profile, showTechnical, showAllSections, docu
         </div>
         {hiddenCount && !showAllSections ? (
           <p className="omission-note">
-            {hiddenCount} lower-relevance section{hiddenCount === 1 ? " is" : "s are"} hidden for this profile.
+            {hiddenCount} section{hiddenCount === 1 ? " is" : "s are"} not shown for this profile.
           </p>
         ) : null}
       </header>
@@ -302,22 +302,21 @@ export function GuidanceRenderer({ profile, showTechnical, showAllSections, docu
       <nav className="whitepaper-toc" aria-label="Document contents">
         <h2>Contents</h2>
         <ol>
-          {visible.map(({ block, score }, visibleIndex) => (
+          {visible.map(({ block }, visibleIndex) => (
             <li key={block.id}>
               <a href={`#${block.id}`}>
                 <span>{visibleIndex + 1}.</span>
                 {block.title}
               </a>
-              {score < relevanceThreshold ? <span className="toc-note">expanded view</span> : null}
             </li>
           ))}
         </ol>
       </nav>
 
       <div className="whitepaper-body">
-        {visible.map(({ block, score }, visibleIndex) => (
+        {visible.map(({ block }, visibleIndex) => (
           <section
-            className={score < relevanceThreshold ? "document-section low-relevance" : "document-section"}
+            className="document-section"
             id={block.id}
             key={block.id}
           >

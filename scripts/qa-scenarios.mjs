@@ -16,32 +16,6 @@ function loadGuidanceBlocks() {
   return Function(source)();
 }
 
-function loadResources() {
-  const collectionSource = read("src/data/microbialGenomicsCollection.ts")
-    .replace(/import type \{ ResourceRecord \} from "\.\.\/types\/content";\n\n?/, "")
-    .replace(/export const microbialGenomicsCollectionResources: ResourceRecord\[] =/, "const microbialGenomicsCollectionResources =")
-    .replace(/;\s*$/, ";\nreturn microbialGenomicsCollectionResources;");
-  const microbialGenomicsCollectionResources = Function(collectionSource)();
-  const source = read("src/data/resources.ts")
-    .replace(/import type \{ ResourceRecord \} from "\.\.\/types\/content";\n\n?/, "")
-    .replace(/import \{ microbialGenomicsCollectionResources \} from "\.\/microbialGenomicsCollection";\n/, "")
-    .replace(/export const resources: ResourceRecord\[] =/, "const resources =")
-    .replace(/;\s*$/, ";\nreturn resources;");
-  return Function("microbialGenomicsCollectionResources", source)(microbialGenomicsCollectionResources);
-}
-
-function loadRecommendationFunctions() {
-  const source = read("src/lib/recommendations.ts")
-    .replace(/import type [^\n]+\n/g, "")
-    .replace(/export function /g, "function ")
-    .replace(/function hasAny\(topics: string\[], candidates: string\[]\)/, "function hasAny(topics, candidates)")
-    .replace(/function scoreRoleNeeds\(profile: Profile, topics: string\[\]\): number/, "function scoreRoleNeeds(profile, topics)")
-    .replace(/function scoreGuidanceBlock\(block: GuidanceBlock, profile: Profile\): number/, "function scoreGuidanceBlock(block, profile)")
-    .replace(/function scoreResource\(resource: ResourceRecord, profile: Profile\): number/, "function scoreResource(resource, profile)")
-    .concat("\nreturn { scoreGuidanceBlock, scoreResource };\n");
-  return Function(source)();
-}
-
 const defaultProfile = {
   role: "programme-lead",
   stage: "exploring",
@@ -57,23 +31,32 @@ function withProfile(overrides) {
 }
 
 const guidanceBlocks = loadGuidanceBlocks();
-const resources = loadResources();
-const { scoreGuidanceBlock, scoreResource } = loadRecommendationFunctions();
 const blockById = new Map(guidanceBlocks.map((block) => [block.id, block]));
-const resourceById = new Map(resources.map((resource) => [resource.id, resource]));
 const errors = [];
 
-function scoreBlock(id, profile) {
-  const block = blockById.get(id);
-  if (!block) throw new Error(`Missing guidance block ${id}`);
-  return scoreGuidanceBlock(block, profile);
+function includesGuidanceBlock(block, profile) {
+  const organismSpecific = !block.organisms.includes("general");
+  const organismMatch = profile.organisms.some((organism) => block.organisms.includes(organism));
+  if (organismSpecific && !organismMatch) return false;
+
+  const audienceMatch =
+    profile.role === "programme-lead" || block.audiences.includes("all") || block.audiences.includes(profile.role);
+  const stageMatch = block.implementationStages.includes(profile.stage);
+  const infrastructureMatch = !block.infrastructure || block.infrastructure.includes(profile.infrastructure);
+
+  return audienceMatch && stageMatch && infrastructureMatch;
 }
 
-function expectVisibleGuidance(label, profile, expectedIds, minimumScore = 7) {
+function expectIncludedBlock(id, profile) {
+  const block = blockById.get(id);
+  if (!block) throw new Error(`Missing guidance block ${id}`);
+  return includesGuidanceBlock(block, profile);
+}
+
+function expectVisibleGuidance(label, profile, expectedIds) {
   expectedIds.forEach((id) => {
-    const score = scoreBlock(id, profile);
-    if (score < minimumScore) {
-      errors.push(`${label}: expected ${id} to score at least ${minimumScore}; got ${score}`);
+    if (!expectIncludedBlock(id, profile)) {
+      errors.push(`${label}: expected ${id} to be included by profile rules`);
     }
   });
 }

@@ -1,6 +1,6 @@
 import { RotateCcw } from "lucide-react";
 import { ProfileSummary } from "./ProfileSummary";
-import { getScoredGuidanceBlocks, relevanceThreshold, type ScoredGuidanceBlock } from "../lib/guidanceSelection";
+import { getGuidanceSelection, type SelectedGuidanceBlock } from "../lib/guidanceSelection";
 import { infrastructureLabels, organismLabels, roleLabels, stageLabels } from "../lib/profile";
 import type { Profile } from "../types/profile";
 
@@ -79,11 +79,11 @@ const branches: DocumentBranch[] = [
   },
 ];
 
-function groupBlocks(scored: ScoredGuidanceBlock[]) {
+function groupBlocks(selection: SelectedGuidanceBlock[]) {
   const assigned = new Set<string>();
 
   const grouped = branches.map((branch) => {
-    const items = scored.filter((item) => {
+    const items = selection.filter((item) => {
       if (assigned.has(item.block.id) || !branch.sectionIds.includes(item.block.id)) return false;
       assigned.add(item.block.id);
       return true;
@@ -92,7 +92,7 @@ function groupBlocks(scored: ScoredGuidanceBlock[]) {
     return { ...branch, items };
   });
 
-  const unassigned = scored.filter((item) => !assigned.has(item.block.id));
+  const unassigned = selection.filter((item) => !assigned.has(item.block.id));
   if (unassigned.length) {
     grouped.push({
       id: "other",
@@ -106,12 +106,12 @@ function groupBlocks(scored: ScoredGuidanceBlock[]) {
   return grouped.filter((branch) => branch.items.length > 0);
 }
 
-function nodeState(item: ScoredGuidanceBlock, showAllSections: boolean) {
+function nodeState(item: SelectedGuidanceBlock, showAllSections: boolean) {
   if (item.included) return "included";
   return showAllSections ? "expanded" : "hidden";
 }
 
-function stateLabel(item: ScoredGuidanceBlock, showAllSections: boolean) {
+function stateLabel(item: SelectedGuidanceBlock, showAllSections: boolean) {
   if (item.included) return "Included";
   return showAllSections ? "Expanded view" : "Not included";
 }
@@ -124,10 +124,10 @@ type DocumentMapProps = {
 };
 
 export function DocumentMap({ profile, showAllSections, onEditProfile, onResetProfile }: DocumentMapProps) {
-  const scored = getScoredGuidanceBlocks(profile);
-  const grouped = groupBlocks(scored);
-  const includedCount = scored.filter((item) => item.included).length;
-  const profileSpecificCount = scored.filter((item) => item.sourceBlock.roleVariants?.[profile.role]).length;
+  const selection = getGuidanceSelection(profile);
+  const grouped = groupBlocks(selection);
+  const includedCount = selection.filter((item) => item.included).length;
+  const profileSpecificCount = selection.filter((item) => item.sourceBlock.roleVariants?.[profile.role]).length;
 
   return (
     <section className="document-map panel no-print" aria-label="Document map">
@@ -164,12 +164,12 @@ export function DocumentMap({ profile, showAllSections, onEditProfile, onResetPr
               <div>
                 <dt>Included</dt>
                 <dd>
-                  {includedCount}/{scored.length}
+                  {includedCount}/{selection.length}
                 </dd>
               </div>
               <div>
-                <dt>Threshold</dt>
-                <dd>{relevanceThreshold}+</dd>
+                <dt>Rules</dt>
+                <dd>Role / stage / programme</dd>
               </div>
               <div>
                 <dt>Role-specific</dt>
@@ -213,11 +213,11 @@ export function DocumentMap({ profile, showAllSections, onEditProfile, onResetPr
                   return (
                     <li key={item.block.id} className={className}>
                       {state === "hidden" ? (
-                        <span aria-label={`${item.block.title}. Not included for this profile. Match score ${item.score}.`}>
+                        <span aria-label={`${item.block.title}. Not included for this profile. ${item.reason}.`}>
                           {nodeContent}
                         </span>
                       ) : (
-                        <a href={`#${item.block.id}`} aria-label={`${item.block.title}. ${label}. Match score ${item.score}.`}>
+                        <a href={`#${item.block.id}`} aria-label={`${item.block.title}. ${label}. ${item.reason}.`}>
                           {nodeContent}
                         </a>
                       )}

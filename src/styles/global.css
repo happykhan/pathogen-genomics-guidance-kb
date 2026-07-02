@@ -534,14 +534,6 @@ select {
   min-width: 2rem;
 }
 
-.toc-note {
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  color: var(--muted);
-  font-size: 0.74rem;
-  padding: 1px 7px;
-}
-
 .whitepaper-body {
   padding: 4px clamp(26px, 5vw, 64px) 42px;
 }
@@ -557,10 +549,6 @@ select {
 
 .document-section + .document-section {
   border-top: 1px solid #f1f5f3;
-}
-
-.document-section.low-relevance {
-  opacity: 0.82;
 }
 
 .section-kicker {
@@ -2342,10 +2330,6 @@ select {
     font-weight: 700;
   }
 
-  .toc-note {
-    display: none;
-  }
-
   .whitepaper-body {
     padding: 0;
   }
@@ -2369,10 +2353,6 @@ select {
   .document-section + .document-section {
     border-top: 0.3pt solid #e7ecea;
     break-before: auto;
-  }
-
-  .document-section.low-relevance {
-    opacity: 1;
   }
 
   .section-kicker {
