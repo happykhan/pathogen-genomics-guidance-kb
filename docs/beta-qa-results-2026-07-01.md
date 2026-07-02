@@ -29,7 +29,6 @@ Passed:
 
 - `/` returned 200.
 - `/resources/` returned 200.
-- `/gaps/` returned 200.
 - `/api/guidance` returned 200.
 - `/api/resources` returned 200.
 - `/api/sources` returned 200.
@@ -52,7 +51,6 @@ Generated local QA artifacts under ignored `tmp/qa/`:
 - `guidance-desktop.png`
 - `guidance-mobile.png`
 - `resources-desktop.png`
-- `gaps-desktop.png`
 - `wizard-desktop.png`
 - `guidance-print.pdf`
 

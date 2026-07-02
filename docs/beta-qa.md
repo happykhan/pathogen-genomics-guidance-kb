@@ -23,7 +23,6 @@ After `npm run build`, serve `out/` locally and check:
 
 - `/`
 - `/resources`
-- `/gaps`
 - `/api/guidance`
 - `/api/resources`
 - `/api/sources`
@@ -43,7 +42,7 @@ Check desktop and mobile widths for:
 - guidance page and whitepaper body;
 - Gnomey wizard;
 - resource finder cards and pagination;
-- gaps page.
+- WHO IRIS resource explorer.
 
 The whitepaper should read as one continuous document, not a stack of unrelated cards.
 
@@ -73,11 +72,11 @@ Run the wizard for these profiles and verify that section ranking and resources 
 
 `npm run qa:scenarios` covers the profile checks that can be automated:
 
-- representative reader profiles surface the expected leadership, laboratory, bioinformatics, IT/security, and programme-lead sections above the dynamic-guide visibility threshold;
-- organism-specific profiles surface the expected enteric, respiratory-virus, tuberculosis, AMR, and healthcare-associated infection sections above the dynamic-guide visibility threshold.
+- representative reader profiles include the expected leadership, laboratory, bioinformatics, IT/security, and programme-lead sections under the deterministic profile rules;
+- organism-specific profiles include the expected enteric, respiratory-virus, tuberculosis, AMR, and healthcare-associated infection sections under the deterministic profile rules.
 
 ## Editorial Checks
 
 - Blocks marked `reviewed` should not have unresolved gaps.
 - Blocks marked `partial` should explain what source work remains.
-- Gaps page should reflect current missing work, not stale gaps already filled by WHO/IPSN extraction.
+- Missing-evidence notes should remain internal to the relevant guidance blocks and source workflow, not appear as a standalone public page.

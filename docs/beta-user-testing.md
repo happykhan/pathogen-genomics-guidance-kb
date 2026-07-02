@@ -38,7 +38,7 @@ Recruit at least one reviewer from each group:
 - The participant can complete profile tailoring without help.
 - The participant can explain why at least two sections were relevant to them.
 - The participant can find at least one primary source document and one PDF download where available.
-- The participant can identify whether the guide is making a source-backed claim, a partial claim, or a gap.
+- The participant can identify when a section is source-backed and when it points to unresolved evidence needs.
 - The participant can export or print a readable whitepaper-style document.
 - The participant can describe one infrastructure trade-off rather than repeating a one-size-fits-all recommendation.
 
@@ -49,7 +49,7 @@ Recruit at least one reviewer from each group:
 - The participant cannot find documents in the resource finder.
 - The participant expects the guide to prescribe one universal cloud, HPC, laptop, or managed-platform answer.
 - The printed/exported guide contains controls, navigation, or broken reference numbering.
-- The gaps page hides important missing evidence instead of making it visible.
+- Missing evidence is hidden from the relevant section context or reads like public guidance rather than an unresolved evidence need.
 
 ## Triage Rule
 
