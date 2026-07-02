@@ -106,22 +106,6 @@ function expectPenalty(label, scorer, targetId, profile, minimumDelta = 1) {
   }
 }
 
-function topGuidanceIds(profile, limit = 5) {
-  return guidanceBlocks
-    .map((block, index) => ({ id: block.id, index, score: scoreGuidanceBlock(block, profile) }))
-    .sort((left, right) => right.score - left.score || left.index - right.index)
-    .slice(0, limit)
-    .map((entry) => entry.id);
-}
-
-function expectTopGuidance(label, profile, expectedIds, limit = 5) {
-  const topIds = topGuidanceIds(profile, limit);
-  const missingIds = expectedIds.filter((id) => !topIds.includes(id));
-  if (missingIds.length) {
-    errors.push(`${label}: expected top ${limit} guidance to include ${missingIds.join(", ")}; got ${topIds.join(", ")}`);
-  }
-}
-
 function expectVisibleGuidance(label, profile, expectedIds, minimumScore = 7) {
   expectedIds.forEach((id) => {
     const score = scoreBlock(id, profile);
@@ -129,17 +113,6 @@ function expectVisibleGuidance(label, profile, expectedIds, minimumScore = 7) {
       errors.push(`${label}: expected ${id} to score at least ${minimumScore}; got ${score}`);
     }
   });
-}
-
-function expectDifferentTopOrder(label, leftProfile, rightProfile, minimumDifference = 3, limit = 8) {
-  const leftTop = topGuidanceIds(leftProfile, limit);
-  const rightTop = topGuidanceIds(rightProfile, limit);
-  const changedPositions = leftTop.filter((id, index) => rightTop[index] !== id).length;
-  if (changedPositions < minimumDifference) {
-    errors.push(
-      `${label}: expected at least ${minimumDifference} changed top-${limit} positions; left=${leftTop.join(", ")}; right=${rightTop.join(", ")}`,
-    );
-  }
 }
 
 const constraintScenarios = [
@@ -207,7 +180,7 @@ const representativeProfiles = [
       stage: "exploring",
       goals: ["make-case"],
     }),
-    expectedTopGuidance: ["why-pathogen-genomics", "investment-case-assumptions"],
+    expectedVisibleGuidance: ["why-pathogen-genomics", "investment-case-assumptions"],
   },
   {
     label: "laboratory lead piloting a service",
@@ -216,7 +189,7 @@ const representativeProfiles = [
       stage: "pilot",
       goals: ["design-infrastructure", "validate-workflows"],
     }),
-    expectedTopGuidance: ["quality-validation-before-switch"],
+    expectedVisibleGuidance: ["quality-validation-before-switch"],
   },
   {
     label: "bioinformatician validating workflows",
@@ -226,7 +199,7 @@ const representativeProfiles = [
       infrastructure: "hpc",
       goals: ["validate-workflows"],
     }),
-    expectedTopGuidance: ["workflow-reproducibility"],
+    expectedVisibleGuidance: ["workflow-reproducibility"],
   },
   {
     label: "IT/security reviewing data sharing and residency",
@@ -237,12 +210,11 @@ const representativeProfiles = [
       goals: ["share-data"],
       constraints: { cloudAllowed: false, dataResidencyConcern: true },
     }),
-    expectedTopGuidance: ["sharing-is-not-unconditional", "iam-is-continuous"],
+    expectedVisibleGuidance: ["sharing-is-not-unconditional", "iam-is-continuous"],
   },
   {
     label: "mixed team exploring infrastructure options",
     profile: defaultProfile,
-    expectedTopGuidance: ["data-lifecycle-sample-to-report", "metadata-and-epidemiology-integration", "infrastructure-operating-model"],
     expectedVisibleGuidance: [
       "data-lifecycle-sample-to-report",
       "metadata-and-epidemiology-integration",
@@ -322,9 +294,6 @@ const organismProfiles = [
 ];
 
 constraintScenarios.forEach((scenario) => scenario.checks.forEach((check) => check()));
-representativeProfiles.forEach((scenario) =>
-  expectTopGuidance(scenario.label, scenario.profile, scenario.expectedTopGuidance, 7),
-);
 representativeProfiles.forEach((scenario) => {
   if (scenario.expectedVisibleGuidance) {
     expectVisibleGuidance(scenario.label, scenario.profile, scenario.expectedVisibleGuidance);
@@ -332,16 +301,6 @@ representativeProfiles.forEach((scenario) => {
 });
 organismProfiles.forEach((scenario) =>
   expectVisibleGuidance(scenario.label, scenario.profile, scenario.expectedVisibleGuidance),
-);
-expectDifferentTopOrder(
-  "Gnomey profile tailoring changes section order",
-  defaultProfile,
-  withProfile({ role: "director", goals: ["make-case"] }),
-);
-expectDifferentTopOrder(
-  "Gnomey technical tailoring changes section order",
-  defaultProfile,
-  withProfile({ role: "bioinformatician", stage: "routine-service", infrastructure: "hpc", goals: ["validate-workflows"] }),
 );
 
 if (errors.length) {

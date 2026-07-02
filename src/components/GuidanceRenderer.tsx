@@ -207,14 +207,11 @@ export function GuidanceRenderer({ profile, showTechnical, showAllSections }: Pr
     index,
     score: scoreGuidanceBlock(block, profile),
   }));
-  const visible = scored
-    .filter((item) => showAllSections || item.score >= relevanceThreshold)
-    .sort((left, right) => right.score - left.score || left.index - right.index);
+  const visible = scored.filter((item) => showAllSections || item.score >= relevanceThreshold);
   const hiddenCount = scored.filter((item) => item.score < relevanceThreshold).length;
   const revealTechnical = showTechnical || isTechnicalProfile(profile);
   const referenceIds = Array.from(new Set(visible.flatMap(({ block }) => collectBlockReferenceIds(block))));
   const referenceNumber = new Map(referenceIds.map((sourceId, index) => [sourceId, index + 1]));
-  const priorityTitles = visible.slice(0, 4).map(({ block }) => block.title);
 
   return (
     <section className="whitepaper" aria-label="Tailored guidance document">
@@ -244,11 +241,6 @@ export function GuidanceRenderer({ profile, showTechnical, showAllSections }: Pr
             <dd>{profile.goals.map((goal) => goalLabels[goal]).join(", ")}</dd>
           </div>
         </dl>
-        {priorityTitles.length ? (
-          <p className="profile-priority-note">
-            Gnomey prioritised {priorityTitles.map((title) => title.toLowerCase()).join("; ")} for this profile.
-          </p>
-        ) : null}
         {hiddenCount && !showAllSections ? (
           <p className="omission-note">
             {hiddenCount} lower-relevance section{hiddenCount === 1 ? " is" : "s are"} hidden for this profile.
