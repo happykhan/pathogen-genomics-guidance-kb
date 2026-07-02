@@ -60,7 +60,7 @@ export default function ApiDocsPage() {
           <p>
             In guidance blocks, <code>sourceStatus: "reviewed"</code> means the prose is ready for beta use,{" "}
             <code>"partial"</code> means it is source-backed but still incomplete, and <code>"gap"</code> marks a placeholder or
-            unresolved editorial work item.
+            unresolved evidence work item.
           </p>
           <p>
             In the resource catalogue, <code>sourceStatus: "extracted"</code> maps to <strong>Reviewed in guide</strong>.{" "}

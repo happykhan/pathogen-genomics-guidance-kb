@@ -53,4 +53,4 @@ Recruit at least one reviewer from each group:
 
 ## Triage Rule
 
-Create a GitHub issue for every finding that changes comprehension, trust, task completion, accessibility, print/PDF output, or source traceability. Minor wording notes can be grouped into a single editorial issue.
+Create a GitHub issue for every finding that changes comprehension, trust, task completion, accessibility, print/PDF output, or source traceability. Minor wording notes can be grouped into a single content issue.

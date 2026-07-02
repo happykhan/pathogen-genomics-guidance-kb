@@ -17,7 +17,7 @@ Add only text that has been extracted or adapted from the source basis above. If
 
 ## Implementation Notes
 
-Record practical notes, constraints, or editorial decisions that follow from the source material. Mark any unsourced note as `Editorial note`, not as guidance.
+Record practical notes, constraints, or source-review decisions that follow from the source material. Mark any unsourced note as `Source-review note`, not as guidance.
 
 ## Figures
 
@@ -29,7 +29,7 @@ Record practical notes, constraints, or editorial decisions that follow from the
 
 - Missing source material:
 - Missing evidence, examples, or decision criteria:
-- Open editorial questions:
+- Open source-review questions:
 
 ## Status
 

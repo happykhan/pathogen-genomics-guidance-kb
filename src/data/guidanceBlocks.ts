@@ -2805,7 +2805,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     gaps: [
       "The guide still needs source-backed worked examples for estimating storage footprint by organism, sequencing platform, throughput, retention period, replication factor, and backup policy.",
       "The retention and recovery worksheet still needs local legal, public-health, institutional, repository and business-continuity review before numeric retention periods, restore-time targets, restore-point targets or deletion rules can be prescribed.",
-      "The PHA4GE disaster-recovery and power/cooling notes and local business-continuity sources still need editorial review before the guide can support a formal recovery or facilities runbook.",
+      "The PHA4GE disaster-recovery and power/cooling notes and local business-continuity sources still need source review before the guide can support a formal recovery or facilities runbook.",
     ],
   },
   {
@@ -5642,7 +5642,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     gaps: [
       "The worksheet supports risk-reduction planning, but a formal maturity rubric and scoring method still need source-backed review.",
-      "The PHA4GE tier table is useful for discussion but needs editorial review before it becomes an assessment tool.",
+      "The PHA4GE tier table is useful for discussion but needs source review before it becomes an assessment tool.",
     ],
   }
 ];

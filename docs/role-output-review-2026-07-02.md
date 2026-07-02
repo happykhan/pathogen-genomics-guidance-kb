@@ -59,7 +59,7 @@ Needed change: keep the whitepaper readable as a whole and avoid reorganising th
 - Added role-specific orientation text to the whitepaper cover.
 - Kept the authored document order stable for every profile.
 - Rewrote the storage section around ongoing storage footprint, replication, backup, archive, ownership, and restore testing.
-- Replaced the old fragment-compilation workflow with a full-text extraction and authored-section workflow.
+- Replaced the old experimental review workflow with a full-text extraction and authored-section workflow.
 
 ## Still Needs Review
 

@@ -91,4 +91,4 @@ These checks verify that the expected source-backed guidance blocks appear in th
 
 ## Outcome
 
-The automated and static beta gate passed. Remaining review work is editorial/user review of the guidance prose, not build, data integrity, or interaction gating.
+The automated and static beta gate passed. Remaining review work is content and user review of the guidance prose, not build, data integrity, or interaction gating.

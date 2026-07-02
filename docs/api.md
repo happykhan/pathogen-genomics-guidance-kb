@@ -80,51 +80,13 @@ Example:
 curl http://127.0.0.1:4321/api/sources
 ```
 
-### `GET /api/editorial` Legacy Debug Endpoint
-
-Returns the public-safe legacy editorial debug model. This endpoint is retained for audit/debugging of earlier extraction work, but it is no longer the recommended authoring workflow.
-
-Includes:
-
-- versioned default Gnomey profile
-- explicit whitepaper target: primary audience, practical use, core question, success criteria, and out-of-scope boundaries
-- versioned whitepaper outline
-- evidence items, which provide source locators, evidence type, passage summaries, and short excerpts where appropriate
-- extracted claim cards, which are concise source-backed interpretations rather than verbatim source text
-- section synthesis briefs
-- draft/reviewed/gap/deprecated fragments
-- coverage counts and missing-reference checks
-
-Example:
-
-```bash
-curl http://127.0.0.1:4321/api/editorial
-```
-
-Inspect the stable whitepaper outline:
-
-```bash
-curl -s http://127.0.0.1:4321/api/editorial \
-  | jq '.whitepaperOutline[] | {order, id, title, purpose, expectedFragments}'
-```
-
-Inspect the editorial target:
-
-```bash
-curl -s http://127.0.0.1:4321/api/editorial \
-  | jq '.whitepaperTarget'
-```
-
-The deployed `/api/editorial` endpoint is read-only. Do not treat the legacy fragment/card model as the source of truth for new public prose; read the source PDF or extracted full text instead.
-
 ## Notes For AI/Agent Use
 
 - Treat `sourceStatus: "extracted"` as already reviewed for the knowledge base.
 - Treat `sourceStatus: "candidate"` as useful but still requiring careful extraction before making strong claims.
-- In `/api/guidance`, treat guidance block `sourceStatus: "reviewed"` as reviewed public prose, `partial` as source-backed but incomplete, and `gap` as a placeholder or editorial work item.
-- Treat `/api/editorial` as legacy audit data only. It is not a public prose-generation API.
-- Do not treat claim cards, evidence summaries, or PubMed abstracts as substitutes for source PDFs or extracted full text.
-- For new guidance prose, use the workflow in `docs/source-editorial-workflow.md`: source PDF or official source, extracted full text, section reading notes, authored whitepaper section, inline citations, and needs-more-work notes for weak evidence.
+- In `/api/guidance`, treat guidance block `sourceStatus: "reviewed"` as reviewed public prose, `partial` as source-backed but incomplete, and `gap` as a placeholder or evidence work item.
+- Do not treat PubMed abstracts as substitutes for source PDFs or extracted full text.
+- For new guidance prose, use the workflow in `docs/source-workflow.md`: source PDF or official source, extracted full text, section reading notes, authored whitepaper section, inline citations, and needs-more-work notes for weak evidence.
 - Do not assume every source has a direct PDF. Some publishers provide HTML pages only, and some PDFs are behind publisher controls.
 - The API is read-only and currently unversioned beyond the `version` field in each response.
 - Public API records must not expose local user-home file paths; local full-text inventory remains repository documentation only.

@@ -2,7 +2,7 @@
 
 ## Rule
 
-Write the guide from source documents, not from abstracts or disconnected claim cards.
+Write the guide from source documents, not from abstracts or disconnected summaries.
 
 The working source should be a full PDF, official web guidance page, source repository, or extracted full text from one of those documents. Source cards and notes can help with orientation, but they are not the evidence base for new prose.
 
@@ -17,7 +17,7 @@ source PDF / official source
   -> needs-more-work notes for weak evidence
 ```
 
-The front-facing guide is authored in `src/data/guidanceBlocks.ts`. Each section should read like a coherent whitepaper section, not a set of small generated fragments. Gnomey can hide, reveal, or expand parts of that document for a reader profile, but the document order and argument should remain stable.
+The front-facing guide is authored in `src/data/guidanceBlocks.ts`. Each section should read like a coherent whitepaper section. Gnomey can hide, reveal, or expand parts of that document for a reader profile, but the document order and argument should remain stable.
 
 ## Full-Text Extraction
 
@@ -55,17 +55,10 @@ For each whitepaper section:
 
 ## What Not To Do
 
-- Do not build front-facing prose by compiling tiny fragments.
 - Do not treat PubMed abstracts as enough source material for implementation guidance.
 - Do not expose local `/Users/...` paths in public APIs.
 - Do not prescribe numeric retention periods, RTO/RPO targets, storage-size formulae, staffing ratios, or legal deletion rules unless a suitable source has been read and cited.
 - Do not make the reader aware of internal provenance machinery in the whitepaper prose.
-
-## Backstage Material
-
-The existing `editorial/` JSON files are legacy review aids. They can be useful for remembering earlier extraction work, but they are no longer the primary authoring workflow. New work should start from full extracted text and be written directly into coherent guidance sections.
-
-If the backstage data contradicts the source PDF or extracted full text, use the source PDF/full text.
 
 ## Content QA Checklist
 
