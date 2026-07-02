@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { Download, ExternalLink, Search, Wand2 } from "lucide-react";
+import { Download, ExternalLink, Search, Wand2, X } from "lucide-react";
 import { GnomeyCard } from "./GnomeyCard";
 import { GnomeyWizard } from "./GnomeyWizard";
 import { resources } from "../data/resources";
@@ -35,6 +35,7 @@ const sourceStatusLabels = {
 export function ResourceFinder() {
   const [profile, setProfile] = useState<Profile>(defaultProfile);
   const [wizardOpen, setWizardOpen] = useState(false);
+  const [gnomeyDismissed, setGnomeyDismissed] = useState(false);
   const [query, setQuery] = useState("");
   const [onlyRecommended, setOnlyRecommended] = useState(true);
   const [filters, setFilters] = useState<FinderFilters>(defaultFilters);
@@ -99,6 +100,12 @@ export function ResourceFinder() {
   const totalPages = Math.max(1, Math.ceil(results.length / pageSize));
   const pageResults = results.slice((page - 1) * pageSize, page * pageSize);
 
+  function applyProfile(nextProfile: Profile) {
+    setProfile(nextProfile);
+    setWizardOpen(false);
+    setGnomeyDismissed(true);
+  }
+
   return (
     <section>
       <div inert={wizardOpen ? true : undefined} aria-hidden={wizardOpen ? "true" : undefined}>
@@ -107,28 +114,37 @@ export function ResourceFinder() {
             <p className="eyebrow">Resource finder</p>
             <h1 className="workspace-title">Find the documents that match your genomics job.</h1>
           </div>
-          <aside className="panel resource-profile-panel">
-            <div className="panel-body">
-              <GnomeyCard
-                compact
-                state={wizardOpen ? "thinking" : "collapsed"}
-                eyebrow="Gnomey ranks these for"
-                title="Your current profile"
-                action={
-                  <button className="button primary" type="button" onClick={() => setWizardOpen(true)}>
-                    <Wand2 size={18} />
-                    Change profile
-                  </button>
-                }
-              >
-                <p className="muted">
-                  {roleLabels[profile.role]} at {stageLabels[profile.stage].toLowerCase()} stage, focused on{" "}
-                  {profile.organisms.map((organism) => organismLabels[organism]).join(", ")}.
-                </p>
-              </GnomeyCard>
-            </div>
-          </aside>
         </div>
+
+        {!gnomeyDismissed ? (
+          <aside className="gnomey-floating panel no-print" aria-label="Gnomey resource finder helper">
+            <button
+              className="button icon-button gnomey-close"
+              type="button"
+              onClick={() => setGnomeyDismissed(true)}
+              aria-label="Close Gnomey helper"
+            >
+              <X size={16} />
+            </button>
+            <GnomeyCard
+              compact
+              state={wizardOpen ? "thinking" : "collapsed"}
+              eyebrow="Gnomey ranks these for"
+              title="Your current profile"
+              action={
+                <button className="button primary" type="button" onClick={() => setWizardOpen(true)}>
+                  <Wand2 size={18} />
+                  Change profile
+                </button>
+              }
+            >
+              <p>
+                {roleLabels[profile.role]} at {stageLabels[profile.stage].toLowerCase()} stage, focused on{" "}
+                {profile.organisms.map((organism) => organismLabels[organism]).join(", ")}.
+              </p>
+            </GnomeyCard>
+          </aside>
+        ) : null}
 
       <div className="toolbar">
         <label className="form-field" style={{ flex: "1 1 320px" }}>
@@ -267,7 +283,7 @@ export function ResourceFinder() {
         </nav>
       </div>
 
-      {wizardOpen ? <GnomeyWizard profile={profile} onApply={setProfile} onClose={() => setWizardOpen(false)} /> : null}
+      {wizardOpen ? <GnomeyWizard profile={profile} onApply={applyProfile} onClose={() => setWizardOpen(false)} /> : null}
     </section>
   );
 }

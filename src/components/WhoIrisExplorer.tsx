@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { Download, ExternalLink, Search, Wand2 } from "lucide-react";
+import { Download, ExternalLink, Search, Wand2, X } from "lucide-react";
 import { GnomeyCard } from "./GnomeyCard";
 import { GnomeyWizard } from "./GnomeyWizard";
 import { whoIrisGeneratedAt, whoIrisResources } from "../data/whoIrisResources";
@@ -50,6 +50,7 @@ function shortAbstract(record: WhoIrisRecord) {
 export function WhoIrisExplorer() {
   const [profile, setProfile] = useState<Profile>(defaultProfile);
   const [wizardOpen, setWizardOpen] = useState(false);
+  const [gnomeyDismissed, setGnomeyDismissed] = useState(false);
   const [query, setQuery] = useState("");
   const [organism, setOrganism] = useState<"all" | OrganismFocus>("all");
   const [topic, setTopic] = useState("all");
@@ -104,6 +105,7 @@ export function WhoIrisExplorer() {
   function applyProfile(nextProfile: Profile) {
     setProfile(nextProfile);
     setWizardOpen(false);
+    setGnomeyDismissed(true);
   }
 
   return (
@@ -118,28 +120,37 @@ export function WhoIrisExplorer() {
               costing, laboratory, and implementation records, then ranks them against the current profile.
             </p>
           </div>
-          <aside className="panel resource-profile-panel">
-            <div className="panel-body">
-              <GnomeyCard
-                compact
-                state={wizardOpen ? "thinking" : "collapsed"}
-                eyebrow="Gnomey ranks WHO IRIS for"
-                title={roleLabels[profile.role]}
-                action={
-                  <button className="button primary" type="button" onClick={() => setWizardOpen(true)}>
-                    <Wand2 size={18} />
-                    Change profile
-                  </button>
-                }
-              >
-                <p className="muted">
-                  {stageLabels[profile.stage]} stage, focused on{" "}
-                  {profile.organisms.map((value) => organismLabels[value]).join(", ")}. Metadata last synced {generatedDate}.
-                </p>
-              </GnomeyCard>
-            </div>
-          </aside>
         </div>
+
+        {!gnomeyDismissed ? (
+          <aside className="gnomey-floating panel no-print" aria-label="Gnomey WHO IRIS helper">
+            <button
+              className="button icon-button gnomey-close"
+              type="button"
+              onClick={() => setGnomeyDismissed(true)}
+              aria-label="Close Gnomey helper"
+            >
+              <X size={16} />
+            </button>
+            <GnomeyCard
+              compact
+              state={wizardOpen ? "thinking" : "collapsed"}
+              eyebrow="Gnomey ranks WHO IRIS for"
+              title={roleLabels[profile.role]}
+              action={
+                <button className="button primary" type="button" onClick={() => setWizardOpen(true)}>
+                  <Wand2 size={18} />
+                  Change profile
+                </button>
+              }
+            >
+              <p>
+                {stageLabels[profile.stage]} stage, focused on{" "}
+                {profile.organisms.map((value) => organismLabels[value]).join(", ")}. Metadata last synced {generatedDate}.
+              </p>
+            </GnomeyCard>
+          </aside>
+        ) : null}
 
         <section className="panel filter-panel" aria-label="WHO IRIS filters">
           <div className="panel-body">
@@ -342,4 +353,3 @@ export function WhoIrisExplorer() {
     </>
   );
 }
-
