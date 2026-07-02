@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { FileText, RotateCcw, Share2, Wand2 } from "lucide-react";
+import { DocumentMap } from "./DocumentMap";
 import { GnomeyCard } from "./GnomeyCard";
 import { GnomeyWizard } from "./GnomeyWizard";
 import { GuidanceRenderer } from "./GuidanceRenderer";
@@ -145,6 +146,8 @@ export function GuidanceApp() {
             </div>
           </section>
         </section>
+
+        <DocumentMap profile={profile} showAllSections={showAllSections} />
 
         <div className="document-wrap">
           <section className="panel print-only" aria-label="Printed profile summary">

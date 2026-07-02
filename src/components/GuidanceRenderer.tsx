@@ -1,6 +1,5 @@
 import { SlidersHorizontal } from "lucide-react";
 import type { ReactNode } from "react";
-import { guidanceBlocks } from "../data/guidanceBlocks";
 import { sources } from "../data/sources";
 import {
   infrastructureLabels,
@@ -9,13 +8,13 @@ import {
   roleLabels,
   stageLabels,
 } from "../lib/profile";
-import { resolveGuidanceBlockForProfile } from "../lib/guidanceVariants";
-import { scoreGuidanceBlock } from "../lib/recommendations";
+import { getScoredGuidanceBlocks, getVisibleGuidanceBlocks, relevanceThreshold } from "../lib/guidanceSelection";
+import type { GuidanceBlock } from "../types/content";
 import type { Profile } from "../types/profile";
 
 type CitationAnchor = { text: string; sourceIds: string[] };
-type GuidanceTable = NonNullable<(typeof guidanceBlocks)[number]["tables"]>[number];
-type GuidanceFigure = NonNullable<(typeof guidanceBlocks)[number]["figures"]>[number];
+type GuidanceTable = NonNullable<GuidanceBlock["tables"]>[number];
+type GuidanceFigure = NonNullable<GuidanceBlock["figures"]>[number];
 
 type Props = {
   profile: Profile;
@@ -23,7 +22,6 @@ type Props = {
   showAllSections: boolean;
 };
 
-const relevanceThreshold = 7;
 const sourceLookup: Record<string, { label: string; path: string }> = sources;
 const sourceStatusLabels = {
   reviewed: "Reviewed source basis",
@@ -217,7 +215,7 @@ function GuidanceFigureView({ figure, referenceNumber }: { figure: GuidanceFigur
   );
 }
 
-function collectBlockReferenceIds(block: (typeof guidanceBlocks)[number]) {
+function collectBlockReferenceIds(block: GuidanceBlock) {
   const ids = new Set(block.sourceIds);
   block.summarySourceIds?.forEach((sourceId) => ids.add(sourceId));
   Object.values(block.bodySourceIds ?? {}).forEach((sourceIds) => sourceIds.forEach((sourceId) => ids.add(sourceId)));
@@ -245,13 +243,9 @@ function collectBlockReferenceIds(block: (typeof guidanceBlocks)[number]) {
 }
 
 export function GuidanceRenderer({ profile, showTechnical, showAllSections }: Props) {
-  const scored = guidanceBlocks.map((sourceBlock, index) => ({
-    block: resolveGuidanceBlockForProfile(sourceBlock, profile),
-    index,
-    score: scoreGuidanceBlock(sourceBlock, profile),
-  }));
-  const visible = scored.filter((item) => showAllSections || item.score >= relevanceThreshold);
-  const hiddenCount = scored.filter((item) => item.score < relevanceThreshold).length;
+  const scored = getScoredGuidanceBlocks(profile);
+  const visible = getVisibleGuidanceBlocks(profile, showAllSections);
+  const hiddenCount = scored.filter((item) => !item.included).length;
   const revealTechnical = showTechnical || isTechnicalProfile(profile);
   const referenceIds = Array.from(new Set(visible.flatMap(({ block }) => collectBlockReferenceIds(block))));
   const referenceNumber = new Map(referenceIds.map((sourceId, index) => [sourceId, index + 1]));
