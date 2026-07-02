@@ -131,7 +131,11 @@ const tierText = [
   infrastructure: InfrastructureContext;
 }>;
 
-export function TierQuiz() {
+type TierQuizProps = {
+  showIntro?: boolean;
+};
+
+export function TierQuiz({ showIntro = true }: TierQuizProps) {
   const [answers, setAnswers] = useState<Record<string, number>>(
     Object.fromEntries(questions.map((question) => [question.id, 0])),
   );
@@ -157,17 +161,19 @@ export function TierQuiz() {
   }, [answers, result.infrastructure, result.stage]);
 
   return (
-    <section>
-      <div className="hero-workspace">
-        <div>
-          <p className="eyebrow">Capability quiz</p>
-          <h1 className="workspace-title">Which bioinformatics infrastructure tier are you operating in?</h1>
-          <p className="workspace-copy">
-            This is a lightweight self-assessment inspired by the PHA4GE tiering material. It is not a certification or
-            audit score. It helps identify the next practical risks to address.
-          </p>
+    <section id="bioinformatics-tier-quiz">
+      {showIntro ? (
+        <div className="hero-workspace">
+          <div>
+            <p className="eyebrow">Capability quiz</p>
+            <h1 className="workspace-title">Which bioinformatics infrastructure tier are you operating in?</h1>
+            <p className="workspace-copy">
+              This is a lightweight self-assessment inspired by the PHA4GE tiering material. It is not a certification or
+              audit score. It helps identify the next practical risks to address.
+            </p>
+          </div>
         </div>
-      </div>
+      ) : null}
 
       <div className="quiz-grid">
         <div className="resource-grid">
@@ -221,8 +227,7 @@ export function TierQuiz() {
                 <CheckCircle2 size={16} aria-hidden="true" /> Use this next
               </strong>
               <p>
-                Open the tailored guidance and select "Assess maturity" as a goal. The app will bring infrastructure,
-                workflow, storage, workforce, and governance blocks forward.
+                Open the tailored guidance with the maturity estimate applied to programme stage and compute context.
               </p>
               <a className="button primary" href={guidanceHref}>
                 Apply to guidance <ArrowRight size={16} aria-hidden="true" />

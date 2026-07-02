@@ -1425,6 +1425,51 @@ select {
   text-transform: uppercase;
 }
 
+.tool-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.tool-card {
+  display: flex;
+  min-height: 250px;
+  flex-direction: column;
+}
+
+.tool-card p {
+  color: var(--muted);
+}
+
+.tool-card .resource-actions {
+  margin-top: auto;
+}
+
+.tool-section {
+  display: grid;
+  gap: 18px;
+}
+
+.section-heading-row {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  padding: 20px;
+}
+
+.section-heading-row h2 {
+  margin: 4px 0 6px;
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  line-height: 1.15;
+}
+
+.section-heading-row p:last-child {
+  max-width: 760px;
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
 .resource-meta-row {
   display: flex;
   flex-wrap: wrap;
@@ -1507,6 +1552,7 @@ select {
   .hero-workspace,
   .guidance-control-band,
   .grid-two,
+  .tool-card-grid,
   .quiz-grid {
     grid-template-columns: 1fr;
   }
