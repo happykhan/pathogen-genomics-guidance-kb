@@ -135,8 +135,8 @@ export function WhoIrisExplorer() {
             <GnomeyCard
               compact
               state={wizardOpen ? "thinking" : "collapsed"}
-              eyebrow="Gnomey ranks WHO IRIS for"
-              title={roleLabels[profile.role]}
+              eyebrow="Gnomey ranks resources for"
+              title="Your current profile"
               action={
                 <button className="button primary" type="button" onClick={() => setWizardOpen(true)}>
                   <Wand2 size={18} />
@@ -145,9 +145,10 @@ export function WhoIrisExplorer() {
               }
             >
               <p>
-                {stageLabels[profile.stage]} stage, focused on{" "}
-                {profile.organisms.map((value) => organismLabels[value]).join(", ")}. Metadata last synced {generatedDate}.
+                {roleLabels[profile.role]} at {stageLabels[profile.stage].toLowerCase()} stage, focused on{" "}
+                {profile.organisms.map((value) => organismLabels[value]).join(", ")}.
               </p>
+              <p className="muted">WHO IRIS metadata last synced {generatedDate}.</p>
             </GnomeyCard>
           </aside>
         ) : null}

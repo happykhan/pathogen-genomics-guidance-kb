@@ -129,7 +129,7 @@ export function ResourceFinder() {
             <GnomeyCard
               compact
               state={wizardOpen ? "thinking" : "collapsed"}
-              eyebrow="Gnomey ranks these for"
+              eyebrow="Gnomey ranks resources for"
               title="Your current profile"
               action={
                 <button className="button primary" type="button" onClick={() => setWizardOpen(true)}>
