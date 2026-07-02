@@ -135,13 +135,13 @@ export function DocumentMap({ profile, showAllSections, onEditProfile, onResetPr
         <div className="document-map-head">
           <div>
             <p className="eyebrow">Document map</p>
-            <h2>Sections selected for this profile</h2>
+            <h2>Full document map: shown and not shown</h2>
             <p>
               The guide is tailored for {roleLabels[profile.role].toLowerCase()} readers at the{" "}
               {stageLabels[profile.stage].toLowerCase()} stage, focused on{" "}
               {profile.organisms.map((organism) => organismLabels[organism].toLowerCase()).join(", ")}, with{" "}
-              {infrastructureLabels[profile.infrastructure].toLowerCase()}. These are the sections shown in the current
-              whitepaper.
+              {infrastructureLabels[profile.infrastructure].toLowerCase()}. The map shows the full outline, including sections
+              not shown in the current whitepaper.
             </p>
           </div>
           <aside className="document-map-profile" aria-label="Current profile for document map">
@@ -163,7 +163,7 @@ export function DocumentMap({ profile, showAllSections, onEditProfile, onResetPr
             <ProfileSummary profile={profile} />
             <dl className="document-map-stats" aria-label="Document map summary">
               <div>
-                <dt>Included</dt>
+                <dt>Shown</dt>
                 <dd>
                   {includedCount}/{selection.length}
                 </dd>
@@ -211,7 +211,10 @@ export function DocumentMap({ profile, showAllSections, onEditProfile, onResetPr
                   const nodeContent = (
                     <>
                       <span className="document-map-dot" aria-hidden="true" />
-                      <span className="document-map-title">{item.block.title}</span>
+                      <span className="document-map-title-wrap">
+                        <span className="document-map-title">{item.block.title}</span>
+                        {state === "hidden" ? <span className="document-map-reason">{item.reason}</span> : null}
+                      </span>
                       <span className="document-map-match">{label}</span>
                     </>
                   );

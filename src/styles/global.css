@@ -1223,10 +1223,22 @@ select {
   color: #475569;
 }
 
-.document-map-title {
+.document-map-title-wrap {
   min-width: 0;
+}
+
+.document-map-title {
+  display: block;
   overflow-wrap: anywhere;
   font-size: 0.87rem;
+  line-height: 1.25;
+}
+
+.document-map-reason {
+  display: block;
+  margin-top: 3px;
+  color: #64748b;
+  font-size: 0.72rem;
   line-height: 1.25;
 }
 
