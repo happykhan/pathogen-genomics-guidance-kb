@@ -9,6 +9,7 @@ import {
 } from "../types/profile";
 
 export const roleLabels: Record<UserRole, string> = {
+  "programme-lead": "Programme lead",
   director: "Director",
   policy: "Policy or governance",
   "lab-lead": "Laboratory lead",
@@ -16,7 +17,6 @@ export const roleLabels: Record<UserRole, string> = {
   "it-security": "IT or security",
   "data-manager": "Data manager",
   funder: "Funder or partner",
-  mixed: "Mixed team",
 };
 
 export const stageLabels: Record<ImplementationStage, string> = {
@@ -104,6 +104,7 @@ export function parseProfileFromUrl(search: string): Profile {
   const profile: Profile = cloneProfile(defaultProfile);
 
   const role = params.get("role") as UserRole | null;
+  if (params.get("role") === "mixed") profile.role = "programme-lead";
   if (role && role in roleLabels) profile.role = role;
 
   const stage = params.get("stage") as ImplementationStage | null;

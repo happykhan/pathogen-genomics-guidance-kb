@@ -45,7 +45,7 @@ function loadRecommendationFunctions() {
 }
 
 const defaultProfile = {
-  role: "mixed",
+  role: "programme-lead",
   stage: "exploring",
   organisms: ["general"],
   infrastructure: "unknown",
@@ -213,7 +213,7 @@ const representativeProfiles = [
     expectedVisibleGuidance: ["sharing-is-not-unconditional", "iam-is-continuous"],
   },
   {
-    label: "mixed team exploring infrastructure options",
+    label: "programme lead exploring infrastructure options",
     profile: defaultProfile,
     expectedVisibleGuidance: [
       "data-lifecycle-sample-to-report",

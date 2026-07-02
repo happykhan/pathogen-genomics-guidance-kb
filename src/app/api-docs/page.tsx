@@ -7,7 +7,7 @@ const endpoints = [
     path: "/api/guidance",
     title: "Guidance text",
     description:
-      "Structured whitepaper content: section titles, summaries, paragraphs, subsections, source-backed tables, technical detail, audience tags, organism tags, topics, source IDs, sourceStatus, and unresolved evidence notes.",
+      "Structured whitepaper content: section titles, summaries, paragraphs, subsections, source-backed tables, technical detail, role-specific text variants, audience tags, organism tags, topics, source IDs, sourceStatus, and unresolved evidence notes.",
   },
   {
     path: "/api/resources",
@@ -61,6 +61,11 @@ export default function ApiDocsPage() {
             In guidance blocks, <code>sourceStatus: "reviewed"</code> means the prose is ready for beta use,{" "}
             <code>"partial"</code> means it is source-backed but still incomplete, and <code>"gap"</code> marks a placeholder or
             unresolved evidence work item.
+          </p>
+          <p>
+            Some guidance blocks include <code>roleVariants</code>. These are not separate sources of truth; they are
+            role-specific whitepaper text for cases where a director, laboratory lead, bioinformatician, data manager, funder,
+            or IT/security reader needs different prose from the same source-backed section.
           </p>
           <p>
             In the resource catalogue, <code>sourceStatus: "extracted"</code> maps to <strong>Reviewed in guide</strong>.{" "}

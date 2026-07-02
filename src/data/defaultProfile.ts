@@ -3,7 +3,7 @@ import type { Profile } from "../types/profile";
 export const defaultProfileVersion = "2026-07-01-beta-0.2";
 
 export const defaultProfile: Profile = {
-  role: "mixed",
+  role: "programme-lead",
   stage: "exploring",
   organisms: ["general"],
   infrastructure: "unknown",

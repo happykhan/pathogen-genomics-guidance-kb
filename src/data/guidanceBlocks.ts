@@ -2802,6 +2802,170 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "who-genomics-costing-tool-manual-2024",
       "clinical-microbiology-implementation-2026",
     ],
+    roleVariants: {
+      "programme-lead": {
+        summary:
+          "Your task is to make storage a planned service responsibility before sequencing volume creates an unmanaged operational problem.",
+        body: [
+          "For a programme lead, the storage question is not mainly a technical specification. It is a service-design question: what data will the programme create, which records must remain usable, who pays for growth, who manages access, and how the service recovers if data are deleted, corrupted, unavailable, or locked behind a failed system.",
+          "Many first-time pathogen genomics programmes discover that storage is the first practical bottleneck. The absolute scale may be tens of terabytes rather than internet-scale data, but that can still exceed what a public-health organisation expects to provide for a routine laboratory service. Working space, retained raw data, replicated copies, backup storage, monitoring, access control, and restoration all create continuing responsibilities.",
+          "The minimum planning move is to bring laboratory, bioinformatics, IT, security, finance, and governance owners into the same storage decision. Ask what is active work, what is retained, what is backed up, what is archived, what is shared externally, who receives warnings before capacity is exhausted, and who owns the recurring cost.",
+          "Replication, backup, and archive should be kept separate in the plan. Replication helps availability, backup supports recovery from loss or corruption, and archive preserves records for future interpretation, audit, repository linkage, validation, or public-health reasons. Collapsing these into one shared folder makes the service harder to govern and harder to recover.",
+        ],
+        bodySourceIds: {
+          0: ["pha4ge-infrastructure", "who-national-genomic-surveillance-strategy-2023", "phe-case-study"],
+          1: ["pha4ge-infrastructure", "phe-case-study", "who-genomics-costing-tool-manual-2024"],
+          2: ["pha4ge-infrastructure", "who-national-genomic-surveillance-strategy-2023", "who-genomics-costing-tool-manual-2024"],
+          3: ["pha4ge-infrastructure", "who-national-genomic-surveillance-strategy-2023", "who-genomic-data-sharing-platforms-2025"],
+        },
+        sourceIds: [
+          "pha4ge-infrastructure",
+          "phe-case-study",
+          "who-national-genomic-surveillance-strategy-2023",
+          "who-genomic-data-sharing-platforms-2025",
+          "who-genomics-costing-tool-manual-2024",
+        ],
+      },
+      "it-security": {
+        summary:
+          "The ask of IT and security is to provide recoverable, governed storage for a continuously growing public-health data service.",
+        body: [
+          "For IT and security, pathogen genomics is a recurring data service rather than a one-off research folder. The programme will produce raw sequence data, intermediate files, workflow logs, QC records, reports, metadata links, and sometimes repository accession records. Some files are large, some are sensitive, some need controlled access, and some are only useful if identifiers and provenance remain intact.",
+          "The main risk is unmanaged research-computing practice becoming routine infrastructure. Analysts may use local disks, ad hoc network shares, external drives, or unmonitored cloud workspaces when formal storage is not available. That can leave the organisation with weak access control, unclear data residency, poor offboarding, incomplete backup, and no tested route for recovery.",
+          "A useful IT/security response starts with service questions: expected volume, working-space needs, retention categories, access roles, backup scope, restore route, alerting, monitoring, incident escalation, and ownership of storage growth. The team does not need to prescribe the biology, but it does need to ensure that data remain accessible, protected, recoverable, and auditable.",
+          "Replication, backup, and archive should be treated as distinct controls. Replication supports availability but may copy deletion or corruption. Backup is a point-in-time recovery mechanism that must be monitored and tested. Archive preserves retained records for audit, validation, reanalysis, repository linkage, or public-health review.",
+        ],
+        bodySourceIds: {
+          0: ["pha4ge-infrastructure", "who-genomic-data-sharing-platforms-2025", "clinical-microbiology-implementation-2026"],
+          1: ["pha4ge-infrastructure", "who-national-genomic-surveillance-strategy-2023"],
+          2: ["pha4ge-infrastructure", "who-national-genomic-surveillance-strategy-2023", "who-genomics-costing-tool-manual-2024"],
+          3: ["pha4ge-infrastructure", "who-national-genomic-surveillance-strategy-2023", "who-genomic-data-sharing-platforms-2025"],
+        },
+        sourceIds: [
+          "pha4ge-infrastructure",
+          "who-national-genomic-surveillance-strategy-2023",
+          "who-genomic-data-sharing-platforms-2025",
+          "who-genomics-costing-tool-manual-2024",
+          "clinical-microbiology-implementation-2026",
+        ],
+      },
+      "lab-lead": {
+        summary:
+          "For a laboratory service, storage planning protects turnaround, repeat analysis, reporting, and quality review.",
+        body: [
+          "For a laboratory lead, storage becomes visible when it interrupts service: runs cannot be transferred, analysis slows, re-runs cannot be staged, reports are delayed, or failed samples cannot be reviewed. Storage planning should therefore be linked to routine sample flow, sequencing throughput, acceptance criteria, exception handling, and reporting timelines.",
+          "The service needs enough active working space for current samples, failed runs, troubleshooting, repeat analysis, and temporary workflow expansion. It also needs retained raw data and records where reanalysis, validation, repository submission, corrected reports, user questions, or quality review may require the programme to reconstruct what happened.",
+          "The laboratory should not have to solve backup architecture alone, but it should define what service records are operationally critical. That includes sample or isolate identifiers, run records, QC status, analysis outputs, report versions, correction history, accession links where used, and the decision about whether a record is active, archived, shared, retained, or eligible for deletion.",
+          "A practical storage conversation with IT should include throughput, turnaround expectations, active analysis headroom, restore expectations for service-critical records, who receives storage warnings, and what happens if capacity pressure threatens reporting.",
+        ],
+        bodySourceIds: {
+          0: ["phe-case-study", "clinical-microbiology-implementation-2026", "who-national-genomic-surveillance-strategy-2023"],
+          1: ["pha4ge-infrastructure", "phe-case-study"],
+          2: ["who-genomic-data-sharing-platforms-2025", "aphl-ngs-implementation-2016", "clinical-microbiology-implementation-2026"],
+          3: ["pha4ge-infrastructure", "phe-case-study", "who-national-genomic-surveillance-strategy-2023"],
+        },
+        sourceIds: [
+          "pha4ge-infrastructure",
+          "phe-case-study",
+          "who-national-genomic-surveillance-strategy-2023",
+          "who-genomic-data-sharing-platforms-2025",
+          "aphl-ngs-implementation-2016",
+          "clinical-microbiology-implementation-2026",
+        ],
+      },
+      bioinformatician: {
+        summary:
+          "For bioinformatics, storage must preserve reproducible analysis, provenance, re-runs, QC review, and report linkage.",
+        body: [
+          "For a bioinformatician, storage is part of reproducibility and service reliability. A workflow needs fast writable space for current runs, controlled locations for inputs and outputs, retained logs and QC records, enough headroom for re-runs, and a route for reconstructing which workflow, reference data, database, parameters, and input files produced a report.",
+          "The important distinction is between data that can be regenerated and data that cannot be safely reconstructed without provenance. Intermediate files may be disposable in some workflows, but raw reads, workflow versions, QC outputs, reportable results, metadata links, accession records, and correction history may be needed for validation, audit, reanalysis, or service review.",
+          "Backup and restore should be tested against real analysis products, not only against a generic file. A useful restore drill asks whether restored data still connect to sample identifiers, metadata, QC status, workflow logs, database versions, report IDs, and repository records where used.",
+          "The storage plan should also protect the team from hidden operational debt. If analysts manage cleanup manually, move files between informal locations, or rely on one person's knowledge of where outputs live, the service becomes difficult to validate, support, and hand over.",
+        ],
+        bodySourceIds: {
+          0: ["pha4ge-infrastructure", "mgen-accelerating-bioinformatics-implementation-2023", "clinical-microbiology-implementation-2026"],
+          1: ["who-genomic-data-sharing-platforms-2025", "aphl-ngs-implementation-2016", "clinical-microbiology-implementation-2026"],
+          2: ["pha4ge-infrastructure", "who-genomic-data-sharing-platforms-2025", "clinical-microbiology-implementation-2026"],
+          3: ["pha4ge-infrastructure", "phe-case-study", "mgen-accelerating-bioinformatics-implementation-2023"],
+        },
+        sourceIds: [
+          "pha4ge-infrastructure",
+          "phe-case-study",
+          "who-genomic-data-sharing-platforms-2025",
+          "aphl-ngs-implementation-2016",
+          "clinical-microbiology-implementation-2026",
+          "mgen-accelerating-bioinformatics-implementation-2023",
+        ],
+      },
+      "data-manager": {
+        summary:
+          "For data management, storage decisions must preserve lineage from sample and metadata through analysis, report, sharing, archive, and correction.",
+        body: [
+          "For a data manager, the central storage problem is not file volume alone. It is whether the programme can keep sample identifiers, metadata, QC records, raw data, analysis outputs, reports, sharing events, repository accessions, retention decisions, and corrections connected over time.",
+          "A genome file without lineage is a weak public-health asset. The service should know which sample or isolate generated it, which metadata were available, which workflow and reference data were used, which QC decisions were made, which report was released, whether data were shared, and what changed if a result was corrected or reanalysed.",
+          "Storage, backup, and archive rules should therefore be linked to system-of-record decisions. Some records may live in a LIMS, some in analysis storage, some in a reporting system, some in a repository, and some in an archive. The programme needs enough identifiers and cross-links to explain the complete record even when the files are distributed.",
+          "Retention and deletion decisions need governance review, but the data-management design can start earlier: define data categories, ownership, access roles, lineage fields, accession links, correction routes, archive status, and the evidence required before a record is deleted or withdrawn.",
+        ],
+        bodySourceIds: {
+          0: ["who-genomic-data-sharing-platforms-2025", "aphl-ngs-implementation-2016", "who-national-genomic-surveillance-strategy-2023"],
+          1: ["who-genomic-data-sharing-platforms-2025", "clinical-microbiology-implementation-2026", "aphl-ngs-implementation-2016"],
+          2: ["pha4ge-infrastructure", "who-genomic-data-sharing-platforms-2025", "who-national-genomic-surveillance-strategy-2023"],
+          3: ["who-national-genomic-surveillance-strategy-2023", "who-genomic-data-sharing-platforms-2025", "pha4ge-infrastructure"],
+        },
+        sourceIds: [
+          "pha4ge-infrastructure",
+          "who-national-genomic-surveillance-strategy-2023",
+          "who-genomic-data-sharing-platforms-2025",
+          "aphl-ngs-implementation-2016",
+          "clinical-microbiology-implementation-2026",
+        ],
+      },
+      director: {
+        summary:
+          "For leadership, storage is a recurring service cost and risk-control function, not a one-off equipment accessory.",
+        body: [
+          "For a director, the storage decision should sit in the business case beside sequencing, workforce, quality management, software, reporting, and user support. The programme is not only buying space for files; it is committing to a growing data service that must remain secure, recoverable, interpretable, and affordable.",
+          "The recurring cost can be easy to understate. The service needs working space, retained primary data, backup, archive, monitoring, access management, support time, hardware replacement or cloud charges, and people who can operate the system. WHO's costing guidance explicitly includes bioinformatics arrangements, storage, hardware, software licensing, maintenance, personnel, and quality management.",
+          "Leadership should ask for a storage ownership model before approving routine sequencing: who pays for growth, who owns backup and restore, who signs off retention and deletion rules, who receives capacity warnings, and what public-health work stops if storage or access fails.",
+          "The right output is not a universal terabyte number. It is a transparent assumption set: throughput, data per sample, working expansion, copy and backup strategy, retention categories, annual growth, support responsibilities, and unresolved legal or governance questions.",
+        ],
+        bodySourceIds: {
+          0: ["phe-case-study", "who-genomics-costing-tool-manual-2024", "pha4ge-infrastructure"],
+          1: ["who-genomics-costing-tool-manual-2024", "phe-case-study", "pha4ge-infrastructure"],
+          2: ["pha4ge-infrastructure", "who-national-genomic-surveillance-strategy-2023"],
+          3: ["who-genomics-costing-tool-manual-2024", "who-national-genomic-surveillance-strategy-2023", "pha4ge-infrastructure"],
+        },
+        sourceIds: [
+          "pha4ge-infrastructure",
+          "phe-case-study",
+          "who-national-genomic-surveillance-strategy-2023",
+          "who-genomics-costing-tool-manual-2024",
+        ],
+      },
+      funder: {
+        summary:
+          "For funders and partners, storage is a sustainability test: the proposal should show who will pay for growth, backup, archive, and support after the pilot.",
+        body: [
+          "For a funder or implementation partner, storage is a useful way to test whether a proposal is a sustainable service plan or an equipment purchase. A credible plan should include working storage, retained data, backup and restore, archive, access control, monitoring, recurrent support, and a budget route for growth.",
+          "Short pilots can hide the storage problem because early volumes are small and motivated staff can manage files manually. Routine surveillance changes the pattern: samples arrive continuously, failed runs and re-runs accumulate, repository and report records need to remain linked, and storage pressure can become a service-delivery risk.",
+          "The funding question should therefore include ownership and handover. Who will operate storage after the project, who will pay for the next expansion, who validates restore, who maintains access control, and who decides retention, archive, or deletion rules?",
+          "The sources support costing storage as part of bioinformatics and quality-managed service delivery. They do not support a universal storage budget or retention period across pathogens and settings, so proposals should expose assumptions rather than hide them behind a single infrastructure line.",
+        ],
+        bodySourceIds: {
+          0: ["who-genomics-costing-tool-manual-2024", "pha4ge-infrastructure", "phe-case-study"],
+          1: ["pha4ge-infrastructure", "phe-case-study", "clinical-microbiology-implementation-2026"],
+          2: ["pha4ge-infrastructure", "who-national-genomic-surveillance-strategy-2023", "who-genomics-costing-tool-manual-2024"],
+          3: ["who-genomics-costing-tool-manual-2024", "who-national-genomic-surveillance-strategy-2023", "pha4ge-infrastructure"],
+        },
+        sourceIds: [
+          "pha4ge-infrastructure",
+          "phe-case-study",
+          "who-national-genomic-surveillance-strategy-2023",
+          "who-genomics-costing-tool-manual-2024",
+          "clinical-microbiology-implementation-2026",
+        ],
+      },
+    },
     gaps: [
       "The guide still needs source-backed worked examples for estimating storage footprint by organism, sequencing platform, throughput, retention period, replication factor, and backup policy.",
       "The retention and recovery worksheet still needs local legal, public-health, institutional, repository and business-continuity review before numeric retention periods, restore-time targets, restore-point targets or deletion rules can be prescribed.",
@@ -3892,7 +4056,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
         sourceIds: ["phe-case-study", "foodborne-genomics-allard-2018", "ecdc-wgs-surveillance-2016"],
       },
     ],
-    audiences: ["director", "policy", "lab-lead", "bioinformatician", "data-manager", "mixed"],
+    audiences: ["director", "policy", "lab-lead", "bioinformatician", "data-manager", "programme-lead"],
     implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
     organisms: ["enteric-bacteria"],
     topics: ["reporting", "decision-use", "enteric-bacteria", "amr", "one-health"],
@@ -3993,7 +4157,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
         sourceIds: ["who-sars-cov-2-sequencing-implementation-2021", "cdc-nejm-2019"],
       },
     ],
-    audiences: ["director", "policy", "lab-lead", "bioinformatician", "data-manager", "mixed"],
+    audiences: ["director", "policy", "lab-lead", "bioinformatician", "data-manager", "programme-lead"],
     implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
     organisms: ["respiratory-viruses"],
     topics: ["reporting", "decision-use", "respiratory-viruses", "metadata", "data-sharing"],
@@ -4083,7 +4247,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
         sourceIds: ["cdc-nejm-2019", "ecdc-wgs-surveillance-2016", "clinical-microbiology-implementation-2026"],
       },
     ],
-    audiences: ["director", "policy", "lab-lead", "bioinformatician", "data-manager", "mixed"],
+    audiences: ["director", "policy", "lab-lead", "bioinformatician", "data-manager", "programme-lead"],
     implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
     organisms: ["tb", "amr", "nosocomial"],
     topics: ["reporting", "decision-use", "tb", "amr", "quality", "validation"],
@@ -4250,7 +4414,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "Minimum implementation check: record recipient team, setting, sample set, comparison set, workflow version, relatedness statement, uncertainty, report time, verbal discussion route, action boundary, feedback route and correction history.",
       "Treat infection-control action as a governed interpretation step. The genomic report should support that step, not silently substitute for it.",
     ],
-    audiences: ["director", "policy", "lab-lead", "bioinformatician", "data-manager", "mixed"],
+    audiences: ["director", "policy", "lab-lead", "bioinformatician", "data-manager", "programme-lead"],
     implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
     organisms: ["nosocomial", "amr"],
     topics: ["reporting", "decision-use", "healthcare-associated-infection", "infection-control", "quality", "validation"],

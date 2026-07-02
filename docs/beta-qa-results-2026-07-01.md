@@ -85,7 +85,7 @@ Representative profile checks also passed for:
 - laboratory lead piloting a service;
 - bioinformatician validating workflows;
 - IT/security reviewing data sharing and residency;
-- mixed team exploring infrastructure options.
+- programme lead exploring infrastructure options.
 
 These checks verify that the expected source-backed guidance blocks appear in the top-ranked material for each representative profile.
 

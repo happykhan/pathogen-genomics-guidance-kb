@@ -4,7 +4,29 @@ import type {
   ImplementationStage,
   InfrastructureContext,
   OrganismFocus,
+  UserRole,
 } from "./profile";
+
+export type GuidanceTextVariant = {
+  title?: string;
+  summary?: string;
+  sourceStatus?: "reviewed" | "partial" | "gap";
+  summarySourceIds?: string[];
+  body?: string[];
+  bodySourceIds?: Record<number, string[]>;
+  bodyCitationAnchors?: Record<number, { text: string; sourceIds: string[] }[]>;
+  subsections?: {
+    title: string;
+    body: string[];
+    bodySourceIds?: Record<number, string[]>;
+    bodyCitationAnchors?: Record<number, { text: string; sourceIds: string[] }[]>;
+  }[];
+  technicalDetail?: string[];
+  technicalDetailSourceIds?: Record<number, string[]>;
+  technicalDetailCitationAnchors?: Record<number, { text: string; sourceIds: string[] }[]>;
+  sourceIds?: string[];
+  gaps?: string[];
+};
 
 export type GuidanceBlock = {
   id: string;
@@ -48,6 +70,7 @@ export type GuidanceBlock = {
   topics: string[];
   detailLevel: DetailLevel;
   sourceIds: string[];
+  roleVariants?: Partial<Record<UserRole, GuidanceTextVariant>>;
   gaps?: string[];
 };
 

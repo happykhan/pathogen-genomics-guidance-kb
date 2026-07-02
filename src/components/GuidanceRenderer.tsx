@@ -10,6 +10,7 @@ import {
   roleLabels,
   stageLabels,
 } from "../lib/profile";
+import { resolveGuidanceBlockForProfile } from "../lib/guidanceVariants";
 import { scoreGuidanceBlock } from "../lib/recommendations";
 import type { Profile } from "../types/profile";
 
@@ -67,9 +68,9 @@ const roleBriefs = {
     ask: "Your main ask is to test whether the proposal includes recurrent costs, implementation owners, sustainability, support, and realistic benefits for the setting.",
     risk: "Watch for equipment-only budgets that omit storage, compute, validation, training, workflow maintenance, data management, and user support.",
   },
-  mixed: {
-    purpose: "This version is written for a mixed public-health team trying to agree what kind of genomics service it is building.",
-    ask: "Your main ask is to align the public-health use case, sample flow, metadata, analysis, storage, reporting, sharing, governance, and support model.",
+  "programme-lead": {
+    purpose: "This version is written for the person responsible for getting a pathogen genomics service designed, resourced, and operating.",
+    ask: "Your main ask is to align the public-health use case, sample flow, metadata, analysis, storage, reporting, sharing, governance, and support model, then bring the right specialists into each decision.",
     risk: "Watch for one-size-fits-all solutions. The right infrastructure depends on connectivity, people, central IT, data residency, service urgency, and the outputs users need.",
   },
 } as const;
@@ -245,10 +246,10 @@ function collectBlockReferenceIds(block: (typeof guidanceBlocks)[number]) {
 }
 
 export function GuidanceRenderer({ profile, showTechnical, showAllSections }: Props) {
-  const scored = guidanceBlocks.map((block, index) => ({
-    block,
+  const scored = guidanceBlocks.map((sourceBlock, index) => ({
+    block: resolveGuidanceBlockForProfile(sourceBlock, profile),
     index,
-    score: scoreGuidanceBlock(block, profile),
+    score: scoreGuidanceBlock(sourceBlock, profile),
   }));
   const visible = scored.filter((item) => showAllSections || item.score >= relevanceThreshold);
   const hiddenCount = scored.filter((item) => item.score < relevanceThreshold).length;

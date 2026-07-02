@@ -43,8 +43,8 @@ function scoreRoleNeeds(profile: Profile, topics: string[]): number {
   if (profile.role === "director" || profile.role === "policy" || profile.role === "funder") {
     return hasAny(topics, ["public-health", "decision-use", "costing", "workforce", "sustainability", "implementation", "governance"]) ? 3 : 0;
   }
-  if (profile.role === "mixed") {
-    return hasAny(topics, ["use-case", "service-model", "data-lifecycle", "metadata", "workflow", "storage", "backup", "infrastructure", "operating-model", "quality"]) ? 2 : 0;
+  if (profile.role === "programme-lead") {
+    return hasAny(topics, ["use-case", "service-model", "data-lifecycle", "metadata", "workflow", "storage", "backup", "infrastructure", "operating-model", "quality", "workforce", "costing"]) ? 3 : 0;
   }
   return 0;
 }
@@ -83,7 +83,7 @@ function scoreConstraints(profile: Profile, topics: string[]): number {
 export function scoreGuidanceBlock(block: GuidanceBlock, profile: Profile): number {
   let score = 0;
   if (block.audiences.includes("all") || block.audiences.includes(profile.role)) score += 5;
-  else if (profile.role === "mixed") score += 2;
+  else if (profile.role === "programme-lead") score += 2;
   if (block.implementationStages.includes(profile.stage)) score += 3;
   if (block.organisms.includes("general")) score += 1;
   if (profile.organisms.some((organism) => block.organisms.includes(organism))) score += 2;
@@ -97,6 +97,12 @@ export function scoreGuidanceBlock(block: GuidanceBlock, profile: Profile): numb
 export function scoreResource(resource: ResourceRecord, profile: Profile): number {
   let score = 0;
   if (resource.audiences.includes(profile.role)) score += 5;
+  if (
+    profile.role === "programme-lead" &&
+    resource.audiences.some((audience) => ["director", "policy", "lab-lead", "data-manager"].includes(audience))
+  ) {
+    score += 4;
+  }
   if (resource.implementationStages.includes(profile.stage)) score += 3;
   if (resource.organisms.includes("general")) score += 1;
   if (profile.organisms.some((organism) => resource.organisms.includes(organism))) score += 3;

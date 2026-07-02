@@ -64,7 +64,7 @@ Run the wizard for these profiles and verify that section ranking and resources 
 - Laboratory lead, pilot, validate workflows.
 - Bioinformatician, routine service, validate workflows and share data.
 - IT/security, national scale, data residency concern and cloud not allowed.
-- Mixed team, exploring, design infrastructure.
+- Programme lead, exploring, design infrastructure.
 - Enteric-bacteria service profile.
 - Respiratory-virus sharing profile.
 - TB and AMR validation profile.

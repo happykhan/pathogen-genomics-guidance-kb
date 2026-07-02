@@ -1,12 +1,12 @@
 export type UserRole =
+  | "programme-lead"
   | "director"
   | "policy"
   | "lab-lead"
   | "bioinformatician"
   | "it-security"
   | "data-manager"
-  | "funder"
-  | "mixed";
+  | "funder";
 
 export type ImplementationStage =
   | "exploring"
