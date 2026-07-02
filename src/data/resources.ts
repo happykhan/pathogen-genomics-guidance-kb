@@ -505,7 +505,7 @@ export const resources: ResourceRecord[] = [
     documentType: "paper",
     audiences: ["lab-lead", "bioinformatician", "data-manager", "it-security", "director"],
     topics: ["implementation", "quality", "workflow", "workforce", "reporting", "amr", "infrastructure"],
-    organisms: ["general", "amr", "nosocomial", "respiratory-viruses", "other"],
+    organisms: ["general", "amr", "nosocomial", "respiratory-viruses"],
     implementationStages: ["exploring", "pilot", "routine-service", "upgrading"],
     summary:
       "Review of clinical microbiology implementation of pathogen genomics, including use cases, laboratory and bioinformatics requirements, implementation models, quality management, reporting, and barriers.",

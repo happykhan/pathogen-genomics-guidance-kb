@@ -358,7 +358,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     audiences: ["director", "policy", "funder", "lab-lead", "all"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
-    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
+    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial"],
     topics: ["framing", "decision-use", "public-health", "costing", "value", "equity"],
     detailLevel: "summary",
     sourceIds: [
@@ -560,7 +560,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     audiences: ["director", "policy", "funder", "lab-lead"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
-    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
+    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial"],
     topics: ["costing", "strategy", "public-health", "decision-use", "sustainability", "value"],
     detailLevel: "summary",
     sourceIds: [
@@ -602,7 +602,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     },
     audiences: ["director", "policy", "lab-lead", "bioinformatician", "data-manager", "all"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
-    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
+    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial"],
     topics: ["framing", "decision-use", "public-health"],
     detailLevel: "summary",
     sourceIds: ["who-national-genomic-surveillance-strategy-2023", "cdc-nejm-2019", "phe-case-study"],
@@ -903,7 +903,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     audiences: ["director", "policy", "lab-lead", "bioinformatician", "data-manager", "it-security", "funder", "all"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
-    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
+    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial"],
     topics: ["use-case", "service-model", "decision-use", "sampling", "reporting", "validation"],
     detailLevel: "operational",
     sourceIds: [
@@ -1120,7 +1120,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     audiences: ["director", "policy", "lab-lead", "bioinformatician", "data-manager", "all"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
-    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
+    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial"],
     topics: ["sampling", "surveillance", "public-health", "metadata", "interpretation"],
     detailLevel: "operational",
     sourceIds: [
@@ -1388,7 +1388,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     audiences: ["lab-lead", "bioinformatician", "data-manager", "it-security"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
-    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
+    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial"],
     topics: ["data-lifecycle", "lims", "reporting", "metadata"],
     detailLevel: "operational",
     sourceIds: [
@@ -1741,7 +1741,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     audiences: ["data-manager", "bioinformatician", "lab-lead", "it-security"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
-    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
+    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial"],
     topics: ["metadata", "interoperability", "lims", "epidemiology"],
     detailLevel: "operational",
     sourceIds: [
@@ -2399,7 +2399,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     audiences: ["lab-lead", "bioinformatician", "data-manager", "it-security", "director"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
-    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
+    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial"],
     topics: ["quality", "operations", "failure-handling", "reporting", "metadata", "continuous-improvement"],
     detailLevel: "operational",
     sourceIds: [
@@ -2613,7 +2613,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     audiences: ["bioinformatician", "lab-lead", "data-manager", "it-security"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
-    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
+    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial"],
     topics: ["workflow", "provenance", "reproducibility", "validation"],
     detailLevel: "technical",
     sourceIds: [
@@ -2804,7 +2804,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     audiences: ["it-security", "bioinformatician", "data-manager", "lab-lead", "director", "policy", "funder"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
-    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
+    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial"],
     topics: ["storage", "backup", "archive", "retention", "infrastructure", "costing"],
     detailLevel: "technical",
     sourceIds: [
@@ -3014,7 +3014,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     audiences: ["director", "lab-lead", "bioinformatician", "it-security", "data-manager", "funder"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
-    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
+    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial"],
     topics: ["infrastructure", "operating-model", "procurement"],
     detailLevel: "operational",
     sourceIds: [
@@ -3040,7 +3040,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     audiences: ["director", "policy", "lab-lead", "bioinformatician", "it-security", "funder"],
     implementationStages: ["exploring", "pilot", "upgrading"],
-    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
+    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial"],
     topics: ["infrastructure", "cloud", "local-compute", "trade-offs"],
     detailLevel: "summary",
     sourceIds: ["pha4ge-infrastructure"],
@@ -3358,7 +3358,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     audiences: ["policy", "director", "data-manager", "it-security", "lab-lead"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
-    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
+    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial"],
     topics: ["data-sharing", "governance", "repositories"],
     detailLevel: "governance",
     sourceIds: [
@@ -3399,7 +3399,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     },
     audiences: ["it-security", "director", "policy", "data-manager", "lab-lead"],
     implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
-    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
+    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial"],
     topics: ["iam", "governance", "security"],
     detailLevel: "governance",
     sourceIds: ["pha4ge-infrastructure", "who-genomic-data-sharing-platforms-2025", "cdc-nejm-2019", "phe-case-study"],
@@ -3980,7 +3980,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     audiences: ["director", "policy", "lab-lead", "bioinformatician", "data-manager", "all"],
     implementationStages: ["pilot", "routine-service", "national-scale", "upgrading"],
-    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
+    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial"],
     topics: ["reporting", "decision-use", "quality", "metadata"],
     detailLevel: "operational",
     sourceIds: [
@@ -4949,7 +4949,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     audiences: ["director", "policy", "funder", "lab-lead", "bioinformatician"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
-    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
+    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial"],
     topics: ["workforce", "training", "sustainability"],
     detailLevel: "summary",
     sourceIds: [
@@ -5288,7 +5288,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     audiences: ["director", "policy", "funder", "lab-lead"],
     implementationStages: ["exploring", "pilot", "upgrading", "national-scale"],
-    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
+    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial"],
     topics: ["costing", "sustainability", "procurement"],
     detailLevel: "summary",
     sourceIds: [
@@ -5626,7 +5626,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     audiences: ["director", "policy", "lab-lead", "bioinformatician", "it-security", "funder", "data-manager"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
-    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
+    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial"],
     topics: [
       "implementation",
       "infrastructure",
@@ -5900,7 +5900,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     audiences: ["director", "policy", "funder", "lab-lead", "bioinformatician", "it-security", "data-manager"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
-    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
+    organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial"],
     topics: ["maturity", "implementation", "sustainability"],
     detailLevel: "summary",
     sourceIds: [

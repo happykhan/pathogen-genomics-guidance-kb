@@ -21,8 +21,7 @@ export type OrganismFocus =
   | "tb"
   | "respiratory-viruses"
   | "amr"
-  | "nosocomial"
-  | "other";
+  | "nosocomial";
 
 export type InfrastructureContext =
   | "unknown"

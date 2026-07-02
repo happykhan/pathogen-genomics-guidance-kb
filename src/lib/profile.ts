@@ -34,7 +34,6 @@ export const organismLabels: Record<OrganismFocus, string> = {
   "respiratory-viruses": "Respiratory viruses",
   amr: "AMR",
   nosocomial: "Healthcare-associated infection",
-  other: "Other",
 };
 
 export const infrastructureLabels: Record<InfrastructureContext, string> = {
@@ -116,6 +115,7 @@ export function parseProfileFromUrl(search: string): Profile {
   const organisms = params
     .get("organisms")
     ?.split(",")
+    .map((value) => (value === "other" ? "general" : value))
     .filter((value): value is OrganismFocus => value in organismLabels);
   if (organisms?.length) profile.organisms = organisms;
 
