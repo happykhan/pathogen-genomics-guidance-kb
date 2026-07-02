@@ -1,9 +1,7 @@
-import { SlidersHorizontal } from "lucide-react";
 import type { ReactNode } from "react";
 import { sources } from "../data/sources";
 import {
   infrastructureLabels,
-  isTechnicalProfile,
   organismLabels,
   roleLabels,
   stageLabels,
@@ -246,12 +244,6 @@ function collectBlockReferenceIds(block: GuidanceBlock) {
       anchors.forEach((anchor) => anchor.sourceIds.forEach((sourceId) => ids.add(sourceId))),
     );
   });
-  Object.values(block.technicalDetailSourceIds ?? {}).forEach((sourceIds) =>
-    sourceIds.forEach((sourceId) => ids.add(sourceId)),
-  );
-  Object.values(block.technicalDetailCitationAnchors ?? {}).forEach((anchors) =>
-    anchors.forEach((anchor) => anchor.sourceIds.forEach((sourceId) => ids.add(sourceId))),
-  );
   block.tables?.forEach((table) => {
     table.sourceIds?.forEach((sourceId) => ids.add(sourceId));
     table.rows.forEach((row) => row.sourceIds?.forEach((sourceId) => ids.add(sourceId)));
@@ -264,7 +256,6 @@ export function GuidanceRenderer({ profile, showTechnical, showAllSections, docu
   const selection = getGuidanceSelection(profile);
   const visible = getVisibleGuidanceBlocks(profile, showAllSections);
   const hiddenCount = selection.filter((item) => !item.included).length;
-  const revealTechnical = showTechnical || isTechnicalProfile(profile);
   const referenceIds = Array.from(new Set(visible.flatMap(({ block }) => collectBlockReferenceIds(block))));
   const referenceNumber = new Map(referenceIds.map((sourceId, index) => [sourceId, index + 1]));
   const roleBrief = roleBriefs[profile.role];
@@ -382,23 +373,6 @@ export function GuidanceRenderer({ profile, showTechnical, showAllSections, docu
             {block.tables?.map((table) => (
               <GuidanceTableView key={table.title} table={table} referenceNumber={referenceNumber} />
             ))}
-            {block.technicalDetail && revealTechnical ? (
-              <aside className="technical-detail">
-                <strong>
-                  <SlidersHorizontal size={16} aria-hidden="true" /> Technical detail
-                </strong>
-                {block.technicalDetail.map((paragraph, paragraphIndex) => (
-                  <p key={paragraph}>
-                    <TextWithCitations
-                      text={paragraph}
-                      anchors={block.technicalDetailCitationAnchors?.[paragraphIndex]}
-                      endSourceIds={block.technicalDetailSourceIds?.[paragraphIndex] ?? []}
-                      referenceNumber={referenceNumber}
-                    />
-                  </p>
-                ))}
-              </aside>
-            ) : null}
           </section>
         ))}
 
