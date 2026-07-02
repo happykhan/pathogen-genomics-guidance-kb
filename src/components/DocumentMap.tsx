@@ -79,13 +79,12 @@ const branches: DocumentBranch[] = [
   },
 ];
 
-function groupBlocks(selection: SelectedGuidanceBlock[], showAllSections: boolean) {
+function groupBlocks(selection: SelectedGuidanceBlock[]) {
   const assigned = new Set<string>();
 
   const grouped = branches.map((branch) => {
     const items = selection.filter((item) => {
       if (assigned.has(item.block.id) || !branch.sectionIds.includes(item.block.id)) return false;
-      if (!showAllSections && !item.included) return false;
       assigned.add(item.block.id);
       return true;
     });
@@ -93,7 +92,7 @@ function groupBlocks(selection: SelectedGuidanceBlock[], showAllSections: boolea
     return { ...branch, items };
   });
 
-  const unassigned = selection.filter((item) => !assigned.has(item.block.id) && (showAllSections || item.included));
+  const unassigned = selection.filter((item) => !assigned.has(item.block.id));
   if (unassigned.length) {
     grouped.push({
       id: "other",
@@ -114,7 +113,7 @@ function nodeState(item: SelectedGuidanceBlock, showAllSections: boolean) {
 
 function stateLabel(item: SelectedGuidanceBlock, showAllSections: boolean) {
   if (item.included) return "Included";
-  return showAllSections ? "Expanded view" : "Not included";
+  return showAllSections ? "Expanded view" : "Not shown";
 }
 
 type DocumentMapProps = {
@@ -126,7 +125,7 @@ type DocumentMapProps = {
 
 export function DocumentMap({ profile, showAllSections, onEditProfile, onResetProfile }: DocumentMapProps) {
   const selection = getGuidanceSelection(profile);
-  const grouped = groupBlocks(selection, showAllSections);
+  const grouped = groupBlocks(selection);
   const includedCount = selection.filter((item) => item.included).length;
   const profileSpecificCount = selection.filter((item) => item.sourceBlock.roleVariants?.[profile.role]).length;
 
@@ -186,6 +185,9 @@ export function DocumentMap({ profile, showAllSections, onEditProfile, onResetPr
             <i className="legend-dot included" aria-hidden="true" /> Included in this profile
           </span>
           <span>
+            <i className="legend-dot hidden" aria-hidden="true" /> Not shown in this profile
+          </span>
+          <span>
             <i className="legend-dot variant" aria-hidden="true" /> Has role-specific wording
           </span>
         </div>
@@ -212,7 +214,7 @@ export function DocumentMap({ profile, showAllSections, onEditProfile, onResetPr
                   return (
                     <li key={item.block.id} className={className}>
                       {state === "hidden" ? (
-                        <span aria-label={`${item.block.title}. Not included for this profile. ${item.reason}.`}>
+                        <span aria-label={`${item.block.title}. Not shown for this profile. ${item.reason}.`}>
                           {nodeContent}
                         </span>
                       ) : (
