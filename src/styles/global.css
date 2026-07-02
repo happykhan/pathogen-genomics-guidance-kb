@@ -891,7 +891,7 @@ select {
 
 .choice-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 8px;
 }
 
@@ -908,6 +908,8 @@ select {
   cursor: pointer;
   padding: 8px 10px;
   text-align: left;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
 .choice-indicator {
