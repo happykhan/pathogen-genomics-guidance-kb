@@ -10,6 +10,7 @@
     "content:check": "node scripts/validate-content.mjs",
     "qa:scenarios": "node scripts/qa-scenarios.mjs",
     "pubmed:discover": "node scripts/pubmed-discover.mjs",
+    "iris:sync": "node scripts/sync-who-iris.mjs",
     "pdfs:sync": "node scripts/sync-public-pdfs.mjs",
     "pdfs:extract-text": "node scripts/extract-pdf-texts.mjs"
   },
