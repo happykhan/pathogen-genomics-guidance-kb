@@ -481,6 +481,7 @@ select {
   border-bottom: 1px solid #e5ece8;
   background: transparent;
   margin: 0 clamp(26px, 5vw, 64px);
+  max-width: 820px;
   padding: 18px 0;
 }
 
@@ -491,9 +492,8 @@ select {
 }
 
 .whitepaper-toc ol {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 7px 22px;
+  column-count: 2;
+  column-gap: 36px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -504,6 +504,8 @@ select {
   flex-wrap: wrap;
   gap: 8px;
   align-items: baseline;
+  break-inside: avoid;
+  margin: 0 0 10px;
 }
 
 .whitepaper-toc a {
@@ -1835,6 +1837,10 @@ select {
   .document-map-match {
     grid-column: 2;
     justify-self: start;
+  }
+
+  .whitepaper-toc ol {
+    column-count: 1;
   }
 
   .gnomey-tile {
