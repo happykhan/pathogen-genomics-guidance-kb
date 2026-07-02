@@ -79,12 +79,13 @@ const branches: DocumentBranch[] = [
   },
 ];
 
-function groupBlocks(selection: SelectedGuidanceBlock[]) {
+function groupBlocks(selection: SelectedGuidanceBlock[], showAllSections: boolean) {
   const assigned = new Set<string>();
 
   const grouped = branches.map((branch) => {
     const items = selection.filter((item) => {
       if (assigned.has(item.block.id) || !branch.sectionIds.includes(item.block.id)) return false;
+      if (!showAllSections && !item.included) return false;
       assigned.add(item.block.id);
       return true;
     });
@@ -92,7 +93,7 @@ function groupBlocks(selection: SelectedGuidanceBlock[]) {
     return { ...branch, items };
   });
 
-  const unassigned = selection.filter((item) => !assigned.has(item.block.id));
+  const unassigned = selection.filter((item) => !assigned.has(item.block.id) && (showAllSections || item.included));
   if (unassigned.length) {
     grouped.push({
       id: "other",
@@ -125,7 +126,7 @@ type DocumentMapProps = {
 
 export function DocumentMap({ profile, showAllSections, onEditProfile, onResetProfile }: DocumentMapProps) {
   const selection = getGuidanceSelection(profile);
-  const grouped = groupBlocks(selection);
+  const grouped = groupBlocks(selection, showAllSections);
   const includedCount = selection.filter((item) => item.included).length;
   const profileSpecificCount = selection.filter((item) => item.sourceBlock.roleVariants?.[profile.role]).length;
 
@@ -182,9 +183,6 @@ export function DocumentMap({ profile, showAllSections, onEditProfile, onResetPr
         <div className="document-map-legend" aria-label="Map legend">
           <span>
             <i className="legend-dot included" aria-hidden="true" /> Included in this profile
-          </span>
-          <span>
-            <i className="legend-dot hidden" aria-hidden="true" /> Not included in this profile
           </span>
           <span>
             <i className="legend-dot variant" aria-hidden="true" /> Has role-specific wording
