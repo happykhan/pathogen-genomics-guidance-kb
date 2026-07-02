@@ -989,9 +989,9 @@ select {
 
 .workspace-title {
   margin: 8px 0 10px;
-  max-width: 1120px;
-  font-size: clamp(2.6rem, 5.2vw, 5.4rem);
-  line-height: 1.02;
+  max-width: 860px;
+  font-size: clamp(2.15rem, 3.8vw, 4rem);
+  line-height: 1.08;
 }
 
 .hero-utility-actions {
@@ -1588,8 +1588,8 @@ select {
 
   .workspace-title {
     max-width: 100%;
-    font-size: clamp(2rem, 8vw, 2.45rem);
-    line-height: 1.08;
+    font-size: clamp(1.85rem, 7vw, 2.3rem);
+    line-height: 1.12;
     overflow-wrap: break-word;
   }
 

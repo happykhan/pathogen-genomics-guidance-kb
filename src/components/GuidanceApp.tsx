@@ -59,7 +59,7 @@ export function GuidanceApp() {
         <section className="hero-workspace">
           <div>
             <p className="eyebrow">Dynamic guidance document</p>
-            <h1 className="workspace-title">Plan pathogen genomics infrastructure that works where you are.</h1>
+            <h1 className="workspace-title">Pathogen genomics data and bioinformatics guidance.</h1>
             <div className="control-row no-print hero-utility-actions" aria-label="Document actions">
               <a className="button" href={`/print?${profileToSearch(profile)}`}>
                 <FileText size={18} />
