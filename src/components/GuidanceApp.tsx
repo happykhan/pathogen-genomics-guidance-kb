@@ -14,8 +14,6 @@ import type { UserRole } from "../types/profile";
 export function GuidanceApp() {
   const [profile, setProfile] = useState<Profile>(defaultProfile);
   const [wizardOpen, setWizardOpen] = useState(false);
-  const [showTechnical, setShowTechnical] = useState(false);
-  const [showAllSections, setShowAllSections] = useState(false);
   const [copied, setCopied] = useState(false);
   const generatedDate = useMemo(() => new Date().toLocaleDateString("en-GB"), []);
 
@@ -124,30 +122,9 @@ export function GuidanceApp() {
               </div>
             </div>
           </section>
-          <section className="panel">
-            <div className="panel-body">
-              <h2 style={{ marginTop: 0, fontSize: "1.1rem" }}>Detail controls</h2>
-              <label className="check-row">
-                <input
-                  type="checkbox"
-                  checked={showTechnical}
-                  onChange={(event) => setShowTechnical(event.target.checked)}
-                />
-                <span>Show technical detail for non-technical roles</span>
-              </label>
-              <label className="check-row">
-                <input
-                  type="checkbox"
-                  checked={showAllSections}
-                  onChange={(event) => setShowAllSections(event.target.checked)}
-                />
-                <span>Show lower-ranked sections</span>
-              </label>
-            </div>
-          </section>
         </section>
 
-        <DocumentMap profile={profile} showAllSections={showAllSections} />
+        <DocumentMap profile={profile} showAllSections={false} />
 
         <div className="document-wrap">
           <section className="panel print-only" aria-label="Printed profile summary">
@@ -157,7 +134,7 @@ export function GuidanceApp() {
               <p className="muted">Generated {generatedDate}. Source identifiers are shown under each guidance block.</p>
             </div>
           </section>
-          <GuidanceRenderer profile={profile} showTechnical={showTechnical} showAllSections={showAllSections} />
+          <GuidanceRenderer profile={profile} showTechnical={false} showAllSections={false} />
         </div>
       </div>
 
