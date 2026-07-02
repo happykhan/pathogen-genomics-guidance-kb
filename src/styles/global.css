@@ -425,6 +425,38 @@ select {
   margin: 18px 0 0;
 }
 
+.share-menu {
+  position: relative;
+}
+
+.share-menu summary {
+  list-style: none;
+}
+
+.share-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.share-menu-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 25;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(160px, 1fr));
+  gap: 8px;
+  width: min(380px, calc(100vw - 40px));
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.14);
+  padding: 10px;
+}
+
+.share-menu-panel .button {
+  justify-content: flex-start;
+}
+
 .document-profile {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
@@ -960,31 +992,6 @@ select {
   max-width: 720px;
 }
 
-.guidance-control-band {
-  display: grid;
-  grid-template-columns: minmax(280px, 520px);
-  gap: 14px;
-  align-items: stretch;
-  margin: 0 0 20px;
-}
-
-.guidance-control-band .panel {
-  min-width: 0;
-}
-
-.guidance-control-band .panel-body {
-  height: 100%;
-}
-
-.guidance-control-band .profile-list {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: 16px;
-}
-
-.guidance-control-band .profile-list div {
-  grid-template-columns: 92px minmax(0, 1fr);
-}
-
 .document-map {
   margin: 0 0 20px;
 }
@@ -1424,12 +1431,6 @@ select {
   gap: 8px;
   background: color-mix(in srgb, var(--surface) 94%, transparent);
   box-shadow: 0 -10px 22px rgba(15, 23, 42, 0.06);
-}
-
-.handoff-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 8px;
 }
 
 .stack-page {
@@ -1979,7 +1980,6 @@ select {
 @media (max-width: 860px) {
   .topbar-inner,
   .hero-workspace,
-  .guidance-control-band,
   .document-map-head,
   .grid-two,
   .tool-card-grid,
@@ -1988,13 +1988,23 @@ select {
     grid-template-columns: 1fr;
   }
 
-  .guidance-control-band .profile-list,
-  .handoff-grid {
+  .gnomey-tile {
     grid-template-columns: 1fr;
   }
 
-  .gnomey-tile {
+  .share-menu {
+    width: 100%;
+  }
+
+  .share-menu summary {
+    width: 100%;
+  }
+
+  .share-menu-panel {
+    left: 0;
+    right: auto;
     grid-template-columns: 1fr;
+    width: min(100%, calc(100vw - 40px));
   }
 
   .constraint-row {
@@ -2030,7 +2040,6 @@ select {
   }
 
   .hero-workspace > .panel,
-  .guidance-control-band .panel,
   .document-map,
   .whitepaper {
     max-width: 100%;
@@ -2120,7 +2129,6 @@ select {
   .modal-backdrop,
   .gx-footer,
   .hero-workspace,
-  .guidance-control-band,
   .print-toolbar,
   .no-print {
     display: none !important;

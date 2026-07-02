@@ -94,22 +94,6 @@ export function GuidanceApp() {
           </aside>
         ) : null}
 
-        <section className="guidance-control-band no-print" aria-label="Guidance controls">
-          <section className="panel">
-            <div className="panel-body">
-              <h2 style={{ marginTop: 0, fontSize: "1.1rem" }}>Share with</h2>
-              <div className="handoff-grid">
-                {(["director", "lab-lead", "bioinformatician", "it-security"] as UserRole[]).map((role) => (
-                  <button className="button" type="button" key={role} onClick={() => copyShareUrl(handoffProfile(role))}>
-                    <Share2 size={16} />
-                    {roleLabels[role]}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </section>
-        </section>
-
         <DocumentMap
           profile={profile}
           showAllSections={false}
@@ -139,6 +123,20 @@ export function GuidanceApp() {
                   <Share2 size={18} />
                   {copied ? "Link copied" : "Share profile"}
                 </button>
+                <details className="share-menu">
+                  <summary className="button">
+                    <Share2 size={18} />
+                    Share with
+                  </summary>
+                  <div className="share-menu-panel">
+                    {(["director", "lab-lead", "bioinformatician", "it-security"] as UserRole[]).map((role) => (
+                      <button className="button" type="button" key={role} onClick={() => copyShareUrl(handoffProfile(role))}>
+                        <Share2 size={16} />
+                        {roleLabels[role]}
+                      </button>
+                    ))}
+                  </div>
+                </details>
               </>
             }
           />
