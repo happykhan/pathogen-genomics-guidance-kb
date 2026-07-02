@@ -53,32 +53,6 @@ export default function ApiDocsPage() {
           </div>
         </div>
       </section>
-
-      <section className="panel">
-        <div className="panel-body">
-          <h2 style={{ marginTop: 0 }}>Interpretation notes</h2>
-          <p>
-            In guidance blocks, <code>sourceStatus: "reviewed"</code> means the prose is ready for beta use,{" "}
-            <code>"partial"</code> means it is source-backed but still incomplete, and <code>"gap"</code> marks a placeholder or
-            unresolved evidence work item.
-          </p>
-          <p>
-            Some guidance blocks include <code>roleVariants</code>. These are not separate sources of truth; they are
-            role-specific whitepaper text for cases where a director, laboratory lead, bioinformatician, data manager, funder,
-            or IT/security reader needs different prose from the same source-backed section.
-          </p>
-          <p>
-            In the resource catalogue, <code>sourceStatus: "extracted"</code> maps to <strong>Reviewed in guide</strong>.{" "}
-            <code>"candidate"</code> maps to <strong>Needs extraction</strong>, meaning the source is relevant but should be
-            extracted before making strong claims from it.
-          </p>
-          <p>
-            PDF links are included only where a direct PDF URL has been identified. Publisher pages, PubMed pages, and some PMC
-            pages may still provide downloadable files through their own interfaces. Public API responses must not expose local
-            local user-home source-material paths.
-          </p>
-        </div>
-      </section>
     </div>
   );
 }
