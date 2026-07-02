@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { FileDown, RotateCcw, Share2, Wand2 } from "lucide-react";
+import { FileText, RotateCcw, Share2, Wand2 } from "lucide-react";
 import { GnomeyCard } from "./GnomeyCard";
 import { GnomeyWizard } from "./GnomeyWizard";
 import { GuidanceRenderer } from "./GuidanceRenderer";
@@ -61,10 +61,10 @@ export function GuidanceApp() {
             <p className="eyebrow">Dynamic guidance document</p>
             <h1 className="workspace-title">Plan pathogen genomics infrastructure that works where you are.</h1>
             <div className="control-row no-print hero-utility-actions" aria-label="Document actions">
-              <button className="button" type="button" onClick={() => window.print()}>
-                <FileDown size={18} />
-                Export PDF
-              </button>
+              <a className="button" href={`/print?${profileToSearch(profile)}`}>
+                <FileText size={18} />
+                Print-friendly version
+              </a>
               <button className="button" type="button" onClick={() => copyShareUrl()}>
                 <Share2 size={18} />
                 {copied ? "Link copied" : "Share profile"}

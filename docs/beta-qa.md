@@ -49,7 +49,7 @@ The whitepaper should read as one continuous document, not a stack of unrelated 
 
 ## Print / PDF Export
 
-Use the browser `Export PDF` control and verify:
+Use the `Print-friendly version` control, then print or save as PDF from the print route and verify:
 
 - web controls, navigation, Gnomey, and buttons are hidden;
 - title, profile summary, contents, sections, inline citations, and numbered references print cleanly;

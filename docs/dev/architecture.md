@@ -40,6 +40,6 @@ src/
 ## Follow-Up
 
 - Add search indexing once the resource catalogue grows.
-- Replace browser print export only if print CSS proves insufficient.
+- Keep browser print/PDF generation on the dedicated print-friendly route unless print CSS proves insufficient.
 - Move guidance blocks to MDX or content collections if the data files become hard to maintain.
 - Track QualiBact framework upgrades so Next/Tailwind security and compatibility updates happen consistently across both repos.

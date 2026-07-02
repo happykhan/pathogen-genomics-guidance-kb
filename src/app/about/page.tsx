@@ -32,7 +32,7 @@ export default function AboutPage() {
           <h2>What is implemented</h2>
           <p>
             The first app slice includes a profile-aware guidance document, the Gnomey wizard, shareable profile URLs,
-            browser print export, a resource finder, a bioinformatics tier quiz, profile-specific scenario QA, source-backed
+            print-friendly whitepaper output, a resource finder, a bioinformatics tier quiz, profile-specific scenario QA, source-backed
             worksheets, and read-only source/debug APIs.
           </p>
           <h2>What still needs source work</h2>
