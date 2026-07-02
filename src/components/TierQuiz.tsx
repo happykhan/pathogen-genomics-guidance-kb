@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
-import { defaultProfile, type ImmediateGoal, type ImplementationStage, type InfrastructureContext } from "../types/profile";
+import { defaultProfile, type ImplementationStage, type InfrastructureContext } from "../types/profile";
 import { profileToSearch } from "../lib/profile";
 
 type Question = {
@@ -152,7 +152,6 @@ export function TierQuiz() {
       ...defaultProfile,
       stage: result.stage,
       infrastructure: result.infrastructure,
-      goals: ["assess-tier", "design-infrastructure", "validate-workflows"] as ImmediateGoal[],
       constraints: {
         ...defaultProfile.constraints,
         bioinformaticsStaff: answers.staffing >= 2,

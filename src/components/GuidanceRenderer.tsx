@@ -3,7 +3,6 @@ import type { ReactNode } from "react";
 import { guidanceBlocks } from "../data/guidanceBlocks";
 import { sources } from "../data/sources";
 import {
-  goalLabels,
   infrastructureLabels,
   isTechnicalProfile,
   organismLabels,
@@ -280,10 +279,6 @@ export function GuidanceRenderer({ profile, showTechnical, showAllSections }: Pr
           <div>
             <dt>Compute context</dt>
             <dd>{infrastructureLabels[profile.infrastructure]}</dd>
-          </div>
-          <div>
-            <dt>Immediate goal</dt>
-            <dd>{profile.goals.map((goal) => goalLabels[goal]).join(", ")}</dd>
           </div>
         </dl>
         <div className="role-orientation">

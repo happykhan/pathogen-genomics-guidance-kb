@@ -3,13 +3,12 @@ import { Check, RotateCcw, X } from "lucide-react";
 import {
   cloneProfile,
   constraintLabels,
-  goalLabels,
   infrastructureLabels,
   organismLabels,
   roleLabels,
   stageLabels,
 } from "../lib/profile";
-import { defaultProfile, type ImmediateGoal, type ImplementationStage, type InfrastructureContext, type OrganismFocus, type Profile, type UserRole } from "../types/profile";
+import { defaultProfile, type ImplementationStage, type InfrastructureContext, type OrganismFocus, type Profile, type UserRole } from "../types/profile";
 import { GnomeyCard } from "./GnomeyCard";
 import { ProfileSummary } from "./ProfileSummary";
 
@@ -23,7 +22,6 @@ const roles = Object.keys(roleLabels) as UserRole[];
 const stages = Object.keys(stageLabels) as ImplementationStage[];
 const organisms = Object.keys(organismLabels) as OrganismFocus[];
 const infrastructures = Object.keys(infrastructureLabels) as InfrastructureContext[];
-const goals = Object.keys(goalLabels) as ImmediateGoal[];
 const constraintKeys = Object.keys(constraintLabels) as Array<keyof Profile["constraints"]>;
 const constraintHelp: Record<keyof Profile["constraints"], string> = {
   internetReliable: "Affects whether cloud upload, remote platforms, and external collaboration are realistic for routine work.",
@@ -56,13 +54,6 @@ export function GnomeyWizard({ profile, onApply, onClose }: Props) {
       ? draft.organisms.filter((item) => item !== organism)
       : [...draft.organisms.filter((item) => item !== "general"), organism];
     update({ organisms: next.length ? next : ["general"] });
-  }
-
-  function toggleGoal(goal: ImmediateGoal) {
-    const next = draft.goals.includes(goal)
-      ? draft.goals.filter((item) => item !== goal)
-      : [...draft.goals, goal];
-    update({ goals: next.length ? next : ["design-infrastructure"] });
   }
 
   function apply() {
@@ -163,27 +154,6 @@ export function GnomeyWizard({ profile, onApply, onClose }: Props) {
               >
                 <span className="choice-indicator" aria-hidden="true" />
                 {infrastructureLabels[infrastructure]}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        <div className="wizard-section">
-          <div className="wizard-section-heading">
-            <h3>What are you trying to do today?</h3>
-            <p>Choose one or more. This controls which guidance and resources are treated as immediately useful.</p>
-          </div>
-          <div className="choice-grid">
-            {goals.map((goal) => (
-              <button
-                key={goal}
-                className="choice choice-checkbox"
-                type="button"
-                aria-pressed={draft.goals.includes(goal)}
-                onClick={() => toggleGoal(goal)}
-              >
-                <span className="choice-indicator" aria-hidden="true" />
-                {goalLabels[goal]}
               </button>
             ))}
           </div>

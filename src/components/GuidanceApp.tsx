@@ -43,7 +43,6 @@ export function GuidanceApp() {
     return {
       ...profile,
       role,
-      goals: role === "it-security" ? ["design-infrastructure", "share-data"] : profile.goals,
     };
   }
 

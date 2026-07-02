@@ -1,6 +1,5 @@
 import {
   defaultProfile,
-  type ImmediateGoal,
   type ImplementationStage,
   type InfrastructureContext,
   type OrganismFocus,
@@ -46,15 +45,6 @@ export const infrastructureLabels: Record<InfrastructureContext, string> = {
   hybrid: "Hybrid",
 };
 
-export const goalLabels: Record<ImmediateGoal, string> = {
-  "make-case": "Make the case",
-  "design-infrastructure": "Design infrastructure",
-  "validate-workflows": "Validate workflows",
-  "share-data": "Share data",
-  "find-documents": "Find documents",
-  "assess-tier": "Assess maturity",
-};
-
 export const constraintLabels: Record<keyof Profile["constraints"], string> = {
   internetReliable: "Reliable internet",
   bioinformaticsStaff: "Bioinformatics staff",
@@ -81,7 +71,6 @@ export function cloneProfile(profile: Profile = defaultProfile): Profile {
   return {
     ...profile,
     organisms: [...profile.organisms],
-    goals: [...profile.goals],
     constraints: { ...profile.constraints },
   };
 }
@@ -119,12 +108,6 @@ export function parseProfileFromUrl(search: string): Profile {
     .filter((value): value is OrganismFocus => value in organismLabels);
   if (organisms?.length) profile.organisms = organisms;
 
-  const goals = params
-    .get("goals")
-    ?.split(",")
-    .filter((value): value is ImmediateGoal => value in goalLabels);
-  if (goals?.length) profile.goals = goals;
-
   for (const [paramKey, constraintKey] of Object.entries(constraintParamToKey)) {
     const value = params.get(paramKey);
     if (value) profile.constraints[constraintKey] = parseBooleanParam(value);
@@ -139,7 +122,6 @@ export function profileToSearch(profile: Profile): string {
   params.set("stage", profile.stage);
   params.set("organisms", profile.organisms.join(","));
   params.set("infra", profile.infrastructure);
-  params.set("goals", profile.goals.join(","));
   for (const [constraintKey, paramKey] of Object.entries(constraintParamKeys)) {
     const value = profile.constraints[constraintKey as keyof Profile["constraints"]];
     if (value !== null) params.set(paramKey, formatBooleanParam(value));

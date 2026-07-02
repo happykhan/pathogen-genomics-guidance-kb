@@ -32,20 +32,11 @@ export type InfrastructureContext =
   | "managed-platform"
   | "hybrid";
 
-export type ImmediateGoal =
-  | "make-case"
-  | "design-infrastructure"
-  | "validate-workflows"
-  | "share-data"
-  | "find-documents"
-  | "assess-tier";
-
 export type Profile = {
   role: UserRole;
   stage: ImplementationStage;
   organisms: OrganismFocus[];
   infrastructure: InfrastructureContext;
-  goals: ImmediateGoal[];
   constraints: {
     internetReliable: boolean | null;
     bioinformaticsStaff: boolean | null;

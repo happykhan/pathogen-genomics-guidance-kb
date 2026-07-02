@@ -1,6 +1,5 @@
 import {
   constraintLabels,
-  goalLabels,
   infrastructureLabels,
   organismLabels,
   roleLabels,
@@ -34,10 +33,6 @@ export function ProfileSummary({ profile }: Props) {
       <div>
         <dt>Compute</dt>
         <dd>{infrastructureLabels[profile.infrastructure]}</dd>
-      </div>
-      <div>
-        <dt>Goal</dt>
-        <dd>{profile.goals.map((goal) => goalLabels[goal]).join(", ")}</dd>
       </div>
       {setConstraints.length ? (
         <div>

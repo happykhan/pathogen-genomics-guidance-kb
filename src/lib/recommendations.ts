@@ -5,28 +5,6 @@ function hasAny(topics: string[], candidates: string[]) {
   return topics.some((topic) => candidates.includes(topic));
 }
 
-export function scoreTopics(profile: Profile, topics: string[]): number {
-  let score = 0;
-  if (profile.goals.includes("design-infrastructure")) {
-    score += hasAny(topics, ["infrastructure", "cloud", "local-compute", "operating-model", "storage", "backup", "archive", "retention", "data-lifecycle", "lims"]) ? 6 : 0;
-    score += hasAny(topics, ["workflow", "provenance", "metadata", "validation", "quality", "workforce", "costing", "procurement"]) ? 3 : 0;
-  }
-  if (profile.goals.includes("validate-workflows")) {
-    score += hasAny(topics, ["workflow", "validation", "quality", "provenance", "failure-handling", "continuous-improvement"]) ? 4 : 0;
-    score += hasAny(topics, ["data-lifecycle", "metadata", "reporting"]) ? 2 : 0;
-  }
-  if (profile.goals.includes("share-data")) {
-    score += hasAny(topics, ["data-sharing", "repositories", "governance", "metadata", "interoperability", "iam", "security"]) ? 4 : 0;
-  }
-  if (profile.goals.includes("make-case")) {
-    score += hasAny(topics, ["strategy", "decision-use", "public-health", "costing", "workforce"]) ? 3 : 0;
-  }
-  if (profile.goals.includes("assess-tier")) {
-    score += hasAny(topics, ["maturity", "implementation", "infrastructure", "sustainability"]) ? 4 : 0;
-  }
-  return score;
-}
-
 function scoreRoleNeeds(profile: Profile, topics: string[]): number {
   if (profile.role === "bioinformatician") {
     return hasAny(topics, ["workflow", "provenance", "validation", "quality", "storage", "backup", "infrastructure", "metadata"]) ? 3 : 0;
@@ -88,7 +66,6 @@ export function scoreGuidanceBlock(block: GuidanceBlock, profile: Profile): numb
   if (block.organisms.includes("general")) score += 1;
   if (profile.organisms.some((organism) => block.organisms.includes(organism))) score += 2;
   if (!block.infrastructure || block.infrastructure.includes(profile.infrastructure)) score += 1;
-  score += scoreTopics(profile, block.topics);
   score += scoreConstraints(profile, block.topics);
   score += scoreRoleNeeds(profile, block.topics);
   return score;
@@ -107,7 +84,6 @@ export function scoreResource(resource: ResourceRecord, profile: Profile): numbe
   if (resource.organisms.includes("general")) score += 1;
   if (profile.organisms.some((organism) => resource.organisms.includes(organism))) score += 3;
   if (resource.sourceStatus === "extracted") score += 2;
-  score += scoreTopics(profile, resource.topics);
   score += scoreConstraints(profile, resource.topics);
   return score;
 }

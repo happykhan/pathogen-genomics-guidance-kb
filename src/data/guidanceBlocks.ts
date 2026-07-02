@@ -747,7 +747,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
         rows: [
           {
             cells: [
-              "Enteric bacteria with sharing or infrastructure goals",
+              "Enteric bacteria with sharing or infrastructure focus",
               "Use-case service model, reporting decision use, enteric-bacteria reporting, metadata lineage and data-sharing governance.",
               "Enteric services often connect outbreak detection, source investigation, AMR or virulence findings, One Health users and repository or platform routes.",
               "Needs review against Salmonella, STEC, Listeria and local foodborne-reporting practice.",
@@ -756,7 +756,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
           },
           {
             cells: [
-              "Respiratory viruses with sharing or surveillance goals",
+              "Respiratory viruses with sharing or surveillance focus",
               "Use-case service model, respiratory-virus reporting, reporting limitations, repository/data-sharing and metadata lineage.",
               "Variant or lineage reporting needs sampling context, collection date and place, genome quality, sharing route and correction history.",
               "Needs review against current influenza, RSV and SARS-CoV-2 nomenclature, QC and repository guidance.",
@@ -765,7 +765,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
           },
           {
             cells: [
-              "Tuberculosis with validation goals",
+              "Tuberculosis with validation focus",
               "Use-case service model, tuberculosis reporting, quality validation, workflow provenance and reporting limitations.",
               "Transmission investigation and drug-resistance inference need separate evidence, validation basis, versioning, and follow-up testing status.",
               "Needs review against current TB cluster interpretation, resistance catalogue, thresholds and national reporting policy.",
@@ -774,7 +774,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
           },
           {
             cells: [
-              "AMR with validation goals",
+              "AMR with validation focus",
               "Use-case service model, AMR reporting, quality validation, workflow provenance and reporting limitations.",
               "Resistant-organism relatedness and resistance prediction need separate evidence, validation basis, database versioning, and follow-up testing status.",
               "Needs review against current organism-drug validation sources, resistance database guidance, thresholds and national AMR reporting policy.",

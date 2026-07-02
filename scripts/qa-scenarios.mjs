@@ -35,7 +35,6 @@ function loadRecommendationFunctions() {
     .replace(/import type [^\n]+\n/g, "")
     .replace(/export function /g, "function ")
     .replace(/function hasAny\(topics: string\[], candidates: string\[]\)/, "function hasAny(topics, candidates)")
-    .replace(/function scoreTopics\(profile: Profile, topics: string\[\]\): number/, "function scoreTopics(profile, topics)")
     .replace(/function scoreRoleNeeds\(profile: Profile, topics: string\[\]\): number/, "function scoreRoleNeeds(profile, topics)")
     .replace(/function scoreConstraints\(profile: Profile, topics: string\[\]\): number/, "function scoreConstraints(profile, topics)")
     .replace(/function scoreGuidanceBlock\(block: GuidanceBlock, profile: Profile\): number/, "function scoreGuidanceBlock(block, profile)")
@@ -49,7 +48,6 @@ const defaultProfile = {
   stage: "exploring",
   organisms: ["general"],
   infrastructure: "unknown",
-  goals: ["design-infrastructure"],
   constraints: {
     internetReliable: null,
     bioinformaticsStaff: null,
@@ -178,7 +176,6 @@ const representativeProfiles = [
     profile: withProfile({
       role: "director",
       stage: "exploring",
-      goals: ["make-case"],
     }),
     expectedVisibleGuidance: ["why-pathogen-genomics", "investment-case-assumptions"],
   },
@@ -187,7 +184,6 @@ const representativeProfiles = [
     profile: withProfile({
       role: "lab-lead",
       stage: "pilot",
-      goals: ["design-infrastructure", "validate-workflows"],
     }),
     expectedVisibleGuidance: ["quality-validation-before-switch"],
   },
@@ -197,7 +193,6 @@ const representativeProfiles = [
       role: "bioinformatician",
       stage: "routine-service",
       infrastructure: "hpc",
-      goals: ["validate-workflows"],
     }),
     expectedVisibleGuidance: ["workflow-reproducibility"],
   },
@@ -207,7 +202,6 @@ const representativeProfiles = [
       role: "it-security",
       stage: "national-scale",
       infrastructure: "cloud",
-      goals: ["share-data"],
       constraints: { cloudAllowed: false, dataResidencyConcern: true },
     }),
     expectedVisibleGuidance: ["sharing-is-not-unconditional", "iam-is-continuous"],
@@ -233,7 +227,6 @@ const organismProfiles = [
       role: "lab-lead",
       stage: "pilot",
       organisms: ["enteric-bacteria"],
-      goals: ["design-infrastructure", "share-data"],
     }),
     expectedVisibleGuidance: [
       "use-case-service-model",
@@ -249,7 +242,6 @@ const organismProfiles = [
       role: "data-manager",
       stage: "routine-service",
       organisms: ["respiratory-viruses"],
-      goals: ["share-data"],
     }),
     expectedVisibleGuidance: [
       "use-case-service-model",
@@ -265,7 +257,6 @@ const organismProfiles = [
       role: "bioinformatician",
       stage: "routine-service",
       organisms: ["tb"],
-      goals: ["validate-workflows"],
     }),
     expectedVisibleGuidance: [
       "use-case-service-model",
@@ -281,7 +272,6 @@ const organismProfiles = [
       role: "bioinformatician",
       stage: "routine-service",
       organisms: ["amr"],
-      goals: ["validate-workflows"],
     }),
     expectedVisibleGuidance: [
       "use-case-service-model",
@@ -297,7 +287,6 @@ const organismProfiles = [
       role: "lab-lead",
       stage: "routine-service",
       organisms: ["nosocomial", "amr"],
-      goals: ["validate-workflows"],
     }),
     expectedVisibleGuidance: [
       "use-case-service-model",
