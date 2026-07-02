@@ -87,8 +87,8 @@ export function GuidanceApp() {
               }
             >
               <p>
-                Tell me who is reading, what you are building, which programme it supports, and what compute setup you are
-                considering. I will tailor the document by role, programme stage, organism focus, and compute context.
+                Choose the reader, programme stage, organism focus, and compute context. I will show the sections that
+                matter for that situation and keep the rest out of the way.
               </p>
             </GnomeyCard>
           </aside>
