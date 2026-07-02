@@ -197,6 +197,11 @@ export function DocumentMap({ profile, showAllSections, onEditProfile, onResetPr
             <article className="document-map-branch" key={branch.id}>
               <h3>{branch.title}</h3>
               <p>{branch.description}</p>
+              {branch.items.some((item) => !item.included) ? (
+                <p className="document-map-branch-note">
+                  {branch.items.filter((item) => !item.included).length} not shown in this profile
+                </p>
+              ) : null}
               <ol>
                 {branch.items.map((item) => {
                   const state = nodeState(item, showAllSections);

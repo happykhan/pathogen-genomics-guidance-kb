@@ -1155,6 +1155,20 @@ select {
   line-height: 1.38;
 }
 
+.document-map-branch-note {
+  display: inline-flex;
+  width: fit-content;
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  background: #f8fafc;
+  color: #475569 !important;
+  font-size: 0.72rem !important;
+  font-weight: 750;
+  line-height: 1;
+  margin: -2px 0 12px !important;
+  padding: 5px 8px;
+}
+
 .document-map-branch ol {
   display: grid;
   gap: 6px;
@@ -1201,7 +1215,10 @@ select {
 }
 
 .document-map-node.hidden > span {
-  color: #64748b;
+  border-color: #d7dee8;
+  border-style: dashed;
+  background: #f8fafc;
+  color: #475569;
 }
 
 .document-map-title {
@@ -1227,6 +1244,12 @@ select {
   border-color: #99f6e4;
   background: #f0fdfa;
   color: #115e59;
+}
+
+.document-map-node.hidden .document-map-match {
+  border-color: #cbd5e1;
+  background: #ffffff;
+  color: #475569;
 }
 
 .document-map-node.expanded .document-map-match {
