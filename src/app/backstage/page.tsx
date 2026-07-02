@@ -13,7 +13,7 @@ import { whitepaperOutline, whitepaperOutlineVersion, whitepaperTarget } from ".
 import type { EditorialReviewStatus } from "../../types/editorial";
 
 export const metadata = {
-  title: "Backstage editorial debug | Pathogen Genomics Guidance",
+  title: "Legacy backstage debug | Pathogen Genomics Guidance",
 };
 
 const statusLabels: Record<EditorialReviewStatus, string> = {
@@ -47,12 +47,11 @@ export default function BackstagePage() {
     <div className="stack-page backstage-page">
       <section className="page-heading">
         <p className="eyebrow">Backstage</p>
-        <h1>Editorial debug view</h1>
+        <h1>Legacy editorial debug view</h1>
         <p>
-          This unlinked page exposes the source-to-whitepaper pipeline for review: source evidence pointers, extracted claim
-          cards, synthesis briefs, draft fragments, source IDs, conditions, and gaps. The evidence pointer is the closest
-          public-safe link back to the original source. The claim card is our source-backed interpretation. The fragment is
-          synthesized whitepaper prose. This view does not expose local files or full copyrighted source text.
+          This unlinked page exposes earlier extraction and fragment-review data for audit. It is no longer the primary
+          authoring workflow. New public guidance should be written from source PDFs, extracted full text, reading notes,
+          and inline citations. This view does not expose local files or full copyrighted source text.
         </p>
       </section>
 

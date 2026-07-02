@@ -80,9 +80,9 @@ Example:
 curl http://127.0.0.1:4321/api/sources
 ```
 
-### `GET /api/editorial`
+### `GET /api/editorial` Legacy Debug Endpoint
 
-Returns the public-safe editorial debug model used to develop the dynamic whitepaper.
+Returns the public-safe legacy editorial debug model. This endpoint is retained for audit/debugging of earlier extraction work, but it is no longer the recommended authoring workflow.
 
 Includes:
 
@@ -101,13 +101,6 @@ Example:
 curl http://127.0.0.1:4321/api/editorial
 ```
 
-Inspect draft fragments and their source basis:
-
-```bash
-curl -s http://127.0.0.1:4321/api/editorial \
-  | jq '.whitepaperFragments[] | select(.reviewStatus == "draft") | {id, sectionId, title, claimIds, sourceIds, reviewerNotes}'
-```
-
 Inspect the stable whitepaper outline:
 
 ```bash
@@ -122,17 +115,16 @@ curl -s http://127.0.0.1:4321/api/editorial \
   | jq '.whitepaperTarget'
 ```
 
-The deployed `/api/editorial` endpoint is read-only. Local fragment approval uses `npm run editorial:review`, which starts a localhost-only server that writes review decisions into `editorial/fragments/*.json`.
+The deployed `/api/editorial` endpoint is read-only. Do not treat the legacy fragment/card model as the source of truth for new public prose; read the source PDF or extracted full text instead.
 
 ## Notes For AI/Agent Use
 
 - Treat `sourceStatus: "extracted"` as already reviewed for the knowledge base.
 - Treat `sourceStatus: "candidate"` as useful but still requiring careful extraction before making strong claims.
 - In `/api/guidance`, treat guidance block `sourceStatus: "reviewed"` as reviewed public prose, `partial` as source-backed but incomplete, and `gap` as a placeholder or editorial work item.
-- In `/api/editorial`, treat `reviewStatus: "reviewed"` fragments as approved for future whitepaper compilation. Treat `draft` fragments as review candidates, not public guidance.
-- Do not treat claim cards as original quotations. Use `evidenceItemIds`, `evidenceItems`, `sourceLocator`, `directQuote`, and source cards to trace the claim back to the underlying source.
-- Treat evidence item `directQuote` and `passageSummary` as review aids. `directQuote` is a short verbatim quote for verification; `passageSummary` is the editor's paraphrase of what the passage supports. Neither is a substitute for reading the source card or source document.
-- Do not synthesize new public guidance directly from documents. Use the pipeline: source card, evidence item, extracted claim card, section brief, draft fragment, reviewed fragment.
+- Treat `/api/editorial` as legacy audit data only. It is not a public prose-generation API.
+- Do not treat claim cards, evidence summaries, or PubMed abstracts as substitutes for source PDFs or extracted full text.
+- For new guidance prose, use the workflow in `docs/source-editorial-workflow.md`: source PDF or official source, extracted full text, section reading notes, authored whitepaper section, inline citations, and needs-more-work notes for weak evidence.
 - Do not assume every source has a direct PDF. Some publishers provide HTML pages only, and some PDFs are behind publisher controls.
 - The API is read-only and currently unversioned beyond the `version` field in each response.
 - Public API records must not expose local user-home file paths; local full-text inventory remains repository documentation only.

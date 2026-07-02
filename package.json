@@ -11,9 +11,8 @@
     "qa:scenarios": "node scripts/qa-scenarios.mjs",
     "pubmed:discover": "node scripts/pubmed-discover.mjs",
     "evidence:extract": "node scripts/extract-evidence-candidates.mjs",
-    "guidance:compile": "node scripts/compile-guidance-fragments.mjs",
     "pdfs:sync": "node scripts/sync-public-pdfs.mjs",
-    "editorial:review": "node scripts/editorial-review-server.mjs"
+    "pdfs:extract-text": "node scripts/extract-pdf-texts.mjs"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.19",

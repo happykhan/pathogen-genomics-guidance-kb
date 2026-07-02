@@ -15,7 +15,7 @@ export function GET() {
   return NextResponse.json({
     version: "0.2.0",
     description:
-      "Public-safe editorial debug model for the dynamic whitepaper. This endpoint intentionally excludes local file paths and full-text source extracts.",
+      "Legacy public-safe editorial debug model. New guide prose should be authored from source PDFs and extracted full text, not generated from this fragment/card model.",
     defaultProfileVersion,
     defaultProfile,
     whitepaperOutlineVersion,

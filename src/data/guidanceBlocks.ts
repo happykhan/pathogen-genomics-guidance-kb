@@ -2617,30 +2617,33 @@ export const guidanceBlocks: GuidanceBlock[] = [
   },
   {
     id: "storage-backup-archive-distinction",
-    title: "Separate active storage, backup, archive, and retention",
+    title: "Plan storage growth, replication, and backup before the service starts",
     summary:
-      "Raw reads, intermediate files, reports, logs, and shared outputs do not all need the same storage or recovery rules.",
+      "For many first-time genomics programmes, the main infrastructure shock is not CPU. It is the continuing footprint of raw reads, working files, retained records, replicated copies, and backups.",
     sourceStatus: "partial",
     body: [
-      "A genomics service should separate active analysis storage, long-term archive, backup copies, retention policy, access control, and recovery planning. Raw reads, filtered data, processed data, workflow logs, QC outputs, reports, repository submissions, and dashboards do not all have the same operational purpose.",
-      "WHO's national strategy support tool states that storage policy should support short- and long-term analysis and archiving, be defined from available hardware, software, infrastructure and connectivity, and be sized according to the retention strategy for raw, filtered and processed data. It also states that backup locations should be chosen according to data criticality and that data security must apply to local and cloud storage.",
-      "The PHE case study shows what this means in a real service: WGS implementation required IT infrastructure to manage and store sequence data, run analysis software, maintain a high-performance computing cluster, provide enough storage and processing speed for service delivery, and use both high-performance and archive storage. Those details are PHE-specific, but the categories are not.",
-      "PHA4GE's data-flow framing links ingestion, storage, processing, delivery, archiving, retention policy, role-based access, provenance, and data-management plans. Treating all data as one storage bucket makes it harder to control cost, recover from failure, govern access, or explain which records must be retained.",
-      "Backup should be treated as a recovery process. The PHA4GE disaster-recovery note is still rough, but its central question is useful: if the main data store were destroyed, what could the organisation recover, how quickly, and what would be lost? That question should be answered before routine service depends on the system.",
-      "For local servers or local storage, physical resilience is part of the same data service. The PHA4GE source pack's rough power and cooling notes point to secure server-room access, environmental monitoring, dust and temperature control, cooling design, UPS maintenance and generator support as local infrastructure concerns. These should be treated as resilience questions, not as decorative facilities details.",
+      "Storage is often the first practical bottleneck for organisations that have not previously supported research computing. In absolute terms, a routine pathogen genomics service may be dealing with tens of terabytes rather than internet-scale data. Operationally, that is still a large and recurring commitment when the organisation has to provide working space, retained primary data, replicated copies, backup storage, access control, monitoring, and recovery.",
+      "The storage requirement is larger than the size of one FASTQ folder. A service needs active working space for current analysis, enough headroom for re-runs and failed runs, retained raw data where reanalysis or repository submission may be needed, records that link outputs back to samples and reports, and backup copies that can be restored after deletion, corruption, misconfiguration, system failure, or compromise.",
+      "WHO's national strategy support tool treats storage as a data-management policy question. It says storage policy should support short- and long-term analysis and archiving, be defined against available hardware, software, infrastructure and connectivity, and be sized according to the retention strategy for raw, filtered and processed data. It also links backup locations to data criticality and applies data security to local and cloud storage.",
+      "The PHE case study shows the implementation consequence. Moving WGS into a routine public-health service required IT infrastructure to manage and store sequence data, run analysis software, maintain high-performance computing, provide enough storage and processing speed for service delivery, and use both high-performance and archive storage. The exact PHE architecture is not a universal template, but the implementation burden is the point: storage must be budgeted and operated as part of the service, not discovered after sequencing begins.",
+      "PHA4GE makes the same point from an infrastructure perspective. Routine sequencing generates large data volumes that can disrupt existing enterprise IT, and public-health organisations may need skills normally associated with research computing and storage. Its data-flow framing links ingestion, storage, processing, delivery, archiving, retention policy, role-based access, provenance, and data-management plans. Treating all genomics data as one shared folder makes it harder to control cost, recover from failure, govern access, or explain which records must be retained.",
+      "Replication, backup, and archive should not be collapsed into one word. Replication can keep a service available when one copy or disk fails, but it can also replicate mistakes. Backup is a recovery process: it should preserve point-in-time copies that can be restored after deletion, corruption, misconfiguration, system failure, or compromise. Archive is retained data kept for future interpretation, audit, repository linkage, validation, or legal and public-health reasons. These functions may share infrastructure, but they answer different questions.",
+      "The minimum planning move is to estimate the storage footprint as a service pattern, not a single number. For each pathogen or programme, estimate sample volume, data produced per sample, temporary working expansion during analysis, the number of copies required, backup retention, archive retention, expected growth, who pays when storage fills, and who receives alerts before the service is affected. The sources support this decision structure; they do not yet support a universal retention period, restore-time target, restore-point target, or storage-size formula across settings.",
     ],
     bodySourceIds: {
-      0: ["who-national-genomic-surveillance-strategy-2023", "phe-case-study", "pha4ge-infrastructure"],
-      1: ["who-national-genomic-surveillance-strategy-2023"],
-      2: ["phe-case-study"],
-      3: ["pha4ge-infrastructure"],
+      0: ["pha4ge-infrastructure", "phe-case-study", "who-national-genomic-surveillance-strategy-2023"],
+      1: ["pha4ge-infrastructure", "phe-case-study", "who-national-genomic-surveillance-strategy-2023"],
+      2: ["who-national-genomic-surveillance-strategy-2023"],
+      3: ["phe-case-study"],
       4: ["pha4ge-infrastructure"],
-      5: ["pha4ge-infrastructure", "phe-case-study", "who-national-genomic-surveillance-strategy-2023"],
+      5: ["pha4ge-infrastructure", "who-national-genomic-surveillance-strategy-2023"],
+      6: ["pha4ge-infrastructure", "who-national-genomic-surveillance-strategy-2023", "who-genomics-costing-tool-manual-2024"],
     },
     technicalDetail: [
-      "Minimum storage map: active analysis storage, raw data archive, processed data archive, report storage, workflow-log storage, QC-output storage, repository-submission records, backup copies, and deleted or expired records.",
-      "Minimum recovery questions: what data cannot be regenerated, how long each copy is retained, where backups are held, how backup versions are managed, how backup jobs are scheduled, who receives failure alerts, how restoration is tested, and what service work stops during recovery.",
-      "Minimum local resilience questions: who owns the server room or storage location, who can enter it, how temperature and dust are controlled, what UPS or generator support exists, who receives power or cooling alerts, and when a restore test last succeeded.",
+      "Storage-footprint estimate: samples per week or month; raw data per sample; temporary workflow expansion; retained raw data; retained processed outputs; reports and QC records; repository/accession records; replication factor; backup retention; archive retention; annual growth; and free-space alert threshold.",
+      "Minimum operational controls: named storage owner, budget owner, access owner, backup owner, restore owner, alert recipient, cleanup rule, archive rule, deletion approval route, and escalation route when storage pressure threatens turnaround.",
+      "Minimum recovery questions: what data cannot be regenerated, where backups are held, how backup versions are managed, how backup jobs are monitored, who receives failure alerts, how restoration is tested, and what service work stops during recovery.",
+      "Minimum local-resilience questions: who owns the server room or storage location, who can enter it, how temperature and dust are controlled, what UPS or generator support exists, who receives power or cooling alerts, and when a restore test last succeeded.",
     ],
     figures: [
       {
@@ -2654,179 +2657,72 @@ export const guidanceBlocks: GuidanceBlock[] = [
     ],
     tables: [
       {
-        title: "storage, backup, archive and recovery map",
+        title: "Storage footprint planning worksheet",
         summary:
-          "Use this map to classify genomics data by operational purpose before choosing storage classes, backup schedules or archive rules.",
-        columns: ["Data or storage category", "Operational purpose", "Minimum decision to record", "Caution"],
+          "Use this as a conversation between the genomics team, IT, security, finance, and service owners before routine sequencing begins.",
+        columns: ["Planning question", "What to estimate or decide", "Why it matters", "Source-backed caution"],
         rows: [
           {
             cells: [
-              "Active analysis storage",
-              "Holds data needed for current workflow execution, QC review, re-runs and short-term troubleshooting.",
-              "Owner, access rules, expected working capacity, workflow location, cleanup rule, and what happens when storage fills.",
-              "Active storage is not a backup or a long-term archive.",
+              "How much data arrives?",
+              "Expected samples or isolates per week/month, sequencing platform, approximate raw data per sample, and expected growth over the next 12-36 months.",
+              "The service needs capacity planning before storage fills, turnaround slows, or analysts start using unmanaged drives.",
+              "Available sources support estimating against local throughput and retention strategy; they do not provide a universal storage-size rule.",
             ],
-            sourceIds: ["who-national-genomic-surveillance-strategy-2023", "pha4ge-infrastructure", "phe-case-study"],
+            sourceIds: ["who-national-genomic-surveillance-strategy-2023", "phe-case-study", "who-genomics-costing-tool-manual-2024"],
           },
           {
             cells: [
-              "Raw-read archive",
-              "Preserves primary sequence data that may support reanalysis, repository submission, correction, validation or future questions.",
-              "Retention strategy, archive location, access route, accession linkage, integrity check, and whether data can be regenerated.",
-              "The sources support keeping a retention strategy, but not a universal retention period.",
+              "How much working space is needed?",
+              "Active analysis space, temporary workflow expansion, re-run space, failed-run troubleshooting space, and free-space alert threshold.",
+              "A service can fail operationally even when long-term archive exists, because current analyses need fast writable working space.",
+              "PHE is a service example, not a sizing formula; use local workflow behaviour and throughput.",
             ],
-            sourceIds: [
-              "who-national-genomic-surveillance-strategy-2023",
-              "aphl-ngs-implementation-2016",
-              "who-genomic-data-sharing-platforms-2025",
-            ],
+            sourceIds: ["phe-case-study", "pha4ge-infrastructure"],
           },
           {
             cells: [
-              "Processed outputs and intermediate files",
-              "Includes assemblies, consensus genomes, alignments, variant calls, trees, tables and other workflow outputs.",
-              "Which outputs are reportable, which are reproducible from raw data, which are shared, and which are discarded after review.",
-              "Do not keep every intermediate file by default unless there is a defined audit, validation or reanalysis reason.",
+              "What is retained?",
+              "Raw reads, filtered reads, assemblies or consensus genomes, reports, QC records, workflow logs, repository/accession records, and correction history.",
+              "Different records support different purposes: reanalysis, audit, validation, reporting, sharing, and public-health review.",
+              "Retention periods and deletion rules need local legal, public-health, institutional, and repository review.",
             ],
-            sourceIds: ["pha4ge-infrastructure", "who-genomic-data-sharing-platforms-2025"],
+            sourceIds: ["who-national-genomic-surveillance-strategy-2023", "who-genomic-data-sharing-platforms-2025", "pha4ge-infrastructure"],
           },
           {
             cells: [
-              "Reports, QC records and workflow logs",
-              "Supports audit, correction, user communication, quality review, method change review and interpretation of previous results.",
-              "Report identifier, workflow and database versions, QC status, correction history, access owner, and retention or archive decision.",
-              "Reports and QC records may be more important for audit than large temporary analysis files.",
-            ],
-            sourceIds: [
-              "who-genomic-data-sharing-platforms-2025",
-              "clinical-microbiology-implementation-2026",
-              "pha4ge-infrastructure",
-            ],
-          },
-          {
-            cells: [
-              "Repository and sharing records",
-              "Links local records to public, controlled-access or partner-platform submissions.",
-              "Accession or platform ID, upload date, release state, correction or replacement date, withdrawal route, and responsible local owner.",
-              "Repository release does not remove the need for local accession tracking and correction history.",
-            ],
-            sourceIds: ["aphl-ngs-implementation-2016", "who-genomic-data-sharing-platforms-2025"],
-          },
-          {
-            cells: [
-              "Backup copies",
-              "Provides recovery after failure, corruption, misconfiguration, accidental deletion or compromise.",
-              "What is backed up, where copies are held, version history, schedule, automation, alerts, restore test, and who owns recovery.",
-              "Backup is a recovery process, not simply another copy or a substitute for archive policy.",
+              "What is replicated?",
+              "Primary copy, replicated copy if used, replication location, failure mode covered, and whether accidental deletion or corruption would also replicate.",
+              "Replication can improve availability, but it is not the same as backup or archive.",
+              "Available guidance supports the distinction between copies and recovery; local IT must define the architecture.",
             ],
             sourceIds: ["pha4ge-infrastructure", "who-national-genomic-surveillance-strategy-2023"],
           },
           {
             cells: [
-              "Deletion, expiry or restricted retention",
-              "Controls data that should not be kept indefinitely or should be held under special access rules.",
-              "Legal or policy basis, data type, owner, deletion approval, deletion log, exception route and effect on reports or accessions.",
-              "Deletion rules, retention periods, RTO and RPO need local legal, public-health and institutional review.",
+              "What is backed up?",
+              "Data categories included, backup location, schedule, version history, monitoring, alert recipient, restore owner, and restore-test result.",
+              "A backup only protects the service if someone knows it ran, can restore from it, and can prove the restored data are interpretable.",
+              "Backup is a recovery process, not simply another copy and not a substitute for archive policy.",
             ],
-            sourceIds: [
-              "who-national-genomic-surveillance-strategy-2023",
-              "who-genomic-data-sharing-platforms-2025",
+            sourceIds: ["pha4ge-infrastructure", "who-national-genomic-surveillance-strategy-2023"],
+          },
+          {
+            cells: [
+              "Who owns the continuing cost?",
+              "Storage growth budget, backup and archive cost, hardware replacement or cloud charges, monitoring, maintenance, and staff time.",
+              "Genomics storage is a recurring service cost. If it is not owned, the programme becomes dependent on ad hoc capacity and informal labour.",
+              "WHO's costing tool supports including storage, cloud or in-house server arrangements, maintenance, and human resources in bioinformatics costing.",
             ],
+            sourceIds: ["who-genomics-costing-tool-manual-2024", "phe-case-study", "pha4ge-infrastructure"],
           },
         ],
         sourceIds: [
           "who-national-genomic-surveillance-strategy-2023",
           "pha4ge-infrastructure",
           "phe-case-study",
-          "aphl-ngs-implementation-2016",
           "who-genomics-costing-tool-manual-2024",
           "who-genomic-data-sharing-platforms-2025",
-          "clinical-microbiology-implementation-2026",
-        ],
-      },
-      {
-        title: "Setting local retention and recovery targets",
-        summary:
-          "Use this worksheet before assigning retention periods, restore-time targets or deletion rules. The sources support the decision structure, not jurisdiction-specific values.",
-        columns: ["Decision field", "What to record", "Why it changes the target", "Caution"],
-        rows: [
-          {
-            cells: [
-              "Data category and service use",
-              "Whether the item is raw data, processed output, report, QC record, workflow log, repository record, dashboard extract, backup copy or archive record; and which public-health product depends on it.",
-              "A report used for public-health action, an accessioned raw-read record and a temporary intermediate file do not need the same retention or restore rule.",
-              "Do not set one retention rule for the whole genomics folder.",
-            ],
-            sourceIds: [
-              "who-national-genomic-surveillance-strategy-2023",
-              "pha4ge-infrastructure",
-              "who-genomic-data-sharing-platforms-2025",
-            ],
-          },
-          {
-            cells: [
-              "Regeneration and audit need",
-              "Whether the item can be regenerated from retained inputs, whether regeneration would reproduce the same result, and whether it is needed for audit, correction, validation, legal review or later reanalysis.",
-              "Files that are cheap to regenerate can have different rules from primary data, released reports, QC records or versioned interpretation outputs.",
-              "A reproducible workflow still needs the original inputs, versions, parameters and reference data if old results may be reinterpreted.",
-            ],
-            sourceIds: [
-              "pha4ge-infrastructure",
-              "clinical-microbiology-implementation-2026",
-              "who-genomic-data-sharing-platforms-2025",
-            ],
-          },
-          {
-            cells: [
-              "Criticality and restore priority",
-              "Which service stops if the data are unavailable, the maximum tolerable interruption, the maximum tolerable data loss, and who decides priority during recovery.",
-              "Backup policy should follow data criticality; a repository-submission log and an active outbreak workspace may need different recovery priority.",
-              "Available sources support recording recovery questions, but not universal RTO or RPO values.",
-            ],
-            sourceIds: ["who-national-genomic-surveillance-strategy-2023", "pha4ge-infrastructure"],
-          },
-          {
-            cells: [
-              "Location, access and security",
-              "Where the primary copy, archive and backups are held; who can access them; whether data are local, cloud or platform-hosted; and which sensitive fields are restricted.",
-              "Storage, backup and archive choices also determine who can access data, who can restore it, and which data-residency or governance rules apply.",
-              "Public repository release does not remove local responsibility for sensitive metadata, accession linkage or correction history.",
-            ],
-            sourceIds: [
-              "who-national-genomic-surveillance-strategy-2023",
-              "who-genomic-data-sharing-platforms-2025",
-              "aphl-ngs-implementation-2016",
-            ],
-          },
-          {
-            cells: [
-              "Backup schedule and restore test",
-              "Backup frequency, version history, automation, alerting, failure review, restore-test schedule, restore-test result and recovery owner.",
-              "A backup that is not monitored or tested may not protect the service when storage fails, files are deleted, or data are corrupted.",
-              "This is a recovery checklist, not a formal disaster-recovery or business-continuity runbook.",
-            ],
-            sourceIds: ["pha4ge-infrastructure", "who-national-genomic-surveillance-strategy-2023"],
-          },
-          {
-            cells: [
-              "Deletion, expiry and exception route",
-              "Retention period selected locally, legal or policy basis, deletion authority, deletion log, exception or legal-hold route, and effect on reports, accessions and reanalysis.",
-              "Some data may need restricted retention or deletion; other records may need to remain linked to released reports and repository accessions.",
-              "Numeric retention periods and deletion rules need local legal, public-health, institutional and repository review.",
-            ],
-            sourceIds: [
-              "who-national-genomic-surveillance-strategy-2023",
-              "who-genomic-data-sharing-platforms-2025",
-            ],
-          },
-        ],
-        sourceIds: [
-          "who-national-genomic-surveillance-strategy-2023",
-          "pha4ge-infrastructure",
-          "phe-case-study",
-          "aphl-ngs-implementation-2016",
-          "who-genomic-data-sharing-platforms-2025",
-          "clinical-microbiology-implementation-2026",
         ],
       },
       {
@@ -2851,11 +2747,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "Restoring raw reads alone is not enough if reports, QC, workflow versions, metadata or accession links are needed to interpret the result.",
               "Choose examples that represent real service products, not only easy-to-restore test files.",
             ],
-            sourceIds: [
-              "who-genomic-data-sharing-platforms-2025",
-              "aphl-ngs-implementation-2016",
-              "clinical-microbiology-implementation-2026",
-            ],
+            sourceIds: ["who-genomic-data-sharing-platforms-2025", "aphl-ngs-implementation-2016", "clinical-microbiology-implementation-2026"],
           },
           {
             cells: [
@@ -2873,11 +2765,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "The restore is only useful if the recovered record can still be interpreted, audited, corrected or reused.",
               "A technically restored file may still be operationally unusable if identifiers, permissions or version records are broken.",
             ],
-            sourceIds: [
-              "who-genomic-data-sharing-platforms-2025",
-              "clinical-microbiology-implementation-2026",
-              "pha4ge-infrastructure",
-            ],
+            sourceIds: ["who-genomic-data-sharing-platforms-2025", "clinical-microbiology-implementation-2026", "pha4ge-infrastructure"],
           },
           {
             cells: [
@@ -2886,11 +2774,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
               "Restore drills should feed service improvement, storage planning, staffing cover, incident routes and recurrent cost decisions.",
               "Do not turn this recovery drill record into a formal RTO or RPO claim without local policy and business-continuity review.",
             ],
-            sourceIds: [
-              "phe-case-study",
-              "who-genomics-costing-tool-manual-2024",
-              "who-national-genomic-surveillance-strategy-2023",
-            ],
+            sourceIds: ["phe-case-study", "who-genomics-costing-tool-manual-2024", "who-national-genomic-surveillance-strategy-2023"],
           },
         ],
         sourceIds: [
@@ -2903,70 +2787,11 @@ export const guidanceBlocks: GuidanceBlock[] = [
           "who-genomics-costing-tool-manual-2024",
         ],
       },
-      {
-        title: "local infrastructure resilience checklist",
-        summary:
-          "Use this when storage, compute or backup depend on local servers, local storage rooms or institutional facilities. It is not a formal facilities or business-continuity standard.",
-        columns: ["Resilience area", "What to record", "Why it matters", "Caution"],
-        rows: [
-          {
-            cells: [
-              "Server-room or storage-location owner",
-              "Physical location, accountable facilities or IT owner, access-control route, visitor or contractor access, and out-of-hours contact.",
-              "Data recovery depends on knowing who can physically access and support the local system during an incident.",
-              "Do not assume laboratory staff control facilities owned by central IT or estates.",
-            ],
-            sourceIds: ["pha4ge-infrastructure", "phe-case-study"],
-          },
-          {
-            cells: [
-              "Environmental monitoring",
-              "Temperature, humidity or other monitoring available locally, alert recipient, review route, and what service action follows an alert.",
-              "Overheating, dust and poor environmental control can turn a storage or compute issue into a service-continuity problem.",
-              "Monitoring should be named, but local facilities standards define thresholds.",
-            ],
-            sourceIds: ["pha4ge-infrastructure"],
-          },
-          {
-            cells: [
-              "Power-failure protection",
-              "UPS coverage, UPS maintenance owner, generator or longer-outage route, graceful shutdown plan, and systems that remain unavailable during outage.",
-              "Local analysis, active storage and backups may fail differently during short and long outages.",
-              "Available sources do not support universal UPS sizing, generator capacity or runtime targets.",
-            ],
-            sourceIds: ["pha4ge-infrastructure"],
-          },
-          {
-            cells: [
-              "Backup and restore ownership",
-              "Backup job owner, failure alert owner, version history, restore-test date, restore-test result and decision owner during recovery.",
-              "A backup copy only protects the service if someone knows it exists, monitors it and can restore from it.",
-              "Backup should not be confused with replication or archive; restore testing remains a local responsibility.",
-            ],
-            sourceIds: ["pha4ge-infrastructure", "who-national-genomic-surveillance-strategy-2023"],
-          },
-          {
-            cells: [
-              "Incident escalation",
-              "Who is contacted for power, cooling, storage failure, accidental deletion, corruption, cyber incident or unavailable institutional infrastructure.",
-              "The reporting service may stop even when sequencing continues if storage, access or recovery routes fail.",
-              "This planning checklist does not replace local incident, cyber, disaster-recovery or business-continuity plans.",
-            ],
-            sourceIds: ["pha4ge-infrastructure", "who-genomic-data-sharing-platforms-2025"],
-          },
-        ],
-        sourceIds: [
-          "pha4ge-infrastructure",
-          "phe-case-study",
-          "who-national-genomic-surveillance-strategy-2023",
-          "who-genomic-data-sharing-platforms-2025",
-        ],
-      },
     ],
-    audiences: ["it-security", "bioinformatician", "data-manager", "lab-lead"],
+    audiences: ["it-security", "bioinformatician", "data-manager", "lab-lead", "director", "policy", "funder"],
     implementationStages: ["exploring", "pilot", "routine-service", "national-scale", "upgrading"],
     organisms: ["general", "enteric-bacteria", "tb", "respiratory-viruses", "amr", "nosocomial", "other"],
-    topics: ["storage", "backup", "archive", "retention"],
+    topics: ["storage", "backup", "archive", "retention", "infrastructure", "costing"],
     detailLevel: "technical",
     sourceIds: [
       "pha4ge-infrastructure",
@@ -2978,6 +2803,7 @@ export const guidanceBlocks: GuidanceBlock[] = [
       "clinical-microbiology-implementation-2026",
     ],
     gaps: [
+      "The guide still needs source-backed worked examples for estimating storage footprint by organism, sequencing platform, throughput, retention period, replication factor, and backup policy.",
       "The retention and recovery worksheet still needs local legal, public-health, institutional, repository and business-continuity review before numeric retention periods, restore-time targets, restore-point targets or deletion rules can be prescribed.",
       "The PHA4GE disaster-recovery and power/cooling notes and local business-continuity sources still need editorial review before the guide can support a formal recovery or facilities runbook.",
     ],

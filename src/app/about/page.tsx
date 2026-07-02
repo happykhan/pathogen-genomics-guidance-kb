@@ -12,8 +12,8 @@ export default function AboutPage() {
           <p className="eyebrow">Editorial basis</p>
           <h1 className="workspace-title">A source-backed guide, not a generic advice generator.</h1>
           <p className="workspace-copy">
-            The app is built from extracted source material and structured source cards. Guidance blocks expose their
-            source basis and mark evidence gaps instead of silently filling them with unsourced advice.
+            The app is built from source PDFs, extracted full text, and structured source records. Guidance blocks expose
+            their source basis and mark evidence gaps instead of silently filling them with unsourced advice.
           </p>
         </div>
         <aside className="panel">
@@ -33,7 +33,7 @@ export default function AboutPage() {
           <p>
             The first app slice includes a profile-aware guidance document, the Gnomey wizard, shareable profile URLs,
             browser print export, a resource finder, a bioinformatics tier quiz, profile-specific scenario QA, source-backed
-            worksheets, and a read-only backstage view of the editorial pipeline.
+            worksheets, and read-only source/debug APIs.
           </p>
           <h2>What still needs source work</h2>
           <p>

@@ -416,6 +416,22 @@ select {
   padding: 10px 12px;
 }
 
+.role-orientation {
+  display: grid;
+  gap: 8px;
+  max-width: 820px;
+  margin: 24px 0 0;
+  border-left: 3px solid var(--accent);
+  background: #f6fbf9;
+  padding: 14px 16px;
+}
+
+.role-orientation p {
+  margin: 0;
+  color: #263a35;
+  line-height: 1.5;
+}
+
 .omission-note {
   max-width: 760px;
   margin: 22px 0 0;

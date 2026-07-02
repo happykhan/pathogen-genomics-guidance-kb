@@ -45,8 +45,8 @@ Local development runs at <http://127.0.0.1:4321/> by default. The app currently
 - Shareable profile URLs and browser print/PDF export.
 - Resource finder backed by a structured catalogue of extracted and candidate sources.
 - Bioinformatics infrastructure tier quiz.
-- Read-only API endpoints for guidance, sources, resources, and the editorial model.
-- Backstage editorial view showing source cards, evidence items, claim cards, briefs, fragments, statuses, and gaps.
+- Read-only API endpoints for guidance, sources, and resources.
+- Local PDF-to-text extraction for full-source reading before guide sections are revised.
 - Automated scenario QA for constraint profiles, representative readers, and key organism profiles.
 
 ## Current Source Base
@@ -86,7 +86,9 @@ The main remaining gaps are now narrower:
 ## Working Flow
 
 1. Add or clone source material under ignored local paths.
-2. Commit only source cards, indexes, extracted notes, CSV extracts when appropriate, and lightweight editable figures.
-3. Prepare public guidance through the editorial layer: source card, evidence item, claim card, section brief, reviewed fragment, then structured dynamic whitepaper content.
-4. Use figure briefs before redrawing figures.
-5. Keep missing topics visible as gaps instead of filling them with generic prose.
+2. Run `npm run pdfs:extract-text` to create local full-text extracts under `source-material/extracted-text/`.
+3. Read the relevant extracted full text and source PDF before revising a guide section.
+4. Commit source cards, indexes, extracted notes, CSV extracts when appropriate, and lightweight editable figures; do not commit generated full text.
+5. Write coherent public guidance directly in `src/data/guidanceBlocks.ts` with inline source IDs.
+6. Use figure briefs before redrawing figures.
+7. Keep missing topics visible as gaps instead of filling them with generic prose.

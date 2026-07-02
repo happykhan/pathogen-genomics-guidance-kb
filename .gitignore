@@ -15,6 +15,7 @@ out/
 # Local source packs and generated extracts should not be committed by default.
 Best Practices and Vision/
 source-material/local/
+source-material/extracted-text/
 
 # Large/generated office exports
 *.docx

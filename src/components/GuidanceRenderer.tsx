@@ -31,6 +31,49 @@ const sourceStatusLabels = {
   gap: "Gap placeholder",
 } as const;
 
+const roleBriefs = {
+  director: {
+    purpose: "This version frames pathogen genomics as a service investment, not a technology purchase.",
+    ask: "Your main ask is to decide the public-health use case, service model, accountable owners, recurrent funding, and governance route.",
+    risk: "Watch for hidden recurring costs: storage growth, workflow support, validation, data management, user support, and dependence on one specialist.",
+  },
+  policy: {
+    purpose: "This version focuses on how genomic data should support surveillance, reporting, sharing, and public-health decisions.",
+    ask: "Your main ask is to connect the technical service to policy objectives, governance, data-sharing rules, privacy, and cross-organisation responsibilities.",
+    risk: "Watch for overclaiming: genomic resolution does not replace sampling design, epidemiology, metadata quality, or legal and ethical review.",
+  },
+  "lab-lead": {
+    purpose: "This version treats sequencing as part of a routine service that must handle samples, failures, reports, users, and quality review.",
+    ask: "Your main ask is to define the sample route, QC and validation boundary, reporting product, turnaround expectations, and handoff to bioinformatics and data teams.",
+    risk: "Watch for pilot workflows becoming routine services without documented acceptance criteria, exception routes, user feedback, or accreditation planning.",
+  },
+  bioinformatician: {
+    purpose: "This version focuses on making analyses reproducible, supportable, validated, auditable, and connected to reporting decisions.",
+    ask: "Your main ask is to define workflow ownership, versions, reference data, QC outputs, provenance records, compute/storage needs, and change-control routes.",
+    risk: "Watch for analysis scripts that work for one expert but cannot be rerun, explained, validated, supported, or handed over during routine service.",
+  },
+  "it-security": {
+    purpose: "This version explains what the genomics service is trying to achieve before asking for infrastructure support.",
+    ask: "Your main ask is to help provide secure storage, identity and access management, backup and restore routes, network or cloud controls, monitoring, and incident escalation.",
+    risk: "Watch for unmanaged research-computing patterns: large data growth, informal file shares, unclear data residency, untested backups, weak offboarding, and unsupported local servers.",
+  },
+  "data-manager": {
+    purpose: "This version focuses on keeping samples, metadata, sequence data, reports, accessions, corrections, and retention decisions linked.",
+    ask: "Your main ask is to define identifiers, metadata responsibilities, system-of-record rules, correction routes, sharing records, and archive or deletion decisions.",
+    risk: "Watch for broken lineage: a technically correct genome result becomes hard to use if sample identifiers, metadata, QC records, workflow versions, or accession links are missing.",
+  },
+  funder: {
+    purpose: "This version frames genomics capacity as a recurring service with infrastructure, workforce, quality, data, and governance dependencies.",
+    ask: "Your main ask is to test whether the proposal includes recurrent costs, implementation owners, sustainability, support, and realistic benefits for the setting.",
+    risk: "Watch for equipment-only budgets that omit storage, compute, validation, training, workflow maintenance, data management, and user support.",
+  },
+  mixed: {
+    purpose: "This version is written for a mixed public-health team trying to agree what kind of genomics service it is building.",
+    ask: "Your main ask is to align the public-health use case, sample flow, metadata, analysis, storage, reporting, sharing, governance, and support model.",
+    risk: "Watch for one-size-fits-all solutions. The right infrastructure depends on connectivity, people, central IT, data residency, service urgency, and the outputs users need.",
+  },
+} as const;
+
 function CitationRun({ sourceIds, referenceNumber }: { sourceIds: string[]; referenceNumber: Map<string, number> }) {
   if (!sourceIds.length) return null;
   const refs = sourceIds
@@ -212,6 +255,7 @@ export function GuidanceRenderer({ profile, showTechnical, showAllSections }: Pr
   const revealTechnical = showTechnical || isTechnicalProfile(profile);
   const referenceIds = Array.from(new Set(visible.flatMap(({ block }) => collectBlockReferenceIds(block))));
   const referenceNumber = new Map(referenceIds.map((sourceId, index) => [sourceId, index + 1]));
+  const roleBrief = roleBriefs[profile.role];
 
   return (
     <section className="whitepaper" aria-label="Tailored guidance document">
@@ -241,6 +285,17 @@ export function GuidanceRenderer({ profile, showTechnical, showAllSections }: Pr
             <dd>{profile.goals.map((goal) => goalLabels[goal]).join(", ")}</dd>
           </div>
         </dl>
+        <div className="role-orientation">
+          <p>
+            <strong>For this reader:</strong> {roleBrief.purpose}
+          </p>
+          <p>
+            <strong>What is being asked of you:</strong> {roleBrief.ask}
+          </p>
+          <p>
+            <strong>Risks to watch:</strong> {roleBrief.risk}
+          </p>
+        </div>
         {hiddenCount && !showAllSections ? (
           <p className="omission-note">
             {hiddenCount} lower-relevance section{hiddenCount === 1 ? " is" : "s are"} hidden for this profile.
