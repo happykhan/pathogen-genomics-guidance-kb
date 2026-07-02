@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { FileText, Share2, Wand2 } from "lucide-react";
+import { FileText, Share2, Wand2, X } from "lucide-react";
 import { DocumentMap } from "./DocumentMap";
 import { GnomeyCard } from "./GnomeyCard";
 import { GnomeyWizard } from "./GnomeyWizard";
@@ -14,6 +14,7 @@ import type { UserRole } from "../types/profile";
 export function GuidanceApp() {
   const [profile, setProfile] = useState<Profile>(defaultProfile);
   const [wizardOpen, setWizardOpen] = useState(false);
+  const [gnomeyDismissed, setGnomeyDismissed] = useState(false);
   const [copied, setCopied] = useState(false);
   const generatedDate = useMemo(() => new Date().toLocaleDateString("en-GB"), []);
 
@@ -70,27 +71,36 @@ export function GuidanceApp() {
               </button>
             </div>
           </div>
-          <aside className="panel">
-            <div className="panel-body">
-              <GnomeyCard
-                eyebrow="Gnomey says"
-                state={wizardOpen ? "thinking" : copied ? "complete" : "expanded"}
-                action={
-                  <button className="button primary" type="button" onClick={() => setWizardOpen(true)}>
-                    <Wand2 size={18} />
-                    Tailor guidance
-                  </button>
-                }
-              >
-                <p>
-                  Tell me who is reading, what you are building, which programme it supports, and what compute setup you are
-                  considering. I will tailor the document by role, programme stage, organism focus, and compute context. The
-                  visible guidance can be printed or shared as a profile-specific link.
-                </p>
-              </GnomeyCard>
-            </div>
-          </aside>
         </section>
+
+        {!gnomeyDismissed ? (
+          <aside className="gnomey-floating panel no-print" aria-label="Gnomey guidance helper">
+            <button
+              className="button icon-button gnomey-close"
+              type="button"
+              onClick={() => setGnomeyDismissed(true)}
+              aria-label="Close Gnomey helper"
+            >
+              <X size={16} />
+            </button>
+            <GnomeyCard
+              compact
+              eyebrow="Gnomey says"
+              state={wizardOpen ? "thinking" : copied ? "complete" : "expanded"}
+              action={
+                <button className="button primary" type="button" onClick={() => setWizardOpen(true)}>
+                  <Wand2 size={18} />
+                  Tailor guidance
+                </button>
+              }
+            >
+              <p>
+                Tell me who is reading, what you are building, which programme it supports, and what compute setup you are
+                considering. I will tailor the document by role, programme stage, organism focus, and compute context.
+              </p>
+            </GnomeyCard>
+          </aside>
+        ) : null}
 
         <section className="guidance-control-band no-print" aria-label="Guidance controls">
           <section className="panel">
