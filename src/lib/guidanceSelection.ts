@@ -35,7 +35,7 @@ export function guidanceInclusionReason(block: GuidanceBlock, profile: Profile):
   const missing = [];
   if (!matchesAudience(block, profile)) missing.push("reader role");
   if (!matchesStage(block, profile)) missing.push("programme stage");
-  if (!matchesInfrastructure(block, profile)) missing.push("compute context");
+  if (!matchesInfrastructure(block, profile)) missing.push("bioinformatics support model");
   if (!block.organisms.includes("general") && !hasProfileOrganism(block, profile)) missing.push("organism or programme");
   return missing.length ? `Not matched to ${missing.join(", ")}` : "Matched to profile";
 }

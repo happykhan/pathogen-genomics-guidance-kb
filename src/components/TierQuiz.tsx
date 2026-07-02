@@ -227,7 +227,7 @@ export function TierQuiz({ showIntro = true }: TierQuizProps) {
                 <CheckCircle2 size={16} aria-hidden="true" /> Use this next
               </strong>
               <p>
-                Open the tailored guidance with the maturity estimate applied to programme stage and compute context.
+                Open the tailored guidance with the maturity estimate applied to service stage and bioinformatics support.
               </p>
               <a className="button primary" href={guidanceHref}>
                 Apply to guidance <ArrowRight size={16} aria-hidden="true" />

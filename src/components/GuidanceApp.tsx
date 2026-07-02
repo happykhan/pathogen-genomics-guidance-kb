@@ -87,8 +87,8 @@ export function GuidanceApp() {
               }
             >
               <p>
-                Choose the reader, programme stage, organism focus, and compute context. I will show the sections that
-                matter for that situation and keep the rest out of the way.
+                Choose the reader, service stage, organism focus, and bioinformatics support model. I will show the
+                sections that matter for that situation and keep the rest out of the way.
               </p>
             </GnomeyCard>
           </aside>

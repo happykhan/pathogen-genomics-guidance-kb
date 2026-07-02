@@ -137,9 +137,9 @@ export function DocumentMap({ profile, showAllSections, onEditProfile, onResetPr
             <p className="eyebrow">Document map</p>
             <h2>Sections selected for this profile</h2>
             <p>
-              The guide is tailored to{" "}
-              {roleLabels[profile.role].toLowerCase()}, {stageLabels[profile.stage].toLowerCase()},{" "}
-              {profile.organisms.map((organism) => organismLabels[organism].toLowerCase()).join(", ")}, and{" "}
+              The guide is tailored for {roleLabels[profile.role].toLowerCase()} readers at the{" "}
+              {stageLabels[profile.stage].toLowerCase()} stage, focused on{" "}
+              {profile.organisms.map((organism) => organismLabels[organism].toLowerCase()).join(", ")}, with{" "}
               {infrastructureLabels[profile.infrastructure].toLowerCase()}. These are the sections shown in the current
               whitepaper.
             </p>

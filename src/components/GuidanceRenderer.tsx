@@ -73,6 +73,23 @@ const roleBriefs = {
   },
 } as const;
 
+const supportBriefs = {
+  unknown:
+    "Start by defining what must be run, who will own it, where outputs are stored, and what support route exists before choosing tools or platforms.",
+  "laptop-local":
+    "Watch for single-person dependency, undocumented scripts, local file storage, weak provenance, and fragile handover. Prioritise version control, repeatable runs, backup, and a support plan.",
+  "institutional-server":
+    "Make the local pipeline operable as a service: define owners, release versions, storage growth, restore tests, access control, monitoring, and user support.",
+  hpc:
+    "Clarify the boundary between the genomics service and institutional computing team: workflow execution, scheduler support, storage quotas, software environments, access, and incident escalation.",
+  cloud:
+    "Clarify the national or regional service model: upload routes, data residency, identity management, platform governance, support ownership, repository sharing, and fallback if connectivity fails.",
+  "managed-platform":
+    "Treat the platform as part of the operating model, not a substitute for governance. Check validation evidence, export routes, support terms, data location, access controls, and continuity if the supplier or service changes.",
+  hybrid:
+    "Document which parts run locally, which run externally, where authoritative data live, how results are reconciled, and who owns failures across the handoff points.",
+} as const;
+
 function CitationRun({ sourceIds, referenceNumber }: { sourceIds: string[]; referenceNumber: Map<string, number> }) {
   if (!sourceIds.length) return null;
   const refs = sourceIds
@@ -251,6 +268,7 @@ export function GuidanceRenderer({ profile, showTechnical, showAllSections, docu
   const referenceIds = Array.from(new Set(visible.flatMap(({ block }) => collectBlockReferenceIds(block))));
   const referenceNumber = new Map(referenceIds.map((sourceId, index) => [sourceId, index + 1]));
   const roleBrief = roleBriefs[profile.role];
+  const supportBrief = supportBriefs[profile.infrastructure];
 
   return (
     <section className="whitepaper" aria-label="Tailored guidance document">
@@ -260,7 +278,8 @@ export function GuidanceRenderer({ profile, showTechnical, showAllSections, docu
         <p className="whitepaper-dek">
           A source-backed guidance document tailored for {roleLabels[profile.role].toLowerCase()} readers at the{" "}
           {stageLabels[profile.stage].toLowerCase()} stage, focused on{" "}
-          {profile.organisms.map((organism) => organismLabels[organism].toLowerCase()).join(", ")}.
+          {profile.organisms.map((organism) => organismLabels[organism].toLowerCase()).join(", ")}, with{" "}
+          {infrastructureLabels[profile.infrastructure].toLowerCase()}.
         </p>
         {documentActions ? (
           <div className="whitepaper-actions no-print" aria-label="Document actions">
@@ -277,7 +296,7 @@ export function GuidanceRenderer({ profile, showTechnical, showAllSections, docu
             <dd>{stageLabels[profile.stage]}</dd>
           </div>
           <div>
-            <dt>Compute context</dt>
+            <dt>Bioinformatics support</dt>
             <dd>{infrastructureLabels[profile.infrastructure]}</dd>
           </div>
         </dl>
@@ -290,6 +309,9 @@ export function GuidanceRenderer({ profile, showTechnical, showAllSections, docu
           </p>
           <p>
             <strong>Risks to watch:</strong> {roleBrief.risk}
+          </p>
+          <p>
+            <strong>For this bioinformatics support model:</strong> {supportBrief}
           </p>
         </div>
         {hiddenCount && !showAllSections ? (

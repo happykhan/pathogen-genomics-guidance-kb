@@ -19,11 +19,11 @@ export const roleLabels: Record<UserRole, string> = {
 };
 
 export const stageLabels: Record<ImplementationStage, string> = {
-  exploring: "Exploring",
-  pilot: "Pilot",
-  "routine-service": "Routine service",
-  "national-scale": "National scale",
-  upgrading: "Upgrading",
+  exploring: "Planning",
+  pilot: "Piloting",
+  "routine-service": "Running routinely",
+  "national-scale": "Scaling up",
+  upgrading: "Improving an existing service",
 };
 
 export const organismLabels: Record<OrganismFocus, string> = {
@@ -36,13 +36,13 @@ export const organismLabels: Record<OrganismFocus, string> = {
 };
 
 export const infrastructureLabels: Record<InfrastructureContext, string> = {
-  unknown: "Not decided",
-  "laptop-local": "Laptop or local workstation",
-  "institutional-server": "Institutional server",
-  hpc: "HPC",
-  cloud: "Cloud",
-  "managed-platform": "Managed platform",
-  hybrid: "Hybrid",
+  unknown: "No bioinformatics service yet",
+  "laptop-local": "One person or ad hoc scripts",
+  "institutional-server": "Local pipeline or workstation/server",
+  hpc: "Supported institutional service",
+  cloud: "Shared national/regional service",
+  "managed-platform": "Managed platform or cloud service",
+  hybrid: "Mixed or hybrid support",
 };
 
 export function cloneProfile(profile: Profile = defaultProfile): Profile {

@@ -20,7 +20,14 @@ type Props = {
 const roles = Object.keys(roleLabels) as UserRole[];
 const stages = Object.keys(stageLabels) as ImplementationStage[];
 const organisms = Object.keys(organismLabels) as OrganismFocus[];
-const infrastructures = Object.keys(infrastructureLabels) as InfrastructureContext[];
+const bioinformaticsSupportOptions: InfrastructureContext[] = [
+  "unknown",
+  "laptop-local",
+  "institutional-server",
+  "hpc",
+  "cloud",
+  "managed-platform",
+];
 
 export function GnomeyWizard({ profile, onApply, onClose }: Props) {
   const [draft, setDraft] = useState<Profile>(() => cloneProfile(profile));
@@ -78,8 +85,8 @@ export function GnomeyWizard({ profile, onApply, onClose }: Props) {
 
         <div className="wizard-section">
           <div className="wizard-section-heading">
-            <h3>Where is the programme?</h3>
-            <p>Choose one stage. Gnomey uses this to hide sections that are too early or too late for the programme.</p>
+            <h3>What stage is the service at?</h3>
+            <p>Choose the closest stage. This gives context for the guide; the bioinformatics support model does more of the tailoring.</p>
           </div>
           <div className="choice-grid">
             {stages.map((stage) => (
@@ -120,11 +127,14 @@ export function GnomeyWizard({ profile, onApply, onClose }: Props) {
 
         <div className="wizard-section">
           <div className="wizard-section-heading">
-            <h3>What compute setup are you considering?</h3>
-            <p>Choose the closest option. It is fine to leave this as Not decided if you are comparing options.</p>
+            <h3>How is bioinformatics currently supported?</h3>
+            <p>
+              Choose the closest operating model. This helps tailor workflow ownership, validation, storage, support,
+              handover risk, and what not to recommend.
+            </p>
           </div>
           <div className="choice-grid">
-            {infrastructures.map((infrastructure) => (
+            {bioinformaticsSupportOptions.map((infrastructure) => (
               <button
                 key={infrastructure}
                 className="choice choice-radio"

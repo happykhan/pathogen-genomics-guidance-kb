@@ -23,7 +23,7 @@ Core conventions:
 - Gnomey card: helper panel with `collapsed`, `expanded`, `thinking`, and `complete` states.
 - Source cards: resource finder records with reader-friendly status labels, tags, public links, and PDF links where available.
 - Gap notes: explicit missing-evidence blocks, never hidden as completed guidance.
-- Profile summary: role, stage, organism, compute context, and goal.
+- Profile summary: role, service stage, organism focus, and bioinformatics support model.
 
 ## Accessibility Checks
 

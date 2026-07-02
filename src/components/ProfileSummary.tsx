@@ -26,7 +26,7 @@ export function ProfileSummary({ profile }: Props) {
         <dd>{profile.organisms.map((organism) => organismLabels[organism]).join(", ")}</dd>
       </div>
       <div>
-        <dt>Compute</dt>
+        <dt>Bioinformatics support</dt>
         <dd>{infrastructureLabels[profile.infrastructure]}</dd>
       </div>
     </dl>

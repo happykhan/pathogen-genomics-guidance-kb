@@ -67,7 +67,7 @@ Generated with headless Chrome:
 
 ## Scenario QA
 
-Automated scenario checks now focus on reader role, programme stage, organism/programme, and compute context. Constraint-specific wizard questions were removed from the public prototype because they were not useful enough as first-pass tailoring controls.
+Automated scenario checks now focus on reader role, service stage, organism/programme, and bioinformatics support model. Constraint-specific wizard questions were removed from the public prototype because they were not useful enough as first-pass tailoring controls.
 
 Representative profile checks also passed for:
 
